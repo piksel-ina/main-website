@@ -19,7 +19,7 @@ function HomepageHeader() {
           <Heading as="h1" className="hero__title text--uppercase">
             {translate({
               id: "homepage.hero.title",
-              message: "Indonesia's Digital Earth",
+              message: "Bumi Digital Indonesia",
               description: "The main title on the homepage hero section",
             })}
           </Heading>
@@ -27,7 +27,7 @@ function HomepageHeader() {
             {translate({
               id: "homepage.hero.subtitle",
               message:
-                "Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesia region",
+                "Piksel mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia",
               description: "The subtitle text on the homepage hero section",
             })}
           </p>
@@ -38,7 +38,7 @@ function HomepageHeader() {
             >
               {translate({
                 id: "homepage.hero.button",
-                message: "Read How",
+                message: "Pelajari Selengkapnya",
                 description: "The button text to read documentation",
               })}
             </Link>
@@ -61,7 +61,7 @@ export default function Home() {
       description={translate({
         id: "homepage.meta.description",
         message:
-          "The Digital Earth Indonesia (piksel) brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesia region",
+          "Bumi Digital Indonesia (piksel) mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia",
         description: "Meta description for the homepage",
       })}
     >

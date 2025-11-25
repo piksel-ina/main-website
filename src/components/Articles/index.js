@@ -9,12 +9,12 @@ const Articles = ({ articles = [], title }) => {
       id: 1,
       title: translate({
         id: "articles.defaultArticles.feat01.title",
-        message: "Understanding Satellite Imagery for Indonesia",
+        message: "Memahami Citra Satelit untuk Indonesia",
       }),
       description: translate({
         id: "articles.defaultArticles.feat01.description",
         message:
-          "Learn the fundamentals of satellite imagery analysis and how it applies to Indonesian geographical features and environmental monitoring.",
+          "Pelajari dasar-dasar analisis citra satelit dan penerapannya untuk fitur geografis Indonesia serta monitoring lingkungan.",
       }),
       image:
         "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2F0ZWxsaXRlJTIwaW1hZ2VyeXxlbnwwfHwwfHx8MA%3D%3D",
@@ -25,12 +25,12 @@ const Articles = ({ articles = [], title }) => {
       id: 2,
       title: translate({
         id: "articles.defaultArticles.feat02.title",
-        message: "Cloud Computing for Geospatial Data",
+        message: "Cloud Computing untuk Data Geospasial",
       }),
       description: translate({
         id: "articles.defaultArticles.feat02.description",
         message:
-          "Discover how cloud computing revolutionizes geospatial data processing and analysis for large-scale earth observation projects.",
+          "Temukan bagaimana cloud computing merevolusi pemrosesan dan analisis data geospasial untuk proyek observasi bumi skala besar.",
       }),
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdWQlMjBjb21wdXRpbmd8ZW58MHx8MHx8fDA%3D",
@@ -41,12 +41,12 @@ const Articles = ({ articles = [], title }) => {
       id: 3,
       title: translate({
         id: "articles.defaultArticles.feat03.title",
-        message: "Environmental Monitoring with Piksel",
+        message: "Monitoring Lingkungan dengan Piksel",
       }),
       description: translate({
         id: "articles.defaultArticles.feat03.description",
         message:
-          "Explore how Piksel's digital earth technology helps monitor deforestation, urban growth, and climate change impacts across Indonesia.",
+          "Jelajahi bagaimana teknologi digital earth Piksel membantu memonitor deforestasi, pertumbuhan urban, dan dampak perubahan iklim di seluruh Indonesia.",
       }),
       image:
         "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwbW9uaXRvcmluZ3xlbnwwfHwwfHx8MA%3D%3D",
@@ -57,12 +57,12 @@ const Articles = ({ articles = [], title }) => {
       id: 4,
       title: translate({
         id: "articles.defaultArticles.feat04.title",
-        message: "Integrating Piksel Data API",
+        message: "Integrasi API Data Piksel",
       }),
       description: translate({
         id: "articles.defaultArticles.feat04.description",
         message:
-          "Step-by-step guide to integrate Piksel's geospatial data API into your applications and workflows.",
+          "Panduan step-by-step untuk mengintegrasikan API data geospasial Piksel ke dalam aplikasi dan workflow Anda.",
       }),
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBpJTIwaW50ZWdyYXRpb258ZW58MHx8MHx8fDA%3D",
@@ -73,12 +73,12 @@ const Articles = ({ articles = [], title }) => {
       id: 5,
       title: translate({
         id: "articles.defaultArticles.feat05.title",
-        message: "Automating Geospatial Workflows",
+        message: "Otomasi Workflow Geospasial",
       }),
       description: translate({
         id: "articles.defaultArticles.feat05.description",
         message:
-          "Learn how to automate large-scale geospatial data processing using Piksel Workflows and Argo technology.",
+          "Pelajari cara mengotomasi pemrosesan data geospasial skala besar menggunakan Piksel Workflows dan teknologi Argo.",
       }),
       image:
         "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXV0b21hdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
@@ -91,7 +91,7 @@ const Articles = ({ articles = [], title }) => {
 
   const defaultTitle = translate({
     id: "articles.title",
-    message: "Featured Articles",
+    message: "Artikel Pilihan",
   });
 
   const displayTitle = title || defaultTitle;

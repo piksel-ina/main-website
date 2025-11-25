@@ -32,42 +32,42 @@ function getUseCaseTranslations(useCaseId) {
       return {
         title: translate({
           id: "useCase.card.environment.title",
-          message: "Environment",
-          description: "Title for environment use case card",
+          message: "Lingkungan",
+          description: "Title for use case 1",
         }),
         description: translate({
           id: "useCase.card.environment.description",
           message:
-            "We provide trusted imagery and data about Indonesian landscapes to researchers and land managers, helping them navigate environmental complexity.",
-          description: "Description for environment use case card",
+            "Kami menyediakan citra dan data terpercaya tentang lanskap Indonesia untuk peneliti dan pengelola lahan, membantu mereka menavigasi kompleksitas lingkungan",
+          description: "Description for use case 1",
         }),
       };
     case "usecase2":
       return {
         title: translate({
           id: "useCase.card.technology.title",
-          message: "Technology",
-          description: "Title for technology use case card",
+          message: "Teknologi",
+          description: "Title for use case 2",
         }),
         description: translate({
           id: "useCase.card.technology.description",
           message:
-            "Cutting-edge solutions for modern challenges in data management and analysis, powered by innovative research and development.",
-          description: "Description for technology use case card",
+            "Solusi terkini untuk tantangan modern dalam manajemen dan analisis data, didukung oleh riset dan pengembangan yang inovatif.",
+          description: "Description for case 2",
         }),
       };
     case "usecase3":
       return {
         title: translate({
           id: "useCase.card.research.title",
-          message: "Research",
-          description: "Title for research use case card",
+          message: "Riset",
+          description: "Title for use case 3",
         }),
         description: translate({
           id: "useCase.card.research.description",
           message:
-            "Supporting scientific research with reliable data and innovative tools that enable breakthrough discoveries and insights.",
-          description: "Description for research use case card",
+            "Mendukung riset ilmiah dengan data yang andal dan tools inovatif yang memungkinkan penemuan dan wawasan terobosan.",
+          description: "Description for use case 3",
         }),
       };
     default:
@@ -84,7 +84,7 @@ export default function UseCase() {
             <h2 className="section__title section__title--primary-darkest">
               {translate({
                 id: "useCase.title",
-                message: "Our Use Cases",
+                message: "Contoh Pemanfaatan",
                 description: "The title of the use cases section",
               })}
             </h2>
@@ -92,7 +92,7 @@ export default function UseCase() {
               {translate({
                 id: "useCase.subtitle",
                 message:
-                  "Discover how our solutions make a difference across various domains",
+                  "Temukan bagaimana solusi kami memberikan dampak di berbagai domain",
                 description: "The subtitle of the use cases section",
               })}
             </p>
@@ -122,7 +122,7 @@ export default function UseCase() {
           >
             {translate({
               id: "useCase.readMore.button",
-              message: "Read More Use Cases",
+              message: "Lihat Contoh Pemanfaatan Lainnya",
               description: "Button text to view more use cases",
             })}
           </a>

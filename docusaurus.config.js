@@ -13,11 +13,10 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "id"],
+    defaultLocale: "id",
+    locales: ["id", "en"],
     localeConfigs: {
       id: {
         label: "Indonesia",
@@ -99,9 +98,9 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Documentation",
+            label: "Dokumentasi",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Artikel", position: "left" },
           {
             type: "localeDropdown",
             position: "right",
@@ -112,7 +111,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Services",
+            title: "Layanan",
             items: [
               {
                 label: "Piksel Map",
@@ -133,7 +132,7 @@ const config = {
             ],
           },
           {
-            title: "Use Cases",
+            title: "Contoh Pemanfaatan",
             items: [
               {
                 label: "Environment",
@@ -150,7 +149,7 @@ const config = {
             ],
           },
           {
-            title: "Resources",
+            title: "Referensi Lainnya",
             items: [
               {
                 label: "Documentation",
@@ -170,12 +169,12 @@ const config = {
               },
               {
                 label: "Github",
-                href: "https://github.com/piksel-ina/piksel-documentation",
+                href: "https://github.com/piksel-ina",
               },
             ],
           },
           {
-            title: "Contact",
+            title: "Kontak Kami",
             items: [
               {
                 label: "Email: piksel@big.go.id",

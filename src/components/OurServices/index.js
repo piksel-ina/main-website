@@ -13,18 +13,18 @@ const OurServices = () => {
       title: translate({
         id: "ourServices.service1.title",
         message: "Piksel Map",
-        description: "Title for interactive mapping service",
+        description: "Title for service 1",
       }),
       description: translate({
         id: "ourServices.service1.description",
         message:
-          "Explore and visualize geospatial datasets through our interactive web platform.",
-        description: "Description for interactive mapping service",
+          "Eksplorasi dan visualisasi dataset geospasial melalui platform web interaktif kami.",
+        description: "Service 1 Description",
       }),
       buttonText: translate({
         id: "ourServices.service1.button",
-        message: "Start Exploring",
-        description: "Button text for interactive mapping service",
+        message: "Mulai Eksplorasi",
+        description: "Button text for service 1",
       }),
     },
     {
@@ -33,18 +33,18 @@ const OurServices = () => {
       title: translate({
         id: "ourServices.service2.title",
         message: "Piksel Sandbox",
-        description: "Title for data analytics service",
+        description: "Title for service 2",
       }),
       description: translate({
         id: "ourServices.service2.description",
         message:
-          "Experiment, learn, and prototype in our cloud-based Jupyter environment.",
-        description: "Description for data analytics service",
+          "Eksperimen, belajar, dan buat prototype di environment Jupyter berbasis cloud kami.",
+        description: "Service 2 Description",
       }),
       buttonText: translate({
         id: "ourServices.service2.button",
-        message: "View Analytics",
-        description: "Button text for data analytics service",
+        message: "Lihat Analytics",
+        description: "Button text for service 2",
       }),
     },
     {
@@ -53,18 +53,18 @@ const OurServices = () => {
       title: translate({
         id: "ourServices.service3.title",
         message: "Piksel Data API",
-        description: "Title for API integration service",
+        description: "Title for service 3",
       }),
       description: translate({
         id: "ourServices.service3.description",
         message:
-          "Access comprehensive geospatial datasets through our robust API infrastructure.",
-        description: "Description for API integration service",
+          "Akses dataset geospasial yang komprehensif melalui infrastruktur API kami.",
+        description: "Service 3 Description",
       }),
       buttonText: translate({
         id: "ourServices.service3.button",
-        message: "Explore APIs",
-        description: "Button text for API integration service",
+        message: "Jelajah API",
+        description: "Button text for service 3",
       }),
     },
     {
@@ -73,18 +73,18 @@ const OurServices = () => {
       title: translate({
         id: "ourServices.service4.title",
         message: "Piksel Workflows",
-        description: "Title for API integration service",
+        description: "Title for service 4",
       }),
       description: translate({
         id: "ourServices.service4.description",
         message:
-          "Automate large-scale geospatial data processing with Argo Workflows.",
-        description: "Description for API integration service",
+          "Otomasi pemrosesan data geospasial skala besar dengan Argo Workflows.",
+        description: "Service 4 Description",
       }),
       buttonText: translate({
         id: "ourServices.service4.button",
-        message: "Explore APIs",
-        description: "Button text for API integration service",
+        message: "Jelajahi Workflows",
+        description: "Button text for service 4",
       }),
     },
   ];
@@ -99,14 +99,15 @@ const OurServices = () => {
             <h2 className="section__title section__title--white ">
               {translate({
                 id: "ourServices.title",
-                message: "Our Services",
+                message: "Layanan Kami",
                 description: "The title of the our services section",
               })}
             </h2>
             <p className="section__subtitle section__subtitle--white-less">
               {translate({
                 id: "ourServices.subtitle",
-                message: "Making geospatial data accessible for everyone",
+                message:
+                  "Membuat data geospasial dapat diakses oleh semua orang",
                 description: "The subtitle of the our services section",
               })}
             </p>

@@ -6,8 +6,8 @@ const GlassCard = ({
   icon: Icon,
   title,
   description,
-  buttonText = "Start Exploring",
-  buttonTextSecondary = "Learn More",
+  buttonText = "Mulai Menjelajah",
+  buttonTextSecondary = "Pelajari Lebih Lanjut",
 }) => {
   return (
     <div className={styles.glassCard}>
