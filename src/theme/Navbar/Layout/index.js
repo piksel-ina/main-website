@@ -28,7 +28,7 @@ export default function NavbarLayout({ children }) {
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   const location = useLocation();
 
-  const isHomepage = location.pathname === "/" || location.pathname === "/id/";
+  const isHomepage = location.pathname === "/" || location.pathname === "/en/";
   const shouldApplyHomepageStyles = isHomepage && !mobileSidebar.shown;
 
   return (
