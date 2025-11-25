@@ -1,46 +1,207 @@
 {
+  "homepage.hero.title": {
+    "message": "Indonesia's Digital Earth",
+    "description": "The main title on the homepage hero section"
+  },
+  "homepage.hero.subtitle": {
+    "message": "Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesia region",
+    "description": "The subtitle text on the homepage hero section"
+  },
+  "homepage.hero.button": {
+    "message": "Read How",
+    "description": "The button text to read documentation"
+  },
+  "homepage.meta.title": {
+    "message": "Piksel",
+    "description": "Site title for the homepage"
+  },
+  "homepage.meta.description": {
+    "message": "The Digital Earth Indonesia (piksel) brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesia region",
+    "description": "Meta description for the homepage"
+  },
+  "articles.defaultArticles.feat01.title": {
+    "message": "Understanding Satellite Imagery for Indonesia"
+  },
+  "articles.defaultArticles.feat01.description": {
+    "message": "Learn the fundamentals of satellite imagery analysis and how it applies to Indonesian geographical features and environmental monitoring."
+  },
+  "articles.defaultArticles.feat02.title": {
+    "message": "Cloud Computing for Geospatial Data"
+  },
+  "articles.defaultArticles.feat02.description": {
+    "message": "Discover how cloud computing revolutionizes geospatial data processing and analysis for large-scale earth observation projects."
+  },
+  "articles.defaultArticles.feat03.title": {
+    "message": "Environmental Monitoring with Piksel"
+  },
+  "articles.defaultArticles.feat03.description": {
+    "message": "Explore how Piksel's digital earth technology helps monitor deforestation, urban growth, and climate change impacts across Indonesia."
+  },
+  "articles.defaultArticles.feat04.title": {
+    "message": "Integrating Piksel Data API"
+  },
+  "articles.defaultArticles.feat04.description": {
+    "message": "Step-by-step guide to integrate Piksel's geospatial data API into your applications and workflows."
+  },
+  "articles.defaultArticles.feat05.title": {
+    "message": "Automating Geospatial Workflows"
+  },
+  "articles.defaultArticles.feat05.description": {
+    "message": "Learn how to automate large-scale geospatial data processing using Piksel Workflows and Argo technology."
+  },
+  "articles.title": {
+    "message": "Featured Articles"
+  },
+  "ourServices.service1.title": {
+    "message": "Piksel Map",
+    "description": "Title for interactive mapping service"
+  },
+  "ourServices.service1.description": {
+    "message": "Explore and visualize geospatial datasets through our interactive web platform.",
+    "description": "Description for interactive mapping service"
+  },
+  "ourServices.service1.button": {
+    "message": "Start Exploring",
+    "description": "Button text for interactive mapping service"
+  },
+  "ourServices.service2.title": {
+    "message": "Piksel Sandbox",
+    "description": "Title for data analytics service"
+  },
+  "ourServices.service2.description": {
+    "message": "Experiment, learn, and prototype in our cloud-based Jupyter environment.",
+    "description": "Description for data analytics service"
+  },
+  "ourServices.service2.button": {
+    "message": "View Analytics",
+    "description": "Button text for data analytics service"
+  },
+  "ourServices.service3.title": {
+    "message": "Piksel Data API",
+    "description": "Title for API integration service"
+  },
+  "ourServices.service3.description": {
+    "message": "Access comprehensive geospatial datasets through our robust API infrastructure.",
+    "description": "Description for API integration service"
+  },
+  "ourServices.service3.button": {
+    "message": "Explore APIs",
+    "description": "Button text for API integration service"
+  },
+  "ourServices.service4.title": {
+    "message": "Piksel Workflows",
+    "description": "Title for API integration service"
+  },
+  "ourServices.service4.description": {
+    "message": "Automate large-scale geospatial data processing with Argo Workflows.",
+    "description": "Description for API integration service"
+  },
+  "ourServices.service4.button": {
+    "message": "Explore APIs",
+    "description": "Button text for API integration service"
+  },
+  "ourServices.title": {
+    "message": "Our Services",
+    "description": "The title of the our services section"
+  },
+  "ourServices.subtitle": {
+    "message": "Making geospatial data accessible for everyone",
+    "description": "The subtitle of the our services section"
+  },
+  "useCase.card.environment.title": {
+    "message": "Environment",
+    "description": "Title for environment use case card"
+  },
+  "useCase.card.environment.description": {
+    "message": "We provide trusted imagery and data about Indonesian landscapes to researchers and land managers, helping them navigate environmental complexity.",
+    "description": "Description for environment use case card"
+  },
+  "useCase.card.technology.title": {
+    "message": "Technology",
+    "description": "Title for technology use case card"
+  },
+  "useCase.card.technology.description": {
+    "message": "Cutting-edge solutions for modern challenges in data management and analysis, powered by innovative research and development.",
+    "description": "Description for technology use case card"
+  },
+  "useCase.card.research.title": {
+    "message": "Research",
+    "description": "Title for research use case card"
+  },
+  "useCase.card.research.description": {
+    "message": "Supporting scientific research with reliable data and innovative tools that enable breakthrough discoveries and insights.",
+    "description": "Description for research use case card"
+  },
+  "useCase.title": {
+    "message": "Our Use Cases",
+    "description": "The title of the use cases section"
+  },
+  "useCase.subtitle": {
+    "message": "Discover how our solutions make a difference across various domains",
+    "description": "The subtitle of the use cases section"
+  },
+  "useCase.readMore.button": {
+    "message": "Read More Use Cases",
+    "description": "Button text to view more use cases"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Close navigation bar",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Back to main menu",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Toggle navigation bar",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
   "theme.ErrorPageContent.title": {
-    "message": "Terjadi kesalahan.",
+    "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Gulir kembali ke atas",
+    "message": "Scroll back to top",
     "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
-    "message": "Arsip",
+    "message": "Archive",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Arsip",
+    "message": "Archive",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navigasi entri blog",
+    "message": "Blog list page navigation",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Entri lebih baru",
+    "message": "Newer entries",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Entri lebih lama",
+    "message": "Older entries",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navigasi halaman pos blog",
+    "message": "Blog post page navigation",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Pos lebih baru",
+    "message": "Newer post",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Pos lebih lama",
+    "message": "Older post",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
-    "message": "Lihat Semua Tag",
+    "message": "View all tags",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
@@ -48,102 +209,102 @@
     "description": "The name for the system color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "modus terang",
+    "message": "light mode",
     "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "modus gelap",
+    "message": "dark mode",
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Ubah antara modus gelap dan modus terang (saat ini {mode})",
+    "message": "Switch between dark and light mode (currently {mode})",
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Runut navigasi",
+    "message": "Breadcrumbs",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 butir|{count} butir",
+    "message": "1 item|{count} items",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Halaman dokumentasi",
+    "message": "Docs pages",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Sebelum",
+    "message": "Previous",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Berikut",
+    "message": "Next",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "Satu dokumentasi memiliki tag|{count} dokumentasi memiliki tag",
+    "message": "One doc tagged|{count} docs tagged",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} dengan \"{tagName}\"",
+    "message": "{nDocsTagged} with \"{tagName}\"",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Versi: {versionLabel}"
+    "message": "Version: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Ini adalah dokumentasi yang belum dirilis untuk {siteTitle} {versionLabel}.",
+    "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Ini adalah dokumentasi untuk {siteTitle} {versionLabel}, yang tidak lagi aktif dikelola.",
+    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "Untuk dokumentasi terbaru, lihat {latestVersionLink} ({versionLabel}).",
+    "message": "For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "versi terbaru",
+    "message": "latest version",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "Sunting halaman ini",
+    "message": "Edit this page",
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Taut langsung ke {heading}",
+    "message": "Direct link to {heading}",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " pada {date}",
+    "message": " on {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": " oleh {user}",
+    "message": " by {user}",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Diperbaharui{atDate}{byUser}",
+    "message": "Last updated{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versi",
+    "message": "Versions",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.NotFound.title": {
-    "message": "Halaman Tak Ditemukan",
+    "message": "Page Not Found",
     "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tag:",
+    "message": "Tags:",
     "description": "The label alongside a tag list"
   },
   "theme.admonition.caution": {
-    "message": "waspada",
+    "message": "caution",
     "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.admonition.danger": {
-    "message": "bahaya",
+    "message": "danger",
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
@@ -151,7 +312,7 @@
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
-    "message": "catatan",
+    "message": "note",
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
@@ -159,100 +320,88 @@
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "peringatan",
+    "message": "warning",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Tutup",
+    "message": "Close",
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Navigasi pos blog terbaru",
+    "message": "Blog recent posts navigation",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Perluas kategori bilah sisi '{label}'",
+    "message": "Expand sidebar category '{label}'",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Ciutkan kategori bilah sisi '{label}'",
+    "message": "Collapse sidebar category '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Utama",
-    "description": "The ARIA label for the main navigation"
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opens in new tab)",
+    "description": "The ARIA label for the external link icon"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Bahasa",
+    "message": "Languages",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
-    "message": "Kami tak dapat menemukan yang anda cari.",
+    "message": "We could not find what you were looking for.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Silakan hubungi pemilik situs yang mengarahkan anda ke URL asli dan beri tahu mereka bahwa tautan mereka salah.",
+    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "Pada halaman ini",
+    "message": "On this page",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readMore": {
-    "message": "Baca Selengkapnya",
+    "message": "Read more",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Baca selengkapnya mengenai {title}",
+    "message": "Read more about {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "Satu menit membaca|{readingTime} menit membaca",
+    "message": "One min read|{readingTime} min read",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
-    "message": "Salin",
+    "message": "Copy",
     "description": "The copy button label on code blocks"
   },
   "theme.CodeBlock.copied": {
-    "message": "Disalin",
+    "message": "Copied",
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Salin kode ke papan klip",
+    "message": "Copy code to clipboard",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Alihkan pembungkus kata",
+    "message": "Toggle word wrap",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Halaman utama",
+    "message": "Home page",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Ciutkan bilah sisi",
+    "message": "Collapse sidebar",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Ciutkan bilah sisi",
+    "message": "Collapse sidebar",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Bilah sisi dokumentasi",
+    "message": "Docs sidebar",
     "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Tutup bilah sisi",
-    "description": "The ARIA label for close button of mobile sidebar"
-  },
-  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Kembali ke menu utama",
-    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
-  },
-  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Alihkan bilah sisi",
-    "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Expand the dropdown",
@@ -263,19 +412,19 @@
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Perluas bilah sisi",
+    "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Perluas bilah sisi",
+    "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "Satu pos|{count} pos",
+    "message": "One post|{count} posts",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} memiliki tag \"{tagName}\"",
+    "message": "{nPosts} tagged with \"{tagName}\"",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -287,7 +436,7 @@
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View All Authors",
+    "message": "View all authors",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
@@ -295,11 +444,11 @@
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Halaman tak terdaftar",
+    "message": "Unlisted page",
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Halaman ini tidak terdaftar. Mesin pencari tidak akan mengindeksnya, dan hanya pengguna yang memiliki tautan langsung yang dapat mengaksesnya.",
+    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
@@ -311,160 +460,15 @@
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Coba kembali",
+    "message": "Try again",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
-    "message": "Lewati ke konten utama",
+    "message": "Skip to main content",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tag",
+    "message": "Tags",
     "description": "The title of the tag list page"
-  },
-  "homepage.hero.title": {
-    "message": "Bumi Digital Indonesia",
-    "description": "The main title on the homepage hero section"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Piksel menghadirkan solusi observasi bumi digital dengan menggabungkan teknologi citra satelit dan komputasi awan untuk wilayah Indonesia",
-    "description": "The subtitle text on the homepage hero section"
-  },
-  "homepage.hero.button": {
-    "message": "Pelajari Selengkapnya",
-    "description": "The button text to read documentation"
-  },
-  "homepage.meta.description": {
-    "message": "Piksel menghadirkan solusi observasi bumi digital dengan menggabungkan teknologi citra satelit dan komputasi awan untuk wilayah Indonesia",
-    "description": "Meta description for the homepage"
-  },
-  "homepage.meta.title": {
-    "message": "Piksel",
-    "description": "Site title for the homepage"
-  },
-  "useCase.title": {
-    "message": "Contoh Implementasi",
-    "description": "The title of the use cases section"
-  },
-  "useCase.subtitle": {
-    "message": "Lihat bagaimana solusi kami membantu di berbagai sektor",
-    "description": "The subtitle of the use cases section"
-  },
-  "useCase.card.environment.title": {
-    "message": "Lingkungan",
-    "description": "Title for environment use case card"
-  },
-  "useCase.card.environment.description": {
-    "message": "Kami menyediakan data dan citra berkualitas tentang lanskap Indonesia untuk peneliti dan pengelola lahan dalam mengatasi tantangan lingkungan.",
-    "description": "Description for environment use case card"
-  },
-  "useCase.card.technology.title": {
-    "message": "Teknologi",
-    "description": "Title for technology use case card"
-  },
-  "useCase.card.technology.description": {
-    "message": "Solusi modern untuk pengelolaan dan analisis data yang didukung riset dan inovasi terdepan.",
-    "description": "Description for technology use case card"
-  },
-  "useCase.card.research.title": {
-    "message": "Riset",
-    "description": "Title for research use case card"
-  },
-  "useCase.card.research.description": {
-    "message": "Mendukung penelitian ilmiah dengan data akurat dan tools inovatif untuk penemuan baru.",
-    "description": "Description for research use case card"
-  },
-  "useCase.readMore.button": {
-    "message": "Lihat Implementasi Lainnya",
-    "description": "Button text to view more use cases"
-  },
-  "ourServices.title": {
-    "message": "Servis Kami",
-    "description": "The title of the our services section"
-  },
-  "ourServices.subtitle": {
-    "message": "Menyediakan data geospasial untuk semua",
-    "description": "The subtitle of the our services section"
-  },
-  "ourServices.service1.title": {
-    "message": "Piksel Map",
-    "description": "Title for interactive mapping service"
-  },
-  "ourServices.service1.description": {
-    "message": "Jelajahi dan visualisasikan dataset geospasial melalui platform web interaktif kami.",
-    "description": "Description for interactive mapping service"
-  },
-  "ourServices.service1.button": {
-    "message": "Mulai Jelajah",
-    "description": "Button text for interactive mapping service"
-  },
-  "ourServices.service2.title": {
-    "message": "Piksel Sandbox",
-    "description": "Title for data analytics service"
-  },
-  "ourServices.service2.description": {
-    "message": "Bereksperimen, belajar, dan membuat prototipe di Jupyter berbasis cloud.",
-    "description": "Description for data analytics service"
-  },
-  "ourServices.service2.button": {
-    "message": "Lihat Analitik",
-    "description": "Button text for data analytics service"
-  },
-  "ourServices.service3.title": {
-    "message": "Piksel Workflows",
-    "description": "Title for API integration service"
-  },
-  "ourServices.service3.description": {
-    "message": "Akses dataset geospasial yang komprehensif melalui infrastruktur RESTful API",
-    "description": "Description for API integration service"
-  },
-  "ourServices.service3.button": {
-    "message": "Jelajahi API",
-    "description": "Button text for API integration service"
-  },
-  "ourServices.service4.title": {
-    "message": "Piksel Workflows",
-    "description": "Title for API integration service"
-  },
-  "ourServices.service4.description": {
-    "message": "Otomatisasi pemrosesan data geospasial skala besar dengan Argo Workflows.",
-    "description": "Description for API integration service"
-  },
-  "ourServices.service4.button": {
-    "message": "Jelajahi API",
-    "description": "Button text for API integration service"
-  },
-  "articles.title": {
-    "message": "Artikel Unggulan"
-  },
-  "articles.defaultArticles.feat01.title": {
-    "message": "Memahami Citra Satelit untuk Indonesia"
-  },
-  "articles.defaultArticles.feat01.description": {
-    "message": "Pelajari dasar-dasar analisis citra satelit dan penerapannya pada fitur geografis Indonesia serta pemantauan lingkungan."
-  },
-  "articles.defaultArticles.feat02.title": {
-    "message": "Komputasi Awan untuk Data Geospasial"
-  },
-  "articles.defaultArticles.feat02.description": {
-    "message": "Temukan bagaimana komputasi awan merevolusi pemrosesan dan analisis data geospasial untuk proyek observasi bumi skala besar."
-  },
-  "articles.defaultArticles.feat03.title": {
-    "message": "Pemantauan Lingkungan dengan Piksel"
-  },
-  "articles.defaultArticles.feat03.description": {
-    "message": "Jelajahi bagaimana teknologi digital earth Piksel membantu memantau deforestasi, pertumbuhan perkotaan, dan dampak perubahan iklim di seluruh Indonesia."
-  },
-  "articles.defaultArticles.feat04.title": {
-    "message": "Mengintegrasikan API Data Piksel"
-  },
-  "articles.defaultArticles.feat04.description": {
-    "message": "Panduan langkah demi langkah untuk mengintegrasikan API data geospasial Piksel ke dalam aplikasi dan alur kerja Anda."
-  },
-  "articles.defaultArticles.feat05.title": {
-    "message": "Mengotomatisasi Alur Kerja Geospasial"
-  },
-  "articles.defaultArticles.feat05.description": {
-    "message": "Pelajari cara mengotomatisasi pemrosesan data geospasial skala besar menggunakan Piksel Workflows dan teknologi Argo."
   }
 }
