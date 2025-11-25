@@ -54,51 +54,51 @@
   },
   "ourServices.service1.title": {
     "message": "Piksel Map",
-    "description": "Title for interactive mapping service"
+    "description": "Title for service 1"
   },
   "ourServices.service1.description": {
     "message": "Explore and visualize geospatial datasets through our interactive web platform.",
-    "description": "Description for interactive mapping service"
+    "description": "Service 1 Description"
   },
   "ourServices.service1.button": {
     "message": "Start Exploring",
-    "description": "Button text for interactive mapping service"
+    "description": "Button text for service 1"
   },
   "ourServices.service2.title": {
     "message": "Piksel Sandbox",
-    "description": "Title for data analytics service"
+    "description": "Title for service 2"
   },
   "ourServices.service2.description": {
     "message": "Experiment, learn, and prototype in our cloud-based Jupyter environment.",
-    "description": "Description for data analytics service"
+    "description": "Service 2 Description"
   },
   "ourServices.service2.button": {
     "message": "View Analytics",
-    "description": "Button text for data analytics service"
+    "description": "Button text for service 2"
   },
   "ourServices.service3.title": {
     "message": "Piksel Data API",
-    "description": "Title for API integration service"
+    "description": "Title for service 3"
   },
   "ourServices.service3.description": {
     "message": "Access comprehensive geospatial datasets through our robust API infrastructure.",
-    "description": "Description for API integration service"
+    "description": "Service 3 Description"
   },
   "ourServices.service3.button": {
     "message": "Explore APIs",
-    "description": "Button text for API integration service"
+    "description": "Button text for service 3"
   },
   "ourServices.service4.title": {
     "message": "Piksel Workflows",
-    "description": "Title for API integration service"
+    "description": "Title for service 4"
   },
   "ourServices.service4.description": {
     "message": "Automate large-scale geospatial data processing with Argo Workflows.",
-    "description": "Description for API integration service"
+    "description": "Service 4 Description"
   },
   "ourServices.service4.button": {
     "message": "Explore APIs",
-    "description": "Button text for API integration service"
+    "description": "Button text for service 4"
   },
   "ourServices.title": {
     "message": "Our Services",
@@ -110,27 +110,27 @@
   },
   "useCase.card.environment.title": {
     "message": "Environment",
-    "description": "Title for environment use case card"
+    "description": "Title for use case 1"
   },
   "useCase.card.environment.description": {
     "message": "We provide trusted imagery and data about Indonesian landscapes to researchers and land managers, helping them navigate environmental complexity.",
-    "description": "Description for environment use case card"
+    "description": "Description for use case 1"
   },
   "useCase.card.technology.title": {
     "message": "Technology",
-    "description": "Title for technology use case card"
+    "description": "Title for use case 2"
   },
   "useCase.card.technology.description": {
     "message": "Cutting-edge solutions for modern challenges in data management and analysis, powered by innovative research and development.",
-    "description": "Description for technology use case card"
+    "description": "Description for case 2"
   },
   "useCase.card.research.title": {
     "message": "Research",
-    "description": "Title for research use case card"
+    "description": "Title for use case 3"
   },
   "useCase.card.research.description": {
     "message": "Supporting scientific research with reliable data and innovative tools that enable breakthrough discoveries and insights.",
-    "description": "Description for research use case card"
+    "description": "Description for use case 3"
   },
   "useCase.title": {
     "message": "Our Use Cases",
