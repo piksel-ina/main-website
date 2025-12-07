@@ -2,12 +2,15 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import styles from "./style.module.css";
 
+import Button from "../../Atoms/Button";
+
 const GlassCard = ({
   icon: Icon,
   title,
   description,
   buttonText = "Mulai Menjelajah",
   buttonTextSecondary = "Pelajari Lebih Lanjut",
+  link,
 }) => {
   return (
     <div className={styles.glassCard}>
@@ -21,13 +24,17 @@ const GlassCard = ({
 
         {/* CTA Button */}
         <div className={styles.glassCard_cta}>
-          <button
-            className={`button button--outline ${styles.glassCard_ctaPrimary}`}
+          <Button
+            to={link}
+            variant="outline"
+            className={styles.glassCard_ctaPrimary}
           >
             {buttonText}
-          </button>
-          <button
-            className={`button button--link ${styles.glassCard_ctaSecondary}`}
+          </Button>
+          <Button
+            to={link}
+            variant="link"
+            className={styles.glassCard_ctaSecondary}
           >
             {buttonTextSecondary}
             <ArrowRight
@@ -35,7 +42,7 @@ const GlassCard = ({
               strokeWidth={1.3}
               className={styles.glassCard_ctaIcon}
             />
-          </button>
+          </Button>
         </div>
       </div>
     </div>

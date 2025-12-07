@@ -2,12 +2,14 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import UseCase from "@site/src/components/UseCases";
-import OurServices from "../components/OurServices";
-import Articles from "../components/Articles";
+import UseCase from "@site/src/components/Home/UseCases";
+import OurServices from "../components/Home/OurServices";
+import Articles from "../components/Home/Articles";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import Translate, { translate } from "@docusaurus/Translate";
+
+import { heroData } from "@site/src/data/homepageData";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -16,30 +18,17 @@ function HomepageHeader() {
       <div className="container">
         <div className={`${styles.heroText}`}>
           <Heading as="h1" className="hero__title text--uppercase">
-            {translate({
-              id: "homepage.hero.title",
-              message: "Bumi Digital Indonesia",
-              description: "The main title on the homepage hero section",
-            })}
+            {heroData.title}
           </Heading>
           <p className="hero__subtitle">
-            {translate({
-              id: "homepage.hero.subtitle",
-              message:
-                "Piksel mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia",
-              description: "The subtitle text on the homepage hero section",
-            })}
+            {heroData.subtitle}
           </p>
           <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/intro"
+              to={heroData.buttonLink}
             >
-              {translate({
-                id: "homepage.hero.button",
-                message: "Pelajari Selengkapnya",
-                description: "The button text to read documentation",
-              })}
+              {heroData.buttonText}
             </Link>
           </div>
         </div>
