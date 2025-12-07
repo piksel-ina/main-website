@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import Button from "../../Atoms/Button";
 
 /**
  * ModernCard component - A reusable card with image overlay and hover effects
@@ -9,13 +10,6 @@ import styles from "./styles.module.css";
  * @param {string} link - Link URL for the "Learn more" button
  */
 function ModernCard({ image, title, description, link }) {
-  const handleLearnMore = () => {
-    if (link.startsWith("http")) {
-      window.open(link, "_blank");
-    } else {
-      window.location.href = link;
-    }
-  };
 
   return (
     <div className={`card shadow--md ${styles.modernCard}`}>
@@ -32,13 +26,14 @@ function ModernCard({ image, title, description, link }) {
         {/* Bottom content */}
         <div className={styles.modernCardBottom}>
           <p className={styles.modernCardDescription}>{description}</p>
-          <button
-            onClick={handleLearnMore}
-            className={`button button--link ${styles.modernCardButton}`}
+          <Button
+            to={link}
+            variant="link"
+            className={styles.modernCardButton}
           >
             Learn more
             <span className={styles.modernCardArrow}>→</span>
-          </button>
+          </Button>
         </div>
       </div>
     </div>
