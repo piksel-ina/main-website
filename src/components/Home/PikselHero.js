@@ -47,6 +47,7 @@ export default function PikselHero() {
           </div>
         </div>
       </div>
+      <div className={styles.heroBottomSpacer} />
     </section>
   );
 }
