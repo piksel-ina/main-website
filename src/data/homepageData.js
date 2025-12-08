@@ -191,56 +191,125 @@ export const servicesData = [
   },
 ];
 
-export const useCasesData = [
-  {
-    id: "usecase1",
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    link: "/environment",
+export const useCasesData = {
+  kehutanan: {
+    icon: 'tree-pine',
+    tabLabel: translate({id: 'useCases.kehutanan.tab', message: 'Kehutanan'}),
     title: translate({
-      id: "useCase.card.environment.title",
-      message: "Lingkungan",
-      description: "Title for use case 1",
+      id: 'useCases.kehutanan.title',
+      message: 'Pemantauan Deforestasi'
     }),
     description: translate({
-      id: "useCase.card.environment.description",
-      message:
-        "Kami menyediakan citra dan data terpercaya tentang lanskap Indonesia untuk peneliti dan pengelola lahan, membantu mereka menavigasi kompleksitas lingkungan",
-      description: "Description for use case 1",
+      id: 'useCases.kehutanan.description',
+      message: 'Deteksi perubahan tutupan hutan secara real-time dengan teknologi satelit beresolusi tinggi. Identifikasi area deforestasi, monitor pemulihan hutan, dan dukung upaya konservasi di seluruh Indonesia.'
     }),
+    features: [
+      translate({id: 'useCases.kehutanan.f1', message: 'Update setiap 15 menit'}),
+      translate({id: 'useCases.kehutanan.f2', message: 'Akurasi deteksi 99.8%'}),
+      translate({id: 'useCases.kehutanan.f3', message: '500K+ hektar terpantau'})
+    ],
+    image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&h=600&fit=crop',
+    color: 'var(--piksel-color-kehutanan)',
+    glowColor: 'rgba(16, 185, 129, 0.6)'
   },
-  {
-    id: "usecase2",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/technology",
+  perkotaan: {
+    icon: 'building-2',
+    tabLabel: translate({id: 'useCases.perkotaan.tab', message: 'Perkotaan'}),
     title: translate({
-      id: "useCase.card.technology.title",
-      message: "Teknologi",
-      description: "Title for use case 2",
+      id: 'useCases.perkotaan.title',
+      message: 'Perencanaan Kota'
     }),
     description: translate({
-      id: "useCase.card.technology.description",
-      message:
-        "Solusi terkini untuk tantangan modern dalam manajemen dan analisis data, didukung oleh riset dan pengembangan yang inovatif.",
-      description: "Description for case 2",
+      id: 'useCases.perkotaan.description',
+      message: 'Analisis pertumbuhan urban dan infrastruktur untuk perencanaan kota berkelanjutan. Monitor ekspansi kota, identifikasi area pengembangan, dan optimalkan tata ruang dengan data satelit presisi tinggi.'
     }),
+    features: [
+      translate({id: 'useCases.perkotaan.f1', message: 'Pemetaan 3D resolusi tinggi'}),
+      translate({id: 'useCases.perkotaan.f2', message: 'Analisis perubahan temporal'}),
+      translate({id: 'useCases.perkotaan.f3', message: 'Integrasi data demografi'})
+    ],
+    image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop',
+    color: 'var(--piksel-color-perkotaan)',
+    glowColor: 'rgba(59, 130, 246, 0.6)'
   },
-  {
-    id: "usecase3",
-    image:
-      "https://plus.unsplash.com/premium_photo-1666256629413-ea053d34ff36?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "/research",
+  pertanian: {
+    icon: 'wheat',
+    tabLabel: translate({id: 'useCases.pertanian.tab', message: 'Pertanian'}),
     title: translate({
-      id: "useCase.card.research.title",
-      message: "Riset",
-      description: "Title for use case 3",
+      id: 'useCases.pertanian.title',
+      message: 'Pertanian Presisi'
     }),
     description: translate({
-      id: "useCase.card.research.description",
-      message:
-        "Mendukung riset ilmiah dengan data yang andal dan tools inovatif yang memungkinkan penemuan dan wawasan terobosan.",
-      description: "Description for use case 3",
+      id: 'useCases.pertanian.description',
+      message: 'Monitor kesehatan tanaman dan prediksi hasil panen dengan analisis multispektral. Deteksi stres tanaman, optimalkan irigasi, dan tingkatkan produktivitas pertanian dengan teknologi AI dan satelit.'
     }),
+    features: [
+      translate({id: 'useCases.pertanian.f1', message: 'Analisis NDVI real-time'}),
+      translate({id: 'useCases.pertanian.f2', message: 'Prediksi hasil panen AI'}),
+      translate({id: 'useCases.pertanian.f3', message: 'Rekomendasi irigasi otomatis'})
+    ],
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop',
+    color: 'var(--piksel-color-pertanian)',
+    glowColor: 'rgba(245, 158, 11, 0.6)'
   },
-];
+  pesisir: {
+    icon: 'waves',
+    tabLabel: translate({id: 'useCases.pesisir.tab', message: 'Pesisir'}),
+    title: translate({
+      id: 'useCases.pesisir.title',
+      message: 'Pengelolaan Pesisir'
+    }),
+    description: translate({
+      id: 'useCases.pesisir.description',
+      message: 'Pantau perubahan garis pantai dan kesehatan ekosistem laut. Deteksi abrasi, monitor terumbu karang, dan lindungi ekosistem pesisir dengan pemantauan satelit berkelanjutan.'
+    }),
+    features: [
+      translate({id: 'useCases.pesisir.f1', message: 'Deteksi perubahan garis pantai'}),
+      translate({id: 'useCases.pesisir.f2', message: 'Monitor kesehatan terumbu karang'}),
+      translate({id: 'useCases.pesisir.f3', message: 'Analisis kualitas air laut'})
+    ],
+    image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop',
+    color: 'var(--piksel-color-pesisir)',
+    glowColor: 'rgba(6, 182, 212, 0.6)'
+  },
+  bencana: {
+    icon: 'triangle-alert',
+    tabLabel: translate({id: 'useCases.bencana.tab', message: 'Bencana'}),
+    title: translate({
+      id: 'useCases.bencana.title',
+      message: 'Mitigasi Bencana'
+    }),
+    description: translate({
+      id: 'useCases.bencana.description',
+      message: 'Sistem peringatan dini dan penilaian kerusakan pasca-bencana. Monitor area rawan bencana, deteksi perubahan anomali, dan dukung respons cepat dengan data satelit real-time.'
+    }),
+    features: [
+      translate({id: 'useCases.bencana.f1', message: 'Peringatan dini banjir & longsor'}),
+      translate({id: 'useCases.bencana.f2', message: 'Penilaian kerusakan otomatis'}),
+      translate({id: 'useCases.bencana.f3', message: 'Koordinasi respons darurat'})
+    ],
+    image: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&h=600&fit=crop',
+    color: 'var(--piksel-color-bencana)',
+    glowColor: 'rgba(239, 68, 68, 0.6)'
+  },
+  pertambangan: {
+    icon: 'pickaxe',
+    tabLabel: translate({id: 'useCases.pertambangan.tab', message: 'Tambang'}),
+    title: translate({
+      id: 'useCases.pertambangan.title',
+      message: 'Pertambangan & Energi'
+    }),
+    description: translate({
+      id: 'useCases.pertambangan.description',
+      message: 'Pemantauan lokasi tambang dan kepatuhan lingkungan. Monitor aktivitas pertambangan, deteksi perubahan topografi, dan pastikan kepatuhan terhadap regulasi lingkungan dengan data satelit presisi.'
+    }),
+    features: [
+      translate({id: 'useCases.pertambangan.f1', message: 'Monitor perubahan topografi'}),
+      translate({id: 'useCases.pertambangan.f2', message: 'Deteksi aktivitas ilegal'}),
+      translate({id: 'useCases.pertambangan.f3', message: 'Audit kepatuhan lingkungan'})
+    ],
+    image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=600&fit=crop',
+    color: 'var(--piksel-color-pertambangan)',
+    glowColor: 'rgba(139, 92, 246, 0.6)'
+  }
+};

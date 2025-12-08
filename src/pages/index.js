@@ -12,6 +12,7 @@ import Translate, { translate } from "@docusaurus/Translate";
 import { heroData } from "@site/src/data/homepageData";
 
 import PikselHero from "../components/Home/PikselHero";
+import PikselUseCases from "../components/Home/PikselUseCases";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -60,7 +61,7 @@ export default function Home() {
       </div> */}
       <PikselHero />
       <main>
-        <UseCase />
+        <PikselUseCases />
         <OurServices />
         <Articles />
       </main>
