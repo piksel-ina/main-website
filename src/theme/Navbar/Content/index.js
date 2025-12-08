@@ -40,15 +40,21 @@ ${JSON.stringify(item, null, 2)}`,
     </>
   );
 }
-function NavbarContentLayout({left, right}) {
+function NavbarContentLayout({left, center, right}) {
   return (
     <div className="navbar__inner">
       <div
         className={clsx(
           ThemeClassNames.layout.navbar.containerLeft,
-          'navbar__items',
+          'navbar__items navbar__items--left',
         )}>
         {left}
+      </div>
+      <div
+        className={clsx(
+          'navbar__items navbar__items--center',
+        )}>
+        {center}
       </div>
       <div
         className={clsx(
@@ -68,16 +74,18 @@ export default function NavbarContent() {
   return (
     <NavbarContentLayout
       left={
-        // TODO stop hardcoding items?
+        // Logo and Mobile Toggle stay strict Left
         <>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
-          <NavbarItems items={leftItems} />
         </>
       }
+      center={
+        // "Left" configured items are now mapped to Center column
+        <NavbarItems items={leftItems} />
+      }
       right={
-        // TODO stop hardcoding items?
-        // Ask the user to add the respective navbar items => more flexible
+        // Asking the user to add the respective navbar items => more flexible
         <>
           <NavbarItems items={rightItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
