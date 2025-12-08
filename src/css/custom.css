@@ -147,27 +147,25 @@ html[data-theme='dark'] {
   position: sticky !important;
   top: 0;
   z-index: 100;
-  background: rgba(10, 14, 26, 0.7) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  background: var(--ifm-background-color) !important;
+  box-shadow: none !important;
   border-bottom: none !important;
   transition: all 0.3s ease;
 }
 
 /* Navbar Centering & Spacing */
 .navbar {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 /* Dim white color for all links by default */
 .navbar__item,
 .navbar__link {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: color-mix(in srgb, var(--ifm-background-color), #fff 80%) !important;
   font-weight: 500;
   transition: color 0.3s ease;
-  margin: 0 1rem;
+  margin: 0 1.2rem;
 }
 
 /* Highlight on hover */
@@ -278,3 +276,20 @@ html[data-theme='dark'] {
   background-color: rgba(var(--ifm-color-warning-rgb), 0.1);
   border-left: 4px solid var(--ifm-color-warning);
 }
+
+/* Mobile Sidebar Fix */
+.navbar-sidebar {
+  background-color: var(--ifm-background-color) !important;
+  z-index: 1000 !important;
+}
+
+.navbar-sidebar__item {
+  background-color: transparent !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu__link {
+  color: var(--ifm-menu-color);
+}
+
