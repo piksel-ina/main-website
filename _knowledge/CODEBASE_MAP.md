@@ -13,7 +13,8 @@
 │   │   ├── Home/              # Page-specific components
 │   │   │   ├── Articles/      # Articles list section
 │   │   │   ├── OurServices/   # Services section
-│   │   │   └── UseCases/      # Use Cases section
+│   │   │   ├── UseCases/      # Use Cases section
+│   │   │   └── PikselHero.js  # New Hero section (Piksel look)
 │   │   ├── UI/                # Reusable UI components
 │   │   │   ├── Atoms/         # Basic building blocks
 │   │   │   │   └── Button/    # Semantic Link/Button wrapper
@@ -40,6 +41,7 @@
 | **Articles** | Home | Renders a carousel of featured articles using `articlesData`. | `articles` (opt), `title` (opt) |
 | **OurServices** | Home | Renders "Layanan Kami" section using `servicesData` and `GlassCard`. | None |
 | **UseCases** | Home | Renders "Contoh Pemanfaatan" section using `useCasesData` and `ModernCard`. | None |
+| **PikselHero** | Home | New Hero section with image grid and stats. | None |
 | **Button** | Atom | Wrapper for Docusaurus `<Link>` or `<button>` with standardized styles. | `to`, `variant`, `size`, `block`, `onClick` |
 | **GlassCard** | Molecule | Glassmorphism card with icon, title, description, and action buttons. | `icon`, `title`, `description`, `buttonText`, `link` |
 | **ModernCard** | Molecule | Card with image overlay and hover effects. | `image`, `title`, `description`, `link` |

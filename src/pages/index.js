@@ -11,6 +11,8 @@ import Translate, { translate } from "@docusaurus/Translate";
 
 import { heroData } from "@site/src/data/homepageData";
 
+import PikselHero from "../components/Home/PikselHero";
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -53,9 +55,10 @@ export default function Home() {
         description: "Meta description for the homepage",
       })}
     >
-      <div className={styles.headerWrapper}>
+      {/* <div className={styles.headerWrapper}>
         <HomepageHeader />
-      </div>
+      </div> */}
+      <PikselHero />
       <main>
         <UseCase />
         <OurServices />

@@ -61,6 +61,12 @@ h3,
   font-weight: 500;
 }
 
+/* Global Dark Mode Background override */
+html[data-theme='dark'] {
+  --ifm-background-color: #0a0e1a;
+  background-color: var(--ifm-background-color);
+}
+
 /* HEADER */
 .hero {
   background-color: var(--ifm-background-color);
@@ -137,6 +143,38 @@ h3,
 }
 
 /* NAVBAR */
+.navbar {
+  background: rgba(10, 14, 26, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.navbar__item {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Navbar link underline effect */
+.navbar__link:not(.dropdown__menu .navbar__link) {
+  position: relative;
+}
+
+.navbar__link:not(.dropdown__menu .navbar__link)::after {
+  content: '';
+  position: absolute;
+  bottom: 0px; /* Adjusted position */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+.navbar__link:not(.dropdown__menu .navbar__link):hover::after,
+.navbar__link--active:not(.dropdown__menu .navbar__link)::after {
+  width: 100%;
+}
 
 
 .navbar__items .navbar__item.navbar__link[href="/docs/intro"] {

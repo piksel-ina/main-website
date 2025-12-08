@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Geospatial Technology</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0e1a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 14, 26, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-placeholder {
+      width: 180px;
+      height: 40px;
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: white;
+      box-shadow: 0 0 15px rgba(30, 64, 175, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #60a5fa;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #1e40af, #3b82f6);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .language-selector {
+      position: relative;
+    }
+
+    .language-selector select {
+      background: transparent;
+      border: none;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      outline: none;
+      transition: color 0.3s ease;
+      appearance: none;
+      padding-right: 1.5rem;
+    }
+
+    .language-selector select:hover {
+      color: #60a5fa;
+    }
+
+    .language-selector::after {
+      content: '▼';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.7rem;
+      color: #cbd5e1;
+      pointer-events: none;
+    }
+
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 180px;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(30, 64, 175, 0.08) 0%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .image-collage {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 55%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 2rem;
+      opacity: 0.25;
+      filter: grayscale(30%);
+    }
+
+    .image-collage::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #0a0e1a 0%, transparent 40%, transparent 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .image-item {
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .image-item:nth-child(1) {
+      grid-row: span 2;
+      background-image: url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800');
+    }
+
+    .image-item:nth-child(2) {
+      background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800');
+    }
+
+    .image-item:nth-child(3) {
+      background-image: url('https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800');
+    }
+
+    .image-item:nth-child(4) {
+      grid-row: span 2;
+      background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800');
+    }
+
+    .image-item:nth-child(5) {
+      background-image: url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800');
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 4rem;
+      width: 100%;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(30, 64, 175, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      font-size: 0.875rem;
+      color: #60a5fa;
+      margin-bottom: 3rem;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      max-width: 550px;
+    }
+
+    .hero-stat-item {
+      padding: 0.75rem;
+      background: rgba(15, 20, 32, 0.3);
+      border: 1px solid rgba(148, 163, 184, 0.08);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .hero-stat-number {
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero-stat-label {
+      font-size: 0.65rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 1024px) {
+      .image-collage {
+        width: 50%;
+        opacity: 0.2;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .nav-links {
+        gap: 2rem;
+      }
+
+      .hero-stats {
+        max-width: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .image-collage {
+        width: 100%;
+        opacity: 0.15;
+      }
+
+      .content-wrapper {
+        padding: 0 2rem;
+      }
+
+      .nav-container {
+        padding: 1.5rem 2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 320px;
+      }
+
+      .hero-stat-number {
+        font-size: 1.1rem;
+      }
+
+      .hero-stat-label {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo-placeholder">Piksel-logo</div>
+      
+      <ul class="nav-links">
+        <li><a href="#usecase">Use Case</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#data">Data</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="language-selector">
+        <select>
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="image-collage">
+      <div class="image-item"></div>
+      <div class="image-item"></div>
+      <div class="image-item"></div>
+      <div class="image-item"></div>
+      <div class="image-item"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="hero-content">
+        <span class="tag">PIKSEL</span>
+        <h1>Memahami Bumi Indonesia Melalui Piksel</h1>
+        <p class="subtitle">
+          Piksel mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia
+        </p>
+        
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">50TB+</div>
+            <div class="hero-stat-label">Data Processed Daily</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">15min</div>
+            <div class="hero-stat-label">Update Frequency</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">99.8%</div>
+            <div class="hero-stat-label">Accuracy Rate</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-number">180+</div>
+            <div class="hero-stat-label">Countries Covered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
