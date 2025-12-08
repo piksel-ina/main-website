@@ -8,6 +8,14 @@
   --ifm-color-primary-lighter: #228be6;
   --ifm-color-primary-lightest: #1c7ed6;
   --ifm-color-complementary-dark: #fcb83a;
+  
+  /* Use Case Colors */
+  --piksel-color-kehutanan: #10b981;
+  --piksel-color-perkotaan: #3b82f6;
+  --piksel-color-pertanian: #f59e0b;
+  --piksel-color-pesisir: #06b6d4;
+  --piksel-color-bencana: #ef4444;
+  --piksel-color-pertambangan: #8b5cf6;
 
   --ifm-color-primary-alpha-10: color-mix(
     in srgb,
