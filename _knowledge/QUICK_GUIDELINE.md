@@ -17,48 +17,65 @@ We follow a modified **Atomic Design** principle to organize components, ensurin
     - **DO NOT** hardcode text, links, or image URLs inside components.
     - Import data from `src/data/homepageData.js` (or similar files).
 
-## 2. Component Development Rules
+## 2. Design & Aesthetic System
 
-### A. creating New Components
+Our visual language is **"Digital Earth / Futuristic Data"**. It relies heavily on dark mode, glowing accents, and fluid layouts.
+
+### A. Core Visual Traits
+- **Atmosphere**: Dark backgrounds (`#1b1b1d`) with vibrant neon accents (Cyan, Purple, Emerald).
+- **Background Elements**:
+    - **Glowing Orbs**: Large, blurred radial gradients (`filter: blur(64px)`) floating in the background.
+    - **Grid Patterns**: Subtle linear gradients creating a grid mesh (`opacity: 0.1`).
+    - **Scan Lines**: Animated lines (`animation: scan`) to simulate data processing.
+- **Containers**:
+    - **Glassmorphism**: Semi-transparent backgrounds (`rgba(26, 31, 46, 0.6)`) with `backdrop-filter: blur(10px)`.
+    - **Tech Borders**: Use "Corner Accents" (border on corners only) or Gradient Borders instead of solid boxes.
+
+### B. Typography & Spacing (Fluidity)
+- **MANDATORY**: Use `clamp()` for **ALL** major font sizes, padding, and margins to ensure seamless mobile-to-desktop transition.
+    - *Example*: `font-size: clamp(1.5rem, 4vw, 2.5rem);`
+    - *Example*: `padding: clamp(2rem, 8vw, 6rem) 0;`
+
+### C. Animation & Interaction
+- **Passive Motion**: Background elements (orbs) should have subtle "Float" or "Pulse" animations.
+- **Active Motion**: Hover states should be snappy (`0.3s ease`).
+    - *Common effects*: Icon glow intensity increases, text color shifts to white, buttons reveal a "shine".
+
+## 3. Component Development Rules
+
+### A. Creating New Components
 1.  **Is it reusable?**
     - Yes -> Place in `src/components/UI/`.
     - No -> Place in `src/components/<PageName>/`.
 2.  **Styling**:
     - Use **CSS Modules** (`styles.module.css`) for component-specific styles.
-    - Use **Global Variables** (defined in `custom.css`) for colors, fonts, and spacing to maintain consistency.
-    - Example: `var(--ifm-color-primary)`, `var(--ifm-global-radius)`.
+    - **Use `clamp()`** for responsiveness. **Avoid** fixed pixel values for layout.
+    - Use **Global Variables** (defined in `custom.css`) for colors.
+    - Use `color-mix()` for transparencies:
+        - *Good*: `background-color: color-mix(in srgb, var(--active-color) 10%, transparent);`
 3.  **Icons**:
-    - Use `lucide-react` for all icons.
-    - Propagate icon sizing/styling via props if needed.
+    - Use `lucide-react`.
+    - Wrap icons in a `div` if adding glow effects.
 
 ### B. Data & Content
 1.  **Decoupling**:
     - Components should accept data via `props`.
-    - Page/Container components (e.g., in `src/pages/` or `src/components/Home/`) are responsible for importing the data and passing it down.
+    - Page/Container components are responsible for importing the data.
 2.  **Internationalization**:
     - Always wrap text strings in `@docusaurus/Translate`.
-    - Example:
-      ```javascript
-      translate({
-        id: 'component.title',
-        message: 'Default Title',
-        description: 'Context for translators'
-      })
-      ```
 
 ### C. Accessibility (a11y)
 1.  **Semantic HTML**:
-    - Use `<h3>` for card titles inside a section (where the section title is `<h2>`).
+    - Use `<h3>` for card titles inside a section.
     - Use `<button>` or Docusaurus `<Link>` for interactive elements.
-    - **Avoid** using `div` with `onClick` unless you handle `onKeyDown` and `role` attributes correctly.
-2.  **Links**:
-    - Use the project's `Button` atom which wraps Docusaurus `<Link>` automatically.
-    - Ensure external links open securely (handled by Docusaurus, but good to verify).
+2.  **Focus States**:
+    - Ensure interactive elements have visible focus states (often handled by the "glow" borders).
 
-## 3. Best Practices Checklist
+## 4. Best Practices Checklist
 
+- [ ] **Aesthetics Check**: Did I use `clamp()`? Are there background "Orbs" or "Grids"?
 - [ ] **Data Check**: Is the text hardcoded? -> Move to `src/data/`.
-- [ ] **Style Check**: Am I using a hardcoded hex color? -> Use a CSS variable.
+- [ ] **Style Check**: Am I using a hardcoded hex color? -> Use a CSS variable or `color-mix`.
 - [ ] **Structure Check**: Is this a generic card used in two places? -> Move to `src/components/UI/Molecules`.
 - [ ] **A11y Check**: Can I tab to this button? Does the image have an `alt` tag?
 

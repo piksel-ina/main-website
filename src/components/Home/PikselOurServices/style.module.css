@@ -80,7 +80,7 @@
   right: 5rem;
   width: 20rem;
   height: 20rem;
-  background: radial-gradient(circle, var(--ifm-color-primary-alpha-10) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--piksel-color-cyan), transparent 90%) 0%, transparent 70%);
   filter: blur(40px);
   animation: float 10s ease-in-out infinite;
 }
@@ -90,7 +90,7 @@
   left: 2.5rem;
   width: 16rem;
   height: 16rem;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--piksel-color-purple), transparent 94%) 0%, transparent 70%);
   filter: blur(35px);
   animation: float 12s ease-in-out infinite 2s;
 }
@@ -100,7 +100,7 @@
   left: 33%;
   width: 14rem;
   height: 14rem;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--piksel-color-green), transparent 95%) 0%, transparent 70%);
   filter: blur(30px);
   animation: float 11s ease-in-out infinite 4s;
 }
@@ -110,7 +110,7 @@
   right: 33%;
   width: 12rem;
   height: 12rem;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--piksel-color-blue), transparent 93%) 0%, transparent 70%);
   filter: blur(25px);
   animation: float 9s ease-in-out infinite 1s;
 }
@@ -134,13 +134,13 @@
 .accentLineBar {
   width: 3rem;
   height: 1px;
-  background: linear-gradient(to right, #06b6d4, transparent);
+  background: linear-gradient(to right, var(--piksel-color-cyan), transparent);
 }
 
 .accentText {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--ifm-color-primary-light);
+  color: var(--piksel-color-cyan);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -170,14 +170,14 @@
   height: 0.75rem;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: var(--ifm-color-primary-light);
+  background-color: var(--piksel-color-cyan);
   border-radius: 9999px;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .headerDesc {
   font-size: 1.125rem;
-  color: #94a3b8;
+  color: var(--ifm-color-gray-500);
   max-width: 48rem;
   line-height: 1.625;
 }
@@ -188,7 +188,7 @@
   top: 0;
   width: 1px;
   height: 6rem;
-  background: linear-gradient(to bottom, rgba(6, 182, 212, 0.5), transparent);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--piksel-color-cyan), transparent 50%), transparent);
 }
 
 /* ============================================
@@ -385,7 +385,7 @@
 
 /* Description & Features */
 .description {
-  color: #cbd5e1;
+  color: var(--ifm-color-gray-300);
   margin-bottom: 2rem;
   font-size: 1.125rem;
   line-height: 1.625;
@@ -404,7 +404,7 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  color: #94a3b8;
+  color: var(--ifm-color-gray-500);
 }
 
 .featureArrow {
