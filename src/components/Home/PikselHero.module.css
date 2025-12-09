@@ -4,9 +4,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
-  padding-top: 60px;
-  padding-bottom: 0;
-  margin-bottom: -10rem; /* Pull the next section up to overlap with the spacer */
+  padding: 0 2rem;
+  padding-top: 6rem;
+  margin-bottom: 0rem; /* Pull the next section up to overlap with the spacer */
   z-index: 10; /* Ensure hero sits on top relative to flow, but specific elements control stacking */
 }
 
@@ -28,7 +28,7 @@
   grid-row: 1;
   justify-self: end;
   width: 55%;
-  height: 100%;
+  max-height: 80%;
   
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -36,8 +36,7 @@
   gap: 1rem;
   padding: 2rem;
   opacity: 0.25;
-  filter: grayscale(30%);
-  padding-bottom: 6rem;
+  filter: grayscale(30%);;
   margin-bottom: 0;
   margin-top: 1.5rem;
   
@@ -223,6 +222,10 @@
 }
 
 @media (max-width: 768px) {
+  .heroSection {
+    min-height: 78vh;
+  }  
+
   .imageCollage {
     width: 100%;
     opacity: 0.15;

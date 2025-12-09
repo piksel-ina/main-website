@@ -307,6 +307,7 @@ html[data-theme='dark'] {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+  padding: 2rem;  
 }
 
 /* Add a subtle glow/gradient at the top */
@@ -370,10 +371,9 @@ html[data-theme='dark'] {
   line-height: 1.6;
 }
 
-/* Responsive adjust for footer */
 @media (max-width: 996px) {
   .footer {
-    text-align: left; /* Ensure left alignment on mobile too */
+    text-align: left;
   }
 }
 
