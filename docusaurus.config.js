@@ -19,12 +19,12 @@ const config = {
     locales: ["id", "en"],
     localeConfigs: {
       id: {
-        label: "Indonesia",
+        label: "Id",
         direction: "ltr",
         htmlLang: "id-ID",
       },
       en: {
-        label: "English",
+        label: "En",
         direction: "ltr",
         htmlLang: "en-US",
       },

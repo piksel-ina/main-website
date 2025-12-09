@@ -11,7 +11,7 @@ We follow a modified **Atomic Design** principle to organize components, ensurin
     - **`Molecules/`**: Combinations of atoms (e.g., `GlassCard`, `ModernCard`).
     - **`Organisms/`**: Complex reusable sections (e.g., `Carousel`).
 - **`src/components/<Feature>/`**: Feature-specific or Page-specific layouts.
-    - Example: `src/components/Home/` contains `Articles`, `OurServices`, `UseCases`, `PikselHero`.
+    - Example: `src/components/Home/` contains `Articles`, `OurServices`, `PikselOurServices`, `UseCases`, `PikselHero`, `faq`.
     - These components orchestrate data and UI components but shouldn't hold the core aesthetic styles (which belong to UI components).
 - **`src/data/`**: Source of truth for content.
     - **DO NOT** hardcode text, links, or image URLs inside components.

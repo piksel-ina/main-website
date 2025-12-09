@@ -1,5 +1,5 @@
 import { translate } from "@docusaurus/Translate";
-import { Map, FileCode2, Unplug, GitBranch } from "lucide-react";
+import { Map, Terminal, Globe, Server, Cpu, Search } from "lucide-react";
 
 export const heroData = {
   title: translate({
@@ -106,88 +106,95 @@ export const articlesData = [
 
 export const servicesData = [
   {
-    id: 1,
-    icon: Map,
-    title: translate({
-      id: "ourServices.service1.title",
-      message: "Piksel Map",
-      description: "Title for service 1",
-    }),
+    id: "01",
+    icon: Search,
+    title: "EXPLORER",
     description: translate({
-      id: "ourServices.service1.description",
-      message:
-        "Eksplorasi dan visualisasi dataset geospasial melalui platform web interaktif kami.",
-      description: "Service 1 Description",
+      id: "ourServices.explorer.description",
+      message: "Jelajahi dan akses data geospasial yang tersedia di platform kami secara bebas",
     }),
-    buttonText: translate({
-      id: "ourServices.service1.button",
-      message: "Mulai Eksplorasi",
-      description: "Button text for service 1",
-    }),
-    link: "/map",
+    features: [
+      translate({ id: "ourServices.explorer.f1", message: "Browse katalog data" }),
+      translate({ id: "ourServices.explorer.f2", message: "Preview visualisasi" }),
+      translate({ id: "ourServices.explorer.f3", message: "Download dataset" }),
+    ],
+    buttonText: translate({ id: "ourServices.explorer.btn", message: "Mulai Eksplorasi" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
+    link: "/explorer",
+    color: "cyan", // internal usage for styling mapping
   },
   {
-    id: 2,
-    icon: FileCode2,
-    title: translate({
-      id: "ourServices.service2.title",
-      message: "Piksel Sandbox",
-      description: "Title for service 2",
-    }),
+    id: "02",
+    icon: Terminal,
+    title: "JUPYTER SANDBOX",
     description: translate({
-      id: "ourServices.service2.description",
-      message:
-        "Eksperimen, belajar, dan buat prototype di environment Jupyter berbasis cloud kami.",
-      description: "Service 2 Description",
+      id: "ourServices.sandbox.description",
+      message: "Belajar bekerja dengan data secara programatik. Kontribusi dalam pengembangan produk bersama kami",
     }),
-    buttonText: translate({
-      id: "ourServices.service2.button",
-      message: "Lihat Analytics",
-      description: "Button text for service 2",
-    }),
+    features: [
+      translate({ id: "ourServices.sandbox.f1", message: "Notebook environment siap pakai" }),
+      translate({ id: "ourServices.sandbox.f2", message: "Sample code dan tutorial" }),
+      translate({ id: "ourServices.sandbox.f3", message: "Kolaborasi pengembangan" }),
+    ],
+    buttonText: translate({ id: "ourServices.sandbox.btn", message: "Mulai Belajar" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
     link: "/sandbox",
+    color: "purple",
   },
   {
-    id: 3,
-    icon: Unplug,
-    title: translate({
-      id: "ourServices.service3.title",
-      message: "Piksel Data API",
-      description: "Title for service 3",
-    }),
+    id: "03",
+    icon: Map,
+    title: "MAPS",
     description: translate({
-      id: "ourServices.service3.description",
-      message:
-        "Akses dataset geospasial yang komprehensif melalui infrastruktur API kami.",
-      description: "Service 3 Description",
+      id: "ourServices.maps.description",
+      message: "Berinteraksi dengan produk kami dan dapatkan insight visual dengan cepat",
     }),
-    buttonText: translate({
-      id: "ourServices.service3.button",
-      message: "Jelajah API",
-      description: "Button text for service 3",
-    }),
-    link: "/api",
+    features: [
+      translate({ id: "ourServices.maps.f1", message: "Interface interaktif" }),
+      translate({ id: "ourServices.maps.f2", message: "Analisis real-time" }),
+      translate({ id: "ourServices.maps.f3", message: "Export hasil analisis" }),
+    ],
+    buttonText: translate({ id: "ourServices.maps.btn", message: "Buka Maps" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
+    link: "/maps",
+    color: "emerald",
   },
   {
-    id: 4,
-    icon: GitBranch,
-    title: translate({
-      id: "ourServices.service4.title",
-      message: "Piksel Workflows",
-      description: "Title for service 4",
-    }),
+    id: "04",
+    icon: Server, // or Globe
+    title: "WEB SERVICES",
     description: translate({
-      id: "ourServices.service4.description",
-      message:
-        "Otomasi pemrosesan data geospasial skala besar dengan Argo Workflows.",
-      description: "Service 4 Description",
+      id: "ourServices.webservices.description",
+      message: "Akses data melalui web services dan integrasikan ke aplikasi Anda",
     }),
-    buttonText: translate({
-      id: "ourServices.service4.button",
-      message: "Jelajahi Workflows",
-      description: "Button text for service 4",
+    features: [
+      translate({ id: "ourServices.webservices.f1", message: "WMS/WCS/WMTS endpoints" }),
+      translate({ id: "ourServices.webservices.f2", message: "REST API" }),
+      translate({ id: "ourServices.webservices.f3", message: "Dokumentasi lengkap" }),
+    ],
+    buttonText: translate({ id: "ourServices.webservices.btn", message: "Lihat Dokumentasi" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
+    link: "/docs/api-integration",
+    color: "blue",
+  },
+  {
+    id: "05",
+    icon: Cpu,
+    title: "NATIONAL PRODUCTION",
+    description: translate({
+      id: "ourServices.production.description",
+      message: "Delegasi ratusan hingga ribuan CPU untuk memproses data multi-spasial dan multi-temporal skala nasional",
     }),
-    link: "/workflows",
+    features: [
+      translate({ id: "ourServices.production.f1", message: "Cloud computing dengan Kubernetes" }),
+      translate({ id: "ourServices.production.f2", message: "Karpenter & Argo Workflow" }),
+      translate({ id: "ourServices.production.f3", message: "Proses 1-3 hari untuk skala nasional" }),
+      translate({ id: "ourServices.production.f4", message: "Kolaborasi produksi tingkat nasional" }),
+    ],
+    buttonText: translate({ id: "ourServices.production.btn", message: "Hubungi Kami" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
+    link: "/contact",
+    color: "amber",
   },
 ];
 
@@ -312,4 +319,79 @@ export const useCasesData = {
     color: 'var(--piksel-color-pertambangan)',
     glowColor: 'rgba(139, 92, 246, 0.6)'
   }
+};
+
+export const faqData = {
+  title: translate({
+    id: "homepage.faq.title",
+    message: "Frequently Asked Question",
+    description: "Title for the FAQ section",
+  }),
+  subtitle: translate({
+    id: "homepage.faq.subtitle",
+    message: "Trusted in more than 100 countries and 4 million customers.",
+    description: "Subtitle for the FAQ section",
+  }),
+  questions: [
+    {
+      id: "faq-1",
+      question: translate({
+        id: "homepage.faq.q1",
+        message: "How do i update my billing information?",
+      }),
+      answer: translate({
+        id: "homepage.faq.a1",
+        message:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante vitae purus tempus egestas. Curabitur euismod purus sed et faucibus. Vivamus in ante sed libero feugiat fermentum.",
+      }),
+    },
+    {
+      id: "faq-2",
+      question: translate({
+        id: "homepage.faq.q2",
+        message: "How do i update my billing information?",
+      }),
+      answer: translate({
+        id: "homepage.faq.a2",
+        message:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante vitae purus tempus egestas. Curabitur euismod purus sed et faucibus. Vivamus in ante sed libero feugiat fermentum.",
+      }),
+    },
+    {
+      id: "faq-3",
+      question: translate({
+        id: "homepage.faq.q3",
+        message: "How do i update my billing information?",
+      }),
+      answer: translate({
+        id: "homepage.faq.a3",
+        message:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante vitae purus tempus egestas. Curabitur euismod purus sed et faucibus. Vivamus in ante sed libero feugiat fermentum.",
+      }),
+    },
+    {
+      id: "faq-4",
+      question: translate({
+        id: "homepage.faq.q4",
+        message: "How do i update my billing information?",
+      }),
+      answer: translate({
+        id: "homepage.faq.a4",
+        message:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante vitae purus tempus egestas. Curabitur euismod purus sed et faucibus. Vivamus in ante sed libero feugiat fermentum.",
+      }),
+    },
+     {
+      id: "faq-5",
+      question: translate({
+        id: "homepage.faq.q5",
+        message: "How do i update my billing information?",
+      }),
+      answer: translate({
+        id: "homepage.faq.a5",
+        message:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante vitae purus tempus egestas. Curabitur euismod purus sed et faucibus. Vivamus in ante sed libero feugiat fermentum.",
+      }),
+    },
+  ],
 };

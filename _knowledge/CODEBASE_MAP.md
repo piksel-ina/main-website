@@ -15,7 +15,9 @@
 │   │   │   ├── OurServices/   # Services section
 │   │   │   ├── UseCases/      # Use Cases section
 │   │   │   ├── PikselUseCases/ # New Piksel Use Cases section
-│   │   │   └── PikselHero.js  # New Hero section (Piksel look)
+│   │   │   ├── PikselOurServices/ # New Piksel Our Services section
+│   │   │   ├── PikselHero.js  # New Hero section (Piksel look)
+│   │   │   └── faq/           # FAQ section
 │   │   ├── UI/                # Reusable UI components
 │   │   │   ├── Atoms/         # Basic building blocks
 │   │   │   │   └── Button/    # Semantic Link/Button wrapper
@@ -43,7 +45,9 @@
 | **OurServices** | Home | Renders "Layanan Kami" section using `servicesData` and `GlassCard`. | None |
 | **UseCases** | Home | Renders "Contoh Pemanfaatan" section using `useCasesData` and `ModernCard`. | None |
 | **PikselUseCases** | Home | New animated Use Cases section with tabs and "Piksel" aesthetic. | None |
+| **PikselOurServices** | Home | New animated Services section with timeline layout. | None |
 | **PikselHero** | Home | New Hero section with image grid and stats. | None |
+| **PikselFaq** | Home | FAQ section with accordion style, using `faqData`. | None |
 | **Button** | Atom | Wrapper for Docusaurus `<Link>` or `<button>` with standardized styles. | `to`, `variant`, `size`, `block`, `onClick` |
 | **GlassCard** | Molecule | Glassmorphism card with icon, title, description, and action buttons. | `icon`, `title`, `description`, `buttonText`, `link` |
 | **ModernCard** | Molecule | Card with image overlay and hover effects. | `image`, `title`, `description`, `link` |

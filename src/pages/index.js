@@ -3,7 +3,6 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import UseCase from "@site/src/components/Home/UseCases";
-import OurServices from "../components/Home/OurServices";
 import Articles from "../components/Home/Articles";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
@@ -13,6 +12,8 @@ import { heroData } from "@site/src/data/homepageData";
 
 import PikselHero from "../components/Home/PikselHero";
 import PikselUseCases from "../components/Home/PikselUseCases";
+import PikselOurServices from "../components/Home/PikselOurServices";
+import PikselFaq from "../components/Home/faq";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -62,8 +63,9 @@ export default function Home() {
       <PikselHero />
       <main>
         <PikselUseCases />
-        <OurServices />
-        <Articles />
+        <PikselOurServices />
+        {/* <Articles /> */}
+        <PikselFaq />
       </main>
     </Layout>
   );
