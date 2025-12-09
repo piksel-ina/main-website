@@ -23,7 +23,9 @@ const FAQItem = ({ item, isOpen, onClick }) => {
       </button>
       
       <div className={clsx(styles.answer, { [styles.answerVisible]: isOpen })}>
-        <p>{item.answer}</p>
+        <div className={styles.answerInner}>
+          <p>{item.answer}</p>
+        </div>
       </div>
     </div>
   );

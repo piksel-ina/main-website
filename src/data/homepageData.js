@@ -301,7 +301,7 @@ export const faqData = {
       answer: translate({
         id: "homepage.faq.a3",
         message:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ante vitae purus tempus egestas. Curabitur euismod purus sed et faucibus. Vivamus in ante sed libero feugiat fermentum.",
+          "Proin nec ante vitae purus tempus egestas. Curabitur. Vivamus in ante sed libero feugiat fermentum.",
       }),
     },
     {
