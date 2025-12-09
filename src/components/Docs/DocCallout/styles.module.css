@@ -1,0 +1,33 @@
+.callout {
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0 8px 8px 0;
+}
+.info {
+  border-color: #41a6f9;
+  background: linear-gradient(90deg, rgba(65, 166, 249, 0.1) 0%, transparent 100%);
+}
+.warning {
+  border-color: #f6ad55;
+  background: linear-gradient(90deg, rgba(246, 173, 85, 0.1) 0%, transparent 100%);
+}
+.danger {
+  border-color: #f56565;
+  background: linear-gradient(90deg, rgba(245, 101, 101, 0.1) 0%, transparent 100%);
+}
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

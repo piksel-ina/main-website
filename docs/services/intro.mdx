@@ -1,0 +1,34 @@
+---
+sidebar_position: 1
+---
+
+import DocCard from '@site/src/components/Docs/DocCard';
+import DocCallout from '@site/src/components/Docs/DocCallout';
+
+# Services
+
+Discover the variety of services offered by Piksel platform.
+
+<DocCallout type="info" title="Service Limits">
+  Public access is subject to rate limiting. Please contact support for enterprise access.
+</DocCallout>
+
+## Available Services
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
+  <DocCard 
+    title="Piksel Map" 
+    description="Interactive web mapping interface for visualizing geospatial data." 
+    to="#" 
+  />
+  <DocCard 
+    title="Data API" 
+    description="RESTful API for programmatic access to satellite imagery." 
+    to="#" 
+  />
+  <DocCard 
+    title="Sandbox" 
+    description="JupyterHub environment for running custom Python analysis." 
+    to="#" 
+  />
+</div>

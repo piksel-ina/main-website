@@ -1,0 +1,62 @@
+---
+sidebar_position: 1
+---
+
+import DocCard from '@site/src/components/Docs/DocCard';
+import DocSteps from '@site/src/components/Docs/DocSteps';
+import DocCallout from '@site/src/components/Docs/DocCallout';
+import ImageCard from '@site/src/components/Docs/ImageCard';
+
+# Use Cases
+
+Explore how Piksel is being used to solve real-world problems.
+
+<DocCallout type="info">
+  These case studies demonstrate the practical application of PiKSEL's satellite data.
+</DocCallout>
+
+## Common Scenarios
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
+  <DocCard 
+    title="Forest Monitoring" 
+    description="Tracking deforestation and land cover changes in real-time." 
+    to="#" 
+  />
+  <DocCard 
+    title="Disaster Response" 
+    description="Rapid mapping for flood and earthquake affected areas." 
+    to="#" 
+  />
+  <DocCard 
+    title="Urban Planning" 
+    description="Analyzing urban growth and infrastructure development." 
+    to="#" 
+  />
+</div>
+
+## User Journey Example
+
+<DocSteps>
+  <span>**Identify Area of Interest:** Select the region you want to analyze using Piksel Map.</span>
+  <span>**Select Datasets:** Choose from optical, radar, or derived datasets.</span>
+  <span>**Process:** Run analysis algorithms on the Piksel Cloud.</span>
+  <span>**Export:** Download the results in GeoTIFF or shapefile format.</span>
+</DocSteps>
+
+## Featured Implementations
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+  <ImageCard
+    title="Forest Cover Analysis"
+    description="Using multi-temporal Sentinel-2 imagery to detect logging activities in protected areas."
+    image="/img/hero/Landscape_1x.webp"
+    to="#"
+  />
+  <ImageCard
+    title="Flood Modeling"
+    description="Integrating terrain data with precipitation models to predict flood-prone zones."
+    image="/img/hero/Landscape_1x.webp"
+    to="#"
+  />
+</div>

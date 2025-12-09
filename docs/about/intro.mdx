@@ -1,0 +1,57 @@
+---
+sidebar_position: 1
+---
+
+import DocCard from '@site/src/components/Docs/DocCard';
+import DocSteps from '@site/src/components/Docs/DocSteps';
+import DocCallout from '@site/src/components/Docs/DocCallout';
+
+# About Piksel
+
+<DocCallout type="info" title="Welcome to Piksel Docs">
+  This documentation uses our new "Digital Earth" design system. All components are responsive and theme-aware.
+</DocCallout>
+
+Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesian region.
+
+## Getting Started
+
+<DocSteps>
+  <span>
+    **Explore the Platform**
+    Visit our [services](/docs/services/intro) to understand the capabilities of PiKSEL.
+  </span>
+  <span>
+    **Check Use Cases**
+    See real-world applications in our [Use Cases](/docs/usecase/intro) section.
+  </span>
+  <span>
+    **Read the Guidelines**
+    Familiarize yourself with our data policies and API limits.
+  </span>
+</DocSteps>
+
+## Quick Navigation
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
+  <DocCard 
+    title="Use Cases" 
+    description="See how Piksel is transforming environmental monitoring." 
+    to="/docs/usecase/intro" 
+  />
+  <DocCard 
+    title="Service Catalog" 
+    description="Browse our available satellite datasets and APIs." 
+    to="/docs/services/intro" 
+  />
+</div>
+
+## Component Examples
+
+<DocCallout type="warning" title="Note to Developers">
+  When contributing to this documentation, please use the provided **MDX components** to maintain stylistic consistency.
+</DocCallout>
+
+<DocCallout type="danger" title="Critical Info">
+  Always verify your changes in the staging environment before pushing to production.
+</DocCallout>

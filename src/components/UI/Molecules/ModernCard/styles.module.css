@@ -106,9 +106,7 @@
   display: inline-block;
 }
 
-.modernCardButton:hover .modernCardArrow {
-  transform: translateX(4px);
-}
+
 
 @media (max-width: 996px) {
   .modernCard {
