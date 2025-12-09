@@ -80,7 +80,7 @@
   right: 5rem;
   width: 20rem;
   height: 20rem;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--ifm-color-primary-alpha-10) 0%, transparent 70%);
   filter: blur(40px);
   animation: float 10s ease-in-out infinite;
 }
@@ -140,16 +140,16 @@
 .accentText {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #22d3ee;
+  color: var(--ifm-color-primary-light);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .headerTitle {
-  font-size: 3rem;
+  font-size: clamp(3rem, 5vw, 3.75rem);
   line-height: 1;
   font-weight: 700;
-  color: white;
+  color: var(--ifm-color-white);
   margin-bottom: 1.5rem;
   display: inline-block;
   font-family: inherit;
@@ -157,9 +157,10 @@
 
 @media (min-width: 768px) {
   .headerTitle {
-    font-size: 3.75rem;
+    font-size: clamp(3rem, 5vw, 3.75rem);
   }
 }
+
 
 .pulseDot {
   position: absolute;
@@ -167,7 +168,9 @@
   top: 1.5rem;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #22d3ee;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--ifm-color-primary-light);
   border-radius: 9999px;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -203,7 +206,10 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(6, 182, 212, 0.3), transparent);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--ifm-color-primary-alpha-30), transparent);
 }
 
 /* Service Item */
@@ -279,7 +285,7 @@
 }
 
 .numberText {
-  font-size: 10rem;
+  font-size: clamp(8rem, 15vw, 13.75rem);
   font-weight: 700;
   line-height: 1;
   user-select: none;
@@ -288,7 +294,7 @@
 
 @media (min-width: 768px) {
   .numberText {
-    font-size: 13.75rem;
+    font-size: clamp(8rem, 15vw, 13.75rem);
   }
 }
 
@@ -358,15 +364,15 @@
 }
 
 .serviceTitle {
-  font-size: 1.875rem;
+  font-size: clamp(1.875rem, 3vw, 2.25rem);
   font-weight: 700;
-  color: white;
+  color: var(--ifm-color-white);
   margin: 0;
 }
 
 @media (min-width: 768px) {
   .serviceTitle {
-    font-size: 2.25rem;
+    font-size: clamp(1.875rem, 3vw, 2.25rem);
   }
 }
 
