@@ -29,7 +29,7 @@ const FAQItem = ({ item, isOpen, onClick }) => {
   );
 };
 
-export default function PikselFaq() {
+export default function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
 
   const handleToggle = (index) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PikselHero.module.css';
+import styles from './styles.module.css';
 
 const HERO_IMAGES = [
   'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800',
@@ -16,7 +16,7 @@ const STATS = [
   { number: '180+', label: 'Countries Covered' },
 ];
 
-export default function PikselHero() {
+export default function Hero() {
   return (
     <section className={styles.heroSection}>
       <div className={styles.imageCollage}>
@@ -47,7 +47,6 @@ export default function PikselHero() {
           </div>
         </div>
       </div>
-      {/* <div className={styles.heroBottomSpacer} /> */}
     </section>
   );
 }

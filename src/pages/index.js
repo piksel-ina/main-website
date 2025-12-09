@@ -2,44 +2,15 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import UseCase from "@site/src/components/Home/UseCases";
-import Articles from "../components/Home/Articles";
-import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import Translate, { translate } from "@docusaurus/Translate";
 
-import { heroData } from "@site/src/data/homepageData";
+import Hero from "../components/Home/Hero";
+import UseCases from "../components/Home/UseCases";
+import OurServices from "../components/Home/OurServices";
+import Faq from "../components/Home/Faq";
 
-import PikselHero from "../components/Home/PikselHero";
-import PikselUseCases from "../components/Home/PikselUseCases";
-import PikselOurServices from "../components/Home/PikselOurServices";
-import PikselFaq from "../components/Home/faq";
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <div className={`${styles.heroText}`}>
-          <Heading as="h1" className="hero__title text--uppercase">
-            {heroData.title}
-          </Heading>
-          <p className="hero__subtitle">
-            {heroData.subtitle}
-          </p>
-          <div className={styles.buttons}>
-            <Link
-              className="button button--secondary button--lg"
-              to={heroData.buttonLink}
-            >
-              {heroData.buttonText}
-            </Link>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-}
+// HomepageHeader component removed as it is unused
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -57,15 +28,12 @@ export default function Home() {
         description: "Meta description for the homepage",
       })}
     >
-      {/* <div className={styles.headerWrapper}>
-        <HomepageHeader />
-      </div> */}
-      <PikselHero />
+
+      <Hero />
       <main>
-        <PikselUseCases />
-        <PikselOurServices />
-        {/* <Articles /> */}
-        <PikselFaq />
+        <UseCases />
+        <OurServices />
+        <Faq />
       </main>
     </Layout>
   );

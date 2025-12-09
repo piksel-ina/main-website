@@ -1,60 +1,159 @@
-import React from "react";
-import ModernCard from "@site/src/components/UI/Molecules/ModernCard/";
-import styles from "./style.module.css";
-import { translate } from "@docusaurus/Translate";
+import React, { useState, useMemo } from 'react';
+import clsx from 'clsx';
+import { useCasesData } from '@site/src/data/homepageData';
+import { 
+  TreePine, 
+  Building2, 
+  Wheat, 
+  Waves, 
+  TriangleAlert, 
+  Pickaxe, 
+  ArrowRight, 
+  Check 
+} from 'lucide-react';
+import styles from './styles.module.css';
 
-import { useCasesData as USE_CASES } from "@site/src/data/homepageData";
+// Map icon strings to components
+const IconMap = {
+  'tree-pine': TreePine,
+  'building-2': Building2,
+  'wheat': Wheat,
+  'waves': Waves,
+  'triangle-alert': TriangleAlert,
+  'pickaxe': Pickaxe
+};
 
-export default function UseCase() {
+export default function UseCases() {
+  const useCaseKeys = Object.keys(useCasesData || {});
+  const [activeTab, setActiveTab] = useState(useCaseKeys[0] || 'useCase01');
+
+  const currentCase = useMemo(() => {
+    return useCasesData[activeTab];
+  }, [activeTab]);
+
+  if (!currentCase) return null;
+
+  const IconComponent = IconMap[currentCase.icon] || TreePine;
+  const color = currentCase.color;
+  const glowColor = currentCase.glowColor;
+
+  const dynamicStyles = {
+    '--active-color': color,
+    '--active-glow': glowColor,
+  };
+
   return (
-    <section className={styles.useCaseSection}>
+    <section className={styles.section} style={dynamicStyles}>
+      {/* Background Effects */}
+      <div className={styles.gridBackground} />
+      <div className={clsx(styles.orb, styles.orb1)} />
+      <div className={clsx(styles.orb, styles.orb2)} />
+
       <div className="container">
-        <div className="section__header">
-          <div className="text--center margin-bottom--lg">
-            <h2 className="section__title section__title--primary-darkest">
-              {translate({
-                id: "useCase.title",
-                message: "Contoh Pemanfaatan",
-                description: "The title of the use cases section",
-              })}
-            </h2>
-            <p className="section__subtitle .section__subtitle--bg-color">
-              {translate({
-                id: "useCase.subtitle",
-                message:
-                  "Temukan bagaimana solusi kami memberikan dampak di berbagai domain",
-                description: "The subtitle of the use cases section",
-              })}
-            </p>
+        {/* Header */}
+        <div className={styles.header}>
+          <div className={styles.labelWrapper}>
+            <div className={styles.line} />
+            <span>Solusi Kami</span>
+            <div className={styles.line} />
+          </div>
+          <h2 className={styles.title}>Kasus Penggunaan Piksel</h2>
+          <p className={styles.subtitle}>
+            Solusi observasi bumi untuk berbagai sektor di Indonesia
+          </p>
+        </div>
+
+        {/* Tab Navigation */}
+        <div className={styles.tabsWrapper}>
+          <div className={styles.scanLine} />
+          
+          <div className={styles.tabs}>
+            {useCaseKeys.map((key) => {
+              const isActive = activeTab === key;
+              const item = useCasesData[key];
+              return (
+                <button
+                  key={key}
+                  className={clsx(styles.tabButton, isActive && styles.tabButtonActive)}
+                  onClick={() => setActiveTab(key)}
+                >
+                  {item.tabLabel || item.title}
+                  {isActive && (
+                    <div className={styles.tabIndicator} />
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        <div className="row">
-          {Object.values(USE_CASES).map((useCase) => {
-            return (
-              <div key={useCase.id} className="col col--4 margin-bottom--lg">
-                <ModernCard
-                  image={useCase.image}
-                  title={useCase.title}
-                  description={useCase.description}
-                  link={useCase.link}
+        {/* Content Area */}
+        <div className={styles.contentGrid}>
+          
+          {/* Title Section */}
+          <div className={styles.titleSection}>
+            <div className={styles.iconWrapper}>
+              <div className={styles.iconGlow} />
+              <IconComponent className={styles.icon} />
+            </div>
+            <h3 className={styles.contentTitle}>
+              {currentCase.title}
+              <div className={styles.titleUnderline} />
+            </h3>
+          </div>
+
+          {/* Image Section */}
+          <div className={clsx("group", styles.imageSectionWrapper)}>
+            <div className={styles.imageSection}>
+              <div className={clsx(styles.corner, styles.cornerTL)} />
+              <div className={clsx(styles.corner, styles.cornerTR)} />
+              <div className={clsx(styles.corner, styles.cornerBL)} />
+              <div className={clsx(styles.corner, styles.cornerBR)} />
+
+              <div className={styles.imageContainer}>
+                <img
+                  key={currentCase.image}
+                  src={currentCase.image}
+                  alt={currentCase.title}
+                  className={styles.image}
                 />
+                <div className={styles.scanVertical} />
               </div>
-            );
-          })}
+            </div>
+          </div>
+
+          {/* Detail Section */}
+          <div className={styles.detailSection}>
+            <p className={styles.contentDescription}>
+              {currentCase.description}
+            </p>
+
+            <div className={styles.featuresList}>
+              {currentCase.features.map((feature, idx) => (
+                <div key={idx} className={styles.featureItem}>
+                  <div className={styles.checkIconWrapper}>
+                    <Check className={styles.checkIcon} />
+                  </div>
+                  <span className={styles.featureText}>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <button className={styles.ctaButton}>
+              <span>Pelajari Lebih Lanjut</span>
+              <ArrowRight className={styles.ctaIcon} />
+            </button>
+          </div>
+
         </div>
-        <div className="text--center margin-top--lg">
-          <a
-            href="/use-cases"
-            className="button button--outline button--lg button--primary"
-          >
-            {translate({
-              id: "useCase.readMore.button",
-              message: "Lihat Contoh Pemanfaatan Lainnya",
-              description: "Button text to view more use cases",
-            })}
-          </a>
+
+        {/* View All Button */}
+        <div className={styles.viewAllWrapper}>
+          <button className={styles.viewAllButton}>
+            <span>Lihat Semua Penggunaan</span>
+          </button>
         </div>
+
       </div>
     </section>
   );

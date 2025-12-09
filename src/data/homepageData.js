@@ -21,88 +21,7 @@ export const heroData = {
   buttonLink: "/docs/penggunaan/intro",
 };
 
-export const articlesData = [
-  {
-    id: 1,
-    title: translate({
-      id: "articles.defaultArticles.feat01.title",
-      message: "Memahami Citra Satelit untuk Indonesia",
-    }),
-    description: translate({
-      id: "articles.defaultArticles.feat01.description",
-      message:
-        "Pelajari dasar-dasar analisis citra satelit dan penerapannya untuk fitur geografis Indonesia serta monitoring lingkungan.",
-    }),
-    image:
-      "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2F0ZWxsaXRlJTIwaW1hZ2VyeXxlbnwwfHwwfHx8MA%3D%3D",
-    link: "/docs/satellite-imagery-basics",
-    date: "2024-01-15",
-  },
-  {
-    id: 2,
-    title: translate({
-      id: "articles.defaultArticles.feat02.title",
-      message: "Cloud Computing untuk Data Geospasial",
-    }),
-    description: translate({
-      id: "articles.defaultArticles.feat02.description",
-      message:
-        "Temukan bagaimana cloud computing merevolusi pemrosesan dan analisis data geospasial untuk proyek observasi bumi skala besar.",
-    }),
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdWQlMjBjb21wdXRpbmd8ZW58MHx8MHx8fDA%3D",
-    link: "/docs/cloud-computing-geospatial",
-    date: "2024-01-20",
-  },
-  {
-    id: 3,
-    title: translate({
-      id: "articles.defaultArticles.feat03.title",
-      message: "Monitoring Lingkungan dengan Piksel",
-    }),
-    description: translate({
-      id: "articles.defaultArticles.feat03.description",
-      message:
-        "Jelajahi bagaimana teknologi digital earth Piksel membantu memonitor deforestasi, pertumbuhan urban, dan dampak perubahan iklim di seluruh Indonesia.",
-    }),
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwbW9uaXRvcmluZ3xlbnwwfHwwfHx8MA%3D%3D",
-    link: "/docs/environmental-monitoring",
-    date: "2024-01-25",
-  },
-  {
-    id: 4,
-    title: translate({
-      id: "articles.defaultArticles.feat04.title",
-      message: "Integrasi API Data Piksel",
-    }),
-    description: translate({
-      id: "articles.defaultArticles.feat04.description",
-      message:
-        "Panduan step-by-step untuk mengintegrasikan API data geospasial Piksel ke dalam aplikasi dan workflow Anda.",
-    }),
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBpJTIwaW50ZWdyYXRpb258ZW58MHx8MHx8fDA%3D",
-    link: "/docs/api-integration",
-    date: "2024-02-01",
-  },
-  {
-    id: 5,
-    title: translate({
-      id: "articles.defaultArticles.feat05.title",
-      message: "Otomasi Workflow Geospasial",
-    }),
-    description: translate({
-      id: "articles.defaultArticles.feat05.description",
-      message:
-        "Pelajari cara mengotomasi pemrosesan data geospasial skala besar menggunakan Piksel Workflows dan teknologi Argo.",
-    }),
-    image:
-      "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXV0b21hdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-    link: "/docs/workflow-automation",
-    date: "2024-02-05",
-  },
-];
+
 
 export const servicesData = [
   {
@@ -121,7 +40,7 @@ export const servicesData = [
     buttonText: translate({ id: "ourServices.explorer.btn", message: "Mulai Eksplorasi" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
     link: "/explorer",
-    color: "cyan", // internal usage for styling mapping
+    color: "cyan",
   },
   {
     id: "02",
@@ -161,7 +80,7 @@ export const servicesData = [
   },
   {
     id: "04",
-    icon: Server, // or Globe
+    icon: Server,
     title: "WEB SERVICES",
     description: translate({
       id: "ourServices.webservices.description",
@@ -173,7 +92,6 @@ export const servicesData = [
       translate({ id: "ourServices.webservices.f3", message: "Dokumentasi lengkap" }),
     ],
     buttonText: translate({ id: "ourServices.webservices.btn", message: "Lihat Dokumentasi" }),
-    // secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
     link: "/docs/api-integration",
     color: "blue",
   },
@@ -192,7 +110,6 @@ export const servicesData = [
       translate({ id: "ourServices.production.f4", message: "Kolaborasi produksi tingkat nasional" }),
     ],
     buttonText: translate({ id: "ourServices.production.btn", message: "Lihat Dokumentasi" }),
-    // secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
     link: "/contact",
     color: "amber",
   },
