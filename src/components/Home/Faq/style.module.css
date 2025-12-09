@@ -5,6 +5,7 @@
 .section {
   padding: clamp(2rem, 8vw, 4rem) 2rem;
   margin: clamp(3rem, 10vw, 4rem) 0;
+  margin-bottom: 6rem;
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
   overflow: hidden;
