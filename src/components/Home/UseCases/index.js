@@ -30,7 +30,7 @@ export default function UseCase() {
         </div>
 
         <div className="row">
-          {USE_CASES.map((useCase) => {
+          {Object.values(USE_CASES).map((useCase) => {
             return (
               <div key={useCase.id} className="col col--4 margin-bottom--lg">
                 <ModernCard

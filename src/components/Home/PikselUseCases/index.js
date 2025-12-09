@@ -25,7 +25,7 @@ const IconMap = {
 
 export default function PikselUseCases() {
   const useCaseKeys = Object.keys(useCasesData || {});
-  const [activeTab, setActiveTab] = useState(useCaseKeys[0] || 'kehutanan');
+  const [activeTab, setActiveTab] = useState(useCaseKeys[0] || 'useCase01');
 
   const currentCase = useMemo(() => {
     return useCasesData[activeTab];

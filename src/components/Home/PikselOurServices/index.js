@@ -8,29 +8,29 @@ import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 
 const colorMap = {
   cyan: {
-    main: "#06b6d4", // cyan-500
-    light: "#22d3ee", // cyan-400
-    dark: "#083344", // cyan-950
+    main: "var(--piksel-color-cyan)",
+    light: "color-mix(in srgb, var(--piksel-color-cyan), white 30%)",
+    dark: "color-mix(in srgb, var(--piksel-color-cyan), black 80%)",
   },
   purple: {
-    main: "#a855f7", // purple-500
-    light: "#c084fc", // purple-400
-    dark: "#3b0764", // purple-950
+    main: "var(--piksel-color-purple)",
+    light: "color-mix(in srgb, var(--piksel-color-purple), white 30%)",
+    dark: "color-mix(in srgb, var(--piksel-color-purple), black 80%)",
   },
   emerald: {
-    main: "#10b981", // emerald-500
-    light: "#34d399", // emerald-400
-    dark: "#022c22", // emerald-950
+    main: "var(--piksel-color-green)",
+    light: "color-mix(in srgb, var(--piksel-color-green), white 30%)",
+    dark: "color-mix(in srgb, var(--piksel-color-green), black 80%)",
   },
   blue: {
-    main: "#3b82f6", // blue-500
-    light: "#60a5fa", // blue-400
-    dark: "#172554", // blue-950
+    main: "var(--piksel-color-blue)",
+    light: "color-mix(in srgb, var(--piksel-color-blue), white 30%)",
+    dark: "color-mix(in srgb, var(--piksel-color-blue), black 80%)",
   },
   amber: {
-    main: "#f59e0b", // amber-500
-    light: "#fbbf24", // amber-400
-    dark: "#451a03", // amber-950
+    main: "var(--piksel-color-amber)",
+    light: "color-mix(in srgb, var(--piksel-color-amber), white 30%)",
+    dark: "color-mix(in srgb, var(--piksel-color-amber), black 80%)",
   },
 };
 
@@ -98,13 +98,13 @@ export default function PikselOurServices() {
                       className={styles.cornerAccent}
                       style={{
                         borderColor: colors.light,
-                        color: colors.light, // for potential currentColor usage
+                        color: colors.light,
                       }}
                     />
                     <div
                       className={styles.numberText}
                       style={{ 
-                        color: `${colors.main}15`, 
+                        color: `color-mix(in srgb, ${colors.main}, transparent 92%)`,
                       }}
                     >
                       {service.id}
