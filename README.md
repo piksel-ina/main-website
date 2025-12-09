@@ -51,39 +51,13 @@ Website ini menggunakan Bahasa Indonesia sebagai bahasa utama. Konten ditulis da
 
 ### Lokasi Penyimpanan File
 
-- Artikel Blog: folder `/blog`
+
 - Dokumentasi Teknis: folder `/docs`
 - Gambar/Aset: folder `/static/img`
 
 ### Pembuatan File
 
-Setiap file Markdown wajib memiliki _Front Matter_ (metadata) di bagian paling atas file. Berikut adalah contoh template untuk artikel blog:
 
-**Contoh File:** `blog/2023-10-25-judul-artikel.md`
-
-```markdown
-slug: judul-url-artikel
-title: Judul Lengkap Artikel
-authors: [nama-penulis]
-tags: [tutorial, tips, piksel]
-date: 2023-10-25
-
-<!-- Tulis paragraf pembuka (lead) di sini. -->
-
-Ini adalah paragraf pembuka yang akan muncul di halaman depan blog.
-
-<!-- truncate -->
-
-## Subjudul Artikel
-
-Mulai tulis konten utama di sini. Gunakan format Markdown standar.
-```
-
-Penjelasan metadata:
-
-- `slug`: Menentukan URL artikel (contoh: `piksel.id/blog/judul-url-artikel`).
-- `authors`: Harus sesuai dengan ID penulis yang terdaftar di `authors.yml` atau nama langsung.
-- `truncate`: Penanda batas cuplikan (_preview_) artikel di halaman indeks blog.
 
 ### Referensi Penulisan Markdown
 

@@ -63,7 +63,7 @@
     *   **i18n:** `id` (default), `en`.
 *   **Theme Config:**
     *   **Color Mode:** Forced **Dark Mode**.
-    *   **Navbar:** Links to "Dokumentasi", "Artikel". Language dropdown enabled.
+    *   **Navbar:** Links to "Dokumentasi", "Use Cases", "Services", "FAQ" (anchor links). Language dropdown enabled.
     *   **Footer:** 4-column layout with links to new documentation paths.
 *   **Presets:** `classic`.
 

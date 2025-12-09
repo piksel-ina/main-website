@@ -162,8 +162,7 @@ html[data-theme='dark'] {
 }
 
 /* Highlight on hover */
-.navbar__link:hover,
-.navbar__link--active {
+.navbar__link:hover {
   color: #ffffff !important;
 }
 

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import styles from "./index.module.css";
+
 import Translate, { translate } from "@docusaurus/Translate";
 
 import Hero from "../components/Home/Hero";
@@ -31,8 +31,11 @@ export default function Home() {
 
       <Hero />
       <main>
+        <span id="use-cases" style={{ display: 'block', position: 'relative', top: '-80px', visibility: 'hidden' }} />
         <UseCases />
+        <span id="services" style={{ display: 'block', position: 'relative', top: '-80px', visibility: 'hidden' }} />
         <OurServices />
+        <span id="faq" style={{ display: 'block', position: 'relative', top: '-80px', visibility: 'hidden' }} />
         <Faq />
       </main>
     </Layout>

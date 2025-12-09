@@ -40,17 +40,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           editUrl: "https://github.com/piksel-ina/piksel-documentation",
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          editUrl: "https://github.com/piksel-ina/piksel-documentation",
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -105,12 +95,15 @@ const config = {
             position: "left",
             label: "Dokumentasi",
           },
-          { to: "/blog", label: "Artikel", position: "left" },
+          { to: "/#use-cases", label: "Penggunaan", position: "left" },
+          { to: "/#services", label: "Layanan", position: "left" },
+          { to: "/#faq", label: "FAQ", position: "left" },
           {
             type: "localeDropdown",
             position: "right",
           },
         ],
+        hideOnScroll: true,
       },
       footer: {
         style: "dark",
@@ -168,10 +161,7 @@ const config = {
                 label: "Tutorials",
                 to: "/docs/tutorials",
               },
-              {
-                label: "Blog",
-                to: "/blog",
-              },
+
               {
                 label: "Github",
                 href: "https://github.com/piksel-ina",
