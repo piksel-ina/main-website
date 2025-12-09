@@ -10,6 +10,8 @@
   padding: clamp(6rem, 10vw, 8rem) 0;
   background-color: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
 /* ============================================
@@ -214,6 +216,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: all 0.7s ease;
   filter: saturate(0.9);
 }
@@ -486,11 +489,17 @@
    ============================================ */
 
 @media (max-width: 1023px) {
+  .section {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+
   .contentGrid {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     min-height: 60vh;
+    gap: 0;
   }
   
   .titleSection {
@@ -538,6 +547,11 @@
 @media (max-width: 768px) {
   .section {
     padding-top: 4rem;
+  }
+
+  .imageContainer {
+    height: 17rem;
+    min-width: 770px;
   }
 
   .imageSectionWrapper {
@@ -620,6 +634,11 @@
   .imageSectionWrapper {
     max-width: 100%;
     min-height: 250px;
+  }
+
+  .imageContainer {
+    height: 15rem;
+    min-width: 510px;
   }
 
   .detailSection {
