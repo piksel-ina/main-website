@@ -75,7 +75,7 @@ export default function MyReactPage() {
   ];
 
   useEffect(() => {
-    const element = document.getElementById('peta');
+    const element = document.getElementById('api');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -123,7 +123,9 @@ export default function MyReactPage() {
   };
 
   return (
-    <Layout>
+    <Layout title="Piksel Data API"
+      description="Memahami bumi Indonesia melalui piksel"
+      wrapperClassName="layout-wrapper">
       {/* Container utama - gunakan CSS class */}
       <div className="sections-container">
         {sections.map((section, index) => {

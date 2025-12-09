@@ -130,7 +130,9 @@ const isExternalLink = (href) => {
   };
 
   return (
-    <Layout>
+    <Layout title="Peta"
+      description="Memahami bumi Indonesia melalui piksel"
+      wrapperClassName="layout-wrapper">
       {/* Container utama - gunakan CSS class */}
       <div className="sections-container">
         {sections.map((section, index) => {

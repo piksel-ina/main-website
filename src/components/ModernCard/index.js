@@ -9,9 +9,12 @@ import styles from "./styles.module.css";
  * @param {string} link - Link URL for the "Learn more" button
  */
 function ModernCard({ image, title, description, link }) {
-  const handleLearnMore = () => {
+  const handleLearnMore = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (link.startsWith("http")) {
-      window.open(link, "_blank");
+      window.open(link, "_blank", "noopener,noreferrer");
     } else {
       window.location.href = link;
     }
@@ -19,15 +22,18 @@ function ModernCard({ image, title, description, link }) {
 
   return (
     <div className={`card shadow--md ${styles.modernCard}`}>
-      <div className={styles.modernCardImageContainer}>
-        <img src={image} alt={title} className={styles.modernCardImage} />
-        <div className={styles.modernCardOverlay}></div>
-      </div>
+      {/* Background overlay */}
+      <div className={styles.modernCardOverlay}></div>
 
       {/* Content Container */}
       <div className={`card__body ${styles.modernCardContent}`}>
         {/* Title at the top */}
         <h3 className={styles.modernCardTitle}>{title}</h3>
+
+        {/* Image in the middle */}
+        <div className={styles.modernCardImageContainer}>
+          <img src={image} alt={title} className={styles.modernCardImage} />
+        </div>
 
         {/* Bottom content */}
         <div className={styles.modernCardBottom}>
@@ -35,9 +41,10 @@ function ModernCard({ image, title, description, link }) {
           <button
             onClick={handleLearnMore}
             className={`button button--link ${styles.modernCardButton}`}
+            type="button"
           >
-            <p></p><p></p><p>Pelajari Selengkapnya
-            <span className={styles.modernCardArrow}>→</span></p>
+            Pelajari Selengkapnya
+            <span className={styles.modernCardArrow}>→</span>
           </button>
         </div>
       </div>

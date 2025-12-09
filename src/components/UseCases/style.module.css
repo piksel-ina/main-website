@@ -1,17 +1,39 @@
 .useCaseSection {
-  padding: var(--ifm-spacing-vertical) 0;
-  background-color: color-mix(
-    in srgb,
-    var(--ifm-color-white) 99%,
-    var(--ifm-color-black) 1%
-  );
-  padding-bottom: 5rem;
+  padding: 4rem 0;
 }
 
-[data-theme="dark"] .useCaseSection {
-  background-color: color-mix(
-    in srgb,
-    var(--ifm-color-white) 5%,
-    var(--ifm-color-black) 95%
-  );
+/* Custom grid untuk card yang lebih kecil */
+.useCaseSection .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.75rem;
+}
+
+.useCaseSection .row > div {
+  padding: 0 0.75rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  /* 3 cards per row pada tablet landscape */
+  .useCaseSection .row > div {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@media (max-width: 996px) {
+  /* 2 cards per row pada tablet */
+  .useCaseSection .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1 card per row pada mobile */
+  .useCaseSection .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

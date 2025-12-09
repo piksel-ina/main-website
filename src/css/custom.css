@@ -169,13 +169,44 @@ h3,
   color: #dde0e1;
 }
 
-/* NAVBAR */
-[data-theme="light"] .navbar[class*="navbarHomepage"] .navbar__toggle {
-  filter: brightness(0) invert(1);
+/* Light mode navbar */
+[data-theme='light'] .navbar {
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .navbar__title,
+[data-theme='light'] .navbar__link {
+  color: #1c1e21;
+}
+
+[data-theme='light'] .navbar__link:hover {
+  color: var(--ifm-color-primary);
 }
 
 .navbar__items .navbar__item.navbar__link[href="/docs/intro"] {
   padding-left: 2.5rem;
+}
+
+
+/* Logo styling untuk kedua mode */
+.navbar__logo {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Brand text (piksel) */
+.navbar__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+/* Navbar items */
+.navbar__item {
+  color: inherit;
 }
 
 /**
@@ -844,3 +875,199 @@ vertical-align: middle; /* ← TAMBAHKAN INI */
 }
 
 
+/* ===== NAVBAR DUAL LOGO ===== */
+
+/* Container untuk logo navbar */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Jarak antara logo BIG dan Piksel */
+  position: relative;
+}
+
+/* Logo BIG (tambahkan sebelum logo Piksel) */
+.navbar__brand::before {
+  content: '';
+  display: block;
+  width: 40px; /* Sesuaikan ukuran */
+  height: 40px;
+  background-image: url('/img/big.png'); /* Path ke logo BIG */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Divider antara dua logo (opsional) */
+.navbar__brand::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 30px;
+  background-color: var(--ifm-navbar-link-color);
+  opacity: 0.3;
+  margin: 0 0.5rem;
+}
+
+/* Logo Piksel (existing) */
+.navbar__logo {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Title "piksel" */
+.navbar__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 996px) {
+  .navbar__brand::before {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .navbar__brand::after {
+    height: 24px;
+  }
+  
+  .navbar__logo {
+    height: 28px;
+  }
+  
+  .navbar__title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode support */
+[data-theme='dark'] .navbar__brand::before {
+  filter: brightness(0.9);
+}
+
+
+
+/* ===== NAVBAR BRAND & TITLE ===== */
+
+/* Navbar brand container */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.navbar__brand:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* Navbar title "piksel" */
+.navbar__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+  color: var(--ifm-navbar-link-color);
+  transition: color 0.2s ease; /* Tambahkan transition */
+}
+
+/* Hover effect untuk title */
+.navbar__brand:hover .navbar__title {
+  color: var(--ifm-color-primary);
+}
+
+/* Logo hover effect */
+.navbar__logo {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.navbar__brand:hover .navbar__logo {
+  transform: scale(1.05);
+}
+
+/* ===== NAVBAR LINKS ===== */
+
+.navbar__link {
+  color: var(--ifm-navbar-link-color);
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* Active link */
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* ===== LIGHT MODE SPECIFIC ===== */
+
+[data-theme='light'] .navbar__title {
+  color: #1c1e21;
+}
+
+[data-theme='light'] .navbar__brand:hover .navbar__title {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='light'] .navbar__link {
+  color: #1c1e21;
+}
+
+[data-theme='light'] .navbar__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* ===== DARK MODE SPECIFIC ===== */
+
+[data-theme='dark'] .navbar__title {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .navbar__brand:hover .navbar__title {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .navbar__link {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .navbar__link:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+
+
+/* ===== NAVBAR LOGO BIG (jika menggunakan dual logo) ===== */
+
+.navbar__brand::before {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar__brand:hover::before {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 996px) {
+  .navbar__title {
+    font-size: 1.2rem;
+  }
+  
+  .navbar__logo {
+    height: 28px;
+  }
+}

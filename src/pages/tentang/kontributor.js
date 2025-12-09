@@ -42,7 +42,7 @@ export default function Kontributor() {
       image: "/img/kontributor/taufik.jpg"
     },
     {
-      name: "Ali Amarullah",
+      name: "Ali Ammarullah",
       position: "Surveyor Pemetaan Pertama",
       organization: "Badan Informasi Geospasial",
       image: "/img/kontributor/ali.jpg"

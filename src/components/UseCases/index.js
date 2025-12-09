@@ -7,21 +7,23 @@ import { translate } from "@docusaurus/Translate";
 const USE_CASES = [
   {
     id: "usecase1",
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    link: "/penggunaan/data-satelit",
+    image: "/img/food.png",
+    link: "/penggunaan/ketahanan-pangan",
   },
   {
     id: "usecase2",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/disaster.png",
     link: "/penggunaan/kebencanaan",
   },
   {
     id: "usecase3",
-    image:
-      "https://plus.unsplash.com/premium_photo-1666256629413-ea053d34ff36?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/img/land.png",
     link: "/penggunaan/penggunaan-lahan",
+  },
+  {
+    id: "usecase4",
+    image: "/img/coastal.png",
+    link: "/penggunaan/pengelolaan-pesisir",
   },
 ];
 
@@ -32,13 +34,13 @@ function getUseCaseTranslations(useCaseId) {
       return {
         title: translate({
           id: "useCase.card.environment.title",
-          message: "Data Satelit untuk Pembangunan",
+          message: "Ketahanan Pangan",
           description: "Title for use case 1",
         }),
         description: translate({
           id: "useCase.card.environment.description",
           message:
-            "Menyediakan citra dan data terpercaya wilayah Indonesia yang dapat digunakan untuk pembangunan berkelanjutan.",
+            "Data satelit mendukung pertanian presisi dengan memantau kesehatan tanaman, untuk meningkatkan produktivitas.",
           description: "Description for use case 1",
         }),
       };
@@ -70,6 +72,20 @@ function getUseCaseTranslations(useCaseId) {
           description: "Description for use case 3",
         }),
       };
+      case "usecase4":
+      return {
+        title: translate({
+          id: "useCase.card.coastal.title",
+          message: "Pengelolaan Pesisir",
+          description: "Title for use case 4",
+        }),
+        description: translate({
+          id: "useCase.card.coastal.description",
+          message:
+            "Memantau perubahan garis pantai, abrasi, sedimentasi, serta kondisi ekosistem yang membantu mengidentifikasi area rentan.",
+          description: "Description for use case 4",
+        }),
+      };
     default:
       return { title: "", description: "" };
   }
@@ -99,12 +115,13 @@ export default function UseCase() {
           </div>
         </div>
 
+        {/* Ubah dari col--4 menjadi col--3 untuk 4 card per baris */}
         <div className="row">
           {USE_CASES.map((useCase) => {
             const translations = getUseCaseTranslations(useCase.id);
 
             return (
-              <div key={useCase.id} className="col col--4 margin-bottom--lg">
+              <div key={useCase.id} className="col col--3 margin-bottom--lg">
                 <ModernCard
                   image={useCase.image}
                   title={translations.title}
