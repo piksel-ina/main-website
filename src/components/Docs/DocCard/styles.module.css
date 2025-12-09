@@ -1,0 +1,32 @@
+.card {
+  display: block;
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(65, 166, 249, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  color: inherit;
+}
+.card:hover {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: #41a6f9;
+  /* transform: translateY(-2px); Removed lift effect */
+  box-shadow: 0 4px 20px rgba(65, 166, 249, 0.15);
+}
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin: 0;
+  line-height: 1.5;
+}

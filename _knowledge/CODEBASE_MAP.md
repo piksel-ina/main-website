@@ -4,10 +4,15 @@
 ```
 /
 ├── docs/                      # Documentation source files
-│   ├── penggunaan/            # Usage guide (new structure)
-│   │   └── intro.md
-│   ├── referensi/             # Reference docs (new structure)
-│   │   └── intro.md
+│   ├── about/                 # About section
+│   │   ├── intro.md
+│   │   └── main.md            # Category landing page
+│   ├── usecase/               # Use Cases section
+│   │   ├── intro.md
+│   │   └── main.md            # Category landing page
+│   ├── services/              # Services section
+│   │   ├── intro.md
+│   │   └── main.md            # Category landing page
 ├── src/                       # Source code
 │   ├── components/            # React components
 │   │   ├── Home/              # Page-specific components
@@ -15,6 +20,11 @@
 │   │   │   ├── OurServices/   # New Our Services section
 │   │   │   ├── Hero/          # Hero section
 │   │   │   └── Faq/           # FAQ section
+│   │   ├── Docs/              # Documentation components (New)
+│   │   │   ├── DocCard/       # Navigation card
+│   │   │   ├── DocSteps/      # Step-by-step guide
+│   │   │   ├── DocCallout/    # Custom alerts
+│   │   │   └── ImageCard/     # MDX Image Card component
 │   │   ├── UI/                # Reusable UI components
 │   │   │   ├── Atoms/         # Basic building blocks
 │   │   │   │   └── Button/    # Semantic Link/Button wrapper
@@ -28,6 +38,7 @@
 │   │   └── custom.css         # Global styles
 │   ├── pages/                 # Pages (e.g., index.js)
 │   └── theme/                 # Theme overrides (swizzled components)
+│       └── Footer/            # Swizzled Footer to hide on docs pages
 ├── docusaurus.config.js       # Main configuration file
 ├── sidebars.js                # Sidebar configuration
 ├── package.json               # Dependencies and scripts
@@ -46,13 +57,18 @@
 | **GlassCard** | Molecule | Glassmorphism card with icon, title, description, and action buttons. | `icon`, `title`, `description`, `buttonText`, `link` |
 | **ModernCard** | Molecule | Card with image overlay and hover effects. | `image`, `title`, `description`, `link` |
 | **Carousel** | UI | Generic responsive carousel with Swiper/Embla-like behavior. | `items`, `renderItem`, `itemsPerView` |
+| **DocCard** | Docs | Glass-styled card for docs navigation. | `title`, `description`, `to` |
+| **DocSteps** | Docs | Step-by-step list with custom numbering. | `children` |
+| **DocCallout** | Docs | Custom alert/admonition styled for "Digital Earth". | `type`, `title`, `children` |
+| **ImageCard** | Docs | Image-based card with hover reveal description. | `image`, `title`, `description`, `to` |
 
 ## 3. Documentation Structure
 **Source:** `sidebars.js`
 *   **Sidebar Name:** `docsSidebar`
 *   **Groups:**
-    *   **Penggunaan:** Guides for using the platform.
-    *   **Referensi:** API and technical references.
+    *   **About:** General project info based on `docs/about`.
+    *   **Use Cases:** Usage scenarios based on `docs/usecase`.
+    *   **Services:** Service details based on `docs/services`.
 
 ## 4. Key Configurations
 **File:** `docusaurus.config.js`
@@ -63,8 +79,9 @@
     *   **i18n:** `id` (default), `en`.
 *   **Theme Config:**
     *   **Color Mode:** Forced **Dark Mode**.
-    *   **Navbar:** Links to "Dokumentasi", "Use Cases", "Services", "FAQ" (anchor links). Language dropdown enabled.
-    *   **Footer:** 4-column layout with links to new documentation paths.
+    *   **Navbar:** Links to "Dokumentasi", "Penggunaan", "Layanan", "FAQ" (anchor links). Language dropdown enabled.
+    *   **Sidebar:** Swizzled `DocSidebar` to include sticky footer.
+    *   **Footer:** Swizzled to be hidden on Docs pages. Default 4-column layout for other pages.
 *   **Presets:** `classic`.
 
 ## 5. Major Dependencies

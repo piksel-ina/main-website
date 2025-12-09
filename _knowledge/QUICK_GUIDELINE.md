@@ -12,6 +12,7 @@ We follow a modified **Atomic Design** principle to organize components, ensurin
     - **`Organisms/`**: Complex reusable sections (e.g., `Carousel`).
 - **`src/components/<Feature>/`**: Feature-specific or Page-specific layouts.
     - Example: `src/components/Home/` contains `Articles`, `OurServices`, `PikselOurServices`, `UseCases`, `PikselHero`, `faq`.
+    - **`src/components/Docs/`**: Components specifically for MDX documentation (`DocCard`, `DocSteps`, `DocCallout`).
     - These components orchestrate data and UI components but shouldn't hold the core aesthetic styles (which belong to UI components).
 - **`src/data/`**: Source of truth for content.
     - **DO NOT** hardcode text, links, or image URLs inside components.
@@ -46,14 +47,13 @@ Our visual language is **"Digital Earth / Futuristic Data"**. It relies heavily 
 ### A. Creating New Components
 1.  **Is it reusable?**
     - Yes -> Place in `src/components/UI/`.
-    - No -> Place in `src/components/<PageName>/`.
+    - No -> Place in `src/components/<PageName>/` or `src/components/Docs/` if it's for documentation.
 2.  **Styling**:
     - Use **CSS Modules** (`styles.module.css`) for component-specific styles.
     - **Use `clamp()`** for responsiveness. **Avoid** fixed pixel values for layout.
     - Use **Global Variables** (defined in `custom.css`) for colors.
     - Use `color-mix()` for transparencies:
         - *Good*: `background-color: color-mix(in srgb, var(--active-color) 10%, transparent);`
-3.  **Icons**:
     - Use `lucide-react`.
     - Wrap icons in a `div` if adding glow effects.
 
