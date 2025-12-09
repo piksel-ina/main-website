@@ -198,6 +198,24 @@ export const servicesData = [
   },
 ];
 
+export const servicesHeaderData = {
+  tag: translate({
+    id: "ourServices.header.tag",
+    message: "Layanan Kami",
+    description: "Tag label for the services section"
+  }),
+  title: translate({
+    id: "ourServices.header.title",
+    message: "PERJALANAN ANDA",
+    description: "Main title for the services section"
+  }),
+  subtitle: translate({
+    id: "ourServices.header.subtitle",
+    message: "Semua layanan kami tersedia secara gratis. Sebagian besar dapat diakses langsung, beberapa mungkin memerlukan inquiry. Jangan ragu untuk menghubungi kami.",
+    description: "Subtitle description for the services section"
+  })
+};
+
 export const useCasesData = {
   kehutanan: {
     icon: 'tree-pine',

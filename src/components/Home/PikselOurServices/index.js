@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
-import { servicesData } from "@site/src/data/homepageData";
+import { servicesData, servicesHeaderData } from "@site/src/data/homepageData";
 import styles from "./style.module.css";
 import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 
@@ -52,19 +52,17 @@ export default function PikselOurServices() {
           <div className={styles.accentLine}>
             <div className={styles.accentLineBar} />
             <span className={styles.accentText}>
-              <Translate id="ourServices.header.tag">Layanan Kami</Translate>
+              {servicesHeaderData.tag}
             </span>
           </div>
 
           <h2 className={styles.headerTitle}>
-            <Translate id="ourServices.header.title">PERJALANAN ANDA</Translate>
+            {servicesHeaderData.title}
             <span className={styles.pulseDot} />
           </h2>
 
           <p className={styles.headerDesc}>
-            <Translate id="ourServices.header.subtitle">
-              Semua layanan kami tersedia secara gratis. Sebagian besar dapat diakses langsung, beberapa mungkin memerlukan inquiry. Jangan ragu untuk menghubungi kami.
-            </Translate>
+            {servicesHeaderData.subtitle}
           </p>
 
           <div className={styles.headerCornerAccent} />

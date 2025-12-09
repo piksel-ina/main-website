@@ -12,9 +12,16 @@ const FAQItem = ({ item, isOpen, onClick }) => {
         onClick={onClick}
         aria-expanded={isOpen}
       >
-        <span>{item.question}</span>
-        {isOpen ? <ChevronUp className={styles.icon} /> : <ChevronDown className={styles.icon} />}
+        <span className={styles.questionText}>{item.question}</span>
+        <div className={styles.iconWrapper}>
+          {isOpen ? (
+            <ChevronUp className={styles.icon} />
+          ) : (
+            <ChevronDown className={styles.icon} />
+          )}
+        </div>
       </button>
+      
       <div className={clsx(styles.answer, { [styles.answerVisible]: isOpen })}>
         <p>{item.answer}</p>
       </div>
@@ -23,7 +30,7 @@ const FAQItem = ({ item, isOpen, onClick }) => {
 };
 
 export default function PikselFaq() {
-  const [openIndex, setOpenIndex] = useState(0); // Default open the first one
+  const [openIndex, setOpenIndex] = useState(0);
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -32,11 +39,16 @@ export default function PikselFaq() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
+        {/* Header Section */}
         <div className={styles.header}>
-          <h2 className={styles.title} dangerouslySetInnerHTML={{__html: faqData.title}}></h2>
+          <h2 
+            className={styles.title} 
+            dangerouslySetInnerHTML={{ __html: faqData.title }}
+          />
           <p className={styles.subtitle}>{faqData.subtitle}</p>
         </div>
         
+        {/* FAQ List Section */}
         <div className={styles.faqList}>
           {faqData.questions.map((item, index) => (
             <FAQItem 
