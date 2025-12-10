@@ -33,7 +33,10 @@
 │   │   │   │   └── ModernCard/# Image overlay card
 │   │   │   └── Carousel/      # Generic carousel component
 │   ├── data/                  # Data primitives
-│   │   └── homepageData.js    # Content for homepage sections
+│   │   ├── heroData.js        # Data for Hero section
+│   │   ├── useCasesData.js    # Data for Use Cases section
+│   │   ├── servicesData.js    # Data for Services section
+│   │   └── faqData.js         # Data for FAQ section
 │   ├── css/                   # Custom CSS
 │   │   └── custom.css         # Global styles
 │   ├── pages/                 # Pages (e.g., index.js)

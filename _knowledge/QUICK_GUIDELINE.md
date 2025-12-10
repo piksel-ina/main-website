@@ -16,7 +16,7 @@ We follow a modified **Atomic Design** principle to organize components, ensurin
     - These components orchestrate data and UI components but shouldn't hold the core aesthetic styles (which belong to UI components).
 - **`src/data/`**: Source of truth for content.
     - **DO NOT** hardcode text, links, or image URLs inside components.
-    - Import data from `src/data/homepageData.js` (or similar files).
+    - Import data from `src/data/` (e.g., `heroData.js`).
 
 ## 2. Design & Aesthetic System
 
