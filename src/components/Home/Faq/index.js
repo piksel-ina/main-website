@@ -40,6 +40,7 @@ export default function Faq() {
 
   return (
     <section className={styles.section}>
+      <div className={styles.gridPattern} />
       <div className={styles.container}>
         {/* Header Section */}
         <div className={styles.header}>

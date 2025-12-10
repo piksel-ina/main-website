@@ -48,19 +48,19 @@
   height: 100%;
 }
 
-@media (min-width: 998px) {
+@media (min-width: 997px) {
   .carouselItem {
     width: 33.333333%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 997px) {
+@media (min-width: 768px) and (max-width: 996px) {
   .carouselItem {
     width: 50%;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .carouselItem {
     width: 100%;
   }
@@ -145,7 +145,7 @@
   background-color: var(--ifm-color-primary);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header {
     flex-direction: column;
     gap: 1rem;
@@ -192,7 +192,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .carousel {
     padding: 1.5rem 1rem;
   }

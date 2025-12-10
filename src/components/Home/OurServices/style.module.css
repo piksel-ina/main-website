@@ -27,13 +27,13 @@
   margin: 0 auto;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1440px) {
   .sectionContainer {
     padding: 6rem 8rem;
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 996px) {
   .sectionContainer {
     padding: 6rem 4rem;
     margin-bottom: 4rem;
@@ -165,12 +165,6 @@
   font-family: inherit;
 }
 
-@media (min-width: 768px) {
-  .headerTitle {
-    font-size: clamp(3rem, 5vw, 3.75rem);
-  }
-}
-
 @media (max-width: 500px) {
   .headerTitle {
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -205,7 +199,7 @@
 
 @media (max-width: 500px) {
   .headerDesc {
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: 1.5;
   }
 }
@@ -272,16 +266,17 @@
 /* Service Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr); /* Fix for overflow issues */
+  grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
   align-items: start;
   padding-left: 2rem;
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: minmax(0, 1fr); 
+    gap: 2rem;
   }
 }
 
@@ -301,17 +296,17 @@
    ============================================ */
 
 .numberCol {
-  grid-column: span 12;
+  grid-column: span 4;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: flex-end;
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .numberCol {
-    grid-column: span 4;
-    justify-content: flex-end;
+    grid-column: span 12;
+    justify-content: flex-start;
   }
 }
 
@@ -341,11 +336,7 @@
   position: relative;
 }
 
-@media (min-width: 768px) {
-  .numberText {
-    font-size: clamp(8rem, 15vw, 13.75rem);
-  }
-}
+
 
 @media (max-width: 500px) {
   .numberText {
@@ -370,21 +361,17 @@
    ============================================ */
 
 .contentCol {
-  grid-column: span 12;
+  grid-column: span 8;
   position: relative;
-  margin-top: -5rem;
+  margin-top: 0;
+  max-width: 48rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .contentCol {
-    grid-column: span 8;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .contentCol {
-    margin-top: -2rem; /* Reduced overlap */
+    grid-column: span 12;
+    margin-top: -2rem;
+    max-width: clamp(5rem, 78vw, 40rem);
   }
 }
 
@@ -401,7 +388,7 @@
 
 @media (max-width: 500px) {
   .contentCornerAccent {
-    left: -0.5rem; /* prevent touching edge if padding is tight */
+    left: -0.5rem;
   }
 }
 
@@ -438,15 +425,15 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .serviceTitle {
-    font-size: clamp(1.875rem, 3vw, 2.25rem);
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
   }
 }
 
 @media (max-width: 500px) {
   .serviceTitle {
-    font-size: 1.5rem; /* Reduced font size */
+    font-size: 1.75rem;
   }
 }
 
@@ -503,16 +490,16 @@
 
 @media (max-width: 500px) {
   .bottomCornerAccent {
-    right: -0.5rem; /* Prevent overflow */
+    right: -0.5rem;
     bottom: -0.5rem;
   }
 
   .description {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 
   .featuresList {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
+import clsx from 'clsx';
 
 const HERO_IMAGES = [
   'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800',
@@ -19,6 +20,10 @@ const STATS = [
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
+      <div className={styles.gridPattern} />
+      <div className={clsx(styles.orb, styles.orb1)} />
+      <div className={clsx(styles.orb, styles.orb2)} />
+      <div className={styles.scanlines} />
       <div className={styles.imageCollage}>
         {HERO_IMAGES.map((src, idx) => (
           <div 

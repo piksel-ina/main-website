@@ -12,6 +12,24 @@
   position: relative;
 }
 
+@media (max-width: 996px) {
+  .section {
+    margin-top: 0;
+  }
+}
+
+/* Background Patterns */
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: 
+    linear-gradient(to right, rgba(100, 200, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100, 200, 255, 0.1) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,6 +41,20 @@
   z-index: 1;
 }
 
+@media (max-width: 996px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 0;
+  }
+}
+
 /* ============================================
    HEADER
    ============================================ */
@@ -31,6 +63,15 @@
   padding-right: 1rem;
   position: sticky;
   top: 6rem;
+}
+
+@media (max-width: 996px) {
+  .header {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: static;
+  }
 }
 
 .title {
@@ -55,6 +96,18 @@
   max-width: 400px;
 }
 
+@media (max-width: 996px) {
+  .subtitle {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .subtitle {
+    font-size: .9rem;
+  }
+}
+
 /* ============================================
    FAQ LIST CONTAINER
    ============================================ */
@@ -75,6 +128,12 @@
     0 4px 24px rgba(0, 0, 0, 0.2),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  .faqList {
+    padding: 1.5rem;
+  }
 }
 
 /* Accent line at top */
@@ -148,6 +207,12 @@
   font-weight: 500;
   transition: all 0.3s ease;
   gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .question {
+    font-size: .9rem;
+  }
 }
 
 .questionText {
@@ -233,44 +298,12 @@
   overflow: hidden;
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
-@media (max-width: 996px) {
-  .section {
-    margin-top: 0;
-  }
-  
-  .container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 2rem;
-  }
-  
-
-  .header {
-    padding-right: 0;
-    text-align: center;
-    margin-bottom: 1rem;
-    position: static;
-  }
-  
-  .subtitle {
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .faqList {
-    padding: 1.5rem;
-  }
-
-  .question {
-    font-size: 1rem;
-  }
-
+@media (max-width: 500px) {
   .answer {
-    font-size: 0.9rem;
+    font-size: .85rem;
+  }
+
+  .answer p {
+    padding-left: .25rem;
   }
 }

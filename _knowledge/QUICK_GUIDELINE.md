@@ -37,10 +37,22 @@ Our visual language is **"Digital Earth / Futuristic Data"**. It relies heavily 
     - *Example*: `font-size: clamp(1.5rem, 4vw, 2.5rem);`
     - *Example*: `padding: clamp(2rem, 8vw, 6rem) 0;`
 
+
 ### C. Animation & Interaction
 - **Passive Motion**: Background elements (orbs) should have subtle "Float" or "Pulse" animations.
 - **Active Motion**: Hover states should be snappy (`0.3s ease`).
     - *Common effects*: Icon glow intensity increases, text color shifts to white, buttons reveal a "shine".
+
+### D. Responsive Design (Desktop First)
+- **Strategy**: Write styles for Desktop first (base styles), then use `max-width` media queries to adapt for smaller screens.
+- **Breakpoints**:
+    - **Large Screen**: `1440px` (Use `@media (min-width: 1440px)` for overrides)
+    - **Desktop/Laptop**: Default styles
+    - **Docusaurus Breakpoint**: `996px` (Use `@media (max-width: 996px)`)
+    - **Tablet**: `768px` (Use `@media (max-width: 768px)`)
+    - **Mobile**: `500px` (Use `@media (max-width: 500px)`)
+- **Structure**:
+    - Keep media queries **immediately after** the class they modify to improve maintainability.
 
 ## 3. Component Development Rules
 
