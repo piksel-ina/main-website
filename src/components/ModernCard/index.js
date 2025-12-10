@@ -37,14 +37,13 @@ function ModernCard({ image, title, description, link }) {
 
         {/* Bottom content */}
         <div className={styles.modernCardBottom}>
-          <p className={styles.modernCardDescription}>{description}</p>
+          <p className={styles.modernCardDescription}>{description}</p><p></p>
           <button
             onClick={handleLearnMore}
             className={`button button--link ${styles.modernCardButton}`}
             type="button"
           >
-            Pelajari Selengkapnya
-            <span className={styles.modernCardArrow}>→</span>
+Info            {/*<span className={styles.modernCardArrow}></span>*/}
           </button>
         </div>
       </div>

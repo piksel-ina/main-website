@@ -26,6 +26,8 @@ export default function MyReactPage() {
       setShowScrollTop(window.scrollY > 300);
     };
 
+    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

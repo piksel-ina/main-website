@@ -1,26 +1,25 @@
 /* Modern Card Styles */
 .modernCard {
   position: relative;
-  height: 25rem;
-  overflow: hidden;
+  min-height: 25rem; /* ← Ubah dari height ke min-height */
+  height: auto; /* ← Allow card to grow */
+  overflow: visible; /* ← PENTING: Ubah dari hidden ke visible */
   border-radius: var(--ifm-card-border-radius);
   transition: box-shadow var(--ifm-transition-fast) ease;
   border: none;
   padding: 0;
-  /* Background solid seperti screenshot kedua */
- background: #5f718b; /* Warna abu-abu kebiruan */
+  background: #5f718b;
 }
 
 .modernCard:hover {
   box-shadow: var(--ifm-box-shadow-lg);
-  transform: translateY(-4px); /* Sedikit efek lift saat hover */
+  transform: translateY(-4px);
 }
 
 .modernCardOverlay {
   position: absolute;
   inset: 0;
-  /* Hilangkan atau kurangi gradient overlay */
-  background: transparent; /* Atau hapus property ini */
+  background: transparent;
   z-index: 1;
   pointer-events: none;
 }
@@ -29,8 +28,9 @@
   position: relative;
   color: white;
   background: transparent;
-  padding: var(--ifm-spacing-vertical);
+  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-vertical) 2rem; /* ← Increase bottom padding */
   z-index: 2;
+  min-height: 25rem; /* ← Add min-height */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -42,12 +42,13 @@
   font-size: clamp(1.0rem, 8vw, 2.0rem) !important;
   font-weight: var(--ifm-font-weight-bold);
   color: white;
-  margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Kurangi shadow */
+  margin: 0 0 1rem 0; /* ← Add bottom margin */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
   text-align: center;
   order: 1;
   pointer-events: none;
+  flex-shrink: 0; /* ← Prevent shrinking */
 }
 
 /* Image container di tengah */
@@ -59,6 +60,7 @@
   padding: 2rem 0;
   order: 2;
   pointer-events: none;
+  min-height: 150px; /* ← Add minimum height */
 }
 
 .modernCardImage {
@@ -74,7 +76,7 @@
 }
 
 .modernCard:hover .modernCardImage {
-  transform: scale(1.05); /* Kurangi scale effect */
+  transform: scale(1.05);
   filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
@@ -82,17 +84,19 @@
 .modernCardBottom {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem; /* ← Increase gap */
   order: 3;
   pointer-events: none;
+  padding-top: 1rem; /* ← Add top padding */
+  flex-shrink: 0; /* ← Prevent shrinking */
 }
 
 .modernCardDescription {
   font-size: var(--ifm-font-size-base);
   line-height: var(--ifm-line-height-base);
   color: rgba(255, 255, 255, 0.95);
-  margin: 0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Kurangi shadow */
+  margin: 0 0 1rem 0; /* ← Add bottom margin */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   text-align: center;
   pointer-events: none;
 }
@@ -111,11 +115,13 @@
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  text-shadow: none; /* Hilangkan text shadow */
+  text-shadow: none;
   align-self: center;
   pointer-events: auto;
   position: relative;
   z-index: 10;
+  margin-bottom: 0.5rem; /* ← Add bottom margin */
+  flex-shrink: 0; /* ← Prevent shrinking */
 }
 
 .modernCardButton:hover {
@@ -144,7 +150,11 @@
 
 @media (max-width: 996px) {
   .modernCard {
-    height: 22rem;
+    min-height: 22rem;
+  }
+
+  .modernCardContent {
+    padding-bottom: 1.75rem;
   }
 
   .modernCardTitle {
@@ -159,7 +169,11 @@
 
 @media (max-width: 768px) {
   .modernCard {
-    height: 20rem;
+    min-height: 20rem;
+  }
+
+  .modernCardContent {
+    padding-bottom: 1.5rem;
   }
 
   .modernCardTitle {

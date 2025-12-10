@@ -7,8 +7,8 @@ const GlassCard = ({
   icon: Icon,
   title,
   description,
-  buttonText = "Mulai Menjelajah",
-  buttonTextSecondary = "Pelajari Lebih Lanjut",
+  buttonText = "Info",
+  buttonTextSecondary = "Buka",
   link, // ← Tambahkan prop link
   linkSecondary, // ← Tambahkan prop link secondary (optional)
 }) => {
@@ -18,40 +18,41 @@ const GlassCard = ({
 
   return (
     <div className={styles.glassCard}>
-      <div className={styles.glassCard_content}>
+      <div className={styles.glassCard_content}><p></p>
         <div className={styles.glassCard_icon}>
           <Icon size={84} strokeWidth={1.5} />
         </div>
 
-        <h3 className={styles.glassCard_title}>{title}</h3>
+        <p><h3 className={styles.glassCard_title}>{title}</h3></p>
 
         <p className={styles.glassCard_description}>{description}</p>
 
-        <div className={styles.glassCard_buttons}>
+        {/* Buttons Container - Display side by side */}
+        <p></p><p></p><div className={styles.glassCard_buttons}>
           {/* Primary Button */}
           {link && (
             isExternal ? (
               <a
                 href={link}
-                className={`${styles.glassCard_button} ${styles.glassCard_button_primary}`}
+                className={`${styles.glassCard_button} ${styles.glassCard_button_secondary}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {buttonText}
-                <ExternalLink size={18} className={styles.button_icon} />
+               {/*<ExternalLink size={16} className={styles.button_icon} />*/}
               </a>
             ) : (
               <Link
                 to={link}
-                className={`${styles.glassCard_button} ${styles.glassCard_button_primary}`}
+                className={`${styles.glassCard_button} ${styles.glassCard_button_secondary}`}
               >
                 {buttonText}
-                <ArrowRight size={18} className={styles.button_icon} />
+                {/*<ArrowRight size={16} className={styles.button_icon} />*/}
               </Link>
             )
           )}
 
-          {/* Secondary Button (Optional) */}
+          {/* Secondary Button */}
           {linkSecondary && (
             isExternalSecondary ? (
               <a
@@ -61,7 +62,7 @@ const GlassCard = ({
                 rel="noopener noreferrer"
               >
                 {buttonTextSecondary}
-                <ExternalLink size={18} className={styles.button_icon} />
+                {/*<ArrowRight size={16} className={styles.button_icon} />*/}
               </a>
             ) : (
               <Link
@@ -69,11 +70,11 @@ const GlassCard = ({
                 className={`${styles.glassCard_button} ${styles.glassCard_button_secondary}`}
               >
                 {buttonTextSecondary}
-                <ArrowRight size={18} className={styles.button_icon} />
+                {/*<ArrowRight size={16} className={styles.button_icon} />*/}
               </Link>
             )
           )}
-        </div>
+        </div><p></p>
       </div>
     </div>
   );

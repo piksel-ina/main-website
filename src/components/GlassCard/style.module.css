@@ -9,6 +9,7 @@
   border: 1.5px solid rgba(255, 255, 255, 0.18);
   box-shadow: var(--ifm-global-shadow-tl);
   transition: all 0.3s ease;
+  padding: 2rem 1.5rem 2rem 1.5rem; /* ← Tambah padding bottom */
 }
 
 .glassCard:hover {
@@ -21,10 +22,12 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← Center semua content */
+  height: 100%;
   text-align: center;
-  padding: clamp(0.1rem, calc(var(--ifm-spacing-vertical) * 2.5), 2rem);
-  gap: var(--ifm-spacing-vertical);
-  justify-content: space-between;
+
 }
 
 .glassCard_icon {
@@ -58,9 +61,13 @@
 /* Buttons Container */
 .glassCard_buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center; /* ← Center buttons horizontally */
+  align-items: center;
   gap: 0.75rem;
   margin-top: auto;
+  width: 100%; /* Full width container */
+  padding: 0 0.5rem; /* Optional: padding kiri-kanan */
 }
 
 /* Button Base Styles */
@@ -125,6 +132,8 @@
 
   .glassCard_icon {
     font-size: 64px;
+      flex-shrink: 0; /* Prevent shrinking */
+
   }
 
   .glassCard_title {

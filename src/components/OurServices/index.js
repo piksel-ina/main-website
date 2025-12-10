@@ -7,7 +7,7 @@ import styles from "./style.module.css";
 
 const OurServices = () => {
   const services = [
-    {
+        {
       id: 1,
       icon: Map,
       title: translate({
@@ -17,17 +17,21 @@ const OurServices = () => {
       }),
       description: translate({
         id: "ourServices.service1.description",
-        message:
-          "Eksplorasi dan visualisasi dataset geospasial.",
+        message: "Eksplorasi dan visualisasi dataset geospasial.",
         description: "Service 1 Description",
       }),
-      buttonText: translate({
+      /*buttonText: translate({
         id: "ourServices.service1.button",
-        message: "Mulai Eksplorasi",
+        message: "Info",
         description: "Button text for service 1",
       }),
-      link: "/layanan/peta", // ← Tambahkan link
-      linkSecondary: "/layanan/peta", // ← Tambahkan link
+      buttonTextSecondary: translate({
+        id: "ourServices.service1.buttonSecondary",
+        message: "Buka",
+        description: "Secondary button text for service 1",
+      }),*/
+      link: "/layanan/peta",
+      linkSecondary: "/layanan/peta",
     },
     {
       id: 2,
@@ -43,12 +47,18 @@ const OurServices = () => {
           "Analisis spasial data citra satelit melalui jupyter notebook.",
         description: "Service 2 Description",
       }),
-      buttonText: translate({
-        id: "ourServices.service2.button",
-        message: "Lakukan Analisis",
-        description: "Button text for service 2",
+      /*buttonText: translate({
+        id: "ourServices.service1.button",
+        message: "Info",
+        description: "Button text for service 1",
       }),
-      link: "https://sandbox.staging.pik-sel.id", // ← Tambahkan link
+      buttonTextSecondary: translate({
+        id: "ourServices.service1.buttonSecondary",
+        message: "Buka",
+        description: "Secondary button text for service 1",
+      }),*/
+      link: "/layanan/analisis-spasial", // ← Tambahkan link
+      linkSecondary: "https://sandbox.staging.pik-sel.id", // ← Tambahkan link
     },
     {
       id: 3,
@@ -61,15 +71,21 @@ const OurServices = () => {
       description: translate({
         id: "ourServices.service3.description",
         message:
-          "Akses data Piksel yang komprehensif melalui API [Application Programming Interface].",
+          "Akses data Piksel melalui API [Application Programming Interface].",
         description: "Service 3 Description",
       }),
-      buttonText: translate({
-        id: "ourServices.service3.button",
-        message: "Jelajahi API",
-        description: "Button text for service 3",
+      /*buttonText: translate({
+        id: "ourServices.service1.button",
+        message: "Info",
+        description: "Button text for service 1",
       }),
-      link: "https://github.com/piksel-ina/homepage", // ← Tambahkan link
+      buttonTextSecondary: translate({
+        id: "ourServices.service1.buttonSecondary",
+        message: "Buka",
+        description: "Secondary button text for service 1",
+      }),*/
+      link: "/layanan/api", // ← Tambahkan link
+      linkSecondary: "https://github.com/piksel-ina/homepage", // ← Tambahkan link
     },
     {
       id: 4,
@@ -85,12 +101,18 @@ const OurServices = () => {
           "Daftar kumpulan data citra satelit dan data turunannya.",
         description: "Service 4 Description",
       }),
-      buttonText: translate({
-        id: "ourServices.service4.button",
-        message: "Lihat Katalog",
-        description: "Button text for service 4",
+      /*buttonText: translate({
+        id: "ourServices.service1.button",
+        message: "Info",
+        description: "Button text for service 1",
       }),
-      link: "https://explorer.staging.pik-sel.id/products", // ← Link external
+      buttonTextSecondary: translate({
+        id: "ourServices.service1.buttonSecondary",
+        message: "Buka",
+        description: "Secondary button text for service 1",
+      }),*/
+      link: "/layanan/katalog-produk", // ← Tambahkan link
+      linkSecondary: "https://explorer.staging.pik-sel.id/products", // ← Link external
     },
   ];
 
@@ -130,8 +152,9 @@ const OurServices = () => {
                   title={service.title}
                   description={service.description}
                   buttonText={service.buttonText}
+                  buttonTextSecondary={service.buttonTextSecondary}
                   link={service.link} // ← Pass link ke GlassCard
-                  //linkSecondary={service.linkSecondary} // ← Pass linkSecondary ke GlassCard
+                  linkSecondary={service.linkSecondary} // ← Pass linkSecondary ke GlassCard
                 />
               </div>
             </div>

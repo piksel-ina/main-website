@@ -7,22 +7,22 @@ import { translate } from "@docusaurus/Translate";
 const USE_CASES = [
   {
     id: "usecase1",
-    image: "/img/food.png",
+    image: "/img/food-.png",
     link: "/penggunaan/ketahanan-pangan",
   },
   {
     id: "usecase2",
-    image: "/img/disaster.png",
+    image: "/img/disaster-.png",
     link: "/penggunaan/kebencanaan",
   },
   {
     id: "usecase3",
-    image: "/img/land.png",
+    image: "/img/land-.png",
     link: "/penggunaan/penggunaan-lahan",
   },
   {
     id: "usecase4",
-    image: "/img/coastal.png",
+    image: "/img/coastal-.png",
     link: "/penggunaan/pengelolaan-pesisir",
   },
 ];
