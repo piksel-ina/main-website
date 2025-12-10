@@ -175,6 +175,7 @@ html[data-theme='dark'] {
 }
 
 .navbar--homepage .menu__link--active {
+  color: color-mix(in srgb, var(--ifm-background-color), #fff 80%) !important;
   background-color: transparent !important;
   border-right: none !important;
 }
@@ -216,6 +217,7 @@ html[data-theme='dark'] {
     margin-right: 1rem;
   }
 }
+
 /* Navbar link underline effect */
 .navbar__link:not(.dropdown__menu .navbar__link) {
   position: relative;
@@ -255,6 +257,23 @@ html[data-theme='dark'] {
   }
 }
 
+/* Mobile Sidebar Fix */
+.navbar-sidebar {
+  background-color: var(--ifm-background-color) !important;
+  z-index: 1000 !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+}
+
+.navbar-sidebar__item {
+  background-color: transparent !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu__link {
+  color: var(--ifm-menu-color);
+}
+
 /* Admonitions - Glassmorphism */
 .alert {
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -277,23 +296,6 @@ html[data-theme='dark'] {
 .alert--warning {
   background-color: rgba(var(--ifm-color-warning-rgb), 0.1);
   border-left: 4px solid var(--ifm-color-warning);
-}
-
-/* Mobile Sidebar Fix */
-.navbar-sidebar {
-  background-color: var(--ifm-background-color) !important;
-  z-index: 1000 !important;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
-}
-
-.navbar-sidebar__item {
-  background-color: transparent !important;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.menu__link {
-  color: var(--ifm-menu-color);
 }
 
 /* FOOTER - Digital Earth Alignment */

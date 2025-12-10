@@ -2,13 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
-const HERO_IMAGES = [
-  'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800',
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
-  'https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800',
-  'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800',
-  'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=800',
-];
+import { heroData } from '@site/src/data/homepageData';
 
 const STATS = [
   { number: '50TB+', label: 'Data Processed Daily' },
@@ -25,25 +19,48 @@ export default function Hero() {
       <div className={clsx(styles.orb, styles.orb2)} />
       <div className={styles.scanlines} />
       <div className={styles.imageCollage}>
-        {HERO_IMAGES.map((src, idx) => (
-          <div 
-            key={idx} 
-            className={styles.imageItem}
-            style={{ backgroundImage: `url(${src})` }}
-          />
-        ))}
+        {heroData.images.map((item, idx) => {
+          if (typeof item === 'object' && item.type === 'local') {
+            return (
+              <div key={idx} className={styles.imageItem}>
+                <picture className={styles.adaptiveImage}>
+                  <source 
+                    media="(max-width: 768px)" 
+                    srcSet={item.sources.portrait.srcSet} 
+                  />
+                  <source 
+                    media="(min-width: 769px)" 
+                    srcSet={item.sources.landscape.srcSet} 
+                  />
+                  <img 
+                    src={item.sources.landscape.src} 
+                    alt={item.alt}
+                    className={styles.adaptiveImgElement}
+                  />
+                </picture>
+              </div>
+            );
+          }
+          return (
+            <div 
+              key={idx} 
+              className={styles.imageItem}
+              style={{ backgroundImage: `url(${item})` }}
+            />
+          );
+        })}
       </div>
 
       <div className={styles.contentWrapper}>
         <div className={styles.heroContent}>
-          <span className={styles.tag}>PIKSEL</span>
-          <h1 className={styles.title}>Memahami Bumi Indonesia Melalui Piksel</h1>
+          <span className={styles.tag}>{heroData.tag}</span>
+          <h1 className={styles.title}>{heroData.title}</h1>
           <p className={styles.subtitle}>
-            Piksel mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia
+            {heroData.subtitle}
           </p>
           
           <div className={styles.heroStats}>
-            {STATS.map((stat, idx) => (
+            {heroData.stats.map((stat, idx) => (
               <div key={idx} className={styles.heroStatItem}>
                 <div className={styles.heroStatNumber}>{stat.number}</div>
                 <div className={styles.heroStatLabel}>{stat.label}</div>
