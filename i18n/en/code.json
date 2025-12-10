@@ -1,16 +1,4 @@
 {
-  "homepage.hero.title": {
-    "message": "Indonesia's Digital Earth",
-    "description": "The main title on the homepage hero section"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesia region",
-    "description": "The subtitle text on the homepage hero section"
-  },
-  "homepage.hero.button": {
-    "message": "Read How",
-    "description": "The button text to read documentation"
-  },
   "homepage.meta.title": {
     "message": "Piksel",
     "description": "Site title for the homepage"
@@ -18,131 +6,6 @@
   "homepage.meta.description": {
     "message": "The Digital Earth Indonesia (piksel) brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesia region",
     "description": "Meta description for the homepage"
-  },
-  "articles.defaultArticles.feat01.title": {
-    "message": "Understanding Satellite Imagery for Indonesia"
-  },
-  "articles.defaultArticles.feat01.description": {
-    "message": "Learn the fundamentals of satellite imagery analysis and how it applies to Indonesian geographical features and environmental monitoring."
-  },
-  "articles.defaultArticles.feat02.title": {
-    "message": "Cloud Computing for Geospatial Data"
-  },
-  "articles.defaultArticles.feat02.description": {
-    "message": "Discover how cloud computing revolutionizes geospatial data processing and analysis for large-scale earth observation projects."
-  },
-  "articles.defaultArticles.feat03.title": {
-    "message": "Environmental Monitoring with Piksel"
-  },
-  "articles.defaultArticles.feat03.description": {
-    "message": "Explore how Piksel's digital earth technology helps monitor deforestation, urban growth, and climate change impacts across Indonesia."
-  },
-  "articles.defaultArticles.feat04.title": {
-    "message": "Integrating Piksel Data API"
-  },
-  "articles.defaultArticles.feat04.description": {
-    "message": "Step-by-step guide to integrate Piksel's geospatial data API into your applications and workflows."
-  },
-  "articles.defaultArticles.feat05.title": {
-    "message": "Automating Geospatial Workflows"
-  },
-  "articles.defaultArticles.feat05.description": {
-    "message": "Learn how to automate large-scale geospatial data processing using Piksel Workflows and Argo technology."
-  },
-  "articles.title": {
-    "message": "Featured Articles"
-  },
-  "ourServices.service1.title": {
-    "message": "Piksel Map",
-    "description": "Title for service 1"
-  },
-  "ourServices.service1.description": {
-    "message": "Explore and visualize geospatial datasets through our interactive web platform.",
-    "description": "Service 1 Description"
-  },
-  "ourServices.service1.button": {
-    "message": "Start Exploring",
-    "description": "Button text for service 1"
-  },
-  "ourServices.service2.title": {
-    "message": "Piksel Sandbox",
-    "description": "Title for service 2"
-  },
-  "ourServices.service2.description": {
-    "message": "Experiment, learn, and prototype in our cloud-based Jupyter environment.",
-    "description": "Service 2 Description"
-  },
-  "ourServices.service2.button": {
-    "message": "View Analytics",
-    "description": "Button text for service 2"
-  },
-  "ourServices.service3.title": {
-    "message": "Piksel Data API",
-    "description": "Title for service 3"
-  },
-  "ourServices.service3.description": {
-    "message": "Access comprehensive geospatial datasets through our robust API infrastructure.",
-    "description": "Service 3 Description"
-  },
-  "ourServices.service3.button": {
-    "message": "Explore APIs",
-    "description": "Button text for service 3"
-  },
-  "ourServices.service4.title": {
-    "message": "Piksel Workflows",
-    "description": "Title for service 4"
-  },
-  "ourServices.service4.description": {
-    "message": "Automate large-scale geospatial data processing with Argo Workflows.",
-    "description": "Service 4 Description"
-  },
-  "ourServices.service4.button": {
-    "message": "Explore APIs",
-    "description": "Button text for service 4"
-  },
-  "ourServices.title": {
-    "message": "Our Services",
-    "description": "The title of the our services section"
-  },
-  "ourServices.subtitle": {
-    "message": "Making geospatial data accessible for everyone",
-    "description": "The subtitle of the our services section"
-  },
-  "useCase.card.environment.title": {
-    "message": "Environment",
-    "description": "Title for use case 1"
-  },
-  "useCase.card.environment.description": {
-    "message": "We provide trusted imagery and data about Indonesian landscapes to researchers and land managers, helping them navigate environmental complexity.",
-    "description": "Description for use case 1"
-  },
-  "useCase.card.technology.title": {
-    "message": "Technology",
-    "description": "Title for use case 2"
-  },
-  "useCase.card.technology.description": {
-    "message": "Cutting-edge solutions for modern challenges in data management and analysis, powered by innovative research and development.",
-    "description": "Description for case 2"
-  },
-  "useCase.card.research.title": {
-    "message": "Research",
-    "description": "Title for use case 3"
-  },
-  "useCase.card.research.description": {
-    "message": "Supporting scientific research with reliable data and innovative tools that enable breakthrough discoveries and insights.",
-    "description": "Description for use case 3"
-  },
-  "useCase.title": {
-    "message": "Our Use Cases",
-    "description": "The title of the use cases section"
-  },
-  "useCase.subtitle": {
-    "message": "Discover how our solutions make a difference across various domains",
-    "description": "The subtitle of the use cases section"
-  },
-  "useCase.readMore.button": {
-    "message": "Read More Use Cases",
-    "description": "Button text to view more use cases"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Main",
@@ -470,5 +333,312 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.hero.tag": {
+    "message": "PIKSEL",
+    "description": "The tag on the homepage hero section"
+  },
+  "homepage.hero.title": {
+    "message": "From Satellite Data to Smart Decisions",
+    "description": "The main title on the homepage hero section"
+  },
+  "homepage.hero.subtitle": {
+    "message": "One complete platform to access satellite data, analyze, visualize, and make geospatial-based decisions. From data to insight, all in one cloud ecosystem.",
+    "description": "The subtitle text on the homepage hero section"
+  },
+  "homepage.hero.button": {
+    "message": "Learn More",
+    "description": "The button text to read documentation"
+  },
+  "homepage.hero.stats.01": {
+    "message": "50TB+",
+    "description": "Statistics Number 01"
+  },
+  "homepage.hero.stats.01.label": {
+    "message": "Total Data Available",
+    "description": "Statistics Label 01"
+  },
+  "homepage.hero.stats.02": {
+    "message": "100%",
+    "description": "Statistics Number 02"
+  },
+  "homepage.hero.stats.02.label": {
+    "message": "Indonesian Region Coverage",
+    "description": "Statistics Label 02"
+  },
+  "homepage.hero.stats.03": {
+    "message": "30+",
+    "description": "Statistics Number 03"
+  },
+  "homepage.hero.stats.03.label": {
+    "message": "Years of Historical Data",
+    "description": "Statistics Label 03"
+  },
+  "homepage.hero.stats.04": {
+    "message": "Free",
+    "description": "Statistics Number 04"
+  },
+  "homepage.hero.stats.04.label": {
+    "message": "Open Access for Public",
+    "description": "Statistics Label 04"
+  },
+  "useCases.header.tag": {
+    "message": "Our Solutions",
+    "description": "Tag label for the use cases section"
+  },
+  "useCases.header.title": {
+    "message": "Piksel Use Cases",
+    "description": "Main title for the use cases section"
+  },
+  "useCases.header.subtitle": {
+    "message": "Utilization of remote sensing data to support evidence-based policy making and strengthen national resilience in various strategic sectors of Indonesia.",
+    "description": "Subtitle description for the use cases section"
+  },
+  "useCases.common.learnMore": {
+    "message": "Learn More",
+    "description": "Button text to learn more about a specific use case"
+  },
+  "useCases.common.viewAll": {
+    "message": "View All Use Cases",
+    "description": "Button text to view all use cases"
+  },
+  "useCases.useCase01.tab": {
+    "message": "Forestry"
+  },
+  "useCases.useCase01.title": {
+    "message": "Deforestation Monitoring"
+  },
+  "useCases.useCase01.description": {
+    "message": "Regular detection of forest cover changes using optical (Sentinel-2, Landsat) and radar (Sentinel-1) data. Identify indications of land clearing and monitor vegetation recovery throughout Indonesia."
+  },
+  "useCases.useCase01.f1": {
+    "message": "Periodic land cover monitoring"
+  },
+  "useCases.useCase01.f2": {
+    "message": "Time-series based change detection"
+  },
+  "useCases.useCase01.f3": {
+    "message": "Landsat data historical analysis"
+  },
+  "useCases.useCase02.tab": {
+    "message": "Urban"
+  },
+  "useCases.useCase02.title": {
+    "message": "Urban Expansion"
+  },
+  "useCases.useCase02.description": {
+    "message": "Analysis of built-up area expansion trends (urban sprawl) to support regional planning. Monitor land conversion in suburban areas using long-term satellite archive data."
+  },
+  "useCases.useCase02.f1": {
+    "message": "Built-up area mapping"
+  },
+  "useCases.useCase02.f2": {
+    "message": "Land use change monitoring"
+  },
+  "useCases.useCase02.f3": {
+    "message": "City growth trend analysis"
+  },
+  "useCases.useCase03.tab": {
+    "message": "Agriculture"
+  },
+  "useCases.useCase03.title": {
+    "message": "Food Sovereignty"
+  },
+  "useCases.useCase03.description": {
+    "message": "Supporting national food security through rice planting phase monitoring and paddy field health. Identification of production centers and harvest prediction using multi-temporal satellite data analysis."
+  },
+  "useCases.useCase03.f1": {
+    "message": "Paddy Field Monitoring"
+  },
+  "useCases.useCase03.f2": {
+    "message": "Rice growth phase analysis"
+  },
+  "useCases.useCase03.f3": {
+    "message": "Cropping index estimation"
+  },
+  "useCases.useCase04.tab": {
+    "message": "Coastal"
+  },
+  "useCases.useCase04.title": {
+    "message": "Coastal Dynamics"
+  },
+  "useCases.useCase04.description": {
+    "message": "Monitor coastline changes due to abrasion or accretion using Landsat time-series data. Identify tidal inundation areas (intertidal) for coastal zone management."
+  },
+  "useCases.useCase04.f1": {
+    "message": "Historical coastline change detection"
+  },
+  "useCases.useCase04.f2": {
+    "message": "Tidal area mapping"
+  },
+  "useCases.useCase04.f3": {
+    "message": "Coastal land cover classification"
+  },
+  "useCases.useCase05.tab": {
+    "message": "Disaster"
+  },
+  "useCases.useCase05.title": {
+    "message": "Flood Area Mapping"
+  },
+  "useCases.useCase05.description": {
+    "message": "Utilization of Sentinel-1 radar data to detect flood inundation, even when covered by clouds. Support rapid response by providing indicative maps of affected areas."
+  },
+  "useCases.useCase05.f1": {
+    "message": "SAR-based flood detection"
+  },
+  "useCases.useCase05.f2": {
+    "message": "Affected area monitoring"
+  },
+  "useCases.useCase05.f3": {
+    "message": "Cloud-free data provision"
+  },
+  "useCases.useCase06.tab": {
+    "message": "Mining"
+  },
+  "useCases.useCase06.title": {
+    "message": "Mining Activity"
+  },
+  "useCases.useCase06.description": {
+    "message": "Regularly monitor land clearing for open-pit mining areas. Identify landscape changes and mining ponds using a combination of optical and radar data."
+  },
+  "useCases.useCase06.f1": {
+    "message": "Land clearing detection"
+  },
+  "useCases.useCase06.f2": {
+    "message": "Mining water body identification"
+  },
+  "useCases.useCase06.f3": {
+    "message": "Land rehabilitation monitoring"
+  },
+  "ourServices.header.tag": {
+    "message": "Our Services",
+    "description": "Tag label for the services section"
+  },
+  "ourServices.header.title": {
+    "message": "PIKSEL ECOSYSTEM",
+    "description": "Main title for the services section"
+  },
+  "ourServices.header.subtitle": {
+    "message": "Access a comprehensive geospatial data ecosystem to support innovation and strategic decision making. From open data exploration to advanced computing infrastructure for national needs.",
+    "description": "Subtitle description for the services section"
+  },
+  "ourServices.explorer.description": {
+    "message": "Explore and access geospatial data available on our platform freely."
+  },
+  "ourServices.explorer.f1": {
+    "message": "Browse data catalog"
+  },
+  "ourServices.explorer.f2": {
+    "message": "Visualization preview"
+  },
+  "ourServices.explorer.f3": {
+    "message": "Download datasets"
+  },
+  "ourServices.explorer.btn": {
+    "message": "Start Exploring"
+  },
+  "ourServices.common.learnMore": {
+    "message": "Learn More"
+  },
+  "ourServices.sandbox.description": {
+    "message": "Learn programmatic data processing. Training environment for geospatial analysis development."
+  },
+  "ourServices.sandbox.f1": {
+    "message": "Ready-to-use notebook environment"
+  },
+  "ourServices.sandbox.f2": {
+    "message": "Sample codes and tutorials"
+  },
+  "ourServices.sandbox.f3": {
+    "message": "Development collaboration"
+  },
+  "ourServices.sandbox.btn": {
+    "message": "Start Learning"
+  },
+  "ourServices.maps.description": {
+    "message": "Interact directly with digital maps to get quick visual insights."
+  },
+  "ourServices.maps.f1": {
+    "message": "Interactive map interface"
+  },
+  "ourServices.maps.f2": {
+    "message": "Real-time analysis"
+  },
+  "ourServices.maps.f3": {
+    "message": "Export analysis results"
+  },
+  "ourServices.maps.btn": {
+    "message": "Open Map"
+  },
+  "ourServices.webservices.description": {
+    "message": "Integrate satellite data directly into your applications via global web service standards."
+  },
+  "ourServices.webservices.f1": {
+    "message": "WMS/WCS/WMTS Services"
+  },
+  "ourServices.webservices.f2": {
+    "message": "REST API"
+  },
+  "ourServices.webservices.f3": {
+    "message": "Complete technical documentation"
+  },
+  "ourServices.webservices.btn": {
+    "message": "View Documentation"
+  },
+  "ourServices.production.description": {
+    "message": "High-performance computing infrastructure support for national-scale data processing."
+  },
+  "ourServices.production.f1": {
+    "message": "Kubernetes-based cloud computing"
+  },
+  "ourServices.production.f2": {
+    "message": "Automated workload management"
+  },
+  "ourServices.production.f3": {
+    "message": "Large-scale processing efficiency"
+  },
+  "ourServices.production.f4": {
+    "message": "National production collaboration"
+  },
+  "ourServices.production.btn": {
+    "message": "Contact Us"
+  },
+  "homepage.faq.title": {
+    "message": "Frequently Asked Questions",
+    "description": "Title for the FAQ section"
+  },
+  "homepage.faq.subtitle": {
+    "message": "Information regarding background, data access, and collaboration.",
+    "description": "Subtitle for the FAQ section"
+  },
+  "homepage.faq.q1": {
+    "message": "What is the background of PIKSEL formation?"
+  },
+  "homepage.faq.a1": {
+    "message": "PIKSEL was established through a strategic collaboration with Geoscience Australia, adopting Open Data Cube technology similar to the Digital Earth Australia platform. This initiative aims to build national geospatial data infrastructure independence to support more accurate decision making."
+  },
+  "homepage.faq.q2": {
+    "message": "Is a user account required to access data?"
+  },
+  "homepage.faq.a2": {
+    "message": "No. Most data and API services (WMS/WCS) on piksel.id are open to the public without registration. Account registration is only required if you want to use the Jupyter Sandbox service for private data processing and simulation."
+  },
+  "homepage.faq.q3": {
+    "message": "How to collaborate with PIKSEL?"
+  },
+  "homepage.faq.a3": {
+    "message": "We welcome collaboration with academics, researchers, and other institutions. You can contribute by developing analysis modules in the Sandbox, or contact our team directly for potential broader geospatial product development cooperation."
+  },
+  "homepage.faq.q4": {
+    "message": "What types and formats of data are available?"
+  },
+  "homepage.faq.a4": {
+    "message": "Currently we provide Analysis Ready Data from Sentinel-1, Sentinel-2 constellations, and historical Landsat archives. Data is presented in Cloud Optimized GeoTIFF (COG) format to support fast and interoperable access."
+  },
+  "homepage.faq.q5": {
+    "message": "How often is satellite data updated?"
+  },
+  "homepage.faq.a5": {
+    "message": "Our platform indexes new data daily. Satellites themselves pass over Indonesian territory every day but at different locations following their orbit paths. For a specific location, Sentinel-2 will return every 5 days and Sentinel-1 every 6-12 days."
   }
 }

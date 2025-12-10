@@ -14,5 +14,17 @@
   "sidebar.tutorialSidebar.category.Tutorial - Extras": {
     "message": "Tutorial - Extras",
     "description": "The label for category 'Tutorial - Extras' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.docsSidebar.category.About": {
+    "message": "About",
+    "description": "The label for category 'About' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Use Cases": {
+    "message": "Use Cases",
+    "description": "The label for category 'Use Cases' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Services": {
+    "message": "Services",
+    "description": "The label for category 'Services' in sidebar 'docsSidebar'"
   }
 }

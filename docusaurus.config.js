@@ -95,7 +95,7 @@ const config = {
             position: "left",
             label: "Dokumentasi",
           },
-          { to: "/#use-cases", label: "Penggunaan", position: "left" },
+          { to: "/#use-cases", label: "Pemanfaatan", position: "left" },
           { to: "/#services", label: "Layanan", position: "left" },
           { to: "/#faq", label: "FAQ", position: "left" },
           {

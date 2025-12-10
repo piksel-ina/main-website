@@ -75,6 +75,7 @@ Our visual language is **"Digital Earth / Futuristic Data"**. It relies heavily 
     - Page/Container components are responsible for importing the data.
 2.  **Internationalization**:
     - Always wrap text strings in `@docusaurus/Translate`.
+    - **Workflow**: Run `npm run write-translations -- --locale en` to extract new strings before adding translations.
 
 ### C. Accessibility (a11y)
 1.  **Semantic HTML**:

@@ -11,8 +11,16 @@
     "message": "Documentation",
     "description": "Navbar item with label Dokumentasi"
   },
-  "item.label.Artikel": {
-    "message": "Article",
-    "description": "Navbar item with label Artikel"
+  "item.label.Pemanfaatan": {
+    "message": "Use Cases",
+    "description": "Navbar item with label Pemanfaatan"
+  },
+  "item.label.Layanan": {
+    "message": "Services",
+    "description": "Navbar item with label Layanan"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
   }
 }
