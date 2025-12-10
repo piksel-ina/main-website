@@ -1,27 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import clsx from 'clsx';
-import { useCasesData } from '@site/src/data/homepageData';
+import { useCasesData, useCasesHeaderData } from "@site/src/data/useCasesData";
 import { 
-  TreePine, 
-  Building2, 
-  Wheat, 
-  Waves, 
-  TriangleAlert, 
-  Pickaxe, 
   ArrowRight, 
   Check 
 } from 'lucide-react';
 import styles from './styles.module.css';
 
-// Map icon strings to components
-const IconMap = {
-  'tree-pine': TreePine,
-  'building-2': Building2,
-  'wheat': Wheat,
-  'waves': Waves,
-  'triangle-alert': TriangleAlert,
-  'pickaxe': Pickaxe
-};
+// IconMap removed as icons are now imported in data file
 
 export default function UseCases() {
   const useCaseKeys = Object.keys(useCasesData || {});
@@ -33,7 +19,7 @@ export default function UseCases() {
 
   if (!currentCase) return null;
 
-  const IconComponent = IconMap[currentCase.icon] || TreePine;
+  const IconComponent = currentCase.icon;
   const color = currentCase.color;
   const glowColor = currentCase.glowColor;
 
@@ -54,12 +40,12 @@ export default function UseCases() {
         <div className={styles.header}>
           <div className={styles.labelWrapper}>
             <div className={styles.line} />
-            <span>Solusi Kami</span>
+            <span>{useCasesHeaderData.tag}</span>
             <div className={styles.line} />
           </div>
-          <h2 className={styles.title}>Kasus Penggunaan Piksel</h2>
+          <h2 className={styles.title}>{useCasesHeaderData.title}</h2>
           <p className={styles.subtitle}>
-            Solusi observasi bumi untuk berbagai sektor di Indonesia
+            {useCasesHeaderData.subtitle}
           </p>
         </div>
 
@@ -140,7 +126,7 @@ export default function UseCases() {
             </div>
 
             <button className={styles.ctaButton}>
-              <span>Pelajari Lebih Lanjut</span>
+              <span>{useCasesHeaderData.learnMoreText}</span>
               <ArrowRight className={styles.ctaIcon} />
             </button>
           </div>
@@ -150,7 +136,7 @@ export default function UseCases() {
         {/* View All Button */}
         <div className={styles.viewAllWrapper}>
           <button className={styles.viewAllButton}>
-            <span>Lihat Semua Penggunaan</span>
+            <span>{useCasesHeaderData.viewAllText}</span>
           </button>
         </div>
 

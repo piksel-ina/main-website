@@ -231,7 +231,7 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
   line-height: 1.1;
   padding: 0.1em 0;
@@ -256,7 +256,7 @@
 }
 
 .subtitle {
-  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
   color: #94a3b8;
   line-height: 1.6;
   margin-bottom: 2.5rem;

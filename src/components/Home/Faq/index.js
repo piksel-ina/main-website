@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { faqData } from '@site/src/data/homepageData';
+import { faqData } from "@site/src/data/faqData";
 import styles from './style.module.css';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 

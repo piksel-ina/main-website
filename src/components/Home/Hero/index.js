@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
-import { heroData } from '@site/src/data/homepageData';
+import { heroData } from "@site/src/data/heroData";
 
 const STATS = [
   { number: '50TB+', label: 'Data Processed Daily' },

@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
-import { servicesData, servicesHeaderData } from "@site/src/data/homepageData";
+import { servicesData, servicesHeaderData } from "@site/src/data/servicesData";
 import styles from "./style.module.css";
 import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 
