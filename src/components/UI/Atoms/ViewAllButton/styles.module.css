@@ -1,0 +1,69 @@
+.wrapper {
+  z-index: 51;
+  text-align: center;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.button {
+  display: inline-flex;
+  position: relative;
+  z-index: 20;
+  align-items: center;
+  gap: 0.8rem; /* Increased gap slightly */
+  cursor: pointer;
+  padding: 0.4rem 0.8rem; /* Added small touch target padding */
+  
+  background: none;
+  border: none;
+  
+  color: var(--ifm-font-color-base);
+  font-family: inherit;
+  font-weight: 500; /* Subtle weight */
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  
+  transition: color 0.3s ease;
+}
+
+/* Stylish Animated Underline */
+.button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--active-color, var(--ifm-color-primary));
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.8;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--active-color, var(--ifm-color-primary));
+  outline: none;
+  text-decoration: none;
+}
+
+.button:hover::after,
+.button:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Icon Animation */
+.icon {
+  height: 1.4rem;
+  width: 1.6rem;
+  stroke-width: 1.6;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.button:hover .icon,
+.button:focus .icon {
+  transform: translateX(4px);
+}

@@ -6,6 +6,7 @@
   padding: clamp(7.68rem, 10vw, 10.2rem) 0;
   background-color: transparent;
   color: var(--ifm-font-color-base);
+  z-index: 1;
 }
 
 /* ============================================
@@ -40,7 +41,7 @@
 }
 
 .title {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading, inherit);
   font-size: clamp(2.56rem, 5vw, 3.84rem);
   font-weight: 700;
   margin-bottom: 1.28rem;
@@ -57,7 +58,7 @@
 }
 
 /* ============================================
-   TABS SECTION
+   TABS SECTION - Fixed Accessibility
    ============================================ */
 .tabsWrapper {
   margin-bottom: 3.84rem;
@@ -103,6 +104,13 @@
   align-items: center;
 }
 
+/* Focus styles for accessibility */
+.tabButton:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .tabButton::before {
   content: attr(data-text);
   font-weight: 600;
@@ -127,7 +135,7 @@
   right: 0;
   height: 0.16rem;
   background-color: var(--active-color);
-  transform: scalex(1.4);
+  transform: scaleX(1.4);
   transition: all 0.3s ease;
 }
 
@@ -198,6 +206,7 @@
 }
 
 .image {
+  width: 100%;
   min-height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
@@ -224,21 +233,24 @@
 }
 
 .contentTitle {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family-heading, inherit);
   font-size: 2.56rem;
   font-weight: 700;
   color: var(--ifm-color-primary);
+  margin: 0;
 }
 
-/* H3 Link */
+/* H3 Link - Fixed focus styles */
 .contentTitleLink {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contentTitleLink:hover {
+.contentTitleLink:hover,
+.contentTitleLink:focus {
   color: var(--active-color);
+  outline: none;
 }
 
 .detailSection {
@@ -277,7 +289,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: center;
   background-color: var(--ifm-color-emphasis-100);
   border-radius: 0.32rem;
   color: var(--active-color);
@@ -293,96 +304,10 @@
   color: var(--ifm-color-primary);
 }
 
-/* CTA */
-.ctaButton {
-  display: inline-flex;
-  font-size: 1.2rem;
-  align-items: center;
-  gap: 0.64rem;
-  padding: 0.8em 1.6em;
-  background-color: var(--active-color);
-  color: white;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  clip-path: polygon(0.8rem 0, 100% 0, 100% 100%, 0 100%, 0 0.8rem);
-  position: relative;
-  z-index: 5;
-  text-decoration: none;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-.ctaButton:hover {
-  transform: translateX(0.32rem);
-  filter: brightness(1.1);
-  color: white;
-  text-decoration: none;
-}
-
-.ctaIcon {
-  height: 1.4em;
-  width: 1.8em;
-  stroke-width: 1.2;
-}
-
-/* View All */
-.viewAllWrapper {
-  text-align: center;
-  margin-top: 6.4rem;
-  margin-bottom: 5.12rem;
-  z-index: 2;
-}
-
-.viewAllButton {
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--ifm-color-primary-dark);
-  color: var(--ifm-color-primary-dark);
-  font-weight: 600;
-  font-size: 1.6rem;
-  padding-bottom: 0.125em;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-
-.viewAllButton:hover {
-  color: var(--active-color);
-  border-color: var(--active-color);
-}
 
 /* ============================================
-   ANIMATIONS & DECORATIONS
+   ANIMATIONS
    ============================================ */
-
-/* Subtle Dot Pattern Background */
-.section::before {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 80%;
-  background-image: radial-gradient(var(--ifm-color-primary) 1px, transparent 1px);
-  background-size: 3rem 3rem;
-  opacity: 0.2;
-  pointer-events: none;
-  z-index: 0;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
-}
-
-/* Title Link */
-.titleLink {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.titleLink:hover {
-  color: var(--active-color);
-}
 
 /* Tab Content Animation */
 @keyframes fadeSlideUp {

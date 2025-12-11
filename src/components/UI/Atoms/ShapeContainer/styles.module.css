@@ -3,6 +3,7 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  position: relative;
 }
 
 .shape--absolute {
@@ -28,10 +29,9 @@
   transform: scaleX(-1);
 }
 
-/* Colors */
+/* Colors - Fixed with fallbacks */
 .shape--color-neutral {
-  background-color: var(--color-bg-accent-subtle);
-  opacity: 0.6;
+  background-color: var(--color-bg-accent-subtle, var(--ifm-color-emphasis-100));
 }
 
 .shape--color-primary {
@@ -40,6 +40,55 @@
 }
 
 .shape--color-accent {
-  background-color: var(--color-accent-teal);
+  background-color: var(--color-accent-teal, var(--ifm-color-secondary-lightest));
   opacity: 0.05;
+}
+
+/* ============================================
+   DOT PATTERN VARIANTS
+   ============================================ */
+
+.shape--dotPattern::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 3rem 3rem;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+/* Dot pattern color variants */
+.shape--dotPattern-primary::before {
+  background-image: radial-gradient(var(--ifm-color-primary, #000) 1px, transparent 1px);
+}
+
+.shape--dotPattern-secondary::before {
+  background-image: radial-gradient(var(--ifm-color-secondary, #666) 1px, transparent 1px);
+}
+
+.shape--dotPattern-accent::before {
+  background-image: radial-gradient(var(--color-accent-teal, #008080) 1px, transparent 1px);
+}
+
+/* Custom dot pattern sizes */
+.shape--dotPattern-small::before {
+  background-size: 2rem 2rem;
+}
+
+.shape--dotPattern-large::before {
+  background-size: 4rem 4rem;
+}
+
+/* Dot pattern opacity variants */
+.shape--dotPattern-subtle::before {
+  opacity: 0.03;
+}
+
+.shape--dotPattern-visible::before {
+  opacity: 0.08;
 }

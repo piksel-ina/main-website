@@ -3,23 +3,29 @@ import clsx from 'clsx';
 import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import { useCasesData, useCasesHeaderData } from "@site/src/data/useCasesData";
 import { 
-  ArrowRight, 
-  Check 
+  Check,
+  ChevronRight 
 } from 'lucide-react';
+import ViewAllButton from '../../UI/Atoms/ViewAllButton';
+import CTAButton from '../../UI/Atoms/CTAButton';
 import styles from './styles.module.css';
 
-// IconMap removed as icons are now imported in data file
-
 export default function UseCases() {
-  const useCaseKeys = Object.keys(useCasesData || {});
+  // Add error handling for missing data
+  if (!useCasesData || Object.keys(useCasesData).length === 0) {
+    console.warn('UseCases: No data available');
+    return null;
+  }
+
+  const useCaseKeys = Object.keys(useCasesData);
   const [activeTab, setActiveTab] = useState(useCaseKeys[0] || 'useCase01');
 
+  // Fixed useMemo with proper dependencies
   const currentCase = useMemo(() => {
-    return useCasesData[activeTab];
-  }, [activeTab]);
+    return useCasesData?.[activeTab];
+  }, [activeTab, useCasesData]);
 
   if (!currentCase) return null;
-
 
   const color = currentCase.color;
   const glowColor = currentCase.glowColor;
@@ -29,21 +35,26 @@ export default function UseCases() {
     '--active-glow': glowColor,
   };
 
+  // Add handler for View All button
+  const handleViewAll = () => {
+    console.log('Navigate to all use cases page');
+  };
+
   return (
     <section id="use-cases" className={styles.section} style={dynamicStyles}>
-      <ShapeContainer variant="slanted" color="neutral" position="absolute" flip />
+      <ShapeContainer variant="slanted" color="neutral" position="absolute" flip dotPattern patternColor="primary" />
       
       <div className="container">
         {/* Header */}
         <div className={styles.header}>
           <div className={styles.labelWrapper}>
             <div className={styles.line} />
-            <span>{useCasesHeaderData.tag}</span>
+            <span>{useCasesHeaderData?.tag || 'Use Cases'}</span>
             <div className={styles.line} />
           </div>
-          <h2 className={styles.title}>{useCasesHeaderData.title}</h2>
+          <h2 className={styles.title}>{useCasesHeaderData?.title || 'Our Use Cases'}</h2>
           <p className={styles.subtitle}>
-            {useCasesHeaderData.subtitle}
+            {useCasesHeaderData?.subtitle || 'Explore how our solutions work in practice'}
           </p>
         </div>
 
@@ -51,18 +62,22 @@ export default function UseCases() {
         <div className={styles.tabsWrapper}>
           <div className={styles.scanLine} />
           
-          <div className={styles.tabs}>
+          <div className={styles.tabs} role="tablist" aria-label="Use case categories">
             {useCaseKeys.map((key) => {
               const isActive = activeTab === key;
               const item = useCasesData[key];
               return (
                 <button
                   key={key}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls={`panel-${key}`}
+                  tabIndex={isActive ? 0 : -1}
                   className={clsx(styles.tabButton, isActive && styles.tabButtonActive)}
                   onClick={() => setActiveTab(key)}
-                  data-text={item.tabLabel || item.title}
+                  data-text={item?.tabLabel || item?.title || ''}
                 >
-                  {item.tabLabel || item.title}
+                  {item?.tabLabel || item?.title || 'Untitled'}
                   {isActive && (
                     <div className={styles.tabIndicator} />
                   )}
@@ -72,21 +87,24 @@ export default function UseCases() {
           </div>
         </div>
 
-        {/* Content Area (Stacked Grid) */}
+        {/* Content Area */}
         <div className={styles.contentGrid}>
           {useCaseKeys.map((key) => {
             const item = useCasesData[key];
             const isActive = activeTab === key;
-            const ItemIcon = item.icon;
+            const ItemIcon = item?.icon;
 
             const itemStyles = {
-              '--active-color': item.color,
-              '--active-glow': item.glowColor,
+              '--active-color': item?.color || color,
+              '--active-glow': item?.glowColor || glowColor,
             };
 
             return (
               <div 
                 key={key}
+                id={`panel-${key}`}
+                role="tabpanel"
+                aria-labelledby={`tab-${key}`}
                 className={clsx(styles.useCaseItem, isActive && styles.useCaseItemActive)}
                 aria-hidden={!isActive}
                 style={itemStyles}
@@ -95,25 +113,28 @@ export default function UseCases() {
                 <div className={styles.titleSection}>
                   <div className={styles.iconWrapper}>
                     <div className={styles.iconGlow} />
-                    <ItemIcon className={styles.icon} />
+                    {ItemIcon && <ItemIcon className={styles.icon} />}
                   </div>
                   <h3 className={styles.contentTitle}>
-                    <a href={item.link} className={styles.contentTitleLink}>
-                      {item.title}
+                    <a href={item?.link || '#'} className={styles.contentTitleLink}>
+                      {item?.title || 'Untitled Use Case'}
                     </a>
                     <div className={styles.titleUnderline} />
                   </h3>
                 </div>
 
-                {/* Image Section */}
+                {/* Image Section - Fixed alt text */}
                 <div className={clsx("group", styles.imageSectionWrapper)}>
                   <div className={styles.imageSection}>
                     <div className={styles.imageContainer}>
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className={styles.image}
-                      />
+                      {item?.image && (
+                        <img
+                          src={item.image}
+                          alt={`${item.title} use case illustration`}
+                          className={styles.image}
+                          loading="lazy"
+                        />
+                      )}
                       <div className={styles.scanVertical} />
                     </div>
                   </div>
@@ -122,36 +143,40 @@ export default function UseCases() {
                 {/* Detail Section */}
                 <div className={styles.detailSection}>
                   <p className={styles.contentDescription}>
-                    {item.description}
+                    {item?.description || 'No description available'}
                   </p>
 
-                  <div className={styles.featuresList}>
-                    {item.features.map((feature, idx) => (
-                      <div key={idx} className={styles.featureItem}>
-                        <div className={styles.checkIconWrapper}>
-                          <Check className={styles.checkIcon} />
+                  {item?.features && item.features.length > 0 && (
+                    <div className={styles.featuresList}>
+                      {item.features.map((feature, idx) => (
+                        <div key={idx} className={styles.featureItem}>
+                          <div className={styles.checkIconWrapper}>
+                            <Check className={styles.checkIcon} />
+                          </div>
+                          <span className={styles.featureText}>{feature}</span>
                         </div>
-                        <span className={styles.featureText}>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  )}
 
-                  <a href={item.link} className={styles.ctaButton}>
-                    <span>{useCasesHeaderData.learnMoreText}</span>
-                    <ArrowRight className={styles.ctaIcon} />
-                  </a>
+                  <CTAButton 
+                    href={item?.link || '#'}
+                    label={useCasesHeaderData?.learnMoreText || 'Learn More'}
+                    color="var(--active-color)"
+                    iconPosition="left"
+                  />
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* View All Button */}
-        <div className={styles.viewAllWrapper}>
-          <button className={styles.viewAllButton}>
-            <span>{useCasesHeaderData.viewAllText}</span>
-          </button>
-        </div>
+        {/* View All Button - Fixed with handler */}
+        <ViewAllButton 
+          label={useCasesHeaderData?.viewAllText || 'View All Use Cases'}
+          onClick={handleViewAll}
+          style={{ '--active-color': 'var(--ifm-color-primary)' }}
+        />
 
       </div>
     </section>
