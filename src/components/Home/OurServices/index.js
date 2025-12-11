@@ -40,11 +40,8 @@ export default function OurServices() {
       {/* Background Elements */}
       <div className={styles.gridPattern} />
       <div className={styles.diagonalPattern} />
-      <div className={clsx(styles.orb, styles.orb1)} />
-      <div className={clsx(styles.orb, styles.orb2)} />
-      <div className={clsx(styles.orb, styles.orb3)} />
-      <div className={clsx(styles.orb, styles.orb4)} />
-      <div className={styles.vignette} />
+      {/* Removed Orbs - Replaced with Light Theme Shapes */}
+
 
       <div className={styles.contentWrapper}>
         {/* Header */}

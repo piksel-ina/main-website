@@ -1,10 +1,9 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import styles from "./style.module.css";
-
 import Button from "../../Atoms/Button";
 
-const GlassCard = ({
+const CleanCard = ({
   icon: Icon,
   title,
   description,
@@ -13,34 +12,34 @@ const GlassCard = ({
   link,
 }) => {
   return (
-    <div className={styles.glassCard}>
-      <div className={styles.glassCard_content}>
-        <div className={styles.glassCard_icon}>
-          <Icon size={84} strokeWidth={0.5} />
+    <div className={styles.cleanCard}>
+      <div className={styles.cleanCard__content}>
+        <div className={styles.cleanCard__icon}>
+          <Icon size={48} strokeWidth={1.5} />
         </div>
-        <h3 className={styles.glassCard_title}>{title}</h3>
+        <h3 className={styles.cleanCard__title}>{title}</h3>
 
-        <p className={styles.glassCard_description}>{description}</p>
+        <p className={styles.cleanCard__description}>{description}</p>
 
         {/* CTA Button */}
-        <div className={styles.glassCard_cta}>
+        <div className={styles.cleanCard__cta}>
           <Button
             to={link}
-            variant="outline"
-            className={styles.glassCard_ctaPrimary}
+            variant="primary"
+            className={styles.cleanCard__ctaPrimary}
           >
             {buttonText}
           </Button>
           <Button
             to={link}
             variant="link"
-            className={styles.glassCard_ctaSecondary}
+            className={styles.cleanCard__ctaSecondary}
           >
             {buttonTextSecondary}
             <ArrowRight
               size={15}
-              strokeWidth={1.3}
-              className={styles.glassCard_ctaIcon}
+              strokeWidth={2}
+              className={styles.cleanCard__ctaIcon}
             />
           </Button>
         </div>
@@ -49,4 +48,4 @@ const GlassCard = ({
   );
 };
 
-export default GlassCard;
+export default CleanCard;

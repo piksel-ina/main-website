@@ -1,0 +1,14 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-100 600 C 200 550, 400 700, 600 650 C 800 600, 1000 750, 1500 700" stroke="rgba(0,0,0,0.03)" stroke-width="2" fill="none"/>
+<path d="M-100 650 C 200 600, 400 750, 600 700 C 800 650, 1000 800, 1500 750" stroke="rgba(0,0,0,0.03)" stroke-width="2" fill="none"/>
+<path d="M-100 550 C 200 500, 400 650, 600 600 C 800 550, 1000 700, 1500 650" stroke="rgba(0,0,0,0.03)" stroke-width="2" fill="none"/>
+<path d="M-100 400 C 300 350, 600 500, 900 450 C 1200 400, 1400 550, 1600 500" stroke="rgba(0,0,0,0.03)" stroke-width="2" fill="none"/>
+<path d="M-100 200 C 400 150, 700 300, 1100 250 C 1300 200, 1500 350, 1700 300" stroke="rgba(0,0,0,0.03)" stroke-width="2" fill="none"/>
+<circle cx="80%" cy="40%" r="300" fill="url(#grad1)" fill-opacity="0.03"/>
+<defs>
+<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+<stop offset="0%" style="stop-color:rgb(88, 101, 242);stop-opacity:1" />
+<stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+</radialGradient>
+</defs>
+</svg>

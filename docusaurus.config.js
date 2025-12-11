@@ -50,7 +50,7 @@ const config = {
 
   stylesheets: [
     {
-      href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=JetBrains+Mono:wght@400&display=swap",
       type: "text/css",
     },
   ],
@@ -77,7 +77,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: 'light',
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
@@ -106,7 +106,7 @@ const config = {
         hideOnScroll: true,
       },
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
             title: "Layanan",

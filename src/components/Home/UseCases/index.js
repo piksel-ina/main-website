@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import clsx from 'clsx';
+import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import { useCasesData, useCasesHeaderData } from "@site/src/data/useCasesData";
 import { 
   ArrowRight, 
@@ -30,11 +31,8 @@ export default function UseCases() {
 
   return (
     <section className={styles.section} style={dynamicStyles}>
-      {/* Background Effects */}
-      <div className={styles.gridBackground} />
-      <div className={clsx(styles.orb, styles.orb1)} />
-      <div className={clsx(styles.orb, styles.orb2)} />
-
+      <ShapeContainer variant="slanted" color="neutral" position="absolute" flip />
+      
       <div className="container">
         {/* Header */}
         <div className={styles.header}>

@@ -7,36 +7,21 @@
 }
 
 .navbarHomepage {
-  background-color: color-mix(
-    in srgb,
-    var(--ifm-color-black),
-    rgba(0, 0, 0, 20%)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-[data-theme="light"] .navbarHomepage {
-  --ifm-navbar-link-color: var(--ifm-color-white);
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
-  --ifm-navbar-brand-color: var(--ifm-color-white);
-}
-
-[data-theme="dark"] .navbarHomepage {
-  --ifm-navbar-link-color: var(--ifm-color-gray-100);
-  --ifm-navbar-link-hover-color: var(--ifm-color-white);
-  --ifm-navbar-brand-color: var(--ifm-color-white);
-}
-
-.navbarHomepage .navbar__brand:hover,
-.navbarHomepage .navbar__item:hover {
-  transform: translateY(-1px);
-  transition: transform 0.2s ease;
-}
-
-.navbarHomepage .navbar-sidebar {
-  /* background-color: var(--ifm-navbar-background-color); */
-  backdrop-filter: none;
+  /* Corporate Light: Solid white background with subtle border */
+  background-color: var(--ifm-navbar-background-color);
+  border-bottom: 1px solid var(--ifm-border-color);
+  backdrop-filter: none; /* Removed glassmorphism */
   -webkit-backdrop-filter: none;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+/* Ensure links use the correct vars defined in custom.css */
+.navbarHomepage .navbar__link {
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbarHomepage .navbar__link:hover,
+.navbarHomepage .navbar__link--active {
+  color: var(--ifm-navbar-link-hover-color);
 }

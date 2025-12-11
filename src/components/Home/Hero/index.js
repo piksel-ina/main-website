@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
+import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import { heroData } from "@site/src/data/heroData";
 
 const STATS = [
@@ -14,10 +15,8 @@ const STATS = [
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
-      <div className={styles.gridPattern} />
-      <div className={clsx(styles.orb, styles.orb1)} />
-      <div className={clsx(styles.orb, styles.orb2)} />
-      <div className={styles.scanlines} />
+      <ShapeContainer variant="shard" color="primary" position="absolute" />
+      <div className={styles.heroAmbientBg} />
       <div className={styles.imageCollage}>
         {heroData.images.map((item, idx) => {
           if (typeof item === 'object' && item.type === 'local') {

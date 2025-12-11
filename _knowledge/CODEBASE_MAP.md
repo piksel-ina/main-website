@@ -27,9 +27,11 @@
 │   │   │   └── ImageCard/     # MDX Image Card component
 │   │   ├── UI/                # Reusable UI components
 │   │   │   ├── Atoms/         # Basic building blocks
-│   │   │   │   └── Button/    # Semantic Link/Button wrapper
+│   │   │   ├── Atoms/         # Basic building blocks
+│   │   │   │   ├── Button/    # Semantic Link/Button wrapper
+│   │   │   │   └── ShapeContainer/ # Geometric background accents
 │   │   │   ├── Molecules/     # Composite components
-│   │   │   │   ├── GlassCard/ # Glassmorphism card
+│   │   │   │   ├── CleanCard/ # Corporate style card
 │   │   │   │   └── ModernCard/# Image overlay card
 │   │   │   └── Carousel/      # Generic carousel component
 │   ├── data/                  # Data primitives
@@ -57,7 +59,8 @@
 | **Hero** | Home | Hero section with image grid and stats. | None |
 | **Faq** | Home | FAQ section with accordion style, using `faqData`. | None |
 | **Button** | Atom | Wrapper for Docusaurus `<Link>` or `<button>` with standardized styles. | `to`, `variant`, `size`, `block`, `onClick` |
-| **GlassCard** | Molecule | Glassmorphism card with icon, title, description, and action buttons. | `icon`, `title`, `description`, `buttonText`, `link` |
+| **ShapeContainer** | Atom | Background accents using clip-path. | `variant`, `color`, `position` |
+| **CleanCard** | Molecule | Corporate card with hover lift, no glassmorphism. | `icon`, `title`, `description`, `buttonText`, `link` |
 | **ModernCard** | Molecule | Card with image overlay and hover effects. | `image`, `title`, `description`, `link` |
 | **Carousel** | UI | Generic responsive carousel with Swiper/Embla-like behavior. | `items`, `renderItem`, `itemsPerView` |
 | **DocCard** | Docs | Glass-styled card for docs navigation. | `title`, `description`, `to` |
@@ -81,7 +84,7 @@
     *   **URL:** https://staging.pik-sel.id
     *   **i18n:** `id` (default), `en`.
 *   **Theme Config:**
-    *   **Color Mode:** Forced **Dark Mode**.
+    *   **Color Mode:** Forced **Light Mode**.
     *   **Navbar:** Links to "Dokumentasi", "Penggunaan", "Layanan", "FAQ" (anchor links). Language dropdown enabled.
     *   **Sidebar:** Swizzled `DocSidebar` to include sticky footer.
     *   **Footer:** Swizzled to be hidden on Docs pages. Default 4-column layout for other pages.

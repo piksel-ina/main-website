@@ -1,553 +1,160 @@
 :root {
-  --ifm-color-primary: #41a6f9;
-  --ifm-color-primary-global: #41a6f9;
-  --ifm-color-primary-dark: #63b9fa;
-  --ifm-color-primary-darker: #87c7f9;
-  --ifm-color-primary-darkest: #bfe0fa;
-  --ifm-color-primary-light: #339af0;
-  --ifm-color-primary-lighter: #228be6;
-  --ifm-color-primary-lightest: #1c7ed6;
-  --ifm-color-complementary-dark: #fcb83a;
+  /* ========================================================================
+     1. COLOR SYSTEM (OKLCH -> IFM MAP)
+     ======================================================================== */
   
-  /* Use Case Colors */
-  --piksel-color-green: #10b981;
-  --piksel-color-blue: #3b82f6;
-  --piksel-color-amber: #f59e0b;
-  --piksel-color-cyan: #06b6d4;
-  --piksel-color-red: #ef4444;
-  --piksel-color-purple: #8b5cf6;
-  --piksel-color-brown: #ba7a3f;
+  /* Primary Brand: Deep Navy */
+  --ifm-color-primary: oklch(0.145 0.02 240);
+  --ifm-color-primary-dark: oklch(0.10 0.02 240);
+  --ifm-color-primary-darker: oklch(0.08 0.02 240);
+  --ifm-color-primary-darkest: oklch(0.05 0.02 240);
+  --ifm-color-primary-light: oklch(0.25 0.02 240);
+  --ifm-color-primary-lighter: oklch(0.35 0.02 240);
+  --ifm-color-primary-lightest: oklch(0.45 0.02 240);
 
-  --ifm-color-primary-alpha-10: color-mix(
-    in srgb,
-    var(--ifm-color-primary) 10%,
-    transparent
-  );
-  --ifm-color-primary-alpha-30: color-mix(
-    in srgb,
-    var(--ifm-color-primary) 30%,
-    transparent
-  );
-  --ifm-color-primary-alpha-50: color-mix(
-    in srgb,
-    var(--ifm-color-primary) 50%,
-    transparent
-  );
+  /* Neutrals & Backgrounds */
+  --ifm-background-color: oklch(1 0 0); /* Pure White */
+  --ifm-background-surface-color: oklch(0.985 0.002 240); /* Light Gray Surface */
+  --ifm-font-color-base: oklch(0.145 0.02 240); /* Deep Navy Text */
+  
+  /* Accents */
+  --color-accent-teal: oklch(0.55 0.18 195);
+  --color-accent-amber: oklch(0.7 0.16 70);
+  --color-accent-deep: oklch(0.5 0.2 270);
+  --color-bg-accent-subtle: oklch(0.985 0.002 240); /* Subtle shapes */
+  --gradient-hero-accent: linear-gradient(135deg, rgba(88, 101, 242, 0.08) 0%, rgba(200, 200, 255, 0.05) 50%, transparent 100%);
 
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Semantic Maps */
+  --ifm-color-success: var(--color-accent-teal);
+  --ifm-color-warning: var(--color-accent-amber);
+  --ifm-border-color: oklch(0.92 0.003 240);
+  --ifm-link-color: var(--ifm-color-primary);
 
-  --ifm-font-family-base: "Open Sans", -apple-system, "Roboto", sans-serif;
-  /* Font weights available in Open Sans */
-  --ifm-font-weight-light: 300;
-  --ifm-font-weight-normal: 400;
-  --ifm-font-weight-semibold: 500;
-  --ifm-font-weight-bold: 600;
+  /* Cards */
+  --ifm-card-background-color: oklch(1 0 0);
+  --ifm-card-border-radius: 8px;
+  --ifm-card-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', -apple-system, system-ui, sans-serif;
+  --font-family-heading: 'Outfit', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Geist Mono', monospace;
+
+  /* ========================================================================
+     2. GLOBAL OVERRIDES
+     ======================================================================== */
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-shadow: none; /* We will use border instead */
+  
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-footer-color: var(--ifm-font-color-base);
 }
 
-h1,
-h2,
-h3,
-.markdown h1,
-.markdown h2,
-.markdown h3 {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
+/* Base Typo */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ifm-color-primary);
 }
 
-/* Global Dark Mode Background override */
-html {
-  scroll-behavior: smooth;
+.markdown h1 { font-size: clamp(2rem, 5vw, 3rem); }
+.markdown h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+
+/* ========================================================================
+     3. UTILITY CLASSES (BEM)
+     ======================================================================== */
+
+/* Content Container Constraints */
+.container {
+  max-width: 1440px; /* Large screen support */
 }
 
-html[data-theme='dark'] {
-  --ifm-background-color: #0a0e1a;
-  background-color: var(--ifm-background-color);
+/* Background Shapes (Clip Path) */
+.bg-shape {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* HEADER */
-.hero {
-  background-color: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
+.bg-shape--slanted-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.hero--primary {
-  padding: 0 clamp(0.5rem, 3rem, 3.5rem);
+.bg-shape--cut-corner-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
 }
 
-.hero__title {
-  font-size: clamp(2rem, 6vw, 4.5rem) !important;
-  line-height: 1.2;
-  white-space: nowrap;
-
-  @media (max-width: 500px) {
-    white-space: normal;
-  }
+.bg-shape--shard {
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
 }
 
-.hero__subtitle {
-  font-size: clamp(1rem, 2.2vw, 1.4rem) !important;
-  margin-top: clamp(0.65rem, 1.5vw, 1rem);
-  max-width: min(40rem, 90vw);
-  line-height: 1.5;
+/* Utility for Image Containers */
+.image-container--clipped {
+  border-radius: 12px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 0 100%);
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
 
-.hero--primary .button {
-  font-size: clamp(1rem, 2vw, 1.2rem) !important;
-  margin-top: clamp(1rem, 3vw, 2rem);
-  background-color: var(--ifm-color-primary-light);
-  color: var(--ifm-color-white);
-  border: none;
-}
+/* ========================================================================
+     4. COMPONENT OVERRIDES
+     ======================================================================== */
 
-.hero--primary > .button .button--secondary {
-  padding-right: clamp(1.5rem, 2.5vw, 2rem);
-  padding-left: clamp(1.5rem, 2.5vw, 2rem);
-}
-
-/* SECTION */
-.section__header {
-  display: flex;
-  justify-content: center;
-  margin-top: clamp(2rem, 8vh, 4rem);
-}
-
-.section__title {
-  font-size: clamp(2rem, 3vw, 2.5rem) !important;
-  font-weight: var(--ifm-font-weight-bold);
-  text-align: center;
-}
-
-.section__title--primary-darkest {
-  color: var(--ifm-color-primary-darkest);
-}
-
-.section__title--white {
-  color: var(--ifm-color-white);
-}
-
-.section__subtitle {
-  font-size: clamp(1rem, 2vw, 1.3rem) !important;
-  text-align: center;
-  margin-top: clamp(0.5rem, 1vw, 1rem);
-}
-
-.section__subtitle--bg-color {
-  color: var(--ifm-color-background-color);
-}
-
-.section__subtitle--white-less {
-  color: #dde0e1;
-}
-
-/* NAVBAR */
+/* Navbar */
 .navbar {
-  position: sticky !important;
-  top: 0;
-  z-index: 100;
-  background: var(--ifm-background-color) !important;
+  border-bottom: 1px solid var(--ifm-border-color) !important;
   box-shadow: none !important;
-  border-bottom: none !important;
-  transition: all 0.3s ease;
 }
 
-/* Navbar Centering & Spacing */
-.navbar {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-/* Dim white color for all links by default */
-.navbar__item,
 .navbar__link {
-  color: color-mix(in srgb, var(--ifm-background-color), #fff 80%) !important;
   font-weight: 500;
-  transition: color 0.3s ease;
-  margin: 0 1.2rem;
+  color: var(--ifm-color-primary-light);
 }
 
-/* Highlight on hover */
+.navbar__link--active,
 .navbar__link:hover {
-  color: #ffffff !important;
-}
-
-.navbar__link--active {
+  color: var(--ifm-color-primary);
   background: transparent !important;
 }
 
-.navbar--homepage .menu__link--active {
-  color: color-mix(in srgb, var(--ifm-background-color), #fff 80%) !important;
-  background-color: transparent !important;
-  border-right: none !important;
-}
-
-/* Absolute Center the Main Menu */
-@media (min-width: 997px) {
-  .navbar__inner {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    width: 100%;
-  }
-
-  /* Left Column: Logo */
-  .navbar__items--left {
-    justify-self: start;
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
-  /* Center Column: Menu Items */
-  .navbar__items--center {
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    width: auto;
-  }
-
-  /* Right Column: Locale & Extras */
-  .navbar__items--right {
-    justify-self: end;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Reset margins for inner brand to avoid double spacing */
-  .navbar__brand {
-    margin-right: 1rem;
-  }
-}
-
-/* Navbar link underline effect */
-.navbar__link:not(.dropdown__menu .navbar__link) {
-  position: relative;
-}
-
-.navbar__link:not(.dropdown__menu .navbar__link)::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #1e40af, #3b82f6);
-  transition: width 0.3s ease;
-}
-
-.navbar__link:not(.dropdown__menu .navbar__link):not([aria-haspopup="true"]):hover::after {
-  width: 100%;
-}
-
-/* Responsiveness */
-@media (max-width: 996px) {
-  .col--3 {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
-
-  .container {
-    padding: 0 1.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .col--3 {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-  }
-}
-
-/* Mobile Sidebar Fix */
-.navbar-sidebar {
-  background-color: var(--ifm-background-color) !important;
-  z-index: 1000 !important;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
-}
-
-.navbar-sidebar__item {
-  background-color: transparent !important;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.menu__link {
-  color: var(--ifm-menu-color);
-}
-
-/* Admonitions - Glassmorphism */
-.alert {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  border-radius: var(--ifm-alert-border-radius);
-}
-
-.alert--info {
-  background-color: rgba(var(--ifm-color-info-rgb), 0.1);
-  border-left: 4px solid var(--ifm-color-info);
-}
-
-.alert--success {
-  background-color: rgba(var(--ifm-color-success-rgb), 0.1);
-  border-left: 4px solid var(--ifm-color-success);
-}
-
-.alert--warning {
-  background-color: rgba(var(--ifm-color-warning-rgb), 0.1);
-  border-left: 4px solid var(--ifm-color-warning);
-}
-
-/* FOOTER - Digital Earth Alignment */
+/* Footer */
 .footer {
-  background-color: var(--ifm-background-color);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;  
-}
-
-/* Add a subtle glow/gradient at the top */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    90deg, 
-    transparent 0%, 
-    var(--ifm-color-primary) 50%, 
-    transparent 100%
-  );
-  opacity: 0.5;
+  border-top: 1px solid var(--ifm-border-color);
 }
 
 .footer__title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  color: var(--ifm-color-white);
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  font-family: var(--font-family-heading);
 }
 
-/* Footer Links - Passive to Active Motion */
 .footer__link-item {
-  color: rgba(255, 255, 255, 0.6) !important;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-  display: inline-block;
-  position: relative;
+  color: var(--ifm-color-primary-light);
 }
 
 .footer__link-item:hover {
-  color: var(--ifm-color-primary-lightest) !important;
-  text-decoration: none;
-  text-shadow: 0 0 8px var(--ifm-color-primary-alpha-50);
+  color: var(--color-accent-teal);
 }
 
-/* Copyright Section */
-.footer__copyright-container {
-  text-align: left;
-  margin-top: clamp(2rem, 5vw, 4rem);
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+/* Buttons (Global generic) */
+.button.button--primary {
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
 }
 
-.footer__copyright-text {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
+.button.button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
-.footer__address {
-  font-size: 0.85rem;
-  margin-top: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
+/* Homepage Hero Specifics (Legacy class support for migration) */
+.hero__title {
+  color: var(--ifm-color-primary);
 }
 
-@media (max-width: 996px) {
-  .footer {
-    text-align: left;
-  }
-  
-  .footer .row .col {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
-}
-
-@media (max-width: 500px) {
-  .footer {
-    padding-left: .1rem;
-    padding-right: 2rem;
-  }
-}
-
-
-/* --- DOCS PAGE STYLING --- */
-
-/* Hide Global Footer on Docs Pages - Handle by src/theme/Footer/index.js */
-
-/* MDX Styling - Digital Earth Vibe */
-.markdown h1 {
-  font-family: 'Oswald', sans-serif;
-  background: linear-gradient(90deg, #fff, #41a6f9);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1.5rem;
-}
-
-.markdown h2 {
-  font-family: 'Oswald', sans-serif;
-  border-bottom: 1px solid rgba(65, 166, 249, 0.3);
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
-  color: #e2e8f0;
-}
-
-.markdown p {
-  font-family: 'Open Sans', sans-serif;
-  color: #e2e8f0;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-.markdown a {
-  color: #41a6f9;
-  text-decoration: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.markdown a:hover {
-  color: #63b9fa;
-  text-shadow: 0 0 8px rgba(65, 166, 249, 0.4);
-}
-
-.markdown ul {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-.markdown ul li {
-  position: relative;
-  margin-bottom: 0.5rem;
-  color: #e2e8f0;
-}
-
-.markdown ul li::before {
-  content: '';
-  position: absolute;
-  left: -1.2rem;
-  top: 0.6rem;
-  width: 6px;
-  height: 6px;
-  background: #41a6f9;
-  box-shadow: 0 0 5px #41a6f9;
-  transform: rotate(45deg);
-}
-
-.markdown blockquote {
-  background: rgba(65, 166, 249, 0.05);
-  border-left: 4px solid #41a6f9;
-  border-radius: 0 8px 8px 0;
-  padding: 1rem 1.5rem;
-  color: #cbd5e0;
-  margin: 1.5rem 0;
-}
-
-.markdown pre {
-  background: #0d1117;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
-
-.markdown table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-}
-
-.markdown th {
-  background: rgba(65, 166, 249, 0.1);
-  color: #fff;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.5px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.8rem;
-}
-
-.markdown td {
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 0.8rem;
-  color: #cbd5e0;
-}
-
-.markdown tr:hover td {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.markdown hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #41a6f9, transparent);
-  margin: 3rem 0;
-  opacity: 0.5;
-}
-
-.markdown img {
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* --- SIDEBAR & TOC ANIMATIONS --- */
-
-/* Sidebar Items */
-.menu__link {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.menu__link:hover {
-  background-color: rgba(65, 166, 249, 0.1);
-  color: var(--ifm-color-primary-light); 
-}
-
-.menu__link--active {
-  background-color: rgba(65, 166, 249, 0.15);
-  border-right: 3px solid var(--ifm-color-primary);
-  color: var(--ifm-color-white) !important;
-}
-
-.menu_list .menu_list {
-  font-weight: 200;
-}
-
-/* Table of Contents */
-.table-of-contents__link {
-  transition: all 0.3s ease;
-  padding-left: 0.5rem;
-  border-left: 2px solid transparent;
-}
-
-.table-of-contents__link:hover {
+.hero__subtitle {
   color: var(--ifm-color-primary-light);
-  padding-left: 0.8rem;
-  text-decoration: none;
-}
-
-.table-of-contents__link--active {
-  color: var(--ifm-color-primary-lightest) !important;
-  border-left-color: var(--ifm-color-primary);
-  padding-left: 0.8rem;
-  background: linear-gradient(90deg, rgba(65, 166, 249, 0.1), transparent);
 }
