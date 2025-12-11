@@ -15,37 +15,10 @@
     "message": "Contact Us",
     "description": "The title of the footer links column with title=Kontak Kami in the footer"
   },
-  "link.item.label.Piksel Map": {
-    "message": "Piksel Map",
-    "description": "The label of footer link with label=Piksel Map linking to /map"
-  },
-  "link.item.label.Piksel Sandbox": {
-    "message": "Piksel Sandbox",
-    "description": "The label of footer link with label=Piksel Sandbox linking to /sandbox"
-  },
-  "link.item.label.Piksel Data API": {
-    "message": "Piksel Data API",
-    "description": "The label of footer link with label=Piksel Data API linking to /api"
-  },
-  "link.item.label.Piksel Workflows": {
-    "message": "Piksel Workflows",
-    "description": "The label of footer link with label=Piksel Workflows linking to /workflows"
-  },
-  "link.item.label.Environment": {
-    "message": "Environment",
-    "description": "The label of footer link with label=Environment linking to /environment"
-  },
-  "link.item.label.Technology": {
-    "message": "Technology",
-    "description": "The label of footer link with label=Technology linking to /technology"
-  },
-  "link.item.label.Research": {
-    "message": "Research",
-    "description": "The label of footer link with label=Research linking to /research"
-  },
+
   "link.item.label.Documentation": {
     "message": "Documentation",
-    "description": "The label of footer link with label=Documentation linking to /docs"
+    "description": "The label of footer link with label=Documentation linking to /docs/about/intro"
   },
   "link.item.label.API Reference": {
     "message": "API Reference",
@@ -74,5 +47,53 @@
   "copyright": {
     "message": "\n    <div class=\"footer__copyright-container\">\n      <div class=\"footer__copyright-text\">Copyright © 2025 Piksel Indonesia - Geospatial Information Agency (BIG)</div>\n      <div class=\"footer__address\">\n        Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>\n        Tel: 021-8752062 ext.3608/3611/3103\n      </div>\n    </div>\n  ",
     "description": "The footer copyright"
+  },
+  "link.item.label.Jelajah Data": {
+    "message": "Jelajah Data",
+    "description": "The label of footer link with label=Jelajah Data linking to /docs/services/explorer"
+  },
+  "link.item.label.Sandbox Analisis": {
+    "message": "Sandbox Analisis",
+    "description": "The label of footer link with label=Sandbox Analisis linking to /docs/services/sandbox"
+  },
+  "link.item.label.Peta Interaktif": {
+    "message": "Peta Interaktif",
+    "description": "The label of footer link with label=Peta Interaktif linking to /docs/services/maps"
+  },
+  "link.item.label.Layanan Web": {
+    "message": "Layanan Web",
+    "description": "The label of footer link with label=Layanan Web linking to /docs/services/web-services"
+  },
+  "link.item.label.Komputasi Awan": {
+    "message": "Komputasi Awan",
+    "description": "The label of footer link with label=Komputasi Awan linking to /docs/services/cloud-computing"
+  },
+  "link.item.label.Dukungan Teknis": {
+    "message": "Dukungan Teknis",
+    "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support"
+  },
+  "link.item.label.Pertanian": {
+    "message": "Pertanian",
+    "description": "The label of footer link with label=Pertanian linking to /docs/usecase/agriculture"
+  },
+  "link.item.label.Perkotaan": {
+    "message": "Perkotaan",
+    "description": "The label of footer link with label=Perkotaan linking to /docs/usecase/urban"
+  },
+  "link.item.label.Kehutanan": {
+    "message": "Kehutanan",
+    "description": "The label of footer link with label=Kehutanan linking to /docs/usecase/forestry"
+  },
+  "link.item.label.Pesisir": {
+    "message": "Pesisir",
+    "description": "The label of footer link with label=Pesisir linking to /docs/usecase/coastal"
+  },
+  "link.item.label.Bencana": {
+    "message": "Bencana",
+    "description": "The label of footer link with label=Bencana linking to /docs/usecase/disaster"
+  },
+  "link.item.label.Tambang": {
+    "message": "Tambang",
+    "description": "The label of footer link with label=Tambang linking to /docs/usecase/mining"
   }
 }

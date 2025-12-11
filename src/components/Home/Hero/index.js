@@ -5,13 +5,6 @@ import clsx from 'clsx';
 import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import { heroData } from "@site/src/data/heroData";
 
-const STATS = [
-  { number: '50TB+', label: 'Data Processed Daily' },
-  { number: '15min', label: 'Update Frequency' },
-  { number: '99.8%', label: 'Accuracy Rate' },
-  { number: '180+', label: 'Countries Covered' },
-];
-
 export default function Hero() {
   return (
     <section className={styles.heroSection}>

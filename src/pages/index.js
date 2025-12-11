@@ -9,6 +9,7 @@ import Hero from "../components/Home/Hero";
 import UseCases from "../components/Home/UseCases";
 import OurServices from "../components/Home/OurServices";
 import Faq from "../components/Home/Faq";
+import CallToAction from "../components/Home/CallToAction";
 
 // HomepageHeader component removed as it is unused
 
@@ -31,12 +32,10 @@ export default function Home() {
 
       <Hero />
       <main>
-        <span id="use-cases" style={{ display: 'block', position: 'relative', top: '-80px', visibility: 'hidden' }} />
         <UseCases />
-        <span id="services" style={{ display: 'block', position: 'relative', top: '-80px', visibility: 'hidden' }} />
         <OurServices />
-        <span id="faq" style={{ display: 'block', position: 'relative', top: '-80px', visibility: 'hidden' }} />
         <Faq />
+        <CallToAction />
       </main>
     </Layout>
   );

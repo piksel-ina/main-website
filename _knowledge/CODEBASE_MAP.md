@@ -9,17 +9,32 @@
 │   │   └── main.md            # Category landing page
 │   ├── usecase/               # Use Cases section
 │   │   ├── intro.md
-│   │   └── main.md            # Category landing page
+│   │   ├── main.md            # Category landing page
+│   │   ├── agriculture.md     # Agriculture use case
+│   │   ├── urban.md           # Urban use case
+│   │   ├── forestry.md        # Forestry use case
+│   │   ├── disaster.md        # Disaster use case
+│   │   ├── mining.md          # Mining use case
+│   │   ├── coastal.md         # Coastal use case
 │   ├── services/              # Services section
 │   │   ├── intro.md
-│   │   └── main.md            # Category landing page
+│   │   ├── main.md            # Category landing page
+│   │   ├── explorer.md        # Data Explorer service
+│   │   ├── sandbox.md         # Piksel Sandbox service
+│   │   ├── maps.md            # Interactive Maps service
+│   │   ├── web-services.md    # Web Services
+│   │   ├── cloud-computing.md # Cloud Computing
+│   │   ├── support.md         # Technical Support
+│   ├── api.md                 # API Reference (root)
+│   └── tutorials.md           # Tutorials (root)
 ├── src/                       # Source code
 │   ├── components/            # React components
 │   │   ├── Home/              # Page-specific components
 │   │   │   ├── UseCases/      # New Use Cases section
 │   │   │   ├── OurServices/   # New Our Services section
 │   │   │   ├── Hero/          # Hero section
-│   │   │   └── Faq/           # FAQ section
+│   │   │   ├── Faq/           # FAQ section
+│   │   │   └── CallToAction/  # Final CTA section
 │   │   ├── Docs/              # Documentation components (New)
 │   │   │   ├── DocCard/       # Navigation card
 │   │   │   ├── DocSteps/      # Step-by-step guide
@@ -38,7 +53,8 @@
 │   │   ├── heroData.js        # Data for Hero section
 │   │   ├── useCasesData.js    # Data for Use Cases section
 │   │   ├── servicesData.js    # Data for Services section
-│   │   └── faqData.js         # Data for FAQ section
+│   │   ├── faqData.js         # Data for FAQ section
+│   │   └── ctaData.js         # Data for Final CTA section
 │   ├── css/                   # Custom CSS
 │   │   └── custom.css         # Global styles
 │   ├── pages/                 # Pages (e.g., index.js)
@@ -58,6 +74,7 @@
 | **OurServices** | Home | Animated Services section with timeline layout. | None |
 | **Hero** | Home | Hero section with image grid and stats. | None |
 | **Faq** | Home | FAQ section with accordion style, using `faqData`. | None |
+| **CallToAction** | Home | Final CTA section with shape accents and data from `ctaData`. | None |
 | **Button** | Atom | Wrapper for Docusaurus `<Link>` or `<button>` with standardized styles. | `to`, `variant`, `size`, `block`, `onClick` |
 | **ShapeContainer** | Atom | Background accents using clip-path. | `variant`, `color`, `position` |
 | **CleanCard** | Molecule | Corporate card with hover lift, no glassmorphism. | `icon`, `title`, `description`, `buttonText`, `link` |

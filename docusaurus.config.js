@@ -112,20 +112,28 @@ const config = {
             title: "Layanan",
             items: [
               {
-                label: "Piksel Map",
-                to: "/map",
+                label: "Jelajah Data",
+                to: "/docs/services/explorer",
               },
               {
-                label: "Piksel Sandbox",
-                to: "/sandbox",
+                label: "Sandbox Analisis",
+                to: "/docs/services/sandbox",
               },
               {
-                label: "Piksel Data API",
-                to: "/api",
+                label: "Peta Interaktif",
+                to: "/docs/services/maps",
               },
               {
-                label: "Piksel Workflows",
-                to: "/workflows",
+                label: "Layanan Web",
+                to: "/docs/services/web-services",
+              },
+              {
+                label: "Komputasi Awan",
+                to: "/docs/services/cloud-computing",
+              },
+              {
+                label: "Dukungan Teknis",
+                to: "/docs/services/support",
               },
             ],
           },
@@ -133,16 +141,28 @@ const config = {
             title: "Contoh Pemanfaatan",
             items: [
               {
-                label: "Environment",
-                to: "/environment",
+                label: "Pertanian",
+                to: "/docs/usecase/agriculture",
               },
               {
-                label: "Technology",
-                to: "/technology",
+                label: "Perkotaan",
+                to: "/docs/usecase/urban",
               },
               {
-                label: "Research",
-                to: "/research",
+                label: "Kehutanan",
+                to: "/docs/usecase/forestry",
+              },
+              {
+                label: "Pesisir",
+                to: "/docs/usecase/coastal",
+              },
+              {
+                label: "Bencana",
+                to: "/docs/usecase/disaster",
+              },
+              {
+                label: "Tambang",
+                to: "/docs/usecase/mining",
               },
             ],
           },
@@ -151,7 +171,7 @@ const config = {
             items: [
               {
                 label: "Documentation",
-                to: "/docs",
+                to: "/docs/about/intro",
               },
               {
                 label: "API Reference",

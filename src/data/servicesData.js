@@ -17,7 +17,7 @@ export const servicesData = [
     ],
     buttonText: translate({ id: "ourServices.explorer.btn", message: "Mulai Eksplorasi" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
-    link: "/explorer",
+    link: "/docs/services/explorer",
     color: "cyan",
   },
   {
@@ -35,7 +35,7 @@ export const servicesData = [
     ],
     buttonText: translate({ id: "ourServices.sandbox.btn", message: "Mulai Belajar" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
-    link: "/sandbox",
+    link: "/docs/services/sandbox",
     color: "purple",
   },
   {
@@ -53,7 +53,7 @@ export const servicesData = [
     ],
     buttonText: translate({ id: "ourServices.maps.btn", message: "Buka Peta" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
-    link: "/maps",
+    link: "/docs/services/maps",
     color: "emerald",
   },
   {
@@ -71,7 +71,7 @@ export const servicesData = [
     ],
     buttonText: translate({ id: "ourServices.webservices.btn", message: "Lihat Dokumentasi" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
-    link: "/docs/api-integration",
+    link: "/docs/services/web-services",
     color: "blue",
   },
   {
@@ -90,7 +90,7 @@ export const servicesData = [
     ],
     buttonText: translate({ id: "ourServices.production.btn", message: "Hubungi Kami" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
-    link: "/contact",
+    link: "/docs/services/cloud-computing",
     color: "amber",
   },
   {
@@ -108,7 +108,7 @@ export const servicesData = [
     ],
     buttonText: translate({ id: "ourServices.support.btn", message: "Hubungi Support" }),
     secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
-    link: "/support",
+    link: "/docs/services/support",
     color: "red",
   },
 ];

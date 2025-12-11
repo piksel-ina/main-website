@@ -6,6 +6,7 @@
   position: relative;
   background-color: var(--ifm-background-color);
   padding-top: 10rem;
+  scroll-margin-top: 80px;
   overflow: hidden;
   max-width: 100%;
   margin-top: -16rem;

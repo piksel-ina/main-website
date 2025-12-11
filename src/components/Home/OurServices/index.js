@@ -43,7 +43,7 @@ const colorMap = {
 
 export default function OurServices() {
   return (
-    <section className={styles.sectionContainer}>
+    <section id="services" className={styles.sectionContainer}>
       {/* Background Elements */}
       <div className={styles.gridPattern} />
       <div className={styles.diagonalPattern} />
@@ -195,7 +195,7 @@ export default function OurServices() {
         </div>
         
         <ViewAllButton
-          to="/services"
+          to="/docs/services/main"
           label={<Translate id="ourServices.viewAll">Lihat Semua Layanan</Translate>}
         />
       </div>

@@ -640,5 +640,39 @@
   },
   "homepage.faq.a5": {
     "message": "Our platform indexes new data daily. Satellites themselves pass over Indonesian territory every day but at different locations following their orbit paths. For a specific location, Sentinel-2 will return every 5 days and Sentinel-1 every 6-12 days."
+  },
+  "homepage.cta.title": {
+    "message": "Siap Menjelajahi Indonesia Secara Digital?",
+    "description": "Title for the final CTA section"
+  },
+  "homepage.cta.description": {
+    "message": "Hubungi kami untuk demonstrasi langsung atau pelajari lebih lanjut melalui dokumentasi teknis kami.",
+    "description": "Description for the final CTA section"
+  },
+  "homepage.cta.button.primary": {
+    "message": "Hubungi Kami",
+    "description": "Label for the primary CTA button"
+  },
+  "homepage.cta.button.secondary": {
+    "message": "Baca Dokumentasi",
+    "description": "Label for the secondary CTA button"
+  },
+  "ourServices.support.description": {
+    "message": "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar."
+  },
+  "ourServices.support.f1": {
+    "message": "Konsultasi arsitektur sistem"
+  },
+  "ourServices.support.f2": {
+    "message": "Pemecahan masalah prioritas"
+  },
+  "ourServices.support.f3": {
+    "message": "Pelatihan dan workshop tim"
+  },
+  "ourServices.support.btn": {
+    "message": "Hubungi Support"
+  },
+  "ourServices.viewAll": {
+    "message": "Lihat Semua Layanan"
   }
 }

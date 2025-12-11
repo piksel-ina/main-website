@@ -2,10 +2,7 @@ import React, { useState, useMemo } from 'react';
 import clsx from 'clsx';
 import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import { useCasesData, useCasesHeaderData } from "@site/src/data/useCasesData";
-import { 
-  Check,
-  ChevronRight 
-} from 'lucide-react';
+import { Check } from 'lucide-react';
 import ViewAllButton from '../../UI/Atoms/ViewAllButton';
 import CTAButton from '../../UI/Atoms/CTAButton';
 import styles from './styles.module.css';
@@ -174,7 +171,7 @@ export default function UseCases() {
         {/* View All Button - Fixed with handler */}
         <ViewAllButton 
           label={useCasesHeaderData?.viewAllText || 'View All Use Cases'}
-          onClick={handleViewAll}
+          to="/docs/usecase/main"
           style={{ '--active-color': 'var(--ifm-color-primary)' }}
         />
 

@@ -39,7 +39,7 @@ export default function Faq() {
   };
 
   return (
-    <section className={styles.section}>
+    <section id="faq" className={styles.section}>
       <div className={styles.container}>
         {/* Header Section */}
         <div className={styles.header}>

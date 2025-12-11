@@ -22,7 +22,7 @@ export const heroData = {
     message: "Pelajari Selengkapnya",
     description: "The button text to read documentation",
   }),
-  buttonLink: "/docs/penggunaan/intro",
+  buttonLink: "/docs/usecase/intro",
   stats: [
     {
       number: translate({
