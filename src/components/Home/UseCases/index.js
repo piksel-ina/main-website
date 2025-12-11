@@ -20,7 +20,7 @@ export default function UseCases() {
 
   if (!currentCase) return null;
 
-  const IconComponent = currentCase.icon;
+
   const color = currentCase.color;
   const glowColor = currentCase.glowColor;
 
@@ -30,7 +30,7 @@ export default function UseCases() {
   };
 
   return (
-    <section className={styles.section} style={dynamicStyles}>
+    <section id="use-cases" className={styles.section} style={dynamicStyles}>
       <ShapeContainer variant="slanted" color="neutral" position="absolute" flip />
       
       <div className="container">
@@ -72,59 +72,78 @@ export default function UseCases() {
           </div>
         </div>
 
-        {/* Content Area */}
+        {/* Content Area (Stacked Grid) */}
         <div className={styles.contentGrid}>
-          
-          {/* Title Section */}
-          <div className={styles.titleSection}>
-            <div className={styles.iconWrapper}>
-              <div className={styles.iconGlow} />
-              <IconComponent className={styles.icon} />
-            </div>
-            <h3 className={styles.contentTitle}>
-              {currentCase.title}
-              <div className={styles.titleUnderline} />
-            </h3>
-          </div>
+          {useCaseKeys.map((key) => {
+            const item = useCasesData[key];
+            const isActive = activeTab === key;
+            const ItemIcon = item.icon;
 
-          {/* Image Section */}
-          <div className={clsx("group", styles.imageSectionWrapper)}>
-            <div className={styles.imageSection}>
-              <div className={styles.imageContainer}>
-                <img
-                  key={currentCase.image}
-                  src={currentCase.image}
-                  alt={currentCase.title}
-                  className={styles.image}
-                />
-                <div className={styles.scanVertical} />
-              </div>
-            </div>
-          </div>
+            const itemStyles = {
+              '--active-color': item.color,
+              '--active-glow': item.glowColor,
+            };
 
-          {/* Detail Section */}
-          <div className={styles.detailSection}>
-            <p className={styles.contentDescription}>
-              {currentCase.description}
-            </p>
-
-            <div className={styles.featuresList}>
-              {currentCase.features.map((feature, idx) => (
-                <div key={idx} className={styles.featureItem}>
-                  <div className={styles.checkIconWrapper}>
-                    <Check className={styles.checkIcon} />
+            return (
+              <div 
+                key={key}
+                className={clsx(styles.useCaseItem, isActive && styles.useCaseItemActive)}
+                aria-hidden={!isActive}
+                style={itemStyles}
+              >
+                {/* Title Section */}
+                <div className={styles.titleSection}>
+                  <div className={styles.iconWrapper}>
+                    <div className={styles.iconGlow} />
+                    <ItemIcon className={styles.icon} />
                   </div>
-                  <span className={styles.featureText}>{feature}</span>
+                  <h3 className={styles.contentTitle}>
+                    <a href={item.link} className={styles.contentTitleLink}>
+                      {item.title}
+                    </a>
+                    <div className={styles.titleUnderline} />
+                  </h3>
                 </div>
-              ))}
-            </div>
 
-            <button className={styles.ctaButton}>
-              <span>{useCasesHeaderData.learnMoreText}</span>
-              <ArrowRight className={styles.ctaIcon} />
-            </button>
-          </div>
+                {/* Image Section */}
+                <div className={clsx("group", styles.imageSectionWrapper)}>
+                  <div className={styles.imageSection}>
+                    <div className={styles.imageContainer}>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className={styles.image}
+                      />
+                      <div className={styles.scanVertical} />
+                    </div>
+                  </div>
+                </div>
 
+                {/* Detail Section */}
+                <div className={styles.detailSection}>
+                  <p className={styles.contentDescription}>
+                    {item.description}
+                  </p>
+
+                  <div className={styles.featuresList}>
+                    {item.features.map((feature, idx) => (
+                      <div key={idx} className={styles.featureItem}>
+                        <div className={styles.checkIconWrapper}>
+                          <Check className={styles.checkIcon} />
+                        </div>
+                        <span className={styles.featureText}>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a href={item.link} className={styles.ctaButton}>
+                    <span>{useCasesHeaderData.learnMoreText}</span>
+                    <ArrowRight className={styles.ctaIcon} />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* View All Button */}

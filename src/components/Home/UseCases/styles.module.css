@@ -24,7 +24,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.64rem;
-  font-size: 1.12rem;
+  font-size: 1.4rem;
   margin-bottom: 1.28rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -64,7 +64,7 @@
   border-bottom: 1px solid var(--ifm-border-color);
   position: relative;
   padding: 0 1.28rem;
-  max-width: 80rem;
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,7 +72,7 @@
 .tabs {
   display: flex;
   justify-content: center;
-  gap: 3.2rem;
+  gap: 4.2rem;
   width: 100%;
   position: relative;
 }
@@ -132,9 +132,20 @@
 }
 
 /* ============================================
-   CONTENT GRID
+   CONTENT STACK (New Layout)
    ============================================ */
 .contentGrid {
+  display: grid;
+  grid-template-areas: "stack";
+  max-width: 90rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  padding: 0 1.28rem;
+}
+
+.useCaseItem {
+  grid-area: stack;
   display: grid;
   grid-template-columns: 20.5rem 1fr;
   grid-template-areas: 
@@ -142,25 +153,26 @@
     "image details";
   gap: 0 5.12rem;
   align-items: stretch;
-  padding: 0 1.28rem;
-  max-width: 83.2rem;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-out;
+  z-index: 0;
+}
+
+.useCaseItemActive {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
 }
 
 @media (max-width: 996px) {
-  .contentGrid {
+  .useCaseItem {
     grid-template-columns: 1fr;
     grid-template-areas: 
       "title"
       "image"
       "details";
     gap: 2.56rem 0;
-  }
-  
-  .titleSection, .detailSection {
-    text-align: left;
   }
 }
 
@@ -186,14 +198,9 @@
 }
 
 .image {
-  /* width: auto; */
   min-height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
-}
-
-.imageContainer:hover .image {
-  transform: scale(1.05);
 }
 
 /* Detail Side */
@@ -211,8 +218,9 @@
 }
 
 .icon {
-  width: 2.56rem;
-  height: 2.56rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  stroke-width: 1.6;
 }
 
 .contentTitle {
@@ -222,12 +230,25 @@
   color: var(--ifm-color-primary);
 }
 
+/* H3 Link */
+.contentTitleLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contentTitleLink:hover {
+  color: var(--active-color);
+}
+
 .detailSection {
   grid-area: details;
+  display: flex;
+  flex-direction: column;
 }
 
 .contentDescription {
-  font-size: 1.34rem;
+  font-size: 1.4rem;
   max-width: 95%;
   line-height: 1.7;
   color: var(--ifm-color-primary);
@@ -240,11 +261,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.28rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.4rem;
 }
 
 .featureItem {
   display: flex;
+  font-size: 1.4rem;
   align-items: center;
   gap: 0.96rem;
 }
@@ -264,20 +286,20 @@
 .checkIcon {
   width: 1.28rem;
   height: 1.28rem;
-  stroke-width: 3;
+  stroke-width: 2.4;
 }
 
 .featureText {
-  font-weight: 500;
   color: var(--ifm-color-primary);
 }
 
 /* CTA */
 .ctaButton {
   display: inline-flex;
+  font-size: 1.2rem;
   align-items: center;
   gap: 0.64rem;
-  padding: 0.96rem 1.92rem;
+  padding: 0.8em 1.6em;
   background-color: var(--active-color);
   color: white;
   border: none;
@@ -287,34 +309,93 @@
   clip-path: polygon(0.8rem 0, 100% 0, 100% 100%, 0 100%, 0 0.8rem);
   position: relative;
   z-index: 5;
+  text-decoration: none;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .ctaButton:hover {
   transform: translateX(0.32rem);
   filter: brightness(1.1);
+  color: white;
+  text-decoration: none;
+}
+
+.ctaIcon {
+  height: 1.4em;
+  width: 1.8em;
+  stroke-width: 1.2;
 }
 
 /* View All */
 .viewAllWrapper {
   text-align: center;
   margin-top: 6.4rem;
-  color: var(--ifm-color-primary);
   margin-bottom: 5.12rem;
+  z-index: 2;
 }
 
 .viewAllButton {
   background: none;
   border: none;
-  border-bottom: 1px solid var(--ifm-color-primary);
-  color: var(--ifm-color-primary);
+  border-bottom: 1px solid var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary-dark);
   font-weight: 600;
-  font-size: .122rem;
+  font-size: 1.6rem;
   padding-bottom: 0.125em;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
+
 .viewAllButton:hover {
   color: var(--active-color);
   border-color: var(--active-color);
+}
+
+/* ============================================
+   ANIMATIONS & DECORATIONS
+   ============================================ */
+
+/* Subtle Dot Pattern Background */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-image: radial-gradient(var(--ifm-color-primary) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+/* Title Link */
+.titleLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.titleLink:hover {
+  color: var(--active-color);
+}
+
+/* Tab Content Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.28rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateEnter {
+  animation: fadeSlideUp 0.4s ease-out forwards;
 }
