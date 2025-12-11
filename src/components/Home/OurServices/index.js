@@ -5,12 +5,19 @@ import Translate from "@docusaurus/Translate";
 import { servicesData, servicesHeaderData } from "@site/src/data/servicesData";
 import styles from "./style.module.css";
 import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
+import ViewAllButton from "../../UI/Atoms/ViewAllButton";
+import CTAButton from "../../UI/Atoms/CTAButton";
 
 const colorMap = {
   cyan: {
     main: "var(--piksel-color-cyan)",
     light: "color-mix(in srgb, var(--piksel-color-cyan), white 30%)",
     dark: "color-mix(in srgb, var(--piksel-color-cyan), black 80%)",
+  },
+  red: {
+    main: "var(--piksel-color-red)",
+    light: "color-mix(in srgb, var(--piksel-color-red), white 30%)",
+    dark: "color-mix(in srgb, var(--piksel-color-red), black 80%)",
   },
   purple: {
     main: "var(--piksel-color-purple)",
@@ -67,7 +74,7 @@ export default function OurServices() {
 
         {/* Services List */}
         <div className={styles.servicesContainer}>
-          <div className={styles.verticalLine} />
+          {/* <div className={styles.verticalLine} /> - Hidden for Grid Layout */}
 
           {servicesData.map((service, index) => {
             const colors = colorMap[service.color] || colorMap.cyan;
@@ -124,7 +131,7 @@ export default function OurServices() {
                         className={styles.iconWrapper}
                         style={{ color: colors.light }}
                       >
-                        <Icon size={44} strokeWidth={1.5} />
+                        <Icon className={styles.icon} />
                         <div
                           className={styles.iconGlow}
                           style={{ backgroundColor: colors.main }}
@@ -155,25 +162,24 @@ export default function OurServices() {
 
                     {/* Buttons */}
                     <div className={styles.buttonGroup}>
-                      <Link
-                        to={service.link}
-                        className={styles.primaryBtn}
-                        style={{ backgroundColor: colors.main }}
-                      >
-                        <div className={styles.btnShine} />
-                        <span className={styles.btnContent}>
-                          {service.buttonText}
-                        </span>
-                        <ArrowRight size={16} className={styles.btnIcon} />
-                      </Link>
+                      <CTAButton 
+                    href={service?.link || '#'}
+                    label={service?.buttonText || 'Learn More'}
+                    color={colors.main}
+                    iconPosition="left"
+                    enableShine={false}
+                    enableExpand={false}
+                  />
 
                       {service.secondaryButtonText && (
-                        <Link to={service.link} className={styles.secondaryBtn}>
-                          <span className={styles.btnContent}>
-                            {service.secondaryButtonText}
-                          </span>
-                          <ExternalLink size={16} />
-                        </Link>
+                        <CTAButton
+                          to={service.link}
+                          label={service.secondaryButtonText}
+                          variant="secondary"
+                          icon={ArrowRight}
+                          className={styles.secondaryBtn}
+                          iconPosition="left"
+                        />
                       )}
                     </div>
 
@@ -187,6 +193,11 @@ export default function OurServices() {
             );
           })}
         </div>
+        
+        <ViewAllButton
+          to="/services"
+          label={<Translate id="ourServices.viewAll">Lihat Semua Layanan</Translate>}
+        />
       </div>
     </section>
   );

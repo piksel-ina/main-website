@@ -31,6 +31,7 @@
   --piksel-color-blue: oklch(0.55 0.18 250);
   --piksel-color-green: oklch(0.60 0.16 145);
   --piksel-color-cyan: oklch(0.65 0.14 200);
+  --piksel-color-purple: oklch(0.60 0.18 300);
   --piksel-color-red: oklch(0.55 0.20 25);
   --piksel-color-amber: oklch(0.70 0.16 70);
 
@@ -50,6 +51,7 @@
   --font-family-heading: 'Outfit', sans-serif;
   --ifm-font-family-monospace: 'JetBrains Mono', 'Geist Mono', monospace;
 
+  
   /* ========================================================================
      2. GLOBAL OVERRIDES
      ======================================================================== */

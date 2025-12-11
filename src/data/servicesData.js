@@ -1,5 +1,5 @@
 import { translate } from "@docusaurus/Translate";
-import { Search, Terminal, Map, Server, Cpu } from "lucide-react";
+import { Search, Terminal, Map, Server, Cpu, LifeBuoy } from "lucide-react";
 
 export const servicesData = [
   {
@@ -70,6 +70,7 @@ export const servicesData = [
       translate({ id: "ourServices.webservices.f3", message: "Dokumentasi teknis lengkap" }),
     ],
     buttonText: translate({ id: "ourServices.webservices.btn", message: "Lihat Dokumentasi" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
     link: "/docs/api-integration",
     color: "blue",
   },
@@ -88,8 +89,27 @@ export const servicesData = [
       translate({ id: "ourServices.production.f4", message: "Kolaborasi produksi nasional" }),
     ],
     buttonText: translate({ id: "ourServices.production.btn", message: "Hubungi Kami" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
     link: "/contact",
     color: "amber",
+  },
+  {
+    id: "06",
+    icon: LifeBuoy,
+    title: "DUKUNGAN TEKNIS",
+    description: translate({
+      id: "ourServices.support.description",
+      message: "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar.",
+    }),
+    features: [
+      translate({ id: "ourServices.support.f1", message: "Konsultasi arsitektur sistem" }),
+      translate({ id: "ourServices.support.f2", message: "Pemecahan masalah prioritas" }),
+      translate({ id: "ourServices.support.f3", message: "Pelatihan dan workshop tim" }),
+    ],
+    buttonText: translate({ id: "ourServices.support.btn", message: "Hubungi Support" }),
+    secondaryButtonText: translate({ id: "ourServices.common.learnMore", message: "Pelajari Lebih Lanjut" }),
+    link: "/support",
+    color: "red",
   },
 ];
 
