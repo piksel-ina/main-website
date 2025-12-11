@@ -60,6 +60,7 @@ export default function UseCases() {
                   key={key}
                   className={clsx(styles.tabButton, isActive && styles.tabButtonActive)}
                   onClick={() => setActiveTab(key)}
+                  data-text={item.tabLabel || item.title}
                 >
                   {item.tabLabel || item.title}
                   {isActive && (
@@ -89,11 +90,6 @@ export default function UseCases() {
           {/* Image Section */}
           <div className={clsx("group", styles.imageSectionWrapper)}>
             <div className={styles.imageSection}>
-              <div className={clsx(styles.corner, styles.cornerTL)} />
-              <div className={clsx(styles.corner, styles.cornerTR)} />
-              <div className={clsx(styles.corner, styles.cornerBL)} />
-              <div className={clsx(styles.corner, styles.cornerBR)} />
-
               <div className={styles.imageContainer}>
                 <img
                   key={currentCase.image}

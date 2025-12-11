@@ -13,16 +13,26 @@
   --ifm-color-primary-lightest: oklch(0.45 0.02 240);
 
   /* Neutrals & Backgrounds */
-  --ifm-background-color: oklch(1 0 0); /* Pure White */
-  --ifm-background-surface-color: oklch(0.985 0.002 240); /* Light Gray Surface */
-  --ifm-font-color-base: oklch(0.145 0.02 240); /* Deep Navy Text */
+  --ifm-background-color: oklch(1 0 0); 
+  --ifm-background-surface-color: oklch(0.985 0.002 240); 
+  --ifm-font-color-base: oklch(0.145 0.02 240); 
+  --ifm-font-color-base-light: oklch(14.504% 0.02027 244.358 / 0.922); 
+  --ifm-font-color-base-lighter: oklch(24.98% 0.01949 239.125 / 0.864); 
   
   /* Accents */
   --color-accent-teal: oklch(0.55 0.18 195);
   --color-accent-amber: oklch(0.7 0.16 70);
   --color-accent-deep: oklch(0.5 0.2 270);
-  --color-bg-accent-subtle: oklch(0.985 0.002 240); /* Subtle shapes */
+  --color-bg-accent-subtle: oklch(0.985 0.002 240); 
   --gradient-hero-accent: linear-gradient(135deg, rgba(88, 101, 242, 0.08) 0%, rgba(200, 200, 255, 0.05) 50%, transparent 100%);
+
+  /* Categorical Colors (UseCases) */
+  --piksel-color-brown: oklch(0.55 0.12 50);
+  --piksel-color-blue: oklch(0.55 0.18 250);
+  --piksel-color-green: oklch(0.60 0.16 145);
+  --piksel-color-cyan: oklch(0.65 0.14 200);
+  --piksel-color-red: oklch(0.55 0.20 25);
+  --piksel-color-amber: oklch(0.70 0.16 70);
 
   /* Semantic Maps */
   --ifm-color-success: var(--color-accent-teal);
@@ -45,7 +55,7 @@
      ======================================================================== */
   --ifm-navbar-height: 4rem;
   --ifm-navbar-background-color: var(--ifm-background-color);
-  --ifm-navbar-shadow: none; /* We will use border instead */
+  --ifm-navbar-shadow: none; 
   
   --ifm-footer-background-color: var(--ifm-background-surface-color);
   --ifm-footer-color: var(--ifm-font-color-base);
@@ -68,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Content Container Constraints */
 .container {
-  max-width: 1440px; /* Large screen support */
+  max-width: 1440px; 
 }
 
 /* Background Shapes (Clip Path) */

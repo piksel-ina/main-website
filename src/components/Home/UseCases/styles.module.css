@@ -2,18 +2,19 @@
 
 .section {
   position: relative;
-  overflow: hidden; /* For shape container */
+  overflow: hidden;
   padding: clamp(6rem, 10vw, 8rem) 0;
-  background-color: var(--ifm-background-color);
+  background-color: transparent;
   color: var(--ifm-font-color-base);
 }
 
 /* ============================================
    HEADER SECTION
    ============================================ */
+
 .header {
   text-align: center;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(3rem, 4.5vw, 3.5rem);
   padding: 0 1rem;
   position: relative;
   z-index: 10;
@@ -59,7 +60,7 @@
    TABS SECTION
    ============================================ */
 .tabsWrapper {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   border-bottom: 1px solid var(--ifm-border-color);
   position: relative;
   padding: 0 1rem;
@@ -71,7 +72,7 @@
 .tabs {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   width: 100%;
   position: relative;
 }
@@ -89,14 +90,27 @@
   background: none;
   border: none;
   padding: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
   white-space: nowrap;
   transition: all 0.2s ease;
   color: var(--ifm-font-color-base);
-  opacity: 0.6;
+  opacity: 0.6; 
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabButton::before {
+  content: attr(data-text);
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  user-select: none;
+  pointer-events: none;
 }
 
 .tabButton:hover,
@@ -113,6 +127,7 @@
   right: 0;
   height: 2px;
   background-color: var(--active-color);
+  transform: scalex(1.4);
   transition: all 0.3s ease;
 }
 
@@ -121,14 +136,14 @@
    ============================================ */
 .contentGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 16rem 1fr;
   grid-template-areas: 
     "image title"
     "image details";
   gap: 0 4rem;
-  align-items: start;
+  align-items: stretch;
   padding: 0 1rem;
-  max-width: 1200px;
+  max-width: 65rem;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -153,22 +168,26 @@
 .imageSectionWrapper {
   grid-area: image;
   width: 100%;
+  align-self: stretch;
+  display: flex;
 }
 
 .imageContainer {
   position: relative;
+  align-self: stretch;
+  display: flex;
   width: 100%;
-  aspect-ratio: 4/3;
+  flex-grow: 1;
   overflow: hidden;
-  /* Shape: Clean Cut Corner */
+  min-height: 30rem;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   background-color: var(--ifm-color-emphasis-100);
 }
 
 .image {
-  width: 100%;
-  height: 100%;
+  /* width: auto; */
+  min-height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -180,7 +199,6 @@
 /* Detail Side */
 .titleSection {
   grid-area: title;
-  margin-bottom: 1.5rem;
 }
 
 .iconWrapper {
@@ -202,7 +220,6 @@
   font-size: 2rem;
   font-weight: 700;
   color: var(--ifm-color-primary);
-  margin-bottom: 0.5rem;
 }
 
 .detailSection {
@@ -210,9 +227,10 @@
 }
 
 .contentDescription {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
+  max-width: 95%;
   line-height: 1.7;
-  color: var(--ifm-font-color-base);
+  color: var(--ifm-color-primary);
   opacity: 0.9;
   margin-bottom: 2rem;
 }
@@ -237,9 +255,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--ifm-color-primary-lightest);
+  justify-content: center;
+  background-color: var(--ifm-color-emphasis-100);
   border-radius: 4px;
-  color: var(--ifm-color-primary);
+  color: var(--active-color);
 }
 
 .checkIcon {
@@ -266,6 +285,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+  position: relative;
+  z-index: 5;
 }
 
 .ctaButton:hover {
@@ -277,6 +298,8 @@
 .viewAllWrapper {
   text-align: center;
   margin-top: 5rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 4rem;
 }
 
 .viewAllButton {
@@ -285,6 +308,7 @@
   border-bottom: 1px solid var(--ifm-color-primary);
   color: var(--ifm-color-primary);
   font-weight: 600;
+  font-size: .95rem;
   padding-bottom: 2px;
   cursor: pointer;
   transition: all 0.2s ease;
