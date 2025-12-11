@@ -1,10 +1,10 @@
 .card {
   display: block;
-  padding: 1.5rem;
+  padding: 1.92rem;
   background: rgba(30, 41, 59, 0.4);
   border: 1px solid rgba(65, 166, 249, 0.2);
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
+  border-radius: 0.64rem;
+  backdrop-filter: blur(0.32rem);
   transition: all 0.3s ease;
   text-decoration: none !important;
   color: inherit;
@@ -12,20 +12,20 @@
 .card:hover {
   background: rgba(30, 41, 59, 0.6);
   border-color: #41a6f9;
-  /* transform: translateY(-2px); Removed lift effect */
-  box-shadow: 0 4px 20px rgba(65, 166, 249, 0.15);
+  /* transform: translateY(-0.16rem); Removed lift effect */
+  box-shadow: 0 0.32rem 1.6rem rgba(65, 166, 249, 0.15);
 }
 .title {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.64rem;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04rem;
 }
 .description {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   color: #a0aec0;
   margin: 0;
   line-height: 1.5;

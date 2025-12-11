@@ -1,20 +1,20 @@
 /* ImageCard Styles */
 .imageCard {
   position: relative;
-  height: 20rem; /* Slightly smaller than homepage ModernCard */
+  height: 25.6rem; /* Slightly smaller than homepage ModernCard */
   overflow: hidden;
   border-radius: var(--ifm-card-border-radius);
   transition: all var(--ifm-transition-fast) ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.92rem;
   background-color: var(--ifm-background-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.32rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
 .imageCard:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  /* transform: translateY(-4px); Removed lift effect */
+  box-shadow: 0 0.64rem 1.6rem rgba(0, 0, 0, 0.4);
+  /* transform: translateY(-0.32rem); Removed lift effect */
   border-color: var(--ifm-color-primary);
 }
 
@@ -35,7 +35,7 @@
 }
 
 .imageCard:hover .imageCardImage {
-  filter: brightness(0.6) blur(2px);
+  filter: brightness(0.6) blur(0.16rem);
   transform: scale(1.05);
 }
 
@@ -63,7 +63,7 @@
   right: 0;
   color: white;
   background: transparent;
-  padding: 1.5rem;
+  padding: 1.92rem;
   z-index: 2;
   height: 100%;
   display: flex;
@@ -74,19 +74,19 @@
 
 .imageCardTitle {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.92rem;
   font-weight: 500;
   color: #fff;
-  margin: 0 0 0.5rem 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 0 0.64rem 0;
+  text-shadow: 0 0.16rem 0.32rem rgba(0, 0, 0, 0.5);
   line-height: 1.2;
 }
 
 .imageCardDescription {
-  font-size: 0.95rem;
+  font-size: 1.22rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.28rem 0;
   max-height: 0; /* Hidden by default */
   opacity: 0;
   overflow: hidden;
@@ -94,22 +94,22 @@
 }
 
 .imageCard:hover .imageCardDescription {
-  max-height: 100px; /* Reveal on hover */
+  max-height: 8rem; /* Reveal on hover */
   opacity: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 1.28rem;
 }
 
 .imageCardLink {
   color: var(--ifm-color-primary-light);
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(0.8rem);
   transition: all 0.3s ease;
 }
 
@@ -119,8 +119,7 @@
 }
 
 .imageCardArrow {
-  margin-left: 6px;
+  margin-left: 0.48rem;
   transition: transform 0.2s ease;
 }
-
 

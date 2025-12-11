@@ -31,6 +31,11 @@ Our visual language is **"Corporate Light / Clean Tech"**. It utilizes a light c
     - **Cards**: Clean, rectangular cards with subtle border and shadow lift on hover.
 
 ### B. Typography & Spacing
+- **Base Size**: `html { font-size: 62.5%; }` (Sets `1rem = 10px`).
+- **Units**:
+    - **Layouts & Global Padding**: Use `rem`. (e.g., `2rem` = 20px).
+    - **Component Internals (Buttons/Icons)**: Use `em` for padding/sizing to scale with font.
+    - **Media Queries**: Use `em`. (Calculate as `TargetPx / 16`).
 - **Headings**: **Outfit** (Modern, Geometric).
 - **Body**: **Inter** (Clean, Legible).
 - **Code**: **JetBrains Mono** or **Geist Mono**.

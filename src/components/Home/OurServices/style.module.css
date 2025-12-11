@@ -5,19 +5,19 @@
 .sectionContainer {
   position: relative;
   background-color: var(--ifm-background-color);
-  padding: clamp(6rem, 10vw, 8rem) 0;
+  padding: clamp(7.68rem, 10vw, 10.2rem) 0;
   overflow: hidden;
   max-width: 100%;
-  margin-top: -12rem;
+  margin-top: -15.4rem;
   z-index: -1;
 }
 
 .contentWrapper {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  max-width: 96rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.28rem;
 }
 
 /* Background Patterns */
@@ -28,7 +28,7 @@
   background-image: 
     linear-gradient(to right, var(--ifm-color-primary) 1px, transparent 1px),
     linear-gradient(to bottom, var(--ifm-color-primary) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-size: 3.2rem 3.2rem;
   pointer-events: none;
 }
 
@@ -36,7 +36,7 @@
    HEADER SECTION
    ============================================ */
 .header {
-  margin-bottom: 6rem;
+  margin-bottom: 7.68rem;
   position: relative;
   text-align: left;
 }
@@ -44,18 +44,18 @@
 .accentLine {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
+  gap: 1.28rem;
+  margin-bottom: 0.96rem;
 }
 
 .accentLineBar {
-  width: 3rem;
-  height: 2px;
+  width: 3.84rem;
+  height: 0.16rem;
   background-color: var(--ifm-color-primary);
 }
 
 .accentText {
-  font-size: 0.875rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: var(--ifm-color-primary);
   letter-spacing: 0.1em;
@@ -64,18 +64,18 @@
 
 .headerTitle {
   font-family: var(--font-family-heading);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(3.2rem, 5vw, 4.48rem);
   line-height: 1.1;
   font-weight: 700;
   color: var(--ifm-font-color-base);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.92rem;
 }
 
 .headerDesc {
-  font-size: 1.125rem;
+  font-size: 1.44rem;
   color: var(--ifm-font-color-base);
   opacity: 0.8;
-  max-width: 48rem;
+  max-width: 61.4rem;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -92,7 +92,7 @@
 .serviceItem {
   position: relative;
   border-top: 1px solid var(--ifm-border-color);
-  padding: 4rem 0;
+  padding: 5.12rem 0;
   transition: all 0.3s ease;
 }
 
@@ -103,14 +103,14 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 4rem;
+  gap: 5.12rem;
   align-items: start;
 }
 
 @media (max-width: 996px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.56rem;
   }
 }
 
@@ -121,7 +121,7 @@
 
 .numberText {
   font-family: var(--font-family-heading);
-  font-size: 8rem;
+  font-size: 10.2rem;
   font-weight: 800;
   line-height: 0.8;
   opacity: 0.1; /* Very subtle number */
@@ -142,20 +142,20 @@
 .titleRow {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.92rem;
+  margin-bottom: 1.92rem;
 }
 
 .iconWrapper {
   color: var(--ifm-color-primary);
   background: var(--ifm-color-emphasis-100);
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 1.28rem;
+  border-radius: 0.96rem;
 }
 
 .serviceTitle {
   font-family: var(--font-family-heading);
-  font-size: 2rem;
+  font-size: 2.56rem;
   font-weight: 700;
   color: var(--ifm-font-color-base);
   letter-spacing: -0.02em;
@@ -164,26 +164,26 @@
 .description {
   color: var(--ifm-font-color-base);
   opacity: 0.8;
-  margin-bottom: 2rem;
-  font-size: 1.125rem;
+  margin-bottom: 2.56rem;
+  font-size: 1.44rem;
   line-height: 1.7;
-  max-width: 800px;
+  max-width: 64rem;
 }
 
 /* Features */
 .featuresList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.28rem 2.56rem;
   list-style: none;
   padding: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.2rem;
 }
 
 .featureItem {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.96rem;
   font-weight: 500;
   color: var(--ifm-color-primary-dark);
 }
@@ -196,34 +196,34 @@
 /* Buttons */
 .buttonGroup {
   display: flex;
-  gap: 1rem;
+  gap: 1.28rem;
 }
 
 .primaryBtn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  gap: 0.64rem;
+  padding: 0.96rem 1.92rem;
   background-color: var(--ifm-color-primary);
   color: white !important;
-  border-radius: 6px;
+  border-radius: 0.48rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
-  clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+  clip-path: polygon(0.8rem 0, 100% 0, 100% 100%, 0 100%, 0 0.8rem);
 }
 
 .primaryBtn:hover {
   background-color: var(--ifm-color-primary-light);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-0.16rem);
+  box-shadow: 0 0.32rem 0.96rem rgba(0,0,0,0.1);
 }
 
 .secondaryBtn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  gap: 0.64rem;
+  padding: 0.96rem 1.92rem;
   background-color: transparent;
   color: var(--ifm-font-color-base) !important;
   font-weight: 500;
