@@ -4,13 +4,13 @@
 .heroSection {
   position: relative;
   max-height: 100vh; 
-  min-height: 700px; 
+  min-height: 56rem; 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   align-items: center; 
   padding: 0 var(--ifm-spacing-horizontal);
-  padding-top: 3rem; 
+  padding-top: 3.84rem; 
   margin-bottom: 0;
   overflow: hidden;
   
@@ -24,9 +24,9 @@
   .heroSection {
     height: auto;
     min-height: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 5.12rem;
     grid-template-rows: auto auto;
-    padding-top: 8rem;
+    padding-top: 10.2rem;
   }
 }
 
@@ -60,7 +60,7 @@
   width: 75%;
   height: 75%;
   background: color-mix(in srgb, var(--ifm-color-primary-lightest), transparent 50%);
-  border-radius: 40px;
+  border-radius: 3.2rem;
   transform: rotate(-10deg);
   z-index: -1;
   opacity: 0.5;
@@ -70,7 +70,7 @@
 @media (max-width: 996px) {
   .imageCollage {
     width: 60%;
-    margin-top: 2rem;
+    margin-top: 2.56rem;
     height: 50vh;
     opacity: 0.8;
   }
@@ -81,14 +81,14 @@
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 2rem;
+    margin-top: 2.56rem;
     grid-column: 1;
     grid-row: 2;
     opacity: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: 1.92rem;
+    padding: 1.28rem;
     transform: none; 
   }
 }
@@ -98,17 +98,17 @@
   background-position: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: -0.8rem 0.8rem 2.4rem rgba(0, 0, 0, 0.1);
   background-color: var(--ifm-color-emphasis-100);
   
   /* Server Plate Aesthetic */
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%, 0 15%);
-  border-radius: 4px;
+  border-radius: 0.32rem;
 }
 
 .imageItem:hover {
-  transform: translateX(-5px) translateY(-5px);
-  box-shadow: -15px 15px 40px rgba(88, 101, 242, 0.2);
+  transform: translateX(-0.4rem) translateY(-0.4rem);
+  box-shadow: -1.2rem 1.2rem 3.2rem rgba(88, 101, 242, 0.2);
   z-index: 20;
 }
 
@@ -153,9 +153,9 @@
     grid-column: auto;
     grid-row: auto;
     clip-path: none;
-    border-radius: 12px;
+    border-radius: 0.96rem;
     width: 100%;
-    height: 200px; 
+    height: 16rem; 
     filter: none;
   }
 }
@@ -175,37 +175,37 @@
 }
 
 .heroContent {
-  max-width: 700px; /* Increased width to prioritize text */
+  max-width: 56rem; /* Increased width to prioritize text */
 }
 
 .tag {
   display: inline-block;
   font-family: var(--font-family-heading);
-  font-size: 0.875rem;
+  font-size: 1.12rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: white;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 1.5rem;
+  margin-bottom: 1.92rem;
+  padding: 0.64rem 1.92rem;
   background: var(--color-accent-teal);
-  clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+  clip-path: polygon(1.2rem 0, 100% 0, 100% 100%, 0 100%, 0 1.2rem);
 }
 
 .title {
-  font-size: clamp(3.5rem, 4.2vw, 4.2rem); /* Slightly larger max size */
+  font-size: clamp(4.48rem, 4.2vw, 5.38rem); /* Slightly larger max size */
   font-weight: 700;
   line-height: 1.1;
   color: var(--ifm-color-primary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.56rem;
 }
 
 .subtitle {
-  font-size: clamp(1rem, 10vh, 1.2rem);
+  font-size: clamp(1.28rem, 10vh, 1.54rem);
   color: var(--ifm-color-primary-light);
   opacity: 0.9;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 2.56rem;
   max-width: 90%;
 }
 
@@ -215,29 +215,29 @@
 .heroStats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 60rem;
+  gap: 1.92rem;
+  max-width: 76.8rem;
   border-top: 1px solid var(--ifm-border-color);
 }
 
 @media (max-width: 768px) {
   .heroStats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 2.56rem;
   }
 }
 
 .heroStatNumber {
   font-family: var(--font-family-top);
-  font-size: 1.5rem;
+  font-size: 1.92rem;
   font-weight: 700;
   color: var(--ifm-color-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.32rem;
   display: block;
 }
 
 .heroStatLabel {
-  font-size: 0.7rem;
+  font-size: 0.896rem;
   color: var(--ifm-font-color-base);
   opacity: 0.5;
   text-transform: uppercase;
@@ -252,11 +252,11 @@
   position: absolute;
   top: -20%;
   right: -10%;
-  width: 800px;
-  height: 800px;
+  width: 64rem;
+  height: 64rem;
   background: var(--gradient-hero-accent);
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(6.4rem);
   z-index: 0;
   pointer-events: none;
   opacity: 0.6;

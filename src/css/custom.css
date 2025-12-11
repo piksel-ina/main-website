@@ -42,8 +42,8 @@
 
   /* Cards */
   --ifm-card-background-color: oklch(1 0 0);
-  --ifm-card-border-radius: 8px;
-  --ifm-card-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --ifm-card-border-radius: 0.64rem;
+  --ifm-card-box-shadow: 0 0.32rem 0.48rem -1px rgb(0 0 0 / 0.05), 0 0.16rem 0.32rem -0.16rem rgb(0 0 0 / 0.05);
 
   /* Typography */
   --ifm-font-family-base: 'Inter', -apple-system, system-ui, sans-serif;
@@ -53,13 +53,25 @@
   /* ========================================================================
      2. GLOBAL OVERRIDES
      ======================================================================== */
-  --ifm-navbar-height: 4rem;
+  --ifm-navbar-height: 5.12rem;
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-navbar-shadow: none; 
   
   --ifm-footer-background-color: var(--ifm-background-surface-color);
   --ifm-footer-color: var(--ifm-font-color-base);
 }
+
+/* ========================================================================
+   2. GLOBAL RESET & BASE
+   ======================================================================== */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-size: 1.6rem; /* 16px Base */
+}
+
 
 /* Base Typo */
 h1, h2, h3, h4, h5, h6 {
@@ -69,8 +81,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ifm-color-primary);
 }
 
-.markdown h1 { font-size: clamp(2rem, 5vw, 3rem); }
-.markdown h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+.markdown h1 { font-size: clamp(2.56rem, 5vw, 3.84rem); }
+.markdown h2 { font-size: clamp(1.92rem, 4vw, 2.88rem); }
 
 /* ========================================================================
      3. UTILITY CLASSES (BEM)
@@ -78,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Content Container Constraints */
 .container {
-  max-width: 1440px; 
+  max-width: 115rem; 
 }
 
 /* Background Shapes (Clip Path) */
@@ -93,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-shape--cut-corner-br {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.2rem), calc(100% - 3.2rem) 100%, 0 100%);
 }
 
 .bg-shape--shard {
@@ -102,10 +114,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Utility for Image Containers */
 .image-container--clipped {
-  border-radius: 12px;
+  border-radius: 0.96rem;
   overflow: hidden;
   clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 0 100%);
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 0.8rem 1.2rem rgba(0,0,0,0.1));
 }
 
 /* ========================================================================
@@ -149,15 +161,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Buttons (Global generic) */
 .button.button--primary {
-  border-radius: 4px;
+  border-radius: 0.32rem;
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 0.32rem 0.48rem rgba(0,0,0,0.1);
   transition: all 0.2s ease;
 }
 
 .button.button--primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0.48rem 0.64rem rgba(0,0,0,0.15);
 }
 
 /* Homepage Hero Specifics (Legacy class support for migration) */

@@ -2,32 +2,32 @@
   counter-reset: step-counter;
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
+  margin: 1.92rem 0;
   border-left: 1px solid rgba(65, 166, 249, 0.2);
-  margin-left: 1rem;
+  margin-left: 1.28rem;
 }
 .step {
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: 2rem;
+  padding-left: 2.56rem;
+  margin-bottom: 2.56rem;
 }
 .step::before {
   counter-increment: step-counter;
   content: counter(step-counter);
   position: absolute;
-  left: -0.9rem;
+  left: -1.15rem;
   top: 0;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2.3rem;
+  height: 2.3rem;
   background: #0a0e1a;
   border: 1px solid #41a6f9;
   color: #41a6f9;
   border-radius: 50%;
   text-align: center;
-  line-height: 1.8rem;
+  line-height: 2.3rem;
   font-family: 'Oswald', sans-serif;
-  font-size: 0.9rem;
-  box-shadow: 0 0 10px rgba(65, 166, 249, 0.2);
+  font-size: 1.15rem;
+  box-shadow: 0 0 0.8rem rgba(65, 166, 249, 0.2);
 }
 .step:last-child {
   margin-bottom: 0;

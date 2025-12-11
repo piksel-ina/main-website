@@ -1,7 +1,7 @@
 /* Modern Card Styles */
 .modernCard {
   position: relative;
-  height: 25rem;
+  height: 32rem;
   overflow: hidden;
   border-radius: var(--ifm-card-border-radius);
   transition: box-shadow var(--ifm-transition-fast) ease;
@@ -61,11 +61,11 @@
 }
 
 .modernCardTitle {
-  font-size: clamp(1.5rem, 8vw, 2.2rem) !important;
+  font-size: clamp(1.92rem, 8vw, 2.82rem) !important;
   font-weight: var(--ifm-font-weight-bold);
   color: white;
   margin: 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0.16rem 0.8rem rgba(0, 0, 0, 0.4);
   line-height: 1.2;
 }
 
@@ -74,12 +74,12 @@
   line-height: var(--ifm-line-height-base);
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 0.24rem rgba(0, 0, 0, 0.7);
 }
 
 .modernCardButton {
   color: white;
-  padding-top: 0.4rem;
+  padding-top: 0.512rem;
   padding-left: 0;
   font-size: var(--ifm-font-size-base);
   font-weight: var(--ifm-font-weight-semibold);
@@ -90,7 +90,7 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 0.24rem rgba(0, 0, 0, 0.7);
   align-self: flex-start;
 }
 
@@ -100,8 +100,8 @@
 }
 
 .modernCardArrow {
-  margin-left: 8px;
-  font-size: 18px;
+  margin-left: 0.64rem;
+  font-size: 1.44rem;
   transition: transform var(--ifm-transition-fast) ease;
   display: inline-block;
 }
@@ -110,7 +110,7 @@
 
 @media (max-width: 996px) {
   .modernCard {
-    height: 22rem;
+    height: 28.2rem;
   }
 
   .modernCardTitle {
@@ -120,7 +120,7 @@
 
 @media (max-width: 768px) {
   .modernCard {
-    height: 20rem;
+    height: 25.6rem;
   }
 
   .modernCardTitle {
@@ -141,7 +141,7 @@
   }
 
   .modernCardArrow {
-    font-size: 16px;
+    font-size: 1.28rem;
   }
 }
 

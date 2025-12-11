@@ -17,7 +17,7 @@
 }
 
 .shape--cut-corner {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8rem), calc(100% - 8rem) 100%, 0 100%);
 }
 
 .shape--shard {
