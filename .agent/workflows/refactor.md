@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+description: 
 ---
 
 The "Refactoring" Workflow
@@ -12,3 +12,4 @@ The "Refactoring" Workflow
 2.  **Extract**: Move repeated code to `src/components/UI/`.
 3.  **Replace**: Update usages to use the new Atom.
 4.  **Verify**: Ask User to visually confirm nothing broke.
+5.  **Clean Up**: Remove any comment found except for section break comment 

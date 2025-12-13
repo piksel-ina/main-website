@@ -79,6 +79,7 @@
 | **ShapeContainer** | Atom | Background accents using clip-path. | `variant`, `color`, `position` |
 | **CleanCard** | Molecule | Corporate card with hover lift, no glassmorphism. | `icon`, `title`, `description`, `buttonText`, `link` |
 | **ModernCard** | Molecule | Card with image overlay and hover effects. | `image`, `title`, `description`, `link` |
+| **FAQItem** | Molecule | Expandable FAQ item with controlled/uncontrolled modes. | `question`, `children`, `isOpen`, `onToggle` |
 | **Carousel** | UI | Generic responsive carousel with Swiper/Embla-like behavior. | `items`, `renderItem`, `itemsPerView` |
 | **DocCard** | Docs | Glass-styled card for docs navigation. | `title`, `description`, `to` |
 | **DocSteps** | Docs | Step-by-step list with custom numbering. | `children` |

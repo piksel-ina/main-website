@@ -47,6 +47,10 @@ You are responsible for maintaining the "Brain" of the project.
 - **React/Docusaurus**:
     - Use `@docusaurus/Translate` for all text strings.
     - Prefer Swizzling only when necessary; prioritize custom components in `src/components`.
+- **Code Comments**:
+    - **NO** trivial inline comments (e.g., `// Internal state`, `// set variable`).
+    - **NO** comments explaining obvious JSX structure (e.g., `{/* Button wrapper */}`).
+    - **ACCEPTABLE**: Section dividers in CSS (e.g., `/* === SECTION === */`) and JSDoc for complex logical functions.
 
 ## 6. Project Structure
 - **Atomic Design**:

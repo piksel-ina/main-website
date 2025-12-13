@@ -1,38 +1,7 @@
 import React, { useState } from 'react';
-import clsx from 'clsx';
 import { faqData } from "@site/src/data/faqData";
 import styles from './style.module.css';
-import { Plus, Minus } from 'lucide-react'; // Switched to Plus/Minus for more modern look
-
-const FAQItem = ({ item, isOpen, onClick }) => {
-  return (
-    <div 
-        className={styles.item}
-        data-open={isOpen}
-    >
-      <button 
-        className={styles.question} 
-        onClick={onClick}
-        aria-expanded={isOpen}
-      >
-        <span className={styles.questionText}>{item.question}</span>
-        <div className={styles.iconWrapper}>
-          {isOpen ? (
-            <Minus className={styles.icon} />
-          ) : (
-            <Plus className={styles.icon} />
-          )}
-        </div>
-      </button>
-      
-      <div className={clsx(styles.answer, { [styles.answerVisible]: isOpen })}>
-        <div className={styles.answerInner}>
-          <p>{item.answer}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
+import FAQItem from '../../UI/Molecules/FAQItem';
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -43,7 +12,6 @@ export default function Faq() {
 
   return (
     <section id="faq" className={styles.sectionContainer}>
-      {/* Removed gridPattern to restore previous background */}
       
       <div className={styles.contentWrapper}>
         {/* Left Column: Header & Accents */}
@@ -61,10 +29,12 @@ export default function Faq() {
           {faqData.questions.map((item, index) => (
             <FAQItem 
               key={item.id}
-              item={item}
+              question={item.question}
               isOpen={openIndex === index}
-              onClick={() => handleToggle(index)}
-            />
+              onToggle={() => handleToggle(index)}
+            >
+              {item.answer}
+            </FAQItem>
           ))}
         </div>
       </div>
