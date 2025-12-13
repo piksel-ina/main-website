@@ -7,6 +7,7 @@ import styles from "./style.module.css";
 import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 import ViewAllButton from "../../UI/Atoms/ViewAllButton";
 import CTAButton from "../../UI/Atoms/CTAButton";
+import ShapeContainer from "../../UI/Atoms/ShapeContainer";
 
 const colorMap = {
   cyan: {
@@ -44,14 +45,18 @@ const colorMap = {
 export default function OurServices() {
   return (
     <section id="services" className={styles.sectionContainer}>
-      {/* Background Elements */}
-      <div className={styles.gridPattern} />
-      <div className={styles.diagonalPattern} />
-      {/* Removed Orbs - Replaced with Light Theme Shapes */}
-
+      <ShapeContainer 
+        variant="slanted-y" 
+        position="absolute"
+        color="custom"
+        flip
+        pattern="grid"
+        style={{ backgroundColor: 'var(--ifm-background-color)', zIndex: 0 }}
+      >
+        <div className={styles.diagonalPattern} />
+      </ShapeContainer>
 
       <div className={styles.contentWrapper}>
-        {/* Header */}
         <div className={styles.header}>
           <div className={styles.accentLine}>
             <div className={styles.accentLineBar} />
@@ -72,9 +77,8 @@ export default function OurServices() {
           <div className={styles.headerCornerAccent} />
         </div>
 
-        {/* Services List */}
         <div className={styles.servicesContainer}>
-          {/* <div className={styles.verticalLine} /> - Hidden for Grid Layout */}
+
 
           {servicesData.map((service, index) => {
             const colors = colorMap[service.color] || colorMap.cyan;
@@ -96,7 +100,6 @@ export default function OurServices() {
                 />
 
                 <div className={styles.grid}>
-                  {/* Left Column: Number */}
                   <div className={styles.numberCol}>
                     <div
                       className={styles.cornerAccent}
@@ -119,7 +122,6 @@ export default function OurServices() {
                     </div>
                   </div>
 
-                  {/* Right Column: Content */}
                   <div className={styles.contentCol}>
                     <div
                       className={styles.contentCornerAccent}

@@ -14,7 +14,12 @@
 
 /* Variants (Clip Paths) */
 .shape--slanted {
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  /* Use vw to maintain consistent angle across different section heights */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+}
+
+.shape--slanted-y {
+  clip-path: polygon(0 10vw, 100% 0, 100% calc(100% - 10vw), 0 100%);
 }
 
 .shape--cut-corner {
@@ -91,4 +96,20 @@
 
 .shape--dotPattern-visible::before {
   opacity: 0.08;
+}
+
+/* ============================================
+   GRID PATTERN
+   ============================================ */
+.shape--pattern-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: 
+    linear-gradient(to right, var(--ifm-color-primary) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ifm-color-primary) 1px, transparent 1px);
+  background-size: 3.2rem 3.2rem;
+  pointer-events: none;
+  z-index: 1;
 }

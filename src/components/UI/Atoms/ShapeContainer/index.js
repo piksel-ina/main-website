@@ -18,11 +18,16 @@ const ShapeContainer = ({
   color = 'neutral',
   position = 'absolute',
   flip = false,
-  dotPattern = false,
+  dotPattern = false, // Deprecated: use pattern="dot"
+  pattern = null, // 'dot', 'grid'
   patternColor = 'primary',
+  children,
   className,
   style 
 }) => {
+  // Backward compatibility
+  const activePattern = pattern || (dotPattern ? 'dot' : null);
+
   return (
     <div 
       className={clsx(
@@ -31,13 +36,16 @@ const ShapeContainer = ({
         styles[`shape--color-${color}`],
         flip && styles['shape--flip'],
         position === 'absolute' && styles['shape--absolute'],
-        dotPattern && styles['shape--dotPattern'],
-        dotPattern && styles[`shape--dotPattern-${patternColor}`],
+        activePattern === 'dot' && styles['shape--dotPattern'],
+        activePattern === 'dot' && styles[`shape--dotPattern-${patternColor}`],
+        activePattern === 'grid' && styles['shape--pattern-grid'],
         className
       )}
       style={style}
       aria-hidden="true"
-    />
+    >
+      {children}
+    </div>
   );
 };
 

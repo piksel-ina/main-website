@@ -8,7 +8,6 @@ import CTAButton from '../../UI/Atoms/CTAButton';
 import styles from './styles.module.css';
 
 export default function UseCases() {
-  // Add error handling for missing data
   if (!useCasesData || Object.keys(useCasesData).length === 0) {
     console.warn('UseCases: No data available');
     return null;
@@ -17,7 +16,6 @@ export default function UseCases() {
   const useCaseKeys = Object.keys(useCasesData);
   const [activeTab, setActiveTab] = useState(useCaseKeys[0] || 'useCase01');
 
-  // Fixed useMemo with proper dependencies
   const currentCase = useMemo(() => {
     return useCasesData?.[activeTab];
   }, [activeTab, useCasesData]);
@@ -32,17 +30,15 @@ export default function UseCases() {
     '--active-glow': glowColor,
   };
 
-  // Add handler for View All button
   const handleViewAll = () => {
     console.log('Navigate to all use cases page');
   };
 
   return (
     <section id="use-cases" className={styles.section} style={dynamicStyles}>
-      <ShapeContainer variant="slanted" color="neutral" position="absolute" flip dotPattern patternColor="primary" />
+      <ShapeContainer variant="none" color="neutral" position="absolute" flip dotPattern patternColor="primary" />
       
       <div className="container">
-        {/* Header */}
         <div className={styles.header}>
           <div className={styles.labelWrapper}>
             <div className={styles.line} />
@@ -55,7 +51,6 @@ export default function UseCases() {
           </p>
         </div>
 
-        {/* Tab Navigation */}
         <div className={styles.tabsWrapper}>
           <div className={styles.scanLine} />
           
@@ -168,7 +163,6 @@ export default function UseCases() {
           })}
         </div>
 
-        {/* View All Button - Fixed with handler */}
         <ViewAllButton 
           label={useCasesHeaderData?.viewAllText || 'View All Use Cases'}
           to="/docs/usecase/main"
