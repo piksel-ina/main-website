@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import { faqData } from "@site/src/data/faqData";
 import styles from './style.module.css';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react'; // Switched to Plus/Minus for more modern look
 
 const FAQItem = ({ item, isOpen, onClick }) => {
   return (
-    <div className={styles.item}>
+    <div 
+        className={styles.item}
+        data-open={isOpen}
+    >
       <button 
         className={styles.question} 
         onClick={onClick}
@@ -15,9 +18,9 @@ const FAQItem = ({ item, isOpen, onClick }) => {
         <span className={styles.questionText}>{item.question}</span>
         <div className={styles.iconWrapper}>
           {isOpen ? (
-            <ChevronUp className={styles.icon} />
+            <Minus className={styles.icon} />
           ) : (
-            <ChevronDown className={styles.icon} />
+            <Plus className={styles.icon} />
           )}
         </div>
       </button>
@@ -39,18 +42,21 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className={styles.section}>
-      <div className={styles.container}>
-        {/* Header Section */}
-        <div className={styles.header}>
-          <h2 
-            className={styles.title} 
-            dangerouslySetInnerHTML={{ __html: faqData.title }}
-          />
-          <p className={styles.subtitle}>{faqData.subtitle}</p>
+    <section id="faq" className={styles.sectionContainer}>
+      {/* Removed gridPattern to restore previous background */}
+      
+      <div className={styles.contentWrapper}>
+        {/* Left Column: Header & Accents */}
+        <div className={styles.headerColumn}>
+            <div className={styles.accentLine}>
+                <div className={styles.accentLineBar} />
+                <span className={styles.accentText}>FAQ</span>
+            </div>
+            <h2 className={styles.headerTitle} dangerouslySetInnerHTML={{ __html: faqData.title }} />
+            <p className={styles.headerDesc}>{faqData.subtitle}</p>
         </div>
         
-        {/* FAQ List Section */}
+        {/* Right Column: FAQ List */}
         <div className={styles.faqList}>
           {faqData.questions.map((item, index) => (
             <FAQItem 
