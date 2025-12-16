@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { ThemeClassNames, useThemeConfig } from "@docusaurus/theme-common";
 import {
@@ -31,6 +31,22 @@ export default function NavbarLayout({ children }) {
   const isHomepage = location.pathname === "/" || location.pathname === "/en/";
   const shouldApplyHomepageStyles = isHomepage && !mobileSidebar.shown;
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!isHomepage) return;
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHomepage]);
+
   return (
     <nav
       ref={navbarRef}
@@ -53,6 +69,7 @@ export default function NavbarLayout({ children }) {
           "navbar-sidebar--show": mobileSidebar.shown,
           "navbar--homepage": isHomepage,
           [styles.navbarHomepage]: shouldApplyHomepageStyles,
+          [styles.navbarScrolled]: shouldApplyHomepageStyles && isScrolled,
         }
       )}
     >

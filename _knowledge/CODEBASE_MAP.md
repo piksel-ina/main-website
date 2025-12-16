@@ -60,6 +60,7 @@
 │   │   └── custom.css         # Global styles
 │   ├── pages/                 # Pages (e.g., index.js)
 │   └── theme/                 # Theme overrides (swizzled components)
+│       ├── Navbar/            # Swizzled Navbar with glassmorphism scroll effects
 │       └── Footer/            # Swizzled Footer to hide on docs pages
 ├── docusaurus.config.js       # Main configuration file
 ├── sidebars.js                # Sidebar configuration
@@ -104,7 +105,7 @@
     *   **i18n:** `id` (default), `en`.
 *   **Theme Config:**
     *   **Color Mode:** Forced **Light Mode**.
-    *   **Navbar:** Links to "Dokumentasi", "Penggunaan", "Layanan", "FAQ" (anchor links). Language dropdown enabled.
+    *   **Navbar:** Links to "Dokumentasi", "Penggunaan", "Layanan", "FAQ" (anchor links). Language dropdown enabled. Menu items positioned left. Homepage features transparent-to-glassmorphism scroll effect (desktop) / solid light grey (mobile).
     *   **Sidebar:** Swizzled `DocSidebar` to include sticky footer.
     *   **Footer:** Swizzled to be hidden on Docs pages. Default 4-column layout for other pages.
 *   **Presets:** `classic`.

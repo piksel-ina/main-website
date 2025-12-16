@@ -74,18 +74,16 @@ export default function NavbarContent() {
   return (
     <NavbarContentLayout
       left={
-        // Logo and Mobile Toggle stay strict Left
         <>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
+          <NavbarItems items={leftItems} />
         </>
       }
       center={
-        // "Left" configured items are now mapped to Center column
-        <NavbarItems items={leftItems} />
+        <></>
       }
       right={
-        // Asking the user to add the respective navbar items => more flexible
         <>
           <NavbarItems items={rightItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />

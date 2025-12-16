@@ -92,12 +92,12 @@ const config = {
           {
             type: "docSidebar",
             sidebarId: "docsSidebar",
-            position: "left",
+            position: "right",
             label: "Dokumentasi",
           },
-          { to: "/#use-cases", label: "Pemanfaatan", position: "left" },
-          { to: "/#services", label: "Layanan", position: "left" },
-          { to: "/#faq", label: "FAQ", position: "left" },
+          { to: "/#use-cases", label: "Pemanfaatan", position: "right" },
+          { to: "/#services", label: "Layanan", position: "right" },
+          { to: "/#faq", label: "FAQ", position: "right" },
           {
             type: "localeDropdown",
             position: "right",

@@ -3,15 +3,15 @@
    ============================================ */
 .heroSection {
   position: relative;
-  max-height: 96vh; 
-  min-height: 56rem; 
+  height: 90vh; 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   gap: 1.6rem;
   align-items: center; 
   padding: 0 var(--ifm-spacing-horizontal);
-  padding-top: 3.2rem; 
+  margin-top: calc(var(--ifm-navbar-height) * -1);
+  padding-top: calc(var(--ifm-navbar-height) + 1rem);
   margin-bottom: 0;
   overflow: hidden;
   
@@ -28,7 +28,8 @@
     padding-bottom: 5.12rem;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
-    padding-top: 10.2rem;
+    padding-top: calc(var(--ifm-navbar-height) + 6.4rem);
+    margin-top: 0;
   }
 }
 
@@ -38,8 +39,8 @@
    ============================================ */
 .heroImageContainer {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 6rem;
+  right: 1rem;
   bottom: 0;
   width: 55%;
   z-index: 1;
@@ -57,7 +58,7 @@
   max-height: 90vh;
   object-fit: contain;
   object-position: right center;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 @media (max-width: 996px) {
@@ -93,6 +94,7 @@
   width: 100%;
   max-width: var(--ifm-container-width);
   margin: 0 auto;
+  padding-top: 3.6rem;
 }
 
 .heroContent {
