@@ -32,9 +32,9 @@
 │   │   ├── Home/              # Page-specific components
 │   │   │   ├── UseCases/      # New Use Cases section
 │   │   │   ├── OurServices/   # New Our Services section
-│   │   │   ├── Hero/          # Hero section
+│   │   │   ├── Hero/          # Hero section with CTA buttons
 │   │   │   ├── Faq/           # FAQ section
-│   │   │   └── CallToAction/  # Final CTA section
+│   │   │   └── CallToAction/  # Final CTA with stats & glassmorphism
 │   │   ├── Docs/              # Documentation components (New)
 │   │   │   ├── DocCard/       # Navigation card
 │   │   │   ├── DocSteps/      # Step-by-step guide
@@ -50,7 +50,8 @@
 │   │   │   │   └── ModernCard/# Image overlay card
 │   │   │   └── Carousel/      # Generic carousel component
 │   ├── data/                  # Data primitives
-│   │   ├── heroData.js        # Data for Hero section
+│   │   ├── heroData.js        # Data for Hero section (CTA buttons)
+│   │   ├── statsData.js       # Data for Stats section
 │   │   ├── useCasesData.js    # Data for Use Cases section
 │   │   ├── servicesData.js    # Data for Services section
 │   │   ├── faqData.js         # Data for FAQ section
@@ -72,9 +73,9 @@
 | :--- | :--- | :--- | :--- |
 | **UseCases** | Home | Animated Use Cases section with tabs. | None |
 | **OurServices** | Home | Animated Services section with timeline layout. | None |
-| **Hero** | Home | Hero section with single responsive image and stats. | None |
+| **Hero** | Home | Hero section with CTA buttons and responsive image. | None |
 | **Faq** | Home | FAQ section with accordion style, using `faqData`. | None |
-| **CallToAction** | Home | Final CTA section with shape accents and data from `ctaData`. | None |
+| **CallToAction** | Home | Final CTA with image background, glassmorphism card, integrated stats. | None |
 | **Button** | Atom | Wrapper for Docusaurus `<Link>` or `<button>` with standardized styles. | `to`, `variant`, `size`, `block`, `onClick` |
 | **ShapeContainer** | Atom | Background accents using clip-path. | `variant`, `color`, `position` |
 | **CleanCard** | Molecule | Corporate card with hover lift, no glassmorphism. | `icon`, `title`, `description`, `buttonText`, `link` |

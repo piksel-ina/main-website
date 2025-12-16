@@ -1,58 +1,180 @@
+/* ============================================
+   CTA SECTION - IMAGE BACKGROUND
+   ============================================ */
 .cta {
   position: relative;
-  padding: 6rem 0;
-  text-align: center;
+  padding: clamp(6rem, 10vw, 10rem) 0;
   overflow: hidden;
-  background-color: var(--ifm-color-white); /* Ensure contrast */
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
 
+/* ============================================
+   BACKGROUND IMAGE
+   ============================================ */
+.cta__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cta__bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    210deg,
+    rgba(10, 14, 26, 0.25) 0%,
+    rgba(10, 14, 26, 0.1) 100%
+  )
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
 .cta__container {
   position: relative;
-  z-index: 1; /* Place content above shapes */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
 }
 
+/* ============================================
+   GLASSMORPHISM CARD
+   ============================================ */
+.cta__glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0;
+  padding: clamp(3.2rem, 6vw, 5rem);
+  max-width: 72rem;
+  width: 100%;
+  box-shadow: 
+    0 0.8rem 3.2rem rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   STATS GRID - SUBTLE
+   ============================================ */
+.cta__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.6rem, 3vw, 2.4rem);
+  padding-bottom: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: clamp(2rem, 4vw, 3.2rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 48em) {
+  .cta__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 31.25em) {
+  .cta__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+}
+
+.cta__statItem {
+  text-align: center;
+}
+
+.cta__statNumber {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.cta__statLabel {
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ============================================
+   CTA CONTENT - MAIN FOCUS
+   ============================================ */
 .cta__content {
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 
 .cta__title {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
   font-weight: 700;
-  color: var(--ifm-color-emphasis-900);
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cta__description {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--ifm-color-emphasis-700);
-  max-width: 60ch;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 50ch;
   line-height: 1.6;
+  margin: 0;
 }
 
 .cta__actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.28rem;
+  margin-top: 1.2rem;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .cta {
-    padding: 4rem 0;
-  }
-  
+@media (max-width: 31.25em) {
   .cta__actions {
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    align-items: center;
   }
+}
+
+/* ============================================
+   BUTTON OVERRIDES FOR DARK BACKGROUND
+   ============================================ */
+.cta__btnPrimary {
+  color: var(--ifm-color-primary) !important;
+}
+
+.cta__btnPrimary:hover,
+.cta__btnPrimary:focus {
+  outline-color: #fff !important;
+}
+
+.cta__btnSecondary {
+  color: #fff !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+}
+
+.cta__btnSecondary:hover,
+.cta__btnSecondary:focus {
+  color: #fff !important;
+  box-shadow: inset 0 0 0 1px #fff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }

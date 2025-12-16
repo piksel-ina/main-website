@@ -208,7 +208,8 @@ const config = {
         ],
         copyright: `
     <div class="footer__copyright-container">
-      <div class="footer__copyright-text">Copyright © ${new Date().getFullYear()} Piksel Indonesia - Badan Informasi Geospasial (BIG)</div>
+      <img src="/img/logo-big.png" alt="Badan Informasi Geospasial" class="footer__logo" />
+      <div class="footer__copyright-text">Copyright © ${new Date().getFullYear()} - Badan Informasi Geospasial</div>
       <div class="footer__address">
         Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>
         Tel: 021-8752062 ext.3608/3611/3103

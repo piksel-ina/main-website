@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
-import clsx from 'clsx';
 
 import ShapeContainer from '../../UI/Atoms/ShapeContainer';
+import CTAButton from '../../UI/Atoms/CTAButton';
 import { heroData } from "@site/src/data/heroData";
 
 export default function Hero() {
@@ -37,13 +37,20 @@ export default function Hero() {
             {heroData.subtitle}
           </p>
           
-          <div className={styles.heroStats}>
-            {heroData.stats.map((stat, idx) => (
-              <div key={idx} className={styles.heroStatItem}>
-                <div className={styles.heroStatNumber}>{stat.number}</div>
-                <div className={styles.heroStatLabel}>{stat.label}</div>
-              </div>
-            ))}
+          <div className={styles.heroActions}>
+            <CTAButton
+              to={heroData.ctaPrimary.link}
+              label={heroData.ctaPrimary.text}
+              variant="primary"
+              color="#000"
+              iconPosition="left"
+            />
+            <CTAButton
+              to={heroData.ctaSecondary.link}
+              label={heroData.ctaSecondary.text}
+              variant="secondary"
+              showIcon={false}
+            />
           </div>
         </div>
       </div>

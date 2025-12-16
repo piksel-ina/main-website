@@ -1,17 +1,12 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-
-import Translate, { translate } from "@docusaurus/Translate";
+import { translate } from "@docusaurus/Translate";
 
 import Hero from "../components/Home/Hero";
 import UseCases from "../components/Home/UseCases";
 import OurServices from "../components/Home/OurServices";
 import Faq from "../components/Home/Faq";
 import CallToAction from "../components/Home/CallToAction";
-
-// HomepageHeader component removed as it is unused
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -29,7 +24,6 @@ export default function Home() {
         description: "Meta description for the homepage",
       })}
     >
-
       <Hero />
       <main>
         <UseCases />
