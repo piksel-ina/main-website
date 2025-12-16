@@ -10,37 +10,23 @@ export default function Hero() {
     <section className={styles.heroSection}>
       <ShapeContainer variant="shard" color="primary" position="absolute" />
       <div className={styles.heroAmbientBg} />
-      <div className={styles.imageCollage}>
-        {heroData.images.map((item, idx) => {
-          if (typeof item === 'object' && item.type === 'local') {
-            return (
-              <div key={idx} className={styles.imageItem}>
-                <picture className={styles.adaptiveImage}>
-                  <source 
-                    media="(max-width: 768px)" 
-                    srcSet={item.sources.portrait.srcSet} 
-                  />
-                  <source 
-                    media="(min-width: 769px)" 
-                    srcSet={item.sources.landscape.srcSet} 
-                  />
-                  <img 
-                    src={item.sources.landscape.src} 
-                    alt={item.alt}
-                    className={styles.adaptiveImgElement}
-                  />
-                </picture>
-              </div>
-            );
-          }
-          return (
-            <div 
-              key={idx} 
-              className={styles.imageItem}
-              style={{ backgroundImage: `url(${item})` }}
-            />
-          );
-        })}
+      <div className={styles.heroImageContainer}>
+        <picture>
+          <source 
+            srcSet={heroData.heroImage.sources.webp2x} 
+            type="image/webp" 
+            media="(min-width: 996px)" 
+          /> 
+          <source 
+            srcSet={heroData.heroImage.sources.webp1x} 
+            type="image/webp" 
+          />
+          <img 
+            src={heroData.heroImage.fallback} 
+            alt={heroData.heroImage.alt}
+            className={styles.heroImage}
+          />
+        </picture>
       </div>
 
       <div className={styles.contentWrapper}>

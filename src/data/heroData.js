@@ -73,22 +73,16 @@ export const heroData = {
       }),
     },
   ],
-  images: [
-    {
-      type: 'local',
-      alt: 'Hero Main',
-      sources: {
-        landscape: {
-          src: require('@site/static/img/hero/Landscape_1x.webp').default,
-          srcSet: `${require('@site/static/img/hero/Landscape_1x.webp').default} 1x, ${require('@site/static/img/hero/Landscape_2x.webp').default} 2x`
-        },
-        portrait: {
-          src: require('@site/static/img/hero/Portrait_1x.webp').default,
-          srcSet: `${require('@site/static/img/hero/Portrait_1x.webp').default} 1x, ${require('@site/static/img/hero/Portrait_2x.webp').default} 2x`
-        }
-      }
+  heroImage: {
+    sources: {
+      webp1x: require('@site/static/img/hero/hero-image-1x.webp').default,
+      webp2x: require('@site/static/img/hero/hero-image.webp').default,
     },
-    'https://images.unsplash.com/photo-1623200403279-26c414d90f9d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://plus.unsplash.com/premium_photo-1712665535102-fddaf87dbc17?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-  ],
+    fallback: require('@site/static/img/hero/hero-image.png').default,
+    alt: translate({
+      id: "homepage.hero.image.alt",
+      message: "Piksel Hero Image",
+      description: "Alt text for the hero image",
+    }),
+  },
 };

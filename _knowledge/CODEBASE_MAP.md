@@ -72,7 +72,7 @@
 | :--- | :--- | :--- | :--- |
 | **UseCases** | Home | Animated Use Cases section with tabs. | None |
 | **OurServices** | Home | Animated Services section with timeline layout. | None |
-| **Hero** | Home | Hero section with image grid and stats. | None |
+| **Hero** | Home | Hero section with single responsive image and stats. | None |
 | **Faq** | Home | FAQ section with accordion style, using `faqData`. | None |
 | **CallToAction** | Home | Final CTA section with shape accents and data from `ctaData`. | None |
 | **Button** | Atom | Wrapper for Docusaurus `<Link>` or `<button>` with standardized styles. | `to`, `variant`, `size`, `block`, `onClick` |
