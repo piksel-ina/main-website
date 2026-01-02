@@ -81,12 +81,12 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      image: "img/piksel-logo.svg",
+      image: "img/logos/logo-big-360px.png",
       navbar: {
         title: "",
         logo: {
           alt: "Logo Badan Informasi Geospasial",
-          src: "img/logo-big.png",
+          src: "img/logos/logo-big-360px.png",
         },
         items: [
           {
@@ -207,7 +207,7 @@ const config = {
         ],
         copyright: `
     <div class="footer__copyright-container">
-      <img src="/img/logo-big.png" alt="Badan Informasi Geospasial" class="footer__logo" />
+      <img src="/img/logos/logo-big-360px.png" alt="Badan Informasi Geospasial" class="footer__logo" />
       <div class="footer__copyright-text">Copyright © ${new Date().getFullYear()} - Badan Informasi Geospasial</div>
       <div class="footer__address">
         Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>
