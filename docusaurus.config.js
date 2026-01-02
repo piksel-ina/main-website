@@ -83,10 +83,10 @@ const config = {
       },
       image: "img/piksel-logo.svg",
       navbar: {
-        title: "PIKSEL",
+        title: "",
         logo: {
-          alt: "Piksel Logo",
-          src: "img/piksel-logo.svg",
+          alt: "Logo Badan Informasi Geospasial",
+          src: "img/logo-big.png",
         },
         items: [
           {
