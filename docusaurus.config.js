@@ -95,9 +95,9 @@ const config = {
             position: "right",
             label: "Dokumentasi",
           },
-          { to: "/#use-cases", label: "Pemanfaatan", position: "right" },
-          { to: "/#services", label: "Layanan", position: "right" },
-          { to: "/#faq", label: "FAQ", position: "right" },
+          { href: "/#use-cases", label: "Pemanfaatan", position: "right" },
+          { href: "/#services", label: "Layanan", position: "right" },
+          { href: "/#faq", label: "FAQ", position: "right" },
           {
             type: "localeDropdown",
             position: "right",

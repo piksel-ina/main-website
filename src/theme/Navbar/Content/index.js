@@ -75,7 +75,6 @@ export default function NavbarContent() {
     <NavbarContentLayout
       left={
         <>
-          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
           <NavbarItems items={leftItems} />
         </>
@@ -92,6 +91,7 @@ export default function NavbarContent() {
               <SearchBar />
             </NavbarSearch>
           )}
+          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
         </>
       }
     />

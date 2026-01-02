@@ -18,7 +18,7 @@
   --ifm-font-color-base: oklch(0.145 0.02 240); 
   --ifm-font-color-base-light: oklch(14.504% 0.02027 244.358 / 0.922); 
   --ifm-font-color-base-lighter: oklch(24.98% 0.01949 239.125 / 0.864); 
-  --ifm-menu-color-background-active: transparent;
+  /* --ifm-menu-color-background-active: transparent; */
   
   /* Accents */
   --color-accent-teal: oklch(0.55 0.18 195);
@@ -155,8 +155,36 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent-teal);
 }
 
+.dropdown {
+  text-wrap: nowrap;
+}
+
 .dropdown__link {
   font-size: 1.3rem;
+}
+
+.navbar-sidebar {
+  right: 0;
+  left: auto;
+  transform: translate3d(100%, 0, 0);
+}
+
+.navbar-sidebar__brand {
+  height: fit-content;
+}
+
+.navbar-sidebar__close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+}
+
+.menu__list {
+  padding: 1rem;
+}
+
+.menu__list-item {
+  margin-bottom: 1rem;
 }
 
 /* Footer */
