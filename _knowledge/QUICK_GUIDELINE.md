@@ -48,6 +48,7 @@ Our visual language is **"Corporate Light / Clean Tech"**. It utilizes a light c
     - **Desktop**: `996px`
     - **Tablet**: `768px`
     - **Mobile**: `500px`
+- **Navbar Scroll**: The navbar uses a custom scroll listener in `src/theme/Navbar/Layout/index.js` to handle hiding on scroll for mobile devices (<= 996px), supplementing Docusaurus's default behavior.
 
 ## 3. Component Development Rules
 

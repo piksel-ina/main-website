@@ -22,24 +22,21 @@
 /* Mobile: Light grey solid background */
 @media (max-width: 996px) {
   .navbarHomepage {
-    background-color: var(--ifm-background-surface-color);
+    background-color: transparent;
+    border-bottom: none;
   }
 }
 
-/* Desktop glassmorphism when scrolled */
-@media (min-width: 997px) {
-  .navbarScrolled {
+.navbarScrolled {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.05);
   }
   
-  /* Slightly heavier weight when scrolled for better contrast */
-  .navbarScrolled :global(.navbar__link) {
+.navbarScrolled :global(.navbar__link) {
     font-weight: 500;
   }
-}
 
 /* Refined spacing for navbar items */
 .navbarHomepage :global(.navbar__item) {
