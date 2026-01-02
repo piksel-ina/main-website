@@ -5,7 +5,7 @@ const config = {
   title: "Piksel",
   tagline:
     "Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesian region",
-  favicon: "img/piksel-logo.ico",
+  favicon: "img/ico-big.ico",
   url: "https://staging.pik-sel.id",
   baseUrl: "/",
   organizationName: "piksel-ina",
