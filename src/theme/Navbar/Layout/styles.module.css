@@ -9,29 +9,29 @@
 .navbarHomepage {
   transition: all 0.3s ease;
   box-shadow: none;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-/* Desktop: Transparent at top */
+/* Desktop: Solid white background */
 @media (min-width: 997px) {
   .navbarHomepage {
-    background-color: transparent;
-    border-bottom: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
   }
 }
 
-/* Mobile: Light grey solid background */
+/* Mobile: Solid white background */
 @media (max-width: 996px) {
   .navbarHomepage {
-    background-color: transparent;
-    border-bottom: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
   }
 }
 
 .navbarScrolled {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
 .navbarScrolled :global(.navbar__link) {
@@ -51,5 +51,5 @@
 }
 
 .navbarHomepage :global(.navbar__link:hover) {
-  border-bottom-color: var(--color-accent-teal);
+  border-bottom-color: var(--color-accent);
 }

@@ -1,4 +1,5 @@
 import { translate } from "@docusaurus/Translate";
+import { statsData } from "@site/src/data/statsData";
 
 export const heroData = {
   tag: translate({
@@ -33,6 +34,10 @@ export const heroData = {
     }),
     link: "/docs/usecase/intro",
   },
+  stats: statsData.stats.slice(0, 3).map(stat => ({
+    value: stat.number,
+    label: stat.label,
+  })),
   heroImage: {
     sources: {
       webp1x: require('@site/static/img/hero/hero-image-1x.webp').default,

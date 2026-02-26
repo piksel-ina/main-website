@@ -21,65 +21,52 @@
   justify-content: center;
 }
 
-/* Primary Variant (Clip-path) */
+/* Primary Variant - White button for dark backgrounds */
 .primary {
-  padding: 0.8em 1.6em;
-  padding-left: 1.44rem; /* Standardized to rem (1.2em * 1.2rem font) */
-  background-color: var(--button-color, var(--ifm-color-primary));
-  color: white;
-  clip-path: polygon(
-    10px 0, 
-    100% 0, 
-    100% calc(100% - 10px), 
-    calc(100% - 10px) 100%, 
-    0 100%, 
-    0 10px
-  );
+  padding: 0.75em 1.875em;
+  background-color: white;
+  color: #0d295b;
+  border-radius: 4px;
   font-size: 1.2rem;
-  transition: padding-left 0.3s ease, margin-right 0.3s ease, filter 0.2s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
   margin-top: auto;
 }
 
 .primary:hover,
 .primary:focus {
-  filter: brightness(1.15);
-  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  color: #0d295b;
   text-decoration: none;
-  outline: 2px solid var(--button-color, var(--ifm-color-primary));
-  outline-offset: 2px;
+  filter: brightness(0.95);
 }
 
 .expandOnHover:hover,
 .expandOnHover:focus {
-  padding-left: 2rem;
-  margin-right: -0.56rem;
+  padding-left: 2.25rem;
 }
 
-/* Secondary Variant */
+/* Secondary Variant - Transparent with white border */
 .secondary {
-  padding: 0.8em 1.6em;
+  padding: 0.75em 1.875em;
   background-color: transparent;
-  color: var(--ifm-font-color-base);
-  box-shadow: inset 0 0 0 1px var(--ifm-color-emphasis-300);
-  clip-path: polygon(
-    10px 0, 
-    100% 0, 
-    100% calc(100% - 10px), 
-    calc(100% - 10px) 100%, 
-    0 100%, 
-    0 10px
-  );
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
   font-size: 1.2rem;
-  opacity: 0.8;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .secondary:hover,
 .secondary:focus {
   text-decoration: none;
-  color: var(--button-color, var(--ifm-color-primary));
-  box-shadow: inset 0 0 0 1px var(--button-color, var(--ifm-color-primary));
-  background-color: color-mix(in srgb, var(--button-color, var(--ifm-color-primary)) 5%, transparent);
-  opacity: 1;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   outline: none;
 }
 

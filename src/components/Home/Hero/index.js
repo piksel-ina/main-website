@@ -1,15 +1,12 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import CTAButton from '../../UI/Atoms/CTAButton';
 import { heroData } from "@site/src/data/heroData";
 
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
-      <ShapeContainer variant="shard" color="primary" position="absolute" />
-      <div className={styles.heroAmbientBg} />
       <div className={styles.heroImageContainer}>
         <picture>
           <source 
@@ -42,7 +39,6 @@ export default function Hero() {
               to={heroData.ctaPrimary.link}
               label={heroData.ctaPrimary.text}
               variant="primary"
-              color="#000"
               iconPosition="left"
             />
             <CTAButton
@@ -51,6 +47,15 @@ export default function Hero() {
               variant="secondary"
               showIcon={false}
             />
+          </div>
+
+          <div className={styles.statsRow}>
+            {heroData.stats.map((stat, index) => (
+              <div key={index} className={styles.statItem}>
+                <span className={styles.statValue}>{stat.value}</span>
+                <span className={styles.statLabel}>{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
