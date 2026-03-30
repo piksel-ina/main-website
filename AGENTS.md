@@ -1,174 +1,90 @@
 # Agent Guidelines for Piksel Main Website
 
-This is a Docusaurus-based documentation website using React 19. The site provides documentation for Piksel - a platform integrating satellite imagery with cloud computing technology.
-
-## Project Overview
-
-- **Framework**: Docusaurus 3.x with React 19
-- **Styling**: CSS Modules with OKLCH color system
-- **Icons**: lucide-react
-- **Utilities**: clsx for conditional classes
-- **Languages**: Indonesian (default), English
-- **Node**: >=18.0
+Docusaurus 3.x documentation site with React 19, classic preset. Satellite imagery + cloud computing platform by Badan Informasi Geospasial (Indonesia). Styling: CSS Modules with BEM naming (NO Tailwind). Icons: lucide-react. Utilities: clsx. Light mode only. Locales: Indonesian (`id`, default), English (`en`).
 
 ---
 
 ## Build Commands
 
-### Development
-
 ```bash
-npm start          # Start dev server with hot reload
-npm run build      # Build for production
-npm run serve      # Serve production build locally
-npm run clear      # Clear Docusaurus cache
+npm run build                # Verify correctness — catches broken imports, missing refs, build errors
+npm run clear                # Clear cache before build if stale
+npm ci                       # Clean install for CI
+npm run write-translations   # Regenerate i18n files
+npm run write-heading-ids    # Regenerate heading IDs
 ```
 
-### CI/Build Check
-
-```bash
-npm ci             # Clean install dependencies
-npm run build      # Production build (broken links: warn)
-```
-
-### Localization
-
-```bash
-npm run write-translations          # Generate translation files
-npm run write-heading-ids           # Generate heading IDs for docs
-```
-
-### Testing
-
-No dedicated test framework. Use `npm run build` to verify correctness.
+No test framework, no linter. Use `npm run build` to verify.
 
 ---
 
-## Critical Rules
-
-### Human in the Loop (STRICT)
-
-- **NEVER** run `npm start`, `npm run serve`, or local server commands
-- **NEVER** use browser automation tools to verify changes
-- **NEVER** assume the state of a running server
-- Write code, then ask the User to run the server and validate in browser
-
----
-
-## Code Style Guidelines
-
-### Folder Structure
+## Folder Structure
 
 ```
 src/
 ├── components/
-│   ├── Home/          # Page-specific (Hero, UseCases, Faq, etc.)
+│   ├── Home/          # Homepage sections
 │   ├── UI/
-│   │   ├── Atoms/     # Button, ShapeContainer
-│   │   ├── Molecules/ # CleanCard, ModernCard
+│   │   ├── Atoms/     # Primitives (buttons, shapes)
+│   │   ├── Molecules/ # Composed cards, items
 │   │   └── Carousel/
-│   └── Docs/          # DocCard, DocSteps, DocCallout
-├── data/              # Single source of truth for content
+│   └── Docs/          # Doc-specific components
+├── data/              # Single source of truth for all content
 ├── pages/             # Docusaurus pages
-├── theme/              # Swizzled theme components
-└── css/               # Global CSS
+├── theme/             # Swizzled theme components (Navbar, Footer, DocSidebar)
+└── css/               # Global CSS (custom.css)
 ```
 
-### Data Separation (MANDATORY)
+---
 
-- All content for homepage and components **MUST** be in `src/data/`
-- Do NOT hardcode text, titles, or descriptions in React components
-- Import data: `import { heroData } from "@site/src/data/heroData"`
+## Code Conventions
 
-### Naming Conventions
+### Naming & Files
 
-- Folders: `kebab-case`
-- Components: `PascalCase` (e.g., `Hero`, `CTAButton`)
-- Props: `camelCase`
-- CSS: BEM in CSS Modules (`styles.module.css`)
+- Components: `PascalCase/` folder with `index.js` inside, **default export**
+- Data files: `camelCase.js` in `src/data/`, **named export**
+- CSS: `styles.module.css` alongside component, BEM naming (`.block__element--modifier`)
+- Translation IDs: `namespace.section.key` (e.g., `homepage.hero.title`)
+- Single quotes
 
 ### Import Order
 
-1. React/Docusaurus (`@docusaurus/*`, `react`)
-2. External libs (`lucide-react`, `clsx`)
-3. Internal imports (`@site/src/...`, `@theme/...`)
-4. Relative imports (`../Component`, `./styles.module.css`)
+React/Docusaurus core → external libs → `@site` alias → relative imports.
 
-### React Patterns
+### Data Separation (MANDATORY)
 
-- Default exports for components, named exports for data
-- Functional components only
-- Destructure props with defaults
+ALL user-facing text, titles, descriptions, links, and image refs **MUST** live in `src/data/*.js`. Never hardcode text in components. Use `@docusaurus/Translate` for all strings:
 
 ```javascript
-const CTAButton = ({ label, to, variant = "primary", ...props }) => {
-  // ...
+import { translate } from '@docusaurus/Translate';
+export const heroData = {
+  title: translate({
+    id: 'homepage.hero.title',
+    message: 'Default Indonesian text here',
+    description: 'The main title on the homepage hero section',
+  }),
 };
+```
+
+### Links
+
+Use Docusaurus `<Link to="...">` for internal links, never `<a>`.
+
+### React
+
+Use `const` arrow + default export pattern when hoisting named variables:
+
+```javascript
+const CTAButton = ({ label, to, variant = 'primary', ...props }) => {
+    // ...
+  };
 export default CTAButton;
 ```
 
-### CSS Guidelines
+### CSS & Design
 
-- CSS Modules required (`.module.css`)
-- OKLCH colors in `custom.css` (`--ifm-color-primary`, `--color-accent-teal`)
-- Rem units (base 10px: `1.6rem` = `16px`)
-- Use `clamp()` for responsive sizing
+CSS Modules only, no Tailwind, no inline styles (except CSS custom properties). BEM naming. `rem` for layout, `em` for component-internal. No `clamp()` — use type/spacing tokens, override in media queries. Type scale (`--text-xs` → `--text-5xl`) and spacing scale (`--space-1` → `--space-10`) defined in `custom.css`. See **styling-system** skill for full token reference, breakpoints, and clip-path shapes.
 
-### Translations
+### Comments
 
-Use `@docusaurus/Translate` for all user-facing text:
-
-```javascript
-import { translate } from "@docusaurus/Translate";
-
-title: translate({
-  id: "homepage.hero.title",
-  message: "My Title",
-  description: "Description",
-});
-```
-
-### Internal Links
-
-Use Docusaurus `Link`, not `<a>`:
-
-```javascript
-import Link from "@docusaurus/Link";
-<Link to="/docs/path">Text</Link>;
-```
-
----
-
-## Design System
-
-### Visual Style: "Corporate Light / Clean Tech"
-
-- Clean white backgrounds, Deep Navy text
-- Teal (`--color-accent-teal`) and Amber (`--color-accent-amber`) accents
-- Shape language: `clip-path` for geometric accents ("Shards", "Cut Corners")
-
-### Typography
-
-- Headings: **Outfit**
-- Body: **Inter**
-- Code: **JetBrains Mono**
-
----
-
-## Meta-Documentation Maintenance
-
-Update these files when making structural changes:
-
-- **`_knowledge/CODEBASE_MAP.md`**: File tree, component map
-- **`_knowledge/QUICK_GUIDELINE.md`**: Patterns and best practices
-- **`_knowledge/AGENT_RULES.md`**: Constitution rules
-
----
-
-## Common Pitfalls
-
-1. Don't use `<a>` for internal links - use Docusaurus `Link`
-2. Don't hardcode content - use `src/data/`
-3. Don't use inline styles (except CSS custom properties)
-4. Don't forget translation keys for user-facing text
-5. Run `npm run build` before committing
+No trivial comments. OK: CSS section dividers (`/* === SECTION === */`) and JSDoc for complex functions.
