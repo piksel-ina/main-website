@@ -1,6 +1,6 @@
 # Agent Guidelines for Piksel Main Website
 
-Docusaurus 3.x documentation site with React 19, classic preset. Satellite imagery + cloud computing platform by Badan Informasi Geospasial (Indonesia). Styling: CSS Modules with BEM naming (NO Tailwind). Icons: lucide-react. Utilities: clsx. Light mode only. Locales: Indonesian (`id`, default), English (`en`).
+Docusaurus 3.x documentation site with React 19, classic preset. Satellite imagery + cloud computing platform by Badan Informasi Geospasial (Indonesia). Styling: SCSS Modules with BEM naming (NO Tailwind). Icons: lucide-react. Utilities: clsx. Light mode only. Locales: Indonesian (`id`, default), English (`en`).
 
 ---
 
@@ -32,7 +32,7 @@ src/
 ├── data/              # Single source of truth for all content
 ├── pages/             # Docusaurus pages
 ├── theme/             # Swizzled theme components (Navbar, Footer, DocSidebar)
-└── css/               # Global CSS (custom.css)
+└── css/               # Global styles (custom.scss) + SCSS abstracts (tokens, functions, mixins)
 ```
 
 ---
@@ -43,7 +43,7 @@ src/
 
 - Components: `PascalCase/` folder with `index.js` inside, **default export**
 - Data files: `camelCase.js` in `src/data/`, **named export**
-- CSS: `styles.module.css` alongside component, BEM naming (`.block__element--modifier`)
+- CSS: `styles.module.scss` alongside component, BEM naming (`.block__element--modifier`)
 - Translation IDs: `namespace.section.key` (e.g., `homepage.hero.title`)
 - Single quotes
 
@@ -83,7 +83,11 @@ export default CTAButton;
 
 ### CSS & Design
 
-CSS Modules only, no Tailwind, no inline styles (except CSS custom properties). BEM naming. `rem` for layout, `em` for component-internal. No `clamp()` — use type/spacing tokens, override in media queries. Type scale (`--text-xs` → `--text-5xl`) and spacing scale (`--space-1` → `--space-10`) defined in `custom.css`. See **styling-system** skill for full token reference, breakpoints, and clip-path shapes.
+SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS custom properties). BEM naming via SCSS nesting (`&__element`, `&--modifier`). `rem` for layout, `em` for component-internal. No `clamp()` — use type/spacing tokens, override in media queries via `@include respond-to()`. 
+
+**SCSS architecture:** `src/css/abstracts/` provides tokens (`$spacing`, `$type-scale`, `$breakpoints`, `$colors`, `$font-families`), functions (`space()`, `text-size()`, `color()`, `bp()`, `font-family()`, `clip-path()`), and mixins (`respond-to()`, `heading()`, `card-base()`, `container()`, `glass()`). Import with `@use '../../css/abstracts' as *;` (adjust path as needed).
+
+CSS custom properties (`--space-*`, `--text-*`, `--color-*`, etc.) are generated from SCSS maps in `custom.scss`. See **styling-system** skill for full token reference, breakpoints, and clip-path shapes.
 
 ### Comments
 

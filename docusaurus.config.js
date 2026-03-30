@@ -42,7 +42,7 @@ const config = {
         },
 
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/css/custom.scss",
         },
       }),
     ],
@@ -70,6 +70,49 @@ const config = {
         href: "https://fonts.gstatic.com",
         crossorigin: "anonymous",
       },
+    },
+  ],
+
+  plugins: [
+    function scssPlugin() {
+      return {
+        name: 'scss-support',
+        configureWebpack(config, isServer, utils) {
+          const { getStyleLoaders } = utils;
+          return {
+            mergeStrategy: { 'module.rules': 'prepend' },
+            module: {
+              rules: [
+                {
+                  test: /\.module\.scss$/,
+                  exclude: /node_modules/,
+                  use: [
+                    ...getStyleLoaders(isServer, {
+                      modules: { exportOnlyLocals: isServer },
+                      importLoaders: 1,
+                    }),
+                    {
+                      loader: require.resolve('sass-loader'),
+                      options: { api: 'modern-compiler', sourceMap: !isServer },
+                    },
+                  ],
+                },
+                {
+                  test: /\.scss$/,
+                  exclude: [/\.module\.scss$/, /node_modules/],
+                  use: [
+                    ...getStyleLoaders(isServer, { importLoaders: 1 }),
+                    {
+                      loader: require.resolve('sass-loader'),
+                      options: { api: 'modern-compiler', sourceMap: !isServer },
+                    },
+                  ],
+                },
+              ],
+            },
+          };
+        },
+      };
     },
   ],
 

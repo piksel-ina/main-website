@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use 'functions' as *;
+
+@mixin respond-to($breakpoint) {
+  $value: bp($breakpoint);
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin heading {
+  font-family: font-family('heading');
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: color('primary');
+}
+
+@mixin card-base {
+  background-color: color('bg');
+  border-radius: $card-border-radius;
+  box-shadow: $card-box-shadow;
+}
+
+@mixin container {
+  max-width: $container-max-width;
+  margin-inline: auto;
+  padding-inline: space('4');
+}
+
+@mixin glass($opacity: 0.1, $blur: 1.2rem) {
+  background: rgba(255, 255, 255, $opacity + 0.85);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@mixin bg-shape($variant) {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  clip-path: clip-path($variant);
+}
+
+@mixin image-clipped {
+  border-radius: 0.96rem;
+  overflow: hidden;
+  clip-path: clip-path('image-clipped');
+  filter: drop-shadow(0 #{space('1')} #{space('2')} rgba(0, 0, 0, 0.1));
+}
+
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin focus-ring {
+  outline: 2px solid color('accent');
+  outline-offset: 2px;
+}

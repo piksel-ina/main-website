@@ -1,0 +1,371 @@
+@use 'sass:string';
+@use 'abstracts' as *;
+
+:root {
+  /* ========================================================================
+     1. COLOR SYSTEM
+     ======================================================================== */
+
+  --ifm-color-primary: #{color('primary')};
+  --ifm-color-primary-dark: #{color('primary-dark')};
+  --ifm-color-primary-darker: #{color('primary-darker')};
+  --ifm-color-primary-darkest: #{color('primary-darkest')};
+  --ifm-color-primary-light: #{color('primary-light')};
+  --ifm-color-primary-lighter: #{color('primary-lighter')};
+  --ifm-color-primary-lightest: #{color('primary-lightest')};
+
+  --color-primary: #{color('primary')};
+  --color-secondary: #{color('secondary')};
+  --color-accent: #{color('accent')};
+
+  --ifm-background-color: #{color('bg')};
+  --ifm-background-surface-color: #{color('bg-surface')};
+  --ifm-font-color-base: #{color('text')};
+  --ifm-font-color-base-light: #{color('text-light')};
+  --ifm-font-color-base-lighter: #{color('text-lighter')};
+
+  --color-accent-teal: #{color('accent-teal')};
+  --color-accent-amber: #{color('accent-amber')};
+  --color-accent-deep: #{color('accent-deep')};
+  --color-bg-accent-subtle: #{color('bg-accent-subtle')};
+  --gradient-hero-accent: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(45, 74, 124, 0.05) 50%, transparent 100%);
+
+  @each $name, $hex in $colors {
+    @if string.index($name, 'piksel-') {
+      --piksel-color-#{string.slice($name, 8)}: #{$hex};
+    }
+  }
+
+  --ifm-color-success: #{color('success')};
+  --ifm-color-warning: #{color('warning')};
+  --ifm-border-color: #{color('border')};
+  --ifm-link-color: var(--ifm-color-primary);
+
+  --ifm-card-background-color: #{color('bg')};
+  --ifm-card-border-radius: #{$card-border-radius};
+  --ifm-card-box-shadow: #{$card-box-shadow};
+
+  /* ========================================================================
+     2. TYPOGRAPHY TOKENS
+     ======================================================================== */
+
+  --ifm-font-family-base: #{font-family('base')};
+  --font-family-heading: #{font-family('heading')};
+  --ifm-font-family-monospace: #{font-family('mono')};
+
+  @each $name, $size in $type-scale {
+    --text-#{$name}: #{$size};
+  }
+
+  /* ========================================================================
+     3. SPACING TOKENS
+     ======================================================================== */
+
+  @each $name, $size in $spacing {
+    --space-#{$name}: #{$size};
+  }
+
+  /* ========================================================================
+     4. GLOBAL OVERRIDES
+     ======================================================================== */
+
+  --ifm-navbar-height: #{$navbar-height};
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-shadow: none;
+
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-footer-color: var(--ifm-font-color-base);
+}
+
+/* ========================================================================
+   5. GLOBAL RESET & BASE
+   ======================================================================== */
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: text-size('base');
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading;
+}
+
+.markdown {
+  h1 {
+    font-size: text-size('3xl');
+    font-weight: 300;
+    letter-spacing: -1px;
+
+    @include respond-to('tablet') {
+      font-size: text-size('2xl');
+    }
+  }
+
+  h2 {
+    font-size: text-size('2xl');
+
+    @include respond-to('tablet') {
+      font-size: text-size('xl');
+    }
+  }
+}
+
+/* ========================================================================
+   6. UTILITY CLASSES (BEM)
+   ======================================================================== */
+
+.container {
+  max-width: $container-max-width;
+}
+
+.bg-shape {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+
+  &--slanted-bottom {
+    clip-path: clip-path('slanted-bottom');
+  }
+
+  &--cut-corner-br {
+    clip-path: clip-path('cut-corner-br');
+  }
+
+  &--shard {
+    clip-path: clip-path('shard');
+  }
+}
+
+.image-container--clipped {
+  @include image-clipped;
+}
+
+/* ========================================================================
+   7. COMPONENT OVERRIDES — NAVBAR
+   ======================================================================== */
+
+.navbar {
+  padding: space('2');
+  padding-left: space('2');
+  border-bottom: 1px solid color('border');
+
+  &__logo {
+    min-height: 6rem;
+    padding-left: space('2');
+    padding-bottom: space('2');
+    margin-top: space('1') * 0.625;
+    margin-left: space('4');
+
+    img {
+      width: auto;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    color: color('text');
+    font-size: 1.5rem;
+
+    &:hover {
+      color: color('accent');
+    }
+  }
+}
+
+.dropdown {
+  text-wrap: nowrap;
+
+  &__link {
+    font-size: 1.3rem;
+  }
+}
+
+.navbar-sidebar {
+  right: 0;
+  left: auto;
+  transform: translate3d(100%, 0, 0);
+
+  &__brand {
+    height: fit-content;
+  }
+
+  &__close {
+    position: absolute;
+    right: 1.5rem;
+    top: space('2');
+  }
+}
+
+.menu__list {
+  padding: space('2');
+
+  &-item {
+    margin-bottom: space('2');
+  }
+}
+
+/* ========================================================================
+   8. COMPONENT OVERRIDES — FOOTER
+   ======================================================================== */
+
+.footer {
+  border-top: 1px solid color('border');
+  background: linear-gradient(
+    to bottom,
+    color('bg-surface') 0%,
+    color('bg') 100%
+  );
+  padding: space('8') 0 space('4');
+  padding-top: space('9');
+  position: relative;
+
+  @include respond-to('tablet') {
+    padding: space('7') 0 space('4');
+    padding-top: space('8');
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    background-image:
+      linear-gradient(to right, color('primary') 1px, transparent 1px),
+      linear-gradient(to bottom, color('primary') 1px, transparent 1px);
+    background-size: space('6') space('6');
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__title {
+    color: color('primary');
+    font-family: font-family('heading');
+    font-size: text-size('sm');
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: space('3');
+    position: relative;
+    padding-bottom: space('1');
+
+    @include respond-to('desktop') {
+      font-size: 1.4rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: space('5');
+      height: 2px;
+      background: color('accent');
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: space('2');
+    text-decoration: none;
+  }
+
+  &__link-item {
+    color: color('primary-light');
+    font-size: 1.3rem;
+    transition: all 0.25s ease;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+
+    @include respond-to('desktop') {
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      color: color('accent');
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
+  &__copyright-container {
+    margin-top: space('8');
+    padding-top: space('4');
+    border-top: 1px solid color('border');
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: space('3');
+
+    @include respond-to('tablet') {
+      margin-top: space('9');
+    }
+  }
+
+  &__logo {
+    max-height: 6rem;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__copyright-text {
+    font-size: 1.3rem;
+    color: color('primary');
+    font-weight: 500;
+    line-height: 1.6;
+
+    @include respond-to('desktop') {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__address {
+    font-size: 1.2rem;
+    color: color('primary-light');
+    opacity: 0.8;
+    line-height: 1.8;
+
+    @include respond-to('desktop') {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* ========================================================================
+   9. COMPONENT OVERRIDES — BUTTONS
+   ======================================================================== */
+
+.button.button--primary {
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: $card-box-shadow;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.hero__title {
+  color: color('primary');
+}
+
+.hero__subtitle {
+  color: color('primary-light');
+}
