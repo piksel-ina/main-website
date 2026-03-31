@@ -48,7 +48,7 @@
   }
 
   &__accentText {
-    font-size: 1.12rem;
+    font-size: text-size('sm');
     font-weight: 700;
     color: var(--ifm-color-primary);
     letter-spacing: 0.1em;
@@ -69,7 +69,7 @@
   }
 
   &__headerDesc {
-    font-size: 1.44rem;
+    font-size: text-size('base');
     color: var(--ifm-font-color-base);
     opacity: 0.8;
     line-height: 1.7;

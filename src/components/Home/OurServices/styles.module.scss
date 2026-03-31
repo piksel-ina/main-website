@@ -40,7 +40,7 @@
   }
 
   &__accentText {
-    font-size: 1.12rem;
+    font-size: text-size('sm');
     font-weight: 700;
     color: var(--ifm-color-primary);
     letter-spacing: 0.1em;
@@ -61,7 +61,7 @@
   }
 
   &__headerDesc {
-    font-size: 1.44rem;
+    font-size: text-size('base');
     color: var(--ifm-font-color-base);
     opacity: 0.8;
     max-width: 61.4rem;
@@ -183,7 +183,7 @@
     color: var(--ifm-font-color-base);
     opacity: 0.8;
     margin-bottom: space('3');
-    font-size: 1.44rem;
+    font-size: text-size('base');
     line-height: 1.7;
     max-width: 64rem;
   }
@@ -192,7 +192,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: space('2') space('5');
-    font-size: 1.4rem;
+    font-size: text-size('base');
     list-style: none;
     padding: 0;
   }
@@ -211,16 +211,11 @@
 
   &__buttonGroup {
     display: flex;
-    gap: 1rem;
+    gap: space('2');
     margin-top: auto;
-    font-size: 1.4rem;
+    font-size: text-size('base');
     font-weight: 400;
     text-decoration: none;
     padding-top: space('2');
-  }
-
-  &__primaryBtn {
-    min-width: 35%;
-    justify-content: center;
   }
 }
