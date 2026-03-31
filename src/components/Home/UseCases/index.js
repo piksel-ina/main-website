@@ -5,7 +5,7 @@ import { useCasesData, useCasesHeaderData } from "@site/src/data/useCasesData";
 import { Check } from 'lucide-react';
 import ViewAllButton from '../../UI/Atoms/ViewAllButton';
 import CTAButton from '../../UI/Atoms/CTAButton';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function UseCases() {
   if (!useCasesData || Object.keys(useCasesData).length === 0) {
@@ -35,26 +35,26 @@ export default function UseCases() {
   };
 
   return (
-    <section id="use-cases" className={styles.section} style={dynamicStyles}>
+    <section id="use-cases" className={styles.useCases} style={dynamicStyles}>
       <ShapeContainer variant="none" color="neutral" position="absolute" flip dotPattern patternColor="primary" />
       
       <div className="container">
-        <div className={styles.header}>
-          <div className={styles.labelWrapper}>
-            <div className={styles.line} />
+        <div className={styles.useCases__header}>
+          <div className={styles.useCases__labelWrapper}>
+            <div className={styles.useCases__line} />
             <span>{useCasesHeaderData?.tag || 'Use Cases'}</span>
-            <div className={styles.line} />
+            <div className={styles.useCases__line} />
           </div>
-          <h2 className={styles.title}>{useCasesHeaderData?.title || 'Our Use Cases'}</h2>
-          <p className={styles.subtitle}>
+          <h2 className={styles.useCases__title}>{useCasesHeaderData?.title || 'Our Use Cases'}</h2>
+          <p className={styles.useCases__subtitle}>
             {useCasesHeaderData?.subtitle || 'Explore how our solutions work in practice'}
           </p>
         </div>
 
-        <div className={styles.tabsWrapper}>
-          <div className={styles.scanLine} />
+        <div className={styles.useCases__tabsWrapper}>
+          <div className={styles.useCases__scanLine} />
           
-          <div className={styles.tabs} role="tablist" aria-label="Use case categories">
+          <div className={styles.useCases__tabs} role="tablist" aria-label="Use case categories">
             {useCaseKeys.map((key) => {
               const isActive = activeTab === key;
               const item = useCasesData[key];
@@ -65,13 +65,13 @@ export default function UseCases() {
                   aria-selected={isActive}
                   aria-controls={`panel-${key}`}
                   tabIndex={isActive ? 0 : -1}
-                  className={clsx(styles.tabButton, isActive && styles.tabButtonActive)}
+                  className={clsx(styles.useCases__tabButton, isActive && styles['useCases__tabButton--active'])}
                   onClick={() => setActiveTab(key)}
                   data-text={item?.tabLabel || item?.title || ''}
                 >
                   {item?.tabLabel || item?.title || 'Untitled'}
                   {isActive && (
-                    <div className={styles.tabIndicator} />
+                    <div className={styles.useCases__tabIndicator} />
                   )}
                 </button>
               );
@@ -80,7 +80,7 @@ export default function UseCases() {
         </div>
 
         {/* Content Area */}
-        <div className={styles.contentGrid}>
+        <div className={styles.useCases__contentGrid}>
           {useCaseKeys.map((key) => {
             const item = useCasesData[key];
             const isActive = activeTab === key;
@@ -97,55 +97,55 @@ export default function UseCases() {
                 id={`panel-${key}`}
                 role="tabpanel"
                 aria-labelledby={`tab-${key}`}
-                className={clsx(styles.useCaseItem, isActive && styles.useCaseItemActive)}
+                className={clsx(styles.useCases__useCaseItem, isActive && styles['useCases__useCaseItem--active'])}
                 aria-hidden={!isActive}
                 style={itemStyles}
               >
                 {/* Title Section */}
-                <div className={styles.titleSection}>
-                  <div className={styles.iconWrapper}>
-                    <div className={styles.iconGlow} />
-                    {ItemIcon && <ItemIcon className={styles.icon} />}
+                <div className={styles.useCases__titleSection}>
+                  <div className={styles.useCases__iconWrapper}>
+                    <div className={styles.useCases__iconGlow} />
+                    {ItemIcon && <ItemIcon className={styles.useCases__icon} />}
                   </div>
-                  <h3 className={styles.contentTitle}>
-                    <a href={item?.link || '#'} className={styles.contentTitleLink}>
+                  <h3 className={styles.useCases__contentTitle}>
+                    <a href={item?.link || '#'} className={styles.useCases__contentTitleLink}>
                       {item?.title || 'Untitled Use Case'}
                     </a>
-                    <div className={styles.titleUnderline} />
+                    <div className={styles.useCases__titleUnderline} />
                   </h3>
                 </div>
 
-                {/* Image Section - Fixed alt text */}
-                <div className={clsx("group", styles.imageSectionWrapper)}>
-                  <div className={styles.imageSection}>
-                    <div className={styles.imageContainer}>
+                {/* Image Section */}
+                <div className={clsx("group", styles.useCases__imageSectionWrapper)}>
+                  <div className={styles.useCases__imageSection}>
+                    <div className={styles.useCases__imageContainer}>
                       {item?.image && (
                         <img
                           src={item.image}
                           alt={`${item.title} use case illustration`}
-                          className={styles.image}
+                          className={styles.useCases__image}
                           loading="lazy"
                         />
                       )}
-                      <div className={styles.scanVertical} />
+                      <div className={styles.useCases__scanVertical} />
                     </div>
                   </div>
                 </div>
 
                 {/* Detail Section */}
-                <div className={styles.detailSection}>
-                  <p className={styles.contentDescription}>
+                <div className={styles.useCases__detailSection}>
+                  <p className={styles.useCases__contentDescription}>
                     {item?.description || 'No description available'}
                   </p>
 
                   {item?.features && item.features.length > 0 && (
-                    <div className={styles.featuresList}>
+                    <div className={styles.useCases__featuresList}>
                       {item.features.map((feature, idx) => (
-                        <div key={idx} className={styles.featureItem}>
-                          <div className={styles.checkIconWrapper}>
-                            <Check className={styles.checkIcon} />
+                        <div key={idx} className={styles.useCases__featureItem}>
+                          <div className={styles.useCases__checkIconWrapper}>
+                            <Check className={styles.useCases__checkIcon} />
                           </div>
-                          <span className={styles.featureText}>{feature}</span>
+                          <span className={styles.useCases__featureText}>{feature}</span>
                         </div>
                       ))}
                     </div>

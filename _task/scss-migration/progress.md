@@ -62,19 +62,20 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 
 ## Session 3 — Home Page Sections (5 components)
 
-- [ ] 3.1  Hero: `styles.module.css` → `styles.module.scss` (camelCase→BEM, hardcoded colors→tokens, remove clamp(), 3 breakpoints→mixins)
-- [ ] 3.2  CallToAction: `styles.module.css` → `styles.module.scss` (already BEM, remove clamp(), use glass() mixin)
-- [ ] 3.3  OurServices: `style.module.css` → `styles.module.scss` (rename singular→plural, BEM)
-- [ ] 3.4  UseCases: `styles.module.css` → `styles.module.scss` (token usage, BEM)
-- [ ] 3.5  Faq: `style.module.css` → `styles.module.scss` (rename singular→plural, BEM)
-- [ ] 3.6  Update JS imports in all 5 components
-- [ ] 3.7  Delete old `.module.css` files (5 files)
-- [ ] 3.8  Run `npm run build`
+- [x] 3.1  Hero: `styles.module.css` → `styles.module.scss` (camelCase→BEM: `.heroSection`→`.hero` with `&__imageContainer`, `&__contentWrapper`, `&__tag`, `&__title`, `&__subtitle`, `&__actions`, `&__statsRow`, `&__statItem`, `&__statValue`, `&__statLabel`; hardcoded colors→tokens: `#0d295b`/`#244680`→`color('primary')`/`color('secondary')`, `color: white`→`color('bg')`; removed `clamp()` for height→`600px`, title→`text-size('2xl')`+respond-to overrides, subtitle→`text-size('sm')`; 3 `@media`→`@include respond-to()`; gap `1.6rem`→`space('3')`, `2rem`→`space('4')`, `4rem`→`space('7')`, `5.12rem`→`space('7')`, `6.4rem`→`space('9')`, `3.2rem`→`space('6')`, `1rem`→`text-size('xs')`)
+- [x] 3.2  CallToAction: `styles.module.css` → `styles.module.scss` (already BEM with `&__` nesting; replaced glass manual styles→`@include glass(0.15, 2rem)`; removed all `clamp()` — padding→`space('9')`+respond-to override, stats gaps/margins→`space('4')`/`space('3')`, statNumber→`text-size('base')`, title→`text-size('2xl')`+respond-to, description→`text-size('sm')`, actions gap→`space('2')`, margin-top→`space('2')`; `color: #fff`→`color('bg')`; `@media`→`@include respond-to()`; kept: `72rem` max-width, `48em`/`31.25em` non-standard breakpoints, micro values)
+- [x] 3.3  OurServices: `style.module.css` → `styles.module.scss` (rename singular→plural; flat→BEM `.ourServices` with `&__contentWrapper`, `&__header`, `&__serviceItem`, etc.; removed `clamp()` — headerTitle→`text-size('2xl')`+respond-to; `8rem`→`space('10')`, `5rem`→`space('7')`, `1.28rem`→`space('2')`, `0.96rem`→`space('1')`, `1.92rem`→`space('4')`, `2rem`→`space('4')`, `4rem`→`space('7')`, `2.56rem`→`text-size('md')`, `1.6rem`→`space('3')`, `0.8rem`→`space('1')`, `0.8rem`→`space('1')`, `1.2rem`→`space('2')`, `border-radius: 0.8rem`→`space('1')`, `gap: 0.96rem`→`space('1')`, `gap: 1.28rem 2.56rem`→`space('2') space('5')`; `@media`→`@include respond-to()`; kept: component-specific `100rem`/`61.4rem`/`64rem`/`8.6rem` widths, `11.2rem` number font-size, `3.6rem` padding, `0.6em` em-padding, icon dims `2.6rem`, `16rem`/`12rem` margins)
+- [x] 3.4  UseCases: `styles.module.css` → `styles.module.scss` (flat→BEM `.useCases` with `&__header`, `&__tabButton`, `&__useCaseItem`, etc.; removed `clamp()` — section padding→`space('9')`+respond-to, header margin→`space('7')`+respond-to, title→`text-size('2xl')`+respond-to, subtitle→`text-size('sm')`, statNumber removed clamp; `0.64rem`→`space('1')`, `1.28rem`→`space('2')`, `2.56rem`→`space('5')`, `3.84rem`→`space('7')`, `4rem`→`space('7')`, `1.6rem`→`space('3')`, `0.96rem`→`space('1')`, `0.64rem`→`$card-border-radius`, `2.4rem`→`space('5')`, `1.92rem`→`space('4')`, `0.32rem` kept (micro); `tabButtonActive`→`&--active` modifier; `@media`→`@include respond-to()`; kept: component-specific `90rem`/`53.8rem`/`38.4rem`/`20.5rem`/`4.2rem`, `1.4rem`/`1.54rem` font-sizes, icon dims)
+- [x] 3.5  Faq: `style.module.css` → `styles.module.scss` (rename singular→plural; flat→BEM `.faq` with `&__contentWrapper`, `&__headerColumn`, `&__accentLine`, `&__headerTitle`, `&__headerDesc`, `&__faqList`; removed `clamp()` — headerTitle→`text-size('2xl')`+respond-to; `8rem`→`space('10')`, `1.28rem`→`space('2')`, `6rem`→`space('9')`, `2rem`→`space('4')`, `1.6rem`→`space('3')`, `4rem`→`space('7')`; `@media`→`@include respond-to()`; kept: component-specific `110rem`/`28rem`/`24rem`/`16rem`, `10rem` sticky top, `1.12rem`/`1.44rem` font-sizes, `0.16rem` bar height)
+- [x] 3.6  Update JS imports in all 5 components (Hero: all `heroSection`/`contentWrapper`/etc→`hero`/`hero__*`; CallToAction: import path only; OurServices: all `sectionContainer`/etc→`ourServices`/`ourServices__*`; UseCases: all `section`/`tabButton`/`useCaseItem`→`useCases`/`useCases__tabButton--active`/`useCases__useCaseItem--active`; Faq: `sectionContainer`/etc→`faq`/`faq__*`, restored `FAQItem` import)
+- [x] 3.7  Delete old `.module.css` files (5 files)
+- [x] 3.8  Run `npm run build` — **PASSES** (zero SCSS warnings)
+- [x] 3.9  **Token revision pass** — audited all 5 components; snapped CallToAction `1.2rem`→`space('2')`, OurServices `0.8rem`→`space('1')`, OurServices `1.2rem`→`space('2')`; intentionally kept: component-specific max-widths/heights (`72rem`, `90rem`, `100rem`, `110rem`, `38.4rem`, etc.), micro values (`0.16rem`, `0.3rem`, `0.4rem`, `0.85rem`), icon dimensions, em-based values, `1rem` (no close token), `1.12rem`/`1.4rem`/`1.44rem`/`1.54rem` (no close tokens), opacity, box-shadow, z-index, `31.25em`/`48em` breakpoints (non-standard), text-shadow values, percentage widths
 
-**Session status:** `[ ]` Not started
-**Build passes:** —
-**Started:** —
-**Completed:** —
+**Session status:** `[x]` Complete
+**Build passes:** Yes
+**Started:** 2026-03-31
+**Completed:** 2026-03-31
 
 ---
 
@@ -139,12 +140,12 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 | 0       | Foundation | `[x]`  | Pass  |
 | 1       | 4 (Atoms+Carousel) | `[x]`  | Pass  |
 | 2       | 3 (Molecules) | `[x]`  | Pass  |
-| 3       | 5 (Home)   | `[ ]`   | —     |
+| 3       | 5 (Home)   | `[x]`  | Pass  |
 | 4       | 4 (Docs)   | `[ ]`   | —     |
 | 5       | 5 (Theme)  | `[ ]`   | —     |
 | 6       | Audit      | `[ ]`   | —     |
 
 **Total files to migrate:** 22 (1 global + 21 CSS Modules)
-**Files migrated:** 8 / 22
-**Current session:** Session 2 complete
-**Next session to resume:** Session 3
+**Files migrated:** 13 / 22
+**Current session:** Session 3 complete
+**Next session to resume:** Session 4

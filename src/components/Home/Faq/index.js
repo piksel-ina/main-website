@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { faqData } from "@site/src/data/faqData";
-import styles from './style.module.css';
+import styles from './styles.module.scss';
 import FAQItem from '../../UI/Molecules/FAQItem';
 
-export default function Faq() {
+const Faq = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const handleToggle = (index) => {
@@ -11,21 +11,21 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className={styles.sectionContainer}>
+    <section id="faq" className={styles.faq}>
       
-      <div className={styles.contentWrapper}>
+      <div className={styles.faq__contentWrapper}>
         {/* Left Column: Header & Accents */}
-        <div className={styles.headerColumn}>
-            <div className={styles.accentLine}>
-                <div className={styles.accentLineBar} />
-                <span className={styles.accentText}>FAQ</span>
+        <div className={styles.faq__headerColumn}>
+            <div className={styles.faq__accentLine}>
+                <div className={styles.faq__accentLineBar} />
+                <span className={styles.faq__accentText}>FAQ</span>
             </div>
-            <h2 className={styles.headerTitle} dangerouslySetInnerHTML={{ __html: faqData.title }} />
-            <p className={styles.headerDesc}>{faqData.subtitle}</p>
+            <h2 className={styles.faq__headerTitle} dangerouslySetInnerHTML={{ __html: faqData.title }} />
+            <p className={styles.faq__headerDesc}>{faqData.subtitle}</p>
         </div>
         
         {/* Right Column: FAQ List */}
-        <div className={styles.faqList}>
+        <div className={styles.faq__faqList}>
           {faqData.questions.map((item, index) => (
             <FAQItem 
               key={item.id}
@@ -40,4 +40,6 @@ export default function Faq() {
       </div>
     </section>
   );
-}
+};
+
+export default Faq;

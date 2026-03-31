@@ -1,0 +1,164 @@
+@use '../../../css/abstracts' as *;
+
+.cta {
+  position: relative;
+  padding: space('9') 0;
+  overflow: hidden;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+
+  @include respond-to('desktop') {
+    padding: space('7') 0;
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  &__bgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      210deg,
+      rgba(10, 14, 26, 0.25) 0%,
+      rgba(10, 14, 26, 0.1) 100%
+    );
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__glass {
+    @include glass(0.15, 2rem);
+    border-radius: 0;
+    padding: space('7');
+    max-width: 72rem;
+    width: 100%;
+    box-shadow:
+      0 space('1') space('6') rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+    @include respond-to('desktop') {
+      padding: space('5');
+    }
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: space('4');
+    padding-bottom: space('4');
+    margin-bottom: space('4');
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    @media (max-width: 48em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 31.25em) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: space('3');
+    }
+  }
+
+  &__statItem {
+    text-align: center;
+  }
+
+  &__statNumber {
+    font-family: var(--font-family-heading);
+    font-size: text-size('base');
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+  }
+
+  &__statLabel {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: space('3');
+  }
+
+  &__title {
+    font-family: var(--font-family-heading);
+    font-size: text-size('2xl');
+    font-weight: 700;
+    color: color('bg');
+    line-height: 1.15;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    @include respond-to('tablet') {
+      font-size: text-size('xl');
+    }
+  }
+
+  &__description {
+    font-size: text-size('sm');
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 50ch;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: space('2');
+    margin-top: space('2');
+
+    @media (max-width: 31.25em) {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__btnPrimary {
+    color: var(--ifm-color-primary) !important;
+
+    &:hover,
+    &:focus {
+      outline-color: color('bg') !important;
+    }
+  }
+
+  &__btnSecondary {
+    color: color('bg') !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+
+    &:hover,
+    &:focus {
+      color: color('bg') !important;
+      box-shadow: inset 0 0 0 1px color('bg') !important;
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+}
