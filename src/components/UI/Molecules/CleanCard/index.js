@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import styles from "./style.module.css";
+import styles from "./styles.module.scss";
 import Button from "../../Atoms/Button";
 
 const CleanCard = ({

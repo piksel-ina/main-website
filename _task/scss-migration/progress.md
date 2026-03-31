@@ -45,17 +45,18 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 
 ## Session 2 — UI Molecules (3 components)
 
-- [ ] 2.1  CleanCard: `style.module.css` → `styles.module.scss` (rename singular→plural, BEM)
-- [ ] 2.2  FAQItem: `styles.module.css` → `styles.module.scss` (BEM, tokens)
-- [ ] 2.3  ModernCard: `styles.module.css` → `styles.module.scss` (remove dark mode, BEM, fix hardcoded colors)
-- [ ] 2.4  Update JS imports in all 3 components
-- [ ] 2.5  Delete old `.module.css` files (3 files)
-- [ ] 2.6  Run `npm run build`
+- [x] 2.1  CleanCard: `style.module.css` → `styles.module.scss` (rename singular→plural, BEM, tokens: `2.56rem`→`space('5')`, `1.92rem`→`space('4')`, `0.96rem`→`space('1')`, `0.64rem`→`$card-border-radius`, `1.6rem`→`text-size('base')`, `1.28rem`→`text-size('sm')`/`space('2')`)
+- [x] 2.2  FAQItem: `styles.module.css` → `styles.module.scss` (flat→BEM: `.item`→`.faqItem` with `&__question`, `&__questionText`, `&__iconWrapper`, `&__icon`, `&__answer`, `&__answerVisible`, `&__answerInner`; tokens: `2rem`→`space('4')`, `2.4rem`→`space('5')`, `1.6rem`→`text-size('base')`, `3.2rem`→`space('6')`, `0.8rem`→`space('1')`, `color: white`→`color('bg')`; kept: `0.6em` padding, `1.6rem` icon dims, `1rem`/`1.44rem` no close tokens)
+- [x] 2.3  ModernCard: `styles.module.css` → `styles.module.scss` (camelCase→BEM with `&__element`; removed dark mode block per D-003; replaced `clamp()` with `text-size('lg')`/`text-size('md')`/`text-size('base')` + `respond-to()`; `color: white`→`color('bg')`; `1.44rem`/`1.28rem`→`text-size('sm')`; `0.64rem`→`space('1')`; used `@include truncate(3)` for description; kept: component-specific heights, shadow values, `0.512rem` padding-top)
+- [x] 2.4  Update JS imports in all 3 components (CleanCard: `style.module.css`→`styles.module.scss`; FAQItem: class refs `.item`→`.faqItem`, all flat→BEM; ModernCard: all `modernCardXxx`→`modernCard__xxx`)
+- [x] 2.5  Delete old `.module.css` files (3 files)
+- [x] 2.6  Run `npm run build` — **PASSES** (zero SCSS warnings)
+- [x] 2.7  **Token revision pass** — audited all 3 components; snapped `border-radius: 0.8rem` → `space('1')` in FAQItem; intentionally kept: micro-transforms (`translateY(-0.32rem)`, `translateX(0.32rem)`, `margin-left: 0.32rem`), box-shadow/text-shadow values, opacity, icon dimensions, em-based padding (`0.6em`), component-specific heights, `padding-top: 0.512rem` (no token), `padding-left: 1rem` (no token), `font-size: 1.44rem` (no close token), percentage heights/widths, z-index
 
-**Session status:** `[ ]` Not started
-**Build passes:** —
-**Started:** —
-**Completed:** —
+**Session status:** `[x]` Complete
+**Build passes:** Yes
+**Started:** 2026-03-31
+**Completed:** 2026-03-31
 
 ---
 
@@ -137,13 +138,13 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 |---------|-----------|--------|-------|
 | 0       | Foundation | `[x]`  | Pass  |
 | 1       | 4 (Atoms+Carousel) | `[x]`  | Pass  |
-| 2       | 3 (Molecules) | `[ ]`   | —     |
+| 2       | 3 (Molecules) | `[x]`  | Pass  |
 | 3       | 5 (Home)   | `[ ]`   | —     |
 | 4       | 4 (Docs)   | `[ ]`   | —     |
 | 5       | 5 (Theme)  | `[ ]`   | —     |
 | 6       | Audit      | `[ ]`   | —     |
 
 **Total files to migrate:** 22 (1 global + 21 CSS Modules)
-**Files migrated:** 5 / 22
-**Current session:** Session 1 complete
-**Next session to resume:** Session 2
+**Files migrated:** 8 / 22
+**Current session:** Session 2 complete
+**Next session to resume:** Session 3

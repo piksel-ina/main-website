@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import Button from "../../Atoms/Button";
 
 /**
@@ -13,26 +13,26 @@ function ModernCard({ image, title, description, link }) {
 
   return (
     <div className={`card shadow--md ${styles.modernCard}`}>
-      <div className={styles.modernCardImageContainer}>
-        <img src={image} alt={title} className={styles.modernCardImage} />
-        <div className={styles.modernCardOverlay}></div>
+      <div className={styles.modernCard__imageContainer}>
+        <img src={image} alt={title} className={styles.modernCard__image} />
+        <div className={styles.modernCard__overlay}></div>
       </div>
 
       {/* Content Container */}
-      <div className={`card__body ${styles.modernCardContent}`}>
+      <div className={`card__body ${styles.modernCard__content}`}>
         {/* Title at the top */}
-        <h3 className={styles.modernCardTitle}>{title}</h3>
+        <h3 className={styles.modernCard__title}>{title}</h3>
 
         {/* Bottom content */}
-        <div className={styles.modernCardBottom}>
-          <p className={styles.modernCardDescription}>{description}</p>
+        <div className={styles.modernCard__bottom}>
+          <p className={styles.modernCard__description}>{description}</p>
           <Button
             to={link}
             variant="link"
-            className={styles.modernCardButton}
+            className={styles.modernCard__button}
           >
             Learn more
-            <span className={styles.modernCardArrow}>→</span>
+            <span className={styles.modernCard__arrow}>→</span>
           </Button>
         </div>
       </div>

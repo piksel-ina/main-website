@@ -1,0 +1,114 @@
+@use '../../../../css/abstracts' as *;
+
+.faqItem {
+  position: relative;
+  border-top: 1px solid var(--ifm-border-color);
+  transition: all 0.3s ease;
+  background: transparent;
+
+  &[data-open="true"] {
+    border-top-color: var(--ifm-color-primary);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: space('4') * -1;
+    right: space('4') * -1;
+    bottom: 0;
+    background-color: color-mix(in srgb, var(--ifm-color-primary) 4%, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    clip-path: polygon(
+      space('4') 0,
+      100% 0,
+      100% calc(100% - space('4')),
+      calc(100% - space('4')) 100%,
+      0 100%,
+      0 space('4')
+    );
+  }
+
+  &:hover::before,
+  &[data-open="true"]::before {
+    opacity: 1;
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: space('5') 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: space('4');
+    color: var(--ifm-font-color-base);
+  }
+
+  &__questionText {
+    font-family: var(--font-family-heading);
+    font-size: text-size('base');
+    font-weight: 600;
+    line-height: 1.4;
+    padding-left: 1rem;
+    transition: color 0.2s ease;
+  }
+
+  &[data-open="true"] &__questionText {
+    color: var(--ifm-color-primary);
+  }
+
+  &__iconWrapper {
+    color: var(--ifm-color-primary);
+    background: var(--ifm-color-emphasis-100);
+    padding: 0.6em;
+    border-radius: space('1');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: space('6');
+    height: space('6');
+  }
+
+  &[data-open="true"] &__iconWrapper {
+    background: var(--ifm-color-primary);
+    color: color('bg');
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke-width: 2.5;
+  }
+
+  &__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+  }
+
+  &__answerVisible {
+    grid-template-rows: 1fr;
+  }
+
+  &__answerInner {
+    padding-left: 1rem;
+    overflow: hidden;
+    color: var(--ifm-font-color-base);
+    opacity: 0.8;
+    font-size: 1.44rem;
+    line-height: 1.7;
+
+    p {
+      padding-bottom: space('5');
+      max-width: 65ch;
+    }
+  }
+}
