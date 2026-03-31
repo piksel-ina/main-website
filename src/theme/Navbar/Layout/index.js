@@ -7,7 +7,7 @@ import {
 } from "@docusaurus/theme-common/internal";
 import { translate } from "@docusaurus/Translate";
 import NavbarMobileSidebar from "@theme/Navbar/MobileSidebar";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import { useLocation } from "@docusaurus/router";
 
 function NavbarBackdrop(props) {

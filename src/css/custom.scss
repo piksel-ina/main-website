@@ -226,17 +226,13 @@ h1, h2, h3, h4, h5, h6 {
   &__title {
     color: color('primary');
     font-family: font-family('heading');
-    font-size: text-size('sm');
+    font-size: 1.4rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: space('3');
     position: relative;
     padding-bottom: space('1');
-
-    @include respond-to('desktop') {
-      font-size: 1.4rem;
-    }
 
     &::after {
       content: '';
@@ -258,15 +254,11 @@ h1, h2, h3, h4, h5, h6 {
 
   &__link-item {
     color: color('primary-light');
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     transition: all 0.25s ease;
     display: inline-block;
     position: relative;
     text-decoration: none;
-
-    @include respond-to('desktop') {
-      font-size: 1.4rem;
-    }
 
     &:hover {
       color: color('accent');
@@ -302,25 +294,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__copyright-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: color('primary');
     font-weight: 500;
     line-height: 1.6;
-
-    @include respond-to('desktop') {
-      font-size: 1.4rem;
-    }
   }
 
   &__address {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: color('primary-light');
     opacity: 0.8;
     line-height: 1.8;
-
-    @include respond-to('desktop') {
-      font-size: 1.3rem;
-    }
   }
 }
 

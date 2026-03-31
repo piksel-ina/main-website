@@ -8,6 +8,13 @@
   }
 }
 
+@mixin respond-above($breakpoint) {
+  $value: bp($breakpoint) + 1;
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
 @mixin heading {
   font-family: font-family('heading');
   font-weight: 600;

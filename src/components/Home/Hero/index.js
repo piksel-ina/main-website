@@ -41,12 +41,6 @@ export default function Hero() {
               variant="primary"
               iconPosition="left"
             />
-            <CTAButton
-              to={heroData.ctaSecondary.link}
-              label={heroData.ctaSecondary.text}
-              variant="secondary"
-              showIcon={false}
-            />
           </div>
 
           <div className={styles.hero__statsRow}>

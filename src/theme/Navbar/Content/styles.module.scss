@@ -1,0 +1,11 @@
+@use '../../../css/abstracts' as *;
+
+@include respond-to('desktop') {
+  .colorModeToggle {
+    display: none;
+  }
+}
+
+:global(.navbar__items--right) > :last-child {
+  padding-right: 0;
+}
