@@ -67,10 +67,6 @@
 
     @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include respond-to('mobile') {
-      grid-template-columns: repeat(2, 1fr);
       gap: space('3');
     }
   }
@@ -134,7 +130,7 @@
     gap: space('2');
     margin-top: space('2');
 
-    @include respond-to('mobile') {
+    @include respond-to('tablet') {
       flex-direction: column;
       width: 100%;
       align-items: center;
