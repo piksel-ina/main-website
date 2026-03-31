@@ -1,0 +1,139 @@
+@use '../../../../css/abstracts' as *;
+
+.modernCard {
+  position: relative;
+  height: 32rem;
+  overflow: hidden;
+  border-radius: var(--ifm-card-border-radius);
+  transition: box-shadow var(--ifm-transition-fast) ease;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    box-shadow: var(--ifm-box-shadow-lg);
+  }
+
+  &__imageContainer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all var(--ifm-transition-slow) ease;
+    display: block;
+  }
+
+  &:hover &__image {
+    filter: brightness(0.7);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 100%
+    );
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: color('bg');
+    background: transparent;
+    padding: var(--ifm-spacing-vertical);
+    z-index: 2;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: text-size('lg') !important;
+    font-weight: var(--ifm-font-weight-bold);
+    color: color('bg');
+    margin: 0;
+    text-shadow: 0 0.16rem 0.8rem rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: var(--ifm-font-size-base);
+    line-height: var(--ifm-line-height-base);
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    text-shadow: 0 1px 0.24rem rgba(0, 0, 0, 0.7);
+  }
+
+  &__button {
+    color: color('bg');
+    padding-top: 0.512rem;
+    padding-left: 0;
+    font-size: var(--ifm-font-size-base);
+    font-weight: var(--ifm-font-weight-semibold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color var(--ifm-transition-fast) ease;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-shadow: 0 1px 0.24rem rgba(0, 0, 0, 0.7);
+    align-self: flex-start;
+
+    &:hover {
+      color: var(--ifm-color-primary);
+      text-decoration: none;
+    }
+  }
+
+  &__arrow {
+    margin-left: space('1');
+    font-size: text-size('sm');
+    transition: transform var(--ifm-transition-fast) ease;
+    display: inline-block;
+  }
+
+  &__bottom {}
+
+  @include respond-to('desktop') {
+    height: 28.2rem;
+
+    &__title {
+      font-size: text-size('md') !important;
+    }
+  }
+
+  @include respond-to('tablet') {
+    height: 25.6rem;
+
+    &__title {
+      font-size: text-size('base') !important;
+    }
+
+    &__description {
+      font-size: var(--ifm-font-size-small);
+      @include truncate(3);
+    }
+
+    &__button {
+      font-size: var(--ifm-font-size-small);
+    }
+
+    &__arrow {
+      font-size: text-size('sm');
+    }
+  }
+}
