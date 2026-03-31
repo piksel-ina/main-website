@@ -65,11 +65,11 @@
     margin-bottom: space('4');
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-    @media (max-width: 48em) {
+    @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 31.25em) {
+    @include respond-to('mobile') {
       grid-template-columns: repeat(2, 1fr);
       gap: space('3');
     }
@@ -134,7 +134,7 @@
     gap: space('2');
     margin-top: space('2');
 
-    @media (max-width: 31.25em) {
+    @include respond-to('mobile') {
       flex-direction: column;
       width: 100%;
       align-items: center;
