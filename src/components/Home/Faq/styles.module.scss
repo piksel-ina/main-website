@@ -1,0 +1,85 @@
+@use '../../../css/abstracts' as *;
+
+.faq {
+  position: relative;
+  background-color: var(--ifm-background-surface-color);
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: -16rem;
+  padding-top: 24rem;
+  padding-bottom: space('10');
+  z-index: 0;
+
+  &__contentWrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 space('2');
+    display: grid;
+    grid-template-columns: 28rem 1fr;
+    gap: space('9');
+    align-items: start;
+
+    @include respond-to('desktop') {
+      grid-template-columns: 1fr;
+      gap: space('7');
+    }
+  }
+
+  &__headerColumn {
+    position: sticky;
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: space('4');
+  }
+
+  &__accentLine {
+    display: flex;
+    align-items: center;
+    gap: space('2');
+  }
+
+  &__accentLineBar {
+    width: 3.84rem;
+    height: 0.16rem;
+    background-color: var(--ifm-color-primary);
+  }
+
+  &__accentText {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--ifm-color-primary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__headerTitle {
+    font-family: var(--font-family-heading);
+    font-size: text-size('2xl');
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--ifm-font-color-base);
+    margin: 0;
+
+    @include respond-to('tablet') {
+      font-size: text-size('xl');
+    }
+  }
+
+  &__headerDesc {
+    font-size: 1.44rem;
+    color: var(--ifm-font-color-base);
+    opacity: 0.8;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  &__faqList {
+    display: flex;
+    flex-direction: column;
+    gap: space('3');
+    width: 100%;
+  }
+}

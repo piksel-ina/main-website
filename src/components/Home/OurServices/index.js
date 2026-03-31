@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 import { servicesData, servicesHeaderData } from "@site/src/data/servicesData";
-import styles from "./style.module.css";
+import styles from "./styles.module.scss";
 import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 import ViewAllButton from "../../UI/Atoms/ViewAllButton";
 import CTAButton from "../../UI/Atoms/CTAButton";
@@ -44,7 +44,7 @@ const colorMap = {
 
 export default function OurServices() {
   return (
-    <section id="services" className={styles.sectionContainer}>
+    <section id="services" className={styles.ourServices}>
       <ShapeContainer 
         variant="slanted-y" 
         position="absolute"
@@ -53,31 +53,31 @@ export default function OurServices() {
         pattern="grid"
         style={{ backgroundColor: 'var(--ifm-background-color)', zIndex: 0 }}
       >
-        <div className={styles.diagonalPattern} />
+        <div className={styles.ourServices__diagonalPattern} />
       </ShapeContainer>
 
-      <div className={styles.contentWrapper}>
-        <div className={styles.header}>
-          <div className={styles.accentLine}>
-            <div className={styles.accentLineBar} />
-            <span className={styles.accentText}>
+      <div className={styles.ourServices__contentWrapper}>
+        <div className={styles.ourServices__header}>
+          <div className={styles.ourServices__accentLine}>
+            <div className={styles.ourServices__accentLineBar} />
+            <span className={styles.ourServices__accentText}>
               {servicesHeaderData.tag}
             </span>
           </div>
 
-          <h2 className={styles.headerTitle}>
+          <h2 className={styles.ourServices__headerTitle}>
             {servicesHeaderData.title}
-            <span className={styles.pulseDot} />
+            <span className={styles.ourServices__pulseDot} />
           </h2>
 
-          <p className={styles.headerDesc}>
+          <p className={styles.ourServices__headerDesc}>
             {servicesHeaderData.subtitle}
           </p>
 
-          <div className={styles.headerCornerAccent} />
+          <div className={styles.ourServices__headerCornerAccent} />
         </div>
 
-        <div className={styles.servicesContainer}>
+        <div className={styles.ourServices__servicesContainer}>
 
 
           {servicesData.map((service, index) => {
@@ -87,7 +87,7 @@ export default function OurServices() {
             return (
               <div
                 key={service.id}
-                className={styles.serviceItem}
+                className={styles.ourServices__serviceItem}
                 style={{
                   "--theme-color": colors.main,
                   "--theme-light": colors.light,
@@ -95,64 +95,64 @@ export default function OurServices() {
                 }}
               >
                 <div
-                  className={styles.activeBorder}
+                  className={styles.ourServices__activeBorder}
                   style={{ backgroundColor: colors.main }}
                 />
 
-                <div className={styles.grid}>
-                  <div className={styles.numberCol}>
+                <div className={styles.ourServices__grid}>
+                  <div className={styles.ourServices__numberCol}>
                     <div
-                      className={styles.cornerAccent}
+                      className={styles.ourServices__cornerAccent}
                       style={{
                         borderColor: colors.light,
                         color: colors.light,
                       }}
                     />
                     <div
-                      className={styles.numberText}
+                      className={styles.ourServices__numberText}
                       style={{ 
                         color: `color-mix(in srgb, ${colors.main}, transparent 92%)`,
                       }}
                     >
                       {service.id}
                       <div
-                        className={styles.numberOverlay}
+                        className={styles.ourServices__numberOverlay}
                         style={{ backgroundColor: colors.main }}
                       />
                     </div>
                   </div>
 
-                  <div className={styles.contentCol}>
+                  <div className={styles.ourServices__contentCol}>
                     <div
-                      className={styles.contentCornerAccent}
+                      className={styles.ourServices__contentCornerAccent}
                       style={{ borderColor: colors.light }}
                     />
 
-                    <div className={styles.titleRow}>
+                    <div className={styles.ourServices__titleRow}>
                       <div
-                        className={styles.iconWrapper}
+                        className={styles.ourServices__iconWrapper}
                         style={{ color: colors.light }}
                       >
-                        <Icon className={styles.icon} />
+                        <Icon className={styles.ourServices__icon} />
                         <div
-                          className={styles.iconGlow}
+                          className={styles.ourServices__iconGlow}
                           style={{ backgroundColor: colors.main }}
                         />
                       </div>
-                      <h3 className={styles.serviceTitle}>{service.title}</h3>
+                      <h3 className={styles.ourServices__serviceTitle}>{service.title}</h3>
                       <div
-                        className={styles.titleLine}
+                        className={styles.ourServices__titleLine}
                         style={{ backgroundColor: colors.main }}
                       />
                     </div>
 
-                    <p className={styles.description}>{service.description}</p>
+                    <p className={styles.ourServices__description}>{service.description}</p>
 
-                    <ul className={styles.featuresList}>
+                    <ul className={styles.ourServices__featuresList}>
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className={styles.featureItem}>
+                        <li key={idx} className={styles.ourServices__featureItem}>
                           <span
-                            className={styles.featureArrow}
+                            className={styles.ourServices__featureArrow}
                             style={{ color: colors.light }}
                           >
                             ▸
@@ -162,8 +162,7 @@ export default function OurServices() {
                       ))}
                     </ul>
 
-                    {/* Buttons */}
-                    <div className={styles.buttonGroup}>
+                    <div className={styles.ourServices__buttonGroup}>
                       <CTAButton 
                     href={service?.link || '#'}
                     label={service?.buttonText || 'Learn More'}
@@ -179,14 +178,14 @@ export default function OurServices() {
                           label={service.secondaryButtonText}
                           variant="secondary"
                           icon={ArrowRight}
-                          className={styles.secondaryBtn}
+                          className={styles.ourServices__secondaryBtn}
                           iconPosition="left"
                         />
                       )}
                     </div>
 
                     <div
-                      className={styles.bottomCornerAccent}
+                      className={styles.ourServices__bottomCornerAccent}
                       style={{ borderColor: colors.light }}
                     />
                   </div>

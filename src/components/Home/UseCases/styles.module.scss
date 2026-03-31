@@ -1,0 +1,314 @@
+@use '../../../css/abstracts' as *;
+
+.useCases {
+  position: relative;
+  overflow: hidden;
+  padding: space('9') 0;
+  scroll-margin-top: 80px;
+  background-color: transparent;
+  color: var(--ifm-font-color-base);
+  z-index: 1;
+
+  @include respond-to('desktop') {
+    padding: space('7') 0;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: space('7');
+    padding: 0 space('2');
+    position: relative;
+    z-index: 10;
+
+    @include respond-to('tablet') {
+      margin-bottom: space('5');
+    }
+  }
+
+  &__labelWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: space('1');
+    font-size: 1.4rem;
+    margin-bottom: space('2');
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ifm-color-primary-light);
+  }
+
+  &__line {
+    width: space('5');
+    height: 1px;
+    background: var(--ifm-color-primary-light);
+    opacity: 0.5;
+  }
+
+  &__title {
+    font-family: var(--font-family-heading, inherit);
+    font-size: text-size('2xl');
+    font-weight: 700;
+    margin-bottom: space('2');
+    color: var(--ifm-color-primary);
+
+    @include respond-to('tablet') {
+      font-size: text-size('xl');
+    }
+  }
+
+  &__subtitle {
+    font-size: text-size('sm');
+    color: var(--ifm-font-color-base);
+    opacity: 0.8;
+    max-width: 53.8rem;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  &__tabsWrapper {
+    margin-bottom: 3.84rem;
+    border-bottom: 1px solid var(--ifm-border-color);
+    position: relative;
+    padding: 0 space('2');
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 4.2rem;
+    width: 100%;
+    position: relative;
+
+    @include respond-to('tablet') {
+      gap: space('2');
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding-bottom: space('1');
+    }
+  }
+
+  &__tabButton {
+    background: none;
+    border: none;
+    padding: space('2') 0;
+    font-size: 1.54rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    color: var(--ifm-font-color-base);
+    opacity: 0.6;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:focus {
+      outline: 2px solid var(--ifm-color-primary);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    &::before {
+      content: attr(data-text);
+      font-weight: 600;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &:hover,
+    &--active {
+      color: var(--ifm-color-primary);
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+
+  &__tabIndicator {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 0.16rem;
+    background-color: var(--active-color);
+    transform: scaleX(1.4);
+    transition: all 0.3s ease;
+  }
+
+  &__contentGrid {
+    display: grid;
+    grid-template-areas: "stack";
+    max-width: 90rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding: 0 space('2');
+  }
+
+  &__useCaseItem {
+    grid-area: stack;
+    display: grid;
+    grid-template-columns: 20.5rem 1fr;
+    grid-template-areas:
+      "image title"
+      "image details";
+    gap: 0 space('7');
+    align-items: stretch;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-out;
+    z-index: 0;
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 1;
+    }
+
+    @include respond-to('desktop') {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title"
+        "image"
+        "details";
+      gap: space('5') 0;
+    }
+  }
+
+  &__imageSectionWrapper {
+    grid-area: image;
+    width: 100%;
+    align-self: stretch;
+    display: flex;
+  }
+
+  &__imageContainer {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    min-height: 38.4rem;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - space('5')), calc(100% - space('5')) 100%, 0 100%);
+    box-shadow: 0 space('3') space('4') -0.4rem rgba(0, 0, 0, 0.1), 0 space('1') space('1') -0.4rem rgba(0, 0, 0, 0.04);
+    background-color: var(--ifm-color-emphasis-100);
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &__titleSection {
+    grid-area: title;
+  }
+
+  &__iconWrapper {
+    display: inline-flex;
+    padding: space('1');
+    background-color: var(--ifm-color-emphasis-100);
+    border-radius: $card-border-radius;
+    margin-bottom: space('2');
+    color: var(--active-color);
+  }
+
+  &__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    stroke-width: 1.6;
+  }
+
+  &__contentTitle {
+    font-family: var(--font-family-heading, inherit);
+    font-size: text-size('md');
+    font-weight: 700;
+    color: var(--ifm-color-primary);
+    margin: 0;
+  }
+
+  &__contentTitleLink {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--active-color);
+      outline: none;
+    }
+  }
+
+  &__detailSection {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contentDescription {
+    font-size: 1.4rem;
+    max-width: 95%;
+    line-height: 1.7;
+    color: var(--ifm-color-primary);
+    opacity: 0.9;
+    margin-bottom: space('5');
+  }
+
+  &__featuresList {
+    display: flex;
+    flex-direction: column;
+    gap: space('2');
+    margin-bottom: space('5');
+  }
+
+  &__featureItem {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    gap: space('1');
+  }
+
+  &__checkIconWrapper {
+    width: space('4');
+    height: space('4');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ifm-color-emphasis-100);
+    border-radius: 0.32rem;
+    color: var(--active-color);
+  }
+
+  &__checkIcon {
+    width: 1.28rem;
+    height: 1.28rem;
+    stroke-width: 2.4;
+  }
+
+  &__featureText {
+    color: var(--ifm-color-primary);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(space('2'));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateEnter {
+  animation: fadeSlideUp 0.4s ease-out forwards;
+}

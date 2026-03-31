@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 import CTAButton from '../../UI/Atoms/CTAButton';
 import { heroData } from "@site/src/data/heroData";
 
 export default function Hero() {
   return (
-    <section className={styles.heroSection}>
-      <div className={styles.heroImageContainer}>
+    <section className={styles.hero}>
+      <div className={styles.hero__imageContainer}>
         <picture>
           <source 
             srcSet={heroData.heroImage.sources.webp2x} 
@@ -21,20 +21,20 @@ export default function Hero() {
           <img 
             src={heroData.heroImage.fallback} 
             alt={heroData.heroImage.alt}
-            className={styles.heroImage}
+            className={styles.hero__image}
           />
         </picture>
       </div>
 
-      <div className={styles.contentWrapper}>
-        <div className={styles.heroContent}>
-          <span className={styles.tag}>{heroData.tag}</span>
-          <h1 className={styles.title}>{heroData.title}</h1>
-          <p className={styles.subtitle}>
+      <div className={styles.hero__contentWrapper}>
+        <div className={styles.hero__content}>
+          <span className={styles.hero__tag}>{heroData.tag}</span>
+          <h1 className={styles.hero__title}>{heroData.title}</h1>
+          <p className={styles.hero__subtitle}>
             {heroData.subtitle}
           </p>
           
-          <div className={styles.heroActions}>
+          <div className={styles.hero__actions}>
             <CTAButton
               to={heroData.ctaPrimary.link}
               label={heroData.ctaPrimary.text}
@@ -49,11 +49,11 @@ export default function Hero() {
             />
           </div>
 
-          <div className={styles.statsRow}>
+          <div className={styles.hero__statsRow}>
             {heroData.stats.map((stat, index) => (
-              <div key={index} className={styles.statItem}>
-                <span className={styles.statValue}>{stat.value}</span>
-                <span className={styles.statLabel}>{stat.label}</span>
+              <div key={index} className={styles.hero__statItem}>
+                <span className={styles.hero__statValue}>{stat.value}</span>
+                <span className={styles.hero__statLabel}>{stat.label}</span>
               </div>
             ))}
           </div>

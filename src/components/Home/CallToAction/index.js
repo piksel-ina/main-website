@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import { ctaData } from "@site/src/data/ctaData";
 import { statsData } from "@site/src/data/statsData";
 import CTAButton from "../../UI/Atoms/CTAButton";

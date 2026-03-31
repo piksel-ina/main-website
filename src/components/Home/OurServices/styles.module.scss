@@ -1,0 +1,226 @@
+@use '../../../css/abstracts' as *;
+
+.ourServices {
+  position: relative;
+  padding-top: space('10');
+  padding-bottom: space('7');
+  scroll-margin-top: 80px;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: -16rem;
+  z-index: 10;
+
+  &__contentWrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 100rem;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+    padding: 0 space('2');
+  }
+
+  &__header {
+    margin-bottom: space('7');
+    position: relative;
+    text-align: left;
+    padding-top: space('10');
+  }
+
+  &__accentLine {
+    display: flex;
+    align-items: center;
+    gap: space('2');
+    margin-bottom: space('1');
+  }
+
+  &__accentLineBar {
+    width: 3.84rem;
+    height: 0.16rem;
+    background-color: var(--ifm-color-primary);
+  }
+
+  &__accentText {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--ifm-color-primary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__headerTitle {
+    font-family: var(--font-family-heading);
+    font-size: text-size('2xl');
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--ifm-font-color-base);
+    margin-bottom: space('4');
+
+    @include respond-to('tablet') {
+      font-size: text-size('xl');
+    }
+  }
+
+  &__headerDesc {
+    font-size: 1.44rem;
+    color: var(--ifm-font-color-base);
+    opacity: 0.8;
+    max-width: 61.4rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  &__servicesContainer {
+    position: relative;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: space('4') 8.6rem;
+    grid-auto-rows: 1fr;
+
+    @include respond-to('tablet') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__serviceItem {
+    position: relative;
+    border-top: 1px solid var(--ifm-border-color);
+    padding: space('4') 0;
+    transition: all 0.3s ease;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: space('4') * -1;
+      right: space('4') * -1;
+      bottom: 0;
+      background-color: color-mix(in srgb, var(--theme-color) 4%, transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      border-radius: space('1');
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-top: none;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: space('4');
+    flex: 1;
+  }
+
+  &__numberCol {
+    position: absolute;
+    top: 0.6rem;
+    right: space('4');
+    pointer-events: none;
+  }
+
+  &__numberText {
+    font-family: var(--font-family-heading);
+    font-size: 11.2rem;
+    font-weight: 800;
+    line-height: 0.8;
+    opacity: 1;
+    color: #E5E7EB;
+    transition: none;
+  }
+
+  &__contentCol {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__titleRow {
+    display: flex;
+    align-items: center;
+    gap: space('4');
+    margin-bottom: space('1');
+    padding-top: 3.6rem;
+  }
+
+  &__iconWrapper {
+    color: var(--ifm-color-primary);
+    background: var(--ifm-color-emphasis-100);
+    padding: 0.6em;
+    border-radius: space('1');
+    display: inline-flex;
+    align-items: center;
+    transform: translateY(-0.7rem);
+  }
+
+  &__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    stroke-width: 1.6;
+  }
+
+  &__serviceTitle {
+    font-family: var(--font-family-heading);
+    font-size: text-size('md');
+    font-weight: 700;
+    color: var(--ifm-font-color-base);
+    letter-spacing: -0.02em;
+  }
+
+  &__description {
+    color: var(--ifm-font-color-base);
+    opacity: 0.8;
+    margin-bottom: space('3');
+    font-size: 1.44rem;
+    line-height: 1.7;
+    max-width: 64rem;
+  }
+
+  &__featuresList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: space('2') space('5');
+    font-size: 1.4rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__featureItem {
+    color: var(--ifm-font-color-base);
+    display: flex;
+    align-items: flex-start;
+    gap: space('1');
+  }
+
+  &__featureArrow {
+    color: var(--ifm-color-success);
+    font-weight: bold;
+  }
+
+  &__buttonGroup {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-decoration: none;
+    padding-top: space('2');
+  }
+
+  &__primaryBtn {
+    min-width: 35%;
+    justify-content: center;
+  }
+}
