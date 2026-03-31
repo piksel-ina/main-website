@@ -81,18 +81,19 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 
 ## Session 4 — Docs Components (4 components)
 
-- [ ] 4.1  DocCallout: `styles.module.css` → `styles.module.scss` (BEM, tokens)
-- [ ] 4.2  DocCard: `styles.module.css` → `styles.module.scss` (fix hardcoded fonts Oswald→Outfit, Open Sans→Inter; fix hardcoded colors)
-- [ ] 4.3  DocSteps: `styles.module.css` → `styles.module.scss` (BEM, tokens)
-- [ ] 4.4  ImageCard: `styles.module.css` → `styles.module.scss` (BEM, tokens)
-- [ ] 4.5  Update JS imports in all 4 components
-- [ ] 4.6  Delete old `.module.css` files (4 files)
-- [ ] 4.7  Run `npm run build`
+- [x] 4.1  DocCallout: `styles.module.css` → `styles.module.scss` (flat→BEM `.docCallout` with `&--info`/`&--warning`/`&--danger` modifiers, `&__title`, `&__content`; hardcoded colors→tokens: `#41a6f9`→`color('accent')`, `#f6ad55`→`color('warning')`, `#f56565`→`color('piksel-red')`; `'Oswald'`→`var(--font-family-heading')`, removed `'Open Sans'` (inherit); `1.28rem`→`space('2')`, `1.92rem`→`space('4')`, `0.64rem`→`space('1')`, `1.22rem`→`text-size('sm')`, `border-radius: 0.64rem`→`space('1')`)
+- [x] 4.2  DocCard: `styles.module.css` → `styles.module.scss` (flat→BEM `.docCard` with `&__title`, `&__description`; hardcoded colors→tokens: `rgba(30,41,59,...)`→`rgba(color('primary'),...)`, `rgba(65,166,249,...)`→`rgba(color('accent'),...)`, `#41a6f9`→`color('accent')`, `#fff`→`color('bg')`, `#a0aec0`→`color('text-lighter')`; `'Oswald'`→`var(--font-family-heading')`, removed `'Open Sans'` (inherit); `1.92rem`→`space('4')`, `0.64rem`→`space('1')`, `1.6rem`→`text-size('base')`, `0.04rem`→`0.04em`; kept: `1.15rem` (no close token), `0.32rem` (micro), `backdrop-filter`)
+- [x] 4.3  DocSteps: `styles.module.css` → `styles.module.scss` (flat→BEM `.docSteps` with `&__step`; hardcoded colors→tokens: `#0a0e1a`→`color('primary-darkest')`, `#41a6f9`→`color('accent')`, `rgba(65,166,249,...)`→`rgba(color('accent'),...)`; `'Oswald'`→`var(--font-family-heading')`; `1.92rem`→`space('4')`, `1.28rem`→`space('2')`, `2.56rem`→`space('5')`, `0.8rem`→`space('1')`; kept: `1.15rem` (no close token), `2.3rem` (counter-specific), `line-height: 2.3rem` (counter))
+- [x] 4.4  ImageCard: `styles.module.css` → `styles.module.scss` (camelCase→BEM `.imageCard` with `&__imageContainer`, `&__image`, `&__overlay`, `&__content`, `&__title`, `&__description`, `&__link`, `&__arrow`; hardcoded colors→tokens: `color: white`/`#fff`→`color('bg')`, `rgba(10,14,26,...)`→`rgba(color('primary-darkest'),...)`, `rgba(255,255,255,0.8)`→`rgba(color('bg'),0.8)`; `'Oswald'`→`var(--font-family-heading')`; `1.92rem`→`space('4')`, `0.64rem`→`space('1')`, `1.28rem`→`space('2')`, `1.22rem`→`text-size('sm')`, `8rem`→`space('10')`, `0.8rem`→`space('1')`, `1.92rem`→`text-size('md')`; kept: `25.6rem` (height), `1.15rem` (no close token), `0.48rem`/`0.32rem`/`0.16rem` (micro))
+- [x] 4.5  Update JS imports in all 4 components (DocCallout: `.callout`→`.docCallout`, `styles[type]`→`styles[docCallout--${type}]`, `.title`→`.docCallout__title`, `.content`→`.docCallout__content`; DocCard: `.card`→`.docCard`, `.title`→`.docCard__title`, `.description`→`.docCard__description`; DocSteps: `.steps`→`.docSteps`, `.step`→`.docSteps__step`; ImageCard: all `imageCardXxx`→`imageCard__xxx`)
+- [x] 4.6  Delete old `.module.css` files (4 files)
+- [x] 4.7  Run `npm run build` — **PASSES** (zero SCSS warnings)
+- [x] 4.8  **Token revision pass** — audited all 4 components; only `1.15rem` (×3 instances) remains as no-close-token exception; zero hardcoded hex colors, zero `clamp()`, zero raw `@media`, all use `@use` imports and BEM nesting
 
-**Session status:** `[ ]` Not started
-**Build passes:** —
-**Started:** —
-**Completed:** —
+**Session status:** `[x]` Complete
+**Build passes:** Yes
+**Started:** 2026-03-31
+**Completed:** 2026-03-31
 
 ---
 
@@ -141,11 +142,11 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 | 1       | 4 (Atoms+Carousel) | `[x]`  | Pass  |
 | 2       | 3 (Molecules) | `[x]`  | Pass  |
 | 3       | 5 (Home)   | `[x]`  | Pass  |
-| 4       | 4 (Docs)   | `[ ]`   | —     |
+| 4       | 4 (Docs)   | `[x]`  | Pass  |
 | 5       | 5 (Theme)  | `[ ]`   | —     |
 | 6       | Audit      | `[ ]`   | —     |
 
 **Total files to migrate:** 22 (1 global + 21 CSS Modules)
-**Files migrated:** 13 / 22
-**Current session:** Session 3 complete
-**Next session to resume:** Session 4
+**Files migrated:** 17 / 22
+**Current session:** Session 4 complete
+**Next session to resume:** Session 5

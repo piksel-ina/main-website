@@ -1,18 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
-/**
- * ImageCard Component
- * 
- * A stylish card component for MDX documentation.
- * Features an image background, title, and reveal-on-hover description.
- * 
- * @param {string} title - Card title
- * @param {string} description - Brief description
- * @param {string} image - Absolute path or URL to image
- * @param {string} to - Destination URL (internal or external)
- */
 export default function ImageCard({ title, description, image, to }) {
   const isExternal = to && (to.startsWith('http') || to.startsWith('//'));
   
@@ -20,20 +9,20 @@ export default function ImageCard({ title, description, image, to }) {
     <Link 
       to={to} 
       className={styles.imageCard}
-      style={{ textDecoration: 'none' }} /* Remove default link underline */
+      style={{ textDecoration: 'none' }}
     >
-      <div className={styles.imageCardImageContainer}>
-        {image && <img src={image} alt={title} className={styles.imageCardImage} />}
-        <div className={styles.imageCardOverlay} />
+      <div className={styles.imageCard__imageContainer}>
+        {image && <img src={image} alt={title} className={styles.imageCard__image} />}
+        <div className={styles.imageCard__overlay} />
       </div>
 
-      <div className={styles.imageCardContent}>
-        <h3 className={styles.imageCardTitle}>{title}</h3>
-        <p className={styles.imageCardDescription}>{description}</p>
+      <div className={styles.imageCard__content}>
+        <h3 className={styles.imageCard__title}>{title}</h3>
+        <p className={styles.imageCard__description}>{description}</p>
         
-        <div className={styles.imageCardLink}>
+        <div className={styles.imageCard__link}>
           {isExternal ? 'Visit Site' : 'Read More'}
-          <span className={styles.imageCardArrow}>→</span>
+          <span className={styles.imageCard__arrow}>→</span>
         </div>
       </div>
     </Link>
