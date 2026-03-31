@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 const Carousel = ({
   items = [],
@@ -21,7 +21,7 @@ const Carousel = ({
   const [touchEnd, setTouchEnd] = useState(null);
   const carouselRef = useRef(null);
 
-  const minSwipeDistance = 50; // in px
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,7 +58,6 @@ const Carousel = ({
     setCurrentIndex(Math.min(index, maxIndex));
   };
 
-  // Touch handlers for swipe functionality
   const onTouchStart = (e) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
@@ -93,15 +92,15 @@ const Carousel = ({
 
   return (
     <div className={`${styles.carousel} ${className}`}>
-      <div className={styles.header}>
-        {title && <h3 className={styles.title}>{title}</h3>}
+      <div className={styles['carousel__header']}>
+        {title && <h3 className={styles['carousel__title']}>{title}</h3>}
 
         {showNavigation && !isMobile && (
-          <div className={styles.navigationButtons}>
+          <div className={styles['carousel__nav']}>
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className={styles.navButton}
+              className={styles['carousel__navBtn']}
               aria-label="Previous items"
             >
               <ChevronLeft size={20} />
@@ -110,7 +109,7 @@ const Carousel = ({
             <button
               onClick={nextSlide}
               disabled={currentIndex >= maxIndex}
-              className={styles.navButton}
+              className={styles['carousel__navBtn']}
               aria-label="Next items"
             >
               <ChevronRight size={20} />
@@ -119,12 +118,12 @@ const Carousel = ({
         )}
       </div>
 
-      <div className={styles.carouselWrapper}>
+      <div className={styles['carousel__wrapper']}>
         {showNavigation && isMobile && (
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className={`${styles.navButton} ${styles.navButtonLeft}`}
+            className={`${styles['carousel__navBtn']} ${styles['carousel__navBtn--left']}`}
             aria-label="Previous items"
           >
             <ChevronLeft size={20} />
@@ -132,20 +131,20 @@ const Carousel = ({
         )}
 
         <div
-          className={styles.carouselContainer}
+          className={styles['carousel__container']}
           ref={carouselRef}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
           <div
-            className={styles.carouselTrack}
+            className={styles['carousel__track']}
             style={{
               transform: getTransformValue(),
             }}
           >
             {items.map((item, index) => (
-              <div key={item.id || index} className={styles.carouselItem}>
+              <div key={item.id || index} className={styles['carousel__item']}>
                 {renderItem ? (
                   renderItem(item, index)
                 ) : (
@@ -160,7 +159,7 @@ const Carousel = ({
           <button
             onClick={nextSlide}
             disabled={currentIndex >= maxIndex}
-            className={`${styles.navButton} ${styles.navButtonRight}`}
+            className={`${styles['carousel__navBtn']} ${styles['carousel__navBtn--right']}`}
             aria-label="Next items"
           >
             <ChevronRight size={20} />
@@ -169,13 +168,13 @@ const Carousel = ({
       </div>
 
       {showPagination && maxIndex > 0 && (
-        <div className={styles.pagination}>
+        <div className={styles['carousel__pagination']}>
           {Array.from({ length: maxIndex + 1 }, (_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`${styles.paginationDot} ${
-                currentIndex === index ? styles.paginationDotActive : ""
+              className={`${styles['carousel__dot']} ${
+                currentIndex === index ? styles['carousel__dot--active'] : ""
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

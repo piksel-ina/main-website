@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { ChevronRight } from 'lucide-react';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const CTAButton = ({ 
   label, 
@@ -11,37 +11,33 @@ const CTAButton = ({
   href, 
   onClick, 
   className,
-  variant = 'primary', // 'primary' | 'secondary'
-  color, // Optional color override
+  variant = 'primary',
+  color,
   icon: Icon,
-  iconPosition = 'right', // 'left' | 'right'
+  iconPosition = 'right',
   showIcon = true,
   fullWidth = false,
-  enableShine, // Optional: defaults to true for primary
-  enableExpand, // Optional: defaults to true for primary
+  enableShine,
+  enableExpand,
   ...props 
 }) => {
   const content = label || children || 'Learn More';
   const Component = to || href ? Link : 'button';
   
-  // Determine icon to use
   const ButtonIcon = Icon || (variant === 'primary' ? ChevronRight : null);
 
   const style = color ? { '--button-color': color } : {};
   
-  // Shine defaults to true for primary, false otherwise, unless explicitly set
   const showShine = enableShine !== undefined ? enableShine : variant === 'primary';
-
-  // Expand defaults to true for primary, false otherwise, unless explicitly set
   const shouldExpand = enableExpand !== undefined ? enableExpand : variant === 'primary';
 
   return (
     <Component
       className={clsx(
         styles.button, 
-        styles[variant],
-        fullWidth && styles.fullWidth,
-        shouldExpand && styles.expandOnHover,
+        styles[`button--${variant}`],
+        fullWidth && styles['button--fullWidth'],
+        shouldExpand && styles['button--expandOnHover'],
         className
       )}
       onClick={onClick}
@@ -50,16 +46,16 @@ const CTAButton = ({
       style={style}
       {...props}
     >
-      {showShine && <div className={styles.shine} />}
+      {showShine && <div className={styles['button__shine']} />}
       
       {showIcon && ButtonIcon && iconPosition === 'left' && (
-        <ButtonIcon className={styles.icon} />
+        <ButtonIcon className={styles['button__icon']} />
       )}
 
       <span>{content}</span>
       
       {showIcon && ButtonIcon && iconPosition === 'right' && (
-        <ButtonIcon className={styles.icon} />
+        <ButtonIcon className={styles['button__icon']} />
       )}
     </Component>
   );

@@ -27,18 +27,19 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 
 ## Session 1 — UI Atoms & Carousel (4 components)
 
-- [ ] 1.1  CTAButton: `styles.module.css` → `styles.module.scss` (BEM, tokens)
-- [ ] 1.2  ShapeContainer: `styles.module.css` → `styles.module.scss` (clip-path mixins)
-- [ ] 1.3  ViewAllButton: `styles.module.css` → `styles.module.scss` (BEM, tokens)
-- [ ] 1.4  Carousel: `styles.module.css` → `styles.module.scss` (responsive mixins)
-- [ ] 1.5  Update JS imports in all 4 components
-- [ ] 1.6  Delete old `.module.css` files (4 files)
-- [ ] 1.7  Run `npm run build`
+- [x] 1.1  CTAButton: token revision — `gap: 0.64rem` → `space('1')`, `font-size: 1.2rem` → `text-size('sm')`, `border-radius: 0.4rem` → `$card-border-radius`, `color: white` → `color('bg')`, `padding-left: 2.25rem` → `space('5')`
+- [x] 1.2  ShapeContainer: token revision — `calc(100% - 8rem)` → `calc(100% - #{space('10')})`, pattern sizes snapped (`3rem` → `space('6')`, `2rem` → `space('4')`, `4rem` → `space('7')`), grid `3.2rem` → `space('6')`, color fallbacks `#000/#666/#008080` → `color('primary')/color('secondary')/color('accent-teal')`
+- [x] 1.3  ViewAllButton: token revision — `font-size: 1.6rem` → `text-size('base')`
+- [x] 1.4  Carousel: token revision — ~20 hardcoded values replaced: padding `2.56rem` → `space('5')`, translateX `1.28rem` → `space('2')`, title `font-size: 3.2rem` → `text-size('xl')`, item padding `1.28rem` → `space('2')`, navBtn size `3.2rem` → `space('6')`, position offsets `±1.6rem` → `space('3') * -1`, dot size `0.96rem` → `space('1')`, gaps `0.64rem` → `space('1')`, tablet overrides snapped to tokens. Kept: `max-width: 102rem` (carousel-specific), `border-radius: 0.96rem` (no token), box-shadow, micro-transforms, CSS var references
+- [x] 1.5  Update JS imports in all 4 components (`.module.css` → `.module.scss` + BEM class refs)
+- [x] 1.6  Delete old `.module.css` files (4 files)
+- [x] 1.7  Run `npm run build` — **PASSES** (zero SCSS warnings)
+- [x] 1.8  **Token revision pass** — audited all 4 components for hardcoded rem/font-size/color values; snapped ~25 values to nearest `space()`, `text-size()`, `color()`, `$card-border-radius` tokens; intentionally kept: em-based padding (component-internal), icon dimensions, opacity, box-shadow, z-index, micro-transforms, CSS var references, percentage widths, `max-width: 102rem` (carousel-specific)
 
-**Session status:** `[ ]` Not started
-**Build passes:** —
-**Started:** —
-**Completed:** —
+**Session status:** `[x]` Complete (revised)
+**Build passes:** Yes
+**Started:** 2026-03-31
+**Completed:** 2026-03-31
 
 ---
 
@@ -135,7 +136,7 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 | Session | Components | Status | Build |
 |---------|-----------|--------|-------|
 | 0       | Foundation | `[x]`  | Pass  |
-| 1       | 4 (Atoms+Carousel) | `[ ]`   | —     |
+| 1       | 4 (Atoms+Carousel) | `[x]`  | Pass  |
 | 2       | 3 (Molecules) | `[ ]`   | —     |
 | 3       | 5 (Home)   | `[ ]`   | —     |
 | 4       | 4 (Docs)   | `[ ]`   | —     |
@@ -143,6 +144,6 @@ Status legend: `[ ]` pending | `[~]` in progress | `[x]` done | `[-]` skipped/bl
 | 6       | Audit      | `[ ]`   | —     |
 
 **Total files to migrate:** 22 (1 global + 21 CSS Modules)
-**Files migrated:** 1 / 22
-**Current session:** Session 0 complete
-**Next session to resume:** Session 1
+**Files migrated:** 5 / 22
+**Current session:** Session 1 complete
+**Next session to resume:** Session 2
