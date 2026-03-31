@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { MoveRight } from 'lucide-react';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const ViewAllButton = ({ 
   label, 
@@ -20,14 +20,14 @@ const ViewAllButton = ({
   
   const buttonContent = (
     <Component
-      className={clsx(styles.button, className)}
+      className={clsx(styles['viewAll__button'], className)}
       onClick={onClick}
       to={to}
       href={href}
       {...props}
     >
       <span>{content}</span>
-      <Icon className={styles.icon} />
+      <Icon className={styles['viewAll__icon']} />
     </Component>
   );
 
@@ -36,15 +36,14 @@ const ViewAllButton = ({
           return buttonContent;
       }
       return (
-        <div className={clsx(styles.wrapper, wrapperClassName)}>
+        <div className={clsx(styles.viewAll, wrapperClassName)}>
            {buttonContent}
         </div>
       );
   }
 
-  // Default wrapper behavior
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.viewAll}>
       {buttonContent}
     </div>
   );
