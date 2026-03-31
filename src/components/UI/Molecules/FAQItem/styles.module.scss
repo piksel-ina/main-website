@@ -83,8 +83,8 @@
   }
 
   &__icon {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: space('3');
+    height: space('3');
     stroke-width: 2.5;
   }
 
@@ -103,7 +103,7 @@
     overflow: hidden;
     color: var(--ifm-font-color-base);
     opacity: 0.8;
-    font-size: 1.44rem;
+    font-size: text-size('base');
     line-height: 1.7;
 
     p {

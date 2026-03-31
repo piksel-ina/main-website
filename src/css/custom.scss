@@ -123,28 +123,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: $container-max-width;
 }
 
-.bg-shape {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-
-  &--slanted-bottom {
-    clip-path: clip-path('slanted-bottom');
-  }
-
-  &--cut-corner-br {
-    clip-path: clip-path('cut-corner-br');
-  }
-
-  &--shard {
-    clip-path: clip-path('shard');
-  }
-}
-
-.image-container--clipped {
-  @include image-clipped;
-}
-
 /* ========================================================================
    7. COMPONENT OVERRIDES — NAVBAR
    ======================================================================== */
@@ -360,12 +338,4 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
-}
-
-.hero__title {
-  color: color('primary');
-}
-
-.hero__subtitle {
-  color: color('primary-light');
 }

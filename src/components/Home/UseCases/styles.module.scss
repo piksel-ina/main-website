@@ -29,7 +29,7 @@
     display: inline-flex;
     align-items: center;
     gap: space('1');
-    font-size: 1.4rem;
+    font-size: text-size('base');
     margin-bottom: space('2');
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -94,7 +94,7 @@
     background: none;
     border: none;
     padding: space('2') 0;
-    font-size: 1.54rem;
+    font-size: text-size('base');
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -254,7 +254,7 @@
   }
 
   &__contentDescription {
-    font-size: 1.4rem;
+    font-size: text-size('base');
     max-width: 95%;
     line-height: 1.7;
     color: var(--ifm-color-primary);
@@ -271,7 +271,7 @@
 
   &__featureItem {
     display: flex;
-    font-size: 1.4rem;
+    font-size: text-size('base');
     align-items: center;
     gap: space('1');
   }
@@ -296,19 +296,4 @@
   &__featureText {
     color: var(--ifm-color-primary);
   }
-}
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(space('2'));
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animateEnter {
-  animation: fadeSlideUp 0.4s ease-out forwards;
 }

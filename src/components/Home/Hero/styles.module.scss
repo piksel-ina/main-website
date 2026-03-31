@@ -167,18 +167,18 @@
 
   &__statValue {
     font-family: var(--font-family-heading);
-    font-size: 1.75rem;
+    font-size: text-size('md');
     font-weight: 600;
     color: color('bg');
     line-height: 1;
 
     @include respond-to('desktop') {
-      font-size: 1.5rem;
+      font-size: text-size('base');
     }
   }
 
   &__statLabel {
-    font-size: 0.85rem;
+    font-size: text-size('xs');
     color: rgba(255, 255, 255, 0.7);
     margin-top: 0.3rem;
   }

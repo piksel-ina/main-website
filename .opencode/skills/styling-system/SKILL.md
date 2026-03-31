@@ -45,8 +45,8 @@ Import in any component: `@use '../../css/abstracts' as *;` (adjust relative pat
 | `@include card-base` | Background, border-radius, box-shadow |
 | `@include container` | Max-width + centered + inline padding |
 | `@include glass($opacity, $blur)` | Glassmorphism effect |
-| `@include bg-shape('slanted-bottom')` | Positioned, z-indexed, clipped |
-| `@include image-clipped` | Border-radius + clip-path + drop-shadow |
+| `@include bg-shape('slanted-bottom')` | Positioned, z-indexed, clipped (mixin only — no utility class) |
+| `@include image-clipped` | Border-radius + clip-path + drop-shadow (mixin only — no utility class) |
 | `@include truncate($lines)` | Single or multi-line text truncation |
 | `@include focus-ring` | Accessible focus outline |
 
@@ -120,14 +120,14 @@ Use `color()` function or CSS vars. Never hardcode hex/rgb.
 
 ## Clip-Path Shapes
 
-Available via `clip-path()` function, `bg-shape()` mixin, and utility classes:
+Available via `clip-path()` function or `bg-shape()` mixin (no utility classes):
 
-| Name | Shape | Utility Class |
-|------|-------|---------------|
-| `slanted-bottom` | `polygon(0 0, 100% 0, 100% 85%, 0 100%)` | `.bg-shape--slanted-bottom` |
-| `cut-corner-br` | bottom-right cut corner | `.bg-shape--cut-corner-br` |
-| `shard` | `polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)` | `.bg-shape--shard` |
-| `image-clipped` | subtle corner clip | `.image-container--clipped` |
+| Name | Shape |
+|------|-------|
+| `slanted-bottom` | `polygon(0 0, 100% 0, 100% 85%, 0 100%)` |
+| `cut-corner-br` | bottom-right cut corner |
+| `shard` | `polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)` |
+| `image-clipped` | subtle corner clip (use via `@include image-clipped` mixin) |
 
 ## CSS Rules
 
