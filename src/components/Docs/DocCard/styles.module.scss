@@ -1,0 +1,35 @@
+@use '../../../css/abstracts' as *;
+
+.docCard {
+  display: block;
+  padding: space('4');
+  background: rgba(color('primary'), 0.4);
+  border: 1px solid rgba(color('accent'), 0.2);
+  border-radius: space('1');
+  backdrop-filter: blur(0.32rem);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  color: inherit;
+
+  &:hover {
+    background: rgba(color('primary'), 0.6);
+    border-color: color('accent');
+    box-shadow: 0 space('1') space('3') rgba(color('accent'), 0.15);
+  }
+
+  &__title {
+    font-family: var(--font-family-heading);
+    font-size: text-size('base');
+    margin-bottom: space('1');
+    color: color('bg');
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__description {
+    font-size: 1.15rem;
+    color: color('text-lighter');
+    margin: 0;
+    line-height: 1.5;
+  }
+}

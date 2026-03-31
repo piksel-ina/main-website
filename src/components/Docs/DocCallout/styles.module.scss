@@ -1,0 +1,39 @@
+@use '../../../css/abstracts' as *;
+
+.docCallout {
+  padding: space('2') space('4');
+  margin: space('4') 0;
+  border-left: 0.32rem solid;
+  background: rgba(color('bg'), 0.03);
+  border-radius: 0 space('1') space('1') 0;
+
+  &--info {
+    border-color: color('accent');
+    background: linear-gradient(90deg, rgba(color('accent'), 0.1) 0%, transparent 100%);
+  }
+
+  &--warning {
+    border-color: color('warning');
+    background: linear-gradient(90deg, rgba(color('warning'), 0.1) 0%, transparent 100%);
+  }
+
+  &--danger {
+    border-color: color('piksel-red');
+    background: linear-gradient(90deg, rgba(color('piksel-red'), 0.1) 0%, transparent 100%);
+  }
+
+  &__title {
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    margin-bottom: space('1');
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: space('1');
+  }
+
+  &__content {
+    font-size: text-size('sm');
+    line-height: 1.5;
+  }
+}
