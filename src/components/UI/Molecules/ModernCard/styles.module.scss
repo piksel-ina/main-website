@@ -50,7 +50,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    color: color('bg');
+    color: color('background');
     background: transparent;
     padding: var(--ifm-spacing-vertical);
     z-index: 2;
@@ -63,7 +63,7 @@
   &__title {
     font-size: text-size('lg') !important;
     font-weight: var(--ifm-font-weight-bold);
-    color: color('bg');
+    color: color('background');
     margin: 0;
     text-shadow: 0 0.16rem 0.8rem rgba(0, 0, 0, 0.4);
     line-height: 1.2;
@@ -78,7 +78,7 @@
   }
 
   &__button {
-    color: color('bg');
+    color: color('background');
     padding-top: 0.512rem;
     padding-left: 0;
     font-size: var(--ifm-font-size-base);

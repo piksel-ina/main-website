@@ -11,12 +11,12 @@
 .navbarHomepage {
   transition: all 0.3s ease;
   box-shadow: none;
-  background-color: color('bg');
+  background-color: color('background');
   border-bottom: 1px solid color('border');
 }
 
 .navbarScrolled {
-  background-color: color('bg');
+  background-color: color('background');
   box-shadow: $card-box-shadow;
 }
 

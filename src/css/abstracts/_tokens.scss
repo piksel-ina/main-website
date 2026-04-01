@@ -55,12 +55,14 @@ $colors: (
   'accent-red':        #dc2626,   // Red — danger/error callouts
 
   // === NEUTRALS — Grey scale + backgrounds ===
-  'text':              #333333,   // Primary text
-  'text-light':        #555555,   // Secondary text
-  'text-lighter':      #777777,   // Muted / placeholder text
+  'text':              #333333,   // Primary text on light backgrounds
+  'text-light':        #555555,   // Secondary text on light backgrounds
+  'text-lighter':      #777777,   // Muted / placeholder text on light backgrounds
+  'text-inverse':      #e2e8f0,   // Primary text on dark backgrounds
+  'text-inverse-muted': #94a3b8,  // Muted text on dark backgrounds
   'border':            #e0e0e0,   // Default borders
   'steel':             #c6d0d6,   // Cool grey — dividers, disabled states
-  'bg':                #ffffff,   // Page background
+  'background':        #f0f0f0,   // Page background
   'bg-surface':        #f5f5f5,   // Card / section background
 );
 

@@ -36,6 +36,7 @@ export default function Hero() {
                 {' '}{heroData.titleHighlight}
               </span>
             </h1>
+            <div className={styles.hero__divider} />
             <p className={styles.hero__subtitle}>
               {heroData.subtitle}
             </p>
@@ -61,9 +62,11 @@ export default function Hero() {
                 const Icon = stat.icon;
                 return (
                   <div key={index} className={styles.hero__statItem}>
-                    <Icon size={18} strokeWidth={1.4} className={styles.hero__statIcon} />
-                    <div>
-                      <span className={styles.hero__statValue}>{stat.value}</span>
+                    <div className={styles.hero__statText}>
+                      <div className={styles.hero__statRow}>
+                        <Icon size={18} strokeWidth={1.4} className={styles.hero__statIcon} />
+                        <span className={styles.hero__statValue}>{stat.value}</span>
+                      </div>
                       <span className={styles.hero__statLabel}>{stat.label}</span>
                     </div>
                   </div>
