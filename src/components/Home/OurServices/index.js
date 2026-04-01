@@ -11,34 +11,34 @@ import ShapeContainer from "../../UI/Atoms/ShapeContainer";
 
 const colorMap = {
   cyan: {
-    main: "var(--piksel-color-cyan)",
-    light: "color-mix(in srgb, var(--piksel-color-cyan), white 30%)",
-    dark: "color-mix(in srgb, var(--piksel-color-cyan), black 80%)",
+    main: "#0891b2",
+    light: "color-mix(in srgb, #0891b2, white 30%)",
+    dark: "color-mix(in srgb, #0891b2, black 80%)",
   },
   red: {
-    main: "var(--piksel-color-red)",
-    light: "color-mix(in srgb, var(--piksel-color-red), white 30%)",
-    dark: "color-mix(in srgb, var(--piksel-color-red), black 80%)",
+    main: "#dc2626",
+    light: "color-mix(in srgb, #dc2626, white 30%)",
+    dark: "color-mix(in srgb, #dc2626, black 80%)",
   },
   purple: {
-    main: "var(--piksel-color-purple)",
-    light: "color-mix(in srgb, var(--piksel-color-purple), white 30%)",
-    dark: "color-mix(in srgb, var(--piksel-color-purple), black 80%)",
+    main: "#7c3aed",
+    light: "color-mix(in srgb, #7c3aed, white 30%)",
+    dark: "color-mix(in srgb, #7c3aed, black 80%)",
   },
   emerald: {
-    main: "var(--piksel-color-green)",
-    light: "color-mix(in srgb, var(--piksel-color-green), white 30%)",
-    dark: "color-mix(in srgb, var(--piksel-color-green), black 80%)",
+    main: "#059669",
+    light: "color-mix(in srgb, #059669, white 30%)",
+    dark: "color-mix(in srgb, #059669, black 80%)",
   },
   blue: {
-    main: "var(--piksel-color-blue)",
-    light: "color-mix(in srgb, var(--piksel-color-blue), white 30%)",
-    dark: "color-mix(in srgb, var(--piksel-color-blue), black 80%)",
+    main: "#2563eb",
+    light: "color-mix(in srgb, #2563eb, white 30%)",
+    dark: "color-mix(in srgb, #2563eb, black 80%)",
   },
   amber: {
-    main: "var(--piksel-color-amber)",
-    light: "color-mix(in srgb, var(--piksel-color-amber), white 30%)",
-    dark: "color-mix(in srgb, var(--piksel-color-amber), black 80%)",
+    main: "#d97706",
+    light: "color-mix(in srgb, #d97706, white 30%)",
+    dark: "color-mix(in srgb, #d97706, black 80%)",
   },
 };
 

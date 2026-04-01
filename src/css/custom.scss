@@ -15,7 +15,6 @@
   --ifm-color-primary-lightest: #{color('primary-lightest')};
 
   --color-primary: #{color('primary')};
-  --color-secondary: #{color('secondary')};
   --color-accent: #{color('accent')};
 
   --ifm-background-color: #{color('bg')};
@@ -25,31 +24,20 @@
   --ifm-font-color-base-lighter: #{color('text-lighter')};
 
   --color-accent-teal: #{color('accent-teal')};
+  --color-accent-teal-dark: #{color('accent-teal-dark')};
   --color-accent-amber: #{color('accent-amber')};
-  --color-accent-deep: #{color('accent-deep')};
-  --color-navy-deep: #{color('navy-deep')};
-  --color-navy-dark: #{color('navy-dark')};
-  --color-teal-dark: #{color('teal-dark')};
-  --color-navy-blue: #{color('navy-blue')};
+  --color-accent-red: #{color('accent-red')};
   --color-ice: #{color('ice')};
   --color-ice-light: #{color('ice-light')};
   --color-sky: #{color('sky')};
   --color-sky-bright: #{color('sky-bright')};
-  --color-navy-shadow: #{color('navy-shadow')};
-  --color-navy-shadow-deep: #{color('navy-shadow-deep')};
   --color-steel: #{color('steel')};
-  --color-bg-accent-subtle: #{color('bg-accent-subtle')};
-  --gradient-hero: linear-gradient(150deg, color('navy-deep') 0%, color('navy-dark') 45%, color('teal-dark') 100%);
+  --color-bg-surface: #{color('bg-surface')};
+  --gradient-hero: linear-gradient(150deg, color('primary-darker') 0%, color('primary-dark') 45%, color('accent-teal-dark') 100%);
   --gradient-hero-accent: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(45, 74, 124, 0.05) 50%, transparent 100%);
 
-  @each $name, $hex in $colors {
-    @if string.index($name, 'piksel-') {
-      --piksel-color-#{string.slice($name, 8)}: #{$hex};
-    }
-  }
-
-  --ifm-color-success: #{color('success')};
-  --ifm-color-warning: #{color('warning')};
+  --ifm-color-success: #{color('accent-teal')};
+  --ifm-color-warning: #{color('accent-amber')};
   --ifm-border-color: #{color('border')};
   --ifm-link-color: var(--ifm-color-primary);
 

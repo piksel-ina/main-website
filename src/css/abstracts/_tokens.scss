@@ -32,45 +32,36 @@ $breakpoints: (
 );
 
 $colors: (
-  'primary': #0d295b,
-  'primary-dark': #0a1f47,
-  'primary-darker': #081838,
-  'primary-darkest': #051224,
-  'primary-light': #244680,
-  'primary-lighter': #3d6aa8,
-  'primary-lightest': #5689d0,
-  'secondary': #244680,
-  'accent': #4a90e2,
-  'accent-teal': #35a9d3,
-  'accent-amber': #d97706,
-  'accent-deep': #1e3a5f,
-  'navy-deep': #081d4c,
-  'navy-dark': #041c52,
-  'teal-dark': #005967,
-  'navy-blue': #132a5c,
-  'ice': #eff6ff,
-  'ice-light': #e8f4fd,
-  'sky': rgba(147, 197, 253, 0.35),
-  'sky-bright': rgba(147, 197, 253, 0.6),
-  'navy-shadow': rgba(10, 25, 70, 0.5),
-  'navy-shadow-deep': rgba(10, 25, 70, 0.6),
-  'steel': #c6d0d6,
-  'bg': #ffffff,
-  'bg-surface': #f5f5f5,
-  'bg-accent-subtle': #f5f5f5,
-  'text': #333333,
-  'text-light': #555555,
-  'text-lighter': #777777,
-  'border': #e0e0e0,
-  'success': #059669,
-  'warning': #d97706,
-  'piksel-brown': #8b5a2b,
-  'piksel-blue': #2563eb,
-  'piksel-green': #059669,
-  'piksel-cyan': #0891b2,
-  'piksel-purple': #7c3aed,
-  'piksel-red': #dc2626,
-  'piksel-amber': #d97706,
+  // === PRIMARY — Deep navy collection ===
+  'primary':           #0d295b,   // Main brand navy
+  'primary-dark':      #0a1f47,   // Darker variant — hover states
+  'primary-darker':    #081838,   // Deep navy — emphasis
+  'primary-darkest':   #051224,   // Near-black navy — dark backgrounds
+  'primary-light':     #244680,   // Muted navy — secondary elements
+  'primary-lighter':   #3d6aa8,   // Medium navy — subtle highlights
+  'primary-lightest':  #5689d0,   // Light navy — accents on dark bg
+
+  // === ICE / LIGHT BLUE — Soft sky tones ===
+  'ice':               #eff6ff,   // Icy white-blue — light backgrounds
+  'ice-light':         #e8f4fd,   // Pale ice — subtle surface tint
+  'sky':               rgba(147, 197, 253, 0.35),  // Translucent sky blue — overlays
+  'sky-bright':        rgba(147, 197, 253, 0.6),   // Vivid sky blue — glass effects
+
+  // === ACCENT — Supporting colors ===
+  'accent':            #4a90e2,   // Bright blue — CTAs, links, highlights
+  'accent-teal':       #35a9d3,   // Teal — hero gradients, badges
+  'accent-teal-dark':  #005967,   // Dark teal — deep gradient accents
+  'accent-amber':      #d97706,   // Amber — warm highlights, callouts
+  'accent-red':        #dc2626,   // Red — danger/error callouts
+
+  // === NEUTRALS — Grey scale + backgrounds ===
+  'text':              #333333,   // Primary text
+  'text-light':        #555555,   // Secondary text
+  'text-lighter':      #777777,   // Muted / placeholder text
+  'border':            #e0e0e0,   // Default borders
+  'steel':             #c6d0d6,   // Cool grey — dividers, disabled states
+  'bg':                #ffffff,   // Page background
+  'bg-surface':        #f5f5f5,   // Card / section background
 );
 
 $font-families: (

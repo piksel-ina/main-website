@@ -11,7 +11,7 @@
   padding-top: calc(var(--ifm-navbar-height) + 2rem);
   padding-bottom: 4rem;
   min-height: 520px;
-  background: linear-gradient(150deg, color('navy-deep') 0%, color('navy-dark') 45%, color('teal-dark') 100%);
+  background: linear-gradient(150deg, color('primary-darker') 0%, color('primary-dark') 45%, color('accent-teal-dark') 100%);
 
   &::before {
     content: "";

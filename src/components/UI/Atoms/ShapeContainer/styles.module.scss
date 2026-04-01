@@ -38,7 +38,7 @@
   /* === COLOR VARIANTS === */
 
   &--color-neutral {
-    background-color: var(--color-bg-accent-subtle, var(--ifm-color-emphasis-100));
+    background-color: var(--color-bg-surface, var(--ifm-color-emphasis-100));
   }
 
   &--color-primary {
@@ -72,7 +72,7 @@
   }
 
   &--dotPattern-secondary::before {
-    background-image: radial-gradient(var(--ifm-color-secondary, color('secondary')) 1px, transparent 1px);
+    background-image: radial-gradient(var(--ifm-color-primary-light, color('primary-light')) 1px, transparent 1px);
   }
 
   &--dotPattern-accent::before {
