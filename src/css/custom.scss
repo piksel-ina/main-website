@@ -17,7 +17,7 @@
   --color-primary: #{color('primary')};
   --color-accent: #{color('accent')};
 
-  --ifm-background-color: #{color('bg')};
+  --ifm-background-color: #{color('background')};
   --ifm-background-surface-color: #{color('bg-surface')};
   --ifm-font-color-base: #{color('text')};
   --ifm-font-color-base-light: #{color('text-light')};
@@ -41,7 +41,7 @@
   --ifm-border-color: #{color('border')};
   --ifm-link-color: var(--ifm-color-primary);
 
-  --ifm-card-background-color: #{color('bg')};
+  --ifm-card-background-color: #{color('background')};
   --ifm-card-border-radius: #{$card-border-radius};
   --ifm-card-box-shadow: #{$card-box-shadow};
 
@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(
     to bottom,
     color('bg-surface') 0%,
-    color('bg') 100%
+    color('background') 100%
   );
   padding: space('8') 0 space('4');
   padding-top: space('9');

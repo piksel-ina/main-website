@@ -105,7 +105,7 @@
     font-family: var(--font-family-heading);
     font-size: text-size('2xl');
     font-weight: 700;
-    color: color('bg');
+    color: color('background');
     line-height: 1.15;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -142,18 +142,18 @@
 
     &:hover,
     &:focus {
-      outline-color: color('bg') !important;
+      outline-color: color('background') !important;
     }
   }
 
   &__btnSecondary {
-    color: color('bg') !important;
+    color: color('background') !important;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
 
     &:hover,
     &:focus {
-      color: color('bg') !important;
-      box-shadow: inset 0 0 0 1px color('bg') !important;
+      color: color('background') !important;
+      box-shadow: inset 0 0 0 1px color('background') !important;
       background-color: rgba(255, 255, 255, 0.1) !important;
     }
   }

@@ -24,7 +24,7 @@
 
   &--primary {
     padding: 0.75em 1.875em;
-    background-color: color('bg');
+    background-color: color('background');
     color: color('primary');
     border-radius: 0.3rem;
     font-size: text-size('sm');
@@ -79,7 +79,7 @@
   &--secondary {
     padding: 0.75em 1.875em;
     background-color: transparent;
-    color: color('bg');
+    color: color('background');
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: $card-border-radius;
     font-size: text-size('sm');
@@ -89,9 +89,9 @@
     &:hover,
     &:focus {
       text-decoration: none;
-      color: color('bg');
+      color: color('background');
       background-color: rgba(255, 255, 255, 0.1);
-      border-color: color('bg');
+      border-color: color('background');
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       outline: none;
