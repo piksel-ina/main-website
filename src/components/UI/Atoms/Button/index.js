@@ -1,40 +1,91 @@
-import React from "react";
-import Link from "@docusaurus/Link";
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import { ChevronRight, ArrowRight, MoveRight } from 'lucide-react';
+import styles from './styles.module.scss';
 
-export const Button = ({
+const defaultIcons = {
+  primary: ChevronRight,
+  hero: ChevronRight,
+  secondary: ChevronRight,
+  link: ArrowRight,
+  viewAll: MoveRight,
+};
+
+const Button = ({
+  label,
   children,
   to,
   href,
   onClick,
-  variant = "primary", // primary, secondary, outline, link
-  size = "md", // sm, md, lg
-  block = false,
+  variant = 'primary',
+  color,
+  icon: Icon,
+  iconPosition = 'right',
+  showIcon = true,
+  fullWidth = false,
+  enableShine,
+  enableExpand,
   className,
-  itemProp,
+  wrapperClassName,
   ...props
 }) => {
-  const buttonClass = clsx(
-    "button",
-    `button--${variant}`,
-    size !== "md" && `button--${size}`,
-    block && "button--block",
-    className
+  const content = label || children || (variant === 'viewAll' ? 'View All' : 'Learn More');
+  const Component = to || href ? Link : 'button';
+  const ButtonIcon = Icon || defaultIcons[variant] || null;
+  const style = color ? { ...props.style, '--button-color': color } : props.style;
+
+  const showShine = enableShine !== undefined ? enableShine : variant === 'primary';
+  const shouldExpand = enableExpand !== undefined ? enableExpand : variant === 'primary';
+
+  const buttonElement = (
+    <Component
+      className={clsx(
+        styles.button,
+        styles[`button--${variant}`],
+        fullWidth && styles['button--fullWidth'],
+        shouldExpand && styles['button--expandOnHover'],
+        className
+      )}
+      onClick={onClick}
+      to={to}
+      href={href}
+      style={style}
+      {...props}
+    >
+      {showShine && <div className={styles['button__shine']} />}
+
+      {showIcon && ButtonIcon && iconPosition === 'left' && (
+        <ButtonIcon className={styles['button__icon']} />
+      )}
+
+      <span>{content}</span>
+
+      {showIcon && ButtonIcon && iconPosition === 'right' && (
+        <ButtonIcon className={styles['button__icon']} />
+      )}
+    </Component>
   );
 
-  if (to || href) {
+  if (variant === 'viewAll') {
+    if (wrapperClassName !== undefined) {
+      if (wrapperClassName === '') {
+        return buttonElement;
+      }
+      return (
+        <div className={clsx(styles.viewAll, wrapperClassName)}>
+          {buttonElement}
+        </div>
+      );
+    }
     return (
-      <Link className={buttonClass} to={to} href={href} {...props}>
-        {children}
-      </Link>
+      <div className={styles.viewAll}>
+        {buttonElement}
+      </div>
     );
   }
 
-  return (
-    <button className={buttonClass} onClick={onClick} {...props}>
-      {children}
-    </button>
-  );
+  return buttonElement;
 };
 
 export default Button;

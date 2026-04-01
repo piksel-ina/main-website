@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-import CTAButton from '../../UI/Atoms/CTAButton';
-import SecondaryCTA from '../../UI/Atoms/SecondaryCTA';
+import Button from '../../UI/Atoms/Button';
 import { heroData } from "@site/src/data/heroData";
 
 export default function Hero() {
@@ -42,7 +41,7 @@ export default function Hero() {
             </p>
             
             <div className={styles.hero__actions}>
-              <CTAButton
+              <Button
                 to={heroData.ctaPrimary.link}
                 label={heroData.ctaPrimary.text}
                 variant="hero"
@@ -50,9 +49,10 @@ export default function Hero() {
                 enableShine={false}
                 enableExpand={false}
               />
-              <SecondaryCTA
+              <Button
                 to={heroData.ctaSecondary.link}
                 label={heroData.ctaSecondary.text}
+                variant="link"
               />
             </div>
 

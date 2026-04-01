@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { ctaData } from "@site/src/data/ctaData";
 import { statsData } from "@site/src/data/statsData";
-import CTAButton from "../../UI/Atoms/CTAButton";
+import Button from "../../UI/Atoms/Button";
 
 export default function CallToAction() {
   return (
@@ -44,14 +44,14 @@ export default function CallToAction() {
             <h2 className={styles.cta__title}>{ctaData.title}</h2>
             <p className={styles.cta__description}>{ctaData.description}</p>
             <div className={styles.cta__actions}>
-              <CTAButton
+              <Button
                 to={ctaData.primaryButton.to}
                 label={ctaData.primaryButton.text}
                 variant="primary"
                 color="#fff"
                 className={styles.cta__btnPrimary}
               />
-              <CTAButton
+              <Button
                 to={ctaData.secondaryButton.to}
                 label={ctaData.secondaryButton.text}
                 variant="secondary"
