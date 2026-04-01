@@ -47,7 +47,7 @@ export const useCasesData = {
       translate({id: 'useCases.useCase03.f3', message: 'Estimasi indeks pertanaman'})
     ],
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop',
-    color: 'var(--piksel-color-brown)',
+    color: '#8b5a2b',
     glowColor: 'rgba(165, 112, 42, 0.2)',
     link: '#'
   },
@@ -68,7 +68,7 @@ export const useCasesData = {
       translate({id: 'useCases.useCase02.f3', message: 'Analisis tren pertumbuhan kota'})
     ],
     image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop',
-    color: 'var(--piksel-color-blue)',
+    color: '#2563eb',
     glowColor: 'rgba(59, 130, 246, 0.2)',
     link: '#'
   },
@@ -89,7 +89,7 @@ export const useCasesData = {
       translate({id: 'useCases.useCase01.f3', message: 'Analisis historis data Landsat'})
     ],
     image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&h=600&fit=crop',
-    color: 'var(--piksel-color-green)',
+    color: '#059669',
     glowColor: 'rgba(16, 185, 129, 0.2)',
     link: '#'
   },
@@ -110,7 +110,7 @@ export const useCasesData = {
       translate({id: 'useCases.useCase04.f3', message: 'Klasifikasi penutup lahan pesisir'})
     ],
     image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop',
-    color: 'var(--piksel-color-cyan)',
+    color: '#0891b2',
     glowColor: 'rgba(6, 182, 212, 0.2)',
     link: '#'
   },
@@ -131,7 +131,7 @@ export const useCasesData = {
       translate({id: 'useCases.useCase05.f3', message: 'Penyediaan data bebas awan'})
     ],
     image: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&h=600&fit=crop',
-    color: 'var(--piksel-color-red)',
+    color: '#dc2626',
     glowColor: 'rgba(239, 68, 68, 0.2)',
     link: '#'
   },
@@ -152,7 +152,7 @@ export const useCasesData = {
       translate({id: 'useCases.useCase06.f3', message: 'Pemantauan rehabilitasi lahan'})
     ],
     image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=600&fit=crop',
-    color: 'var(--piksel-color-amber)',
+    color: '#d97706',
     glowColor: 'rgba(255, 159, 64, 0.2)',
     link: '#'
   }

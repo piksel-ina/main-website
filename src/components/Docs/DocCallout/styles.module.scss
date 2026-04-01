@@ -13,13 +13,13 @@
   }
 
   &--warning {
-    border-color: color('warning');
-    background: linear-gradient(90deg, rgba(color('warning'), 0.1) 0%, transparent 100%);
+    border-color: color('accent-amber');
+    background: linear-gradient(90deg, rgba(color('accent-amber'), 0.1) 0%, transparent 100%);
   }
 
   &--danger {
-    border-color: color('piksel-red');
-    background: linear-gradient(90deg, rgba(color('piksel-red'), 0.1) 0%, transparent 100%);
+    border-color: color('accent-red');
+    background: linear-gradient(90deg, rgba(color('accent-red'), 0.1) 0%, transparent 100%);
   }
 
   &__title {
