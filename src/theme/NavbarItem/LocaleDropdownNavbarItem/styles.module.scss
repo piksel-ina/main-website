@@ -1,0 +1,22 @@
+@use '../../../css/abstracts' as *;
+
+.localeFlag {
+  display: inline-flex;
+  align-items: center;
+  border-right: 1px solid color('border');
+  padding-right: 0.8rem;
+  margin-right: 0.8rem;
+  line-height: 1;
+
+  img {
+    display: block;
+    border-radius: 2px;
+  }
+}
+
+.dropdownFlag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+  border-radius: 2px;
+}
