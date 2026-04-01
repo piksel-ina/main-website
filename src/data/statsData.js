@@ -1,4 +1,5 @@
 import { translate } from "@docusaurus/Translate";
+import { Database, Globe, CalendarDays, Unlock } from "lucide-react";
 
 export const statsData = {
   stats: [
@@ -13,6 +14,7 @@ export const statsData = {
         message: "Total Data Tersedia",
         description: "Statistics Label 01",
       }),
+      icon: Database,
     },
     {
       number: translate({
@@ -25,6 +27,7 @@ export const statsData = {
         message: "Cakupan Wilayah Indonesia",
         description: "Statistics Label 02",
       }),
+      icon: Globe,
     },
     {
       number: translate({
@@ -37,6 +40,7 @@ export const statsData = {
         message: "Tahun Data Historis",
         description: "Statistics Label 03",
       }),
+      icon: CalendarDays,
     },
     {
       number: translate({
@@ -49,6 +53,7 @@ export const statsData = {
         message: "Akses Terbuka untuk publik",
         description: "Statistics Label 04",
       }),
+      icon: Unlock,
     },
   ],
 };

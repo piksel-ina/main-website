@@ -14,7 +14,7 @@ npm run write-translations   # Regenerate i18n files
 npm run write-heading-ids    # Regenerate heading IDs
 ```
 
-No test framework, no linter. Use `npm run build` to verify.
+No test framework, no linter. Use `npm run build` to verify **only after JS/JSX or structural changes**. For CSS/SCSS-only changes, do NOT run build — it restarts the live dev server.
 
 ---
 

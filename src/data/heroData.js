@@ -12,6 +12,11 @@ export const heroData = {
     message: "Dari Data Satelit hingga Keputusan yang Cerdas",
     description: "The main title on the homepage hero section",
   }),
+  titleHighlight: translate({
+    id: "homepage.hero.titleHighlight",
+    message: "Keputusan yang Cerdas",
+    description: "The highlighted portion of the hero title",
+  }),
   subtitle: translate({
     id: "homepage.hero.subtitle",
     message:
@@ -29,14 +34,15 @@ export const heroData = {
   ctaSecondary: {
     text: translate({
       id: "homepage.hero.cta.secondary",
-      message: "Read More",
-      description: "Secondary CTA button text",
+      message: "Pahami Piksel",
+      description: "Secondary CTA button text linking to FAQ section",
     }),
-    link: "/docs/usecase/intro",
+    link: "/#faq",
   },
   stats: statsData.stats.slice(0, 3).map(stat => ({
     value: stat.number,
     label: stat.label,
+    icon: stat.icon,
   })),
   heroImage: {
     sources: {

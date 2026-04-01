@@ -27,7 +27,19 @@
   --color-accent-teal: #{color('accent-teal')};
   --color-accent-amber: #{color('accent-amber')};
   --color-accent-deep: #{color('accent-deep')};
+  --color-navy-deep: #{color('navy-deep')};
+  --color-navy-dark: #{color('navy-dark')};
+  --color-teal-dark: #{color('teal-dark')};
+  --color-navy-blue: #{color('navy-blue')};
+  --color-ice: #{color('ice')};
+  --color-ice-light: #{color('ice-light')};
+  --color-sky: #{color('sky')};
+  --color-sky-bright: #{color('sky-bright')};
+  --color-navy-shadow: #{color('navy-shadow')};
+  --color-navy-shadow-deep: #{color('navy-shadow-deep')};
+  --color-steel: #{color('steel')};
   --color-bg-accent-subtle: #{color('bg-accent-subtle')};
+  --gradient-hero: linear-gradient(150deg, color('navy-deep') 0%, color('navy-dark') 45%, color('teal-dark') 100%);
   --gradient-hero-accent: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(45, 74, 124, 0.05) 50%, transparent 100%);
 
   @each $name, $hex in $colors {
