@@ -4,15 +4,14 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
   gap: space('3');
   align-items: center;
   padding: 0 var(--ifm-spacing-horizontal);
   margin-top: calc(var(--ifm-navbar-height) * -1);
-  padding-top: calc(var(--ifm-navbar-height) + 1rem);
-  overflow: hidden;
-  padding-bottom: 5rem;
-  background: linear-gradient(135deg, color('primary-darker') 0%, color('primary') 50%, color('secondary') 100%);
+  padding-top: calc(var(--ifm-navbar-height) + 2rem);
+  padding-bottom: 4rem;
+  min-height: 520px;
+  background: linear-gradient(150deg, color('navy-deep') 0%, color('navy-dark') 45%, color('teal-dark') 100%);
 
   &::before {
     content: "";
@@ -21,7 +20,24 @@
     background-image: url('./contour-lines.svg');
     background-size: cover;
     background-position: center;
-    opacity: 0.6;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 60%;
+    height: 70%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(color('accent-amber'), 0.08) 0%,
+      rgba(color('accent-amber'), 0.03) 40%,
+      transparent 70%
+    );
     pointer-events: none;
     z-index: 0;
   }
@@ -37,9 +53,8 @@
 
   &__imageContainer {
     position: absolute;
-    top: 50%;
+    top: 15%;
     right: 0;
-    transform: translateY(-40%);
     bottom: 0;
     width: 55%;
     z-index: 1;
@@ -47,10 +62,11 @@
     align-items: center;
     justify-content: flex-end;
     pointer-events: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%);
 
     @include respond-to('desktop') {
       width: 70%;
-      transform: translateY(-30%);
     }
   }
 
@@ -61,18 +77,18 @@
     max-height: 90vh;
     object-fit: contain;
     object-position: right center;
-    transform: scale(1.15);
+    transform: scale(1.08);
     filter: brightness(1.05);
   }
 
   &__contentWrapper {
-    grid-column: 2 / 7;
+    grid-column: 2 / 8;
     grid-row: 1;
     align-self: center;
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 600px;
+    max-width: 660px;
     margin: 0 auto;
     padding-top: 3.6rem;
 
@@ -95,12 +111,13 @@
     font-size: text-size('xs');
     font-weight: 600;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
     margin-bottom: space('3');
-    padding: 0.4rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.35rem 1rem 0.35rem 1.2rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 3px solid color('accent-teal');
     border-radius: 3px;
   }
 
@@ -121,6 +138,10 @@
     }
   }
 
+  &__titleHighlight {
+    color: color('accent-teal');
+  }
+
   &__subtitle {
     font-size: text-size('base');
     color: color('bg');
@@ -132,6 +153,7 @@
 
   &__actions {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: space('3');
     margin-bottom: space('8');
@@ -144,9 +166,7 @@
 
   &__statsRow {
     display: flex;
-    gap: space('8');
-    padding-top: space('5');
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    gap: space('7');
     margin-bottom: space('3');
 
     @include respond-to('desktop') {
@@ -157,14 +177,29 @@
 
   &__statItem {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: space('1');
+    padding-right: space('7');
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include respond-to('desktop') {
+      padding-right: space('5');
+    }
+  }
+
+  &__statIcon {
+    color: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
   }
 
   &__statValue {
     font-family: var(--font-family-heading);
     font-size: text-size('lg');
     font-weight: 700;
-    color: color('bg');
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1;
 
     @include respond-to('tablet') {
@@ -174,8 +209,10 @@
 
   &__statLabel {
     font-size: text-size('xs');
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.55);
     margin-top: 0.5rem;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 }
