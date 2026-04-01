@@ -3,8 +3,7 @@ import clsx from 'clsx';
 import ShapeContainer from '../../UI/Atoms/ShapeContainer';
 import { useCasesData, useCasesHeaderData } from "@site/src/data/useCasesData";
 import { Check } from 'lucide-react';
-import ViewAllButton from '../../UI/Atoms/ViewAllButton';
-import CTAButton from '../../UI/Atoms/CTAButton';
+import Button from '../../UI/Atoms/Button';
 import styles from './styles.module.scss';
 
 export default function UseCases() {
@@ -151,7 +150,7 @@ export default function UseCases() {
                     </div>
                   )}
 
-                  <CTAButton 
+                  <Button
                     href={item?.link || '#'}
                     label={useCasesHeaderData?.learnMoreText || 'Learn More'}
                     color="var(--active-color)"
@@ -163,7 +162,8 @@ export default function UseCases() {
           })}
         </div>
 
-        <ViewAllButton 
+        <Button
+          variant="viewAll"
           label={useCasesHeaderData?.viewAllText || 'View All Use Cases'}
           to="/docs/usecase/main"
           style={{ '--active-color': 'var(--ifm-color-primary)' }}

@@ -1,12 +1,10 @@
 import React from "react";
 import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 import { servicesData, servicesHeaderData } from "@site/src/data/servicesData";
 import styles from "./styles.module.scss";
-import { ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
-import ViewAllButton from "../../UI/Atoms/ViewAllButton";
-import CTAButton from "../../UI/Atoms/CTAButton";
+import { ArrowRight } from "lucide-react";
+import Button from "../../UI/Atoms/Button";
 import ShapeContainer from "../../UI/Atoms/ShapeContainer";
 
 const colorMap = {
@@ -163,17 +161,17 @@ export default function OurServices() {
                     </ul>
 
                     <div className={styles.ourServices__buttonGroup}>
-                      <CTAButton 
-                    href={service?.link || '#'}
-                    label={service?.buttonText || 'Learn More'}
-                    color={colors.main}
-                    iconPosition="left"
-                    enableShine={false}
-                    enableExpand={false}
-                  />
+                      <Button
+                        href={service?.link || '#'}
+                        label={service?.buttonText || 'Learn More'}
+                        color={colors.main}
+                        iconPosition="left"
+                        enableShine={false}
+                        enableExpand={false}
+                      />
 
                       {service.secondaryButtonText && (
-                        <CTAButton
+                        <Button
                           to={service.link}
                           label={service.secondaryButtonText}
                           variant="secondary"
@@ -195,7 +193,8 @@ export default function OurServices() {
           })}
         </div>
         
-        <ViewAllButton
+        <Button
+          variant="viewAll"
           to="/docs/services/main"
           label={<Translate id="ourServices.viewAll">Lihat Semua Layanan</Translate>}
         />
