@@ -108,7 +108,7 @@
 
   &__bottom {}
 
-  @include respond-to('desktop') {
+  @include respond-to('tablet') {
     height: 28.2rem;
 
     &__title {
@@ -116,7 +116,7 @@
     }
   }
 
-  @include respond-to('tablet') {
+  @include respond-to('phone-wide') {
     height: 25.6rem;
 
     &__title {

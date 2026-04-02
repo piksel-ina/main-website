@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
 
-  @include respond-to('desktop') {
+  @include respond-to('tablet') {
     padding: space('7') 0;
   }
 
@@ -52,7 +52,7 @@
       0 space('1') space('6') rgba(0, 0, 0, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       padding: space('5');
     }
   }
@@ -65,7 +65,7 @@
     margin-bottom: space('4');
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       grid-template-columns: repeat(2, 1fr);
       gap: space('3');
     }
@@ -110,7 +110,7 @@
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
   }
@@ -130,7 +130,7 @@
     gap: space('2');
     margin-top: space('2');
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       flex-direction: column;
       width: 100%;
       align-items: center;

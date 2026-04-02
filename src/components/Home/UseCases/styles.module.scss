@@ -9,7 +9,7 @@
   color: var(--ifm-font-color-base);
   z-index: 1;
 
-  @include respond-to('desktop') {
+  @include respond-to('tablet') {
     padding: space('7') 0;
   }
 
@@ -20,7 +20,7 @@
     position: relative;
     z-index: 10;
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       margin-bottom: space('5');
     }
   }
@@ -51,7 +51,7 @@
     margin-bottom: space('2');
     color: var(--ifm-color-primary);
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
   }
@@ -82,7 +82,7 @@
     width: 100%;
     position: relative;
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       gap: space('2');
       overflow-x: auto;
       justify-content: flex-start;
@@ -171,7 +171,7 @@
       z-index: 1;
     }
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       grid-template-columns: 1fr;
       grid-template-areas:
         "title"

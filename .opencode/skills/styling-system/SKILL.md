@@ -88,13 +88,17 @@ No ad-hoc values. Round to nearest token.
 
 ## Breakpoints
 
-Desktop-first (`max-width`):
+Desktop-first (`max-width`). Single mixin `respond-to()` only — no `respond-above`. Default styles target ≥ 1440px.
 
-| Name | Value | Mixin |
-|------|-------|-------|
-| desktop | `996px` | `@include respond-to('desktop')` |
-| tablet | `768px` | `@include respond-to('tablet')` |
-| mobile | `500px` | `@include respond-to('mobile')` |
+| Name | Value | Target |
+|------|-------|--------|
+| `phone` | `480px` | Small phones |
+| `phone-wide` | `768px` | Large phones / landscape |
+| `tablet` | `996px` | Tablets (Docusaurus cutoff) |
+| `laptop` | `1280px` | Small laptops |
+| `desktop` | `1440px` | Standard laptops & desktops |
+
+**Responsive images:** `<picture>` `media` attributes use `min-width` (browser standard, opposite of CSS). Always use the breakpoint values above — never invent pixel values. Example: `media="(min-width: 996px)"` maps to the `tablet` breakpoint.
 
 ## Colors
 

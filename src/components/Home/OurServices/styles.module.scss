@@ -55,7 +55,7 @@
     color: var(--ifm-font-color-base);
     margin-bottom: space('4');
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
   }
@@ -77,7 +77,7 @@
     gap: space('4') 8.6rem;
     grid-auto-rows: 1fr;
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       grid-template-columns: 1fr;
     }
   }
