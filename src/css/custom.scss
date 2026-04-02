@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: $container-max-width;
   margin: 0 auto;
   padding: 0 space('4');
-  margin-top: space('3');
+  margin-bottom: space('8');
 
   @include respond-to('tablet') {
     padding: 0 space('2');
@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   &__inner {
     max-width: $container-max-width;
     margin: 0 auto;
+    margin-bottom: space('4');
     padding: space('4') space('4');
   }
 
@@ -202,10 +203,6 @@ h1, h2, h3, h4, h5, h6 {
 .navbar--scrolled {
   background-color: color('background');
   box-shadow: $card-box-shadow;
-
-  .navbar__link {
-    font-weight: 500;
-  }
 }
 
 .dropdown {
