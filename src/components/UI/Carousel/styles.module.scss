@@ -49,11 +49,11 @@
     height: 100%;
     width: 33.333333%;
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       width: 50%;
     }
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       width: 100%;
       padding: 0 space('1');
     }
@@ -135,7 +135,7 @@
     }
   }
 
-  @include respond-to('tablet') {
+  @include respond-to('phone-wide') {
     padding: space('4') space('2');
 
     &__header {

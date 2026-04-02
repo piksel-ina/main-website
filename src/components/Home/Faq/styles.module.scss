@@ -21,7 +21,7 @@
     gap: space('9');
     align-items: start;
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       grid-template-columns: 1fr;
       gap: space('7');
     }
@@ -63,7 +63,7 @@
     color: var(--ifm-font-color-base);
     margin: 0;
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
   }

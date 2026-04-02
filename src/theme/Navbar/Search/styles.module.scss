@@ -1,19 +1,17 @@
 @use '../../../css/abstracts' as *;
 
-.navbarSearchContainer:empty {
-  display: none;
-}
+.navbarSearchContainer {
+  padding: var(--ifm-navbar-item-padding-vertical)
+    var(--ifm-navbar-item-padding-horizontal);
 
-@include respond-to('desktop') {
-  .navbarSearchContainer {
-    position: absolute;
-    right: var(--ifm-navbar-padding-horizontal);
+  &:empty {
+    display: none;
   }
 }
 
-@include respond-above('desktop') {
+@include respond-to('tablet') {
   .navbarSearchContainer {
-    padding: var(--ifm-navbar-item-padding-vertical)
-      var(--ifm-navbar-item-padding-horizontal);
+    position: absolute;
+    right: var(--ifm-navbar-padding-horizontal);
   }
 }

@@ -42,7 +42,7 @@
     z-index: 0;
   }
 
-  @include respond-to('desktop') {
+  @include respond-to('tablet') {
     height: auto;
     padding-bottom: space('7');
     padding-top: calc(var(--ifm-navbar-height) + space('9'));
@@ -65,7 +65,7 @@
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
     mask-image: linear-gradient(to right, transparent 0%, black 15%);
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       width: 70%;
     }
   }
@@ -88,7 +88,7 @@
     z-index: 10;
     padding: 3.6rem 0 0 space('13');
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       grid-column: 1 / -1;
       padding-top: space('5');
       padding-left: space('4');
@@ -123,11 +123,11 @@
     color: color('text-inverse');
     margin-bottom: space('5');
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       font-size: text-size('2xl');
     }
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       font-size: text-size('lg');
     }
   }
@@ -160,7 +160,7 @@
     gap: space('3');
     margin-bottom: space('8');
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -171,7 +171,7 @@
     gap: space('7');
     margin-bottom: space('3');
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       gap: space('5');
       flex-wrap: wrap;
     }
@@ -187,7 +187,7 @@
       padding-right: 0;
     }
 
-    @include respond-to('desktop') {
+    @include respond-to('tablet') {
       padding-right: space('5');
     }
   }
@@ -216,7 +216,7 @@
     opacity: 0.9;
     line-height: 1;
 
-    @include respond-to('tablet') {
+    @include respond-to('phone-wide') {
       font-size: text-size('md');
     }
   }

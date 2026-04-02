@@ -30,8 +30,11 @@ $type-scale: (
 );
 
 $breakpoints: (
-  'desktop': 996px,
-  'tablet': 768px,
+  'phone': 480px,
+  'phone-wide': 768px,
+  'tablet': 996px,
+  'laptop': 1280px,
+  'desktop': 1440px,
 );
 
 $colors: (
