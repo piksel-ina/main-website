@@ -123,6 +123,21 @@ h1, h2, h3, h4, h5, h6 {
   max-width: $container-max-width;
 }
 
+.sectionContainer {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 space('4');
+  margin-top: space('3');
+
+  @include respond-to('tablet') {
+    padding: 0 space('2');
+  }
+
+  @include respond-to('phone') {
+    padding: 0 space('1');
+  }
+}
+
 /* ========================================================================
    7. COMPONENT OVERRIDES — NAVBAR
    ======================================================================== */

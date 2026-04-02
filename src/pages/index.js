@@ -24,12 +24,22 @@ export default function Home() {
         description: "Meta description for the homepage",
       })}
     >
-      <Hero />
+      <div className="sectionContainer">
+        <Hero />
+      </div>
       <main>
-        <UseCases />
-        <OurServices />
-        <Faq />
-        <CallToAction />
+        <div className="sectionContainer">
+          <UseCases />
+        </div>
+        <div className="sectionContainer">
+          <OurServices />
+        </div>
+        <div className="sectionContainer">
+          <Faq />
+        </div>
+        <div className="sectionContainer">
+          <CallToAction />
+        </div>
       </main>
     </Layout>
   );
