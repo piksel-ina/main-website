@@ -143,17 +143,22 @@ h1, h2, h3, h4, h5, h6 {
    ======================================================================== */
 
 .navbar {
-  padding: space('2');
-  padding-left: 0;
-  padding-right: space('9');
-  border-bottom: 1px solid color('border');
+  padding: 0;
+
+  &__inner {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: space('4') space('4');
+  }
+
+  &__brand {
+    padding-left: space('5');
+  }
 
   &__logo {
     min-height: 7.5rem;
-    padding-left: space('2');
     padding-bottom: space('4');
     margin-top: space('1') * 0.625;
-    margin-left: space('13');
 
     img {
       width: auto;
@@ -168,6 +173,38 @@ h1, h2, h3, h4, h5, h6 {
     &:hover {
       color: color('primary');
     }
+  }
+
+  &__item {
+    .navbar--homepage & {
+      padding: 0.6rem 2.4rem;
+    }
+  }
+
+  &__items--right > :last-child {
+    padding-right: 0;
+  }
+}
+
+.navbar--homepage {
+  .navbar__link {
+    font-weight: 400;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.4rem;
+
+    &:hover {
+      border-bottom-color: var(--color-primary);
+    }
+  }
+}
+
+.navbar--scrolled {
+  background-color: color('background');
+  box-shadow: $card-box-shadow;
+
+  .navbar__link {
+    font-weight: 500;
   }
 }
 
@@ -200,6 +237,42 @@ h1, h2, h3, h4, h5, h6 {
 
   &-item {
     margin-bottom: space('2');
+  }
+}
+
+.navbar__search-container {
+  padding: var(--ifm-navbar-item-padding-vertical)
+    var(--ifm-navbar-item-padding-horizontal);
+
+  &:empty {
+    display: none;
+  }
+
+  @include respond-to('tablet') {
+    position: absolute;
+    right: var(--ifm-navbar-padding-horizontal);
+  }
+}
+
+.navbar-color-mode-toggle {
+  @include respond-to('tablet') {
+    display: none;
+  }
+}
+
+[data-theme='light']
+  [class*='navbar'][class*='Homepage']
+  [class*='toggleButton'] {
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  svg {
+    color: white !important;
+    filter: drop-shadow(0 1px 0.16rem rgba(0, 0, 0, 0.3));
   }
 }
 

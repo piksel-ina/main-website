@@ -1,7 +1,6 @@
-import React from "react";
-import { useColorMode, useThemeConfig } from "@docusaurus/theme-common";
-import ColorModeToggle from "@theme/ColorModeToggle";
-import styles from "./styles.module.css";
+import React from 'react';
+import { useColorMode, useThemeConfig } from '@docusaurus/theme-common';
+import ColorModeToggle from '@theme/ColorModeToggle';
 export default function NavbarColorModeToggle({ className }) {
   const navbarStyle = useThemeConfig().navbar.style;
   const { disableSwitch, respectPrefersColorScheme } =
@@ -13,9 +12,6 @@ export default function NavbarColorModeToggle({ className }) {
   return (
     <ColorModeToggle
       className={className}
-      buttonClassName={
-        navbarStyle === "dark" ? styles.darkNavbarColorModeToggle : undefined
-      }
       respectPrefersColorScheme={respectPrefersColorScheme}
       value={colorModeChoice}
       onChange={setColorMode}
