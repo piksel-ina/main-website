@@ -27,16 +27,15 @@ export default function UseCases() {
 
   return (
     <section id="use-cases" className={styles.useCases} style={dynamicStyles}>
-      <div className="container">
+        <div className={styles.useCases__header}>
+          <h2 className={styles.useCases__title}>{useCasesHeaderData?.title || 'Our Use Cases'}</h2>
+          <p className={styles.useCases__subtitle}>
+            {useCasesHeaderData?.subtitle || 'Explore how our solutions work in practice'}
+          </p>
+        </div>
+        <div className={styles.useCases__divider} />
         <div className={styles.useCases__layout}>
           <div className={styles.useCases__navColumn}>
-            <div className={styles.useCases__header}>
-              <h2 className={styles.useCases__title}>{useCasesHeaderData?.title || 'Our Use Cases'}</h2>
-              <p className={styles.useCases__subtitle}>
-                {useCasesHeaderData?.subtitle || 'Explore how our solutions work in practice'}
-              </p>
-            </div>
-            <div className={styles.useCases__divider} />
             <div className={styles.useCases__tabs} role="tablist" aria-label="Use case categories">
               {useCaseKeys.map((key) => {
                 const isActive = activeTab === key;
@@ -155,7 +154,6 @@ export default function UseCases() {
             style={{ '--active-color': 'var(--ifm-color-primary)' }}
           />
         </div>
-      </div>
     </section>
   );
 }
