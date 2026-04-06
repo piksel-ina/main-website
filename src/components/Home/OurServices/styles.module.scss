@@ -2,23 +2,56 @@
 
 .ourServices {
   position: relative;
-  padding: space('8');
+  padding: space('10') space('11');
   scroll-margin-top: 80px;
   border-radius: 1.6rem;
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
   overflow: hidden;
-  background-color: color('bg-surface');
+  background: linear-gradient(135deg, color('primary-darkest') 0%, color('primary-dark') 40%, #0e2a4d 70%, color('accent-teal-dark') 100%);
 
   &::before {
     content: '';
     position: absolute;
-    inset: 0;
-    opacity: 0.025;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    opacity: 0.035;
     background-image:
-      linear-gradient(to right, color('primary') 1px, transparent 1px),
-      linear-gradient(to bottom, color('primary') 1px, transparent 1px);
-    background-size: space('6') space('6');
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 1) 0px,
+        rgba(255, 255, 255, 1) 1px,
+        transparent 1px,
+        transparent 6.4rem
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 1) 0px,
+        rgba(255, 255, 255, 1) 1px,
+        transparent 1px,
+        transparent 6.4rem
+      );
+    -webkit-mask-image: radial-gradient(ellipse at center, transparent 20%, black 55%);
+    mask-image: radial-gradient(ellipse at center, transparent 20%, black 55%);
     pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 50%;
+    height: 60%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(color('accent-teal'), 0.12) 0%,
+      rgba(color('accent-teal'), 0.04) 40%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
   }
 
   @include respond-to('phone-wide') {
@@ -27,8 +60,32 @@
   }
 
   &__header {
-    margin-bottom: space('7');
+    margin-bottom: space('8');
     text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__headerTag {
+    position: absolute;
+    top: space('5');
+    left: space('5');
+    z-index: 2;
+    display: inline-block;
+    font-family: font-family('heading');
+    font-size: text-size('xs');
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: color('accent-teal');
+    border: 1px solid rgba(color('accent-teal'), 0.3);
+    border-radius: 3px;
+    padding: 0.3rem 1rem;
+
+    @include respond-to('phone-wide') {
+      position: static;
+      margin-bottom: space('4');
+    }
   }
 
   &__headerTitle {
@@ -36,7 +93,7 @@
     font-size: text-size('2xl');
     line-height: 1.1;
     font-weight: 700;
-    color: color('text');
+    color: color('text-inverse');
     margin-bottom: space('3');
 
     @include respond-to('phone-wide') {
@@ -44,10 +101,19 @@
     }
   }
 
+  &__headerDivider {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 0 auto space('4');
+    border-radius: 2px;
+    background: linear-gradient(90deg, color('accent-teal'), transparent);
+  }
+
   &__headerDesc {
     font-size: text-size('base');
-    color: color('text');
-    opacity: 0.8;
+    color: color('text-inverse');
+    opacity: 0.75;
     max-width: 61.4rem;
     line-height: 1.7;
     margin-inline: auto;
@@ -57,6 +123,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: space('4');
+    position: relative;
+    z-index: 1;
 
     @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
@@ -71,84 +139,85 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: space('5');
-    padding-top: space('6');
+    padding: space('6');
     overflow: hidden;
-    background-color: #fafcfc;
-    border-radius: $card-border-radius;
-    box-shadow: $card-box-shadow;
-    text-decoration: none;
-    border-left: 3px solid var(--theme-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 2px solid var(--theme-color);
+    transition: transform 0.25s ease, border-color 0.25s ease;
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      text-decoration: none;
 
-      .ourServices__bgNumber {
-        opacity: 0.08;
+      .ourServices__cardBleed {
+        opacity: 1;
       }
 
-      .ourServices__linkRow {
-        gap: space('1');
+      .ourServices__bgIcon {
+        opacity: 0.12;
       }
     }
   }
 
-  &__bgNumber {
+  &__cardBleed {
     position: absolute;
-    top: -0.8rem;
-    right: space('3');
-    font-family: font-family('heading');
-    font-size: 9rem;
-    font-weight: 800;
-    line-height: 1;
-    color: var(--theme-color);
-    opacity: 0.05;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--theme-color) 14%, transparent) 0%,
+      color-mix(in srgb, var(--theme-color) 6%, transparent) 40%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    user-select: none;
+    z-index: 0;
+  }
 
-    @include respond-to('phone-wide') {
-      font-size: 7rem;
-      right: space('2');
+  &__bgIcon {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    width: 65%;
+    height: 65%;
+    opacity: 0.18;
+    color: var(--theme-color);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke-width: 0.5;
     }
   }
 
-  &__iconWrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.8rem;
-    background: color-mix(in srgb, var(--theme-color) 10%, transparent);
-    color: var(--theme-color);
-    margin-bottom: space('3');
-    flex-shrink: 0;
-  }
-
-  &__icon {
-    width: 2rem;
-    height: 2rem;
-    stroke-width: 1.8;
+  &__cardContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   &__cardTitle {
     @include heading;
     font-size: text-size('md');
     font-weight: 700;
-    color: color('text');
+    color: color('text-inverse');
     margin-bottom: space('2');
     letter-spacing: -0.01em;
   }
 
   &__cardDesc {
     font-size: text-size('sm');
-    color: color('text-light');
+    color: color('text-inverse-muted');
     line-height: 1.65;
-    margin-bottom: space('4');
+    margin-bottom: space('5');
     flex-grow: 1;
   }
 
@@ -160,12 +229,23 @@
     font-size: text-size('sm');
     font-weight: 600;
     color: var(--theme-color);
-    transition: gap 0.2s ease;
+    text-decoration: none;
+    transition: gap 0.2s ease, opacity 0.2s ease;
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      gap: space('1');
+      text-decoration: none;
+      color: var(--theme-color);
+    }
   }
 
   &__viewAllRow {
     display: flex;
     justify-content: center;
     margin-top: space('7');
+    position: relative;
+    z-index: 1;
   }
 }
