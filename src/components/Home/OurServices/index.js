@@ -8,11 +8,15 @@ import Button from '../../UI/Atoms/Button';
 export default function OurServices() {
   return (
     <section id="services" className={styles.ourServices}>
+      <span className={styles.ourServices__headerTag}>
+        {servicesHeaderData.title}
+      </span>
+
       <div className={styles.ourServices__header}>
         <h2 className={styles.ourServices__headerTitle}>
           {servicesHeaderData.tag}
         </h2>
-
+        <span className={styles.ourServices__headerDivider} />
         <p className={styles.ourServices__headerDesc}>
           {servicesHeaderData.subtitle}
         </p>
@@ -23,33 +27,32 @@ export default function OurServices() {
           const Icon = service.icon;
 
           return (
-            <Link
+            <div
               key={service.id}
-              to={service.link}
               className={styles.ourServices__card}
               style={{ "--theme-color": service.color }}
             >
-              <span className={styles.ourServices__bgNumber}>
-                {service.id}
-              </span>
-
-              <div className={styles.ourServices__iconWrapper}>
-                <Icon className={styles.ourServices__icon} />
+              <div className={styles.ourServices__cardBleed} />
+              <div className={styles.ourServices__bgIcon}>
+                <Icon />
               </div>
 
-              <h3 className={styles.ourServices__cardTitle}>
-                {service.title}
-              </h3>
-
-              <p className={styles.ourServices__cardDesc}>
-                {service.description}
-              </p>
-
-              <span className={styles.ourServices__linkRow}>
-                {service.linkText}
-                <ArrowRight size={16} strokeWidth={1.8} />
-              </span>
-            </Link>
+              <div className={styles.ourServices__cardContent}>
+                <h3 className={styles.ourServices__cardTitle}>
+                  {service.title}
+                </h3>
+                <p className={styles.ourServices__cardDesc}>
+                  {service.description}
+                </p>
+                <Link
+                  to={service.link}
+                  className={styles.ourServices__linkRow}
+                >
+                  {service.linkText}
+                  <ArrowRight size={16} strokeWidth={1.8} />
+                </Link>
+              </div>
+            </div>
           );
         })}
       </div>
@@ -58,7 +61,7 @@ export default function OurServices() {
         <Button
           to={servicesHeaderData.viewAllLink}
           label={servicesHeaderData.viewAllText}
-          variant="outlined"
+          variant="secondary"
         />
       </div>
     </section>
