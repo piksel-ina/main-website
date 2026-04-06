@@ -6,8 +6,7 @@ import { heroData } from "@site/src/data/heroData";
 
 export default function Hero() {
   return (
-    <>
-      <section className={styles.hero}>
+      <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.hero__imageContainer}>
           <picture>
             <source 
@@ -30,13 +29,13 @@ export default function Hero() {
         <div className={styles.hero__contentWrapper}>
           <div className={styles.hero__content}>
             <span className={styles.hero__tag}>{heroData.tag}</span>
-            <h1 className={styles.hero__title}>
+            <h1 id="hero-title" className={styles.hero__title}>
               {heroData.title.replace(heroData.titleHighlight, '').trimEnd()}
               <span className={styles.hero__titleHighlight}>
                 {' '}{heroData.titleHighlight}
               </span>
             </h1>
-            <div className={styles.hero__divider} />
+            <div className={styles.hero__divider} aria-hidden="true" />
             <p className={styles.hero__subtitle}>
               {heroData.subtitle}
             </p>
@@ -76,6 +75,5 @@ export default function Hero() {
           </div>
         </div>
       </section>
-    </>
   );
 }

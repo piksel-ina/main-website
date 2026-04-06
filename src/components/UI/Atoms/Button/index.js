@@ -9,7 +9,7 @@ const defaultIcons = {
   hero: ChevronRight,
   secondary: ChevronRight,
   link: ArrowRight,
-  viewAll: MoveRight,
+  outlined: MoveRight,
 };
 
 const Button = ({
@@ -27,10 +27,9 @@ const Button = ({
   enableShine,
   enableExpand,
   className,
-  wrapperClassName,
   ...props
 }) => {
-  const content = label || children || (variant === 'viewAll' ? 'View All' : 'Learn More');
+  const content = label || children || 'Learn More';
   const Component = to || href ? Link : 'button';
   const ButtonIcon = Icon || defaultIcons[variant] || null;
   const style = color ? { ...props.style, '--button-color': color } : props.style;
@@ -38,7 +37,7 @@ const Button = ({
   const showShine = enableShine !== undefined ? enableShine : variant === 'primary';
   const shouldExpand = enableExpand !== undefined ? enableExpand : variant === 'primary';
 
-  const buttonElement = (
+  return (
     <Component
       className={clsx(
         styles.button,
@@ -51,41 +50,22 @@ const Button = ({
       to={to}
       href={href}
       style={style}
+      {...(!(to || href) && { type: 'button' })}
       {...props}
     >
-      {showShine && <div className={styles['button__shine']} />}
+      {showShine && <div className={styles['button__shine']} aria-hidden="true" />}
 
       {showIcon && ButtonIcon && iconPosition === 'left' && (
-        <ButtonIcon className={styles['button__icon']} />
+        <ButtonIcon className={styles['button__icon']} aria-hidden="true" />
       )}
 
       <span>{content}</span>
 
       {showIcon && ButtonIcon && iconPosition === 'right' && (
-        <ButtonIcon className={styles['button__icon']} />
+        <ButtonIcon className={styles['button__icon']} aria-hidden="true" />
       )}
     </Component>
   );
-
-  if (variant === 'viewAll') {
-    if (wrapperClassName !== undefined) {
-      if (wrapperClassName === '') {
-        return buttonElement;
-      }
-      return (
-        <div className={clsx(styles.viewAll, wrapperClassName)}>
-          {buttonElement}
-        </div>
-      );
-    }
-    return (
-      <div className={styles.viewAll}>
-        {buttonElement}
-      </div>
-    );
-  }
-
-  return buttonElement;
 };
 
 export default Button;
