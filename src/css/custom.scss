@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar--homepage {
   .navbar__link {
     font-weight: 400;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
     border-bottom: 2px solid transparent;
     padding-bottom: 0.4rem;
 
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme='light']
   [class*='navbar'][class*='Homepage']
   [class*='toggleButton'] {
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     background: rgba(255, 255, 255, 0.2) !important;
