@@ -1,39 +1,29 @@
 @use '../../../../css/abstracts' as *;
 
+$cut: space('3');
+
 .faqItem {
   position: relative;
-  border-top: 1px solid var(--ifm-border-color);
-  transition: all 0.3s ease;
-  background: transparent;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+  background: color('background');
+  clip-path: polygon(
+    $cut 0,
+    100% 0,
+    100% calc(100% - $cut),
+    calc(100% - $cut) 100%,
+    0 100%,
+    0 $cut
+  );
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.04);
 
-  &[data-open="true"] {
-    border-top-color: var(--ifm-color-primary);
+  &:hover {
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: space('4') * -1;
-    right: space('4') * -1;
-    bottom: 0;
-    background-color: color-mix(in srgb, var(--ifm-color-primary) 4%, transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-    clip-path: polygon(
-      space('4') 0,
-      100% 0,
-      100% calc(100% - space('4')),
-      calc(100% - space('4')) 100%,
-      0 100%,
-      0 space('4')
-    );
-  }
-
-  &:hover::before,
-  &[data-open="true"]::before {
-    opacity: 1;
+  &[data-open='true'] {
+    background: color('bg');
+    box-shadow: 0 0.4rem 2.0rem rgba(0, 0, 0, 0.08);
   }
 
   &__question {
@@ -41,45 +31,46 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: space('5') 0;
+    padding: space('5') space('5');
     background: none;
     border: none;
     cursor: pointer;
     text-align: left;
     gap: space('4');
-    color: var(--ifm-font-color-base);
+    color: color('primary');
   }
 
   &__questionText {
-    font-family: var(--font-family-heading);
+    font-family: font-family('heading');
     font-size: text-size('base');
     font-weight: 600;
     line-height: 1.4;
-    padding-left: 1rem;
-    transition: color 0.2s ease;
+    color: color('primary');
+    transition: color 0.25s ease;
   }
 
-  &[data-open="true"] &__questionText {
-    color: var(--ifm-color-primary);
+  &[data-open='true'] &__questionText {
+    color: color('accent');
   }
 
   &__iconWrapper {
-    color: var(--ifm-color-primary);
-    background: var(--ifm-color-emphasis-100);
+    color: color('primary');
+    background: rgba(13, 41, 91, 0.06);
     padding: 0.6em;
     border-radius: space('1');
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: space('6');
     height: space('6');
   }
 
-  &[data-open="true"] &__iconWrapper {
-    background: var(--ifm-color-primary);
-    color: color('background');
+  &[data-open='true'] &__iconWrapper {
+    background: color('accent');
+    color: color('bg');
+    transform: rotate(180deg);
   }
 
   &__icon {
@@ -91,24 +82,31 @@
   &__answer {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-out;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &__answerVisible {
+  &[data-open='true'] &__answer {
     grid-template-rows: 1fr;
   }
 
   &__answerInner {
-    padding-left: 1rem;
     overflow: hidden;
-    color: var(--ifm-font-color-base);
-    opacity: 0.8;
+    padding: 0 space('5') space('5');
+    color: color('text-light');
     font-size: text-size('base');
     line-height: 1.7;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
 
     p {
-      padding-bottom: space('5');
+      padding-top: space('2');
       max-width: 65ch;
     }
+  }
+
+  &[data-open='true'] &__answerInner {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
