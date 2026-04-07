@@ -8,9 +8,6 @@ import Button from '../../UI/Atoms/Button';
 export default function OurServices() {
   return (
     <section id="services" className={styles.ourServices}>
-      <span className={styles.ourServices__headerTag}>
-        {servicesHeaderData.title}
-      </span>
 
       <div className={styles.ourServices__header}>
         <h2 className={styles.ourServices__headerTitle}>
@@ -32,12 +29,14 @@ export default function OurServices() {
               className={styles.ourServices__card}
               style={{ "--theme-color": service.color }}
             >
-              <div className={styles.ourServices__cardBleed} />
               <div className={styles.ourServices__bgIcon}>
                 <Icon />
               </div>
 
               <div className={styles.ourServices__cardContent}>
+                <div className={styles.ourServices__iconRing}>
+                  <Icon />
+                </div>
                 <h3 className={styles.ourServices__cardTitle}>
                   {service.title}
                 </h3>
@@ -48,7 +47,7 @@ export default function OurServices() {
                   to={service.link}
                   className={styles.ourServices__linkRow}
                 >
-                  {service.linkText}
+                  <span className={styles.ourServices__linkText}>{service.linkText}</span>
                   <ArrowRight size={16} strokeWidth={1.8} />
                 </Link>
               </div>
@@ -61,7 +60,8 @@ export default function OurServices() {
         <Button
           to={servicesHeaderData.viewAllLink}
           label={servicesHeaderData.viewAllText}
-          variant="secondary"
+          variant="outlined"
+          color="#e2e8f0"
         />
       </div>
     </section>
