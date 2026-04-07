@@ -5,10 +5,10 @@ import styles from './styles.module.scss';
 
 const FAQItem = ({ question, children, isOpen, onToggle }) => {
   const [internalOpen, setInternalOpen] = useState(false);
-  
+
   const isControlled = isOpen !== undefined;
   const show = isControlled ? isOpen : internalOpen;
-  
+
   const handleClick = () => {
     if (isControlled) {
       onToggle && onToggle();
@@ -18,12 +18,12 @@ const FAQItem = ({ question, children, isOpen, onToggle }) => {
   };
 
   return (
-    <div 
-        className={styles.faqItem}
-        data-open={show}
+    <div
+      className={clsx(styles.faqItem, { [styles.faqItemOpen]: show })}
+      data-open={show}
     >
-      <button 
-        className={styles.faqItem__question} 
+      <button
+        className={styles.faqItem__question}
         onClick={handleClick}
         aria-expanded={show}
       >
@@ -36,8 +36,8 @@ const FAQItem = ({ question, children, isOpen, onToggle }) => {
           )}
         </div>
       </button>
-      
-      <div className={clsx(styles.faqItem__answer, { [styles.faqItem__answerVisible]: show })}>
+
+      <div className={styles.faqItem__answer}>
         <div className={styles.faqItem__answerInner}>
           {typeof children === 'string' ? <p>{children}</p> : children}
         </div>

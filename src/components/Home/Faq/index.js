@@ -12,27 +12,6 @@ const Faq = () => {
 
   return (
     <section id="faq" className={styles.faq}>
-      <div className={styles.faq__background}>
-        <picture>
-          <source
-            srcSet={require('@site/static/img/cta/cta-bg.webp').default}
-            type="image/webp"
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcSet={require('@site/static/img/cta/cta-bg-md.webp').default}
-            type="image/webp"
-            media="(min-width: 768px)"
-          />
-          <img
-            src={require('@site/static/img/cta/cta-bg-sm.webp').default}
-            alt=""
-            className={styles.faq__bgImage}
-          />
-        </picture>
-        <div className={styles.faq__overlay} />
-      </div>
-
       <div className={styles.faq__contentWrapper}>
         {/* Left Column: Header & Accents */}
         <div className={styles.faq__headerColumn}>
