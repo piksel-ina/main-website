@@ -2,18 +2,48 @@
 
 .faq {
   position: relative;
-  background-color: var(--ifm-background-surface-color);
+  border-radius: 1.6rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  max-width: 100%;
-  padding-bottom: space('10');
-  z-index: 0;
+  padding: space('10') space('10') space('8') space('12');
+  min-height: 40vh;
+
+  @include respond-to('tablet') {
+    padding: space('7') space('2') space('6');
+    border-radius: 1.2rem;
+  }
+
+  @include respond-to('phone') {
+    border-radius: 0.8rem;
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  &__bgImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      210deg,
+      rgba(10, 14, 26, 0.3) 0%,
+      rgba(10, 14, 26, 0.15) 100%
+    );
+  }
 
   &__contentWrapper {
     position: relative;
     z-index: 10;
-    max-width: 110rem;
     margin: 0 auto;
-    padding: 0 space('2');
     display: grid;
     grid-template-columns: 28rem 1fr;
     gap: space('9');
@@ -31,6 +61,10 @@
     display: flex;
     flex-direction: column;
     gap: space('4');
+
+    @include respond-to('tablet') {
+      position: static;
+    }
   }
 
   &__accentLine {
@@ -40,25 +74,26 @@
   }
 
   &__accentLineBar {
-    width: 3.84rem;
-    height: 0.16rem;
-    background-color: var(--ifm-color-primary);
+    width: space('5');
+    height: 0.2rem;
+    background-color: color('accent');
+    border-radius: 0.1rem;
   }
 
   &__accentText {
     font-size: text-size('sm');
     font-weight: 700;
-    color: var(--ifm-color-primary);
+    color: color('accent');
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   &__headerTitle {
-    font-family: var(--font-family-heading);
+    font-family: font-family('heading');
     font-size: text-size('2xl');
     line-height: 1.1;
     font-weight: 700;
-    color: var(--ifm-font-color-base);
+    color: color('background');
     margin: 0;
 
     @include respond-to('phone-wide') {
@@ -68,16 +103,19 @@
 
   &__headerDesc {
     font-size: text-size('base');
-    color: var(--ifm-font-color-base);
-    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
-    font-weight: 400;
+    line-height: 1.7;
   }
 
   &__faqList {
+    @include glass(0.08, 1.2rem);
+    border-radius: 1.2rem;
+    padding: space('3');
     display: flex;
     flex-direction: column;
     gap: space('3');
     width: 100%;
+    box-shadow: 0 space('1') space('4') rgba(0, 0, 0, 0.06);
   }
 }
