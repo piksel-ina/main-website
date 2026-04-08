@@ -83,23 +83,13 @@ export default CTAButton;
 
 ### CSS & Design
 
-SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS custom properties). BEM naming via SCSS nesting (`&__element`, `&--modifier`). `rem` for layout, `em` for component-internal. No `clamp()` — use type/spacing tokens, override in media queries via `@include respond-to()`.
+SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS custom properties). BEM naming via SCSS nesting (`&__element`, `&--modifier`). `rem` for layout, `em` for component-internal. No `clamp()`.
 
 **Desktop-first approach:** Default styles target ≥ 1440px. Use `@include respond-to('<breakpoint>')` to override for smaller screens. Single mixin, `max-width` only — no `respond-above`.
 
-**Breakpoints** (semantic, desktop-first `max-width`):
+**Editing SCSS?** Load the `styling-system` skill first — it provides all tokens, functions, mixins, breakpoints, and design rules at edit time.
 
-| Token | Value | Target |
-|---|---|---|
-| `'phone'` | 480px | Small phones |
-| `'phone-wide'` | 768px | Large phones / landscape |
-| `'tablet'` | 996px | Tablets (Docusaurus cutoff) |
-| `'laptop'` | 1280px | Small laptops |
-| `'desktop'` | 1440px | Standard laptops & desktops |
-
-**SCSS architecture:** `src/css/abstracts/` provides tokens (`$spacing`, `$type-scale`, `$breakpoints`, `$colors`, `$font-families`), functions (`space()`, `text-size()`, `color()`, `bp()`, `font-family()`, `clip-path()`), and mixins (`respond-to()`, `heading()`, `card-base()`, `container()`, `glass()`). Import with `@use '../../css/abstracts' as *;` (adjust path as needed).
-
-CSS custom properties (`--space-*`, `--text-*`, `--color-*`, etc.) are generated from SCSS maps in `custom.scss`. See **styling-system** skill for full token reference, breakpoints, and clip-path shapes.
+**Visual verification:** Token-only swaps (color, spacing, font-size) need no visual check. For layout changes (flex, grid, breakpoints, new components, clip-paths), delegate to the `@visual-check` subagent — never consume screenshots in the main context.
 
 ### Comments
 

@@ -83,6 +83,9 @@ Major Third (1.25 ratio). Available as CSS vars (`--text-*`) and `text-size()` f
 | `--space-8` / `space('8')` | `4.8rem` | 48 |
 | `--space-9` / `space('9')` | `6.4rem` | 64 |
 | `--space-10` / `space('10')` | `8.0rem` | 80 |
+| `--space-11` / `space('11')` | `9.6rem` | 96 |
+| `--space-12` / `space('12')` | `11.2rem` | 112 |
+| `--space-13` / `space('13')` | `12.8rem` | 128 |
 
 No ad-hoc values. Round to nearest token.
 
@@ -107,20 +110,30 @@ Use `color()` function or CSS vars. Never hardcode hex/rgb.
 | Key | Value | CSS Var |
 |-----|-------|---------|
 | `primary` | `#0d295b` | `--ifm-color-primary` |
-| `primary-dark` → `primary-lightest` | shades | `--ifm-color-primary-dark` → `--ifm-color-primary-lightest` |
-| `secondary` | `#244680` | `--color-secondary` |
+| `primary-dark` | `#0a1f47` | `--ifm-color-primary-dark` |
+| `primary-darker` | `#081838` | `--ifm-color-primary-darker` |
+| `primary-darkest` | `#051224` | `--ifm-color-primary-darkest` |
+| `primary-light` | `#244680` | `--ifm-color-primary-light` |
+| `primary-lighter` | `#3d6aa8` | `--ifm-color-primary-lighter` |
+| `primary-lightest` | `#5689d0` | `--ifm-color-primary-lightest` |
+| `ice` | `#eff6ff` | `--color-ice` |
+| `ice-light` | `#e8f4fd` | `--color-ice-light` |
+| `sky` | `rgba(147, 197, 253, 0.35)` | `--color-sky` |
+| `sky-bright` | `rgba(147, 197, 253, 0.6)` | `--color-sky-bright` |
 | `accent` | `#4a90e2` | `--color-accent` |
-| `bg` | `#ffffff` | `--ifm-background-color` |
-| `bg-surface` | `#f5f5f5` | `--ifm-background-surface-color` |
+| `accent-teal` | `#35a9d3` | `--color-accent-teal` |
+| `accent-teal-dark` | `#005967` | `--color-accent-teal-dark` |
+| `accent-amber` | `#d97706` | `--color-accent-amber` |
+| `accent-red` | `#dc2626` | `--color-accent-red` |
 | `text` | `#333333` | `--ifm-font-color-base` |
+| `text-light` | `#555555` | `--ifm-font-color-base-light` |
+| `text-lighter` | `#777777` | `--ifm-font-color-base-lighter` |
+| `text-inverse` | `#e2e8f0` | — |
+| `text-inverse-muted` | `#94a3b8` | — |
 | `border` | `#e0e0e0` | `--ifm-border-color` |
-| `piksel-brown` | `#8b5a2b` | `--piksel-color-brown` |
-| `piksel-blue` | `#2563eb` | `--piksel-color-blue` |
-| `piksel-green` | `#059669` | `--piksel-color-green` |
-| `piksel-cyan` | `#0891b2` | `--piksel-color-cyan` |
-| `piksel-purple` | `#7c3aed` | `--piksel-color-purple` |
-| `piksel-red` | `#dc2626` | `--piksel-color-red` |
-| `piksel-amber` | `#d97706` | `--piksel-color-amber` |
+| `steel` | `#c6d0d6` | `--color-steel` |
+| `background` | `#ebe7e2` | `--ifm-background-color` |
+| `bg-surface` | `#f5f5f5` | `--ifm-background-surface-color` |
 
 ## Clip-Path Shapes
 

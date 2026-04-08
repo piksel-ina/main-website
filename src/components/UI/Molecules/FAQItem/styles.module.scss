@@ -22,7 +22,7 @@ $cut: space('3');
   }
 
   &[data-open='true'] {
-    background: color('bg');
+    background: color('bg-surface');
     box-shadow: 0 0.4rem 2.0rem rgba(0, 0, 0, 0.08);
   }
 
@@ -69,7 +69,7 @@ $cut: space('3');
 
   &[data-open='true'] &__iconWrapper {
     background: color('accent');
-    color: color('bg');
+    color: color('text-inverse');
     transform: rotate(180deg);
   }
 
