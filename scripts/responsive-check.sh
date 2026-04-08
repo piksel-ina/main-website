@@ -67,7 +67,7 @@ PAGE_SLUG=$(slug "$PAGE_PATH")
 mkdir -p "$SCREENSHOT_DIR"
 
 echo "Opening ${URL}..."
-playwright-cli open "$URL" --browser chromium > /dev/null
+playwright-cli open "$URL" --browser chrome > /dev/null
 
 sleep 2
 
