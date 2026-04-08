@@ -29,7 +29,7 @@ export const heroData = {
       message: "Request Demo",
       description: "Primary CTA button text",
     }),
-    link: "#cta",
+    link: "mailto:hello@pik-sel.id",
   },
   ctaSecondary: {
     text: translate({
