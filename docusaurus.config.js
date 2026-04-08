@@ -41,6 +41,11 @@ const config = {
           editUrl: "https://github.com/piksel-ina/piksel-documentation",
         },
 
+        blog: {
+          showReadingTime: true,
+          blogSidebarCount: 'ALL',
+        },
+
         theme: {
           customCss: "./src/css/custom.scss",
         },
@@ -74,6 +79,35 @@ const config = {
   ],
 
   plugins: [
+    function featuredBlogDataPlugin() {
+      return {
+        name: 'featured-blog-data',
+        async allContentLoaded({ allContent, actions }) {
+          const blogContent = allContent['docusaurus-plugin-content-blog']?.default;
+          if (!blogContent?.blogPosts) {
+            actions.setGlobalData({ featuredPosts: [] });
+            return;
+          }
+
+          const featuredPosts = blogContent.blogPosts
+            .filter((post) => post.metadata.frontMatter.featured === true)
+            .sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date))
+            .slice(0, 6)
+            .map((post) => ({
+              title: post.metadata.title,
+              slug: post.metadata.slug,
+              permalink: post.metadata.permalink,
+              image: post.metadata.frontMatter.image || null,
+              description: post.metadata.description || '',
+              authors: post.metadata.authors || [],
+              date: post.metadata.date,
+              readingTime: post.metadata.readingTime || null,
+            }));
+
+          actions.setGlobalData({ featuredPosts });
+        },
+      };
+    },
     function scssPlugin() {
       return {
         name: 'scss-support',
@@ -140,6 +174,7 @@ const config = {
           },
           { href: "/#use-cases", label: "Pemanfaatan", position: "right" },
           { href: "/#services", label: "Layanan", position: "right" },
+          { href: "/#news", label: "Berita", position: "right" },
           { href: "/#faq", label: "FAQ", position: "right" },
           {
             type: "localeDropdown",

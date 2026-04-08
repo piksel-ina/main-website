@@ -6,6 +6,7 @@ import Hero from "../components/Home/Hero";
 import UseCases from "../components/Home/UseCases";
 import OurServices from "../components/Home/OurServices";
 import Faq from "../components/Home/Faq";
+import NewsArticles from "../components/Home/NewsArticles";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -35,6 +36,9 @@ export default function Home() {
         </div>
         <div className="sectionContainer">
           <Faq />
+        </div>
+        <div className="sectionContainer">
+          <NewsArticles />
         </div>
       </main>
     </Layout>
