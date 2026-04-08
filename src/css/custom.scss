@@ -73,7 +73,7 @@
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-navbar-shadow: none;
 
-  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-footer-background-color: var(--ifm-background-color);
   --ifm-footer-color: var(--ifm-font-color-base);
 }
 
@@ -279,11 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer {
   border-top: 1px solid color('border');
-  background: linear-gradient(
-    to bottom,
-    color('bg-surface') 0%,
-    color('background') 100%
-  );
+  background-color: color('background');
   padding: space('8') 0 space('4');
   padding-top: space('9');
   position: relative;
@@ -309,6 +305,48 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 0;
   }
 
+  .container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 space('8');
+
+    @include respond-to('tablet') {
+      padding: 0 space('2');
+    }
+
+    @include respond-to('phone') {
+      padding: 0 space('1');
+    }
+  }
+
+  .row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    @include respond-to('phone-wide') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__row--main {
+    display: flex;
+    gap: space('6');
+
+    @include respond-to('phone-wide') {
+      flex-direction: column;
+      gap: space('5');
+    }
+  }
+
+  &__col {
+    flex: 0 1 auto;
+    width: auto;
+
+    &:not(:first-child) {
+      text-align: left;
+    }
+  }
+
   &__title {
     color: color('primary');
     font-family: font-family('heading');
@@ -319,6 +357,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: space('3');
     position: relative;
     padding-bottom: space('1');
+    text-align: left;
 
     &::after {
       content: '';
@@ -345,6 +384,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     position: relative;
     text-decoration: none;
+    text-align: left;
 
     &:hover {
       color: color('accent');
