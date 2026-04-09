@@ -22,7 +22,7 @@
   padding: space('10') space('11') space('6');
   scroll-margin-top: 8rem;
   border-radius: 1.6rem;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
+  @include section-shadow(2.5);
   overflow: hidden;
   background: linear-gradient(135deg, color('primary-darkest') 0%, color('primary-dark') 40%, #0e2a4d 70%, color('accent-teal-dark') 100%);
 
