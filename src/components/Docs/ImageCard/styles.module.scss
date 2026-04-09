@@ -6,7 +6,7 @@
   overflow: hidden;
   border-radius: var(--ifm-card-border-radius);
   transition: all var(--ifm-transition-fast) ease;
-  border: 1px solid rgba(color('background'), 0.1);
+  border: 1px solid rgba(color('white-1'), 0.1);
   padding: 0;
   margin-bottom: space('4');
   background-color: var(--ifm-background-color);
@@ -60,7 +60,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    color: color('background');
+    color: color('white-1');
     background: transparent;
     padding: space('4');
     z-index: 2;
@@ -75,7 +75,7 @@
     font-family: var(--font-family-heading);
     font-size: text-size('md');
     font-weight: 500;
-    color: color('background');
+    color: color('white-1');
     margin: 0 0 space('1') 0;
     text-shadow: 0 0.16rem 0.32rem rgba(0, 0, 0, 0.5);
     line-height: 1.2;
@@ -84,7 +84,7 @@
   &__description {
     font-size: text-size('sm');
     line-height: 1.5;
-    color: rgba(color('background'), 0.8);
+    color: rgba(color('white-1'), 0.8);
     margin: 0 0 space('2') 0;
     max-height: 0;
     opacity: 0;

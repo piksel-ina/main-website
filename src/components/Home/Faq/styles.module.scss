@@ -4,7 +4,7 @@
   position: relative;
   border-radius: 1.6rem;
   padding: space('10') space('10') space('8') space('12');
-  background: color('grey');
+  background: color('grey-light-2');
   overflow: hidden;
 
   @include respond-to('tablet') {
@@ -99,7 +99,7 @@
 
   &__headerDesc {
     font-size: text-size('base');
-    color: color('text-light');
+    color: color('black-3');
     line-height: 1.7;
   }
 

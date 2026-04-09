@@ -68,7 +68,7 @@
     font-size: text-size('2xl');
     font-weight: 700;
     margin-bottom: space('2');
-    color: color('text');
+    color: color('black-2');
     line-height: 1.1;
 
     @include respond-to('phone-wide') {
@@ -78,7 +78,7 @@
 
   &__subtitle {
     font-size: text-size('sm');
-    color: color('text-light');
+    color: color('black-3');
     line-height: 1.7;
     max-width: 50rem;
 
@@ -115,7 +115,7 @@
       overflow-x: auto;
       padding: 0 space('2') space('2');
       scrollbar-width: thin;
-      border-bottom: 1px solid color('border');
+      border-bottom: 1px solid color('grey-light-1');
     }
   }
 
@@ -131,7 +131,7 @@
     white-space: nowrap;
     text-align: left;
     transition: all 0.25s ease;
-    color: color('text-light');
+    color: color('black-3');
     display: block;
     border-radius: 0 0.6rem 0.6rem 0;
 
@@ -142,12 +142,12 @@
     }
 
     &:hover {
-      color: color('text');
+      color: color('black-2');
       background: color-mix(in srgb, var(--active-color, color('primary')) 8%, transparent);
     }
 
     &--active {
-      color: color('text');
+      color: color('black-2');
       font-weight: 600;
       border-left-color: var(--active-color);
       background: color-mix(in srgb, var(--active-color, color('primary')) 10%, transparent);
@@ -175,7 +175,7 @@
 
       &:hover {
         background: none;
-        color: color('text');
+        color: color('black-2');
       }
 
       &--active {
@@ -379,7 +379,7 @@
     font-size: text-size('base');
     max-width: 60rem;
     line-height: 1.7;
-    color: color('text');
+    color: color('black-2');
     margin-bottom: space('4');
   }
 
@@ -397,7 +397,7 @@
     align-items: center;
     gap: 0.6rem;
     font-size: text-size('sm');
-    color: color('text-light');
+    color: color('black-3');
     font-weight: 500;
   }
 

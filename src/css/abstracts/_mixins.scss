@@ -18,7 +18,7 @@
 }
 
 @mixin card-base {
-  background-color: color('background');
+  background-color: color('white-1');
   border-radius: $card-border-radius;
   box-shadow: $card-box-shadow;
 }

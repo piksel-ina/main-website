@@ -130,14 +130,28 @@ Use `color()` function or CSS vars. Never hardcode hex/rgb.
 | `grey` | `#C7C7CC` | `--color-grey` |
 | `grey-light-1` | `#D1D1D6` | `--color-grey-light-1` |
 | `grey-light-2` | `#E5E5EA` | `--color-grey-light-2` |
-| `text` | `#333333` | `--ifm-font-color-base` |
-| `text-light` | `#555555` | `--ifm-font-color-base-light` |
-| `text-lighter` | `#8E8E93` | `--ifm-font-color-base-lighter` |
-| `text-inverse` | `#e2e8f0` | — |
-| `text-inverse-muted` | `#94a3b8` | — |
-| `border` | `#D1D1D6` | `--ifm-border-color` |
-| `background` | `#F2F2F7` | `--ifm-background-color` |
-| `bg-surface` | `#f5f5f5` | `--ifm-background-surface-color` |
+| `black` | `#000000` | `--color-black` |
+| `black-1` | `#1D1D1F` | `--color-black-1` |
+| `black-2` | `#3A3A3C` | `--color-black-2` |
+| `black-3` | `#48484A` | `--color-black-3` |
+| `black-4` | `#636366` | `--color-black-4` |
+| `white` | `#FFFFFF` | `--color-white` |
+| `white-1` | `#F5F5F7` | `--color-white-1` |
+
+### Neutral Scale Usage
+
+No semantic aliases — use scale tokens directly:
+
+| Use case | Token |
+|----------|-------|
+| Primary text | `color('black-2')` |
+| Secondary text | `color('black-3')` |
+| Muted / placeholder text | `color('grey-dark-2')` |
+| Text on dark backgrounds | `color('grey-light-2')` |
+| Muted text on dark backgrounds | `color('grey-dark-1')` |
+| Borders | `color('grey-light-1')` |
+| Page / card background | `color('white-1')` |
+| Pure black / white | `color('black')` / `color('white')` |
 
 ## Clip-Path Shapes
 

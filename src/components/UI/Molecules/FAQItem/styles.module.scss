@@ -5,7 +5,7 @@ $cut: space('3');
 .faqItem {
   position: relative;
   transition: background 0.35s ease, box-shadow 0.35s ease;
-  background: color('background');
+  background: color('grey-light-1');
   clip-path: polygon(
     $cut 0,
     100% 0,
@@ -22,7 +22,7 @@ $cut: space('3');
   }
 
   &[data-open='true'] {
-    background: color('bg-surface');
+    background: color('white-1');
     box-shadow: 0 0.4rem 2.0rem rgba(0, 0, 0, 0.08);
   }
 
@@ -31,13 +31,13 @@ $cut: space('3');
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: space('5') space('5');
+    padding: space('3') space('4');
     background: none;
     border: none;
     cursor: pointer;
     text-align: left;
-    gap: space('4');
-    color: color('primary');
+    gap: space('3');
+    color: color('grey-dark-2');
   }
 
   &__questionText {
@@ -45,7 +45,7 @@ $cut: space('3');
     font-size: text-size('base');
     font-weight: 600;
     line-height: 1.4;
-    color: color('primary');
+    color: color('primary-dark');
     transition: color 0.25s ease;
   }
 
@@ -69,7 +69,7 @@ $cut: space('3');
 
   &[data-open='true'] &__iconWrapper {
     background: color('accent');
-    color: color('text-inverse');
+    color: color('grey-light-2');
     transform: rotate(180deg);
   }
 
@@ -91,8 +91,8 @@ $cut: space('3');
 
   &__answerInner {
     overflow: hidden;
-    padding: 0 space('5') space('5');
-    color: color('text-light');
+    padding: 0 space('4') space('4');
+    color: color('black-3');
     font-size: text-size('base');
     line-height: 1.7;
     opacity: 0;
