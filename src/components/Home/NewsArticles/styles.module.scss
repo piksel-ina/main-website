@@ -6,6 +6,7 @@
   padding: space('10') space('10') space('8') space('12');
   background: color('white-1');
   overflow: hidden;
+  @include section-shadow;
 
   @include respond-to('tablet') {
     padding: space('7') space('2') space('6');

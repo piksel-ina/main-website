@@ -5,7 +5,7 @@
   scroll-margin-top: 80px;
   background: #ffffff;
   border-radius: 1.6rem;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+  @include section-shadow;
   overflow: hidden;
   padding: space('10') space('10') space('8') space('12');
 
