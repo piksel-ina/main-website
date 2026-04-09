@@ -92,7 +92,7 @@
    ======================================================================== */
 
 html {
-  font-size: 62.5%;
+  font-size: 56.25%;
   scroll-behavior: smooth;
 }
 
@@ -158,42 +158,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
   padding: 0;
+  height: auto;
 
   &__inner {
     max-width: $container-max-width;
     margin: 0 auto;
-    margin-bottom: space('4');
     padding: space('4') space('4');
   }
 
   &__brand {
-    padding-left: space('5');
+    padding-left: space('4');
   }
 
   &__logo {
-    min-height: 7.5rem;
-    padding-bottom: space('4');
-    margin-top: space('1') * 0.625;
+    height: 5rem;
 
     img {
-      width: auto;
+      width: 5rem ;
+      height: auto;
     }
+  }
+
+  &__items {
+    gap: space('5');
   }
 
   &__link {
     font-weight: 400;
     color: color('black-2');
     font-size: 1.5rem;
+    position: relative;
+    align-items: end;
 
     &:hover {
       color: color('primary');
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 
-  &__item {
-    .navbar--homepage & {
-      padding: 0.6rem 2.4rem;
-    }
+  &__items--right {
+    align-items: flex-end;
   }
 
   &__items--right > :last-child {
@@ -201,26 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.navbar--homepage {
-  .navbar__link {
-    font-weight: 400;
-    transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0.4rem;
-
-    &:hover {
-      border-bottom-color: var(--color-primary);
-    }
-  }
-}
-
-.navbar--scrolled {
-  background-color: color('white-1');
-  box-shadow: $card-box-shadow;
-}
-
 .dropdown {
-  border-top: 1px solid color('grey-light-2');
   text-wrap: nowrap;
 
   &__link {
@@ -269,22 +257,6 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-color-mode-toggle {
   @include respond-to('tablet') {
     display: none;
-  }
-}
-
-[data-theme='light']
-  [class*='navbar'][class*='Homepage']
-  [class*='toggleButton'] {
-  transition: background 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-  }
-
-  svg {
-    color: white !important;
-    filter: drop-shadow(0 1px 0.16rem rgba(0, 0, 0, 0.3));
   }
 }
 

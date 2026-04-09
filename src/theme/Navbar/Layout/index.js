@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import { ThemeClassNames, useThemeConfig } from '@docusaurus/theme-common';
 import {
@@ -8,7 +8,6 @@ import {
 import { translate } from '@docusaurus/Translate';
 import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.scss';
-import { useLocation } from '@docusaurus/router';
 
 function NavbarBackdrop(props) {
   return (
@@ -26,25 +25,6 @@ export default function NavbarLayout({ children }) {
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
-  const location = useLocation();
-
-  const isHomepage = location.pathname === '/' || location.pathname === '/en/';
-  const shouldApplyHomepageStyles = isHomepage && !mobileSidebar.shown;
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    if (!isHomepage) return;
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomepage]);
 
   return (
     <nav
@@ -66,8 +46,6 @@ export default function NavbarLayout({ children }) {
           'navbar--dark': style === 'dark',
           'navbar--primary': style === 'primary',
           'navbar-sidebar--show': mobileSidebar.shown,
-          'navbar--homepage': shouldApplyHomepageStyles,
-          'navbar--scrolled': shouldApplyHomepageStyles && isScrolled,
         },
       )}
     >
