@@ -91,6 +91,12 @@ SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS cu
 
 **Visual verification:** Token-only swaps (color, spacing, font-size) need no visual check. For layout changes (flex, grid, breakpoints, new components, clip-paths), delegate to the `@visual-check` subagent — never consume screenshots in the main context.
 
+### Tooling Rules
+
+- **NEVER install new packages or tools without explicit user permission.** No `npm install`, `npm uninstall`, `npx playwright install`, or similar. Ask first.
+- **ALWAYS use `playwright-cli` for visual checks.** This is the ONLY tool. Session-based: `playwright-cli open <url>` → `playwright-cli screenshot` → `playwright-cli close`.
+- **NEVER use `npx playwright`**, `npx playwright screenshot`, or any other playwright variant. NEVER install `playwright` or `puppeteer` as project dependencies. NEVER run `npx playwright install`.
+
 ### Comments
 
 No trivial comments. OK: CSS section dividers (`/* === SECTION === */`) and JSDoc for complex functions.
