@@ -3,7 +3,7 @@ slug: pemantauan-hutan
 title: Pemantauan Tutupan Hutan dengan Teknologi Penginderaan Jauh
 authors: [ali_amarullah]
 tags: [kehutanan, deforestasi]
-image: /img/hero/hero-image.png
+image: /img/news/featured-01.webp
 description: Memanfaatkan data radar Sentinel-1 dan optik Sentinel-2 untuk memantau perubahan tutupan hutan secara berkala dan mendeteksi aktivitas deforestasi.
 featured: true
 ---

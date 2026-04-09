@@ -3,7 +3,7 @@ slug: peluncuran-platform-piksel
 title: Peluncuran Platform Piksel untuk Observasi Bumi Digital Indonesia
 authors: [tim_piksel]
 tags: [platform, peluncuran]
-image: /img/hero/hero-image.png
+image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop&q=80
 description: Platform Piksel resmi diluncurkan untuk mendukung observasi bumi digital di wilayah Indonesia melalui integrasi citra satelit dan teknologi komputasi awan.
 featured: true
 ---

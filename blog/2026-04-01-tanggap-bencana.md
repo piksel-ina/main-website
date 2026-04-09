@@ -3,7 +3,7 @@ slug: tanggap-bencana
 title: Peran Citra Satelit dalam Tanggap Darurat Bencana
 authors: [muhammad_taufik]
 tags: [bencana, tanggap-darurat]
-image: /img/hero/hero-image.png
+image: /img/news/featured-02.webp
 description: Bagaimana data satelit real-time mendukung upaya tanggap darurat dan penilaian dampak pasca-bencana di berbagai wilayah Indonesia.
 featured: true
 ---
