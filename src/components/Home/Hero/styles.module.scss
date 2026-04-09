@@ -112,7 +112,7 @@
     font-size: text-size('xs');
     font-weight: 600;
     letter-spacing: 0.1em;
-    color: color('text-inverse');
+    color: color('grey-light-2');
     text-transform: uppercase;
     margin-bottom: space('3');
     padding: 0.35rem 1rem 0.35rem 1.2rem;
@@ -127,7 +127,7 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -1px;
-    color: color('text-inverse');
+    color: color('grey-light-2');
     margin-bottom: space('5');
 
     @include respond-to('tablet') {
@@ -153,7 +153,7 @@
 
   &__subtitle {
     font-size: text-size('base');
-    color: color('text-inverse');
+    color: color('grey-light-2');
     opacity: 0.85;
     line-height: 1.7;
     margin-bottom: space('7');
@@ -200,7 +200,7 @@
   }
 
   &__statIcon {
-    color: color('text-inverse');
+    color: color('grey-light-2');
     flex-shrink: 0;
   }
 
@@ -219,7 +219,7 @@
     font-family: var(--font-family-heading);
     font-size: text-size('lg');
     font-weight: 700;
-    color: color('text-inverse');
+    color: color('grey-light-2');
     opacity: 0.9;
     line-height: 1;
 
@@ -230,7 +230,7 @@
 
   &__statLabel {
     font-size: text-size('xs');
-    color: color('text-inverse-muted');
+    color: color('grey-dark-1');
     margin-top: 0.5rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;

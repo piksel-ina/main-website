@@ -4,7 +4,7 @@
   position: relative;
   border-radius: 1.6rem;
   padding: space('10') space('10') space('8') space('12');
-  background: color('bg-surface');
+  background: color('white-1');
   overflow: hidden;
 
   @include respond-to('tablet') {
@@ -61,7 +61,7 @@
 
   &__subtitle {
     font-size: text-size('base');
-    color: color('text');
+    color: color('black-2');
     line-height: 1.7;
     max-width: 60rem;
     opacity: 0.75;
@@ -94,8 +94,8 @@
     gap: space('3');
     padding: space('3');
     border-radius: 1rem;
-    background: color('background');
-    border: 0.1rem solid color('border');
+    background: color('white-1');
+    border: 0.1rem solid color('grey-light-1');
     text-decoration: none;
     color: inherit;
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
@@ -112,7 +112,7 @@
     height: 7rem;
     border-radius: 0.8rem;
     overflow: hidden;
-    background: color('bg-surface');
+    background: color('white-1');
   }
 
   &__listItemImage {
@@ -146,8 +146,8 @@
     flex-direction: column;
     border-radius: 1.2rem;
     overflow: hidden;
-    background: color('background');
-    border: 0.1rem solid color('border');
+    background: color('white-1');
+    border: 0.1rem solid color('grey-light-1');
     text-decoration: none;
     color: inherit;
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
@@ -166,7 +166,7 @@
   &__highlightedImageWrapper {
     flex: 1;
     overflow: hidden;
-    background: color('bg-surface');
+    background: color('white-1');
     min-height: 20rem;
 
     @include respond-to('tablet') {
@@ -200,7 +200,7 @@
 
   &__highlightedDesc {
     font-size: text-size('sm');
-    color: color('text');
+    color: color('black-2');
     line-height: 1.6;
     opacity: 0.75;
     @include truncate(3);
@@ -220,7 +220,7 @@
     align-items: center;
     gap: space('1');
     font-size: text-size('xs');
-    color: color('text');
+    color: color('black-2');
     opacity: 0.6;
   }
 

@@ -60,6 +60,13 @@ $colors: (
   'accent-amber':      #d97706,   // Amber — warm highlights, callouts
   'accent-red':        #dc2626,   // Red — danger/error callouts
 
+  // === BLACK SCALE — Pure to tinted (stops before grey range) ===
+  'black':             #000000,   // Pure black
+  'black-1':           #1D1D1F,   // Deep charcoal — primary dark text
+  'black-2':           #3A3A3C,   // Dark — secondary text
+  'black-3':           #48484A,   // Medium-dark — tertiary text
+  'black-4':           #636366,   // Muted — placeholders, disabled
+
   // === GREY SCALE — System greys ===
   'grey-dark-2':       #8E8E93,   // Darkest grey
   'grey-dark-1':       #AEAEB2,   // Dark grey
@@ -67,15 +74,11 @@ $colors: (
   'grey-light-1':      #D1D1D6,   // Light grey
   'grey-light-2':      #E5E5EA,   // Lightest grey
 
-  // === NEUTRALS — Semantic grey tokens ===
-  'text':              #333333,   // Primary text on light backgrounds
-  'text-light':        #555555,   // Secondary text on light backgrounds
-  'text-lighter':      #8E8E93,   // Muted / placeholder text — grey-dark-2
-  'text-inverse':      #e2e8f0,   // Primary text on dark backgrounds
-  'text-inverse-muted': #94a3b8,  // Muted text on dark backgrounds
-  'border':            #D1D1D6,   // Default borders — grey-light-1
-  'background':        #F2F2F7,   // Page background
-  'bg-surface':        #f5f5f5,   // Card / section background
+  // === WHITE SCALE — Pure to tinted (stops before grey range) ===
+  'white':             #FFFFFF,   // Pure white
+  'white-1':           #F5F5F7,   // Soft — elevated surfaces
+
+
 );
 
 $font-families: (

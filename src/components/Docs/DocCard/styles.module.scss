@@ -21,14 +21,14 @@
     font-family: var(--font-family-heading);
     font-size: text-size('base');
     margin-bottom: space('1');
-    color: color('background');
+    color: color('white-1');
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
 
   &__description {
     font-size: text-size('sm');
-    color: color('text-lighter');
+    color: color('grey-dark-2');
     margin: 0;
     line-height: 1.5;
   }
