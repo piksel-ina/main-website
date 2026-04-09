@@ -31,7 +31,11 @@
   --color-ice-light: #{color('ice-light')};
   --color-sky: #{color('sky')};
   --color-sky-bright: #{color('sky-bright')};
-  --color-steel: #{color('steel')};
+  --color-grey-dark-2: #{color('grey-dark-2')};
+  --color-grey-dark-1: #{color('grey-dark-1')};
+  --color-grey: #{color('grey')};
+  --color-grey-light-1: #{color('grey-light-1')};
+  --color-grey-light-2: #{color('grey-light-2')};
   --color-bg-surface: #{color('bg-surface')};
   --gradient-hero: linear-gradient(150deg, color('primary-darker') 0%, color('primary-dark') 45%, color('accent-teal-dark') 100%);
   --gradient-hero-accent: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(45, 74, 124, 0.05) 50%, transparent 100%);

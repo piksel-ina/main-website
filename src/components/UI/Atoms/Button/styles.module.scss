@@ -102,15 +102,15 @@
 
   &--link {
     font-size: text-size('sm');
-    color: color('steel');
+    color: color('grey');
     font-weight: 600;
     letter-spacing: 0.02em;
     border-bottom: 1px solid transparent;
 
     &:hover,
     &:focus {
-      border-bottom-color: color('steel');
-      color: color('steel');
+      border-bottom-color: color('grey');
+      color: color('grey');
       text-decoration: none;
       filter: brightness(1.1);
     }
