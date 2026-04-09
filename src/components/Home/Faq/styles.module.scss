@@ -4,7 +4,7 @@
   position: relative;
   border-radius: 1.6rem;
   padding: space('10') space('10') space('8') space('12');
-  background: color('bg-surface');
+  background: color('grey');
   overflow: hidden;
 
   @include respond-to('tablet') {

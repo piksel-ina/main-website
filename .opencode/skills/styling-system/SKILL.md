@@ -125,14 +125,18 @@ Use `color()` function or CSS vars. Never hardcode hex/rgb.
 | `accent-teal-dark` | `#005967` | `--color-accent-teal-dark` |
 | `accent-amber` | `#d97706` | `--color-accent-amber` |
 | `accent-red` | `#dc2626` | `--color-accent-red` |
+| `grey-dark-2` | `#8E8E93` | `--color-grey-dark-2` |
+| `grey-dark-1` | `#AEAEB2` | `--color-grey-dark-1` |
+| `grey` | `#C7C7CC` | `--color-grey` |
+| `grey-light-1` | `#D1D1D6` | `--color-grey-light-1` |
+| `grey-light-2` | `#E5E5EA` | `--color-grey-light-2` |
 | `text` | `#333333` | `--ifm-font-color-base` |
 | `text-light` | `#555555` | `--ifm-font-color-base-light` |
-| `text-lighter` | `#777777` | `--ifm-font-color-base-lighter` |
+| `text-lighter` | `#8E8E93` | `--ifm-font-color-base-lighter` |
 | `text-inverse` | `#e2e8f0` | — |
 | `text-inverse-muted` | `#94a3b8` | — |
-| `border` | `#e0e0e0` | `--ifm-border-color` |
-| `steel` | `#c6d0d6` | `--color-steel` |
-| `background` | `#ebe7e2` | `--ifm-background-color` |
+| `border` | `#D1D1D6` | `--ifm-border-color` |
+| `background` | `#F2F2F7` | `--ifm-background-color` |
 | `bg-surface` | `#f5f5f5` | `--ifm-background-surface-color` |
 
 ## Clip-Path Shapes
