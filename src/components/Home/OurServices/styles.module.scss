@@ -325,7 +325,8 @@
   &__viewAllRow {
     display: flex;
     justify-content: end;
-    margin-top: space('8');
+    margin-top: space('4');
+    padding-bottom: space('4');
     position: relative;
     z-index: 1;
   }
