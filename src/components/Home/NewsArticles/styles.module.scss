@@ -3,8 +3,8 @@
 .newsArticles {
   position: relative;
   border-radius: 1.6rem;
-  padding: space('10') space('10') space('8') space('12');
-  background: color('white-1');
+  padding: space('10') space('10') space('10') space('12');
+  background: color('white');
   overflow: hidden;
   @include section-shadow;
 
@@ -37,14 +37,20 @@
   &__accentLineBar {
     width: space('5');
     height: 0.2rem;
-    background-color: color('accent');
+    background-color: color('grey-light-1');
     border-radius: 0.1rem;
+  }
+
+  &__accentLineExtended {
+    flex: 1;
+    height: 0.2rem;
+    background-color: color('grey-light-1');
   }
 
   &__accentText {
     font-size: text-size('sm');
     font-weight: 700;
-    color: color('accent');
+    color: color('grey-dark-2');
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -54,6 +60,7 @@
     font-size: text-size('2xl');
     line-height: 1.1;
     margin: 0;
+    color: color('black-1');
 
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
@@ -64,15 +71,15 @@
     font-size: text-size('base');
     color: color('black-2');
     line-height: 1.7;
-    max-width: 60rem;
     opacity: 0.75;
+    max-width: 85ch;
   }
 
   /* === LAYOUT GRID === */
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr 1.3fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: space('5');
     align-items: stretch;
 
@@ -80,6 +87,12 @@
       grid-template-columns: 1fr;
       gap: space('5');
     }
+  }
+
+  &__highlighted {
+    display: flex;
+    flex-direction: column;
+    gap: space('4');
   }
 
   &__list {
@@ -93,17 +106,31 @@
   &__listItem {
     display: flex;
     gap: space('3');
-    padding: space('3');
-    border-radius: 1rem;
-    background: color('white-1');
-    border: 0.1rem solid color('grey-light-1');
+    padding: space('3') space('2');
+    margin: 0 -#{space('2')};
+    border-bottom: 0.1rem solid color('grey-light-1');
     text-decoration: none;
     color: inherit;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    background: transparent;
+    border-radius: 0.8rem;
+    transition: background-color 0.25s ease;
 
     &:hover {
-      box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.06);
-      border-color: color('accent');
+      border-color: color('grey-light-1');
+      text-decoration: none;
+      background-color: color('white-1');
+
+      .newsArticles__listItemImage {
+        transform: scale(1.06);
+      }
+
+      .newsArticles__listItemTitle {
+        color: color('black');
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
     }
   }
 
@@ -113,13 +140,13 @@
     height: 7rem;
     border-radius: 0.8rem;
     overflow: hidden;
-    background: color('white-1');
   }
 
   &__listItemImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.35s ease;
   }
 
   &__listItemContent {
@@ -135,59 +162,69 @@
     font-size: text-size('base');
     font-weight: 600;
     line-height: 1.4;
-    color: color('primary');
+    color: color('black-1');
     margin: 0;
+    max-width: 50ch;
     @include truncate(2);
+    transition: color 0.25s ease;
   }
 
-  /* === HIGHLIGHTED CARD (large card, right) === */
+  /* === HIGHLIGHTED CARD (full-bleed image with text overlay) === */
 
   &__highlightedCard {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     border-radius: 1.2rem;
     overflow: hidden;
-    background: color('white-1');
-    border: 0.1rem solid color('grey-light-1');
+    min-height: 26rem;
     text-decoration: none;
-    color: inherit;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    color: color('white');
+    filter: brightness(1.0);
+    transition: all 0.25s ease;
 
     &:hover {
-      box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
-      border-color: color('accent');
-    }
+      text-decoration: none;
 
-    @include respond-to('tablet') {
-      flex-direction: row;
-      align-items: stretch;
-    }
-  }
-
-  &__highlightedImageWrapper {
-    flex: 1;
-    overflow: hidden;
-    background: color('white-1');
-    min-height: 20rem;
-
-    @include respond-to('tablet') {
-      flex: none;
-      width: 40%;
-      min-height: unset;
+      .newsArticles__highlightedImage {
+        filter: brightness(1.1);
+        transform: scale(1.005);
+      }
     }
   }
 
   &__highlightedImage {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease;
   }
 
-  &__highlightedContent {
+  &__highlightedOverlay {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: space('2');
-    padding: space('4');
+    justify-content: space-between;
+    padding: space('5');
+    min-height: 26rem;
+    background:
+      linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 55%);
+  }
+
+  &__highlightedTop {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__highlightedBottom {
+    display: flex;
+    flex-direction: column;
+    gap: space('1');
+    max-width: 55ch;
   }
 
   &__highlightedTitle {
@@ -195,16 +232,26 @@
     font-size: text-size('md');
     font-weight: 600;
     line-height: 1.3;
-    color: color('primary');
+    color: color('white');
     margin: 0;
+    max-width: 55ch;
   }
 
   &__highlightedDesc {
     font-size: text-size('sm');
-    color: color('black-2');
+    color: color('white');
     line-height: 1.6;
-    opacity: 0.75;
-    @include truncate(3);
+    opacity: 0.85;
+    @include truncate(2);
+  }
+
+  &__highlightedOverlay &__meta {
+    margin-top: 0;
+  }
+
+  &__highlightedOverlay &__metaItem {
+    color: color('white');
+    opacity: 0.9;
   }
 
   /* === SHARED META === */
@@ -225,9 +272,9 @@
     opacity: 0.6;
   }
 
-  /* === FOOTER === */
-
-  &__footer {
-    margin-top: space('6');
+  &__listFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: space('3');
   }
 }
