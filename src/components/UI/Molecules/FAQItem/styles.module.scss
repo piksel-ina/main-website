@@ -5,7 +5,7 @@ $cut: space('3');
 .faqItem {
   position: relative;
   transition: background 0.35s ease, box-shadow 0.35s ease;
-  background: color('grey-light-1');
+  background: color('grey-light-2');
   clip-path: polygon(
     $cut 0,
     100% 0,
@@ -17,7 +17,7 @@ $cut: space('3');
   box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.04);
 
   &:hover {
-    background: rgba(0, 0, 0, 0.02);
+    background: color('white-1');
     box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
   }
 
@@ -30,14 +30,14 @@ $cut: space('3');
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: space('3') space('4');
     background: none;
     border: none;
     cursor: pointer;
     text-align: left;
     gap: space('3');
-    color: color('grey-dark-2');
+    color: color('black-4');
   }
 
   &__questionText {
@@ -45,17 +45,17 @@ $cut: space('3');
     font-size: text-size('base');
     font-weight: 600;
     line-height: 1.4;
-    color: color('primary-dark');
+    color: color('black-2');
     transition: color 0.25s ease;
   }
 
   &[data-open='true'] &__questionText {
-    color: color('accent');
+    color: color('black');
   }
 
   &__iconWrapper {
-    color: color('primary');
-    background: rgba(13, 41, 91, 0.06);
+    color: color('black-3');
+    background: color('grey-light-2');
     padding: 0.6em;
     border-radius: space('1');
     display: flex;
@@ -68,7 +68,7 @@ $cut: space('3');
   }
 
   &[data-open='true'] &__iconWrapper {
-    background: color('accent');
+    background: color('black');
     color: color('grey-light-2');
     transform: rotate(180deg);
   }

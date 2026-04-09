@@ -3,9 +3,25 @@
 .faq {
   position: relative;
   border-radius: 1.6rem;
-  padding: space('10') space('10') space('8') space('12');
-  background: color('grey-light-2');
+  padding: space('10') space('10') space('10') space('11');
+  background: color('white');
   overflow: hidden;
+  @include section-shadow;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -4rem;
+    left: -9rem;
+    width: 44rem;
+    height: 44rem;
+    background-image: url('/img/faq/question-mark.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
 
   @include respond-to('tablet') {
     padding: space('7') space('2') space('6');
@@ -23,7 +39,7 @@
     width: 28rem;
     height: 28rem;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(74, 144, 226, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.04) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -33,7 +49,7 @@
     left: -#{space('4')};
     width: space('10');
     height: space('10');
-    border: 0.2rem solid rgba(74, 144, 226, 0.1);
+    border: 0.2rem solid rgba(0, 0, 0, 0.06);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -81,7 +97,7 @@
   &__accentText {
     font-size: text-size('sm');
     font-weight: 700;
-    color: color('accent');
+    color: color('black-2');
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -91,6 +107,7 @@
     font-size: text-size('2xl');
     line-height: 1.1;
     margin: 0;
+    color: color('black-1');
 
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
