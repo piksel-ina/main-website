@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import { ThemeClassNames, useThemeConfig } from '@docusaurus/theme-common';
 import {

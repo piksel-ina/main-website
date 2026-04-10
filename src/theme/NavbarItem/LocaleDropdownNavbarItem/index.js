@@ -1,8 +1,10 @@
-import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {useAlternatePageUtils} from '@docusaurus/theme-common/internal';
-import {translate} from '@docusaurus/Translate';
-import {mergeSearchStrings, useHistorySelector} from '@docusaurus/theme-common';
+import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
+import { translate } from '@docusaurus/Translate';
+import {
+  mergeSearchStrings,
+  useHistorySelector,
+} from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
 import styles from './styles.module.scss';
@@ -12,7 +14,7 @@ const FLAG_MAP = {
   en: 'img/flags/gb.svg',
 };
 
-function LocaleFlag({locale}) {
+function LocaleFlag({ locale }) {
   const src = useBaseUrl('/' + (FLAG_MAP[locale] ?? FLAG_MAP.id));
   return (
     <span className={styles.localeFlag}>
@@ -21,10 +23,23 @@ function LocaleFlag({locale}) {
   );
 }
 
+function DropdownFlag({ locale }) {
+  const src = useBaseUrl('/' + (FLAG_MAP[locale] ?? FLAG_MAP.id));
+  return (
+    <img
+      src={src}
+      alt=""
+      width="16"
+      height="11"
+      className={styles.dropdownFlag}
+    />
+  );
+}
+
 function useLocaleDropdownUtils() {
   const {
     siteConfig,
-    i18n: {localeConfigs},
+    i18n: { localeConfigs },
   } = useDocusaurusContext();
   const alternatePageUtils = useAlternatePageUtils();
   const search = useHistorySelector((history) => history.location.search);
@@ -81,17 +96,17 @@ export default function LocaleDropdownNavbarItem({
 }) {
   const utils = useLocaleDropdownUtils();
   const {
-    i18n: {currentLocale, locales},
+    i18n: { currentLocale, locales },
   } = useDocusaurusContext();
   const localeItems = locales.map((locale) => {
     return {
       label: (
         <>
-          <img src={useBaseUrl('/' + (FLAG_MAP[locale] ?? FLAG_MAP.id))} alt="" width="16" height="11" className={styles.dropdownFlag} />
+          <DropdownFlag locale={locale} />
           {utils.getLabel(locale)}
         </>
       ),
-      to: utils.getURL(locale, {queryString}),
+      to: utils.getURL(locale, { queryString }),
       target: '_self',
       autoAddBaseUrl: false,
       className:

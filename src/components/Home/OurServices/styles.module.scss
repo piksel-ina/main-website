@@ -1,95 +1,111 @@
 @use '../../../css/abstracts' as *;
 
-@keyframes textShine {
+@keyframes text-shine {
   0% {
-    transform: translateX(-100%) skewX(-15deg);
     opacity: 0;
+    transform: translateX(-100%) skewX(-15deg);
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
-    transform: translateX(800%) skewX(-15deg);
     opacity: 0;
+    transform: translateX(800%) skewX(-15deg);
   }
 }
 
 .ourServices {
   position: relative;
   padding: space('10') space('11') space('6');
-  scroll-margin-top: 8rem;
-  border-radius: 1.6rem;
-  @include section-shadow(2.5);
   overflow: hidden;
-  background: linear-gradient(135deg, color('primary-darkest') 0%, color('primary-dark') 40%, #0e2a4d 70%, color('accent-teal-dark') 100%);
+  scroll-margin-top: 8rem;
+  background: linear-gradient(
+    135deg,
+    color('primary-darkest') 0%,
+    color('primary-dark') 40%,
+    #0e2a4d 70%,
+    color('accent-teal-dark') 100%
+  );
+  border-radius: 1.6rem;
+
+  @include section-shadow(2.5);
 
   &::before {
-    content: '';
     position: absolute;
     inset: -50%;
+    z-index: 0;
     width: 200%;
     height: 200%;
-    opacity: 0.035;
+    pointer-events: none;
+    content: '';
     background-image:
       repeating-linear-gradient(
         45deg,
-        rgba(255, 255, 255, 1) 0px,
-        rgba(255, 255, 255, 1) 1px,
+        rgb(255 255 255 / 100%) 0,
+        rgb(255 255 255 / 100%) 1px,
         transparent 1px,
         transparent 6.4rem
       ),
       repeating-linear-gradient(
         -45deg,
-        rgba(255, 255, 255, 1) 0px,
-        rgba(255, 255, 255, 1) 1px,
+        rgb(255 255 255 / 100%) 0,
+        rgb(255 255 255 / 100%) 1px,
         transparent 1px,
         transparent 6.4rem
       );
-    -webkit-mask-image: radial-gradient(ellipse at center, transparent 20%, black 55%);
+    opacity: 0.035;
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      transparent 20%,
+      black 55%
+    );
+    /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
     mask-image: radial-gradient(ellipse at center, transparent 20%, black 55%);
-    pointer-events: none;
-    z-index: 0;
   }
 
   &::after {
-    content: '';
     position: absolute;
     top: -10%;
     left: -5%;
+    z-index: 0;
     width: 50%;
     height: 60%;
+    pointer-events: none;
+    content: '';
     background: radial-gradient(
       ellipse at center,
       rgba(color('accent-teal'), 0.12) 0%,
       rgba(color('accent-teal'), 0.04) 40%,
       transparent 70%
     );
-    pointer-events: none;
-    z-index: 0;
   }
 
   @include respond-to('phone-wide') {
-    border-radius: 0.8rem;
     padding: space('5') space('5') space('4');
+    border-radius: 0.8rem;
   }
 
   &__header {
-    margin-bottom: space('8');
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin-bottom: space('8');
   }
 
   &__headerTitle {
     @include heading;
+
     font-size: text-size('2xl');
-    line-height: 1.1;
     font-weight: 700;
+    line-height: 1.1;
     color: color('grey-light-2');
 
     @include respond-to('phone-wide') {
@@ -101,25 +117,25 @@
     display: block;
     width: 4.8rem;
     height: 0.3rem;
-    border-radius: 0.2rem;
-    background: linear-gradient(90deg, color('accent-teal'), transparent);
     margin-bottom: space('5');
+    background: linear-gradient(90deg, color('accent-teal'), transparent);
+    border-radius: 0.2rem;
   }
 
   &__headerDesc {
+    max-width: 61.4rem;
     font-size: text-size('base');
+    line-height: 1.7;
     color: color('grey-light-2');
     opacity: 0.75;
-    max-width: 61.4rem;
-    line-height: 1.7;
   }
 
   &__servicesGrid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: space('4');
-    position: relative;
-    z-index: 1;
 
     @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
@@ -136,32 +152,39 @@
     flex-direction: column;
     padding: space('6');
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgb(0 0 0 / 25%);
+    border: 1px solid rgb(255 255 255 / 6%);
     border-radius: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: transform 0.3s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    transition:
+      transform 0.3s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
 
     &::before {
-      content: '';
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
+      z-index: 2;
       height: 0.2rem;
+      content: '';
       background: var(--theme-color);
-      box-shadow: 0 0 0.6rem var(--theme-color), 0 0 1.2rem color-mix(in srgb, var(--theme-color) 40%, transparent);
+      box-shadow:
+        0 0 0.6rem var(--theme-color),
+        0 0 1.2rem color-mix(in srgb, var(--theme-color) 40%, transparent);
       opacity: 0.4;
       transition: opacity 0.35s ease;
-      z-index: 2;
     }
 
     &::after {
-      content: '';
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
+      z-index: 1;
       height: 55%;
+      pointer-events: none;
+      content: '';
       background: linear-gradient(
         180deg,
         color-mix(in srgb, var(--theme-color) 14%, transparent) 0%,
@@ -170,14 +193,17 @@
       );
       opacity: 0;
       transition: opacity 0.35s ease;
-      pointer-events: none;
-      z-index: 1;
     }
 
     &:hover {
-      border-color: color-mix(in srgb, var(--theme-color) 40%, rgba(255, 255, 255, 0.1));
-      box-shadow: 0 0 2rem color-mix(in srgb, var(--theme-color) 12%, transparent),
-                  0 0 4rem color-mix(in srgb, var(--theme-color) 6%, transparent);
+      border-color: color-mix(
+        in srgb,
+        var(--theme-color) 40%,
+        rgb(255 255 255 / 10%)
+      );
+      box-shadow:
+        0 0 2rem color-mix(in srgb, var(--theme-color) 12%, transparent),
+        0 0 4rem color-mix(in srgb, var(--theme-color) 6%, transparent);
 
       &::before {
         opacity: 1;
@@ -192,26 +218,28 @@
       }
 
       .ourServices__linkText::after {
-        animation: textShine 0.5s 0.15s ease-in forwards;
+        animation: text-shine 0.5s 0.15s ease-in forwards;
       }
     }
   }
 
   &__iconRing {
     position: relative;
+    z-index: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;
+    margin-bottom: space('4');
+    color: var(--theme-color);
     background: color-mix(in srgb, var(--theme-color) 8%, transparent);
     border: 1px solid color-mix(in srgb, var(--theme-color) 25%, transparent);
+    border-radius: 50%;
     box-shadow: 0 0 1rem color-mix(in srgb, var(--theme-color) 10%, transparent);
-    color: var(--theme-color);
-    margin-bottom: space('4');
-    z-index: 1;
-    transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    transition:
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
 
     svg {
       width: 2rem;
@@ -221,21 +249,22 @@
 
     .ourServices__card:hover & {
       border-color: color-mix(in srgb, var(--theme-color) 50%, transparent);
-      box-shadow: 0 0 1.4rem color-mix(in srgb, var(--theme-color) 25%, transparent),
-                  0 0 2.8rem color-mix(in srgb, var(--theme-color) 10%, transparent);
+      box-shadow:
+        0 0 1.4rem color-mix(in srgb, var(--theme-color) 25%, transparent),
+        0 0 2.8rem color-mix(in srgb, var(--theme-color) 10%, transparent);
     }
   }
 
   &__bgIcon {
     position: absolute;
-    bottom: 1rem;
     right: 0;
+    bottom: 1rem;
+    z-index: 0;
     width: 65%;
     height: 65%;
-    opacity: 0.08;
     color: var(--theme-color);
     pointer-events: none;
-    z-index: 0;
+    opacity: 0.08;
     transition: opacity 0.3s ease;
 
     svg {
@@ -249,39 +278,42 @@
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
+    flex-direction: column;
   }
 
   &__cardTitle {
     @include heading;
+
+    margin-bottom: space('2');
     font-size: text-size('md');
     font-weight: 700;
     color: color('grey-light-2');
-    margin-bottom: space('2');
     letter-spacing: -0.01em;
   }
 
   &__cardDesc {
-    font-size: text-size('sm');
-    color: color('grey-dark-1');
-    line-height: 1.65;
-    margin-bottom: space('5');
     flex-grow: 1;
+    margin-bottom: space('5');
+    font-size: text-size('sm');
+    line-height: 1.65;
+    color: color('grey-dark-1');
   }
 
   &__linkRow {
+    position: relative;
+    z-index: 2;
     display: inline-flex;
-    align-items: center;
     gap: 0.4rem;
+    align-items: center;
     margin-top: auto;
     font-size: text-size('sm');
     font-weight: 600;
     color: color('grey-dark-1');
     text-decoration: none;
-    transition: gap 0.2s ease, color 0.25s ease;
-    position: relative;
-    z-index: 2;
+    transition:
+      gap 0.2s ease,
+      color 0.25s ease;
 
     svg {
       color: var(--theme-color);
@@ -290,8 +322,8 @@
 
     &:hover {
       gap: space('1');
-      text-decoration: none;
       color: var(--theme-color);
+      text-decoration: none;
 
       svg {
         transform: translateX(0.2rem);
@@ -301,33 +333,33 @@
 
   &__linkText {
     position: relative;
-    overflow: hidden;
     display: inline-block;
+    overflow: hidden;
 
     &::after {
-      content: '';
       position: absolute;
       top: -20%;
       left: 0;
       width: 2rem;
       height: 140%;
+      pointer-events: none;
+      content: '';
       background: linear-gradient(
         105deg,
         transparent 0%,
-        rgba(255, 255, 255, 0.35) 45%,
-        rgba(255, 255, 255, 0.08) 100%
+        rgb(255 255 255 / 35%) 45%,
+        rgb(255 255 255 / 8%) 100%
       );
-      pointer-events: none;
       opacity: 0;
     }
   }
 
   &__viewAllRow {
-    display: flex;
-    justify-content: end;
-    margin-top: space('4');
-    padding-bottom: space('4');
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: end;
+    padding-bottom: space('4');
+    margin-top: space('4');
   }
 }

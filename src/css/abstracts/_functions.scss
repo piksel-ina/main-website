@@ -5,57 +5,72 @@
 
 @function space($key) {
   $value: map.get($spacing, $key);
+
   @if not $value {
     @error 'Unknown spacing key: `#{$key}`. Valid keys: #{map.keys($spacing)}';
   }
+
   @return $value;
 }
 
 @function text-size($key) {
   $value: map.get($type-scale, $key);
+
   @if not $value {
     @error 'Unknown type scale key: `#{$key}`. Valid keys: #{map.keys($type-scale)}';
   }
+
   @return $value;
 }
 
 @function color($key) {
   $value: map.get($colors, $key);
+
   @if not $value {
     @error 'Unknown color key: `#{$key}`. Valid keys: #{map.keys($colors)}';
   }
+
   @return $value;
 }
 
 @function bp($name) {
   $value: map.get($breakpoints, $name);
+
   @if not $value {
     @error 'Unknown breakpoint: `#{$name}`. Valid keys: #{map.keys($breakpoints)}';
   }
+
   @return $value;
 }
 
 @function font-family($name) {
   $value: map.get($font-families, $name);
+
   @if not $value {
     @error 'Unknown font family: `#{$name}`. Valid keys: #{map.keys($font-families)}';
   }
+
   $result: ();
+
   @each $f in $value {
     $needs-quote: string.index($f, ' ') or string.index($f, '-');
+
     @if $needs-quote {
       $result: list.append($result, string.quote($f), comma);
     } @else {
       $result: list.append($result, $f, comma);
     }
   }
+
   @return $result;
 }
 
 @function clip-path($name) {
   $value: map.get($clip-paths, $name);
+
   @if not $value {
     @error 'Unknown clip-path: `#{$name}`. Valid keys: #{map.keys($clip-paths)}';
   }
+
   @return $value;
 }

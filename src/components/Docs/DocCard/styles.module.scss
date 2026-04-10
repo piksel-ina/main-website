@@ -3,13 +3,13 @@
 .docCard {
   display: block;
   padding: space('4');
+  color: inherit;
+  text-decoration: none !important;
   background: rgba(color('primary'), 0.4);
   border: 1px solid rgba(color('accent'), 0.2);
   border-radius: space('1');
   backdrop-filter: blur(0.32rem);
   transition: all 0.3s ease;
-  text-decoration: none !important;
-  color: inherit;
 
   &:hover {
     background: rgba(color('primary'), 0.6);
@@ -18,18 +18,18 @@
   }
 
   &__title {
+    margin-bottom: space('1');
     font-family: var(--font-family-heading);
     font-size: text-size('base');
-    margin-bottom: space('1');
     color: color('white-1');
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
 
   &__description {
-    font-size: text-size('sm');
-    color: color('grey-dark-2');
     margin: 0;
+    font-size: text-size('sm');
     line-height: 1.5;
+    color: color('grey-dark-2');
   }
 }

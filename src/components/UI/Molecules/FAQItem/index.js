@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
 import { Plus, Minus } from 'lucide-react';
 import styles from './styles.module.scss';

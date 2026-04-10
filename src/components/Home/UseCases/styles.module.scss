@@ -2,12 +2,17 @@
 
 .useCases {
   position: relative;
-  scroll-margin-top: 80px;
-  background: #ffffff;
-  border-radius: 1.6rem;
-  @include section-shadow;
-  overflow: hidden;
   padding: space('10') space('10') space('8') space('12');
+  overflow: hidden;
+  scroll-margin-top: 80px;
+  background: #fff;
+  border-radius: 1.6rem;
+
+  @include section-shadow;
+
+  @include respond-to('laptop') {
+    padding: space('8') space('8') space('7') space('10');
+  }
 
   @include respond-to('tablet') {
     padding: space('7') space('2') space('6');
@@ -25,6 +30,10 @@
     gap: space('7');
     align-items: start;
 
+    @include respond-to('laptop') {
+      gap: space('5');
+    }
+
     @include respond-to('tablet') {
       flex-direction: column;
       gap: 0;
@@ -34,6 +43,10 @@
   &__navColumn {
     flex-shrink: 0;
     width: 18rem;
+
+    @include respond-to('laptop') {
+      width: 16rem;
+    }
 
     @include respond-to('tablet') {
       width: 100%;
@@ -48,6 +61,10 @@
     @include respond-to('tablet') {
       padding: 0 space('2');
     }
+
+    @include respond-to('phone') {
+      padding: 0 space('1');
+    }
   }
 
   /* === HEADER === */
@@ -56,44 +73,56 @@
     max-width: 50%;
     margin-bottom: space('4');
 
+    @include respond-to('laptop') {
+      max-width: 60%;
+    }
+
     @include respond-to('tablet') {
       max-width: 100%;
-      text-align: center;
       margin-bottom: space('3');
+      text-align: center;
     }
   }
 
   &__title {
+    margin-bottom: space('2');
     font-family: var(--font-family-heading, inherit);
     font-size: text-size('2xl');
     font-weight: 700;
-    margin-bottom: space('2');
-    color: color('black-2');
     line-height: 1.1;
+    color: color('black-2');
 
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
+
+    @include respond-to('phone') {
+      font-size: text-size('lg');
+    }
   }
 
   &__subtitle {
-    font-size: text-size('sm');
-    color: color('black-3');
-    line-height: 1.7;
     max-width: 50rem;
+    font-size: text-size('sm');
+    line-height: 1.7;
+    color: color('black-3');
 
     @include respond-to('tablet') {
       max-width: 65rem;
       margin: 0 auto;
+    }
+
+    @include respond-to('phone') {
+      font-size: text-size('xs');
     }
   }
 
   &__divider {
     width: space('5');
     height: 2px;
+    margin-bottom: space('6');
     background: color('accent');
     border-radius: 2px;
-    margin-bottom: space('6');
 
     @include respond-to('tablet') {
       margin: 0 auto space('4');
@@ -110,30 +139,38 @@
 
     @include respond-to('tablet') {
       flex-direction: row;
-      justify-content: center;
       gap: 3.6rem;
-      overflow-x: auto;
+      justify-content: center;
       padding: 0 space('2') space('2');
+      overflow-x: auto;
       scrollbar-width: thin;
       border-bottom: 1px solid color('grey-light-1');
+    }
+
+    @include respond-to('phone-wide') {
+      gap: space('3');
+    }
+
+    @include respond-to('phone') {
+      gap: space('2');
     }
   }
 
   &__tabButton {
-    background: none;
-    border: none;
-    border-left: 3px solid transparent;
+    position: relative;
+    display: block;
     padding: space('2') space('3');
     font-size: text-size('base');
     font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    white-space: nowrap;
-    text-align: left;
-    transition: all 0.25s ease;
     color: color('black-3');
-    display: block;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-left: 3px solid transparent;
     border-radius: 0 0.6rem 0.6rem 0;
+    transition: all 0.25s ease;
 
     &:focus {
       outline: 2px solid color('primary-lighter');
@@ -143,45 +180,62 @@
 
     &:hover {
       color: color('black-2');
-      background: color-mix(in srgb, var(--active-color, color('primary')) 8%, transparent);
+      background: color-mix(
+        in srgb,
+        var(--active-color, color('primary')) 8%,
+        transparent
+      );
     }
 
     &--active {
-      color: color('black-2');
       font-weight: 600;
+      color: color('black-2');
+      background: color-mix(
+        in srgb,
+        var(--active-color, color('primary')) 10%,
+        transparent
+      );
       border-left-color: var(--active-color);
-      background: color-mix(in srgb, var(--active-color, color('primary')) 10%, transparent);
     }
 
     @include respond-to('tablet') {
-      border-left: none;
-      border-bottom: none;
-      text-align: center;
-      padding: space('2') 0;
-      border-radius: 0;
       display: inline-flex;
       flex-direction: column;
       align-items: center;
+      padding: space('2') 0;
+      text-align: center;
+      border-bottom: none;
+      border-left: none;
+      border-radius: 0;
 
       &::before {
-        content: attr(data-text);
-        font-weight: 600;
+        visibility: hidden;
         height: 0;
         overflow: hidden;
-        visibility: hidden;
-        user-select: none;
+        font-weight: 600;
         pointer-events: none;
+        user-select: none;
+        content: attr(data-text);
       }
 
       &:hover {
-        background: none;
         color: color('black-2');
+        background: none;
       }
 
       &--active {
-        border-left-color: transparent;
         background: none;
+        border-left-color: transparent;
       }
+    }
+
+    @include respond-to('phone-wide') {
+      font-size: text-size('sm');
+    }
+
+    @include respond-to('phone') {
+      padding: space('1') 0;
+      font-size: text-size('xs');
     }
   }
 
@@ -189,16 +243,20 @@
     display: none;
 
     @include respond-to('tablet') {
-      display: block;
       position: absolute;
+      right: 0;
       bottom: -1px;
       left: 0;
-      right: 0;
+      display: block;
       height: 3px;
       background-color: var(--active-color);
       border-radius: 3px 3px 0 0;
       box-shadow: 0 2px 12px var(--active-glow);
       transition: all 0.3s ease;
+    }
+
+    @include respond-to('phone') {
+      height: 2px;
     }
   }
 
@@ -206,7 +264,7 @@
 
   &__contentGrid {
     display: grid;
-    grid-template-areas: "stack";
+    grid-template-areas: 'stack';
 
     @include respond-to('tablet') {
       margin-top: space('5');
@@ -216,41 +274,45 @@
   /* === INNER CARD === */
 
   &__card {
-    grid-area: stack;
     position: relative;
-    border-radius: 0 1.2rem 1.2rem 0;
-    background: #fdfdfd;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-left: none;
-    box-shadow:
-      inset 0 2px 6px rgba(0, 0, 0, 0.06),
-      inset 0 1px 2px rgba(0, 0, 0, 0.04);
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
     z-index: 0;
+    grid-area: stack;
+    overflow: hidden;
+    pointer-events: none;
+    background: #fdfdfd;
+    border: 1px solid rgb(0 0 0 / 6%);
+    border-left: none;
+    border-radius: 0 1.2rem 1.2rem 0;
+    box-shadow:
+      inset 0 2px 6px rgb(0 0 0 / 6%),
+      inset 0 1px 2px rgb(0 0 0 / 4%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 
     &--active {
-      opacity: 1;
-      pointer-events: auto;
       z-index: 1;
+      pointer-events: auto;
+      opacity: 1;
     }
 
     @include respond-to('tablet') {
+      border-left: 1px solid rgb(0 0 0 / 6%);
       border-radius: 0.8rem;
-      border-left: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    @include respond-to('phone') {
+      border-radius: 0.6rem;
     }
   }
 
   &__cardAccent {
     position: absolute;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
+    z-index: 1;
     width: 3px;
     background: var(--active-color);
-    z-index: 1;
     opacity: 0.6;
   }
 
@@ -259,6 +321,10 @@
     grid-template-columns: 22rem 1fr;
     gap: 0;
     align-items: stretch;
+
+    @include respond-to('laptop') {
+      grid-template-columns: 18rem 1fr;
+    }
 
     @include respond-to('tablet') {
       grid-template-columns: 1fr;
@@ -278,36 +344,58 @@
     height: 100%;
     min-height: 28rem;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.2rem), calc(100% - 3.2rem) 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 3.2rem),
+      calc(100% - 3.2rem) 100%,
+      0 100%
+    );
+
+    @include respond-to('laptop') {
+      min-height: 24rem;
+    }
 
     @include respond-to('tablet') {
       min-height: 20rem;
       clip-path: none;
     }
+
+    @include respond-to('phone-wide') {
+      min-height: 16rem;
+    }
+
+    @include respond-to('phone') {
+      min-height: 14rem;
+    }
   }
 
   &__image {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     transition: transform 0.5s ease;
   }
 
   &__imageOverlay {
     position: absolute;
     inset: 0;
-    background:
-      linear-gradient(to right, color-mix(in srgb, var(--active-color) 70%, transparent) 0%, transparent 12%),
-      linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.25) 100%),
-      rgba(0, 0, 0, 0.18);
     pointer-events: none;
+    background:
+      linear-gradient(
+        to right,
+        color-mix(in srgb, var(--active-color) 70%, transparent) 0%,
+        transparent 12%
+      ),
+      linear-gradient(to bottom, transparent 60%, rgb(0 0 0 / 25%) 100%),
+      rgb(0 0 0 / 18%);
 
     @include respond-to('tablet') {
       background: linear-gradient(
         180deg,
         transparent 40%,
-        rgba(255, 255, 255, 0.6) 100%
+        rgb(255 255 255 / 60%) 100%
       );
     }
   }
@@ -317,6 +405,10 @@
   &__contentSection {
     padding: space('5') space('5') space('5') space('6');
 
+    @include respond-to('laptop') {
+      padding: space('4') space('4') space('4') space('5');
+    }
+
     @include respond-to('tablet') {
       padding: space('5');
     }
@@ -324,63 +416,96 @@
     @include respond-to('phone-wide') {
       padding: space('4');
     }
+
+    @include respond-to('phone') {
+      padding: space('3');
+    }
   }
 
   &__titleRow {
     display: flex;
-    align-items: center;
     gap: space('2');
+    align-items: center;
     margin-bottom: space('3');
+
+    @include respond-to('phone') {
+      gap: space('1');
+      margin-bottom: space('2');
+    }
   }
 
   &__iconWrapper {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     width: 4.4rem;
     height: 4.4rem;
+    color: var(--active-color);
     background: color-mix(in srgb, var(--active-color) 10%, transparent);
     border: 1px solid color-mix(in srgb, var(--active-color) 20%, transparent);
     border-radius: 0.8rem;
-    color: var(--active-color);
-    flex-shrink: 0;
+
+    @include respond-to('phone') {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 0.6rem;
+    }
   }
 
   &__icon {
     width: 2.4rem;
     height: 2.4rem;
     stroke-width: 1.4;
+
+    @include respond-to('phone') {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &__contentTitle {
+    margin: 0;
     font-family: var(--font-family-heading, inherit);
     font-size: text-size('lg');
     font-weight: 700;
-    color: var(--ifm-color-primary);
-    margin: 0;
     line-height: 1.2;
+    color: var(--ifm-color-primary);
 
     @include respond-to('phone-wide') {
       font-size: text-size('md');
+    }
+
+    @include respond-to('phone') {
+      font-size: text-size('base');
     }
   }
 
   &__titleUnderline {
     width: space('5');
     height: 2px;
+    margin-top: space('1');
     background: var(--active-color);
     border-radius: 2px;
-    margin-top: space('1');
   }
 
   /* === DESCRIPTION === */
 
   &__contentDescription {
-    font-size: text-size('base');
     max-width: 60rem;
+    margin-bottom: space('4');
+    font-size: text-size('base');
     line-height: 1.7;
     color: color('black-2');
-    margin-bottom: space('4');
+
+    @include respond-to('phone-wide') {
+      font-size: text-size('sm');
+    }
+
+    @include respond-to('phone') {
+      margin-bottom: space('3');
+      font-size: text-size('xs');
+    }
   }
 
   /* === CHIPS === */
@@ -390,15 +515,24 @@
     flex-direction: column;
     gap: space('1');
     margin-bottom: space('3');
+
+    @include respond-to('phone') {
+      gap: 0.4rem;
+      margin-bottom: space('2');
+    }
   }
 
   &__chip {
     display: inline-flex;
-    align-items: center;
     gap: 0.6rem;
+    align-items: center;
     font-size: text-size('sm');
-    color: color('black-3');
     font-weight: 500;
+    color: color('black-3');
+
+    @include respond-to('phone') {
+      font-size: text-size('xs');
+    }
   }
 
   &__chipIcon {
@@ -412,17 +546,17 @@
     padding-top: space('1');
 
     a {
-      color: var(--active-color, var(--ifm-color-primary));
       font-weight: 600;
+      color: var(--active-color, var(--ifm-color-primary));
       border-bottom: 1px solid transparent;
       transition: all 0.2s ease;
 
       &:hover,
       &:focus {
         color: var(--active-color, var(--ifm-color-primary));
+        text-decoration: none;
         border-bottom-color: var(--active-color, var(--ifm-color-primary));
         filter: none;
-        text-decoration: none;
       }
     }
   }
@@ -433,5 +567,9 @@
     display: flex;
     justify-content: center;
     margin-top: space('6');
+
+    @include respond-to('phone') {
+      margin-top: space('4');
+    }
   }
 }

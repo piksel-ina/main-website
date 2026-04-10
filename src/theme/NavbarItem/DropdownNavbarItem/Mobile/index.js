@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
+import { useEffect } from 'react';
 import clsx from 'clsx';
+import { isRegexpStringMatch, useCollapsible } from '@docusaurus/theme-common';
 import {
-  isRegexpStringMatch,
-  useCollapsible,
-} from '@docusaurus/theme-common';
-import {isSamePath, useLocalPathname} from '@docusaurus/theme-common/internal';
-import {translate} from '@docusaurus/Translate';
+  isSamePath,
+  useLocalPathname,
+} from '@docusaurus/theme-common/internal';
+import { translate } from '@docusaurus/Translate';
 import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
 import NavbarItem from '@theme/NavbarItem';
 import styles from './styles.module.css';
@@ -27,7 +27,7 @@ function containsActiveItems(items, localPathname) {
   return items.some((item) => isItemActive(item, localPathname));
 }
 
-function CollapseButton({collapsed, onClick}) {
+function CollapseButton({ collapsed, onClick }) {
   return (
     <button
       aria-label={
@@ -53,8 +53,8 @@ function CollapseButton({collapsed, onClick}) {
   );
 }
 
-function useItemCollapsible({active}) {
-  const {collapsed, toggleCollapsed, setCollapsed} = useCollapsible({
+function useItemCollapsible({ active }) {
+  const { collapsed, toggleCollapsed, setCollapsed } = useCollapsible({
     initialState: () => !active,
   });
   useEffect(() => {
@@ -71,14 +71,14 @@ function useItemCollapsible({active}) {
 export default function DropdownNavbarItemMobile({
   items,
   className,
-  position,
+  position: _position,
   onClick,
   ...props
 }) {
   const localPathname = useLocalPathname();
   const isActive = isSamePath(props.to, localPathname);
   const containsActive = containsActiveItems(items, localPathname);
-  const {collapsed, toggleCollapsed} = useItemCollapsible({
+  const { collapsed, toggleCollapsed } = useItemCollapsible({
     active: isActive || containsActive,
   });
   const href = props.to ? undefined : '#';
@@ -86,11 +86,13 @@ export default function DropdownNavbarItemMobile({
     <li
       className={clsx('menu__list-item', {
         'menu__list-item--collapsed': collapsed,
-      })}>
+      })}
+    >
       <div
         className={clsx('menu__list-item-collapsible', {
           'menu__list-item-collapsible--active': isActive,
-        })}>
+        })}
+      >
         <NavbarNavLink
           role="button"
           className={clsx(
@@ -105,7 +107,8 @@ export default function DropdownNavbarItemMobile({
               e.preventDefault();
             }
             toggleCollapsed();
-          }}>
+          }}
+        >
           {props.children ?? props.label}
         </NavbarNavLink>
         <CollapseButton

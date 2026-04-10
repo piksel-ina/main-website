@@ -1,11 +1,11 @@
 @use '../../../../css/abstracts' as *;
 
 .shape {
+  position: relative;
+  z-index: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   pointer-events: none;
-  position: relative;
 
   &--absolute {
     position: absolute;
@@ -24,7 +24,13 @@
   }
 
   &--cut-corner {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{space('10')}), calc(100% - #{space('10')}) 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - #{space('10')}),
+      calc(100% - #{space('10')}) 100%,
+      0 100%
+    );
   }
 
   &--shard {
@@ -47,36 +53,54 @@
   }
 
   &--color-accent {
-    background-color: var(--color-accent-teal, var(--ifm-color-secondary-lightest));
+    background-color: var(
+      --color-accent-teal,
+      var(--ifm-color-secondary-lightest)
+    );
     opacity: 0.05;
   }
 
   /* === DOT PATTERN VARIANTS === */
 
   &--dotPattern::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    content: '';
     background-size: space('6') space('6');
     opacity: 0.05;
-    pointer-events: none;
-    z-index: 1;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 5%,
+      black 95%,
+      transparent 100%
+    );
   }
 
   &--dotPattern-primary::before {
-    background-image: radial-gradient(var(--ifm-color-primary, color('primary')) 1px, transparent 1px);
+    background-image: radial-gradient(
+      var(--ifm-color-primary, color('primary')) 1px,
+      transparent 1px
+    );
   }
 
   &--dotPattern-secondary::before {
-    background-image: radial-gradient(var(--ifm-color-primary-light, color('primary-light')) 1px, transparent 1px);
+    background-image: radial-gradient(
+      var(--ifm-color-primary-light, color('primary-light')) 1px,
+      transparent 1px
+    );
   }
 
   &--dotPattern-accent::before {
-    background-image: radial-gradient(var(--color-accent-teal, color('accent-teal')) 1px, transparent 1px);
+    background-image: radial-gradient(
+      var(--color-accent-teal, color('accent-teal')) 1px,
+      transparent 1px
+    );
   }
 
   &--dotPattern-small::before {
@@ -98,15 +122,15 @@
   /* === GRID PATTERN === */
 
   &--pattern-grid::before {
-    content: "";
     position: absolute;
     inset: 0;
-    opacity: 0.03;
+    z-index: 1;
+    pointer-events: none;
+    content: '';
     background-image:
       linear-gradient(to right, var(--ifm-color-primary) 1px, transparent 1px),
       linear-gradient(to bottom, var(--ifm-color-primary) 1px, transparent 1px);
     background-size: space('6') space('6');
-    pointer-events: none;
-    z-index: 1;
+    opacity: 0.03;
   }
 }

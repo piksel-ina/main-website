@@ -13,16 +13,13 @@
   --ifm-color-primary-light: #{color('primary-light')};
   --ifm-color-primary-lighter: #{color('primary-lighter')};
   --ifm-color-primary-lightest: #{color('primary-lightest')};
-
   --color-primary: #{color('primary')};
   --color-accent: #{color('accent')};
-
   --ifm-background-color: #{color('white-1')};
   --ifm-background-surface-color: #{color('white-1')};
   --ifm-font-color-base: #{color('black-2')};
   --ifm-font-color-base-light: #{color('black-3')};
   --ifm-font-color-base-lighter: #{color('grey-dark-2')};
-
   --color-accent-teal: #{color('accent-teal')};
   --color-accent-teal-dark: #{color('accent-teal-dark')};
   --color-accent-amber: #{color('accent-amber')};
@@ -43,14 +40,22 @@
   --color-grey-light-2: #{color('grey-light-2')};
   --color-white: #{color('white')};
   --color-white-1: #{color('white-1')};
-  --gradient-hero: linear-gradient(150deg, color('primary-darker') 0%, color('primary-dark') 45%, color('accent-teal-dark') 100%);
-  --gradient-hero-accent: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(45, 74, 124, 0.05) 50%, transparent 100%);
-
+  --gradient-hero: linear-gradient(
+    150deg,
+    color('primary-darker') 0%,
+    color('primary-dark') 45%,
+    color('accent-teal-dark') 100%
+  );
+  --gradient-hero-accent: linear-gradient(
+    135deg,
+    rgb(74 144 226 / 10%) 0%,
+    rgb(45 74 124 / 5%) 50%,
+    transparent 100%
+  );
   --ifm-color-success: #{color('accent-teal')};
   --ifm-color-warning: #{color('accent-amber')};
   --ifm-border-color: #{color('grey-light-1')};
   --ifm-link-color: var(--ifm-color-primary);
-
   --ifm-card-background-color: #{color('white-1')};
   --ifm-card-border-radius: #{$card-border-radius};
   --ifm-card-box-shadow: #{$card-box-shadow};
@@ -82,7 +87,6 @@
   --ifm-navbar-height: #{$navbar-height};
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-navbar-shadow: none;
-
   --ifm-footer-background-color: var(--ifm-background-color);
   --ifm-footer-color: var(--ifm-font-color-base);
 }
@@ -105,7 +109,12 @@ a[class*='skipToContent'] {
   display: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @include heading;
 }
 
@@ -140,8 +149,8 @@ h1, h2, h3, h4, h5, h6 {
 .sectionContainer {
   width: 100%;
   max-width: $container-max-width;
-  margin: 0 auto;
   padding: 0 space('8');
+  margin: 0 auto;
   margin-bottom: space('8');
 
   @include respond-to('tablet') {
@@ -158,13 +167,13 @@ h1, h2, h3, h4, h5, h6 {
    ======================================================================== */
 
 .navbar {
-  padding: 0;
   height: auto;
+  padding: 0;
 
   &__inner {
     max-width: $container-max-width;
+    padding: space('4');
     margin: 0 auto;
-    padding: space('4') space('4');
   }
 
   &__brand {
@@ -173,19 +182,18 @@ h1, h2, h3, h4, h5, h6 {
     @include respond-to('tablet') {
       padding-left: space('2');
     }
-
   }
 
   &__logo {
     height: 5rem;
-        @include respond-to('tablet') {
-            width: 4rem;
-        }
+
+    @include respond-to('tablet') {
+      width: 4rem;
+    }
+
     img {
-      width: 5rem ;
+      width: 5rem;
       height: auto;
-
-
     }
   }
 
@@ -194,11 +202,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__link {
-    font-weight: 400;
-    color: color('black-2');
-    font-size: 1.5rem;
     position: relative;
     align-items: end;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: color('black-2');
 
     &:hover {
       color: color('primary');
@@ -221,7 +229,6 @@ h1, h2, h3, h4, h5, h6 {
 
   &__items--right > :last-child {
     padding-right: 0;
-
   }
 }
 
@@ -244,8 +251,8 @@ h1, h2, h3, h4, h5, h6 {
 
   &__close {
     position: absolute;
-    right: 1.5rem;
     top: space('2');
+    right: 1.5rem;
   }
 
   &__items--show-secondary {
@@ -300,10 +307,10 @@ h1, h2, h3, h4, h5, h6 {
    ======================================================================== */
 
 .footer {
-  background-color: color('white-1');
+  position: relative;
   padding: space('8') 0 space('4');
   padding-top: space('9');
-  position: relative;
+  background-color: color('white-1');
 
   @include respond-to('phone-wide') {
     padding: space('7') 0 space('4');
@@ -312,8 +319,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .container {
     max-width: $container-max-width;
-    margin: 0 auto;
     padding: 0 space('8');
+    margin: 0 auto;
 
     @include respond-to('tablet') {
       padding: 0 space('2');
@@ -353,14 +360,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__title {
-    color: color('black-1');
+    margin-bottom: space('3');
     font-family: font-family('base');
     font-size: text-size('sm');
     font-weight: 600;
+    color: color('black-1');
+    text-align: left;
     text-transform: none;
     letter-spacing: -0.01em;
-    margin-bottom: space('3');
-    text-align: left;
   }
 
   &__items {
@@ -371,13 +378,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__link-item {
-    color: color('black-3');
-    font-size: text-size('sm');
-    transition: color 0.2s ease;
-    display: inline-block;
     position: relative;
-    text-decoration: none;
+    display: inline-block;
+    font-size: text-size('sm');
+    color: color('black-3');
     text-align: left;
+    text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
       color: color('black-1');
@@ -386,13 +393,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__copyright-container {
-    margin-top: space('4');
-    padding-top: space('2');
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: space('3');
+    align-items: center;
+    padding-top: space('2');
+    margin-top: space('4');
+    text-align: center;
 
     @include respond-to('phone-wide') {
       margin-top: space('9');
@@ -400,8 +407,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__logo {
-    max-height: 6rem;
     height: auto;
+    max-height: 6rem;
     opacity: 1;
     transition: filter 0.3s ease;
 
@@ -412,16 +419,16 @@ h1, h2, h3, h4, h5, h6 {
 
   &__copyright-text {
     font-size: text-size('sm');
-    color: color('grey-dark-2');
     font-weight: 400;
     line-height: 1.6;
+    color: color('grey-dark-2');
   }
 
   &__address {
     font-size: text-size('xs');
+    line-height: 1.8;
     color: color('grey-dark-2');
     opacity: 0.8;
-    line-height: 1.8;
   }
 }
 
@@ -430,13 +437,13 @@ h1, h2, h3, h4, h5, h6 {
    ======================================================================== */
 
 .button.button--primary {
-  border-radius: 4px;
   font-weight: 600;
+  border-radius: 4px;
   box-shadow: $card-box-shadow;
   transition: all 0.2s ease;
 
   &:hover {
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 }

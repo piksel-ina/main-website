@@ -3,33 +3,45 @@
 .docCallout {
   padding: space('2') space('4');
   margin: space('4') 0;
-  border-left: 0.32rem solid;
   background: rgba(color('white-1'), 0.03);
+  border-left: 0.32rem solid;
   border-radius: 0 space('1') space('1') 0;
 
   &--info {
+    background: linear-gradient(
+      90deg,
+      rgba(color('accent'), 0.1) 0%,
+      transparent 100%
+    );
     border-color: color('accent');
-    background: linear-gradient(90deg, rgba(color('accent'), 0.1) 0%, transparent 100%);
   }
 
   &--warning {
+    background: linear-gradient(
+      90deg,
+      rgba(color('accent-amber'), 0.1) 0%,
+      transparent 100%
+    );
     border-color: color('accent-amber');
-    background: linear-gradient(90deg, rgba(color('accent-amber'), 0.1) 0%, transparent 100%);
   }
 
   &--danger {
+    background: linear-gradient(
+      90deg,
+      rgba(color('accent-red'), 0.1) 0%,
+      transparent 100%
+    );
     border-color: color('accent-red');
-    background: linear-gradient(90deg, rgba(color('accent-red'), 0.1) 0%, transparent 100%);
   }
 
   &__title {
+    display: flex;
+    gap: space('1');
+    align-items: center;
+    margin-bottom: space('1');
     font-family: var(--font-family-heading);
     font-weight: 600;
-    margin-bottom: space('1');
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: space('1');
   }
 
   &__content {

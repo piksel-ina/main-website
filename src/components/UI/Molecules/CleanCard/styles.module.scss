@@ -1,48 +1,48 @@
 @use '../../../../css/abstracts' as *;
 
 .cleanCard {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
   background-color: var(--ifm-card-background-color);
   border: 1px solid var(--ifm-border-color);
   border-radius: var(--ifm-card-border-radius);
   box-shadow: var(--ifm-card-box-shadow);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
 
   &:hover {
-    transform: translateY(-0.32rem);
-    box-shadow: 0 0.96rem 1.92rem -0.8rem rgba(0, 0, 0, 0.1);
     border-color: var(--ifm-color-primary-lightest);
+    box-shadow: 0 0.96rem 1.92rem -0.8rem rgb(0 0 0 / 10%);
+    transform: translateY(-0.32rem);
   }
 
   &__content {
     display: flex;
     flex: 1;
     flex-direction: column;
-    text-align: left;
-    padding: space('5');
     gap: space('4');
+    padding: space('5');
+    text-align: left;
   }
 
   &__icon {
-    color: var(--ifm-color-primary);
-    background: var(--ifm-color-emphasis-100);
-    width: fit-content;
-    padding: space('1');
-    border-radius: $card-border-radius;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    padding: space('1');
+    color: var(--ifm-color-primary);
+    background: var(--ifm-color-emphasis-100);
+    border-radius: $card-border-radius;
   }
 
   &__title {
-    font-family: var(--font-family-heading);
-    font-weight: 600;
-    font-size: text-size('base');
-    color: var(--ifm-color-primary);
     margin: 0;
+    font-family: var(--font-family-heading);
+    font-size: text-size('base');
+    font-weight: 600;
+    color: var(--ifm-color-primary);
   }
 
   &__description {
@@ -54,20 +54,21 @@
   }
 
   &__cta {
-    margin-top: auto;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: space('2');
-    flex-wrap: wrap;
     align-items: center;
+    margin-top: auto;
   }
 
-  &__ctaPrimary {}
+  &__ctaPrimary {
+    opacity: 1;
+  }
 
   &__ctaSecondary {
     padding-left: 0;
-    color: var(--ifm-color-primary);
     font-weight: 500;
+    color: var(--ifm-color-primary);
 
     &:hover {
       color: var(--color-accent-teal);
