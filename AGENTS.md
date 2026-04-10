@@ -4,17 +4,26 @@ Docusaurus 3.x documentation site with React 19, classic preset. Satellite image
 
 ---
 
-## Build Commands
+## Commands
 
 ```bash
-npm run build                # Verify correctness — catches broken imports, missing refs, build errors
-npm run clear                # Clear cache before build if stale
-npm ci                       # Clean install for CI
-npm run write-translations   # Regenerate i18n files
+npm run check                # Run ALL checks: eslint + stylelint + prettier (run this first)
+npm run lint                 # ESLint on src/
+npm run lint:css             # Stylelint on src/**/*.scss
+npm run format:check         # Prettier check on src/**/*.{js,jsx,scss}
+npm run build                # Docusaurus build — catches broken imports, missing refs
+npm run clear                # Clear Docusaurus cache before build if stale
+npm run write-translations   # Regenerate i18n files (CI verifies these stay in sync)
 npm run write-heading-ids    # Regenerate heading IDs
 ```
 
-No test framework, no linter. Use `npm run build` to verify **only after JS/JSX or structural changes**. For CSS/SCSS-only changes, do NOT run build — it restarts the live dev server.
+**Verification order:** `npm run check` → `npm run build`. No test framework.
+
+- After JS/JSX or structural changes: run `npm run check && npm run build`
+- After CSS/SCSS-only changes: run `npm run lint:css && npm run format:check` (build not needed — it restarts the dev server)
+- `src/data/*.js` and `i18n/` are excluded from ESLint and Prettier (configured in eslint.config.mjs and .prettierignore)
+
+**CI runs on PRs and pushes to main** (Node 20): eslint → stylelint → prettier → i18n sync check → build. The i18n sync step runs `write-translations` then `git diff --exit-code i18n/`, so always regenerate translations before committing if you changed translatable text.
 
 ---
 
@@ -76,8 +85,8 @@ Use `const` arrow + default export pattern when hoisting named variables:
 
 ```javascript
 const CTAButton = ({ label, to, variant = 'primary', ...props }) => {
-    // ...
-  };
+  // ...
+};
 export default CTAButton;
 ```
 

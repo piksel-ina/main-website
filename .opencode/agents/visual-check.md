@@ -1,7 +1,6 @@
 ---
 description: "Visual inspector — runs responsive screenshots and reports layout issues"
 mode: subagent
-steps: 15
 temperature: 0.2
 tools:
   write: false
