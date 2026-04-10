@@ -2,25 +2,26 @@
 
 .faq {
   position: relative;
-  border-radius: 1.6rem;
   padding: space('10') space('10') space('10') space('11');
-  background: color('white-1');
   overflow: hidden;
+  background: color('white-1');
+  border-radius: 1.6rem;
+
   @include section-shadow;
 
   &::before {
-    content: '';
     position: absolute;
     top: -4rem;
     left: -9rem;
+    z-index: 1;
     width: 44rem;
     height: 44rem;
+    pointer-events: none;
+    content: '';
     background-image: url('/img/faq/question-mark.svg');
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.03;
-    pointer-events: none;
-    z-index: 1;
   }
 
   @include respond-to('tablet') {
@@ -38,9 +39,9 @@
     right: -space('7');
     width: 28rem;
     height: 28rem;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.04) 0%, transparent 70%);
     pointer-events: none;
+    background: radial-gradient(circle, rgb(0 0 0 / 4%) 0%, transparent 70%);
+    border-radius: 50%;
   }
 
   &__decorationLine {
@@ -49,19 +50,19 @@
     left: -#{space('4')};
     width: space('10');
     height: space('10');
-    border: 0.2rem solid rgba(0, 0, 0, 0.06);
-    border-radius: 50%;
     pointer-events: none;
+    border: 0.2rem solid rgb(0 0 0 / 6%);
+    border-radius: 50%;
   }
 
   &__contentWrapper {
     position: relative;
     z-index: 10;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 28rem 1fr;
     gap: space('9');
     align-items: start;
+    margin: 0 auto;
 
     @include respond-to('tablet') {
       grid-template-columns: 1fr;
@@ -83,8 +84,8 @@
 
   &__accentLine {
     display: flex;
-    align-items: center;
     gap: space('2');
+    align-items: center;
   }
 
   &__accentLineBar {
@@ -98,15 +99,16 @@
     font-size: text-size('sm');
     font-weight: 700;
     color: color('black-2');
-    letter-spacing: 0.1em;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   &__headerTitle {
     @include heading;
+
+    margin: 0;
     font-size: text-size('2xl');
     line-height: 1.1;
-    margin: 0;
     color: color('black-1');
 
     @include respond-to('phone-wide') {
@@ -116,8 +118,8 @@
 
   &__headerDesc {
     font-size: text-size('base');
-    color: color('black-3');
     line-height: 1.7;
+    color: color('black-3');
   }
 
   &__faqList {

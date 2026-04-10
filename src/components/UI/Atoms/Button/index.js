@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { ChevronRight, ArrowRight, MoveRight } from 'lucide-react';
@@ -32,10 +31,14 @@ const Button = ({
   const content = label || children || 'Learn More';
   const Component = to || href ? Link : 'button';
   const ButtonIcon = Icon || defaultIcons[variant] || null;
-  const style = color ? { ...props.style, '--button-color': color } : props.style;
+  const style = color
+    ? { ...props.style, '--button-color': color }
+    : props.style;
 
-  const showShine = enableShine !== undefined ? enableShine : variant === 'primary';
-  const shouldExpand = enableExpand !== undefined ? enableExpand : variant === 'primary';
+  const showShine =
+    enableShine !== undefined ? enableShine : variant === 'primary';
+  const shouldExpand =
+    enableExpand !== undefined ? enableExpand : variant === 'primary';
 
   return (
     <Component
@@ -44,7 +47,7 @@ const Button = ({
         styles[`button--${variant}`],
         fullWidth && styles['button--fullWidth'],
         shouldExpand && styles['button--expandOnHover'],
-        className
+        className,
       )}
       onClick={onClick}
       to={to}
@@ -53,7 +56,9 @@ const Button = ({
       {...(!(to || href) && { type: 'button' })}
       {...props}
     >
-      {showShine && <div className={styles['button__shine']} aria-hidden="true" />}
+      {showShine && (
+        <div className={styles['button__shine']} aria-hidden="true" />
+      )}
 
       {showIcon && ButtonIcon && iconPosition === 'left' && (
         <ButtonIcon className={styles['button__icon']} aria-hidden="true" />

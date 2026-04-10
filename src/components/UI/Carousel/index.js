@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import styles from "./styles.module.scss";
+import { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import styles from './styles.module.scss';
 
 const Carousel = ({
   items = [],
@@ -9,11 +9,11 @@ const Carousel = ({
   itemsPerView = { desktop: 3, tablet: 2, mobile: 1 },
   showNavigation = true,
   showPagination = true,
-  className = "",
+  className = '',
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentItemsPerView, setCurrentItemsPerView] = useState(
-    itemsPerView.desktop
+    itemsPerView.desktop,
   );
   const [isMobile, setIsMobile] = useState(false);
 
@@ -40,8 +40,8 @@ const Carousel = ({
     };
 
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [itemsPerView]);
 
   const maxIndex = Math.max(0, items.length - currentItemsPerView);
@@ -174,7 +174,7 @@ const Carousel = ({
               key={index}
               onClick={() => goToSlide(index)}
               className={`${styles['carousel__dot']} ${
-                currentIndex === index ? styles['carousel__dot--active'] : ""
+                currentIndex === index ? styles['carousel__dot--active'] : ''
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

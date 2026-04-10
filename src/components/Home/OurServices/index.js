@@ -1,14 +1,12 @@
-import React from "react";
-import Link from "@docusaurus/Link";
-import { servicesData, servicesHeaderData } from "@site/src/data/servicesData";
-import styles from "./styles.module.scss";
-import { ArrowRight } from "lucide-react";
+import Link from '@docusaurus/Link';
+import { servicesData, servicesHeaderData } from '@site/src/data/servicesData';
+import styles from './styles.module.scss';
+import { ArrowRight } from 'lucide-react';
 import Button from '../../UI/Atoms/Button';
 
 export default function OurServices() {
   return (
     <section id="services" className={styles.ourServices}>
-
       <div className={styles.ourServices__header}>
         <h2 className={styles.ourServices__headerTitle}>
           {servicesHeaderData.tag}
@@ -27,7 +25,7 @@ export default function OurServices() {
             <div
               key={service.id}
               className={styles.ourServices__card}
-              style={{ "--theme-color": service.color }}
+              style={{ '--theme-color': service.color }}
             >
               <div className={styles.ourServices__bgIcon}>
                 <Icon />
@@ -43,11 +41,10 @@ export default function OurServices() {
                 <p className={styles.ourServices__cardDesc}>
                   {service.description}
                 </p>
-                <Link
-                  to={service.link}
-                  className={styles.ourServices__linkRow}
-                >
-                  <span className={styles.ourServices__linkText}>{service.linkText}</span>
+                <Link to={service.link} className={styles.ourServices__linkRow}>
+                  <span className={styles.ourServices__linkText}>
+                    {service.linkText}
+                  </span>
                   <ArrowRight size={16} strokeWidth={1.8} />
                 </Link>
               </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
 import useGlobalData from '@docusaurus/useGlobalData';
@@ -35,7 +34,9 @@ const HighlightedCard = ({ post }) => (
       </div>
       <div className={styles.newsArticles__highlightedBottom}>
         <h3 className={styles.newsArticles__highlightedTitle}>{post.title}</h3>
-        <p className={styles.newsArticles__highlightedDesc}>{post.description}</p>
+        <p className={styles.newsArticles__highlightedDesc}>
+          {post.description}
+        </p>
       </div>
     </div>
   </Link>

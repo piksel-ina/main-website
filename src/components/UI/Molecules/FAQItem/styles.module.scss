@@ -4,8 +4,8 @@ $cut: space('3');
 
 .faqItem {
   position: relative;
-  transition: background 0.35s ease, box-shadow 0.35s ease;
   background: color('grey-light-2');
+  box-shadow: 0 0.1rem 0.4rem rgb(0 0 0 / 4%);
   clip-path: polygon(
     $cut 0,
     100% 0,
@@ -14,30 +14,32 @@ $cut: space('3');
     0 100%,
     0 $cut
   );
-  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.04);
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 
   &:hover {
     background: color('white-1');
-    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0.2rem 1.2rem rgb(0 0 0 / 6%);
   }
 
   &[data-open='true'] {
     background: color('white-1');
-    box-shadow: 0 0.4rem 2.0rem rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.4rem 2rem rgb(0 0 0 / 8%);
   }
 
   &__question {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: space('3');
     align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
     padding: space('3') space('4');
+    color: color('black-4');
+    text-align: left;
+    cursor: pointer;
     background: none;
     border: none;
-    cursor: pointer;
-    text-align: left;
-    gap: space('3');
-    color: color('black-4');
   }
 
   &__questionText {
@@ -54,22 +56,22 @@ $cut: space('3');
   }
 
   &__iconWrapper {
-    color: color('black-3');
-    background: color('grey-light-2');
-    padding: 0.6em;
-    border-radius: space('1');
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: space('6');
     height: space('6');
+    padding: 0.6em;
+    color: color('black-3');
+    background: color('grey-light-2');
+    border-radius: space('1');
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &[data-open='true'] &__iconWrapper {
-    background: color('black');
     color: color('grey-light-2');
+    background: color('black');
     transform: rotate(180deg);
   }
 
@@ -90,18 +92,20 @@ $cut: space('3');
   }
 
   &__answerInner {
-    overflow: hidden;
     padding: 0 space('4') space('4');
-    color: color('black-3');
+    overflow: hidden;
     font-size: text-size('base');
     line-height: 1.7;
+    color: color('black-3');
     opacity: 0;
     transform: translateY(-0.5rem);
-    transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+    transition:
+      opacity 0.35s ease 0.1s,
+      transform 0.35s ease 0.1s;
 
     p {
-      padding-top: space('2');
       max-width: 65ch;
+      padding-top: space('2');
     }
   }
 

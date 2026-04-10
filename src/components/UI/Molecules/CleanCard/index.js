@@ -1,14 +1,13 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
-import styles from "./styles.module.scss";
-import Button from "../../Atoms/Button";
+import { ArrowRight } from 'lucide-react';
+import styles from './styles.module.scss';
+import Button from '../../Atoms/Button';
 
 const CleanCard = ({
   icon: Icon,
   title,
   description,
-  buttonText = "Mulai Menjelajah",
-  buttonTextSecondary = "Pelajari Lebih Lanjut",
+  buttonText = 'Mulai Menjelajah',
+  buttonTextSecondary = 'Pelajari Lebih Lanjut',
   link,
 }) => {
   return (

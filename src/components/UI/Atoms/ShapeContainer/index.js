@@ -1,9 +1,8 @@
-import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 
-const ShapeContainer = ({ 
-  variant = 'slanted', 
+const ShapeContainer = ({
+  variant = 'slanted',
   color = 'neutral',
   position = 'absolute',
   flip = false,
@@ -12,12 +11,12 @@ const ShapeContainer = ({
   patternColor = 'primary',
   children,
   className,
-  style 
+  style,
 }) => {
   const activePattern = pattern || (dotPattern ? 'dot' : null);
 
   return (
-    <div 
+    <div
       className={clsx(
         styles.shape,
         styles[`shape--${variant}`],
@@ -27,7 +26,7 @@ const ShapeContainer = ({
         activePattern === 'dot' && styles['shape--dotPattern'],
         activePattern === 'dot' && styles[`shape--dotPattern-${patternColor}`],
         activePattern === 'grid' && styles['shape--pattern-grid'],
-        className
+        className,
       )}
       style={style}
       aria-hidden="true"

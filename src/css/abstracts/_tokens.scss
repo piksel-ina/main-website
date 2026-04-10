@@ -4,20 +4,19 @@ $spacing: (
   '1': 0.8rem,
   '2': 1.2rem,
   '3': 1.6rem,
-  '4': 2.0rem,
+  '4': 2rem,
   '5': 2.4rem,
   '6': 3.2rem,
-  '7': 4.0rem,
+  '7': 4rem,
   '8': 4.8rem,
   '9': 6.4rem,
-  '10': 8.0rem, 
+  '10': 8rem,
   '11': 9.6rem,
   '12': 11.2rem,
   '13': 12.8rem,
 );
-
 $type-scale: (
-  'xs': 1.0rem,
+  'xs': 1rem,
   'sm': 1.25rem,
   'base': 1.5625rem,
   'md': 1.953rem,
@@ -28,7 +27,6 @@ $type-scale: (
   '4xl': 5.96rem,
   '5xl': 7.451rem,
 );
-
 $breakpoints: (
   'phone': 480px,
   'phone-wide': 768px,
@@ -36,68 +34,109 @@ $breakpoints: (
   'laptop': 1280px,
   'desktop': 1440px,
 );
-
 $colors: (
   // === PRIMARY — Deep navy collection ===
-  'primary':           #0d295b,   // Main brand navy
-  'primary-dark':      #0a1f47,   // Darker variant — hover states
-  'primary-darker':    #081838,   // Deep navy — emphasis
-  'primary-darkest':   #051224,   // Near-black navy — dark backgrounds
-  'primary-light':     #244680,   // Muted navy — secondary elements
-  'primary-lighter':   #3d6aa8,   // Medium navy — subtle highlights
-  'primary-lightest':  #5689d0,   // Light navy — accents on dark bg
+  'primary': #0d295b,
+  // Main brand navy
+  'primary-dark': #0a1f47,
+  // Darker variant — hover states
+  'primary-darker': #081838,
+  // Deep navy — emphasis
+  'primary-darkest': #051224,
+  // Near-black navy — dark backgrounds
+  'primary-light': #244680,
+  // Muted navy — secondary elements
+  'primary-lighter': #3d6aa8,
+  // Medium navy — subtle highlights
+  'primary-lightest': #5689d0,
 
+  // Light navy — accents on dark bg
   // === ICE / LIGHT BLUE — Soft sky tones ===
-  'ice':               #eff6ff,   // Icy white-blue — light backgrounds
-  'ice-light':         #e8f4fd,   // Pale ice — subtle surface tint
-  'sky':               rgba(147, 197, 253, 0.35),  // Translucent sky blue — overlays
-  'sky-bright':        rgba(147, 197, 253, 0.6),   // Vivid sky blue — glass effects
-
+  'ice': #eff6ff,
+  // Icy white-blue — light backgrounds
+  'ice-light': #e8f4fd,
+  // Pale ice — subtle surface tint
+  'sky': rgb(147 197 253 / 35%),
+  // Translucent sky blue — overlays
+  'sky-bright': rgb(147 197 253 / 60%),
+  // Vivid sky blue — glass effects
   // === ACCENT — Supporting colors ===
-  'accent':            #4a90e2,   // Bright blue — CTAs, links, highlights
-  'accent-teal':       #35a9d3,   // Teal — hero gradients, badges
-  'accent-teal-dark':  #005967,   // Dark teal — deep gradient accents
-  'accent-amber':      #d97706,   // Amber — warm highlights, callouts
-  'accent-red':        #dc2626,   // Red — danger/error callouts
+  'accent': #4a90e2,
+  // Bright blue — CTAs, links, highlights
+  'accent-teal': #35a9d3,
+  // Teal — hero gradients, badges
+  'accent-teal-dark': #005967,
+  // Dark teal — deep gradient accents
+  'accent-amber': #d97706,
+  // Amber — warm highlights, callouts
+  'accent-red': #dc2626,
 
+  // Red — danger/error callouts
   // === BLACK SCALE — Pure to tinted (stops before grey range) ===
-  'black':             #000000,   // Pure black
-  'black-1':           #1D1D1F,   // Deep charcoal — primary dark text
-  'black-2':           #3A3A3C,   // Dark — secondary text
-  'black-3':           #48484A,   // Medium-dark — tertiary text
-  'black-4':           #636366,   // Muted — placeholders, disabled
+  'black': #000,
+  // Pure black
+  'black-1': #1d1d1f,
+  // Deep charcoal — primary dark text
+  'black-2': #3a3a3c,
+  // Dark — secondary text
+  'black-3': #48484a,
+  // Medium-dark — tertiary text
+  'black-4': #636366,
 
+  // Muted — placeholders, disabled
   // === GREY SCALE — System greys ===
-  'grey-dark-2':       #8E8E93,   // Darkest grey
-  'grey-dark-1':       #AEAEB2,   // Dark grey
-  'grey':              #C7C7CC,   // Base grey
-  'grey-light-1':      #D1D1D6,   // Light grey
-  'grey-light-2':      #E5E5EA,   // Lightest grey
+  'grey-dark-2': #8e8e93,
+  // Darkest grey
+  'grey-dark-1': #aeaeb2,
+  // Dark grey
+  'grey': #c7c7cc,
+  // Base grey
+  'grey-light-1': #d1d1d6,
+  // Light grey
+  'grey-light-2': #e5e5ea,
 
+  // Lightest grey
   // === WHITE SCALE — Pure to tinted (stops before grey range) ===
-  'white':             #FFFFFF,   // Pure white
-  'white-1':           #F5F5F7,   // Soft — elevated surfaces
-  'white-2':           #F2F2F4,   // Subtle tint
-  'white-3':	         #EFEFEF, 	// Light wash
-  'white-4':           #EBEBED,		// Cool off-white
-
-
+  'white': #fff,
+  // Pure white
+  'white-1': #f5f5f7,
+  // Soft — elevated surfaces
+  'white-2': #f2f2f4,
+  // Subtle tint
+  'white-3': #efefef,
+  // Light wash
+  'white-4': #ebebed // Cool off-white
 );
-
 $font-families: (
-  'base': ('Inter', -apple-system, system-ui, sans-serif),
-  'heading': ('Outfit', sans-serif),
-  'mono': ('JetBrains Mono', 'Geist Mono', monospace),
+  'base': (
+    'Inter',
+    -apple-system,
+    system-ui,
+    sans-serif,
+  ),
+  'heading': (
+    'Outfit',
+    sans-serif,
+  ),
+  'mono': (
+    'JetBrains Mono',
+    'Geist Mono',
+    monospace,
+  ),
 );
-
 $container-max-width: 1440px;
 $navbar-height: 10rem;
 $card-border-radius: 0.5rem;
-$card-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
+$card-box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 $clip-paths: (
   'slanted-bottom': polygon(0 0, 100% 0, 100% 85%, 0 100%),
-  'cut-corner-br': polygon(0 0, 100% 0, 100% calc(100% - 3.2rem), calc(100% - 3.2rem) 100%, 0 100%),
+  'cut-corner-br': polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 3.2rem),
+      calc(100% - 3.2rem) 100%,
+      0 100%
+    ),
   'shard': polygon(20% 0%, 100% 0, 100% 100%, 0% 100%),
   'image-clipped': polygon(0 0, 95% 0, 100% 5%, 100% 100%, 0 100%),
 );

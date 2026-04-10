@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./styles.module.scss";
-import Button from "../../Atoms/Button";
+import styles from './styles.module.scss';
+import Button from '../../Atoms/Button';
 
 /**
  * ModernCard component - A reusable card with image overlay and hover effects
@@ -10,7 +9,6 @@ import Button from "../../Atoms/Button";
  * @param {string} link - Link URL for the "Learn more" button
  */
 function ModernCard({ image, title, description, link }) {
-
   return (
     <div className={`card shadow--md ${styles.modernCard}`}>
       <div className={styles.modernCard__imageContainer}>
