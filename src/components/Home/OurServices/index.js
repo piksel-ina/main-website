@@ -8,10 +8,15 @@ export default function OurServices() {
   return (
     <section id="services" className={styles.ourServices}>
       <div className={styles.ourServices__header}>
+        <div className={styles.ourServices__accentLine}>
+          <div className={styles.ourServices__accentLineBar} />
+          <span className={styles.ourServices__accentText}>
+            {servicesHeaderData.title}
+          </span>
+        </div>
         <h2 className={styles.ourServices__headerTitle}>
           {servicesHeaderData.tag}
         </h2>
-        <span className={styles.ourServices__headerDivider} />
         <p className={styles.ourServices__headerDesc}>
           {servicesHeaderData.subtitle}
         </p>
@@ -42,9 +47,7 @@ export default function OurServices() {
                   {service.description}
                 </p>
                 <Link to={service.link} className={styles.ourServices__linkRow}>
-                  <span className={styles.ourServices__linkText}>
-                    {service.linkText}
-                  </span>
+                  {service.linkText}
                   <ArrowRight size={16} strokeWidth={1.8} />
                 </Link>
               </div>
@@ -58,7 +61,7 @@ export default function OurServices() {
           to={servicesHeaderData.viewAllLink}
           label={servicesHeaderData.viewAllText}
           variant="outlined"
-          color="#e2e8f0"
+          color="#1D1D1F"
         />
       </div>
     </section>

@@ -1,0 +1,26 @@
+{
+  "logo.alt": {
+    "message": "Logo Badan Informasi Geospasial",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Dokumentasi": {
+    "message": "Dokumentasi",
+    "description": "Navbar item with label Dokumentasi"
+  },
+  "item.label.Pemanfaatan": {
+    "message": "Pemanfaatan",
+    "description": "Navbar item with label Pemanfaatan"
+  },
+  "item.label.Layanan": {
+    "message": "Layanan",
+    "description": "Navbar item with label Layanan"
+  },
+  "item.label.Berita": {
+    "message": "Berita",
+    "description": "Navbar item with label Berita"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
+  }
+}
