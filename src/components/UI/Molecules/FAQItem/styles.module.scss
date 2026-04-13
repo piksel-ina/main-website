@@ -40,6 +40,10 @@ $cut: space('3');
     cursor: pointer;
     background: none;
     border: none;
+
+    @include respond-to('phone') {
+      padding: space('2') space('3');
+    }
   }
 
   &__questionText {
@@ -49,6 +53,10 @@ $cut: space('3');
     line-height: 1.4;
     color: color('black-2');
     transition: color 0.25s ease;
+
+    @include respond-to('phone') {
+      font-size: text-size('sm');
+    }
   }
 
   &[data-open='true'] &__questionText {
@@ -102,6 +110,11 @@ $cut: space('3');
     transition:
       opacity 0.35s ease 0.1s,
       transform 0.35s ease 0.1s;
+
+    @include respond-to('phone') {
+      padding: 0 space('3') space('3');
+      font-size: text-size('sm');
+    }
 
     p {
       max-width: 65ch;
