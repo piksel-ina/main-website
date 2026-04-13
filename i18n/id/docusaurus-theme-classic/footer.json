@@ -1,0 +1,98 @@
+{
+  "link.title.Layanan": {
+    "message": "Layanan",
+    "description": "The title of the footer links column with title=Layanan in the footer"
+  },
+  "link.title.Contoh Pemanfaatan": {
+    "message": "Contoh Pemanfaatan",
+    "description": "The title of the footer links column with title=Contoh Pemanfaatan in the footer"
+  },
+  "link.title.Referensi Lainnya": {
+    "message": "Referensi Lainnya",
+    "description": "The title of the footer links column with title=Referensi Lainnya in the footer"
+  },
+  "link.title.Kontak Kami": {
+    "message": "Kontak Kami",
+    "description": "The title of the footer links column with title=Kontak Kami in the footer"
+  },
+  "link.item.label.Jelajah Data": {
+    "message": "Jelajah Data",
+    "description": "The label of footer link with label=Jelajah Data linking to /docs/services/explorer"
+  },
+  "link.item.label.Sandbox Analisis": {
+    "message": "Sandbox Analisis",
+    "description": "The label of footer link with label=Sandbox Analisis linking to /docs/services/sandbox"
+  },
+  "link.item.label.Peta Interaktif": {
+    "message": "Peta Interaktif",
+    "description": "The label of footer link with label=Peta Interaktif linking to /docs/services/maps"
+  },
+  "link.item.label.Layanan Web": {
+    "message": "Layanan Web",
+    "description": "The label of footer link with label=Layanan Web linking to /docs/services/web-services"
+  },
+  "link.item.label.Komputasi Awan": {
+    "message": "Komputasi Awan",
+    "description": "The label of footer link with label=Komputasi Awan linking to /docs/services/cloud-computing"
+  },
+  "link.item.label.Dukungan Teknis": {
+    "message": "Dukungan Teknis",
+    "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support"
+  },
+  "link.item.label.Pertanian": {
+    "message": "Pertanian",
+    "description": "The label of footer link with label=Pertanian linking to /docs/usecase/agriculture"
+  },
+  "link.item.label.Perkotaan": {
+    "message": "Perkotaan",
+    "description": "The label of footer link with label=Perkotaan linking to /docs/usecase/urban"
+  },
+  "link.item.label.Kehutanan": {
+    "message": "Kehutanan",
+    "description": "The label of footer link with label=Kehutanan linking to /docs/usecase/forestry"
+  },
+  "link.item.label.Pesisir": {
+    "message": "Pesisir",
+    "description": "The label of footer link with label=Pesisir linking to /docs/usecase/coastal"
+  },
+  "link.item.label.Bencana": {
+    "message": "Bencana",
+    "description": "The label of footer link with label=Bencana linking to /docs/usecase/disaster"
+  },
+  "link.item.label.Tambang": {
+    "message": "Tambang",
+    "description": "The label of footer link with label=Tambang linking to /docs/usecase/mining"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentation",
+    "description": "The label of footer link with label=Documentation linking to /docs/about/intro"
+  },
+  "link.item.label.API Reference": {
+    "message": "API Reference",
+    "description": "The label of footer link with label=API Reference linking to /docs/api"
+  },
+  "link.item.label.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label of footer link with label=Tutorials linking to /docs/tutorials"
+  },
+  "link.item.label.Github": {
+    "message": "Github",
+    "description": "The label of footer link with label=Github linking to https://github.com/piksel-ina"
+  },
+  "link.item.label.Email: piksel@big.go.id": {
+    "message": "Email: piksel@big.go.id",
+    "description": "The label of footer link with label=Email: piksel@big.go.id linking to mailto:piksel@big.go.id"
+  },
+  "link.item.label.Phone: 021-8752062": {
+    "message": "Phone: 021-8752062",
+    "description": "The label of footer link with label=Phone: 021-8752062 linking to tel:+62218752062"
+  },
+  "link.item.label.BIG Indonesia": {
+    "message": "BIG Indonesia",
+    "description": "The label of footer link with label=BIG Indonesia linking to https://www.big.go.id"
+  },
+  "copyright": {
+    "message": "\n    <div class=\"footer__copyright-container\">\n      <img src=\"/img/logos/logo-big-360px.png\" alt=\"Badan Informasi Geospasial\" class=\"footer__logo\" />\n      <div class=\"footer__copyright-text\">Copyright © 2026 - Badan Informasi Geospasial</div>\n      <div class=\"footer__address\">\n        Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>\n        Tel: 021-8752062 ext.3608/3611/3103\n      </div>\n    </div>\n  ",
+    "description": "The footer copyright"
+  }
+}

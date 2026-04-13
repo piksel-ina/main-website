@@ -121,7 +121,7 @@ export const servicesData = [
 export const servicesHeaderData = {
   tag: translate({
     id: "ourServices.header.tag",
-    message: "Layanan Kami",
+    message: "Layanan Piksel",
     description: "Tag label for the services section",
   }),
   title: translate({
