@@ -22,6 +22,22 @@
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.03;
+
+    @include respond-to('tablet') {
+      top: -0.4rem;
+      left: -7rem;
+      width: 28rem;
+      height: 28rem;
+    }
+
+    @include respond-to('phone') {
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  @include respond-to('laptop') {
+    padding: space('8') space('8') space('8') space('9');
   }
 
   @include respond-to('tablet') {
@@ -30,6 +46,7 @@
   }
 
   @include respond-to('phone') {
+    padding: space('6') space('1') space('2');
     border-radius: 0.8rem;
   }
 
@@ -42,6 +59,10 @@
     pointer-events: none;
     background: radial-gradient(circle, rgb(0 0 0 / 4%) 0%, transparent 70%);
     border-radius: 50%;
+
+    @include respond-to('phone') {
+      display: none;
+    }
   }
 
   &__decorationLine {
@@ -53,6 +74,10 @@
     pointer-events: none;
     border: 0.2rem solid rgb(0 0 0 / 6%);
     border-radius: 50%;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
   }
 
   &__contentWrapper {
@@ -64,9 +89,18 @@
     align-items: start;
     margin: 0 auto;
 
+    @include respond-to('laptop') {
+      grid-template-columns: 24rem 1fr;
+      gap: space('7');
+    }
+
     @include respond-to('tablet') {
       grid-template-columns: 1fr;
       gap: space('7');
+    }
+
+    @include respond-to('phone') {
+      gap: space('1');
     }
   }
 
@@ -79,6 +113,13 @@
 
     @include respond-to('tablet') {
       position: static;
+      gap: space('2');
+      margin-top: space('4');
+      margin-left: space('6');
+    }
+
+    @include respond-to('phone') {
+      gap: space('3');
     }
   }
 
@@ -86,6 +127,10 @@
     display: flex;
     gap: space('2');
     align-items: center;
+
+    @include respond-to('tablet') {
+      margin-bottom: -1.4rem;
+    }
   }
 
   &__accentLineBar {
@@ -93,6 +138,10 @@
     height: 0.2rem;
     background-color: color('accent');
     border-radius: 0.1rem;
+
+    @include respond-to('phone') {
+      width: space('3');
+    }
   }
 
   &__accentText {
@@ -101,6 +150,10 @@
     color: color('black-2');
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    @include respond-to('phone') {
+      font-size: text-size('xs');
+    }
   }
 
   &__headerTitle {
@@ -114,12 +167,20 @@
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
+
+    @include respond-to('phone') {
+      font-size: text-size('lg');
+    }
   }
 
   &__headerDesc {
     font-size: text-size('base');
     line-height: 1.7;
     color: color('black-3');
+
+    @include respond-to('phone') {
+      font-size: text-size('sm');
+    }
   }
 
   &__faqList {
@@ -127,5 +188,15 @@
     flex-direction: column;
     gap: space('3');
     width: 100%;
+
+    @include respond-to('tablet') {
+      width: auto;
+      margin: space('1') space('5') space('6');
+    }
+
+    @include respond-to('phone') {
+      gap: space('2');
+      margin: space('1') space('3') space('6');
+    }
   }
 }

@@ -408,9 +408,9 @@ h6 {
   &__logo {
     height: auto;
     max-height: 6rem;
+    margin-bottom: space('3');
     opacity: 1;
     transition: filter 0.3s ease;
-    margin-bottom: space('3');
 
     &:hover {
       filter: grayscale(100%) brightness(0.2);
@@ -418,19 +418,19 @@ h6 {
   }
 
   &__copyright-text {
+    margin-bottom: space('1');
     font-size: text-size('sm');
     font-weight: 400;
     line-height: 1.6;
     color: color('grey-dark-2');
-    margin-bottom: space('1');
   }
 
   &__address {
+    margin-bottom: space('4');
     font-size: text-size('xs');
     line-height: 1.8;
     color: color('grey-dark-2');
     opacity: 0.8;
-    margin-bottom: space('4');
   }
 }
 
