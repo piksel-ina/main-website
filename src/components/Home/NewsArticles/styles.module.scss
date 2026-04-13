@@ -13,12 +13,17 @@
 
   @include section-shadow;
 
+  @include respond-to('laptop') {
+    padding: space('8') space('8') space('8') space('9');
+  }
+
   @include respond-to('tablet') {
-    padding: space('7') space('2') space('6');
+    padding: space('9') space('7') space('6');
     border-radius: 1.2rem;
   }
 
   @include respond-to('phone') {
+    padding: space('8') space('5') space('2');
     border-radius: 0.8rem;
   }
 
@@ -30,6 +35,10 @@
 
     @include respond-to('tablet') {
       margin-bottom: space('5');
+    }
+
+    @include respond-to('phone') {
+      margin-bottom: space('4');
     }
   }
 
@@ -44,6 +53,10 @@
     height: 0.2rem;
     background-color: color('grey-light-1');
     border-radius: 0.1rem;
+
+    @include respond-to('phone') {
+      width: space('3');
+    }
   }
 
   &__accentLineExtended {
@@ -58,6 +71,10 @@
     color: color('grey-dark-2');
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    @include respond-to('phone') {
+      font-size: text-size('xs');
+    }
   }
 
   &__title {
@@ -71,6 +88,10 @@
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
     }
+
+    @include respond-to('phone') {
+      font-size: text-size('lg');
+    }
   }
 
   &__subtitle {
@@ -78,7 +99,12 @@
     font-size: text-size('base');
     line-height: 1.7;
     color: color('black-2');
+    text-wrap: pretty;
     opacity: 0.75;
+
+    @include respond-to('phone') {
+      font-size: text-size('sm');
+    }
   }
 
   /* === LAYOUT GRID === */
@@ -89,9 +115,17 @@
     gap: space('5');
     align-items: stretch;
 
+    @include respond-to('laptop') {
+      grid-template-columns: 1.2fr 1fr;
+    }
+
     @include respond-to('tablet') {
       grid-template-columns: 1fr;
       gap: space('5');
+    }
+
+    @include respond-to('phone') {
+      gap: space('4');
     }
   }
 
@@ -99,12 +133,32 @@
     display: flex;
     flex-direction: column;
     gap: space('4');
+
+    @include respond-to('tablet') {
+      flex-direction: row;
+    }
+
+    @include respond-to('phone') {
+      flex-direction: column;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: space('3');
+
+    @include respond-to('tablet') {
+      flex-flow: row wrap;
+      gap: space('2');
+      justify-content: space-around;
+    }
+
+    @include respond-to('phone') {
+      flex-flow: column nowrap;
+      gap: space('2');
+      justify-content: flex-start;
+    }
   }
 
   /* === LIST ITEM (small card, left) === */
@@ -138,6 +192,14 @@
     &:last-child {
       border-bottom: none;
     }
+
+    @include respond-to('tablet') {
+      max-width: 49%;
+    }
+
+    @include respond-to('phone') {
+      max-width: 100%;
+    }
   }
 
   &__listItemImageWrapper {
@@ -146,6 +208,12 @@
     height: 7rem;
     overflow: hidden;
     border-radius: 0.8rem;
+
+    @include respond-to('phone') {
+      width: 7rem;
+      height: 5.6rem;
+      border-radius: 0.6rem;
+    }
   }
 
   &__listItemImage {
@@ -176,6 +244,10 @@
     transition: color 0.25s ease;
 
     @include truncate(2);
+
+    @include respond-to('phone') {
+      font-size: text-size('sm');
+    }
   }
 
   /* === HIGHLIGHTED CARD (full-bleed image with text overlay) === */
@@ -192,6 +264,17 @@
     border-radius: 1.2rem;
     filter: brightness(1);
     transition: all 0.25s ease;
+
+    @include respond-to('tablet') {
+      max-width: 50%;
+      min-height: 22rem;
+    }
+
+    @include respond-to('phone') {
+      max-width: 100%;
+      min-height: 23rem;
+      border-radius: 0.8rem;
+    }
 
     &:hover {
       text-decoration: none;
@@ -225,6 +308,16 @@
       rgb(0 0 0 / 70%) 0%,
       rgb(0 0 0 / 0%) 55%
     );
+
+    @include respond-to('tablet') {
+      min-height: 28rem;
+      padding: space('4');
+      padding-bottom: space('2');
+    }
+
+    @include respond-to('phone') {
+      min-height: 20rem;
+    }
   }
 
   &__highlightedTop {
@@ -250,6 +343,10 @@
     line-height: 1.3;
     color: color('white');
     text-wrap: pretty;
+
+    @include respond-to('phone') {
+      font-size: text-size('base');
+    }
   }
 
   &__highlightedDesc {
@@ -260,6 +357,10 @@
     opacity: 0.85;
 
     @include truncate(2);
+
+    @include respond-to('phone') {
+      font-size: text-size('xs');
+    }
   }
 
   &__highlightedOverlay &__meta {
@@ -295,5 +396,10 @@
     display: flex;
     justify-content: flex-end;
     margin-top: space('3');
+
+    @include respond-to('phone') {
+      margin-top: space('1');
+      margin-bottom: space('2');
+    }
   }
 }
