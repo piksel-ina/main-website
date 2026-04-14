@@ -140,5 +140,5 @@ export const servicesHeaderData = {
     message: "Lihat Semua Layanan",
     description: "View all services link text",
   }),
-  viewAllLink: "/docs/services/main",
+  viewAllLink: "/docs/category/services",
 };

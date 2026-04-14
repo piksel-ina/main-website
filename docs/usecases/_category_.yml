@@ -1,0 +1,8 @@
+position: 4
+label: Use Cases
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  title: Use Cases
+  description: Explore how Piksel is being used to solve real-world problems.

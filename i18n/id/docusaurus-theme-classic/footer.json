@@ -17,55 +17,55 @@
   },
   "link.item.label.Jelajah Data": {
     "message": "Jelajah Data",
-    "description": "The label of footer link with label=Jelajah Data linking to /docs/services/explorer"
+    "description": "The label of footer link with label=Jelajah Data linking to /docs/services/explorer/"
   },
   "link.item.label.Sandbox Analisis": {
     "message": "Sandbox Analisis",
-    "description": "The label of footer link with label=Sandbox Analisis linking to /docs/services/sandbox"
+    "description": "The label of footer link with label=Sandbox Analisis linking to /docs/services/sandbox/"
   },
   "link.item.label.Peta Interaktif": {
     "message": "Peta Interaktif",
-    "description": "The label of footer link with label=Peta Interaktif linking to /docs/services/maps"
+    "description": "The label of footer link with label=Peta Interaktif linking to /docs/services/maps/"
   },
   "link.item.label.Layanan Web": {
     "message": "Layanan Web",
-    "description": "The label of footer link with label=Layanan Web linking to /docs/services/web-services"
+    "description": "The label of footer link with label=Layanan Web linking to /docs/services/web-services/"
   },
   "link.item.label.Komputasi Awan": {
     "message": "Komputasi Awan",
-    "description": "The label of footer link with label=Komputasi Awan linking to /docs/services/cloud-computing"
+    "description": "The label of footer link with label=Komputasi Awan linking to /docs/services/cloud-computing/"
   },
   "link.item.label.Dukungan Teknis": {
     "message": "Dukungan Teknis",
-    "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support"
+    "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support/"
   },
   "link.item.label.Pertanian": {
     "message": "Pertanian",
-    "description": "The label of footer link with label=Pertanian linking to /docs/usecase/agriculture"
+    "description": "The label of footer link with label=Pertanian linking to /docs/usecases/agriculture/"
   },
   "link.item.label.Perkotaan": {
     "message": "Perkotaan",
-    "description": "The label of footer link with label=Perkotaan linking to /docs/usecase/urban"
+    "description": "The label of footer link with label=Perkotaan linking to /docs/usecases/urban/"
   },
   "link.item.label.Kehutanan": {
     "message": "Kehutanan",
-    "description": "The label of footer link with label=Kehutanan linking to /docs/usecase/forestry"
+    "description": "The label of footer link with label=Kehutanan linking to /docs/usecases/forestry/"
   },
   "link.item.label.Pesisir": {
     "message": "Pesisir",
-    "description": "The label of footer link with label=Pesisir linking to /docs/usecase/coastal"
+    "description": "The label of footer link with label=Pesisir linking to /docs/usecases/coastal/"
   },
   "link.item.label.Bencana": {
     "message": "Bencana",
-    "description": "The label of footer link with label=Bencana linking to /docs/usecase/disaster"
+    "description": "The label of footer link with label=Bencana linking to /docs/usecases/disaster/"
   },
   "link.item.label.Tambang": {
     "message": "Tambang",
-    "description": "The label of footer link with label=Tambang linking to /docs/usecase/mining"
+    "description": "The label of footer link with label=Tambang linking to /docs/usecases/mining/"
   },
   "link.item.label.Documentation": {
     "message": "Documentation",
-    "description": "The label of footer link with label=Documentation linking to /docs/about/intro"
+    "description": "The label of footer link with label=Documentation linking to /docs/overview"
   },
   "link.item.label.API Reference": {
     "message": "API Reference",
