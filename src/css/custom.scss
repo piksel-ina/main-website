@@ -489,3 +489,133 @@ h6 {
     transform: translateY(-2px);
   }
 }
+
+/* ========================================================================
+   10. COMPONENT OVERRIDES — DOC SIDEBAR
+   ======================================================================== */
+
+.theme-doc-sidebar-menu {
+  --ifm-menu-color: #{color('black-3')};
+  --ifm-menu-color-active: #{color('primary')};
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-background-hover: transparent;
+  --ifm-menu-link-padding-horizontal: #{space('3')};
+  --ifm-menu-link-padding-vertical: #{space('1')};
+
+  padding-top: space('3');
+  padding-bottom: space('4');
+
+  /* === Section dividers === */
+
+  > .sidebar-section {
+    padding-top: space('3');
+    margin-top: space('3');
+    border-top: 1px solid color('grey-light-2');
+  }
+
+  > .sidebar-section + .theme-doc-sidebar-item-link-level-1 {
+    padding-top: space('3');
+    margin-top: space('3');
+    border-top: 1px solid color('grey-light-2');
+  }
+
+  /* === Base link === */
+
+  .menu__link {
+    margin-left: -3px;
+    border-left: 3px solid transparent;
+    border-radius: 0;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  /* === L1 standalone links (Overview, Getting Started, Appendix) === */
+
+  > .theme-doc-sidebar-item-link-level-1 > .menu__link {
+    font-family: font-family('heading');
+    font-weight: 500;
+    color: color('black-2');
+  }
+
+  /* === L1 category headers (SERVICES, USE CASES) === */
+
+  > .theme-doc-sidebar-item-category-level-1
+    > .menu__list-item-collapsible
+    > .menu__link {
+    font-family: font-family('heading');
+    font-size: text-size('sm');
+    font-weight: 600;
+    color: color('black-2');
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* === L2 categories (service / use-case names) === */
+
+  .theme-doc-sidebar-item-category-level-2
+    > .menu__list-item-collapsible
+    > .menu__link {
+    font-weight: 500;
+    color: color('black-2');
+  }
+
+  /* === Hover state (pointer devices only) === */
+
+  @media (hover: hover) {
+    .menu__list-item .menu__link:hover {
+      color: color('primary');
+      background-color: color('ice-light');
+      border-left-color: color('grey-light-1');
+    }
+  }
+
+  /* === Active doc page === */
+
+  .menu__list-item .menu__link--active:not(.menu__link--sublist) {
+    font-weight: 500;
+    color: color('primary');
+    background-color: color('ice');
+    border-left-color: color('primary');
+  }
+
+  /* === Active category index page (viewing generated-index) === */
+
+  .menu__list-item-collapsible--active .menu__link {
+    color: color('primary');
+    background-color: color('ice');
+    border-left-color: color('primary');
+  }
+
+  /* === Active category ancestor === */
+
+  .menu__list-item .menu__link--active.menu__link--sublist {
+    color: color('primary');
+  }
+
+  /* === Caret === */
+
+  .menu__list-item:not(.menu__list-item--collapsed)
+    > .menu__list-item-collapsible
+    .menu__caret::before {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(60%) saturate(2000%)
+      hue-rotate(205deg) brightness(80%) contrast(110%);
+  }
+
+  /* === Mobile adjustments === */
+
+  @include respond-to('tablet') {
+    padding-top: space('2');
+
+    > .sidebar-section {
+      padding-top: space('2');
+      margin-top: space('2');
+    }
+
+    > .sidebar-section + .theme-doc-sidebar-item-link-level-1 {
+      padding-top: space('2');
+      margin-top: space('2');
+    }
+  }
+}

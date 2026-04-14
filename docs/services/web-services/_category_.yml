@@ -1,4 +1,5 @@
 label: Layanan Web
+className: sidebar-subsection
 link:
   type: generated-index
   title: Layanan Web
