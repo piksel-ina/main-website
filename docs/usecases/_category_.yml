@@ -1,5 +1,6 @@
 position: 4
 label: Use Cases
+className: sidebar-section
 collapsible: true
 collapsed: true
 link:
