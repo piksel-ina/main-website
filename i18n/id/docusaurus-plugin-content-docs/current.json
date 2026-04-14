@@ -14,5 +14,165 @@
   "sidebar.docsSidebar.category.Services": {
     "message": "Services",
     "description": "The label for category 'Services' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Services.link.generated-index.title": {
+    "message": "Services",
+    "description": "The generated-index page title for category 'Services' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Services.link.generated-index.description": {
+    "message": "Discover the variety of services offered by Piksel platform.",
+    "description": "The generated-index page description for category 'Services' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Komputasi Awan": {
+    "message": "Komputasi Awan",
+    "description": "The label for category 'Komputasi Awan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.title": {
+    "message": "Komputasi Awan",
+    "description": "The generated-index page title for category 'Komputasi Awan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.description": {
+    "message": "Cloud computing resources for large-scale geospatial processing.",
+    "description": "The generated-index page description for category 'Komputasi Awan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Jelajah Data": {
+    "message": "Jelajah Data",
+    "description": "The label for category 'Jelajah Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.title": {
+    "message": "Jelajah Data",
+    "description": "The generated-index page title for category 'Jelajah Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.description": {
+    "message": "Explore and discover satellite imagery and geospatial datasets.",
+    "description": "The generated-index page description for category 'Jelajah Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Peta Interaktif": {
+    "message": "Peta Interaktif",
+    "description": "The label for category 'Peta Interaktif' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Peta Interaktif.link.generated-index.title": {
+    "message": "Peta Interaktif",
+    "description": "The generated-index page title for category 'Peta Interaktif' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Peta Interaktif.link.generated-index.description": {
+    "message": "Interactive web mapping interface for visualizing geospatial data.",
+    "description": "The generated-index page description for category 'Peta Interaktif' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Sandbox Analisis": {
+    "message": "Sandbox Analisis",
+    "description": "The label for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.title": {
+    "message": "Sandbox Analisis",
+    "description": "The generated-index page title for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.description": {
+    "message": "JupyterHub environment for running custom geospatial analysis.",
+    "description": "The generated-index page description for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Dukungan Teknis": {
+    "message": "Dukungan Teknis",
+    "description": "The label for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.title": {
+    "message": "Dukungan Teknis",
+    "description": "The generated-index page title for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.description": {
+    "message": "Technical support and assistance for Piksel platform users.",
+    "description": "The generated-index page description for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Layanan Web": {
+    "message": "Layanan Web",
+    "description": "The label for category 'Layanan Web' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Layanan Web.link.generated-index.title": {
+    "message": "Layanan Web",
+    "description": "The generated-index page title for category 'Layanan Web' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Layanan Web.link.generated-index.description": {
+    "message": "RESTful API and web services for programmatic access to satellite imagery.",
+    "description": "The generated-index page description for category 'Layanan Web' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Use Cases.link.generated-index.title": {
+    "message": "Use Cases",
+    "description": "The generated-index page title for category 'Use Cases' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Use Cases.link.generated-index.description": {
+    "message": "Explore how Piksel is being used to solve real-world problems.",
+    "description": "The generated-index page description for category 'Use Cases' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pertanian": {
+    "message": "Pertanian",
+    "description": "The label for category 'Pertanian' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pertanian.link.generated-index.title": {
+    "message": "Pertanian",
+    "description": "The generated-index page title for category 'Pertanian' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pertanian.link.generated-index.description": {
+    "message": "Satellite-based monitoring for agricultural applications.",
+    "description": "The generated-index page description for category 'Pertanian' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pesisir": {
+    "message": "Pesisir",
+    "description": "The label for category 'Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pesisir.link.generated-index.title": {
+    "message": "Pesisir",
+    "description": "The generated-index page title for category 'Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pesisir.link.generated-index.description": {
+    "message": "Coastal zone monitoring and management.",
+    "description": "The generated-index page description for category 'Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Bencana": {
+    "message": "Bencana",
+    "description": "The label for category 'Bencana' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Bencana.link.generated-index.title": {
+    "message": "Bencana",
+    "description": "The generated-index page title for category 'Bencana' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Bencana.link.generated-index.description": {
+    "message": "Disaster response and rapid mapping for affected areas.",
+    "description": "The generated-index page description for category 'Bencana' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Kehutanan": {
+    "message": "Kehutanan",
+    "description": "The label for category 'Kehutanan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Kehutanan.link.generated-index.title": {
+    "message": "Kehutanan",
+    "description": "The generated-index page title for category 'Kehutanan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Kehutanan.link.generated-index.description": {
+    "message": "Forest monitoring and deforestation detection.",
+    "description": "The generated-index page description for category 'Kehutanan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Tambang": {
+    "message": "Tambang",
+    "description": "The label for category 'Tambang' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Tambang.link.generated-index.title": {
+    "message": "Tambang",
+    "description": "The generated-index page title for category 'Tambang' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Tambang.link.generated-index.description": {
+    "message": "Mining activity monitoring and environmental impact assessment.",
+    "description": "The generated-index page description for category 'Tambang' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Perkotaan": {
+    "message": "Perkotaan",
+    "description": "The label for category 'Perkotaan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Perkotaan.link.generated-index.title": {
+    "message": "Perkotaan",
+    "description": "The generated-index page title for category 'Perkotaan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Perkotaan.link.generated-index.description": {
+    "message": "Urban planning and development analysis using satellite imagery.",
+    "description": "The generated-index page description for category 'Perkotaan' in sidebar 'docsSidebar'"
   }
 }

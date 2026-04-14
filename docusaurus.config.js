@@ -1,44 +1,44 @@
-import { themes as prismThemes } from "prism-react-renderer";
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Piksel",
+  title: 'Piksel',
   tagline:
-    "Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesian region",
-  favicon: "img/ico-big.ico",
-  url: "https://staging.pik-sel.id",
-  baseUrl: "/",
-  organizationName: "piksel-ina",
-  projectName: "piksel-documentation",
+    'Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesian region',
+  favicon: 'img/ico-big.ico',
+  url: 'https://staging.pik-sel.id',
+  baseUrl: '/',
+  organizationName: 'piksel-ina',
+  projectName: 'piksel-documentation',
   trailingSlash: false,
 
-  onBrokenLinks: "warn",
+  onBrokenLinks: 'warn',
 
   i18n: {
-    defaultLocale: "id",
-    locales: ["id", "en"],
+    defaultLocale: 'id',
+    locales: ['id', 'en'],
     localeConfigs: {
       id: {
-        label: "Id",
-        direction: "ltr",
-        htmlLang: "id-ID",
+        label: 'Id',
+        direction: 'ltr',
+        htmlLang: 'id-ID',
       },
       en: {
-        label: "En",
-        direction: "ltr",
-        htmlLang: "en-US",
+        label: 'En',
+        direction: 'ltr',
+        htmlLang: 'en-US',
       },
     },
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: "./sidebars.js",
-          editUrl: "https://github.com/piksel-ina/piksel-documentation",
+          sidebarPath: './sidebars.js',
+          editUrl: 'https://github.com/piksel-ina/piksel-documentation',
         },
 
         blog: {
@@ -47,7 +47,7 @@ const config = {
         },
 
         theme: {
-          customCss: "./src/css/custom.scss",
+          customCss: './src/css/custom.scss',
         },
       }),
     ],
@@ -55,25 +55,25 @@ const config = {
 
   stylesheets: [
     {
-      href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=JetBrains+Mono:wght@400&display=swap",
-      type: "text/css",
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&family=JetBrains+Mono:wght@400&display=swap',
+      type: 'text/css',
     },
   ],
 
   headTags: [
     {
-      tagName: "link",
+      tagName: 'link',
       attributes: {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
       },
     },
     {
-      tagName: "link",
+      tagName: 'link',
       attributes: {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossorigin: "anonymous",
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
       },
     },
   ],
@@ -83,7 +83,8 @@ const config = {
       return {
         name: 'featured-blog-data',
         async allContentLoaded({ allContent, actions }) {
-          const blogContent = allContent['docusaurus-plugin-content-blog']?.default;
+          const blogContent =
+            allContent['docusaurus-plugin-content-blog']?.default;
           if (!blogContent?.blogPosts) {
             actions.setGlobalData({ featuredPosts: [] });
             return;
@@ -91,7 +92,9 @@ const config = {
 
           const featuredPosts = blogContent.blogPosts
             .filter((post) => post.metadata.frontMatter.featured === true)
-            .sort((a, b) => new Date(b.metadata.date) - new Date(a.metadata.date))
+            .sort(
+              (a, b) => new Date(b.metadata.date) - new Date(a.metadata.date),
+            )
             .slice(0, 6)
             .map((post) => ({
               title: post.metadata.title,
@@ -158,127 +161,124 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      image: "img/logos/logo-big-360px.png",
+      docs: {
+        sidebar: {
+          hideable: false,
+          autoCollapseCategories: true,
+        },
+      },
+      image: 'img/logos/logo-big-360px.png',
       navbar: {
-        title: "",
+        title: '',
         logo: {
-          alt: "Logo Badan Informasi Geospasial",
-          src: "img/logos/logo-big-360px.png",
+          alt: 'Logo Badan Informasi Geospasial',
+          src: 'img/logos/logo-big-360px.png',
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "docsSidebar",
-            position: "right",
-            label: "Dokumentasi",
+            type: 'docSidebar',
+            sidebarId: 'docsSidebar',
+            position: 'right',
+            label: 'Dokumentasi',
           },
-          { href: "/#use-cases", label: "Pemanfaatan", position: "right" },
-          { href: "/#services", label: "Layanan", position: "right" },
-          { href: "/#news", label: "Berita", position: "right" },
-          { href: "/#faq", label: "FAQ", position: "right" },
+          { href: '/#use-cases', label: 'Pemanfaatan', position: 'right' },
+          { href: '/#services', label: 'Layanan', position: 'right' },
+          { href: '/#news', label: 'Berita', position: 'right' },
+          { href: '/#faq', label: 'FAQ', position: 'right' },
           {
-            type: "localeDropdown",
-            position: "right",
+            type: 'localeDropdown',
+            position: 'right',
           },
         ],
       },
       footer: {
-        style: "light",
+        style: 'light',
         links: [
           {
-            title: "Layanan",
+            title: 'Layanan',
             items: [
               {
-                label: "Jelajah Data",
-                to: "/docs/services/explorer",
+                label: 'Jelajah Data',
+                to: '/docs/services/explorer/',
               },
               {
-                label: "Sandbox Analisis",
-                to: "/docs/services/sandbox",
+                label: 'Sandbox Analisis',
+                to: '/docs/services/sandbox/',
               },
               {
-                label: "Peta Interaktif",
-                to: "/docs/services/maps",
+                label: 'Peta Interaktif',
+                to: '/docs/services/maps/',
               },
               {
-                label: "Layanan Web",
-                to: "/docs/services/web-services",
+                label: 'Layanan Web',
+                to: '/docs/services/web-services/',
               },
               {
-                label: "Komputasi Awan",
-                to: "/docs/services/cloud-computing",
+                label: 'Komputasi Awan',
+                to: '/docs/services/cloud-computing/',
               },
               {
-                label: "Dukungan Teknis",
-                to: "/docs/services/support",
+                label: 'Dukungan Teknis',
+                to: '/docs/services/support/',
               },
             ],
           },
           {
-            title: "Contoh Pemanfaatan",
+            title: 'Contoh Pemanfaatan',
             items: [
               {
-                label: "Pertanian",
-                to: "/docs/usecase/agriculture",
+                label: 'Pertanian',
+                to: '/docs/usecases/agriculture/',
               },
               {
-                label: "Perkotaan",
-                to: "/docs/usecase/urban",
+                label: 'Perkotaan',
+                to: '/docs/usecases/urban/',
               },
               {
-                label: "Kehutanan",
-                to: "/docs/usecase/forestry",
+                label: 'Kehutanan',
+                to: '/docs/usecases/forestry/',
               },
               {
-                label: "Pesisir",
-                to: "/docs/usecase/coastal",
+                label: 'Pesisir',
+                to: '/docs/usecases/coastal/',
               },
               {
-                label: "Bencana",
-                to: "/docs/usecase/disaster",
+                label: 'Bencana',
+                to: '/docs/usecases/disaster/',
               },
               {
-                label: "Tambang",
-                to: "/docs/usecase/mining",
+                label: 'Tambang',
+                to: '/docs/usecases/mining/',
               },
             ],
           },
           {
-            title: "Referensi Lainnya",
+            title: 'Referensi Lainnya',
             items: [
               {
-                label: "Documentation",
-                to: "/docs/about/intro",
+                label: 'Documentation',
+                to: '/docs/overview',
               },
               {
-                label: "API Reference",
-                to: "/docs/api",
-              },
-              {
-                label: "Tutorials",
-                to: "/docs/tutorials",
-              },
-
-              {
-                label: "Github",
-                href: "https://github.com/piksel-ina",
+                label: 'Github',
+                href: 'https://github.com/piksel-ina',
               },
             ],
           },
           {
-            title: "Kontak Kami",
+            title: 'Kontak Kami',
             items: [
               {
-                label: "Email: piksel@big.go.id",
-                href: "mailto:piksel@big.go.id",
+                label: 'Email: piksel@big.go.id',
+                href: 'mailto:piksel@big.go.id',
               },
               {
-                label: "Phone: 021-8752062",
-                href: "tel:+62218752062",
+                label: 'Phone: 021-8752062',
+                href: 'tel:+62218752062',
               },
               {
-                label: "BIG Indonesia",
-                href: "https://www.big.go.id",
+                label: 'BIG Indonesia',
+                href: 'https://www.big.go.id',
               },
             ],
           },

@@ -180,7 +180,7 @@ export default function UseCases() {
         <Button
           variant="outlined"
           label={useCasesHeaderData?.viewAllText}
-          to="/docs/usecase/main"
+          to="/docs/category/use-cases"
         />
       </div>
     </section>

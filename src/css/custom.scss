@@ -167,13 +167,24 @@ h6 {
    ======================================================================== */
 
 .navbar {
-  height: auto;
+  height: $navbar-height;
   padding: 0;
 
+  @include respond-to('tablet') {
+    height: auto;
+  }
+
   &__inner {
+    display: flex;
+    align-items: center;
     max-width: $container-max-width;
-    padding: space('4');
+    height: 100%;
+    padding: 0 space('4');
     margin: 0 auto;
+
+    @include respond-to('tablet') {
+      padding: space('4');
+    }
   }
 
   &__brand {
@@ -256,11 +267,11 @@ h6 {
   }
 
   &__items--show-secondary {
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
-.menu__list {
+.navbar-sidebar .menu__list {
   padding: space('2');
 
   &-item {

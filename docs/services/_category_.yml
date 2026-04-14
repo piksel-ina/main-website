@@ -1,0 +1,8 @@
+position: 3
+label: Services
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  title: Services
+  description: Discover the variety of services offered by Piksel platform.
