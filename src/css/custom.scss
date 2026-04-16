@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use 'sass:string';
 @use 'abstracts' as *;
 
@@ -381,8 +382,8 @@ h6 {
     width: auto;
 
     @include respond-to('tablet') {
-      flex: 0 0 calc(50% - #{space('5') / 2});
-      width: calc(50% - #{space('5') / 2});
+      flex: 0 0 calc(50% - #{math.div(space('5'), 2)});
+      width: calc(50% - #{math.div(space('5'), 2)});
     }
 
     &:not(:first-child) {
