@@ -170,37 +170,28 @@ h6 {
   height: $navbar-height;
   padding: 0;
 
-  @include respond-to('tablet') {
-    height: auto;
-  }
 
   &__inner {
     display: flex;
     align-items: center;
     max-width: $container-max-width;
     height: 100%;
-    padding: 0 space('4');
     margin: 0 auto;
 
     @include respond-to('tablet') {
-      padding: space('4');
     }
   }
 
   &__brand {
-    padding-left: space('8');
+    padding-left: space('9');
 
     @include respond-to('tablet') {
-      padding-left: space('2');
+      padding-left: space('6');
     }
   }
 
   &__logo {
     height: 5rem;
-
-    @include respond-to('tablet') {
-      width: 4rem;
-    }
 
     img {
       width: 5rem;
@@ -218,9 +209,14 @@ h6 {
     font-size: 1.5rem;
     font-weight: 400;
     color: color('black-2');
+    border-bottom: solid 1px transparent;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
 
     &:hover {
-      color: color('primary');
+      color: color('accent');
+      border-bottom-color: color('accent');
 
       &::after {
         transform: scaleX(1);
@@ -230,11 +226,11 @@ h6 {
 
   &__items--right {
     align-items: flex-end;
-    padding-right: space('8');
+    padding-right: space('9');
 
     @include respond-to('tablet') {
       align-items: center;
-      padding-right: 0;
+      padding-right: space('4');
     }
   }
 
