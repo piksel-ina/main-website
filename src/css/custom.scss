@@ -144,6 +144,14 @@ h6 {
 
 .container {
   max-width: $container-max-width;
+
+  &.padding-top--md {
+    padding-top: 0;
+  }
+
+  &.padding-bottom--lg {
+    padding-bottom: 0;
+  }
 }
 
 .sectionContainer {
@@ -170,16 +178,12 @@ h6 {
   height: $navbar-height;
   padding: 0;
 
-
   &__inner {
     display: flex;
     align-items: center;
     max-width: $container-max-width;
     height: 100%;
     margin: 0 auto;
-
-    @include respond-to('tablet') {
-    }
   }
 
   &__brand {
@@ -490,6 +494,11 @@ h6 {
    10. COMPONENT OVERRIDES — DOC SIDEBAR
    ======================================================================== */
 
+.theme-doc-sidebar-container {
+  background-color: var(--ifm-background-color);
+  border-right: 1px solid color('grey-light-2');
+}
+
 .theme-doc-sidebar-menu {
   --ifm-menu-color: #{color('black-3')};
   --ifm-menu-color-active: #{color('primary')};
@@ -522,9 +531,9 @@ h6 {
     border-left: 3px solid transparent;
     border-radius: 0;
     transition:
-      color 0.15s ease,
-      background-color 0.15s ease,
-      border-color 0.15s ease;
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
   }
 
   /* === L1 standalone links (Overview, Getting Started, Appendix) === */
@@ -543,9 +552,9 @@ h6 {
     font-family: font-family('heading');
     font-size: text-size('sm');
     font-weight: 600;
-    color: color('black-2');
+    color: color('black-1');
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
   }
 
   /* === L2 categories (service / use-case names) === */
@@ -557,12 +566,19 @@ h6 {
     color: color('black-2');
   }
 
+  /* === L3 links (leaf pages) === */
+
+  .theme-doc-sidebar-item-link-level-3 > .menu__link {
+    font-size: text-size('sm');
+    color: color('black-3');
+  }
+
   /* === Hover state (pointer devices only) === */
 
   @media (hover: hover) {
     .menu__list-item .menu__link:hover {
       color: color('primary');
-      background-color: color('ice-light');
+      background-color: color('white-1');
       border-left-color: color('grey-light-1');
     }
   }
@@ -592,11 +608,15 @@ h6 {
 
   /* === Caret === */
 
+  .menu__caret::before {
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+  }
+
   .menu__list-item:not(.menu__list-item--collapsed)
     > .menu__list-item-collapsible
     .menu__caret::before {
-    filter: brightness(0) saturate(100%) invert(14%) sepia(60%) saturate(2000%)
-      hue-rotate(205deg) brightness(80%) contrast(110%);
+    opacity: 0.7;
   }
 
   /* === Mobile adjustments === */
@@ -612,6 +632,483 @@ h6 {
     > .sidebar-section + .theme-doc-sidebar-item-link-level-1 {
       padding-top: space('2');
       margin-top: space('2');
+    }
+  }
+}
+
+/* ========================================================================
+   11. DOC PAGE LAYOUT
+   ======================================================================== */
+
+[class*='docMainContainer'] {
+  background-color: color('white');
+}
+
+[class*='docItemContainer'] {
+  max-width: 80rem;
+  padding: space('7') space('8') space('9');
+
+  @include respond-to('laptop') {
+    padding: space('6') space('6') space('8');
+  }
+
+  @include respond-to('tablet') {
+    padding: space('5') space('4') space('7');
+  }
+
+  @include respond-to('phone') {
+    padding: space('4') space('3') space('6');
+  }
+}
+
+.row > .col {
+  &:not(.theme-doc-sidebar-container) {
+    min-width: 0;
+  }
+}
+
+/* ========================================================================
+   12. MARKDOWN CONTENT
+   ======================================================================== */
+
+.theme-doc-markdown {
+  font-size: text-size('base');
+  line-height: 1.75;
+  color: color('black-3');
+
+  /* === Headings === */
+
+  h1 {
+    margin-bottom: space('4');
+    font-family: font-family('heading');
+    font-size: text-size('3xl');
+    font-weight: 300;
+    color: color('black-1');
+    letter-spacing: -1px;
+
+    @include respond-to('phone-wide') {
+      font-size: text-size('2xl');
+    }
+  }
+
+  h2 {
+    margin-top: space('8');
+    margin-bottom: space('3');
+    font-family: font-family('heading');
+    font-size: text-size('2xl');
+    font-weight: 400;
+    color: color('black-1');
+    letter-spacing: -0.5px;
+
+    @include respond-to('phone-wide') {
+      font-size: text-size('xl');
+    }
+  }
+
+  h3 {
+    margin-top: space('6');
+    margin-bottom: space('2');
+    font-family: font-family('heading');
+    font-size: text-size('md');
+    font-weight: 500;
+    color: color('black-2');
+    letter-spacing: -0.3px;
+  }
+
+  h4 {
+    margin-top: space('5');
+    margin-bottom: space('2');
+    font-family: font-family('heading');
+    font-size: text-size('base');
+    font-weight: 600;
+    color: color('black-2');
+  }
+
+  h5,
+  h6 {
+    margin-top: space('4');
+    margin-bottom: space('1');
+    font-family: font-family('base');
+    font-weight: 600;
+    color: color('black-3');
+  }
+
+  /* === Paragraphs === */
+
+  p {
+    margin-bottom: space('4');
+  }
+
+  /* === Links === */
+
+  a {
+    color: color('primary-lighter');
+    text-decoration: none;
+    background: linear-gradient(
+        color('primary-lighter'),
+        color('primary-lighter')
+      )
+      no-repeat left bottom / 100% 1px;
+    transition:
+      background-size 0.3s ease,
+      color 0.2s ease;
+
+    &:hover {
+      color: color('primary');
+      background-size: 100% 2px;
+    }
+  }
+
+  /* === Strong / Em === */
+
+  strong {
+    font-weight: 600;
+    color: color('black-1');
+  }
+
+  em {
+    font-style: italic;
+    color: color('black-2');
+  }
+
+  /* === Lists === */
+
+  ul,
+  ol {
+    padding-left: space('4');
+    margin-bottom: space('4');
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      position: relative;
+      padding-left: space('2');
+
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-top: 1em;
+        content: '';
+        background-color: color('grey');
+        border-radius: 50%;
+      }
+    }
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: doc-ol;
+
+    > li {
+      position: relative;
+      padding-left: space('3');
+      counter-increment: doc-ol;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        font-size: text-size('sm');
+        font-weight: 500;
+        color: color('grey-dark-2');
+        content: counter(doc-ol) '.';
+      }
+    }
+  }
+
+  li {
+    margin-bottom: space('1');
+
+    > ul,
+    > ol {
+      margin-top: space('1');
+      margin-bottom: space('1');
+    }
+  }
+
+  /* === Inline code === */
+
+  code {
+    padding: 0.15em 0.4em;
+    font-family: font-family('mono');
+    font-size: 0.85em;
+    color: color('primary-dark');
+    background-color: color('white-4');
+    border-radius: 0.4em;
+  }
+
+  /* === Code blocks === */
+
+  pre {
+    padding: space('4') space('5');
+    margin-bottom: space('5');
+    overflow-x: auto;
+    background-color: color('black-1');
+    border-radius: 0.8rem;
+
+    code {
+      padding: 0;
+      font-size: text-size('sm');
+      color: color('grey-light-2');
+      background: none;
+      border-radius: 0;
+    }
+  }
+
+  /* === Blockquotes === */
+
+  blockquote {
+    padding: space('3') space('4');
+    margin-bottom: space('4');
+    color: color('black-3');
+    background-color: color('white-2');
+    border-left: 3px solid color('grey-light-1');
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* === Tables === */
+
+  table {
+    width: 100%;
+    margin-bottom: space('5');
+    font-size: text-size('sm');
+    border-collapse: collapse;
+  }
+
+  thead {
+    th {
+      padding: space('2') space('3');
+      font-weight: 500;
+      color: color('black-2');
+      text-align: left;
+      background-color: color('white-3');
+      border-bottom: 1px solid color('grey-light-1');
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid color('grey-light-2');
+      transition: background-color 0.15s ease;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: color('white-2');
+      }
+    }
+
+    td {
+      padding: space('2') space('3');
+      color: color('black-3');
+    }
+  }
+
+  /* === Horizontal rules === */
+
+  hr {
+    margin: space('6') 0;
+    border: none;
+    border-top: 1px solid color('grey-light-2');
+  }
+
+  /* === Images === */
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 6%);
+  }
+
+  /* === Details / Summary (collapsible) === */
+
+  details {
+    padding: space('3') space('4');
+    margin-bottom: space('4');
+    background-color: color('white-2');
+    border: 1px solid color('grey-light-2');
+    border-radius: 0.5rem;
+
+    &[open] > summary {
+      padding-bottom: space('2');
+      margin-bottom: space('2');
+      border-bottom: 1px solid color('grey-light-2');
+    }
+  }
+
+  summary {
+    font-weight: 500;
+    color: color('black-2');
+    cursor: pointer;
+  }
+}
+
+/* ========================================================================
+   13. TABLE OF CONTENTS
+   ======================================================================== */
+
+.table-of-contents {
+  padding-left: 0;
+  font-size: text-size('sm');
+  border-left: 1px solid color('grey-light-2');
+}
+
+.table-of-contents__link {
+  display: block;
+  padding: space('1') 0 space('1') space('3');
+  margin-left: -1px;
+  color: color('grey-dark-1');
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    color: color('primary');
+  }
+
+  &--active {
+    font-weight: 500;
+    color: color('primary');
+    border-left-color: color('primary');
+  }
+}
+
+.table-of-contents li {
+  margin: 0;
+
+  & + li {
+    margin-top: 0.2rem;
+  }
+}
+
+.theme-doc-toc-mobile {
+  @include respond-to('laptop') {
+    display: none;
+  }
+}
+
+/* ========================================================================
+   14. BREADCRUMBS
+   ======================================================================== */
+
+.theme-doc-breadcrumbs {
+  margin-bottom: space('4');
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  &__link {
+    font-size: text-size('sm');
+    color: color('black-4');
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: color('primary');
+    }
+  }
+
+  &__item--active .breadcrumbs__link {
+    font-weight: 500;
+    color: color('black-3');
+    pointer-events: none;
+  }
+
+  &__link > span {
+    font-size: text-size('sm');
+  }
+
+  li + li::before {
+    color: color('grey-dark-1');
+    content: '/';
+  }
+}
+
+/* ========================================================================
+   15. PREV / NEXT PAGINATION
+   ======================================================================== */
+
+.pagination-nav {
+  padding-top: space('5');
+  margin-top: space('8');
+  border-top: 1px solid color('grey-light-2');
+
+  @include respond-to('tablet') {
+    padding-top: space('4');
+    margin-top: space('6');
+  }
+}
+
+.pagination-nav__link {
+  display: flex;
+  flex-direction: column;
+  padding: space('4') space('5');
+  text-decoration: none;
+  background-color: color('white');
+  border: 1px solid color('grey-light-2');
+  border-radius: 0.8rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: color('grey');
+    box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+  }
+}
+
+.pagination-nav__sublabel {
+  margin-bottom: space('1');
+  font-size: text-size('sm');
+  color: color('grey-dark-2');
+}
+
+.pagination-nav__label {
+  font-family: font-family('heading');
+  font-size: text-size('base');
+  font-weight: 500;
+  color: color('black-2');
+}
+
+.pagination-nav__link--next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* ========================================================================
+   16. GENERATED INDEX PAGES
+   ======================================================================== */
+
+[class*='generatedIndexPage'] {
+  .card {
+    @include card-base;
+
+    padding: space('4');
+    border: 1px solid color('grey-light-2');
+    border-radius: 0.8rem;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: color('grey');
+      box-shadow: 0 4px 12px rgb(0 0 0 / 6%);
     }
   }
 }

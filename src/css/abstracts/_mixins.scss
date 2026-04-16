@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'tokens';
 @use 'functions' as *;
 
 @mixin respond-to($breakpoint) {
@@ -18,8 +19,8 @@
 
 @mixin card-base {
   background-color: color('white-1');
-  border-radius: $card-border-radius;
-  box-shadow: $card-box-shadow;
+  border-radius: tokens.$card-border-radius;
+  box-shadow: tokens.$card-box-shadow;
 }
 
 @mixin container {
