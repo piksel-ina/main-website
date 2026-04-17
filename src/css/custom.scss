@@ -970,11 +970,21 @@ h6 {
   /* === Details / Summary (collapsible) === */
 
   details {
+    --ifm-alert-background-color: #{color('white')};
+    --ifm-alert-border-color: #{color('grey-light-2')};
+    --ifm-alert-foreground-color: #{color('black-1')};
+    --ifm-alert-border-left-width: 1px;
+    --ifm-alert-shadow: none;
+    --docusaurus-details-decoration-color: #{color('black-3')};
+
     padding: space('3') space('4');
     margin-bottom: space('4');
+    color: color('black-3');
     background-color: color('white');
     border: 1px solid color('grey-light-2');
+    border-left-width: 1px;
     border-radius: 0.8rem;
+    box-shadow: none;
     transition:
       border-color 0.2s ease,
       box-shadow 0.2s ease;
@@ -993,27 +1003,37 @@ h6 {
         border-bottom: 1px solid color('grey-light-2');
       }
     }
+
+    [class*='collapsibleContent'] {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: none;
+    }
   }
 
-  summary {
+  details[class] > summary {
     display: flex;
     gap: space('2');
     align-items: center;
     padding: space('1') 0;
+    padding-left: 0;
     font-weight: 500;
     color: color('black-1');
     cursor: pointer;
     list-style: none;
 
     &::before {
+      position: static;
+      top: auto;
+      left: auto;
       flex-shrink: 0;
       width: 0;
       height: 0;
-      margin-top: 0.5em;
       content: '';
       border-color: transparent transparent transparent color('black-3');
       border-style: solid;
       border-width: 0.35rem 0 0.35rem 0.6rem;
+      transform: rotate(0deg);
       transition:
         transform 0.2s ease,
         border-color 0.2s ease;
