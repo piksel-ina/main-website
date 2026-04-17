@@ -1,12 +1,18 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-export default function DocSteps({ children }) {
+const Step = ({ children }) => <li className={styles.step}>{children}</li>;
+
+const DocSteps = ({ children }) => {
   return (
-    <div className={styles.docSteps}>
-      {React.Children.map(children, (child) => (
-        <div className={styles.docSteps__step}>{child}</div>
-      ))}
-    </div>
+    <ol className={styles.root}>
+      {React.Children.map(children, (child) => {
+        if (child?.type === Step) return child;
+        return <li className={styles.step}>{child}</li>;
+      })}
+    </ol>
   );
-}
+};
+
+export { Step };
+export default DocSteps;
