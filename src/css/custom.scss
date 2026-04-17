@@ -1097,6 +1097,20 @@ h6 {
    ======================================================================== */
 
 [class*='generatedIndexPage'] {
+  padding: space('7') space('8') space('9');
+
+  @include respond-to('laptop') {
+    padding: space('6') space('6') space('8');
+  }
+
+  @include respond-to('tablet') {
+    padding: space('5') space('4') space('7');
+  }
+
+  @include respond-to('phone') {
+    padding: space('4') space('3') space('6');
+  }
+
   .card {
     @include card-base;
 
