@@ -90,6 +90,14 @@
   --ifm-navbar-shadow: none;
   --ifm-footer-background-color: var(--ifm-background-color);
   --ifm-footer-color: var(--ifm-font-color-base);
+
+  @include respond-to('phone-wide') {
+    --ifm-navbar-height: 8rem;
+  }
+
+  @include respond-to('phone') {
+    --ifm-navbar-height: 7rem;
+  }
 }
 
 /* ========================================================================
@@ -179,6 +187,14 @@ h6 {
   height: $navbar-height;
   padding: 0;
 
+  @include respond-to('phone-wide') {
+    height: 8rem;
+  }
+
+  @include respond-to('phone') {
+    height: 7rem;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -193,6 +209,10 @@ h6 {
     @include respond-to('tablet') {
       padding-left: space('6');
     }
+
+    @include respond-to('phone-wide') {
+      padding-left: space('4');
+    }
   }
 
   &__logo {
@@ -201,6 +221,22 @@ h6 {
     img {
       width: 5rem;
       height: auto;
+    }
+
+    @include respond-to('phone-wide') {
+      height: 4rem;
+
+      img {
+        width: 4rem;
+      }
+    }
+
+    @include respond-to('phone') {
+      height: 3.5rem;
+
+      img {
+        width: 3.5rem;
+      }
     }
   }
 
@@ -1014,6 +1050,20 @@ h6 {
   padding: 0;
   margin: 0;
 
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:first-child &__link svg {
+    position: static;
+    top: 1rem;
+    width: 1.7rem;
+    height: 1.5rem;
+    padding-bottom: 0.1rem;
+    vertical-align: middle;
+  }
+
   &__link {
     font-size: text-size('sm');
     color: color('black-4');
@@ -1026,6 +1076,7 @@ h6 {
   }
 
   &__item--active .breadcrumbs__link {
+    padding: 0 space('1');
     font-weight: 500;
     color: color('black-3');
     pointer-events: none;
@@ -1033,11 +1084,6 @@ h6 {
 
   &__link > span {
     font-size: text-size('sm');
-  }
-
-  li + li::before {
-    color: color('grey-dark-1');
-    content: '/';
   }
 }
 
