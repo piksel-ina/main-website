@@ -301,6 +301,30 @@
   "useCases.useCase06.f3": {
     "message": "Pemantauan rehabilitasi lahan"
   },
+  "homepage.faq.tag": {
+    "message": "FAQ"
+  },
+  "ui.button.defaultLabel": {
+    "message": "Pelajari Lebih Lanjut"
+  },
+  "ui.modernCard.learnMore": {
+    "message": "Pelajari Lebih Lanjut"
+  },
+  "ui.cleanCard.startExploring": {
+    "message": "Mulai Menjelajah"
+  },
+  "ui.cleanCard.learnMore": {
+    "message": "Pelajari Lebih Lanjut"
+  },
+  "ui.carousel.prev": {
+    "message": "Item sebelumnya"
+  },
+  "ui.carousel.next": {
+    "message": "Item berikutnya"
+  },
+  "ui.carousel.goToSlide": {
+    "message": "Ke slide {slideNumber}"
+  },
   "homepage.meta.title": {
     "message": "Piksel",
     "description": "Site title for the homepage"
@@ -533,7 +557,7 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(membuka di tab baru)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NotFound.p1": {

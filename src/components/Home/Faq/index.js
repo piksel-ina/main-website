@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { translate } from '@docusaurus/Translate';
 import { faqData } from '@site/src/data/faqData';
 import styles from './styles.module.scss';
 import FAQItem from '../../UI/Molecules/FAQItem';
@@ -17,7 +18,9 @@ const Faq = () => {
         <div className={styles.faq__headerColumn}>
           <div className={styles.faq__accentLine}>
             <div className={styles.faq__accentLineBar} />
-            <span className={styles.faq__accentText}>FAQ</span>
+            <span className={styles.faq__accentText}>
+              {translate({ id: 'homepage.faq.tag', message: 'FAQ' })}
+            </span>
           </div>
           <h2
             className={styles.faq__headerTitle}

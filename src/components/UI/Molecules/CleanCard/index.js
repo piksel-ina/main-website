@@ -1,3 +1,4 @@
+import { translate } from '@docusaurus/Translate';
 import { ArrowRight } from 'lucide-react';
 import styles from './styles.module.scss';
 import Button from '../../Atoms/Button';
@@ -6,8 +7,14 @@ const CleanCard = ({
   icon: Icon,
   title,
   description,
-  buttonText = 'Mulai Menjelajah',
-  buttonTextSecondary = 'Pelajari Lebih Lanjut',
+  buttonText = translate({
+    id: 'ui.cleanCard.startExploring',
+    message: 'Mulai Menjelajah',
+  }),
+  buttonTextSecondary = translate({
+    id: 'ui.cleanCard.learnMore',
+    message: 'Pelajari Lebih Lanjut',
+  }),
   link,
 }) => {
   return (

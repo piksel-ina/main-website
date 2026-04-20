@@ -1,3 +1,4 @@
+import { translate } from '@docusaurus/Translate';
 import styles from './styles.module.scss';
 import Button from '../../Atoms/Button';
 
@@ -29,7 +30,10 @@ function ModernCard({ image, title, description, link }) {
             variant="link"
             className={styles.modernCard__button}
           >
-            Learn more
+            {translate({
+              id: 'ui.modernCard.learnMore',
+              message: 'Learn more',
+            })}
             <span className={styles.modernCard__arrow}>→</span>
           </Button>
         </div>

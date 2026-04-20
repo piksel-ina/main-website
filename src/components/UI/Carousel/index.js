@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { translate } from '@docusaurus/Translate';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './styles.module.scss';
 
@@ -101,7 +102,10 @@ const Carousel = ({
               onClick={prevSlide}
               disabled={currentIndex === 0}
               className={styles['carousel__navBtn']}
-              aria-label="Previous items"
+              aria-label={translate({
+                id: 'ui.carousel.prev',
+                message: 'Previous items',
+              })}
             >
               <ChevronLeft size={20} />
             </button>
@@ -110,7 +114,10 @@ const Carousel = ({
               onClick={nextSlide}
               disabled={currentIndex >= maxIndex}
               className={styles['carousel__navBtn']}
-              aria-label="Next items"
+              aria-label={translate({
+                id: 'ui.carousel.next',
+                message: 'Next items',
+              })}
             >
               <ChevronRight size={20} />
             </button>
@@ -124,7 +131,10 @@ const Carousel = ({
             onClick={prevSlide}
             disabled={currentIndex === 0}
             className={`${styles['carousel__navBtn']} ${styles['carousel__navBtn--left']}`}
-            aria-label="Previous items"
+            aria-label={translate({
+              id: 'ui.carousel.prev',
+              message: 'Previous items',
+            })}
           >
             <ChevronLeft size={20} />
           </button>

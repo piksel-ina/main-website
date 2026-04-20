@@ -346,39 +346,47 @@
     "message": "One complete platform to access satellite data, analyze, visualize, and make geospatial-based decisions. From data to insight, all in one cloud ecosystem.",
     "description": "The subtitle text on the homepage hero section"
   },
-  "homepage.hero.button": {
-    "message": "Learn More",
-    "description": "The button text to read documentation"
+  "homepage.hero.cta.primary": {
+    "message": "Request Demo",
+    "description": "Primary CTA button text"
   },
-  "homepage.hero.stats.01": {
+  "homepage.hero.cta.secondary": {
+    "message": "Learn About Piksel",
+    "description": "Secondary CTA button text linking to FAQ section"
+  },
+  "homepage.hero.image.alt": {
+    "message": "Piksel Hero Image",
+    "description": "Alt text for the hero image"
+  },
+  "homepage.stats.01": {
     "message": "50TB+",
     "description": "Statistics Number 01"
   },
-  "homepage.hero.stats.01.label": {
+  "homepage.stats.01.label": {
     "message": "Total Data Available",
     "description": "Statistics Label 01"
   },
-  "homepage.hero.stats.02": {
+  "homepage.stats.02": {
     "message": "100%",
     "description": "Statistics Number 02"
   },
-  "homepage.hero.stats.02.label": {
+  "homepage.stats.02.label": {
     "message": "Indonesian Region Coverage",
     "description": "Statistics Label 02"
   },
-  "homepage.hero.stats.03": {
+  "homepage.stats.03": {
     "message": "30+",
     "description": "Statistics Number 03"
   },
-  "homepage.hero.stats.03.label": {
+  "homepage.stats.03.label": {
     "message": "Years of Historical Data",
     "description": "Statistics Label 03"
   },
-  "homepage.hero.stats.04": {
+  "homepage.stats.04": {
     "message": "Free",
     "description": "Statistics Number 04"
   },
-  "homepage.hero.stats.04.label": {
+  "homepage.stats.04.label": {
     "message": "Open Access for Public",
     "description": "Statistics Label 04"
   },
@@ -510,6 +518,46 @@
   "useCases.useCase06.f3": {
     "message": "Land rehabilitation monitoring"
   },
+  "homepage.news.tag": {
+    "message": "News & Articles",
+    "description": "Section tag for news and articles"
+  },
+  "homepage.news.title": {
+    "message": "Latest Information",
+    "description": "Main heading for the news section"
+  },
+  "homepage.news.subtitle": {
+    "message": "Latest news, articles, and updates about the Piksel platform and digital earth observation.",
+    "description": "Subtitle for the news section"
+  },
+  "homepage.news.viewAll": {
+    "message": "View All Articles",
+    "description": "Link text to view all blog posts"
+  },
+  "homepage.faq.tag": {
+    "message": "FAQ"
+  },
+  "ui.button.defaultLabel": {
+    "message": "Learn More"
+  },
+  "ui.modernCard.learnMore": {
+    "message": "Learn more"
+  },
+  "ui.cleanCard.startExploring": {
+    "message": "Start Exploring"
+  },
+  "ui.cleanCard.learnMore": {
+    "message": "Learn More"
+  },
+  "ui.carousel.prev": {
+    "message": "Previous items"
+  },
+  "ui.carousel.next": {
+    "message": "Next items"
+  },
+  "ui.carousel.goToSlide": {
+    "message": "Go to slide {slideNumber}"
+  },
   "ourServices.header.tag": {
     "message": "Our Services",
     "description": "Tag label for the services section"
@@ -610,19 +658,22 @@
   "homepage.faq.a5": {
     "message": "Our platform indexes new data daily. Satellites themselves pass over Indonesian territory every day but at different locations following their orbit paths. For a specific location, Sentinel-2 will return every 5 days and Sentinel-1 every 6-12 days."
   },
-
   "ourServices.support.title": {
     "message": "Technical Support",
     "description": "Service title: Technical Support"
   },
   "ourServices.support.description": {
-    "message": "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar."
+    "message": "Expert technical assistance to ensure smooth system integration and operations."
   },
   "ourServices.support.btn": {
-    "message": "Hubungi Support"
+    "message": "Contact Support"
   },
   "ourServices.viewAll": {
-    "message": "Lihat Semua Layanan",
+    "message": "View All Services",
     "description": "View all services link text"
+  },
+  "homepage.hero.titleHighlight": {
+    "message": "Keputusan yang Cerdas",
+    "description": "The highlighted portion of the hero title"
   }
 }

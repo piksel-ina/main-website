@@ -1,11 +1,12 @@
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
 import useGlobalData from '@docusaurus/useGlobalData';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.scss';
 import { Calendar, User } from 'lucide-react';
 import Button from '@site/src/components/UI/Atoms/Button';
 
-const HighlightedCard = ({ post }) => (
+const HighlightedCard = ({ post, dateLocale }) => (
   <Link to={post.permalink} className={styles.newsArticles__highlightedCard}>
     <img
       src={post.image}
@@ -24,7 +25,7 @@ const HighlightedCard = ({ post }) => (
           )}
           <span className={styles.newsArticles__metaItem}>
             <Calendar size={14} strokeWidth={1.8} />
-            {new Date(post.date).toLocaleDateString('id-ID', {
+            {new Date(post.date).toLocaleDateString(dateLocale, {
               day: 'numeric',
               month: 'long',
               year: 'numeric',
@@ -69,6 +70,8 @@ const ListItem = ({ post }) => (
 );
 
 const NewsArticles = () => {
+  const { i18n } = useDocusaurusContext();
+  const dateLocale = i18n.currentLocale === 'en' ? 'en-US' : 'id-ID';
   const globalData = useGlobalData();
   const pluginData = globalData['featured-blog-data']?.default;
   const featuredPosts = pluginData?.featuredPosts || [];
@@ -112,7 +115,11 @@ const NewsArticles = () => {
       <div className={styles.newsArticles__grid}>
         <div className={styles.newsArticles__highlighted}>
           {highlighted.map((post) => (
-            <HighlightedCard key={post.slug} post={post} />
+            <HighlightedCard
+              key={post.slug}
+              post={post}
+              dateLocale={dateLocale}
+            />
           ))}
         </div>
         <div className={styles.newsArticles__list}>

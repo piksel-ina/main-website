@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import { translate } from '@docusaurus/Translate';
 import { ChevronRight, ArrowRight, MoveRight } from 'lucide-react';
 import styles from './styles.module.scss';
 
@@ -28,7 +29,10 @@ const Button = ({
   className,
   ...props
 }) => {
-  const content = label || children || 'Learn More';
+  const content =
+    label ||
+    children ||
+    translate({ id: 'ui.button.defaultLabel', message: 'Learn More' });
   const Component = to || href ? Link : 'button';
   const ButtonIcon = Icon || defaultIcons[variant] || null;
   const style = color

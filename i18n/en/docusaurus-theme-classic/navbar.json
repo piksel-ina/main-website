@@ -1,8 +1,4 @@
 {
-  "title": {
-    "message": "PIKSEL",
-    "description": "The title in the navbar"
-  },
   "logo.alt": {
     "message": "Piksel Logo",
     "description": "The alt text of navbar logo"
@@ -18,6 +14,10 @@
   "item.label.Layanan": {
     "message": "Services",
     "description": "Navbar item with label Layanan"
+  },
+  "item.label.Berita": {
+    "message": "News",
+    "description": "Navbar item with label Berita"
   },
   "item.label.FAQ": {
     "message": "FAQ",
