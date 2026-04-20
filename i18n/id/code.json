@@ -1,354 +1,4 @@
 {
-  "homepage.faq.title": {
-    "message": "Pertanyaan Umum",
-    "description": "Title for the FAQ section"
-  },
-  "homepage.faq.subtitle": {
-    "message": "Informasi mengenai latar belakang, akses data, dan kolaborasi.",
-    "description": "Subtitle for the FAQ section"
-  },
-  "homepage.faq.q1": {
-    "message": "Apa latar belakang pembentukan PIKSEL?"
-  },
-  "homepage.faq.a1": {
-    "message": "PIKSEL hadir melalui kolaborasi strategis dengan Geoscience Australia, mengadopsi teknologi Open Data Cube yang serupa dengan platform Digital Earth Australia. Inisiatif ini bertujuan membangun kemandirian infrastruktur data geospasial nasional untuk mendukung pengambilan keputusan yang lebih akurat."
-  },
-  "homepage.faq.q2": {
-    "message": "Apakah diperlukan akun pengguna untuk mengakses data?"
-  },
-  "homepage.faq.a2": {
-    "message": "Tidak. Sebagian besar data dan layanan API (WMS/WCS) piksel.id terbuka untuk publik tanpa registrasi. Pendaftaran akun hanya diperlukan jika Anda ingin menggunakan layanan Jupyter Sandbox untuk melakukan pengolahan data dan simulasi secara privat."
-  },
-  "homepage.faq.q3": {
-    "message": "Bagaimana cara berkolaborasi dengan PIKSEL?"
-  },
-  "homepage.faq.a3": {
-    "message": "Kami menyambut baik kolaborasi dengan akademisi, peneliti, dan instansi lain. Anda dapat berkontribusi melalui pengembangan modul analisis di Sandbox, atau menghubungi tim kami secara langsung untuk potensi kerja sama pengembangan produk geospasial yang lebih luas."
-  },
-  "homepage.faq.q4": {
-    "message": "Apa jenis dan format data yang tersedia?"
-  },
-  "homepage.faq.a4": {
-    "message": "Saat ini kami menyediakan data analisis siap pakai (Analysis Ready Data) dari konstelasi satelit Sentinel-1, Sentinel-2, serta arsip historis Landsat. Data disajikan dalam format Cloud Optimized GeoTIFF (COG) untuk mendukung akses yang cepat dan interoperabel."
-  },
-  "homepage.faq.q5": {
-    "message": "Seberapa sering data satelit diperbarui?"
-  },
-  "homepage.faq.a5": {
-    "message": "Platform kami melakukan indeksasi data baru setiap hari. Satelit sendiri melintasi wilayah Indonesia setiap hari namun pada lokasi yang berbeda-beda mengikuti jalur orbitnya. Untuk lokasi spesifik yang sama, Sentinel-2 akan kembali setiap 5 hari dan Sentinel-1 setiap 6-12 hari."
-  },
-  "homepage.hero.tag": {
-    "message": "PIKSEL",
-    "description": "The tag on the homepage hero section"
-  },
-  "homepage.hero.title": {
-    "message": "Dari Data Satelit hingga Keputusan yang Cerdas",
-    "description": "The main title on the homepage hero section"
-  },
-  "homepage.hero.titleHighlight": {
-    "message": "Keputusan yang Cerdas",
-    "description": "The highlighted portion of the hero title"
-  },
-  "homepage.hero.subtitle": {
-    "message": "Satu platform lengkap untuk mengakses data satelit, menganalisis, memvisualisasikan, dan mengambil keputusan berbasis geospasial. Dari data hingga insight, semua dalam satu ekosistem cloud.",
-    "description": "The subtitle text on the homepage hero section"
-  },
-  "homepage.hero.cta.primary": {
-    "message": "Request Demo",
-    "description": "Primary CTA button text"
-  },
-  "homepage.hero.cta.secondary": {
-    "message": "Pahami Piksel",
-    "description": "Secondary CTA button text linking to FAQ section"
-  },
-  "homepage.hero.image.alt": {
-    "message": "Piksel Hero Image",
-    "description": "Alt text for the hero image"
-  },
-  "ourServices.explorer.title": {
-    "message": "Jelajah Data",
-    "description": "Service title: Data Explorer"
-  },
-  "ourServices.explorer.description": {
-    "message": "Jelajahi dan akses data geospasial yang tersedia di platform kami secara bebas."
-  },
-  "ourServices.explorer.btn": {
-    "message": "Mulai Eksplorasi"
-  },
-  "ourServices.sandbox.title": {
-    "message": "Sandbox Analisis",
-    "description": "Service title: Analysis Sandbox"
-  },
-  "ourServices.sandbox.description": {
-    "message": "Pelajari pengolahan data secara programatik. Lingkungan pelatihan untuk pengembangan analisis geospasial."
-  },
-  "ourServices.sandbox.btn": {
-    "message": "Mulai Belajar"
-  },
-  "ourServices.maps.title": {
-    "message": "Peta Interaktif",
-    "description": "Service title: Interactive Maps"
-  },
-  "ourServices.maps.description": {
-    "message": "Interaksi langsung dengan peta digital untuk mendapatkan wawasan visual secara cepat."
-  },
-  "ourServices.maps.btn": {
-    "message": "Buka Peta"
-  },
-  "ourServices.webservices.title": {
-    "message": "Layanan Web",
-    "description": "Service title: Web Services"
-  },
-  "ourServices.webservices.description": {
-    "message": "Integrasikan data satelit langsung ke dalam aplikasi Anda melalui standar layanan web global."
-  },
-  "ourServices.webservices.btn": {
-    "message": "Lihat Dokumentasi"
-  },
-  "ourServices.production.title": {
-    "message": "Komputasi Awan",
-    "description": "Service title: Cloud Computing"
-  },
-  "ourServices.production.description": {
-    "message": "Dukungan infrastruktur komputasi berkinerja tinggi untuk pemrosesan data skala nasional."
-  },
-  "ourServices.production.btn": {
-    "message": "Hubungi Kami"
-  },
-  "ourServices.support.title": {
-    "message": "Dukungan Teknis",
-    "description": "Service title: Technical Support"
-  },
-  "ourServices.support.description": {
-    "message": "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar."
-  },
-  "ourServices.support.btn": {
-    "message": "Hubungi Support"
-  },
-  "ourServices.header.tag": {
-    "message": "Layanan Piksel",
-    "description": "Tag label for the services section"
-  },
-  "ourServices.header.title": {
-    "message": "Ekosistem Piksel",
-    "description": "Main title for the services section"
-  },
-  "ourServices.header.subtitle": {
-    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
-    "description": "Subtitle description for the services section"
-  },
-  "ourServices.viewAll": {
-    "message": "Lihat Semua Layanan",
-    "description": "View all services link text"
-  },
-  "homepage.stats.01": {
-    "message": "50TB+",
-    "description": "Statistics Number 01"
-  },
-  "homepage.stats.01.label": {
-    "message": "Total Data Tersedia",
-    "description": "Statistics Label 01"
-  },
-  "homepage.stats.02": {
-    "message": "100%",
-    "description": "Statistics Number 02"
-  },
-  "homepage.stats.02.label": {
-    "message": "Cakupan Wilayah Indonesia",
-    "description": "Statistics Label 02"
-  },
-  "homepage.stats.03": {
-    "message": "30+",
-    "description": "Statistics Number 03"
-  },
-  "homepage.stats.03.label": {
-    "message": "Tahun Data Historis",
-    "description": "Statistics Label 03"
-  },
-  "homepage.stats.04": {
-    "message": "Gratis",
-    "description": "Statistics Number 04"
-  },
-  "homepage.stats.04.label": {
-    "message": "Akses Terbuka untuk publik",
-    "description": "Statistics Label 04"
-  },
-  "useCases.header.tag": {
-    "message": "Solusi Kami",
-    "description": "Tag label for the use cases section"
-  },
-  "useCases.header.title": {
-    "message": "Contoh Pemanfaatan Piksel",
-    "description": "Main title for the use cases section"
-  },
-  "useCases.header.subtitle": {
-    "message": "Pemanfaatan data penginderaan jauh untuk mendukung pengambilan kebijakan berbasis bukti dan memperkuat ketahanan nasional di berbagai sektor strategis Indonesia.",
-    "description": "Subtitle description for the use cases section"
-  },
-  "useCases.common.learnMore": {
-    "message": "Pelajari Lebih Lanjut",
-    "description": "Button text to learn more about a specific use case"
-  },
-  "useCases.common.viewAll": {
-    "message": "Lihat Semua Pemanfaatan",
-    "description": "Button text to view all use cases"
-  },
-  "useCases.useCase03.tab": {
-    "message": "Pertanian"
-  },
-  "useCases.useCase03.title": {
-    "message": "Kedaulatan Pangan"
-  },
-  "useCases.useCase03.description": {
-    "message": "Mendukung ketahanan pangan nasional melalui pemantauan fase tanam padi dan kesehatan lahan baku sawah. Identifikasi daerah sentra produksi dan prediksi panen menggunakan analisis data satelit multitemporal."
-  },
-  "useCases.useCase03.f1": {
-    "message": "Pemantauan Lahan Baku Sawah"
-  },
-  "useCases.useCase03.f2": {
-    "message": "Analisis fase pertumbuhan padi"
-  },
-  "useCases.useCase03.f3": {
-    "message": "Estimasi indeks pertanaman"
-  },
-  "useCases.useCase02.tab": {
-    "message": "Perkotaan"
-  },
-  "useCases.useCase02.title": {
-    "message": "Perluasan Wilayah Urban"
-  },
-  "useCases.useCase02.description": {
-    "message": "Analisis tren perluasan area terbangun (urban sprawl) untuk mendukung perencanaan wilayah. Pantau konversi lahan di pinggiran kota menggunakan data arsip satelit jangka panjang."
-  },
-  "useCases.useCase02.f1": {
-    "message": "Pemetaan area terbangun"
-  },
-  "useCases.useCase02.f2": {
-    "message": "Monitoring perubahan tata guna lahan"
-  },
-  "useCases.useCase02.f3": {
-    "message": "Analisis tren pertumbuhan kota"
-  },
-  "useCases.useCase01.tab": {
-    "message": "Kehutanan"
-  },
-  "useCases.useCase01.title": {
-    "message": "Pemantauan Deforestasi"
-  },
-  "useCases.useCase01.description": {
-    "message": "Deteksi perubahan tutupan hutan secara berkala menggunakan data optik (Sentinel-2, Landsat) dan radar (Sentinel-1). Identifikasi indikasi pembukaan lahan dan pantau pemulihan vegetasi di seluruh Indonesia."
-  },
-  "useCases.useCase01.f1": {
-    "message": "Pemantauan tutupan lahan berkala"
-  },
-  "useCases.useCase01.f2": {
-    "message": "Deteksi perubahan berbasis time-series"
-  },
-  "useCases.useCase01.f3": {
-    "message": "Analisis historis data Landsat"
-  },
-  "useCases.useCase04.tab": {
-    "message": "Pesisir"
-  },
-  "useCases.useCase04.title": {
-    "message": "Dinamika Pesisir"
-  },
-  "useCases.useCase04.description": {
-    "message": "Pantau perubahan garis pantai akibat abrasi atau akresi menggunakan data time-series Landsat. Identifikasi area genangan pasang surut (intertidal) untuk pengelolaan wilayah pesisir."
-  },
-  "useCases.useCase04.f1": {
-    "message": "Deteksi perubahan garis pantai historis"
-  },
-  "useCases.useCase04.f2": {
-    "message": "Pemetaan area pasang surut"
-  },
-  "useCases.useCase04.f3": {
-    "message": "Klasifikasi penutup lahan pesisir"
-  },
-  "useCases.useCase05.tab": {
-    "message": "Bencana"
-  },
-  "useCases.useCase05.title": {
-    "message": "Pemetaan Area Banjir"
-  },
-  "useCases.useCase05.description": {
-    "message": "Pemanfaatan data radar Sentinel-1 untuk mendeteksi genangan banjir, bahkan saat tertutup awan. Dukung respons cepat dengan penyediaan peta indikatif area terdampak."
-  },
-  "useCases.useCase05.f1": {
-    "message": "Deteksi banjir berbasis SAR"
-  },
-  "useCases.useCase05.f2": {
-    "message": "Pemantauan area terdampak"
-  },
-  "useCases.useCase05.f3": {
-    "message": "Penyediaan data bebas awan"
-  },
-  "useCases.useCase06.tab": {
-    "message": "Tambang"
-  },
-  "useCases.useCase06.title": {
-    "message": "Aktivitas Pertambangan"
-  },
-  "useCases.useCase06.description": {
-    "message": "Pantau pembukaan lahan untuk area tambang terbuka secara berkala. Identifikasi perubahan bentang alam dan kolam tambang menggunakan kombinasi data optik dan radar."
-  },
-  "useCases.useCase06.f1": {
-    "message": "Deteksi pembukaan lahan"
-  },
-  "useCases.useCase06.f2": {
-    "message": "Identifikasi tubuh air tambang"
-  },
-  "useCases.useCase06.f3": {
-    "message": "Pemantauan rehabilitasi lahan"
-  },
-  "homepage.faq.tag": {
-    "message": "FAQ"
-  },
-  "ui.button.defaultLabel": {
-    "message": "Pelajari Lebih Lanjut"
-  },
-  "ui.modernCard.learnMore": {
-    "message": "Pelajari Lebih Lanjut"
-  },
-  "ui.cleanCard.startExploring": {
-    "message": "Mulai Menjelajah"
-  },
-  "ui.cleanCard.learnMore": {
-    "message": "Pelajari Lebih Lanjut"
-  },
-  "ui.carousel.prev": {
-    "message": "Item sebelumnya"
-  },
-  "ui.carousel.next": {
-    "message": "Item berikutnya"
-  },
-  "ui.carousel.goToSlide": {
-    "message": "Ke slide {slideNumber}"
-  },
-  "homepage.meta.title": {
-    "message": "Piksel",
-    "description": "Site title for the homepage"
-  },
-  "homepage.meta.description": {
-    "message": "Bumi Digital Indonesia (piksel) mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia",
-    "description": "Meta description for the homepage"
-  },
-  "homepage.news.tag": {
-    "message": "Berita & Artikel",
-    "description": "Section tag for news and articles"
-  },
-  "homepage.news.title": {
-    "message": "Informasi Terbaru",
-    "description": "Main heading for the news section"
-  },
-  "homepage.news.subtitle": {
-    "message": "Berita, artikel, dan pembaruan terkini seputar platform Piksel dan observasi bumi digital.",
-    "description": "Subtitle for the news section"
-  },
-  "homepage.news.viewAll": {
-    "message": "Lihat Semua Artikel",
-    "description": "Link text to view all blog posts"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Perluas kategori bilah sisi '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -675,5 +325,352 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tag",
     "description": "The title of the tag list page"
+  },
+  "homepage.faq.title": {
+    "message": "Pertanyaan Umum",
+    "description": "Title for the FAQ section"
+  },
+  "homepage.faq.subtitle": {
+    "message": "Informasi mengenai latar belakang, akses data, dan kolaborasi.",
+    "description": "Subtitle for the FAQ section"
+  },
+  "homepage.faq.q1": {
+    "message": "Apa latar belakang pembentukan PIKSEL?"
+  },
+  "homepage.faq.a1": {
+    "message": "PIKSEL hadir melalui kolaborasi strategis dengan Geoscience Australia, mengadopsi teknologi Open Data Cube yang serupa dengan platform Digital Earth Australia. Inisiatif ini bertujuan membangun kemandirian infrastruktur data geospasial nasional untuk mendukung pengambilan keputusan yang lebih akurat."
+  },
+  "homepage.faq.q2": {
+    "message": "Apakah diperlukan akun pengguna untuk mengakses data?"
+  },
+  "homepage.faq.a2": {
+    "message": "Tidak. Sebagian besar data dan layanan API (WMS/WCS) piksel.id terbuka untuk publik tanpa registrasi. Pendaftaran akun hanya diperlukan jika Anda ingin menggunakan layanan Jupyter Sandbox untuk melakukan pengolahan data dan simulasi secara privat."
+  },
+  "homepage.faq.q3": {
+    "message": "Bagaimana cara berkolaborasi dengan PIKSEL?"
+  },
+  "homepage.faq.a3": {
+    "message": "Kami menyambut baik kolaborasi dengan akademisi, peneliti, dan instansi lain. Anda dapat berkontribusi melalui pengembangan modul analisis di Sandbox, atau menghubungi tim kami secara langsung untuk potensi kerja sama pengembangan produk geospasial yang lebih luas."
+  },
+  "homepage.faq.q4": {
+    "message": "Apa jenis dan format data yang tersedia?"
+  },
+  "homepage.faq.a4": {
+    "message": "Saat ini kami menyediakan data analisis siap pakai (Analysis Ready Data) dari konstelasi satelit Sentinel-1, Sentinel-2, serta arsip historis Landsat. Data disajikan dalam format Cloud Optimized GeoTIFF (COG) untuk mendukung akses yang cepat dan interoperabel."
+  },
+  "homepage.faq.q5": {
+    "message": "Seberapa sering data satelit diperbarui?"
+  },
+  "homepage.faq.a5": {
+    "message": "Platform kami melakukan indeksasi data baru setiap hari. Satelit sendiri melintasi wilayah Indonesia setiap hari namun pada lokasi yang berbeda-beda mengikuti jalur orbitnya. Untuk lokasi spesifik yang sama, Sentinel-2 akan kembali setiap 5 hari dan Sentinel-1 setiap 6-12 hari."
+  },
+  "homepage.hero.tag": {
+    "message": "PIKSEL",
+    "description": "The tag on the homepage hero section"
+  },
+  "homepage.hero.title": {
+    "message": "Dari Data Satelit hingga Keputusan yang Cerdas",
+    "description": "The main title on the homepage hero section"
+  },
+  "homepage.hero.titleHighlight": {
+    "message": "Keputusan yang Cerdas",
+    "description": "The highlighted portion of the hero title"
+  },
+  "homepage.hero.subtitle": {
+    "message": "Satu platform lengkap untuk mengakses data satelit, menganalisis, memvisualisasikan, dan mengambil keputusan berbasis geospasial. Dari data hingga insight, semua dalam satu ekosistem cloud.",
+    "description": "The subtitle text on the homepage hero section"
+  },
+  "homepage.hero.cta.primary": {
+    "message": "Request Demo",
+    "description": "Primary CTA button text"
+  },
+  "homepage.hero.cta.secondary": {
+    "message": "Pahami Piksel",
+    "description": "Secondary CTA button text linking to FAQ section"
+  },
+  "homepage.hero.image.alt": {
+    "message": "Piksel Hero Image",
+    "description": "Alt text for the hero image"
+  },
+  "ourServices.explorer.title": {
+    "message": "Jelajah Data",
+    "description": "Service title: Data Explorer"
+  },
+  "ourServices.explorer.description": {
+    "message": "Jelajahi dan akses data geospasial yang tersedia di platform kami secara bebas."
+  },
+  "ourServices.explorer.btn": {
+    "message": "Mulai Eksplorasi"
+  },
+  "ourServices.sandbox.title": {
+    "message": "Sandbox Analisis",
+    "description": "Service title: Analysis Sandbox"
+  },
+  "ourServices.sandbox.description": {
+    "message": "Pelajari pengolahan data secara programatik. Lingkungan pelatihan untuk pengembangan analisis geospasial."
+  },
+  "ourServices.sandbox.btn": {
+    "message": "Mulai Belajar"
+  },
+  "ourServices.maps.title": {
+    "message": "Peta Interaktif",
+    "description": "Service title: Interactive Maps"
+  },
+  "ourServices.maps.description": {
+    "message": "Interaksi langsung dengan peta digital untuk mendapatkan wawasan visual secara cepat."
+  },
+  "ourServices.maps.btn": {
+    "message": "Buka Peta"
+  },
+  "ourServices.webservices.title": {
+    "message": "Layanan Web",
+    "description": "Service title: Web Services"
+  },
+  "ourServices.webservices.description": {
+    "message": "Integrasikan data satelit langsung ke dalam aplikasi Anda melalui standar layanan web global."
+  },
+  "ourServices.webservices.btn": {
+    "message": "Lihat Dokumentasi"
+  },
+  "ourServices.production.title": {
+    "message": "Komputasi Awan",
+    "description": "Service title: Cloud Computing"
+  },
+  "ourServices.production.description": {
+    "message": "Dukungan infrastruktur komputasi berkinerja tinggi untuk pemrosesan data skala nasional."
+  },
+  "ourServices.production.btn": {
+    "message": "Hubungi Kami"
+  },
+  "ourServices.support.title": {
+    "message": "Dukungan Teknis",
+    "description": "Service title: Technical Support"
+  },
+  "ourServices.support.description": {
+    "message": "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar."
+  },
+  "ourServices.support.btn": {
+    "message": "Hubungi Support"
+  },
+  "ourServices.header.tag": {
+    "message": "Layanan Piksel",
+    "description": "Tag label for the services section"
+  },
+  "ourServices.header.title": {
+    "message": "Ekosistem Piksel",
+    "description": "Main title for the services section"
+  },
+  "ourServices.header.subtitle": {
+    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
+    "description": "Subtitle description for the services section"
+  },
+  "ourServices.viewAll": {
+    "message": "Lihat Semua Layanan",
+    "description": "View all services link text"
+  },
+  "homepage.stats.01": {
+    "message": "50TB+",
+    "description": "Statistics Number 01"
+  },
+  "homepage.stats.01.label": {
+    "message": "Total Data Tersedia",
+    "description": "Statistics Label 01"
+  },
+  "homepage.stats.02": {
+    "message": "100%",
+    "description": "Statistics Number 02"
+  },
+  "homepage.stats.02.label": {
+    "message": "Cakupan Wilayah Indonesia",
+    "description": "Statistics Label 02"
+  },
+  "homepage.stats.03": {
+    "message": "30+",
+    "description": "Statistics Number 03"
+  },
+  "homepage.stats.03.label": {
+    "message": "Tahun Data Historis",
+    "description": "Statistics Label 03"
+  },
+  "homepage.stats.04": {
+    "message": "Gratis",
+    "description": "Statistics Number 04"
+  },
+  "homepage.stats.04.label": {
+    "message": "Akses Terbuka untuk publik",
+    "description": "Statistics Label 04"
+  },
+  "useCases.header.tag": {
+    "message": "Solusi Kami",
+    "description": "Tag label for the use cases section"
+  },
+  "useCases.header.title": {
+    "message": "Contoh Pemanfaatan Piksel",
+    "description": "Main title for the use cases section"
+  },
+  "useCases.header.subtitle": {
+    "message": "Pemanfaatan data penginderaan jauh untuk mendukung pengambilan kebijakan berbasis bukti dan memperkuat ketahanan nasional di berbagai sektor strategis Indonesia.",
+    "description": "Subtitle description for the use cases section"
+  },
+  "useCases.common.learnMore": {
+    "message": "Pelajari Lebih Lanjut",
+    "description": "Button text to learn more about a specific use case"
+  },
+  "useCases.common.viewAll": {
+    "message": "Lihat Semua Pemanfaatan",
+    "description": "Button text to view all use cases"
+  },
+  "useCases.useCase03.tab": {
+    "message": "Pertanian"
+  },
+  "useCases.useCase03.title": {
+    "message": "Kedaulatan Pangan"
+  },
+  "useCases.useCase03.description": {
+    "message": "Mendukung ketahanan pangan nasional melalui pemantauan fase tanam padi dan kesehatan lahan baku sawah. Identifikasi daerah sentra produksi dan prediksi panen menggunakan analisis data satelit multitemporal."
+  },
+  "useCases.useCase03.f1": {
+    "message": "Pemantauan Lahan Baku Sawah"
+  },
+  "useCases.useCase03.f2": {
+    "message": "Analisis fase pertumbuhan padi"
+  },
+  "useCases.useCase03.f3": {
+    "message": "Estimasi indeks pertanaman"
+  },
+  "useCases.useCase02.tab": {
+    "message": "Perkotaan"
+  },
+  "useCases.useCase02.title": {
+    "message": "Perluasan Wilayah Urban"
+  },
+  "useCases.useCase02.description": {
+    "message": "Analisis tren perluasan area terbangun (urban sprawl) untuk mendukung perencanaan wilayah. Pantau konversi lahan di pinggiran kota menggunakan data arsip satelit jangka panjang."
+  },
+  "useCases.useCase02.f1": {
+    "message": "Pemetaan area terbangun"
+  },
+  "useCases.useCase02.f2": {
+    "message": "Monitoring perubahan tata guna lahan"
+  },
+  "useCases.useCase02.f3": {
+    "message": "Analisis tren pertumbuhan kota"
+  },
+  "useCases.useCase01.tab": {
+    "message": "Kehutanan"
+  },
+  "useCases.useCase01.title": {
+    "message": "Pemantauan Deforestasi"
+  },
+  "useCases.useCase01.description": {
+    "message": "Deteksi perubahan tutupan hutan secara berkala menggunakan data optik (Sentinel-2, Landsat) dan radar (Sentinel-1). Identifikasi indikasi pembukaan lahan dan pantau pemulihan vegetasi di seluruh Indonesia."
+  },
+  "useCases.useCase01.f1": {
+    "message": "Pemantauan tutupan lahan berkala"
+  },
+  "useCases.useCase01.f2": {
+    "message": "Deteksi perubahan berbasis time-series"
+  },
+  "useCases.useCase01.f3": {
+    "message": "Analisis historis data Landsat"
+  },
+  "useCases.useCase04.tab": {
+    "message": "Pesisir"
+  },
+  "useCases.useCase04.title": {
+    "message": "Dinamika Pesisir"
+  },
+  "useCases.useCase04.description": {
+    "message": "Pantau perubahan garis pantai akibat abrasi atau akresi menggunakan data time-series Landsat. Identifikasi area genangan pasang surut (intertidal) untuk pengelolaan wilayah pesisir."
+  },
+  "useCases.useCase04.f1": {
+    "message": "Deteksi perubahan garis pantai historis"
+  },
+  "useCases.useCase04.f2": {
+    "message": "Pemetaan area pasang surut"
+  },
+  "useCases.useCase04.f3": {
+    "message": "Klasifikasi penutup lahan pesisir"
+  },
+  "useCases.useCase05.tab": {
+    "message": "Bencana"
+  },
+  "useCases.useCase05.title": {
+    "message": "Pemetaan Area Banjir"
+  },
+  "useCases.useCase05.description": {
+    "message": "Pemanfaatan data radar Sentinel-1 untuk mendeteksi genangan banjir, bahkan saat tertutup awan. Dukung respons cepat dengan penyediaan peta indikatif area terdampak."
+  },
+  "useCases.useCase05.f1": {
+    "message": "Deteksi banjir berbasis SAR"
+  },
+  "useCases.useCase05.f2": {
+    "message": "Pemantauan area terdampak"
+  },
+  "useCases.useCase05.f3": {
+    "message": "Penyediaan data bebas awan"
+  },
+  "useCases.useCase06.tab": {
+    "message": "Tambang"
+  },
+  "useCases.useCase06.title": {
+    "message": "Aktivitas Pertambangan"
+  },
+  "useCases.useCase06.description": {
+    "message": "Pantau pembukaan lahan untuk area tambang terbuka secara berkala. Identifikasi perubahan bentang alam dan kolam tambang menggunakan kombinasi data optik dan radar."
+  },
+  "useCases.useCase06.f1": {
+    "message": "Deteksi pembukaan lahan"
+  },
+  "useCases.useCase06.f2": {
+    "message": "Identifikasi tubuh air tambang"
+  },
+  "useCases.useCase06.f3": {
+    "message": "Pemantauan rehabilitasi lahan"
+  },
+  "homepage.meta.title": {
+    "message": "Piksel",
+    "description": "Site title for the homepage"
+  },
+  "homepage.meta.description": {
+    "message": "Bumi Digital Indonesia (piksel) mengintegrasikan citra satelit dengan teknologi cloud computing untuk observasi bumi digital di seluruh Indonesia",
+    "description": "Meta description for the homepage"
+  },
+  "ui.carousel.prev": {
+    "message": "Previous items"
+  },
+  "ui.carousel.next": {
+    "message": "Next items"
+  },
+  "homepage.faq.tag": {
+    "message": "FAQ"
+  },
+  "homepage.news.tag": {
+    "message": "Berita & Artikel",
+    "description": "Section tag for news and articles"
+  },
+  "homepage.news.title": {
+    "message": "Informasi Terbaru",
+    "description": "Main heading for the news section"
+  },
+  "homepage.news.subtitle": {
+    "message": "Berita, artikel, dan pembaruan terkini seputar platform Piksel dan observasi bumi digital.",
+    "description": "Subtitle for the news section"
+  },
+  "homepage.news.viewAll": {
+    "message": "Lihat Semua Artikel",
+    "description": "Link text to view all blog posts"
+  },
+  "ui.button.defaultLabel": {
+    "message": "Learn More"
+  },
+  "ui.cleanCard.startExploring": {
+    "message": "Mulai Menjelajah"
+  },
+  "ui.cleanCard.learnMore": {
+    "message": "Pelajari Lebih Lanjut"
+  },
+  "ui.modernCard.learnMore": {
+    "message": "Learn more"
   }
 }

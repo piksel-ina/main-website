@@ -1,9 +1,9 @@
 position: 4
-label: Use Cases
+label: Kasus Penggunaan
 className: sidebar-section
 collapsible: true
 collapsed: true
 link:
   type: generated-index
-  title: Use Cases
-  description: Explore how Piksel is being used to solve real-world problems.
+  title: Kasus Penggunaan
+  description: Jelajahi bagaimana Piksel digunakan untuk memecahkan masalah dunia nyata.

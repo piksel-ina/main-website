@@ -1,9 +1,9 @@
 position: 3
-label: Services
+label: Layanan
 className: sidebar-section
 collapsible: true
 collapsed: true
 link:
   type: generated-index
-  title: Services
-  description: Discover the variety of services offered by Piksel platform.
+  title: Layanan
+  description: Temukan berbagai layanan yang ditawarkan oleh platform Piksel.

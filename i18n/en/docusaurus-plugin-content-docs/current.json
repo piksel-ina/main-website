@@ -3,32 +3,24 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docsSidebar.category.About": {
-    "message": "About",
-    "description": "The label for category 'About' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Use Cases": {
-    "message": "Use Cases",
-    "description": "The label for category 'Use Cases' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Services": {
+  "sidebar.docsSidebar.category.Layanan": {
     "message": "Services",
-    "description": "The label for category 'Services' in sidebar 'docsSidebar'"
+    "description": "The label for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Services.link.generated-index.title": {
+  "sidebar.docsSidebar.category.Layanan.link.generated-index.title": {
     "message": "Services",
-    "description": "The generated-index page title for category 'Services' in sidebar 'docsSidebar'"
+    "description": "The generated-index page title for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Services.link.generated-index.description": {
+  "sidebar.docsSidebar.category.Layanan.link.generated-index.description": {
     "message": "Discover the variety of services offered by Piksel platform.",
-    "description": "The generated-index page description for category 'Services' in sidebar 'docsSidebar'"
+    "description": "The generated-index page description for category 'Layanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Komputasi Awan": {
-    "message": "Komputasi Awan",
+    "message": "Cloud Computing",
     "description": "The label for category 'Komputasi Awan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.title": {
-    "message": "Komputasi Awan",
+    "message": "Cloud Computing",
     "description": "The generated-index page title for category 'Komputasi Awan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.description": {
@@ -36,11 +28,11 @@
     "description": "The generated-index page description for category 'Komputasi Awan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Jelajah Data": {
-    "message": "Jelajah Data",
+    "message": "Data Explorer",
     "description": "The label for category 'Jelajah Data' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.title": {
-    "message": "Jelajah Data",
+    "message": "Data Explorer",
     "description": "The generated-index page title for category 'Jelajah Data' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.description": {
@@ -48,11 +40,11 @@
     "description": "The generated-index page description for category 'Jelajah Data' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Peta Interaktif": {
-    "message": "Peta Interaktif",
+    "message": "Interactive Map",
     "description": "The label for category 'Peta Interaktif' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Peta Interaktif.link.generated-index.title": {
-    "message": "Peta Interaktif",
+    "message": "Interactive Map",
     "description": "The generated-index page title for category 'Peta Interaktif' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Peta Interaktif.link.generated-index.description": {
@@ -60,11 +52,11 @@
     "description": "The generated-index page description for category 'Peta Interaktif' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Sandbox Analisis": {
-    "message": "Sandbox Analisis",
+    "message": "Analysis Sandbox",
     "description": "The label for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.title": {
-    "message": "Sandbox Analisis",
+    "message": "Analysis Sandbox",
     "description": "The generated-index page title for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.description": {
@@ -72,11 +64,11 @@
     "description": "The generated-index page description for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Dukungan Teknis": {
-    "message": "Dukungan Teknis",
+    "message": "Technical Support",
     "description": "The label for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.title": {
-    "message": "Dukungan Teknis",
+    "message": "Technical Support",
     "description": "The generated-index page title for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.description": {
@@ -84,31 +76,35 @@
     "description": "The generated-index page description for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Layanan Web": {
-    "message": "Layanan Web",
+    "message": "Web Services",
     "description": "The label for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Layanan Web.link.generated-index.title": {
-    "message": "Layanan Web",
+    "message": "Web Services",
     "description": "The generated-index page title for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Layanan Web.link.generated-index.description": {
     "message": "RESTful API and web services for programmatic access to satellite imagery.",
     "description": "The generated-index page description for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Use Cases.link.generated-index.title": {
+  "sidebar.docsSidebar.category.Kasus Penggunaan": {
     "message": "Use Cases",
-    "description": "The generated-index page title for category 'Use Cases' in sidebar 'docsSidebar'"
+    "description": "The label for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Use Cases.link.generated-index.description": {
+  "sidebar.docsSidebar.category.Kasus Penggunaan.link.generated-index.title": {
+    "message": "Use Cases",
+    "description": "The generated-index page title for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Kasus Penggunaan.link.generated-index.description": {
     "message": "Explore how Piksel is being used to solve real-world problems.",
-    "description": "The generated-index page description for category 'Use Cases' in sidebar 'docsSidebar'"
+    "description": "The generated-index page description for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pertanian": {
-    "message": "Pertanian",
+    "message": "Agriculture",
     "description": "The label for category 'Pertanian' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pertanian.link.generated-index.title": {
-    "message": "Pertanian",
+    "message": "Agriculture",
     "description": "The generated-index page title for category 'Pertanian' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pertanian.link.generated-index.description": {
@@ -116,11 +112,11 @@
     "description": "The generated-index page description for category 'Pertanian' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pesisir": {
-    "message": "Pesisir",
+    "message": "Coastal",
     "description": "The label for category 'Pesisir' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pesisir.link.generated-index.title": {
-    "message": "Pesisir",
+    "message": "Coastal",
     "description": "The generated-index page title for category 'Pesisir' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pesisir.link.generated-index.description": {
@@ -128,11 +124,11 @@
     "description": "The generated-index page description for category 'Pesisir' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Bencana": {
-    "message": "Bencana",
+    "message": "Disaster",
     "description": "The label for category 'Bencana' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Bencana.link.generated-index.title": {
-    "message": "Bencana",
+    "message": "Disaster",
     "description": "The generated-index page title for category 'Bencana' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Bencana.link.generated-index.description": {
@@ -140,11 +136,11 @@
     "description": "The generated-index page description for category 'Bencana' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kehutanan": {
-    "message": "Kehutanan",
+    "message": "Forestry",
     "description": "The label for category 'Kehutanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kehutanan.link.generated-index.title": {
-    "message": "Kehutanan",
+    "message": "Forestry",
     "description": "The generated-index page title for category 'Kehutanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kehutanan.link.generated-index.description": {
@@ -152,11 +148,11 @@
     "description": "The generated-index page description for category 'Kehutanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Tambang": {
-    "message": "Tambang",
+    "message": "Mining",
     "description": "The label for category 'Tambang' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Tambang.link.generated-index.title": {
-    "message": "Tambang",
+    "message": "Mining",
     "description": "The generated-index page title for category 'Tambang' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Tambang.link.generated-index.description": {
@@ -164,11 +160,11 @@
     "description": "The generated-index page description for category 'Tambang' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Perkotaan": {
-    "message": "Perkotaan",
+    "message": "Urban",
     "description": "The label for category 'Perkotaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Perkotaan.link.generated-index.title": {
-    "message": "Perkotaan",
+    "message": "Urban",
     "description": "The generated-index page title for category 'Perkotaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Perkotaan.link.generated-index.description": {

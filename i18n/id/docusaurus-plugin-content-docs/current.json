@@ -3,25 +3,17 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docsSidebar.category.About": {
-    "message": "About",
-    "description": "The label for category 'About' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Layanan": {
+    "message": "Layanan",
+    "description": "The label for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Use Cases": {
-    "message": "Use Cases",
-    "description": "The label for category 'Use Cases' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Layanan.link.generated-index.title": {
+    "message": "Layanan",
+    "description": "The generated-index page title for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Services": {
-    "message": "Services",
-    "description": "The label for category 'Services' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Services.link.generated-index.title": {
-    "message": "Services",
-    "description": "The generated-index page title for category 'Services' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Services.link.generated-index.description": {
-    "message": "Discover the variety of services offered by Piksel platform.",
-    "description": "The generated-index page description for category 'Services' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Layanan.link.generated-index.description": {
+    "message": "Temukan berbagai layanan yang ditawarkan oleh platform Piksel.",
+    "description": "The generated-index page description for category 'Layanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Komputasi Awan": {
     "message": "Komputasi Awan",
@@ -32,7 +24,7 @@
     "description": "The generated-index page title for category 'Komputasi Awan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.description": {
-    "message": "Cloud computing resources for large-scale geospatial processing.",
+    "message": "Sumber daya komputasi awan untuk pemrosesan geospasial berskala besar.",
     "description": "The generated-index page description for category 'Komputasi Awan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Jelajah Data": {
@@ -44,7 +36,7 @@
     "description": "The generated-index page title for category 'Jelajah Data' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.description": {
-    "message": "Explore and discover satellite imagery and geospatial datasets.",
+    "message": "Jelajahi dan temukan citra satelit serta dataset geospasial.",
     "description": "The generated-index page description for category 'Jelajah Data' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Peta Interaktif": {
@@ -56,7 +48,7 @@
     "description": "The generated-index page title for category 'Peta Interaktif' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Peta Interaktif.link.generated-index.description": {
-    "message": "Interactive web mapping interface for visualizing geospatial data.",
+    "message": "Antarmuka pemetaan web interaktif untuk memvisualisasikan data geospasial.",
     "description": "The generated-index page description for category 'Peta Interaktif' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Sandbox Analisis": {
@@ -68,7 +60,7 @@
     "description": "The generated-index page title for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.description": {
-    "message": "JupyterHub environment for running custom geospatial analysis.",
+    "message": "Lingkungan JupyterHub untuk menjalankan analisis geospasial kustom.",
     "description": "The generated-index page description for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Dukungan Teknis": {
@@ -80,7 +72,7 @@
     "description": "The generated-index page title for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.description": {
-    "message": "Technical support and assistance for Piksel platform users.",
+    "message": "Dukungan teknis dan bantuan untuk pengguna platform Piksel.",
     "description": "The generated-index page description for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Layanan Web": {
@@ -92,16 +84,20 @@
     "description": "The generated-index page title for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Layanan Web.link.generated-index.description": {
-    "message": "RESTful API and web services for programmatic access to satellite imagery.",
+    "message": "RESTful API dan layanan web untuk akses terprogram ke citra satelit.",
     "description": "The generated-index page description for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Use Cases.link.generated-index.title": {
-    "message": "Use Cases",
-    "description": "The generated-index page title for category 'Use Cases' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Kasus Penggunaan": {
+    "message": "Kasus Penggunaan",
+    "description": "The label for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Use Cases.link.generated-index.description": {
-    "message": "Explore how Piksel is being used to solve real-world problems.",
-    "description": "The generated-index page description for category 'Use Cases' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Kasus Penggunaan.link.generated-index.title": {
+    "message": "Kasus Penggunaan",
+    "description": "The generated-index page title for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Kasus Penggunaan.link.generated-index.description": {
+    "message": "Jelajahi bagaimana Piksel digunakan untuk memecahkan masalah dunia nyata.",
+    "description": "The generated-index page description for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pertanian": {
     "message": "Pertanian",
@@ -112,7 +108,7 @@
     "description": "The generated-index page title for category 'Pertanian' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pertanian.link.generated-index.description": {
-    "message": "Satellite-based monitoring for agricultural applications.",
+    "message": "Pemantauan berbasis satelit untuk aplikasi pertanian.",
     "description": "The generated-index page description for category 'Pertanian' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pesisir": {
@@ -124,7 +120,7 @@
     "description": "The generated-index page title for category 'Pesisir' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Pesisir.link.generated-index.description": {
-    "message": "Coastal zone monitoring and management.",
+    "message": "Pemantauan dan pengelolaan zona pesisir.",
     "description": "The generated-index page description for category 'Pesisir' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Bencana": {
@@ -136,7 +132,7 @@
     "description": "The generated-index page title for category 'Bencana' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Bencana.link.generated-index.description": {
-    "message": "Disaster response and rapid mapping for affected areas.",
+    "message": "Tanggap bencana dan pemetaan cepat untuk area terdampak.",
     "description": "The generated-index page description for category 'Bencana' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kehutanan": {
@@ -148,7 +144,7 @@
     "description": "The generated-index page title for category 'Kehutanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kehutanan.link.generated-index.description": {
-    "message": "Forest monitoring and deforestation detection.",
+    "message": "Pemantauan hutan dan deteksi deforestasi.",
     "description": "The generated-index page description for category 'Kehutanan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Tambang": {
@@ -160,7 +156,7 @@
     "description": "The generated-index page title for category 'Tambang' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Tambang.link.generated-index.description": {
-    "message": "Mining activity monitoring and environmental impact assessment.",
+    "message": "Pemantauan aktivitas pertambangan dan penilaian dampak lingkungan.",
     "description": "The generated-index page description for category 'Tambang' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Perkotaan": {
@@ -172,7 +168,7 @@
     "description": "The generated-index page title for category 'Perkotaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Perkotaan.link.generated-index.description": {
-    "message": "Urban planning and development analysis using satellite imagery.",
+    "message": "Perencanaan perkotaan dan analisis pembangunan menggunakan citra satelit.",
     "description": "The generated-index page description for category 'Perkotaan' in sidebar 'docsSidebar'"
   }
 }
