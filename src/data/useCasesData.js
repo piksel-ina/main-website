@@ -49,7 +49,7 @@ export const useCasesData = {
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop',
     color: '#8b5a2b',
     glowColor: 'rgba(165, 112, 42, 0.2)',
-    link: '#'
+    link: '/docs/usecases/agriculture'
   },
   useCase02: {
     icon: Building2,
@@ -70,7 +70,7 @@ export const useCasesData = {
     image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=600&fit=crop',
     color: '#2563eb',
     glowColor: 'rgba(59, 130, 246, 0.2)',
-    link: '#'
+    link: '/docs/usecases/urban'
   },
   useCase03: {
     icon: TreePine,
@@ -91,7 +91,7 @@ export const useCasesData = {
     image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&h=600&fit=crop',
     color: '#059669',
     glowColor: 'rgba(16, 185, 129, 0.2)',
-    link: '#'
+    link: '/docs/usecases/forestry'
   },
   useCase04: {
     icon: Waves,
@@ -112,7 +112,7 @@ export const useCasesData = {
     image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop',
     color: '#0891b2',
     glowColor: 'rgba(6, 182, 212, 0.2)',
-    link: '#'
+    link: '/docs/usecases/coastal'
   },
   useCase05: {
     icon: TriangleAlert,
@@ -133,7 +133,7 @@ export const useCasesData = {
     image: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&h=600&fit=crop',
     color: '#dc2626',
     glowColor: 'rgba(239, 68, 68, 0.2)',
-    link: '#'
+    link: '/docs/usecases/disaster'
   },
   useCase06: {
     icon: Pickaxe,
@@ -154,6 +154,6 @@ export const useCasesData = {
     image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=600&fit=crop',
     color: '#d97706',
     glowColor: 'rgba(255, 159, 64, 0.2)',
-    link: '#'
+    link: '/docs/usecases/mining'
   }
 };

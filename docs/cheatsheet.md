@@ -51,11 +51,11 @@ Garis horizontal digunakan untuk memisahkan bagian:
 
 ## Link
 
-[Link ke halaman lain dalam dokumentasi](/docs/overview) dan [link eksternal ke situs lain](https://example.com).
+[Link ke halaman lain dalam dokumentasi](/docs/overview).
 
 ## Gambar
 
-![Contoh gambar dengan caption](https://placehold.co/800x400/e5e5ea/48484a?text=Sample+Image)
+![Contoh gambar dengan caption](/img/hero/hero-image.png)
 
 ## Tabel
 
