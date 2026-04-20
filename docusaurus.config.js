@@ -5,7 +5,7 @@ const config = {
   title: 'Piksel',
   tagline:
     'Piksel brings together satellite imagery and cloud computing technology to enable digital earth observation across the Indonesian region',
-  favicon: 'img/ico-big.ico',
+  favicon: 'img/favicons/favicon.ico',
   url: 'https://staging.piksel.big.go.id',
   baseUrl: '/',
   organizationName: 'piksel-ina',
@@ -75,6 +75,60 @@ const config = {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
         crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/img/favicons/favicon-32x32.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/img/favicons/favicon-16x16.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/img/favicons/apple-touch-icon.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/img/favicons/site.webmanifest',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'msapplication-TileImage',
+        content: '/img/favicons/mstile-150x150.png',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:type',
+        content: 'website',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
       },
     },
   ],
