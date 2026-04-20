@@ -1,0 +1,258 @@
+---
+sidebar_position: 2
+title: Landsat 9 Surface Reflectance
+description:  Landsat 9 SR dari US Geological Survey (USGS)
+---
+
+# Landsat 9 Surface Reflectance — Spesifikasi
+
+export const ProductCard = () => (
+  <div style={{
+    display: 'flex',
+    borderRadius: '1px',
+    overflow: 'hidden',
+    boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
+    margin: '1.5rem 0 2.5rem 0',
+    maxWidth: '860px',
+  }}>
+    {/* Left Panel */}
+    <div style={{
+      background: 'linear-gradient(135deg, #10242e, #0d5c6e)',
+      padding: '2.5rem',
+      flex: '1.2',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      gap: '1.2rem',
+    }}>
+      <h1 style={{
+        color: '#ffffff',
+        fontSize: '1.6rem',
+        fontWeight: '700',
+        lineHeight: '1.3',
+        margin: '0',
+      }}>
+        Landsat 9 Surface Reflectance
+      </h1>
+
+      <span style={{
+        display: 'inline-block',
+        background: 'rgba(255,255,255,0.12)',
+        color: '#a8d8e8',
+        fontFamily: 'Courier New, monospace',
+        fontSize: '0.85rem',
+        padding: '0.25rem 0.65rem',
+        borderRadius: '6px',
+        border: '1px solid rgba(168,216,232,0.3)',
+        width: 'fit-content',
+      }}>
+        ls9_c2l2_sr
+      </span>
+
+      {/* Meta rows */}
+      {[
+        { label: 'Nama Teknis:', value: 'Landsat 9 Collection 2 Level-2 Surface Reflectance'},
+        { label: 'Versi:',      value: '3.0.0' },
+        { label: 'Resolusi:',   value: '15–30 m' },
+        { label: 'Cakupan:',     value: '31 Okt 2021 sampai sekarang' },
+        { label: 'Pembaruan Data:', value: 'Frekuensi harian, Berkelanjutan' },
+      ].map(({ label, value }) => (
+        <div key={label} style={{ display: 'flex', gap: '1rem' }}>
+          <span style={{
+            color: '#a8d8e8',
+            fontWeight: '600',
+            fontSize: '0.9rem',
+            minWidth: '110px',
+          }}>
+            {label}
+          </span>
+          <span style={{ color: '#e8f4f8', fontSize: '0.9rem' }}>
+            {value}
+          </span>
+        </div>
+      ))}
+
+      {/* Type badges */}
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <span style={{
+          color: '#a8d8e8',
+          fontWeight: '600',
+          fontSize: '0.9rem',
+          minWidth: '110px',
+        }}>
+          Type:
+        </span>
+        <div>
+          {['Baseline', 'Raster'].map((tag) => (
+            <span key={tag} style={{
+              display: 'inline-block',
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              color: '#cceeff',
+              fontSize: '0.78rem',
+              padding: '0.15rem 0.5rem',
+              borderRadius: '20px',
+              marginRight: '0.3rem',
+            }}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Right Panel - Image */}
+    <div style={{
+      flex: '0.8',
+      overflow: 'hidden',
+      position: 'relative',
+      minHeight: '280px',
+    }}>
+      <img
+        src="/img/preview/preview_sr.png"
+        alt="DEA Surface Reflectance Landsat 9 Preview"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          display: 'block',
+        }}
+      />
+    </div>
+  </div>
+);
+
+<ProductCard />
+
+## Tentang
+Landsat 9 Surface Reflectance (Landsat 9) merupakan bagian dari rangkaian dataset Reflektansi Permukaan Piksel yang mencakup arsip gambar yang sangat luas yang diambil oleh program satelit Landsat dari US Geological Survey (USGS) dan Sentinel-2 dari European Space Agency (ESA), yang telah divalidasi, dikalibrasi, dan disesuaikan dengan kondisi di Indonesia — sehingga siap untuk dianalisis dengan mudah.
+
+## Band
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Tipe</th>
+      <th>Unit</th>
+      <th>No-Data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**coastal**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B1, band_1, coastal_aerosol</td>
+    </tr>
+    <tr>
+      <td>**blue**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B2, band_2</td>
+    </tr>
+    <tr>
+      <td>**green**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B3, band_3</td>
+    </tr>
+    <tr>
+      <td>**red**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B4, band_4</td>
+    </tr>
+    <tr>
+      <td>**nir08**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B5, band_5</td>
+    </tr>
+    <tr>
+      <td>**swir16**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B6, band_6, swir_1</td>
+    </tr>
+    <tr>
+      <td>**swir22**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B7, band_7, swir_2</td>
+    </tr>
+    <tr>
+      <td>**qa_pixel**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>1</td>
+      <td>pixel_qa, pq, pixel_quality</td>
+    </tr>
+    <tr>
+      <td>**qa_radsat**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>QA_RADSAT, radsat, radiometric_saturation</td>
+    </tr>
+  </tbody>
+</table>
+
+## Aplikasi
+- Pengembangan produk turunan untuk memantau lahan, perairan pedalaman, dan fitur pesisir, seperti:
+  - pertumbuhan perkotaan
+  - habitat pesisir
+  - kegiatan pertambangan
+  - kegiatan pertanian (misalnya: peternakan, pertanian irigasi, pertanian tadah hujan)
+  - luas perairan
+- Pengembangan produk informasi yang terperinci, seperti:
+  - unit luas perairan permukaan yang terdeteksi
+  - unit luas deforestasi
+  - perkiraan hasil panen lahan pertanian.
+- Survei kepatuhan
+- Manajemen keadaan darurat
+
+## Akses Data
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Maps**</td>
+      <td>• [Lihat lokasinya di maps](#)</td>
+      <td>• Pelajari cara [penggunaan maps](#)</td>
+    </tr>
+    <tr>
+      <td>**Explorer**</td>
+      <td>• [Jelajahi ketersediaan data](#)</td>
+      <td>• Pelajari cara [penggunaan explorer](#)</td>
+    </tr>
+    <tr>
+      <td>**Sumber data**</td>
+      <td>• [Akses data di AWS](#)<br/>• [Akses data di NCI](#)</td>
+      <td>• Pelajari cara [mengakses data melalui AWS](#)</td>
+    </tr>
+    <tr>
+      <td>**Contoh kode**</td>
+      <td>• [Lihat contoh kode](#)</td>
+      <td>• Pelajari cara [menggunakan sandbox](#)</td>
+    </tr>
+    <tr>
+      <td>**Web services**</td>
+      <td>• [Web Map Service (WMS)](#)<br/>• [Web Coverage Service (WCS)](#)</td>
+      <td>• Pelajari cara [menggunakan web services](#)</td>
+    </tr>
+  </tbody>
+</table>
+
+## Citation
+#### Data Citation
+>Fulan, F., Fulan, F. 2026. Landsat 9 Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/148693 [Diakses 12 April 2026]
