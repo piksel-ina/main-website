@@ -1,0 +1,9 @@
+position: 1
+label: Surface Reflectance Sattelite Data
+className: sidebar-subsection
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  title: Data Satelit Reflektansi Permukaan
+  description: Discover the variety of surface reflectance satellite data products offered by Piksel platform.
