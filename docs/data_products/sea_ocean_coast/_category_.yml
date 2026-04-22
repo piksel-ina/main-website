@@ -1,0 +1,9 @@
+position: 2
+label: Data Laut dan Pesisir
+className: sidebar-subsection
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  title: Data Laut dan Pesisir
+  description: Discover the variety of sea, ocean, and coast data products offered by Piksel platform.
