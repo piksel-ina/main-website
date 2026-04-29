@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
-title: Landsat 8 Surface Reflectance
-description:  Landsat 8 SR dari US Geological Survey (USGS)
+sidebar_position: 2
+title: Landsat 7 Surface Reflectance
+description:  Landsat 7 SR dari US Geological Survey (USGS)
 ---
 
-# Landsat 8 Surface Reflectance — Spesifikasi
+# Landsat 7 Surface Reflectance — Spesifikasi
 
 export const ProductCard = () => (
   <div style={{
@@ -32,7 +32,7 @@ export const ProductCard = () => (
         lineHeight: '1.3',
         margin: '0',
       }}>
-        Landsat 8 Surface Reflectance
+        Landsat 7 Surface Reflectance
       </h1>
 
       <span style={{
@@ -46,16 +46,16 @@ export const ProductCard = () => (
         border: '1px solid rgba(168,216,232,0.3)',
         width: 'fit-content',
       }}>
-        ls8_c2l2_sr
+        lS7_c2I2_sr
       </span>
 
       {/* Meta rows */}
       {[
-        { label: 'Nama Teknis:', value: 'Landsat 8 Collection 2 Level-2 Surface Reflectance'},
+        { label: 'Nama Teknis:', value: 'Landsat 7 Collection 2 Level-2 Surface Reflectance'},
         { label: 'Versi:',      value: '3.0.0' },
         { label: 'Resolusi:',   value: '15–30 m' },
-        { label: 'Cakupan:',     value: '19 Mar 2013 sampai sekarang' },
-        { label: 'Pembaruan Data:', value: 'Harian' },
+        { label: 'Cakupan:',     value: '15 April 1999 sampai 19 Januari 2024' },
+        { label: 'Pembaruan Data:', value: 'Tidak Ada Pembaruan Data' },
       ].map(({ label, value }) => (
         <div key={label} style={{ display: 'flex', gap: '1rem' }}>
           <span style={{
@@ -110,7 +110,7 @@ export const ProductCard = () => (
     }}>
       <img
         src="/img/preview/preview_sr.png"
-        alt="DEA Surface Reflectance Landsat 9 Preview"
+        alt="DEA Surface Reflectance Landsat 7 Preview"
         style={{
           width: '100%',
           height: '100%',
@@ -126,7 +126,7 @@ export const ProductCard = () => (
 <ProductCard />
 
 ## Tentang
-Landsat 8 Surface Reflectance (Landsat 8) merupakan bagian dari rangkaian dataset Reflektansi Permukaan Piksel yang mencakup arsip gambar yang sangat luas yang diambil oleh program satelit Landsat dari US Geological Survey (USGS) dan Sentinel-2 dari European Space Agency (ESA), yang telah divalidasi, dikalibrasi, dan disesuaikan dengan kondisi di Indonesia — sehingga siap untuk dianalisis dengan mudah.
+Landsat 7 Surface Reflectance (Landsat 7) menyediakan data resolusi 30 meter hasil koreksi atmosfer (1999–2022) yang dirancang khusus untuk analisis ilmiah dan pemantauan deret waktu (time-series). Dengan algoritma LEDAPS (Landsat Ecosystem Disturbance Adaptive Processing System), dataset ini mengoreksi efek hamburan (scattering) dan penyerapan (absorption) atmosfer sehingga deteksi perubahan menjadi lebih akurat.
 
 ## Band
 
@@ -142,46 +142,39 @@ Landsat 8 Surface Reflectance (Landsat 8) merupakan bagian dari rangkaian datase
   </thead>
   <tbody>
     <tr>
-      <td>**coastal**</td>
-      <td>uint16</td>
-      <td>1</td>
-      <td>0</td>
-      <td>SR_B1, band_1, coastal_aerosol</td>
-    </tr>
-    <tr>
       <td>**blue**</td>
       <td>uint16</td>
       <td>1</td>
       <td>0</td>
-      <td>SR_B2, band_2</td>
+      <td>SR_B1, band_1</td>
     </tr>
     <tr>
       <td>**green**</td>
       <td>uint16</td>
       <td>1</td>
       <td>0</td>
-      <td>SR_B3, band_3</td>
+      <td>SR_B2, band_2</td>
     </tr>
     <tr>
       <td>**red**</td>
       <td>uint16</td>
       <td>1</td>
       <td>0</td>
-      <td>SR_B4, band_4</td>
+      <td>SR_B3, band_3</td>
     </tr>
     <tr>
       <td>**nir08**</td>
       <td>uint16</td>
       <td>1</td>
       <td>0</td>
-      <td>SR_B5, band_5</td>
+      <td>SR_B4, band_4, nir</td>
     </tr>
     <tr>
       <td>**swir16**</td>
       <td>uint16</td>
       <td>1</td>
       <td>0</td>
-      <td>SR_B6, band_6, swir_1</td>
+      <td>SR_B5, band_5, swir_1</td>
     </tr>
     <tr>
       <td>**swir22**</td>
@@ -195,7 +188,7 @@ Landsat 8 Surface Reflectance (Landsat 8) merupakan bagian dari rangkaian datase
       <td>uint16</td>
       <td>bit_index</td>
       <td>1</td>
-      <td>pixel_qa, pq, pixel_quality</td>
+      <td>QA_PIXEL, pq, pixel_quality</td>
     </tr>
     <tr>
       <td>**qa_radsat**</td>
@@ -205,11 +198,18 @@ Landsat 8 Surface Reflectance (Landsat 8) merupakan bagian dari rangkaian datase
       <td>QA_RADSAT, radsat, radiometric_saturation</td>
     </tr>
     <tr>
-      <td>**qa_aerosol**</td>
+      <td>**atmos_opacity**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>SR_ATMOS_OPACITY, atmos_opacity</td>
+    </tr>
+    <tr>
+      <td>**cloud_qa**</td>
       <td>uint8</td>
       <td>bit_index</td>
-      <td>1</td>
-      <td>SR_QA_AEROSOL, qa_aerosol, aerosol_qa</td>
+      <td>0</td>
+      <td>SR_CLOUD_QA</td>
     </tr>
   </tbody>
 </table>
@@ -262,4 +262,4 @@ Landsat 8 Surface Reflectance (Landsat 8) merupakan bagian dari rangkaian datase
 
 ## Citation
 #### Data Citation
->Fulan, F., Fulan, F. 2026. Landsat 8 Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/148693 [Diakses 12 April 2026]
+>Fulan, F., Fulan, F. 2026. Landsat 9 Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/148693 [Diakses 12 April 2026]
