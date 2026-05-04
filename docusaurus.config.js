@@ -10,7 +10,7 @@ const config = {
   baseUrl: '/',
   organizationName: 'piksel-ina',
   projectName: 'piksel-documentation',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'ignore',
