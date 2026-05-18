@@ -64,13 +64,3 @@
 
   @return $result;
 }
-
-@function clip-path($name) {
-  $value: map.get($clip-paths, $name);
-
-  @if not $value {
-    @error 'Unknown clip-path: `#{$name}`. Valid keys: #{map.keys($clip-paths)}';
-  }
-
-  @return $value;
-}

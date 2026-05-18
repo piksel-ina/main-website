@@ -56,7 +56,7 @@
     justify-content: space-between;
     height: 98%;
     padding: var(--ifm-spacing-vertical);
-    color: color('white-1');
+    color: color('white');
     background: transparent;
   }
 
@@ -65,7 +65,7 @@
     font-size: text-size('lg') !important;
     font-weight: var(--ifm-font-weight-bold);
     line-height: 1.2;
-    color: color('white-1');
+    color: color('white');
     text-shadow: 0 0.16rem 0.8rem rgb(0 0 0 / 40%);
   }
 
@@ -85,7 +85,7 @@
     padding-left: 0;
     font-size: var(--ifm-font-size-base);
     font-weight: var(--ifm-font-weight-semibold);
-    color: color('white-1');
+    color: color('white');
     text-decoration: none;
     text-shadow: 0 1px 0.24rem rgb(0 0 0 / 70%);
     cursor: pointer;

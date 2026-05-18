@@ -17,37 +17,10 @@
   letter-spacing: -0.02em;
 }
 
-@mixin card-base {
-  background-color: color('white-1');
-  border-radius: tokens.$card-border-radius;
-  box-shadow: tokens.$card-box-shadow;
-}
-
 @mixin container {
   max-width: $container-max-width;
   padding-inline: space('4');
   margin-inline: auto;
-}
-
-@mixin glass($opacity: 0.1, $blur: 1.2rem) {
-  background: rgba(255, 255, 255, $opacity + 0.85);
-  border: 1px solid rgb(255 255 255 / 20%);
-  -webkit-backdrop-filter: blur($blur);
-  backdrop-filter: blur($blur);
-}
-
-@mixin bg-shape($variant) {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  clip-path: clip-path($variant);
-}
-
-@mixin image-clipped {
-  overflow: hidden;
-  border-radius: 0.96rem;
-  filter: drop-shadow(0 #{space('1')} #{space('2')} rgb(0 0 0 / 10%));
-  clip-path: clip-path('image-clipped');
 }
 
 @mixin truncate($lines: 1) {
@@ -61,12 +34,6 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $lines;
   }
-}
-
-@mixin section-shadow($intensity: 1) {
-  box-shadow:
-    4px 4px 16px rgba(0, 0, 0, 0.04 * $intensity),
-    12px 12px 40px rgba(0, 0, 0, 0.02 * $intensity);
 }
 
 @mixin focus-ring {

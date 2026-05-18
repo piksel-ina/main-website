@@ -4,7 +4,7 @@ $cut: space('3');
 
 .faqItem {
   position: relative;
-  background: color('grey-light-2');
+  background: color('grey-5');
   box-shadow: 0 0.1rem 0.4rem rgb(0 0 0 / 4%);
   clip-path: polygon(
     $cut 0,
@@ -19,12 +19,12 @@ $cut: space('3');
     box-shadow 0.35s ease;
 
   &:hover {
-    background: color('white-1');
+    background: color('white');
     box-shadow: 0 0.2rem 1.2rem rgb(0 0 0 / 6%);
   }
 
   &[data-open='true'] {
-    background: color('white-1');
+    background: color('white');
     box-shadow: 0 0.4rem 2rem rgb(0 0 0 / 8%);
   }
 
@@ -35,7 +35,7 @@ $cut: space('3');
     justify-content: space-between;
     width: 100%;
     padding: space('3') space('4');
-    color: color('black-4');
+    color: color('ink-4');
     text-align: left;
     cursor: pointer;
     background: none;
@@ -51,7 +51,7 @@ $cut: space('3');
     font-size: text-size('base');
     font-weight: 600;
     line-height: 1.4;
-    color: color('black-2');
+    color: color('ink-2');
     transition: color 0.25s ease;
 
     @include respond-to('phone') {
@@ -71,14 +71,14 @@ $cut: space('3');
     width: space('6');
     height: space('6');
     padding: 0.6em;
-    color: color('black-3');
-    background: color('grey-light-2');
+    color: color('ink-3');
+    background: color('grey-5');
     border-radius: space('1');
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &[data-open='true'] &__iconWrapper {
-    color: color('grey-light-2');
+    color: color('grey-5');
     background: color('black');
     transform: rotate(180deg);
   }
@@ -104,7 +104,7 @@ $cut: space('3');
     overflow: hidden;
     font-size: text-size('base');
     line-height: 1.7;
-    color: color('black-3');
+    color: color('ink-3');
     opacity: 0;
     transform: translateY(-0.5rem);
     transition:

@@ -11,8 +11,6 @@
   );
   border-radius: 1.6rem;
 
-  @include section-shadow;
-
   @include respond-to('laptop') {
     padding: space('8') space('8') space('8') space('9');
   }
@@ -51,7 +49,7 @@
   &__accentLineBar {
     width: space('5');
     height: 0.2rem;
-    background-color: color('grey-light-1');
+    background-color: color('grey-4');
     border-radius: 0.1rem;
 
     @include respond-to('phone') {
@@ -62,13 +60,13 @@
   &__accentLineExtended {
     flex: 1;
     height: 0.2rem;
-    background-color: color('grey-light-1');
+    background-color: color('grey-4');
   }
 
   &__accentText {
     font-size: text-size('sm');
     font-weight: 700;
-    color: color('grey-dark-2');
+    color: color('grey-1');
     text-transform: uppercase;
     letter-spacing: 0.1em;
 
@@ -83,7 +81,7 @@
     margin: 0;
     font-size: text-size('2xl');
     line-height: 1.1;
-    color: color('black-1');
+    color: color('ink-1');
 
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
@@ -98,7 +96,7 @@
     max-width: 85ch;
     font-size: text-size('base');
     line-height: 1.7;
-    color: color('black-2');
+    color: color('ink-2');
     text-wrap: pretty;
     opacity: 0.75;
 
@@ -171,14 +169,14 @@
     color: inherit;
     text-decoration: none;
     background: transparent;
-    border-bottom: 0.1rem solid color('grey-light-1');
+    border-bottom: 0.1rem solid color('grey-4');
     border-radius: 0.8rem;
     transition: background-color 0.25s ease;
 
     &:hover {
       text-decoration: none;
-      background-color: color('white-1');
-      border-color: color('grey-light-1');
+      background-color: color('paper');
+      border-color: color('grey-4');
 
       .newsArticles__listItemImage {
         transform: scale(1.06);
@@ -239,7 +237,7 @@
     font-size: text-size('base');
     font-weight: 600;
     line-height: 1.4;
-    color: color('black-1');
+    color: color('ink-1');
     text-wrap: pretty;
     transition: color 0.25s ease;
 
@@ -388,7 +386,7 @@
     gap: space('1');
     align-items: center;
     font-size: text-size('xs');
-    color: color('black-2');
+    color: color('ink-2');
     opacity: 0.6;
   }
 
