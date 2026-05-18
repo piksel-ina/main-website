@@ -672,5 +672,61 @@
   },
   "ui.modernCard.learnMore": {
     "message": "Learn more"
+  },
+  "homepage.hero.eyebrow": {
+    "message": "Indonesia Datacube · v2.4",
+    "description": "The eyebrow text above the hero title"
+  },
+  "homepage.hero.coords.lat": {
+    "message": "LAT -6.2088",
+    "description": "Latitude coordinate label in the hero"
+  },
+  "homepage.hero.coords.lon": {
+    "message": "LON 106.8456",
+    "description": "Longitude coordinate label in the hero"
+  },
+  "homepage.hero.coords.date": {
+    "message": "2024-12-01",
+    "description": "Date label in the hero coordinate frame"
+  },
+  "homepage.hero.photoMeta.sensor": {
+    "message": "Sentinel-2A · MSI · 10m",
+    "description": "Sensor metadata displayed on the hero photo"
+  },
+  "homepage.hero.photoMeta.location": {
+    "message": "Jakarta, Indonesia",
+    "description": "Location metadata displayed on the hero photo"
+  },
+  "ourServices.header.eyebrow": {
+    "message": "Layanan Piksel",
+    "description": "Eyebrow label for the services section"
+  },
+  "ourServices.header.sub": {
+    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
+    "description": "Subtitle description for the services section"
+  },
+  "homepage.stats.01.description": {
+    "message": "Data satelit dan geospasial yang tersedia untuk diakses",
+    "description": "Statistics Description 01"
+  },
+  "homepage.stats.02.description": {
+    "message": "Seluruh wilayah Negara Kesatuan Republik Indonesia",
+    "description": "Statistics Description 02"
+  },
+  "homepage.stats.03.description": {
+    "message": "Arsip data satelit dari berbagai konstelasi misi penginderaan jauh",
+    "description": "Statistics Description 03"
+  },
+  "homepage.stats.04.description": {
+    "message": "Data dan layanan API terbuka tanpa biaya untuk masyarakat",
+    "description": "Statistics Description 04"
+  },
+  "useCases.header.eyebrow": {
+    "message": "Solusi Kami",
+    "description": "Eyebrow label for the use cases section"
+  },
+  "useCases.header.sub": {
+    "message": "Pemanfaatan data penginderaan jauh untuk mendukung pengambilan kebijakan berbasis bukti dan memperkuat ketahanan nasional di berbagai sektor strategis Indonesia.",
+    "description": "Subtitle description for the use cases section"
   }
 }

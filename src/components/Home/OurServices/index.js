@@ -1,39 +1,32 @@
 import Link from '@docusaurus/Link';
-import { servicesData, servicesHeaderData } from '@site/src/data/servicesData';
+import {
+  servicesData,
+  servicesSectionHeader,
+} from '@site/src/data/servicesData';
 import styles from './styles.module.scss';
 import { ArrowRight } from 'lucide-react';
-import Button from '../../UI/Atoms/Button';
-import SectionHeader from '../../UI/Molecules/SectionHeader';
 
 export default function OurServices() {
   return (
     <section id="services" className={styles.ourServices}>
       <div className={styles.ourServices__header}>
-        <SectionHeader
-          eyebrow={servicesHeaderData.title}
-          title={servicesHeaderData.tag}
-          sub={servicesHeaderData.subtitle}
-        />
+        <h2 className={styles.ourServices__cardTitle}>
+          {servicesSectionHeader.eyebrow}
+        </h2>
+        <p className={styles.ourServices__cardDesc}>
+          {servicesSectionHeader.title}
+        </p>
       </div>
 
       <div className={styles.ourServices__servicesGrid}>
         {servicesData.map((service) => {
-          const Icon = service.icon;
-
           return (
             <div
               key={service.id}
               className={styles.ourServices__card}
               style={{ '--theme-color': service.color }}
             >
-              <div className={styles.ourServices__bgIcon}>
-                <Icon />
-              </div>
-
               <div className={styles.ourServices__cardContent}>
-                <div className={styles.ourServices__iconRing}>
-                  <Icon />
-                </div>
                 <h3 className={styles.ourServices__cardTitle}>
                   {service.title}
                 </h3>
@@ -48,15 +41,6 @@ export default function OurServices() {
             </div>
           );
         })}
-      </div>
-
-      <div className={styles.ourServices__viewAllRow}>
-        <Button
-          to={servicesHeaderData.viewAllLink}
-          label={servicesHeaderData.viewAllText}
-          variant="outline"
-          color="#1D1D1F"
-        />
       </div>
     </section>
   );

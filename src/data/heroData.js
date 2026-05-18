@@ -2,20 +2,15 @@ import { translate } from "@docusaurus/Translate";
 import { statsData } from "@site/src/data/statsData";
 
 export const heroData = {
-  tag: translate({
-    id: "homepage.hero.tag",
-    message: "PIKSEL",
-    description: "The tag on the homepage hero section",
+  eyebrow: translate({
+    id: "homepage.hero.eyebrow",
+    message: "Indonesia Datacube · v2.4",
+    description: "The eyebrow text above the hero title",
   }),
   title: translate({
     id: "homepage.hero.title",
     message: "Dari Data Satelit hingga Keputusan yang Cerdas",
     description: "The main title on the homepage hero section",
-  }),
-  titleHighlight: translate({
-    id: "homepage.hero.titleHighlight",
-    message: "Keputusan yang Cerdas",
-    description: "The highlighted portion of the hero title",
   }),
   subtitle: translate({
     id: "homepage.hero.subtitle",
@@ -23,6 +18,35 @@ export const heroData = {
       "Satu platform lengkap untuk mengakses data satelit, menganalisis, memvisualisasikan, dan mengambil keputusan berbasis geospasial. Dari data hingga insight, semua dalam satu ekosistem cloud.",
     description: "The subtitle text on the homepage hero section",
   }),
+  coords: {
+    lat: translate({
+      id: "homepage.hero.coords.lat",
+      message: "LAT -6.2088",
+      description: "Latitude coordinate label in the hero",
+    }),
+    lon: translate({
+      id: "homepage.hero.coords.lon",
+      message: "LON 106.8456",
+      description: "Longitude coordinate label in the hero",
+    }),
+    date: translate({
+      id: "homepage.hero.coords.date",
+      message: "2024-12-01",
+      description: "Date label in the hero coordinate frame",
+    }),
+  },
+  photoMeta: {
+    sensor: translate({
+      id: "homepage.hero.photoMeta.sensor",
+      message: "Sentinel-2A · MSI · 10m",
+      description: "Sensor metadata displayed on the hero photo",
+    }),
+    location: translate({
+      id: "homepage.hero.photoMeta.location",
+      message: "Jakarta, Indonesia",
+      description: "Location metadata displayed on the hero photo",
+    }),
+  },
   ctaPrimary: {
     text: translate({
       id: "homepage.hero.cta.primary",
@@ -39,21 +63,9 @@ export const heroData = {
     }),
     link: "/#faq",
   },
-  stats: statsData.stats.slice(0, 3).map(stat => ({
-    value: stat.number,
+  stats: statsData.stats.map((stat) => ({
+    value: stat.value,
     label: stat.label,
-    icon: stat.icon,
   })),
-  heroImage: {
-    sources: {
-      webp1x: require('@site/static/img/hero/hero-image-1x.webp').default,
-      webp2x: require('@site/static/img/hero/hero-image.webp').default,
-    },
-    fallback: require('@site/static/img/hero/hero-image.png').default,
-    alt: translate({
-      id: "homepage.hero.image.alt",
-      message: "Piksel Hero Image",
-      description: "Alt text for the hero image",
-    }),
-  },
+  photo: require("@site/static/img/news/featured-01.webp").default,
 };

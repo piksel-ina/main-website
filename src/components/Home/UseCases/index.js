@@ -1,6 +1,9 @@
 import { useState, useMemo } from 'react';
 import clsx from 'clsx';
-import { useCasesData, useCasesHeaderData } from '@site/src/data/useCasesData';
+import {
+  useCasesData,
+  useCasesSectionHeader,
+} from '@site/src/data/useCasesData';
 import { Check } from 'lucide-react';
 import Button from '../../UI/Atoms/Button';
 import styles from './styles.module.scss';
@@ -18,11 +21,9 @@ export default function UseCases() {
   if (!currentCase) return null;
 
   const color = currentCase.color;
-  const glowColor = currentCase.glowColor;
 
   const dynamicStyles = {
     '--active-color': color,
-    '--active-glow': glowColor,
   };
 
   return (
@@ -34,10 +35,10 @@ export default function UseCases() {
     >
       <div className={styles.useCases__header}>
         <h2 id="use-cases-title" className={styles.useCases__title}>
-          {useCasesHeaderData?.title}
+          {useCasesSectionHeader?.title}
         </h2>
         <p className={styles.useCases__subtitle}>
-          {useCasesHeaderData?.subtitle}
+          {useCasesSectionHeader?.sub}
         </p>
       </div>
       <div className={styles.useCases__divider} aria-hidden="true" />
@@ -69,7 +70,6 @@ export default function UseCases() {
                     isActive
                       ? {
                           '--active-color': item?.color || color,
-                          '--active-glow': item?.glowColor || glowColor,
                         }
                       : undefined
                   }
@@ -89,11 +89,9 @@ export default function UseCases() {
             {useCaseKeys.map((key) => {
               const item = useCasesData[key];
               const isActive = activeTab === key;
-              const ItemIcon = item?.icon;
 
               const itemStyles = {
                 '--active-color': item?.color || color,
-                '--active-glow': item?.glowColor || glowColor,
               };
 
               return (
@@ -112,27 +110,8 @@ export default function UseCases() {
                   <div className={styles.useCases__cardAccent} />
 
                   <div className={styles.useCases__cardGrid}>
-                    <div className={styles.useCases__imageSection}>
-                      <div className={styles.useCases__imageContainer}>
-                        {item?.image && (
-                          <img
-                            src={item.image}
-                            alt={`${item.title} use case illustration`}
-                            className={styles.useCases__image}
-                            loading="lazy"
-                          />
-                        )}
-                        <div className={styles.useCases__imageOverlay} />
-                      </div>
-                    </div>
-
                     <div className={styles.useCases__contentSection}>
                       <div className={styles.useCases__titleRow}>
-                        <div className={styles.useCases__iconWrapper}>
-                          {ItemIcon && (
-                            <ItemIcon className={styles.useCases__icon} />
-                          )}
-                        </div>
                         <div>
                           <h3 className={styles.useCases__contentTitle}>
                             {item?.title}
@@ -163,7 +142,7 @@ export default function UseCases() {
                       <div className={styles.useCases__cardActions}>
                         <Button
                           href={item?.link || '#'}
-                          label={useCasesHeaderData?.learnMoreText}
+                          label={useCasesSectionHeader?.learnMoreText}
                           variant="ghost"
                         />
                       </div>
@@ -179,7 +158,7 @@ export default function UseCases() {
       <div className={styles.useCases__viewAllWrapper}>
         <Button
           variant="outline"
-          label={useCasesHeaderData?.viewAllText}
+          label={useCasesSectionHeader?.viewAllText}
           to="/docs/category/kasus-penggunaan"
         />
       </div>

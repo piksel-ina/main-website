@@ -13,7 +13,7 @@ export const faqData = {
   }),
   questions: [
     {
-      id: "faq-1",
+      id: "01",
       question: translate({
         id: "homepage.faq.q1",
         message: "Apa latar belakang pembentukan PIKSEL?",
@@ -25,7 +25,7 @@ export const faqData = {
       }),
     },
     {
-      id: "faq-2",
+      id: "02",
       question: translate({
         id: "homepage.faq.q2",
         message: "Apakah diperlukan akun pengguna untuk mengakses data?",
@@ -37,7 +37,7 @@ export const faqData = {
       }),
     },
     {
-      id: "faq-3",
+      id: "03",
       question: translate({
         id: "homepage.faq.q3",
         message: "Bagaimana cara berkolaborasi dengan PIKSEL?",
@@ -49,7 +49,7 @@ export const faqData = {
       }),
     },
     {
-      id: "faq-4",
+      id: "04",
       question: translate({
         id: "homepage.faq.q4",
         message: "Apa jenis dan format data yang tersedia?",
@@ -61,7 +61,7 @@ export const faqData = {
       }),
     },
     {
-      id: "faq-5",
+      id: "05",
       question: translate({
         id: "homepage.faq.q5",
         message: "Seberapa sering data satelit diperbarui?",
