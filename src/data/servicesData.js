@@ -1,10 +1,8 @@
 import { translate } from "@docusaurus/Translate";
-import { Search, Terminal, Map, Server, Cpu, LifeBuoy } from "lucide-react";
 
 export const servicesData = [
   {
     id: "01",
-    icon: Search,
     title: translate({
       id: "ourServices.explorer.title",
       message: "Jelajah Data",
@@ -23,7 +21,6 @@ export const servicesData = [
   },
   {
     id: "02",
-    icon: Terminal,
     title: translate({
       id: "ourServices.sandbox.title",
       message: "Sandbox Analisis",
@@ -42,7 +39,6 @@ export const servicesData = [
   },
   {
     id: "03",
-    icon: Map,
     title: translate({
       id: "ourServices.maps.title",
       message: "Peta Interaktif",
@@ -61,7 +57,6 @@ export const servicesData = [
   },
   {
     id: "04",
-    icon: Server,
     title: translate({
       id: "ourServices.webservices.title",
       message: "Layanan Web",
@@ -80,7 +75,6 @@ export const servicesData = [
   },
   {
     id: "05",
-    icon: Cpu,
     title: translate({
       id: "ourServices.production.title",
       message: "Komputasi Awan",
@@ -99,7 +93,6 @@ export const servicesData = [
   },
   {
     id: "06",
-    icon: LifeBuoy,
     title: translate({
       id: "ourServices.support.title",
       message: "Dukungan Teknis",
@@ -118,27 +111,21 @@ export const servicesData = [
   },
 ];
 
-export const servicesHeaderData = {
-  tag: translate({
-    id: "ourServices.header.tag",
+export const servicesSectionHeader = {
+  eyebrow: translate({
+    id: "ourServices.header.eyebrow",
     message: "Layanan Piksel",
-    description: "Tag label for the services section",
+    description: "Eyebrow label for the services section",
   }),
   title: translate({
     id: "ourServices.header.title",
     message: "Ekosistem Piksel",
     description: "Main title for the services section",
   }),
-  subtitle: translate({
-    id: "ourServices.header.subtitle",
+  sub: translate({
+    id: "ourServices.header.sub",
     message:
       "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
     description: "Subtitle description for the services section",
   }),
-  viewAllText: translate({
-    id: "ourServices.viewAll",
-    message: "Lihat Semua Layanan",
-    description: "View all services link text",
-  }),
-  viewAllLink: "/docs/category/layanan",
 };

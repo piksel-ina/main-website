@@ -170,5 +170,9 @@
   "sidebar.docsSidebar.category.Perkotaan.link.generated-index.description": {
     "message": "Perencanaan perkotaan dan analisis pembangunan menggunakan citra satelit.",
     "description": "The generated-index page description for category 'Perkotaan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.prd": {
+    "message": "prd",
+    "description": "The label for category 'prd' in sidebar 'docsSidebar'"
   }
 }

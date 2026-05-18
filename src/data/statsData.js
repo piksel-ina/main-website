@@ -1,10 +1,10 @@
 import { translate } from "@docusaurus/Translate";
-import { Database, Globe, CalendarDays, Unlock } from "lucide-react";
 
 export const statsData = {
   stats: [
     {
-      number: translate({
+      id: "01",
+      value: translate({
         id: "homepage.stats.01",
         message: "50TB+",
         description: "Statistics Number 01",
@@ -14,10 +14,15 @@ export const statsData = {
         message: "Total Data Tersedia",
         description: "Statistics Label 01",
       }),
-      icon: Database,
+      description: translate({
+        id: "homepage.stats.01.description",
+        message: "Data satelit dan geospasial yang tersedia untuk diakses",
+        description: "Statistics Description 01",
+      }),
     },
     {
-      number: translate({
+      id: "02",
+      value: translate({
         id: "homepage.stats.02",
         message: "100%",
         description: "Statistics Number 02",
@@ -27,10 +32,15 @@ export const statsData = {
         message: "Cakupan Wilayah Indonesia",
         description: "Statistics Label 02",
       }),
-      icon: Globe,
+      description: translate({
+        id: "homepage.stats.02.description",
+        message: "Seluruh wilayah Negara Kesatuan Republik Indonesia",
+        description: "Statistics Description 02",
+      }),
     },
     {
-      number: translate({
+      id: "03",
+      value: translate({
         id: "homepage.stats.03",
         message: "30+",
         description: "Statistics Number 03",
@@ -40,10 +50,15 @@ export const statsData = {
         message: "Tahun Data Historis",
         description: "Statistics Label 03",
       }),
-      icon: CalendarDays,
+      description: translate({
+        id: "homepage.stats.03.description",
+        message: "Arsip data satelit dari berbagai konstelasi misi penginderaan jauh",
+        description: "Statistics Description 03",
+      }),
     },
     {
-      number: translate({
+      id: "04",
+      value: translate({
         id: "homepage.stats.04",
         message: "Gratis",
         description: "Statistics Number 04",
@@ -53,7 +68,11 @@ export const statsData = {
         message: "Akses Terbuka untuk publik",
         description: "Statistics Label 04",
       }),
-      icon: Unlock,
+      description: translate({
+        id: "homepage.stats.04.description",
+        message: "Data dan layanan API terbuka tanpa biaya untuk masyarakat",
+        description: "Statistics Description 04",
+      }),
     },
   ],
 };
