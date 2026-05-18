@@ -17,8 +17,8 @@ Audit and fix SCSS to comply with this project's design system. Invoke when revi
 src/css/
 ├── abstracts/
 │   ├── _tokens.scss        # SCSS maps: $spacing, $type-scale, $breakpoints, $colors, $font-families
-│   ├── _functions.scss     # space(), text-size(), color(), bp(), font-family(), clip-path()
-│   ├── _mixins.scss        # respond-to(), heading(), card-base(), container(), glass(), bg-shape(), image-clipped()
+│   ├── _functions.scss     # space(), text-size(), color(), bp(), font-family()
+│   ├── _mixins.scss        # respond-to(), heading(), container(), truncate(), focus-ring()
 │   └── _index.scss         # @forward everything
 └── custom.scss             # Entry: CSS custom properties generated from SCSS maps
 ```
@@ -34,7 +34,6 @@ Import in any component: `@use '../../css/abstracts' as *;` (adjust relative pat
 | `color('primary')` | Returns color from `$colors` map |
 | `bp('tablet')` | Returns breakpoint value from `$breakpoints` map |
 | `font-family('heading')` | Returns formatted font-family stack |
-| `clip-path('shard')` | Returns clip-path polygon |
 
 ## SCSS Mixins
 
@@ -42,50 +41,47 @@ Import in any component: `@use '../../css/abstracts' as *;` (adjust relative pat
 |-------|-------|
 | `@include respond-to('tablet')` | Desktop-first `max-width` media query |
 | `@include heading` | Font-family, weight, letter-spacing, color for headings |
-| `@include card-base` | Background, border-radius, box-shadow |
 | `@include container` | Max-width + centered + inline padding |
-| `@include glass($opacity, $blur)` | Glassmorphism effect |
-| `@include bg-shape('slanted-bottom')` | Positioned, z-indexed, clipped (mixin only — no utility class) |
-| `@include image-clipped` | Border-radius + clip-path + drop-shadow (mixin only — no utility class) |
 | `@include truncate($lines)` | Single or multi-line text truncation |
 | `@include focus-ring` | Accessible focus outline |
 
 ## Type Scale
 
-Major Third (1.25 ratio). Available as CSS vars (`--text-*`) and `text-size()` function:
+Available as CSS vars (`--pk-text-*`) and `text-size()` function:
 
 | Token | rem | px |
 |-------|-----|----|
-| `--text-xs` / `text-size('xs')` | `1.0rem` | 10 |
-| `--text-sm` / `text-size('sm')` | `1.25rem` | 12.5 |
-| `--text-base` / `text-size('base')` | `1.5625rem` | 15.6 |
-| `--text-md` / `text-size('md')` | `1.953rem` | 19.5 |
-| `--text-lg` / `text-size('lg')` | `2.441rem` | 24.4 |
-| `--text-xl` / `text-size('xl')` | `3.052rem` | 30.5 |
-| `--text-2xl` / `text-size('2xl')` | `3.815rem` | 38.2 |
-| `--text-3xl` / `text-size('3xl')` | `4.768rem` | 47.7 |
-| `--text-4xl` / `text-size('4xl')` | `5.96rem` | 59.6 |
-| `--text-5xl` / `text-size('5xl')` | `7.451rem` | 74.5 |
+| `--pk-text-2xs` / `text-size('2xs')` | `0.625rem` | 6.25 |
+| `--pk-text-xs` / `text-size('xs')` | `0.75rem` | 7.5 |
+| `--pk-text-sm` / `text-size('sm')` | `0.875rem` | 8.75 |
+| `--pk-text-base` / `text-size('base')` | `1rem` | 10 |
+| `--pk-text-md` / `text-size('md')` | `1.125rem` | 11.25 |
+| `--pk-text-lg` / `text-size('lg')` | `1.375rem` | 13.75 |
+| `--pk-text-xl` / `text-size('xl')` | `1.75rem` | 17.5 |
+| `--pk-text-2xl` / `text-size('2xl')` | `2.25rem` | 22.5 |
+| `--pk-text-3xl` / `text-size('3xl')` | `3rem` | 30 |
+| `--pk-text-4xl` / `text-size('4xl')` | `4rem` | 40 |
+| `--pk-text-5xl` / `text-size('5xl')` | `5.5rem` | 55 |
 
 ## Spacing
 
-4px grid. Available as CSS vars (`--space-*`) and `space()` function:
+Available as CSS vars (`--pk-s-*`) and `space()` function:
 
 | Token | rem | px |
 |-------|-----|----|
-| `--space-1` / `space('1')` | `0.8rem` | 8 |
-| `--space-2` / `space('2')` | `1.2rem` | 12 |
-| `--space-3` / `space('3')` | `1.6rem` | 16 |
-| `--space-4` / `space('4')` | `2.0rem` | 20 |
-| `--space-5` / `space('5')` | `2.4rem` | 24 |
-| `--space-6` / `space('6')` | `3.2rem` | 32 |
-| `--space-7` / `space('7')` | `4.0rem` | 40 |
-| `--space-8` / `space('8')` | `4.8rem` | 48 |
-| `--space-9` / `space('9')` | `6.4rem` | 64 |
-| `--space-10` / `space('10')` | `8.0rem` | 80 |
-| `--space-11` / `space('11')` | `9.6rem` | 96 |
-| `--space-12` / `space('12')` | `11.2rem` | 112 |
-| `--space-13` / `space('13')` | `12.8rem` | 128 |
+| `--pk-s-0` / `space('0')` | `0` | 0 |
+| `--pk-s-1` / `space('1')` | `0.25rem` | 2.5 |
+| `--pk-s-2` / `space('2')` | `0.5rem` | 5 |
+| `--pk-s-3` / `space('3')` | `0.75rem` | 7.5 |
+| `--pk-s-4` / `space('4')` | `1rem` | 10 |
+| `--pk-s-5` / `space('5')` | `1.5rem` | 15 |
+| `--pk-s-6` / `space('6')` | `2rem` | 20 |
+| `--pk-s-7` / `space('7')` | `3rem` | 30 |
+| `--pk-s-8` / `space('8')` | `4rem` | 40 |
+| `--pk-s-9` / `space('9')` | `6rem` | 60 |
+| `--pk-s-10` / `space('10')` | `8rem` | 80 |
+| `--pk-s-11` / `space('11')` | `12rem` | 120 |
+| `--pk-s-12` / `space('12')` | `16rem` | 160 |
 
 No ad-hoc values. Round to nearest token.
 
@@ -105,64 +101,140 @@ Desktop-first (`max-width`). Single mixin `respond-to()` only — no `respond-ab
 
 ## Colors
 
-Use `color()` function or CSS vars. Never hardcode hex/rgb.
+Use `color()` function or `--pk-*` CSS vars. Never hardcode hex/rgb.
 
 | Key | Value | CSS Var |
 |-----|-------|---------|
-| `primary` | `#0d295b` | `--ifm-color-primary` |
-| `primary-dark` | `#0a1f47` | `--ifm-color-primary-dark` |
-| `primary-darker` | `#081838` | `--ifm-color-primary-darker` |
-| `primary-darkest` | `#051224` | `--ifm-color-primary-darkest` |
-| `primary-light` | `#244680` | `--ifm-color-primary-light` |
-| `primary-lighter` | `#3d6aa8` | `--ifm-color-primary-lighter` |
-| `primary-lightest` | `#5689d0` | `--ifm-color-primary-lightest` |
-| `ice` | `#eff6ff` | `--color-ice` |
-| `ice-light` | `#e8f4fd` | `--color-ice-light` |
-| `sky` | `rgba(147, 197, 253, 0.35)` | `--color-sky` |
-| `sky-bright` | `rgba(147, 197, 253, 0.6)` | `--color-sky-bright` |
-| `accent` | `#4a90e2` | `--color-accent` |
-| `accent-teal` | `#35a9d3` | `--color-accent-teal` |
-| `accent-teal-dark` | `#005967` | `--color-accent-teal-dark` |
-| `accent-amber` | `#d97706` | `--color-accent-amber` |
-| `accent-red` | `#dc2626` | `--color-accent-red` |
-| `grey-dark-2` | `#8E8E93` | `--color-grey-dark-2` |
-| `grey-dark-1` | `#AEAEB2` | `--color-grey-dark-1` |
-| `grey` | `#C7C7CC` | `--color-grey` |
-| `grey-light-1` | `#D1D1D6` | `--color-grey-light-1` |
-| `grey-light-2` | `#E5E5EA` | `--color-grey-light-2` |
-| `black` | `#000000` | `--color-black` |
-| `black-1` | `#1D1D1F` | `--color-black-1` |
-| `black-2` | `#3A3A3C` | `--color-black-2` |
-| `black-3` | `#48484A` | `--color-black-3` |
-| `black-4` | `#636366` | `--color-black-4` |
-| `white` | `#FFFFFF` | `--color-white` |
-| `white-1` | `#F5F5F7` | `--color-white-1` |
+| `primary` | `#1040a8` | `--pk-primary` |
+| `primary-dark` | `#0b2d80` | `--pk-primary-dark` |
+| `primary-darker` | `#081c58` | `--pk-primary-darker` |
+| `primary-darkest` | `#050e30` | `--pk-primary-darkest` |
+| `primary-light` | `#2060cc` | `--pk-primary-light` |
+| `primary-lighter` | `#4487e8` | `--pk-primary-lighter` |
+| `primary-lightest` | `#7ab3f5` | `--pk-primary-lightest` |
+| `ice` | `#eff6ff` | `--pk-ice` |
+| `ice-light` | `#e8f4fd` | `--pk-ice-light` |
+| `sky` | `rgb(147 197 253 / 35%)` | `--pk-sky` |
+| `sky-bright` | `rgb(147 197 253 / 60%)` | `--pk-sky-bright` |
+| `accent` | `#3b82f6` | `--pk-accent` |
+| `teal` | `#06c8d8` | `--pk-teal` |
+| `teal-dark` | `#0e7488` | `--pk-teal-dark` |
+| `amber` | `#e58c0a` | `--pk-amber` |
+| `red` | `#ef4444` | `--pk-red` |
+| `green` | `#16a34a` | `--pk-green` |
+| `black` | `#000` | `--pk-black` |
+| `ink-1` | `#1d1d1f` | `--pk-ink-1` |
+| `ink-2` | `#3a3a3c` | `--pk-ink-2` |
+| `ink-3` | `#48484a` | `--pk-ink-3` |
+| `ink-4` | `#636366` | `--pk-ink-4` |
+| `grey-1` | `#8e8e93` | `--pk-grey-1` |
+| `grey-2` | `#aeaeb2` | `--pk-grey-2` |
+| `grey-3` | `#c7c7cc` | `--pk-grey-3` |
+| `grey-4` | `#d1d1d6` | `--pk-grey-4` |
+| `grey-5` | `#e5e5ea` | `--pk-grey-5` |
+| `paper` | `#f5f5f7` | `--pk-paper` |
+| `paper-2` | `#f2f2f4` | `--pk-paper-2` |
+| `paper-3` | `#efefef` | `--pk-paper-3` |
+| `paper-4` | `#ebebed` | `--pk-paper-4` |
+| `white` | `#fff` | `--pk-white` |
 
-### Neutral Scale Usage
+### Semantic Color Tokens
 
-No semantic aliases — use scale tokens directly:
+Derived from the scale above, used for UI semantics:
 
-| Use case | Token |
-|----------|-------|
-| Primary text | `color('black-2')` |
-| Secondary text | `color('black-3')` |
-| Muted / placeholder text | `color('grey-dark-2')` |
-| Text on dark backgrounds | `color('grey-light-2')` |
-| Muted text on dark backgrounds | `color('grey-dark-1')` |
-| Borders | `color('grey-light-1')` |
-| Page / card background | `color('white-1')` |
-| Pure black / white | `color('black')` / `color('white')` |
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--pk-fg-strong` | `var(--pk-ink-1)` | Primary text |
+| `--pk-fg` | `var(--pk-ink-2)` | Body text |
+| `--pk-fg-muted` | `var(--pk-ink-4)` | Secondary / muted text |
+| `--pk-fg-subtle` | `var(--pk-grey-1)` | Subtle / hint text |
+| `--pk-fg-inverse` | `var(--pk-white)` | Text on dark backgrounds |
+| `--pk-fg-on-primary` | `#e8f4fd` | Text on primary bg |
+| `--pk-bg` | `var(--pk-white)` | Page background |
+| `--pk-bg-subtle` | `var(--pk-paper)` | Subtle bg |
+| `--pk-bg-deep` | `#081c58` | Dark section bg |
+| `--pk-bg-deeper` | `#050e30` | Deepest dark bg |
+| `--pk-border` | `var(--pk-grey-5)` | Default border |
+| `--pk-border-ink` | `var(--pk-ink-1)` | Strong border |
+| `--pk-hairline` | `1px solid var(--pk-border)` | Hairline border shorthand |
 
-## Clip-Path Shapes
+## Motion & Z-Index
 
-Available via `clip-path()` function or `bg-shape()` mixin (no utility classes):
+| Token | Value |
+|-------|-------|
+| `--pk-ease` | `cubic-bezier(0.22, 0.61, 0.36, 1)` |
+| `--pk-dur-1` | `120ms` |
+| `--pk-dur-2` | `200ms` |
+| `--pk-dur-3` | `320ms` |
+| `--pk-shadow-1` | `0 1px 0 rgb(13 41 91 / 4%)` |
+| `--pk-shadow-2` | `0 12px 32px -16px rgb(13 41 91 / 12%)` |
+| `--pk-z-sticky` | `100` |
+| `--pk-z-overlay` | `1000` |
 
-| Name | Shape |
-|------|-------|
-| `slanted-bottom` | `polygon(0 0, 100% 0, 100% 85%, 0 100%)` |
-| `cut-corner-br` | bottom-right cut corner |
-| `shard` | `polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)` |
-| `image-clipped` | subtle corner clip (use via `@include image-clipped` mixin) |
+## Typography: Named Styles (global classes in custom.scss)
+
+| Class | Font | Size | Weight | Usage |
+|-------|------|------|--------|-------|
+| `.pk-eyebrow` | mono | xs | 500 | Section labels, has `::before` dash |
+| `.pk-display` | display | 5xl | 300 | Hero display headings |
+| `.pk-h1` – `.pk-h4` | display | 3xl → lg | 300–500 | Section headings |
+| `.pk-lead` | body | md | 400 | Intro paragraphs |
+| `.pk-body` | body | base | 400 | Body text |
+| `.pk-meta` | body | sm | 400 | Metadata / captions |
+| `.pk-mono` | mono | sm | 500 | Monospace labels |
+| `.pk-coord` | mono | 2xs | 400 | Coordinate / ID labels |
+
+## Atom Components (src/components/UI/Atoms/)
+
+Reusable UI primitives. Each is a `PascalCase/` folder with `index.js` (+ `styles.module.scss` if styled).
+
+### Button
+
+`src/components/UI/Atoms/Button/`
+
+Variants: `primary`, `ink`, `outline`, `on-dark`, `ghost`. Size modifier: `sm`.
+
+- 48px height, 0 border-radius, uppercase, wide tracking (except ghost)
+- `ChevronRight` icon on LEFT of text (except ghost: no icon)
+- Props: `label`/`children`, `to`/`href`, `variant`, `size`, `showIcon`, `fullWidth`, `color`, `className`
+- Removed: `enableShine`, `enableExpand`, `iconPosition`
+
+### Eyebrow
+
+`src/components/UI/Atoms/Eyebrow/`
+
+Section label with `::before` horizontal dash. Mono font, xs, 500 weight, widest tracking, uppercase.
+
+- Props: `tone` — `"teal"` (default) or `"ink"`
+- Uses `--pk-teal` by default, `--pk-fg-strong` for ink tone
+
+### Coord
+
+`src/components/UI/Atoms/Coord/`
+
+Coordinate-frame label for LAT/LON, service IDs, dates, metadata. Mono font, 2xs, widest tracking, uppercase.
+
+- Props: `className` for color overrides (e.g., white on dark backgrounds)
+- Uses `--pk-fg-subtle` by default
+
+### Tag
+
+`src/components/UI/Atoms/Tag/`
+
+Bordered badge for categories. Mono font, 2xs, widest tracking, uppercase, hairline border.
+
+- Props: `variant` — `"default"`, `"teal"`, `"amber"`, `"solid"`
+- Non-default variants render a 6px `__dot` element
+- `solid`: ink bg + white text
+
+### InaDcMark
+
+`src/components/UI/Atoms/InaDcMark/`
+
+Inline SVG brand mark — pixel grid of rectangles + satellite dot circle.
+
+- Props: `size` (default `36`), `color` (default `"var(--pk-primary, #1040a8)"`)
+- No SCSS module (pure SVG, no styles needed)
 
 ## CSS Rules
 

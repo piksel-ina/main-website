@@ -1,0 +1,10 @@
+@use '../../../../css/abstracts' as *;
+
+.coord {
+  font-family: var(--pk-font-mono);
+  font-size: var(--pk-text-2xs);
+  font-weight: 400;
+  color: var(--pk-fg-subtle);
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+}
