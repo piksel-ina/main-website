@@ -1,16 +1,8 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
-import { ChevronRight, ArrowRight, MoveRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import styles from './styles.module.scss';
-
-const defaultIcons = {
-  primary: ChevronRight,
-  hero: ChevronRight,
-  secondary: ChevronRight,
-  link: ArrowRight,
-  outlined: MoveRight,
-};
 
 const Button = ({
   label,
@@ -19,13 +11,10 @@ const Button = ({
   href,
   onClick,
   variant = 'primary',
+  size,
   color,
-  icon: Icon,
-  iconPosition = 'right',
   showIcon = true,
   fullWidth = false,
-  enableShine,
-  enableExpand,
   className,
   ...props
 }) => {
@@ -34,23 +23,19 @@ const Button = ({
     children ||
     translate({ id: 'ui.button.defaultLabel', message: 'Learn More' });
   const Component = to || href ? Link : 'button';
-  const ButtonIcon = Icon || defaultIcons[variant] || null;
   const style = color
     ? { ...props.style, '--button-color': color }
     : props.style;
-
-  const showShine =
-    enableShine !== undefined ? enableShine : variant === 'primary';
-  const shouldExpand =
-    enableExpand !== undefined ? enableExpand : variant === 'primary';
+  const isGhost = variant === 'ghost';
+  const renderIcon = showIcon && !isGhost;
 
   return (
     <Component
       className={clsx(
         styles.button,
         styles[`button--${variant}`],
+        size === 'sm' && styles['button--sm'],
         fullWidth && styles['button--fullWidth'],
-        shouldExpand && styles['button--expandOnHover'],
         className,
       )}
       onClick={onClick}
@@ -60,21 +45,11 @@ const Button = ({
       {...(!(to || href) && { type: 'button' })}
       {...props}
     >
-      {showShine && (
-        <div className={styles['button__shine']} aria-hidden="true" />
+      {renderIcon && (
+        <ChevronRight className={styles.button__icon} aria-hidden="true" />
       )}
-
-      {showIcon && ButtonIcon && iconPosition === 'left' && (
-        <ButtonIcon className={styles['button__icon']} aria-hidden="true" />
-      )}
-
       <span>{content}</span>
-
-      {showIcon && ButtonIcon && iconPosition === 'right' && (
-        <ButtonIcon className={styles['button__icon']} aria-hidden="true" />
-      )}
     </Component>
   );
 };
-
 export default Button;

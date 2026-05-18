@@ -42,15 +42,12 @@ export default function Hero() {
             <Button
               to={heroData.ctaPrimary.link}
               label={heroData.ctaPrimary.text}
-              variant="hero"
-              iconPosition="left"
-              enableShine={false}
-              enableExpand={false}
+              variant="primary"
             />
             <Button
               to={heroData.ctaSecondary.link}
               label={heroData.ctaSecondary.text}
-              variant="link"
+              variant="ghost"
             />
           </div>
 

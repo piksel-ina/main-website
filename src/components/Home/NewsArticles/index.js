@@ -129,7 +129,7 @@ const NewsArticles = () => {
           <div className={styles.newsArticles__listFooter}>
             <Button
               to="/blog"
-              variant="outlined"
+              variant="outline"
               color="#1D1D1F"
               label={translate({
                 id: 'homepage.news.viewAll',

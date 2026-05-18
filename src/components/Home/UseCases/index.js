@@ -164,7 +164,7 @@ export default function UseCases() {
                         <Button
                           href={item?.link || '#'}
                           label={useCasesHeaderData?.learnMoreText}
-                          variant="link"
+                          variant="ghost"
                         />
                       </div>
                     </div>
@@ -178,7 +178,7 @@ export default function UseCases() {
 
       <div className={styles.useCases__viewAllWrapper}>
         <Button
-          variant="outlined"
+          variant="outline"
           label={useCasesHeaderData?.viewAllText}
           to="/docs/category/kasus-penggunaan"
         />
