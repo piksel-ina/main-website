@@ -1,0 +1,24 @@
+@use '../../../../css/abstracts' as *;
+
+.eyebrow {
+  display: inline-flex;
+  gap: var(--pk-s-2);
+  align-items: center;
+  font-family: var(--pk-font-mono);
+  font-size: var(--pk-text-xs);
+  font-weight: 500;
+  color: var(--pk-teal);
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+
+  &::before {
+    width: 2.4rem;
+    height: 1px;
+    content: '';
+    background: currentcolor;
+  }
+
+  &--ink {
+    color: var(--pk-fg-strong);
+  }
+}

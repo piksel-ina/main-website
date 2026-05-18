@@ -1,0 +1,38 @@
+@use '../../../../css/abstracts' as *;
+
+.tag {
+  display: inline-flex;
+  gap: var(--pk-s-2);
+  align-items: center;
+  padding: 0.4rem 1rem;
+  font-family: var(--pk-font-mono);
+  font-size: var(--pk-text-2xs);
+  font-weight: 500;
+  color: var(--pk-fg-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+  background: transparent;
+  border: var(--pk-hairline);
+
+  &--teal {
+    color: var(--pk-teal);
+    border-color: var(--pk-teal);
+  }
+
+  &--amber {
+    color: var(--pk-amber);
+    border-color: var(--pk-amber);
+  }
+
+  &--solid {
+    color: var(--pk-white);
+    background: var(--pk-ink-1);
+    border-color: var(--pk-ink-1);
+  }
+
+  &__dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    background: currentcolor;
+  }
+}
