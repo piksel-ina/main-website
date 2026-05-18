@@ -1,0 +1,70 @@
+@use '../../../../css/abstracts' as *;
+
+.sectionHeader {
+  max-width: 47.5rem;
+
+  &--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &--split {
+    display: flex;
+    flex-direction: row;
+    gap: var(--pk-s-6);
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+
+    @include respond-to('tablet') {
+      flex-direction: column;
+      gap: var(--pk-s-4);
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pk-s-3);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--pk-font-display);
+    font-size: var(--pk-text-2xl);
+    font-weight: 400;
+    line-height: var(--pk-lh-snug);
+    color: var(--pk-fg-strong);
+    letter-spacing: var(--pk-track-tight);
+
+    @include respond-to('phone-wide') {
+      font-size: var(--pk-text-xl);
+    }
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-lg);
+    }
+  }
+
+  &__sub {
+    max-width: 85ch;
+    font-family: var(--pk-font-body);
+    font-size: var(--pk-text-md);
+    font-weight: 400;
+    line-height: var(--pk-lh-relaxed);
+    color: var(--pk-fg);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-base);
+    }
+  }
+
+  &__action {
+    flex-shrink: 0;
+
+    @include respond-to('tablet') {
+      align-self: flex-start;
+    }
+  }
+}

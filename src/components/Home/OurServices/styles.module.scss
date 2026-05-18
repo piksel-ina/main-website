@@ -25,9 +25,6 @@
   /* === HEADER === */
 
   &__header {
-    display: flex;
-    flex-direction: column;
-    gap: space('2');
     margin-bottom: space('8');
 
     @include respond-to('tablet') {
@@ -36,64 +33,6 @@
 
     @include respond-to('phone') {
       margin-bottom: space('4');
-    }
-  }
-
-  &__accentLine {
-    display: flex;
-    gap: space('2');
-    align-items: center;
-  }
-
-  &__accentLineBar {
-    width: space('5');
-    height: 0.2rem;
-    background-color: color('grey-1');
-    border-radius: 0.1rem;
-
-    @include respond-to('phone') {
-      width: space('3');
-    }
-  }
-
-  &__accentText {
-    font-size: text-size('sm');
-    font-weight: 700;
-    color: color('grey-1');
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-
-    @include respond-to('phone') {
-      font-size: text-size('xs');
-    }
-  }
-
-  &__headerTitle {
-    @include heading;
-
-    margin: 0;
-    font-size: text-size('2xl');
-    line-height: 1.1;
-    color: color('ink-1');
-
-    @include respond-to('phone-wide') {
-      font-size: text-size('xl');
-    }
-
-    @include respond-to('phone') {
-      font-size: text-size('lg');
-    }
-  }
-
-  &__headerDesc {
-    max-width: 61.4rem;
-    font-size: text-size('base');
-    line-height: 1.7;
-    color: color('ink-3');
-    opacity: 0.75;
-
-    @include respond-to('phone') {
-      font-size: text-size('sm');
     }
   }
 
