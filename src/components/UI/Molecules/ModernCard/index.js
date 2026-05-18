@@ -27,7 +27,7 @@ function ModernCard({ image, title, description, link }) {
           <p className={styles.modernCard__description}>{description}</p>
           <Button
             to={link}
-            variant="link"
+            variant="ghost"
             className={styles.modernCard__button}
           >
             {translate({

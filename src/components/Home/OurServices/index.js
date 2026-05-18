@@ -60,7 +60,7 @@ export default function OurServices() {
         <Button
           to={servicesHeaderData.viewAllLink}
           label={servicesHeaderData.viewAllText}
-          variant="outlined"
+          variant="outline"
           color="#1D1D1F"
         />
       </div>

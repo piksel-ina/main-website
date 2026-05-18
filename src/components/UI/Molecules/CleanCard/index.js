@@ -38,7 +38,7 @@ const CleanCard = ({
           </Button>
           <Button
             to={link}
-            variant="link"
+            variant="ghost"
             className={styles.cleanCard__ctaSecondary}
           >
             {buttonTextSecondary}
