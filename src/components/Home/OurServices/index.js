@@ -3,23 +3,17 @@ import { servicesData, servicesHeaderData } from '@site/src/data/servicesData';
 import styles from './styles.module.scss';
 import { ArrowRight } from 'lucide-react';
 import Button from '../../UI/Atoms/Button';
+import SectionHeader from '../../UI/Molecules/SectionHeader';
 
 export default function OurServices() {
   return (
     <section id="services" className={styles.ourServices}>
       <div className={styles.ourServices__header}>
-        <div className={styles.ourServices__accentLine}>
-          <div className={styles.ourServices__accentLineBar} />
-          <span className={styles.ourServices__accentText}>
-            {servicesHeaderData.title}
-          </span>
-        </div>
-        <h2 className={styles.ourServices__headerTitle}>
-          {servicesHeaderData.tag}
-        </h2>
-        <p className={styles.ourServices__headerDesc}>
-          {servicesHeaderData.subtitle}
-        </p>
+        <SectionHeader
+          eyebrow={servicesHeaderData.title}
+          title={servicesHeaderData.tag}
+          sub={servicesHeaderData.subtitle}
+        />
       </div>
 
       <div className={styles.ourServices__servicesGrid}>
