@@ -7,8 +7,6 @@
   background: color('white');
   border-radius: 1.6rem;
 
-  @include section-shadow;
-
   &::before {
     position: absolute;
     top: -4rem;
@@ -147,7 +145,7 @@
   &__accentText {
     font-size: text-size('sm');
     font-weight: 700;
-    color: color('black-2');
+    color: color('ink-2');
     text-transform: uppercase;
     letter-spacing: 0.1em;
 
@@ -162,7 +160,7 @@
     margin: 0;
     font-size: text-size('2xl');
     line-height: 1.1;
-    color: color('black-1');
+    color: color('ink-1');
 
     @include respond-to('phone-wide') {
       font-size: text-size('xl');
@@ -176,7 +174,7 @@
   &__headerDesc {
     font-size: text-size('base');
     line-height: 1.7;
-    color: color('black-3');
+    color: color('ink-3');
 
     @include respond-to('phone') {
       font-size: text-size('sm');
