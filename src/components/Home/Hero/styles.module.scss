@@ -2,22 +2,11 @@
 
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: space('3');
-  align-items: center;
-  min-height: 500px;
-  padding: 0 var(--ifm-spacing-horizontal);
-  padding-top: space('8');
-  padding-bottom: space('8');
+  padding: var(--pk-navbar-h) var(--pk-gutter) 0;
   overflow: hidden;
-  background: linear-gradient(
-    150deg,
-    color('primary-darker') 0%,
-    color('primary-dark') 45%,
-    color('teal-dark') 100%
-  );
-  border-radius: 1.6rem;
+  color: var(--pk-fg-inverse);
+  background: var(--pk-bg-deeper);
+  isolation: isolate;
 
   &::before {
     position: absolute;
@@ -25,298 +14,284 @@
     z-index: 0;
     pointer-events: none;
     content: '';
-    background-image: url('./contour-lines.svg');
-    background-position: center;
-    background-size: cover;
-    opacity: 1;
+    background:
+      radial-gradient(
+        ellipse at top right,
+        rgb(16 64 168 / 55%) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        rgb(6 200 216 / 18%) 0%,
+        transparent 60%
+      );
   }
 
-  &::after {
+  &__bg {
     position: absolute;
-    top: 15%;
-    right: 5%;
-    z-index: 0;
-    width: 60%;
-    height: 70%;
-    pointer-events: none;
-    content: '';
-    background: radial-gradient(
-      ellipse at center,
-      rgba(color('amber'), 0.08) 0%,
-      rgba(color('amber'), 0.03) 40%,
-      transparent 70%
-    );
-  }
-
-  @include respond-to('tablet') {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: space('7') space('4');
-    border-radius: 1.2rem;
-  }
-
-  @include respond-to('phone') {
-    padding-right: space('5');
-    padding-bottom: space('3');
-    padding-left: 0;
-    border-radius: 0.8rem;
-  }
-
-  &__imageContainer {
-    position: absolute;
-    top: 25%;
-    right: 1%;
-    bottom: 0;
+    inset: 0;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 55%;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
-    /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-    mask-image: linear-gradient(to right, transparent 0%, black 15%);
+  }
+
+  &__grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+    min-height: 28rem;
+    padding: var(--pk-s-2) 0 var(--pk-s-8);
+    margin: 0 auto;
 
     @include respond-to('laptop') {
-      top: 40%;
-      right: -7rem;
-      width: 70%;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);
-      /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-      mask-image: linear-gradient(to right, transparent 0%, black 50%);
+      min-height: 26rem;
+      padding: var(--pk-s-3) 0 var(--pk-s-3);
     }
 
     @include respond-to('tablet') {
-      right: -5.8rem;
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding: var(--pk-s-4) var(--pk-gutter) var(--pk-s-4);
     }
 
     @include respond-to('phone-wide') {
-      right: -5.2rem;
-      width: 82%;
-    }
-
-    @include respond-to('phone') {
-      top: 52%;
-      right: -3.5rem;
-      width: 110%;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 0%);
-      /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-      mask-image: linear-gradient(to right, transparent 0%, black 0%);
+      padding: var(--pk-s-3) var(--pk-s-4) var(--pk-s-3);
     }
   }
 
-  &__image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: right center;
-    filter: brightness(1.05);
-    transform: scale(0.9);
-  }
-
-  &__contentWrapper {
-    position: relative;
-    z-index: 10;
-    grid-row: 1;
-    grid-column: 1 / 7;
-    align-self: center;
-    padding: 3.6rem 0 0 space('12');
+  &__copy {
+    max-width: 95%;
+    padding: 0 var(--pk-s-5) 0 var(--pk-gutter);
 
     @include respond-to('laptop') {
-      grid-column: 1 / 8;
-      padding-left: space('8');
+      padding: 0 var(--pk-s-4) 0 var(--pk-gutter);
     }
 
     @include respond-to('tablet') {
-      grid-column: 1 / -1;
-      padding-top: space('5');
-      padding-left: space('4');
+      max-width: 100%;
+      padding: 0;
     }
-  }
-
-  &__content {
-    width: 100%;
-  }
-
-  &__tag {
-    display: inline-block;
-    padding: 0.35rem 1rem 0.35rem 1.2rem;
-    margin-bottom: space('3');
-    font-family: var(--font-family-heading);
-    font-size: text-size('xs');
-    font-weight: 600;
-    color: color('grey-5');
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background: transparent;
-    border: 1px solid rgb(255 255 255 / 15%);
-    border-left: 3px solid color('teal');
-    border-radius: 3px;
   }
 
   &__title {
-    max-width: 20ch;
-    margin-bottom: space('5');
-    font-size: text-size('3xl');
-    font-weight: 700;
-    line-height: 1.15;
-    color: color('grey-5');
-    letter-spacing: -1px;
+    margin: var(--pk-s-4) 0 var(--pk-s-5);
+    font-family: var(--pk-font-display);
+    font-size: var(--pk-text-3xl);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--pk-white);
+    letter-spacing: var(--pk-track-tight);
+
+    @include respond-to('laptop') {
+      font-size: 2.375rem;
+    }
 
     @include respond-to('tablet') {
-      font-size: text-size('2xl');
+      font-size: 2.25rem;
     }
 
     @include respond-to('phone-wide') {
-      font-size: text-size('xl');
-    }
-  }
-
-  &__titleHighlight {
-    color: color('teal');
-  }
-
-  &__divider {
-    width: 40px;
-    height: 2px;
-    margin: 22px 0;
-    background: linear-gradient(90deg, #7ec8e3, transparent);
-    border-radius: 2px;
-  }
-
-  &__subtitle {
-    max-width: 55ch;
-    margin-bottom: space('7');
-    font-size: text-size('base');
-    line-height: 1.7;
-    color: color('grey-5');
-    opacity: 0.85;
-
-    @include respond-to('tablet') {
-      max-width: 40ch;
-    }
-
-    @include respond-to('phone-wide') {
-      max-width: 55ch;
+      font-size: 1.875rem;
     }
 
     @include respond-to('phone') {
-      max-width: 45ch;
-      font-size: text-size('sm');
+      font-size: 1.625rem;
     }
+  }
+
+  &__titleEm {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--pk-teal);
+  }
+
+  &__sub {
+    max-width: 46ch;
+    margin: 0;
+    font-size: var(--pk-text-base);
+    line-height: var(--pk-lh-relaxed);
+    color: var(--pk-fg-inverse-muted);
   }
 
   &__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: space('3');
-    align-items: center;
-    margin-bottom: space('8');
-
-    @include respond-to('phone-wide') {
-      opacity: 1;
-    }
+    gap: var(--pk-s-3);
+    margin-top: var(--pk-s-5);
   }
 
-  &__statsRow {
-    display: flex;
-    gap: space('1');
-    margin-bottom: space('3');
-
-    @include respond-to('tablet') {
-      flex-wrap: nowrap;
-      gap: space('2');
-    }
-
-    @include respond-to('phone') {
-      justify-content: space-between;
-      padding-top: 10rem;
-    }
-  }
-
-  &__statItem {
-    display: flex;
-    gap: space('1');
-    align-items: center;
-    padding-right: space('7');
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    @include respond-to('tablet') {
-      padding-right: space('1');
-    }
-  }
-
-  &__statIcon {
-    flex-shrink: 0;
-    width: 3rem;
-    color: color('grey-5');
-
-    @include respond-to('tablet') {
-      width: 2rem;
-    }
-
-    @include respond-to('phone') {
-      font-size: 0.1rem;
-    }
-  }
-
-  &__statText {
+  &__photo {
+    position: relative;
     display: flex;
     flex-direction: column;
-  }
+    align-self: stretch;
+    margin-left: var(--pk-s-5);
+    overflow: hidden;
 
-  &__statRow {
-    display: flex;
-    gap: space('1');
-    align-items: center;
+    @include respond-to('laptop') {
+      margin-left: var(--pk-s-4);
+    }
 
     @include respond-to('tablet') {
-      gap: 0.5rem;
+      min-height: 16rem;
+      margin-top: var(--pk-s-4);
+      margin-left: 0;
+      border-top: 1px solid var(--pk-border-on-dark);
+      border-left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      content: '';
+      background: linear-gradient(
+        135deg,
+        rgb(5 14 48 / 30%) 0%,
+        rgb(5 14 48 / 0%) 50%
+      );
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 28rem;
+      object-fit: cover;
+      object-position: center;
+
+      @include respond-to('laptop') {
+        min-height: 26rem;
+      }
+
+      @include respond-to('tablet') {
+        min-height: 16rem;
+      }
+    }
+  }
+
+  &__frame {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0.2rem;
+    pointer-events: none;
+
+    @include respond-to('phone-wide') {
+      display: none;
+    }
+  }
+
+  &__frameLabel {
+    color: var(--pk-fg-inverse-subtle);
+  }
+
+  &__photoTag {
+    position: absolute;
+    right: var(--pk-s-3);
+    bottom: var(--pk-s-3);
+    left: var(--pk-s-3);
+    z-index: 2;
+    display: flex;
+    gap: var(--pk-s-3);
+    justify-content: space-between;
+    padding: 0.4rem 0.65rem;
+    background: rgb(5 14 48 / 65%);
+    border: 1px solid var(--pk-border-on-dark);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+
+    @include respond-to('phone-wide') {
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+  }
+
+  &__photoMeta {
+    color: var(--pk-fg-inverse-secondary);
+  }
+
+  /* === STATS STRIP === */
+
+  &__stats {
+    position: relative;
+    z-index: 3;
+    margin-right: calc(-1 * var(--pk-gutter));
+    margin-left: calc(-1 * var(--pk-gutter));
+    color: var(--pk-fg-strong);
+    background: var(--pk-white);
+    border-top: var(--pk-hairline);
+    border-bottom: var(--pk-hairline);
+  }
+
+  &__statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: calc(var(--pk-container-wide) * 0.85);
+    padding: 0 var(--pk-gutter);
+    margin: 0 auto;
+
+    @include respond-to('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to('phone') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__stat {
+    padding: var(--pk-s-4) var(--pk-s-4);
+    border-right: var(--pk-hairline);
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    @include respond-to('tablet') {
+      &:nth-child(2) {
+        border-right: 0;
+      }
+    }
+
+    @include respond-to('phone') {
+      border-right: 0;
+      border-bottom: var(--pk-hairline);
+
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 
   &__statValue {
-    font-family: var(--font-family-heading);
-    font-size: text-size('lg');
-    font-weight: 700;
+    margin-top: var(--pk-s-2);
+    font-family: var(--pk-font-display);
+    font-size: var(--pk-text-xl);
+    font-weight: 300;
     line-height: 1;
-    color: color('grey-5');
-    opacity: 0.9;
+    color: var(--pk-fg-strong);
+    letter-spacing: var(--pk-track-tight);
 
     @include respond-to('laptop') {
-      font-size: text-size('md');
-    }
-
-    @include respond-to('phone-wide') {
-      font-size: text-size('base');
-    }
-
-    @include respond-to('phone') {
-      font-size: text-size('sm');
+      font-size: var(--pk-text-lg-xl);
     }
   }
 
-  &__statLabel {
-    max-width: 18ch;
-    margin-top: 0.5rem;
-    font-size: text-size('xs');
-    font-weight: 500;
-    color: color('grey-2');
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-
-    @include respond-to('phone-wide') {
-      font-size: 0.8rem;
-    }
-
-    @include respond-to('phone') {
-      max-width: 35ch;
-      margin-top: 0.2rem;
-      font-size: 0.6rem;
-    }
+  &__statDesc {
+    max-width: 24ch;
+    margin-top: var(--pk-s-1);
+    font-size: var(--pk-text-xs);
+    line-height: var(--pk-lh-normal);
+    color: var(--pk-fg-muted);
   }
 }

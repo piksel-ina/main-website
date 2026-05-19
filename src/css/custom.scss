@@ -44,6 +44,9 @@
   --pk-fg-muted: var(--pk-ink-4);
   --pk-fg-subtle: var(--pk-grey-1);
   --pk-fg-inverse: var(--pk-white);
+  --pk-fg-inverse-muted: rgb(255 255 255 / 75%);
+  --pk-fg-inverse-subtle: rgb(255 255 255 / 45%);
+  --pk-fg-inverse-secondary: rgb(255 255 255 / 85%);
   --pk-fg-on-primary: #e8f4fd;
   --pk-link: var(--pk-primary);
   --pk-link-hover: var(--pk-accent);

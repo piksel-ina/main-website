@@ -96,8 +96,6 @@ SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS cu
 
 **Desktop-first approach:** Default styles target ≥ 1440px. Use `@include respond-to('<breakpoint>')` to override for smaller screens. Single mixin, `max-width` only — no `respond-above`.
 
-**Editing SCSS?** Load the `styling-system` skill first — it provides all tokens, functions, mixins, breakpoints, and design rules at edit time.
-
 **Visual verification:** Token-only swaps (color, spacing, font-size) need no visual check. For layout changes (flex, grid, breakpoints, new components, clip-paths), delegate to the `@visual-check` subagent — never consume screenshots in the main context.
 
 ### Tooling Rules

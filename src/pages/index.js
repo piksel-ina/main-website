@@ -24,9 +24,7 @@ export default function Home() {
         description: 'Meta description for the homepage',
       })}
     >
-      <div className="sectionContainer">
-        <Hero />
-      </div>
+      <Hero />
       <main>
         <div className="sectionContainer">
           <UseCases />

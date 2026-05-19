@@ -377,7 +377,7 @@
     "description": "The highlighted portion of the hero title"
   },
   "homepage.hero.subtitle": {
-    "message": "Satu platform lengkap untuk mengakses data satelit, menganalisis, memvisualisasikan, dan mengambil keputusan berbasis geospasial. Dari data hingga insight, semua dalam satu ekosistem cloud.",
+    "message": "Satu platform terbuka yang menghimpun puluhan tahun citra satelit siap analisis bersama komputasi awan elastis. Jelajahi, analisis, dan putuskan — tanpa keluar dari data.",
     "description": "The subtitle text on the homepage hero section"
   },
   "homepage.hero.cta.primary": {
@@ -385,8 +385,8 @@
     "description": "Primary CTA button text"
   },
   "homepage.hero.cta.secondary": {
-    "message": "Pahami Piksel",
-    "description": "Secondary CTA button text linking to FAQ section"
+    "message": "Jelajahi Data",
+    "description": "Secondary CTA button text"
   },
   "homepage.hero.image.alt": {
     "message": "Piksel Hero Image",
@@ -728,5 +728,17 @@
   "useCases.header.sub": {
     "message": "Pemanfaatan data penginderaan jauh untuk mendukung pengambilan kebijakan berbasis bukti dan memperkuat ketahanan nasional di berbagai sektor strategis Indonesia.",
     "description": "Subtitle description for the use cases section"
+  },
+  "homepage.hero.titlePart1": {
+    "message": "Dari orbit hingga",
+    "description": "First part of hero title before emphasis"
+  },
+  "homepage.hero.titleEmphasis": {
+    "message": "insight yang dapat ditindaklanjuti",
+    "description": "Emphasized part of hero title styled italic+teal"
+  },
+  "homepage.hero.titlePart2": {
+    "message": "untuk seluruh Indonesia.",
+    "description": "Last part of hero title after emphasis"
   }
 }
