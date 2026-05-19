@@ -7,15 +7,25 @@ export const heroData = {
     message: "Indonesia Datacube · v2.4",
     description: "The eyebrow text above the hero title",
   }),
-  title: translate({
-    id: "homepage.hero.title",
-    message: "Dari Data Satelit hingga Keputusan yang Cerdas",
-    description: "The main title on the homepage hero section",
+  titlePart1: translate({
+    id: "homepage.hero.titlePart1",
+    message: "Dari orbit hingga",
+    description: "First part of hero title before emphasis",
+  }),
+  titleEmphasis: translate({
+    id: "homepage.hero.titleEmphasis",
+    message: "insight yang dapat ditindaklanjuti",
+    description: "Emphasized part of hero title styled italic+teal",
+  }),
+  titlePart2: translate({
+    id: "homepage.hero.titlePart2",
+    message: "untuk seluruh Indonesia.",
+    description: "Last part of hero title after emphasis",
   }),
   subtitle: translate({
     id: "homepage.hero.subtitle",
     message:
-      "Satu platform lengkap untuk mengakses data satelit, menganalisis, memvisualisasikan, dan mengambil keputusan berbasis geospasial. Dari data hingga insight, semua dalam satu ekosistem cloud.",
+      "Satu platform terbuka yang menghimpun puluhan tahun citra satelit siap analisis bersama komputasi awan elastis. Jelajahi, analisis, dan putuskan — tanpa keluar dari data.",
     description: "The subtitle text on the homepage hero section",
   }),
   coords: {
@@ -58,14 +68,10 @@ export const heroData = {
   ctaSecondary: {
     text: translate({
       id: "homepage.hero.cta.secondary",
-      message: "Pahami Piksel",
-      description: "Secondary CTA button text linking to FAQ section",
+      message: "Jelajahi Data",
+      description: "Secondary CTA button text",
     }),
     link: "/#faq",
   },
-  stats: statsData.stats.map((stat) => ({
-    value: stat.value,
-    label: stat.label,
-  })),
   photo: require("@site/static/img/news/featured-01.webp").default,
 };

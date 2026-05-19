@@ -45,10 +45,12 @@ const Button = ({
       {...(!(to || href) && { type: 'button' })}
       {...props}
     >
-      {renderIcon && (
-        <ChevronRight className={styles.button__icon} aria-hidden="true" />
-      )}
-      <span>{content}</span>
+      <span className={styles.button__label}>
+        {renderIcon && (
+          <ChevronRight className={styles.button__icon} aria-hidden="true" />
+        )}
+        {content}
+      </span>
     </Component>
   );
 };
