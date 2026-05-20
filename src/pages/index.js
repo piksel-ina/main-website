@@ -25,12 +25,10 @@ export default function Home() {
       })}
     >
       <Hero />
+      <OurServices />
       <main>
         <div className="sectionContainer">
           <UseCases />
-        </div>
-        <div className="sectionContainer">
-          <OurServices />
         </div>
         <div className="sectionContainer">
           <Faq />
