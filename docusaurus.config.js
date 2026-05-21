@@ -231,10 +231,11 @@ const config = {
       },
       image: 'img/logos/logo-big-360px.png',
       navbar: {
+        hideOnScroll: true,
         title: '',
         logo: {
           alt: 'Logo Badan Informasi Geospasial',
-          src: 'img/logos/logo-big-360px.png',
+          src: 'img/logos/logo-big-360px-white.png',
         },
         items: [
           {
@@ -246,7 +247,6 @@ const config = {
           { href: '/#use-cases', label: 'Pemanfaatan', position: 'right' },
           { href: '/#services', label: 'Layanan', position: 'right' },
           { href: '/#news', label: 'Berita', position: 'right' },
-          { href: '/#faq', label: 'FAQ', position: 'right' },
           {
             type: 'localeDropdown',
             position: 'right',

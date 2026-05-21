@@ -1,22 +1,24 @@
 @use '../../../css/abstracts' as *;
 
-.localeFlag {
+.localeDropdown {
   display: inline-flex;
+  gap: var(--pk-s-2);
   align-items: center;
-  padding-right: 0.8rem;
-  margin-right: 0.8rem;
-  line-height: 1;
-  border-right: 1px solid color('grey-4');
+  padding: var(--pk-s-1) var(--pk-s-2);
+  font-family: font-family('mono');
+  font-size: text-size('2xs');
+  font-weight: 500;
+  color: rgb(255 255 255 / 70%);
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 0;
+  transition:
+    border-color var(--pk-dur-2) var(--pk-ease),
+    color var(--pk-dur-2) var(--pk-ease);
 
-  img {
-    display: block;
-    border-radius: 2px;
+  &:hover {
+    color: var(--pk-white);
+    border-color: rgb(255 255 255 / 50%);
   }
-}
-
-.dropdownFlag {
-  display: inline-block;
-  margin-right: 0.6rem;
-  vertical-align: middle;
-  border-radius: 2px;
 }

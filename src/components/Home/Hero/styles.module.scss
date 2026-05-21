@@ -3,6 +3,7 @@
 .hero {
   position: relative;
   padding: var(--pk-navbar-h) var(--pk-gutter) 0;
+  margin-top: calc(-1 * var(--pk-navbar-h));
   overflow: hidden;
   color: var(--pk-fg-inverse);
   background: var(--pk-bg-deeper);
