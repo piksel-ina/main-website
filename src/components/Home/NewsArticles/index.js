@@ -2,69 +2,62 @@ import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
 import useGlobalData from '@docusaurus/useGlobalData';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './styles.module.scss';
 import { Calendar, User } from 'lucide-react';
 import Button from '@site/src/components/UI/Atoms/Button';
+import styles from './styles.module.scss';
 
 const HighlightedCard = ({ post, dateLocale }) => (
-  <Link to={post.permalink} className={styles.newsArticles__highlightedCard}>
-    <img
-      src={post.image}
-      alt={post.title}
-      className={styles.newsArticles__highlightedImage}
-      loading="lazy"
-    />
-    <div className={styles.newsArticles__highlightedOverlay}>
-      <div className={styles.newsArticles__highlightedTop}>
-        <div className={styles.newsArticles__meta}>
-          {post.authors?.[0] && (
-            <span className={styles.newsArticles__metaItem}>
-              <User size={14} strokeWidth={1.8} />
-              {post.authors[0].name}
-            </span>
-          )}
-          <span className={styles.newsArticles__metaItem}>
-            <Calendar size={14} strokeWidth={1.8} />
-            {new Date(post.date).toLocaleDateString(dateLocale, {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
+  <Link to={post.permalink} className={styles.card}>
+    {post.image && (
+      <img
+        src={post.image}
+        alt={post.title}
+        className={styles.card__img}
+        loading="lazy"
+      />
+    )}
+    <div className={styles.card__body}>
+      <h3 className={styles.card__title}>{post.title}</h3>
+      <p className={styles.card__desc}>{post.description}</p>
+      <div className={styles.card__meta}>
+        {post.authors?.[0] && (
+          <span className={styles.meta}>
+            <User size={11} strokeWidth={1.8} /> {post.authors[0].name}
           </span>
-        </div>
-      </div>
-      <div className={styles.newsArticles__highlightedBottom}>
-        <h3 className={styles.newsArticles__highlightedTitle}>{post.title}</h3>
-        <p className={styles.newsArticles__highlightedDesc}>
-          {post.description}
-        </p>
+        )}
+        <span className={styles.meta}>
+          <Calendar size={11} strokeWidth={1.8} />{' '}
+          {new Date(post.date).toLocaleDateString(dateLocale, {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+          })}
+        </span>
       </div>
     </div>
   </Link>
 );
 
 const ListItem = ({ post }) => (
-  <Link to={post.permalink} className={styles.newsArticles__listItem}>
-    <div className={styles.newsArticles__listItemImageWrapper}>
-      {post.image && (
-        <img
-          src={post.image}
-          alt={post.title}
-          className={styles.newsArticles__listItemImage}
-          loading="lazy"
-        />
-      )}
-    </div>
-    <div className={styles.newsArticles__listItemContent}>
-      <h4 className={styles.newsArticles__listItemTitle}>{post.title}</h4>
-      <div className={styles.newsArticles__meta}>
-        {post.authors?.[0] && (
-          <span className={styles.newsArticles__metaItem}>
-            <User size={12} strokeWidth={1.8} />
-            {post.authors[0].name}
+  <Link to={post.permalink} className={styles.item}>
+    {post.image && (
+      <img
+        src={post.image}
+        alt={post.title}
+        className={styles.item__img}
+        loading="lazy"
+      />
+    )}
+    <div className={styles.item__body}>
+      <h4 className={styles.item__title}>{post.title}</h4>
+      <p className={styles.item__desc}>{post.description}</p>
+      {post.authors?.[0] && (
+        <div className={styles.item__author}>
+          <span className={styles.meta}>
+            <User size={11} strokeWidth={1.8} /> {post.authors[0].name}
           </span>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   </Link>
 );
@@ -82,38 +75,37 @@ const NewsArticles = () => {
   if (featuredPosts.length === 0) return null;
 
   return (
-    <section id="news" className={styles.newsArticles}>
-      <div className={styles.newsArticles__header}>
-        <div className={styles.newsArticles__accentLine}>
-          <div className={styles.newsArticles__accentLineBar} />
-          <span className={styles.newsArticles__accentText}>
+    <section id="news" className={styles.artboard}>
+      <div className={styles.coords}>
+        <span className="pk-coord">SECTION · 03 / BERITA</span>
+      </div>
+
+      <header className={styles.header}>
+        <div>
+          <span className={styles.header__eyebrow}>
             {translate({
               id: 'homepage.news.tag',
               message: 'Berita & Artikel',
-              description: 'Section tag for news and articles',
             })}
           </span>
-          <div className={styles.newsArticles__accentLineExtended} />
+          <h2 className={styles.header__title}>
+            {translate({
+              id: 'homepage.news.title',
+              message: 'Informasi Terbaru',
+            })}
+          </h2>
         </div>
-        <h2 className={styles.newsArticles__title}>
-          {translate({
-            id: 'homepage.news.title',
-            message: 'Informasi Terbaru',
-            description: 'Main heading for the news section',
-          })}
-        </h2>
-        <p className={styles.newsArticles__subtitle}>
+        <p className={styles.header__sub}>
           {translate({
             id: 'homepage.news.subtitle',
             message:
               'Berita, artikel, dan pembaruan terkini seputar platform Piksel dan observasi bumi digital.',
-            description: 'Subtitle for the news section',
           })}
         </p>
-      </div>
+      </header>
 
-      <div className={styles.newsArticles__grid}>
-        <div className={styles.newsArticles__highlighted}>
+      <div className={styles.grid}>
+        <div className={styles.highlighted}>
           {highlighted.map((post) => (
             <HighlightedCard
               key={post.slug}
@@ -122,23 +114,23 @@ const NewsArticles = () => {
             />
           ))}
         </div>
-        <div className={styles.newsArticles__list}>
+        <div className={styles.list}>
           {listItems.map((post) => (
             <ListItem key={post.slug} post={post} />
           ))}
-          <div className={styles.newsArticles__listFooter}>
-            <Button
-              to="/blog"
-              variant="outline"
-              color="#1D1D1F"
-              label={translate({
-                id: 'homepage.news.viewAll',
-                message: 'Lihat Semua Artikel',
-                description: 'Link text to view all blog posts',
-              })}
-            />
-          </div>
         </div>
+      </div>
+
+      <div className={styles.footer}>
+        <Button
+          to="/blog"
+          variant="outline"
+          color="#1D1D1F"
+          label={translate({
+            id: 'homepage.news.viewAll',
+            message: 'Lihat Semua Artikel',
+          })}
+        />
       </div>
     </section>
   );
