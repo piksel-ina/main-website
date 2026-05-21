@@ -26,10 +26,8 @@ export default function Home() {
     >
       <Hero />
       <OurServices />
+      <UseCases />
       <main>
-        <div className="sectionContainer">
-          <UseCases />
-        </div>
         <div className="sectionContainer">
           <Faq />
         </div>
