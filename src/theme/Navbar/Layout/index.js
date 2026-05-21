@@ -5,8 +5,14 @@ import {
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
 import { translate } from '@docusaurus/Translate';
+import { useLocation } from '@docusaurus/router';
 import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.scss';
+
+function useIsHomePage() {
+  const { pathname } = useLocation();
+  return /^\/(en\/)?$/.test(pathname);
+}
 
 function NavbarBackdrop(props) {
   return (
@@ -24,6 +30,7 @@ export default function NavbarLayout({ children }) {
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
+  const isHomePage = useIsHomePage();
 
   return (
     <nav
@@ -37,6 +44,7 @@ export default function NavbarLayout({ children }) {
         ThemeClassNames.layout.navbar.container,
         'navbar',
         'navbar--fixed-top',
+        isHomePage && 'navbar--homepage',
         hideOnScroll && [
           styles.navbarHideable,
           !isNavbarVisible && styles.navbarHidden,

@@ -5,36 +5,8 @@ import {
   mergeSearchStrings,
   useHistorySelector,
 } from '@docusaurus/theme-common';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
 import styles from './styles.module.scss';
-
-const FLAG_MAP = {
-  id: 'img/flags/id.svg',
-  en: 'img/flags/gb.svg',
-};
-
-function LocaleFlag({ locale }) {
-  const src = useBaseUrl('/' + (FLAG_MAP[locale] ?? FLAG_MAP.id));
-  return (
-    <span className={styles.localeFlag}>
-      <img src={src} alt="" width="20" height="14" />
-    </span>
-  );
-}
-
-function DropdownFlag({ locale }) {
-  const src = useBaseUrl('/' + (FLAG_MAP[locale] ?? FLAG_MAP.id));
-  return (
-    <img
-      src={src}
-      alt=""
-      width="16"
-      height="11"
-      className={styles.dropdownFlag}
-    />
-  );
-}
 
 function useLocaleDropdownUtils() {
   const {
@@ -100,12 +72,7 @@ export default function LocaleDropdownNavbarItem({
   } = useDocusaurusContext();
   const localeItems = locales.map((locale) => {
     return {
-      label: (
-        <>
-          <DropdownFlag locale={locale} />
-          {utils.getLabel(locale)}
-        </>
-      ),
+      label: utils.getLabel(locale),
       to: utils.getURL(locale, { queryString }),
       target: '_self',
       autoAddBaseUrl: false,
@@ -124,18 +91,14 @@ export default function LocaleDropdownNavbarItem({
         id: 'theme.navbar.mobileLanguageDropdown.label',
         description: 'The label for the mobile language switcher dropdown',
       })
-    : utils.getLabel(currentLocale);
+    : locales.map((l) => utils.getLabel(l).toUpperCase()).join(' / ');
 
   return (
     <DropdownNavbarItem
       {...props}
       mobile={mobile}
-      label={
-        <>
-          <LocaleFlag locale={currentLocale} />
-          {dropdownLabel}
-        </>
-      }
+      className={!mobile ? styles.localeDropdown : undefined}
+      label={dropdownLabel}
       items={items}
     />
   );

@@ -395,8 +395,12 @@ h6 {
    ======================================================================== */
 
 .navbar {
+  position: relative;
   height: $navbar-height;
   padding: 0;
+  color: var(--pk-fg-inverse);
+  background: var(--pk-bg-deeper);
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
 
   @include respond-to('phone-wide') {
     height: 4rem;
@@ -406,24 +410,59 @@ h6 {
     height: 3.5rem;
   }
 
+  /* Grid + radial glow backdrop (doc pages) */
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: '';
+    background:
+      radial-gradient(
+        ellipse at top right,
+        rgb(16 64 168 / 55%) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        rgb(6 200 216 / 18%) 0%,
+        transparent 60%
+      ),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M80 0H0V80' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+  }
+
+  /* === Homepage: transparent, hero provides the backdrop === */
+
+  &--homepage {
+    background: transparent;
+
+    &::before {
+      display: none;
+    }
+  }
+
   &__inner {
+    position: relative;
+    z-index: 1;
     display: flex;
+    gap: var(--pk-s-7);
     align-items: center;
-    max-width: $container-max-width;
+    max-width: var(--pk-container-wide);
     height: 100%;
+    padding: 0 var(--pk-gutter);
     margin: 0 auto;
+
+    @include respond-to('tablet') {
+      padding: 0 space('4');
+    }
   }
 
   &__brand {
-    padding-left: space('9');
+    padding-left: 0;
+  }
 
-    @include respond-to('tablet') {
-      padding-left: space('6');
-    }
-
-    @include respond-to('phone-wide') {
-      padding-left: space('4');
-    }
+  &__toggle {
+    color: var(--pk-fg-inverse);
   }
 
   &__logo {
@@ -452,38 +491,32 @@ h6 {
   }
 
   &__items {
-    gap: space('5');
+    gap: space('6');
   }
 
   &__link {
     position: relative;
     align-items: end;
+    padding: space('2') space('3');
     font-size: text-size('sm');
-    font-weight: 400;
-    color: color('ink-2');
-    border-bottom: solid 1px transparent;
+    font-weight: 500;
+    color: rgb(255 255 255 / 85%);
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
     transition:
-      color 0.2s ease,
-      border-color 0.2s ease;
+      color var(--pk-dur-2) var(--pk-ease),
+      border-color var(--pk-dur-2) var(--pk-ease);
 
     &:hover {
-      color: color('accent');
-      border-bottom-color: color('accent');
-
-      &::after {
-        transform: scaleX(1);
-      }
+      color: var(--pk-white);
+      border-bottom-color: var(--pk-teal);
     }
   }
 
   &__items--right {
-    align-items: flex-end;
-    padding-right: space('9');
-
-    @include respond-to('tablet') {
-      align-items: center;
-      padding-right: space('4');
-    }
+    gap: space('3');
+    align-items: center;
+    padding-right: 0;
   }
 
   &__items--right > :last-child {
@@ -496,6 +529,7 @@ h6 {
 
   &__link {
     font-size: text-size('xs');
+    border-radius: 0;
   }
 }
 
@@ -520,10 +554,29 @@ h6 {
 }
 
 .navbar-sidebar .menu__list {
-  padding: space('2');
+  padding: space('3') space('4');
 
   &-item {
-    margin-bottom: space('2');
+    margin-bottom: space('1');
+  }
+}
+
+.navbar-sidebar .menu__link {
+  font-family: font-family('base');
+  font-size: text-size('sm');
+  font-weight: 500;
+  color: color('ink-2');
+  border-radius: 0;
+  transition: color var(--pk-dur-2) var(--pk-ease);
+
+  &:hover {
+    color: color('primary');
+    background: color('paper');
+  }
+
+  &--active {
+    color: color('primary');
+    background: color('ice');
   }
 }
 
