@@ -5,7 +5,6 @@ import { translate } from '@docusaurus/Translate';
 import Hero from '../components/Home/Hero';
 import UseCases from '../components/Home/UseCases';
 import OurServices from '../components/Home/OurServices';
-import Faq from '../components/Home/Faq';
 import NewsArticles from '../components/Home/NewsArticles';
 
 export default function Home() {
@@ -27,14 +26,7 @@ export default function Home() {
       <Hero />
       <OurServices />
       <UseCases />
-      <main>
-        <div className="sectionContainer">
-          <Faq />
-        </div>
-        <div className="sectionContainer">
-          <NewsArticles />
-        </div>
-      </main>
+      <NewsArticles />
     </Layout>
   );
 }
