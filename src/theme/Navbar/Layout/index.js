@@ -29,8 +29,9 @@ export default function NavbarLayout({ children }) {
     navbar: { hideOnScroll, style },
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
-  const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   const isHomePage = useIsHomePage();
+  const shouldHide = isHomePage && hideOnScroll;
+  const { navbarRef, isNavbarVisible } = useHideableNavbar(shouldHide);
 
   return (
     <nav
@@ -44,8 +45,7 @@ export default function NavbarLayout({ children }) {
         ThemeClassNames.layout.navbar.container,
         'navbar',
         'navbar--fixed-top',
-        isHomePage && 'navbar--homepage',
-        hideOnScroll && [
+        shouldHide && [
           styles.navbarHideable,
           !isNavbarVisible && styles.navbarHidden,
         ],
