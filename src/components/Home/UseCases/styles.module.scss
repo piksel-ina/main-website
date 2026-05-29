@@ -13,11 +13,11 @@
   }
 
   @include respond-to('tablet') {
-    padding: var(--pk-s-6) var(--pk-s-5);
+    padding: var(--pk-s-7) var(--pk-s-4) var(--pk-s-5);
   }
 
-  @include respond-to('phone-wide') {
-    padding: var(--pk-s-5) var(--pk-s-4);
+  @include respond-to('phone') {
+    padding: var(--pk-s-5) var(--pk-s-3);
   }
 }
 
@@ -31,11 +31,22 @@
   border-bottom: var(--pk-border-on-dark);
 
   &--bottom {
+    justify-content: center;
     padding-top: var(--pk-s-4);
     padding-bottom: 0;
     margin-top: var(--pk-s-5);
     border-top: var(--pk-border-on-dark);
     border-bottom: 0;
+
+    @include respond-to('tablet') {
+      padding-bottom: var(--pk-s-5);
+    }
+
+    @include respond-to('phone') {
+      padding-top: var(--pk-s-3);
+      padding-bottom: 0;
+      margin-top: var(--pk-s-4);
+    }
 
     a {
       color: var(--pk-teal);
@@ -52,6 +63,10 @@
     align-items: center;
     color: inherit;
     text-decoration: none;
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-2) 0;
+    }
   }
 }
 
@@ -64,9 +79,14 @@
   justify-content: space-between;
   padding: var(--pk-s-6) 0;
 
-  @include respond-to('tablet') {
+  @include respond-to('phone-wide') {
     flex-direction: column;
     gap: var(--pk-s-4);
+    align-items: flex-start;
+  }
+
+  @include respond-to('phone') {
+    padding: var(--pk-s-4) 0;
   }
 
   &__title {
@@ -82,8 +102,12 @@
       color: var(--pk-teal);
     }
 
-    @include respond-to('tablet') {
+    @include respond-to('laptop') {
       font-size: var(--pk-text-2xl);
+    }
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-xl);
     }
   }
 
@@ -93,6 +117,10 @@
     font-size: var(--pk-text-sm);
     line-height: 1.6;
     color: var(--pk-grey-2);
+
+    @include respond-to('tablet') {
+      max-width: 48ch;
+    }
   }
 }
 
@@ -146,6 +174,11 @@
     .tile__media {
       min-height: 160px;
       max-height: 280px;
+
+      @include respond-to('phone') {
+        min-height: 120px;
+        max-height: 180px;
+      }
     }
   }
 
@@ -155,6 +188,12 @@
     max-height: 200px;
     aspect-ratio: 4 / 3;
     overflow: hidden;
+
+    @include respond-to('phone') {
+      min-height: 80px;
+      max-height: 140px;
+      aspect-ratio: 16 / 9;
+    }
 
     svg {
       display: block;
@@ -172,6 +211,10 @@
     font-size: var(--pk-text-2xs);
     color: var(--pk-grey-2);
     letter-spacing: 0.04em;
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-xs);
+    }
 
     &--tl {
       top: var(--pk-s-2);
@@ -202,6 +245,10 @@
     flex: 1;
     flex-direction: column;
     padding: var(--pk-s-4);
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-3);
+    }
   }
 
   &__sector {
@@ -214,6 +261,10 @@
     color: var(--uc-color);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-xs);
+    }
   }
 
   &__sectorLine {
@@ -228,6 +279,10 @@
     font-size: var(--pk-text-md);
     font-weight: 600;
     color: var(--pk-white);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-sm);
+    }
   }
 
   &__desc {
@@ -236,6 +291,10 @@
     font-size: var(--pk-text-xs);
     line-height: 1.5;
     color: var(--pk-grey-2);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-sm);
+    }
   }
 
   &__stats {
@@ -245,6 +304,10 @@
     margin-bottom: var(--pk-s-3);
     border-top: var(--pk-border-on-dark);
     border-bottom: var(--pk-border-on-dark);
+
+    @include respond-to('phone') {
+      gap: var(--pk-s-3);
+    }
   }
 
   &__stat {
@@ -258,12 +321,20 @@
     font-size: var(--pk-text-2xs);
     color: var(--pk-grey-1);
     letter-spacing: 0.06em;
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-xs);
+    }
   }
 
   &__statV {
     font-size: var(--pk-text-sm);
     font-weight: 600;
     color: var(--pk-white);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-xs);
+    }
   }
 
   &__foot {
@@ -272,6 +343,10 @@
     justify-content: space-between;
     padding-top: var(--pk-s-3);
     border-top: var(--pk-border-on-dark);
+
+    @include respond-to('phone-wide') {
+      padding-top: var(--pk-s-4);
+    }
   }
 
   &__product {
@@ -279,6 +354,10 @@
     font-size: var(--pk-text-2xs);
     color: var(--pk-grey-1);
     letter-spacing: 0.04em;
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-xs);
+    }
   }
 
   &__cta {
@@ -288,5 +367,14 @@
     font-size: var(--pk-text-xs);
     font-weight: 500;
     color: var(--uc-color);
+
+    @include respond-to('phone-wide') {
+      padding: var(--pk-s-2) var(--pk-s-3);
+    }
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-3) var(--pk-s-4);
+      font-size: var(--pk-text-sm);
+    }
   }
 }

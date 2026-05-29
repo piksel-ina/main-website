@@ -22,6 +22,11 @@
     border-color var(--pk-dur-2) var(--pk-ease),
     color var(--pk-dur-2) var(--pk-ease);
 
+  @include respond-to('phone') {
+    padding: var(--pk-s-2) var(--pk-s-4) var(--pk-s-2) var(--pk-s-3);
+    font-size: var(--pk-text-2xs);
+  }
+
   &:hover,
   &:visited,
   &:focus {

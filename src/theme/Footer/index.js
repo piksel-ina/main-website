@@ -66,20 +66,18 @@ export default function Footer() {
 
         {/* === BOTTOM BAR === */}
         <div className={styles.footer__bottom}>
-          <div className={styles.footer__bottomLeft}>
-            <img
-              src="/img/logos/logo-big-360px-white.png"
-              alt="Badan Informasi Geospasial"
-              className={styles.footer__bigLogo}
-            />
-            <Coord>
-              {translate({
-                id: 'footer.copyright',
-                message: `© ${new Date().getFullYear()} Badan Informasi Geospasial`,
-                description: 'Footer copyright text',
-              })}
-            </Coord>
-          </div>
+          <img
+            src="/img/logos/logo-big-360px-white.png"
+            alt="Badan Informasi Geospasial"
+            className={styles.footer__bigLogo}
+          />
+          <Coord className={styles.footer__copyright}>
+            {translate({
+              id: 'footer.copyright',
+              message: `© ${new Date().getFullYear()} Badan Informasi Geospasial`,
+              description: 'Footer copyright text',
+            })}
+          </Coord>
           <Coord className={styles.footer__address}>
             {translate({
               id: 'footer.address',

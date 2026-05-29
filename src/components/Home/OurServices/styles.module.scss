@@ -1,7 +1,5 @@
 @use '../../../css/abstracts' as *;
 
-$viz-frame-height: 240px;
-
 /* === ARTBOARD (full-bleed section) === */
 
 .artboard {
@@ -16,11 +14,7 @@ $viz-frame-height: 240px;
   }
 
   @include respond-to('tablet') {
-    padding: var(--pk-s-6) var(--pk-s-5);
-  }
-
-  @include respond-to('phone-wide') {
-    padding: var(--pk-s-5) var(--pk-s-4);
+    padding: var(--pk-s-7) var(--pk-s-4) var(--pk-s-5);
   }
 }
 
@@ -103,15 +97,23 @@ $viz-frame-height: 240px;
 
 .inspector {
   display: grid;
-  grid-template-columns: 18rem 1fr;
+  grid-template-columns: 18rem 1fr 1fr;
   border: var(--pk-hairline);
 
   @include respond-to('laptop') {
-    grid-template-columns: 15rem 1fr;
+    grid-template-columns: 15rem 1fr 1fr;
   }
 
   @include respond-to('tablet') {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.4fr 1fr;
+  }
+
+  @include respond-to('phone-wide') {
+    grid-template-columns: 3rem 1fr;
+  }
+
+  @include respond-to('phone') {
+    grid-template-columns: 2.4rem 1fr;
   }
 }
 
@@ -121,12 +123,6 @@ $viz-frame-height: 240px;
   display: flex;
   flex-direction: column;
   border-right: var(--pk-hairline);
-
-  @include respond-to('tablet') {
-    flex-flow: row wrap;
-    border-right: 0;
-    border-bottom: var(--pk-hairline);
-  }
 
   &__row {
     display: flex;
@@ -160,19 +156,13 @@ $viz-frame-height: 240px;
       background: var(--pk-bg);
     }
 
-    @include respond-to('tablet') {
-      flex: 1 1 auto;
-      border-right: var(--pk-hairline);
-      border-bottom: 0;
-
-      &:last-child {
-        border-right: 0;
-      }
+    @include respond-to('phone-wide') {
+      justify-content: center;
+      padding: var(--pk-s-4) var(--pk-s-2);
     }
 
-    @include respond-to('phone-wide') {
-      flex: 1 1 45%;
-      padding: var(--pk-s-3);
+    @include respond-to('phone') {
+      padding: var(--pk-s-3) var(--pk-s-1);
     }
   }
 
@@ -183,6 +173,10 @@ $viz-frame-height: 240px;
     color: var(--pk-fg-subtle);
     text-transform: uppercase;
     letter-spacing: var(--pk-track-widest);
+
+    @include respond-to('phone-wide') {
+      font-size: var(--pk-text-xs);
+    }
   }
 
   &__labels {
@@ -191,6 +185,10 @@ $viz-frame-height: 240px;
     flex-direction: column;
     gap: 0.1rem;
     min-width: 0;
+
+    @include respond-to('phone-wide') {
+      display: none;
+    }
   }
 
   &__name {
@@ -218,6 +216,10 @@ $viz-frame-height: 240px;
     font-size: var(--pk-text-md);
     line-height: 1;
     color: var(--pk-fg-subtle);
+
+    @include respond-to('phone-wide') {
+      display: none;
+    }
   }
 }
 
@@ -227,6 +229,7 @@ $viz-frame-height: 240px;
   display: flex;
   flex-direction: column;
   background: var(--pk-bg);
+  border-right: var(--pk-hairline);
 
   &__bar {
     display: flex;
@@ -237,6 +240,10 @@ $viz-frame-height: 240px;
 
     @include respond-to('phone-wide') {
       padding: var(--pk-s-2) var(--pk-s-3);
+    }
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-1) var(--pk-s-2);
     }
   }
 
@@ -249,6 +256,10 @@ $viz-frame-height: 240px;
     color: var(--pk-fg-subtle);
     text-transform: uppercase;
     letter-spacing: var(--pk-track-widest);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-3xs);
+    }
   }
 
   &__dot {
@@ -258,31 +269,18 @@ $viz-frame-height: 240px;
     border-radius: 50%;
   }
 
-  &__body {
-    display: grid;
-    flex: 1;
-    grid-template-columns: 1fr 1fr;
-
-    @include respond-to('laptop') {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* === COPY COLUMN === */
-
   &__copy {
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: var(--pk-s-6);
-    border-right: var(--pk-hairline);
-
-    @include respond-to('laptop') {
-      border-right: 0;
-      border-bottom: var(--pk-hairline);
-    }
 
     @include respond-to('phone-wide') {
       padding: var(--pk-s-4);
+    }
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-3);
     }
   }
 
@@ -306,6 +304,10 @@ $viz-frame-height: 240px;
     @include respond-to('phone-wide') {
       font-size: var(--pk-text-lg);
     }
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-md);
+    }
   }
 
   &__en {
@@ -316,6 +318,10 @@ $viz-frame-height: 240px;
     color: var(--pk-fg-subtle);
     text-transform: uppercase;
     letter-spacing: var(--pk-track-wide);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-2xs);
+    }
   }
 
   &__desc {
@@ -359,7 +365,7 @@ $viz-frame-height: 240px;
     margin-top: auto;
   }
 
-  /* === VIZ COLUMN === */
+  /* === VIZ COLUMN (direct grid child of .inspector) === */
 
   &__viz {
     display: flex;
@@ -367,8 +373,17 @@ $viz-frame-height: 240px;
     padding: var(--pk-s-5);
     background: var(--pk-paper);
 
+    @include respond-to('tablet') {
+      flex-direction: row;
+      grid-column: 1 / -1;
+    }
+
     @include respond-to('phone-wide') {
       padding: var(--pk-s-3);
+    }
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-2);
     }
   }
 
@@ -378,31 +393,13 @@ $viz-frame-height: 240px;
     flex-direction: column;
     background: var(--pk-bg);
     border: var(--pk-hairline);
-  }
 
-  &__vizBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.4rem var(--pk-s-3);
-    font-family: var(--pk-font-mono);
-    font-size: var(--pk-text-2xs);
-    color: var(--pk-fg-subtle);
-    letter-spacing: var(--pk-track-wide);
-    background: var(--pk-paper);
-    border-bottom: var(--pk-hairline);
-  }
+    @include respond-to('tablet') {
+      flex-direction: row;
+    }
 
-  &__vizEndpoint {
-    font-family: var(--pk-font-mono);
-    font-size: var(--pk-text-2xs);
-    color: var(--pk-fg-subtle);
-    letter-spacing: var(--pk-track-wide);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--pk-primary);
-      text-decoration: underline;
+    @include respond-to('phone') {
+      flex-direction: column;
     }
   }
 
@@ -410,6 +407,16 @@ $viz-frame-height: 240px;
     padding: var(--pk-s-3) var(--pk-s-3);
     background: var(--pk-paper);
     border-bottom: var(--pk-hairline);
+
+    @include respond-to('tablet') {
+      border-right: var(--pk-hairline);
+      border-bottom: 0;
+    }
+
+    @include respond-to('phone') {
+      border-right: 0;
+      border-bottom: var(--pk-hairline);
+    }
   }
 
   &__vizMetaList {
@@ -441,25 +448,26 @@ $viz-frame-height: 240px;
     }
   }
 
-  &__vizDots {
-    display: flex;
-    gap: 4px;
-
-    span {
-      width: 6px;
-      height: 6px;
-      background: var(--pk-grey-4);
-      border-radius: 50%;
-    }
-  }
-
   &__vizFrame {
-    height: $viz-frame-height;
+    flex: 1;
+    min-height: 0;
+    max-height: 275px;
     overflow: hidden;
 
+    @include respond-to('laptop') {
+      max-height: 265px;
+    }
+
+    @include respond-to('tablet') {
+      max-height: 200px;
+    }
+
     &--full {
-      height: 100%;
-      min-height: 320px;
+      max-height: 320px;
+
+      @include respond-to('tablet') {
+        max-height: 200px;
+      }
     }
 
     svg {
@@ -478,7 +486,7 @@ $viz-frame-height: 240px;
   &__vizImg {
     display: block;
     width: 100%;
-    height: $viz-frame-height;
+    height: 100%;
     object-fit: cover;
     object-position: center;
   }
@@ -497,6 +505,10 @@ $viz-frame-height: 240px;
       gap: var(--pk-s-1);
       padding: var(--pk-s-2) var(--pk-s-3);
     }
+
+    @include respond-to('phone') {
+      padding: var(--pk-s-1) var(--pk-s-2);
+    }
   }
 
   &__footText {
@@ -505,6 +517,10 @@ $viz-frame-height: 240px;
     color: var(--pk-fg-subtle);
     text-transform: uppercase;
     letter-spacing: var(--pk-track-widest);
+
+    @include respond-to('phone') {
+      font-size: var(--pk-text-3xs);
+    }
   }
 }
 
@@ -528,6 +544,12 @@ $viz-frame-height: 240px;
     background var(--pk-dur-2) var(--pk-ease),
     color var(--pk-dur-2) var(--pk-ease),
     border-color var(--pk-dur-2) var(--pk-ease);
+
+  @include respond-to('phone') {
+    gap: var(--pk-s-1);
+    padding: 0.4rem var(--pk-s-3);
+    font-size: var(--pk-text-2xs);
+  }
 
   &--primary {
     color: var(--pk-fg-inverse);

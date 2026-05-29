@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import { useCasesData } from '@site/src/data/useCasesData';
+import Coord from '@site/src/components/UI/Atoms/Coord';
 import UseCaseEO from './UseCaseEO';
 import styles from './styles.module.scss';
 
@@ -77,7 +78,7 @@ export default function UseCases() {
   return (
     <section id="use-cases" className={styles.artboard}>
       <div className={styles.coords}>
-        <span className="pk-coord">SECTION · 02 / PEMANFAATAN</span>
+        <Coord>SECTION · 02 / PEMANFAATAN</Coord>
       </div>
 
       <header className={styles.header}>
@@ -108,9 +109,9 @@ export default function UseCases() {
       </div>
 
       <div className={`${styles.coords} ${styles['coords--bottom']}`}>
-        <span className="pk-coord">DATACUBE · INDONESIA · OPEN ACCESS</span>
-        <Link to="/docs/category/kasus-penggunaan" className={`pk-coord ${styles.coords__link}`}>
-          LIHAT SEMUA PEMANFAATAN <SectionArrow />
+        <Coord>DATACUBE · INDONESIA · OPEN ACCESS</Coord>
+        <Link to="/docs/category/kasus-penggunaan" className={styles.coords__link}>
+          <Coord>LIHAT SEMUA PEMANFAATAN</Coord> <SectionArrow />
         </Link>
       </div>
     </section>

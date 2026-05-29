@@ -7,4 +7,8 @@
   color: var(--pk-fg-subtle);
   text-transform: uppercase;
   letter-spacing: var(--pk-track-widest);
+
+  @include respond-to('phone') {
+    font-size: var(--pk-text-3xs);
+  }
 }

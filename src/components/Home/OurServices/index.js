@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from '@docusaurus/Link';
 import { servicesData } from '@site/src/data/servicesData';
+import Coord from '@site/src/components/UI/Atoms/Coord';
 import styles from './styles.module.scss';
 import Preview01 from './previews/Preview01';
 import Preview02 from './previews/Preview02';
@@ -61,7 +62,7 @@ export default function OurServices() {
   return (
     <section id="services" className={styles.artboard}>
       <div className={styles.coords}>
-        <span className="pk-coord">SECTION · 01 / LAYANAN</span>
+        <Coord>SECTION · 01 / LAYANAN</Coord>
       </div>
 
       <header className={styles.header}>
@@ -80,7 +81,6 @@ export default function OurServices() {
       </header>
 
       <div className={styles.inspector}>
-        {/* LEFT — compact list */}
         <div className={styles.list}>
           {servicesData.map((s) => (
             <button
@@ -102,105 +102,49 @@ export default function OurServices() {
           ))}
         </div>
 
-        {/* RIGHT — inspector panel */}
         <div className={styles.panel}>
           <div className={styles.panel__bar}>
-            <span className="pk-coord">
+            <Coord>
               SVC · {svc.id} · {svc.en.toUpperCase()}
-            </span>
+            </Coord>
             <span className={styles.panel__barStatus}>
               <span className={styles.panel__dot} aria-hidden="true" />
               {svc.status}
             </span>
           </div>
 
-          <div className={styles.panel__body}>
-            <div className={styles.panel__copy}>
-              <span className={styles.panel__num}>{svc.id}</span>
-              <h3 className={styles.panel__title}>{svc.en}</h3>
-              <span className={styles.panel__en}>{svc.title}</span>
-              <p className={styles.panel__desc}>{svc.description}</p>
+          <div className={styles.panel__copy}>
+            <span className={styles.panel__num}>{svc.id}</span>
+            <h3 className={styles.panel__title}>{svc.en}</h3>
+            <span className={styles.panel__en}>{svc.title}</span>
+            <p className={styles.panel__desc}>{svc.description}</p>
 
-              <ul className={styles.panel__features}>
-                {svc.features.map((f, i) => (
-                  <li key={i}>
-                    <span className={styles.panel__featureIdx}>F·0{i + 1}</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
+            <ul className={styles.panel__features}>
+              {svc.features.map((f, i) => (
+                <li key={i}>
+                  <span className={styles.panel__featureIdx}>F·0{i + 1}</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
 
-              <div className={styles.panel__cta}>
-                <a
-                  href={`https://${svc.endpoint}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.btn} ${styles['btn--primary']}`}
-                >
-                  <span>Open service</span>
-                  <InspectorArrow />
-                </a>
-                <Link
-                  to={svc.link}
-                  className={`${styles.btn} ${styles['btn--ghost']}`}
-                >
-                  <span>Documentation</span>
-                  <InspectorArrow small />
-                </Link>
-              </div>
-            </div>
-
-            <div className={styles.panel__viz}>
-              <div className={styles.panel__vizInner}>
-                <div className={styles.panel__vizBar}>
-                  <a
-                    href={`https://${svc.endpoint}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.panel__vizEndpoint}
-                  >
-                    {svc.endpoint}
-                  </a>
-                  <span className={styles.panel__vizDots} aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </span>
-                </div>
-                {!svc.hideVizMeta && (
-                <div className={styles.panel__vizMeta}>
-                  <dl className={styles.panel__vizMetaList}>
-                    <div><dt>Product</dt><dd>{meta.product}</dd></div>
-                    <div><dt>Date</dt><dd>{meta.date}</dd></div>
-                    <div><dt>Processed</dt><dd>{meta.processed}</dd></div>
-                    <div><dt>{meta.left ? 'Visual' : 'Datasets'}</dt><dd>{meta.datasets || meta.left && 'Dataset comparison'}</dd></div>
-                    {meta.left && <div><dt>Left</dt><dd>{meta.left}</dd></div>}
-                    {meta.right && <div><dt>Right</dt><dd>{meta.right}</dd></div>}
-                    {meta.area && <div><dt>Area</dt><dd>{meta.area}</dd></div>}
-                    <div><dt>Regions</dt><dd>{meta.regions}</dd></div>
-                    <div><dt>CRS</dt><dd>{meta.crs}</dd></div>
-                  </dl>
-                </div>
-                )}
-                <div className={`${styles.panel__vizFrame}${svc.hideVizMeta ? ` ${styles['panel__vizFrame--full']}` : ''}`}>
-                  {svc.image ? (
-                    <picture>
-                      <source type="image/webp" srcSet={svc.image.srcset} sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, 1600px" />
-                      <img
-                        src={svc.image.src}
-                        srcSet={svc.image.srcsetFallback}
-                        sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, 1600px"
-                        alt={svc.image.alt}
-                        loading="lazy"
-                        decoding="async"
-                        className={styles.panel__vizImg}
-                      />
-                    </picture>
-                  ) : (
-                    <Preview />
-                  )}
-                </div>
-              </div>
+            <div className={styles.panel__cta}>
+              <a
+                href={`https://${svc.endpoint}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.btn} ${styles['btn--primary']}`}
+              >
+                <span>Open service</span>
+                <InspectorArrow />
+              </a>
+              <Link
+                to={svc.link}
+                className={`${styles.btn} ${styles['btn--ghost']}`}
+              >
+                <span>Documentation</span>
+                <InspectorArrow small />
+              </Link>
             </div>
           </div>
 
@@ -210,10 +154,48 @@ export default function OurServices() {
             </span>
           </div>
         </div>
+
+        <div className={styles.panel__viz}>
+          <div className={styles.panel__vizInner}>
+            {!svc.hideVizMeta && (
+            <div className={styles.panel__vizMeta}>
+              <dl className={styles.panel__vizMetaList}>
+                <div><dt>Product</dt><dd>{meta.product}</dd></div>
+                <div><dt>Date</dt><dd>{meta.date}</dd></div>
+                <div><dt>Processed</dt><dd>{meta.processed}</dd></div>
+                <div><dt>{meta.left ? 'Visual' : 'Datasets'}</dt><dd>{meta.datasets || meta.left && 'Dataset comparison'}</dd></div>
+                {meta.left && <div><dt>Left</dt><dd>{meta.left}</dd></div>}
+                {meta.right && <div><dt>Right</dt><dd>{meta.right}</dd></div>}
+                {meta.area && <div><dt>Area</dt><dd>{meta.area}</dd></div>}
+                <div><dt>Regions</dt><dd>{meta.regions}</dd></div>
+                <div><dt>CRS</dt><dd>{meta.crs}</dd></div>
+              </dl>
+            </div>
+            )}
+            <div className={`${styles.panel__vizFrame}${svc.hideVizMeta ? ` ${styles['panel__vizFrame--full']}` : ''}`}>
+              {svc.image ? (
+                <picture>
+                  <source type="image/webp" srcSet={svc.image.srcset} sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, 1600px" />
+                  <img
+                    src={svc.image.src}
+                    srcSet={svc.image.srcsetFallback}
+                    sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, 1600px"
+                    alt={svc.image.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className={styles.panel__vizImg}
+                  />
+                </picture>
+              ) : (
+                <Preview />
+              )}
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className={`${styles.coords} ${styles['coords--bottom']}`}>
-        <span className="pk-coord">06 SERVICES · CLICK ANY ROW TO INSPECT</span>
+        <Coord>06 SERVICES · CLICK ANY ROW TO INSPECT</Coord>
       </div>
     </section>
   );
