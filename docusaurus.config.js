@@ -231,7 +231,6 @@ const config = {
       },
       image: 'img/logos/logo-big-360px.png',
       navbar: {
-        hideOnScroll: true,
         title: '',
         logo: {
           alt: 'Logo Badan Informasi Geospasial',

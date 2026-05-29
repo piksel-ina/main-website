@@ -4,6 +4,7 @@ import useGlobalData from '@docusaurus/useGlobalData';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Calendar, User } from 'lucide-react';
 import Button from '@site/src/components/UI/Atoms/Button';
+import Coord from '@site/src/components/UI/Atoms/Coord';
 import styles from './styles.module.scss';
 
 const HighlightedCard = ({ post, dateLocale }) => (
@@ -77,7 +78,7 @@ const NewsArticles = () => {
   return (
     <section id="news" className={styles.artboard}>
       <div className={styles.coords}>
-        <span className="pk-coord">SECTION · 03 / BERITA</span>
+        <Coord>SECTION · 03 / BERITA</Coord>
       </div>
 
       <header className={styles.header}>
