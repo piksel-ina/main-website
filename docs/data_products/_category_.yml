@@ -1,8 +1,6 @@
 position: 5
 label: Data Products
 className: sidebar-section
-collapsible: true
-collapsed: true
 link:
   type: generated-index
   title: Produk Data
