@@ -1,8 +1,6 @@
 position: 1
 label: Baseline Satellite
 className: sidebar-subsection
-collapsible: true
-collapsed: true
 link:
   type: generated-index
   title: Data Satelit Dasar

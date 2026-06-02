@@ -1,8 +1,6 @@
 position: 2
 label: Data Laut dan Pesisir
 className: sidebar-subsection
-collapsible: true
-collapsed: true
 link:
   type: generated-index
   title: Data Laut dan Pesisir

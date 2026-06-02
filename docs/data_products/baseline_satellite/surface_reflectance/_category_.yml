@@ -1,8 +1,6 @@
 position: 1
-label: Surface Reflectance Sattelite Data
+label: Surface Reflectance Satellite Data
 className: sidebar-subsection
-collapsible: true
-collapsed: true
 link:
   type: generated-index
   title: Data Satelit Reflektansi Permukaan

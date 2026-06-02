@@ -6,124 +6,21 @@ description:  Landsat 8 SR dari US Geological Survey (USGS)
 
 # Landsat 8 Surface Reflectance — Spesifikasi
 
-export const ProductCard = () => (
-  <div style={{
-    display: 'flex',
-    borderRadius: '1px',
-    overflow: 'hidden',
-    boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
-    margin: '1.5rem 0 2.5rem 0',
-    maxWidth: '860px',
-  }}>
-    {/* Left Panel */}
-    <div style={{
-      background: 'linear-gradient(135deg, #244680, #4a90e2)',
-      padding: '2.5rem',
-      flex: '1.2',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      gap: '1.2rem',
-    }}>
-      <h1 style={{
-        color: '#ffffff',
-        fontSize: '1.6rem',
-        fontWeight: '700',
-        lineHeight: '1.3',
-        margin: '0',
-      }}>
-        Landsat 8 Surface Reflectance
-      </h1>
+import ProductCard from '@site/src/components/Docs/ProductCard';
 
-      <span style={{
-        display: 'inline-block',
-        background: 'rgba(255,255,255,0.12)',
-        color: '#a8d8e8',
-        fontFamily: 'Courier New, monospace',
-        fontSize: '0.85rem',
-        padding: '0.25rem 0.65rem',
-        borderRadius: '6px',
-        border: '1px solid rgba(168,216,232,0.3)',
-        width: 'fit-content',
-      }}>
-        ls8_c2l2_sr
-      </span>
-
-      {/* Meta rows */}
-      {[
-        { label: 'Nama Teknis:', value: 'Landsat 8 Collection 2 Level-2 Surface Reflectance'},
-        { label: 'Versi:',      value: '3.0.0' },
-        { label: 'Resolusi:',   value: '15–30 m' },
-        { label: 'Cakupan:',     value: '19 Mar 2013 sampai sekarang' },
-        { label: 'Pembaruan Data:', value: 'Harian' },
-      ].map(({ label, value }) => (
-        <div key={label} style={{ display: 'flex', gap: '1rem' }}>
-          <span style={{
-            color: '#a8d8e8',
-            fontWeight: '600',
-            fontSize: '0.9rem',
-            minWidth: '110px',
-          }}>
-            {label}
-          </span>
-          <span style={{ color: '#e8f4f8', fontSize: '0.9rem' }}>
-            {value}
-          </span>
-        </div>
-      ))}
-
-      {/* Type badges */}
-      <div style={{ display: 'flex', gap: '1rem' }}>
-        <span style={{
-          color: '#a8d8e8',
-          fontWeight: '600',
-          fontSize: '0.9rem',
-          minWidth: '110px',
-        }}>
-          Type:
-        </span>
-        <div>
-          {['Baseline', 'Raster'].map((tag) => (
-            <span key={tag} style={{
-              display: 'inline-block',
-              background: 'rgba(255,255,255,0.1)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              color: '#cceeff',
-              fontSize: '0.78rem',
-              padding: '0.15rem 0.5rem',
-              borderRadius: '20px',
-              marginRight: '0.3rem',
-            }}>
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    {/* Right Panel - Image */}
-    <div style={{
-      flex: '0.8',
-      overflow: 'hidden',
-      position: 'relative',
-      minHeight: '280px',
-    }}>
-      <img
-        src="/img/preview/preview_sr.png"
-        alt="DEA Surface Reflectance Landsat 9 Preview"
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'center',
-          display: 'block',
-        }}
-      />
-    </div>
-  </div>
-);
-
-<ProductCard />
+<ProductCard
+  productId='ls8_c2l2_sr'
+  meta={[
+    { label: 'Nama Teknis:', value: 'Landsat 8 Collection 2 Level-2 Surface Reflectance' },
+    { label: 'Versi:', value: '3.0.0' },
+    { label: 'Resolusi:', value: '15–30 m' },
+    { label: 'Cakupan:', value: '19 Mar 2013 sampai sekarang' },
+    { label: 'Pembaruan Data:', value: 'Harian' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_sr.webp'
+  imageAlt='Landsat 8 Surface Reflectance Preview'
+/>
 
 ## Tentang
 Landsat 8 Surface Reflectance (Landsat 8) merupakan bagian dari rangkaian dataset Reflektansi Permukaan Piksel yang mencakup arsip gambar yang sangat luas yang diambil oleh program satelit Landsat dari US Geological Survey (USGS) dan Sentinel-2 dari European Space Agency (ESA), yang telah divalidasi, dikalibrasi, dan disesuaikan dengan kondisi di Indonesia — sehingga siap untuk dianalisis dengan mudah.

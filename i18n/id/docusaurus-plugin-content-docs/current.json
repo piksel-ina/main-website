@@ -174,5 +174,41 @@
   "sidebar.docsSidebar.category.prd": {
     "message": "prd",
     "description": "The label for category 'prd' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Products": {
+    "message": "Data Products",
+    "description": "The label for category 'Data Products' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Products.link.generated-index.title": {
+    "message": "Produk Data",
+    "description": "The generated-index page title for category 'Data Products' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Products.link.generated-index.description": {
+    "message": "Discover the variety of data products offered by Piksel platform.",
+    "description": "The generated-index page description for category 'Data Products' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Baseline Satellite": {
+    "message": "Baseline Satellite",
+    "description": "The label for category 'Baseline Satellite' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Baseline Satellite.link.generated-index.title": {
+    "message": "Data Satelit Dasar",
+    "description": "The generated-index page title for category 'Baseline Satellite' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Baseline Satellite.link.generated-index.description": {
+    "message": "Discover the variety of baseline satellite data products offered by Piksel platform.",
+    "description": "The generated-index page description for category 'Baseline Satellite' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Surface Reflectance Satellite Data": {
+    "message": "Surface Reflectance Satellite Data",
+    "description": "The label for category 'Surface Reflectance Satellite Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Surface Reflectance Satellite Data.link.generated-index.title": {
+    "message": "Data Satelit Reflektansi Permukaan",
+    "description": "The generated-index page title for category 'Surface Reflectance Satellite Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Surface Reflectance Satellite Data.link.generated-index.description": {
+    "message": "Discover the variety of surface reflectance satellite data products offered by Piksel platform.",
+    "description": "The generated-index page description for category 'Surface Reflectance Satellite Data' in sidebar 'docsSidebar'"
   }
 }
