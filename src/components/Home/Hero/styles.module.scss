@@ -52,6 +52,7 @@
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     align-items: center;
+    max-width: var(--pk-container-wide);
     min-height: 28rem;
     padding: var(--pk-s-2) 0 var(--pk-s-8);
     margin: 0 auto;

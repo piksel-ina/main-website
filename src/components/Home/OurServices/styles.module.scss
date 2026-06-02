@@ -4,10 +4,15 @@
 
 .artboard {
   position: relative;
-  padding: var(--pk-s-8) var(--pk-gutter);
   overflow: hidden;
   background: var(--pk-bg-section);
   border-bottom: var(--pk-hairline);
+}
+
+.inner {
+  max-width: var(--pk-container-wide);
+  padding: var(--pk-s-8) var(--pk-gutter);
+  margin-inline: auto;
 
   @include respond-to('laptop') {
     padding: var(--pk-s-7) var(--pk-gutter);
@@ -460,14 +465,6 @@
 
     @include respond-to('tablet') {
       max-height: 200px;
-    }
-
-    &--full {
-      max-height: 320px;
-
-      @include respond-to('tablet') {
-        max-height: 200px;
-      }
     }
 
     svg {

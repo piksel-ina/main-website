@@ -52,7 +52,6 @@ export const servicesData = [
     linkText: translate({ id: "ourServices.sandbox.btn", message: "Mulai Belajar" }),
     link: "/docs/services/sandbox",
     color: "#7c3aed",
-    hideVizMeta: true,
   },
   {
     id: "03",
