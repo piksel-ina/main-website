@@ -1,10 +1,22 @@
 const PALETTES = {
   agri: { bg: '#1a2e0a', bands: ['#4d7c0f', '#65a30d', '#84cc16', '#a3e635'] },
   urban: { bg: '#0c1929', bands: ['#1e40af', '#3b82f6', '#60a5fa', '#93c5fd'] },
-  forestry: { bg: '#052e16', bands: ['#166534', '#22c55e', '#4ade80', '#86efac'] },
-  coastal: { bg: '#083344', bands: ['#0e7490', '#06b6d4', '#22d3ee', '#67e8f9'] },
-  disaster: { bg: '#0c1929', bands: ['#155e75', '#0891b2', '#22d3ee', '#a5f3fc'] },
-  mining: { bg: '#1c1108', bands: ['#78350f', '#b45309', '#d97706', '#fbbf24'] },
+  forestry: {
+    bg: '#052e16',
+    bands: ['#166534', '#22c55e', '#4ade80', '#86efac'],
+  },
+  coastal: {
+    bg: '#083344',
+    bands: ['#0e7490', '#06b6d4', '#22d3ee', '#67e8f9'],
+  },
+  disaster: {
+    bg: '#0c1929',
+    bands: ['#155e75', '#0891b2', '#22d3ee', '#a5f3fc'],
+  },
+  mining: {
+    bg: '#1c1108',
+    bands: ['#78350f', '#b45309', '#d97706', '#fbbf24'],
+  },
 };
 
 const UseCaseEO = ({ id, featured = false }) => {
@@ -37,7 +49,13 @@ const UseCaseEO = ({ id, featured = false }) => {
         strokeDasharray="4 2"
         opacity="0.5"
       />
-      <circle cx={w * 0.7} cy={h * 0.6} r={h * 0.12} fill={p.bands[1]} opacity="0.2" />
+      <circle
+        cx={w * 0.7}
+        cy={h * 0.6}
+        r={h * 0.12}
+        fill={p.bands[1]}
+        opacity="0.2"
+      />
     </svg>
   );
 };
