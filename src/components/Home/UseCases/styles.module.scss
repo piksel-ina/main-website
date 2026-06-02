@@ -4,9 +4,14 @@
 
 .artboard {
   position: relative;
-  padding: var(--pk-s-8) var(--pk-gutter);
   overflow: hidden;
   background: var(--pk-bg-deep);
+}
+
+.inner {
+  max-width: var(--pk-container-wide);
+  padding: var(--pk-s-8) var(--pk-gutter);
+  margin-inline: auto;
 
   @include respond-to('laptop') {
     padding: var(--pk-s-7) var(--pk-gutter);
@@ -31,7 +36,7 @@
   border-bottom: var(--pk-border-on-dark);
 
   &--bottom {
-    justify-content: center;
+    justify-content: space-between;
     padding-top: var(--pk-s-4);
     padding-bottom: 0;
     margin-top: var(--pk-s-5);
@@ -40,6 +45,11 @@
 
     @include respond-to('tablet') {
       padding-bottom: var(--pk-s-5);
+    }
+
+    @include respond-to('phone-wide') {
+      flex-direction: column;
+      align-items: center;
     }
 
     @include respond-to('phone') {

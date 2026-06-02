@@ -4,7 +4,9 @@
 
 .artboard {
   position: relative;
+  max-width: var(--pk-container-wide);
   padding: var(--pk-s-8) var(--pk-gutter);
+  margin-inline: auto;
   overflow: hidden;
   background: var(--pk-paper);
 

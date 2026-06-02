@@ -5,18 +5,34 @@ import UseCaseEO from './UseCaseEO';
 import styles from './styles.module.scss';
 
 const TileArrow = () => (
-  <svg width="24" height="12" viewBox="0 0 24 12" fill="none"
-       stroke="currentColor" strokeWidth="1.2"
-       strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg
+    width="24"
+    height="12"
+    viewBox="0 0 24 12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
     <line x1="0" y1="6" x2="20" y2="6" />
     <polyline points="16,2 20,6 16,10" />
   </svg>
 );
 
 const SectionArrow = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-       stroke="currentColor" strokeWidth="1.5"
-       strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 14 14"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
     <line x1="3" y1="11" x2="11" y2="3" />
     <polyline points="5,3 11,3 11,9" />
   </svg>
@@ -77,42 +93,47 @@ export default function UseCases() {
 
   return (
     <section id="use-cases" className={styles.artboard}>
-      <div className={styles.coords}>
-        <Coord>SECTION · 02 / PEMANFAATAN</Coord>
-      </div>
-
-      <header className={styles.header}>
-        <div>
-          <span className="pk-eyebrow">02 / Pemanfaatan</span>
-          <h2 className={styles.header__title}>
-            Where Piksel
-            <br />
-            is being <em>put to work</em>.
-          </h2>
+      <div className={styles.inner}>
+        <div className={styles.coords}>
+          <Coord>SECTION · 02 / PEMANFAATAN</Coord>
         </div>
-        <p className={styles.header__sub}>
-          Six operational use cases — each tile carries the actual EO product
-          output, the sensor stack behind it, and the cadence it ships at.
-        </p>
-      </header>
 
-      <div className={styles.mosaic}>
-        <div className={styles.mosaic__featured}>
-          <MosaicTile uc={featuredA} featured />
-          <MosaicTile uc={featuredB} featured />
-        </div>
-        <div className={styles.mosaic__standard}>
-          {standard.map((uc) => (
-            <MosaicTile key={uc.id} uc={uc} />
-          ))}
-        </div>
-      </div>
+        <header className={styles.header}>
+          <div>
+            <span className="pk-eyebrow">02 / Pemanfaatan</span>
+            <h2 className={styles.header__title}>
+              Where Piksel
+              <br />
+              is being <em>put to work</em>.
+            </h2>
+          </div>
+          <p className={styles.header__sub}>
+            Six operational use cases — each tile carries the actual EO product
+            output, the sensor stack behind it, and the cadence it ships at.
+          </p>
+        </header>
 
-      <div className={`${styles.coords} ${styles['coords--bottom']}`}>
-        <Coord>DATACUBE · INDONESIA · OPEN ACCESS</Coord>
-        <Link to="/docs/category/kasus-penggunaan" className={styles.coords__link}>
-          <Coord>LIHAT SEMUA PEMANFAATAN</Coord> <SectionArrow />
-        </Link>
+        <div className={styles.mosaic}>
+          <div className={styles.mosaic__featured}>
+            <MosaicTile uc={featuredA} featured />
+            <MosaicTile uc={featuredB} featured />
+          </div>
+          <div className={styles.mosaic__standard}>
+            {standard.map((uc) => (
+              <MosaicTile key={uc.id} uc={uc} />
+            ))}
+          </div>
+        </div>
+
+        <div className={`${styles.coords} ${styles['coords--bottom']}`}>
+          <Coord>DATACUBE · INDONESIA · OPEN ACCESS</Coord>
+          <Link
+            to="/docs/category/kasus-penggunaan"
+            className={styles.coords__link}
+          >
+            <Coord>LIHAT SEMUA PEMANFAATAN</Coord> <SectionArrow />
+          </Link>
+        </div>
       </div>
     </section>
   );
