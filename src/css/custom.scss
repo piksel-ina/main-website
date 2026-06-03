@@ -674,13 +674,13 @@ h6 {
   /* === Section dividers === */
 
   > .sidebar-section {
-    padding-top: space('3');
-    margin-top: space('3');
+    padding-top: 0;
+    margin-top: 0;
   }
 
   > .sidebar-section + .theme-doc-sidebar-item-link-level-1 {
-    padding-top: space('3');
-    margin-top: space('3');
+    padding-top: 0;
+    margin-top: 0;
   }
 
   /* === Base link === */
@@ -717,9 +717,23 @@ h6 {
 
   /* === L3 links (leaf pages) === */
 
-  .theme-doc-sidebar-item-link-level-3 > .menu__link {
+  .theme-doc-sidebar-item-link-level-3 > .menu__link,
+  .theme-doc-sidebar-item-link-level-4 > .menu__link,
+  .theme-doc-sidebar-item-link-level-5 > .menu__link {
     font-size: text-size('sm');
     color: var(--pk-fg-inverse-dim);
+  }
+
+  /* === L3+ categories === */
+
+  .theme-doc-sidebar-item-category-level-3
+    > .menu__list-item-collapsible
+    > .menu__link,
+  .theme-doc-sidebar-item-category-level-4
+    > .menu__list-item-collapsible
+    > .menu__link {
+    font-size: text-size('sm');
+    color: var(--pk-fg-inverse-secondary);
   }
 
   /* === Hover state (pointer devices only) === */
@@ -756,8 +770,19 @@ h6 {
 
   /* === Caret === */
 
-  .menu__caret::before {
-    opacity: 1;
+  .menu__caret::before,
+  .menu__link--sublist-caret::after {
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
+    background: var(--pk-fg-inverse-muted);
+    filter: none;
+    mask: var(--ifm-menu-link-sublist-icon) 50% / contain no-repeat;
+  }
+
+  .menu__list-item-collapsible--active .menu__caret::before,
+  .menu__link--active.menu__link--sublist-caret::after {
+    background: var(--pk-teal);
   }
 
   /* === Mobile adjustments === */
