@@ -1,5 +1,6 @@
 @use 'sass:string';
 @use 'abstracts' as *;
+@use 'fonts';
 
 :root {
   /* ========================================================================
@@ -228,12 +229,17 @@ a[class*='skipToContent'] {
 }
 
 h1,
-h2,
+h2 {
+  @include heading;
+}
+
 h3,
 h4,
 h5,
 h6 {
-  @include heading;
+  font-weight: 600;
+  color: color('primary');
+  letter-spacing: -0.02em;
 }
 
 /* ========================================================================
@@ -843,7 +849,7 @@ h6 {
   h3 {
     margin-top: space('6');
     margin-bottom: space('2');
-    font-family: font-family('heading');
+    font-family: font-family('base');
     font-size: text-size('md');
     font-weight: 500;
     color: color('ink-2');
@@ -853,7 +859,7 @@ h6 {
   h4 {
     margin-top: space('5');
     margin-bottom: space('2');
-    font-family: font-family('heading');
+    font-family: font-family('base');
     font-size: text-size('base');
     font-weight: 600;
     color: color('ink-2');
@@ -915,42 +921,20 @@ h6 {
   }
 
   ul {
-    list-style: none;
+    list-style: disc;
 
-    > li {
-      position: relative;
-      padding-left: space('2');
-
-      &::before {
-        position: absolute;
-        left: 0;
-        width: 0.5rem;
-        height: 0.5rem;
-        margin-top: 1em;
-        content: '';
-        background-color: color('grey-3');
-        border-radius: 50%;
-      }
+    li::marker {
+      color: color('grey-3');
     }
   }
 
   ol {
-    list-style: none;
-    counter-reset: doc-ol;
+    list-style: decimal;
 
-    > li {
-      position: relative;
-      padding-left: space('3');
-      counter-increment: doc-ol;
-
-      &::before {
-        position: absolute;
-        left: 0;
-        font-size: text-size('sm');
-        font-weight: 500;
-        color: color('grey-1');
-        content: counter(doc-ol) '.';
-      }
+    li::marker {
+      font-size: text-size('sm');
+      font-weight: 500;
+      color: color('grey-1');
     }
   }
 
@@ -1285,7 +1269,7 @@ h6 {
 }
 
 .pagination-nav__label {
-  font-family: font-family('heading');
+  font-family: font-family('base');
   font-size: text-size('base');
   font-weight: 500;
   color: color('ink-2');
