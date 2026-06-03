@@ -180,28 +180,71 @@ Konten kedua yang dapat diperluas, menunjukkan bahwa beberapa elemen details dap
 
 ### DocSteps
 
-Daftar langkah bernomor dengan garis waktu. Gunakan untuk panduan langkah demi langkah.
+Daftar langkah bernomor dengan garis vertikal. Setiap langkah menerima `title` dan konten MDX bebas — teks, gambar, blok kode, admonition, atau komponen lain.
 
-```mdx
-import DocSteps, { Step } from '@site/src/components/Docs/DocSteps';
+````mdx
+import DocSteps, { DocStep } from '@site/src/components/Docs/DocSteps';
 
 <DocSteps>
-  <Step>
-    **Langkah pertama** — Buka halaman Explorer dan pilih area yang diinginkan.
-  </Step>
-  <Step>
-    **Langkah kedua** — Tentukan rentang waktu dan jenis citra satelit.
-  </Step>
-  <Step>**Langkah ketiga** — Klik tombol proses untuk memulai analisis.</Step>
+  <DocStep title="Buka Explorer dan Pilih Area">
+    Buka halaman Explorer, lalu gunakan peta interaktif untuk memilih area yang
+    ingin dianalisis.
+
+    ![Tampilan Explorer](/img/services/explorer-1200.jpg)
+
+    :::tip
+    Gunakan layer Sentinel-2 untuk area berawan — resolusinya lebih baik pada
+    kondisi atmosfer buruk.
+    :::
+  </DocStep>
+  <DocStep title="Tentukan Parameter Analisis">
+    Atur rentang waktu dan jenis citra satelit yang akan digunakan.
+
+    ![Panel parameter](/img/services/maps-1200.jpg)
+
+    :::warning
+    Rentang waktu lebih dari 12 bulan dapat memperlambat proses.
+    :::
+  </DocStep>
+  <DocStep title="Proses & Unduh Hasil">
+    Klik **Proses** dan tunggu notifikasi. Hasil tersedia dalam format GeoTIFF,
+    PNG, atau JSON.
+
+    ```bash
+    piksel-cli download --job-id abc123 --format geotiff --output ./hasil/
+    ```
+  </DocStep>
 </DocSteps>
-```
+````
 
 **Hasil:**
 
-import DocSteps, { Step } from '@site/src/components/Docs/DocSteps';
+import DocSteps, { DocStep } from '@site/src/components/Docs/DocSteps';
 
 <DocSteps>
-  <Step>**Langkah pertama** — Buka halaman Explorer dan pilih area yang diinginkan pada peta interaktif.</Step>
-  <Step>**Langkah kedua** — Tentukan rentang waktu dan jenis citra satelit yang akan digunakan untuk analisis.</Step>
-  <Step>**Langkah ketiga** — Klik tombol proses dan tunggu hingga hasil analisis tersedia untuk diunduh.</Step>
+  <DocStep title="Buka Explorer dan Pilih Area">
+    Buka halaman Explorer, lalu gunakan peta interaktif untuk memilih area yang ingin dianalisis.
+
+    ![Tampilan Explorer](/img/services/explorer-1200.jpg)
+
+    :::tip
+    Gunakan layer Sentinel-2 untuk area berawan — resolusinya lebih baik pada kondisi atmosfer buruk.
+    :::
+  </DocStep>
+  <DocStep title="Tentukan Parameter Analisis">
+    Atur rentang waktu dan jenis citra satelit yang akan digunakan.
+
+    ![Panel parameter](/img/services/maps-1200.jpg)
+
+    :::warning
+    Rentang waktu lebih dari 12 bulan dapat memperlambat proses secara signifikan.
+    :::
+  </DocStep>
+  <DocStep title="Proses & Unduh Hasil">
+    Klik **Proses** dan tunggu notifikasi. Hasil tersedia dalam format GeoTIFF, PNG, atau JSON.
+
+    ```bash
+    piksel-cli download --job-id abc123 --format geotiff --output ./hasil/
+    ```
+  </DocStep>
 </DocSteps>
