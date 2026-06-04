@@ -817,7 +817,7 @@ h6 {
 
 [class*='docItemContainer'] {
   max-width: 80rem;
-  padding: space('5') space('8') space('9');
+  padding: space('5') space('6') space('9');
 
   @include respond-to('laptop') {
     padding: space('4') space('6') space('8');
@@ -999,7 +999,7 @@ h6 {
 
     code {
       padding: 0;
-      font-size: text-size('sm');
+      font-size: text-size('xs');
       color: color('grey-5');
       background: none;
       border: none;
@@ -1288,9 +1288,14 @@ h6 {
    ======================================================================== */
 
 .table-of-contents {
-  padding-left: 0;
+  margin: 0;
   font-size: text-size('sm');
   border-left: 1px solid color('grey-5');
+
+  ul {
+    padding-left: space('3');
+    margin: 0;
+  }
 }
 
 .table-of-contents__link {
@@ -1299,20 +1304,25 @@ h6 {
   margin-left: -1px;
   color: color('grey-2');
   text-decoration: none;
-  border-left: 2px solid transparent;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+  transition: color 0.2s ease;
 
   &:hover {
     color: color('primary');
   }
 
   &--active {
-    font-weight: 500;
+    font-weight: 600;
     color: color('primary');
-    border-left-color: color('primary');
   }
+}
+
+.theme-doc-toc-desktop {
+  padding-top: space('5');
+  padding-left: space('5');
+}
+
+.col--3 {
+  padding-right: 0;
 }
 
 .table-of-contents li {

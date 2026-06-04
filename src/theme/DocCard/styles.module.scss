@@ -1,0 +1,58 @@
+@use '../../css/abstracts' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pk-s-3);
+  padding: var(--pk-s-6);
+  text-decoration: none;
+  background: color('white');
+  border: 1px solid color('grey-5');
+  transition:
+    border-color var(--pk-dur-2) var(--pk-ease),
+    box-shadow var(--pk-dur-2) var(--pk-ease);
+
+  &:hover {
+    border-color: color('grey-3');
+    box-shadow: var(--pk-shadow-2);
+    text-decoration: none;
+
+    .cta {
+      color: color('accent');
+    }
+  }
+}
+
+.eyebrow {
+  font-family: font-family('mono');
+  font-size: text-size('2xs');
+  font-weight: 500;
+  color: color('teal-dark');
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+}
+
+.title {
+  font-family: font-family('heading');
+  font-size: text-size('md');
+  font-weight: 500;
+  line-height: var(--pk-lh-snug);
+  color: color('ink-1');
+}
+
+.description {
+  flex: 1;
+  font-family: font-family('base');
+  font-size: text-size('sm');
+  line-height: var(--pk-lh-relaxed);
+  color: color('ink-4');
+}
+
+.cta {
+  margin-top: auto;
+  font-family: font-family('mono');
+  font-size: text-size('sm');
+  color: color('primary');
+  letter-spacing: var(--pk-track-wide);
+  transition: color var(--pk-dur-2) var(--pk-ease);
+}

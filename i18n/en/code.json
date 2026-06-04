@@ -91,6 +91,18 @@
     "message": "1 item|{count} items",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
+  "theme.docs.DocCard.readMore": {
+    "message": "Open →",
+    "description": "The call-to-action link text on a doc card"
+  },
+  "theme.docs.DocCard.categoryEyebrow": {
+    "message": "Category · {count}",
+    "description": "Eyebrow label for a category card showing the item count"
+  },
+  "theme.docs.DocCard.pageEyebrow": {
+    "message": "Page",
+    "description": "Eyebrow label for a doc page card"
+  },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Docs pages",
     "description": "The ARIA label for the docs pagination"

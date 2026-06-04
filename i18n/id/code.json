@@ -103,6 +103,18 @@
     "message": "1 butir|{count} butir",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
+  "theme.docs.DocCard.readMore": {
+    "message": "Buka →",
+    "description": "The call-to-action link text on a doc card"
+  },
+  "theme.docs.DocCard.categoryEyebrow": {
+    "message": "Kategori · {count}",
+    "description": "Eyebrow label for a category card showing the item count"
+  },
+  "theme.docs.DocCard.pageEyebrow": {
+    "message": "Halaman",
+    "description": "Eyebrow label for a doc page card"
+  },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Halaman dokumentasi",
     "description": "The ARIA label for the docs pagination"
