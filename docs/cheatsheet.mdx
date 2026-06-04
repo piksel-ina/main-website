@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 99
 title: Komponen MDX Cheatsheet
 description: Referensi lengkap semua komponen MDX dan elemen Markdown yang tersedia untuk menulis dokumentasi Piksel.
 ---
@@ -18,19 +18,9 @@ Semua level heading didukung. Gunakan heading secara hierarkis untuk struktur do
 
 ### H3 — Sub Bagian
 
-#### H4 — Detail
-
-##### H5 — Catatan Kecil
-
-###### H6 — Label
-
 ## Teks Dasar
 
 Paragraf biasa ditulis seperti biasa. Gunakan **teks tebal** untuk penekanan, _teks miring_ untuk istilah, dan `kode inline` untuk nama teknis.
-
-Garis horizontal digunakan untuk memisahkan bagian:
-
----
 
 ## Daftar
 
@@ -55,7 +45,15 @@ Garis horizontal digunakan untuk memisahkan bagian:
 
 ## Gambar
 
-![Contoh gambar dengan caption](/img/hero/hero-image.png)
+Selalu gunakan elemen `<figure>` dengan `<figcaption>` untuk memberikan konteks pada gambar.
+
+<figure>
+
+<img src="/img/preview/preview_sr.webp" alt="Contoh gambar dengan caption" style={{aspectRatio: '16/9', objectFit: 'cover', width: '100%'}} />
+
+<figcaption>Tampilan citra satelit resolusi tinggi wilayah Jakarta — Sentinel-2, Band 4-3-2.</figcaption>
+
+</figure>
 
 ## Tabel
 
@@ -173,8 +171,6 @@ Konten kedua yang dapat diperluas, menunjukkan bahwa beberapa elemen details dap
 ```
 
 </details>
-
----
 
 ## Komponen Kustom
 
