@@ -28,7 +28,7 @@ export default function NavbarMobilePrimaryMenu() {
         className="clean-btn navbar-sidebar__close"
         onClick={() => mobileSidebar.toggle()}
       >
-        <IconClose color="var(--ifm-color-emphasis-600)" aria-hidden="true" />
+        <IconClose color="currentColor" aria-hidden="true" />
       </button>
     );
   }

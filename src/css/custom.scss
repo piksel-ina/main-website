@@ -550,58 +550,133 @@ h6 {
 .navbar-sidebar {
   right: 0;
   left: auto;
+  color: var(--pk-fg-inverse-secondary);
+  background: var(--pk-bg-deeper);
+  border-left: 1px solid var(--pk-border-on-dark-subtle);
   transform: translate3d(100%, 0, 0);
 
   &__brand {
     height: fit-content;
+    background: transparent;
+    box-shadow: none;
   }
 
   &__close {
     position: absolute;
     top: space('2');
-    right: 0.75rem;
+    right: space('2');
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: space('2');
+    color: var(--pk-fg-inverse-muted);
+    cursor: pointer;
+    background: transparent;
+    border-radius: 0;
+    transition:
+      color var(--pk-dur-2) var(--pk-ease),
+      background-color var(--pk-dur-2) var(--pk-ease);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--pk-fg-inverse);
+      background: var(--pk-bg-hover-on-dark);
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      fill: currentcolor;
+    }
   }
 
   &__items--show-secondary {
     transform: translate3d(-100%, 0, 0);
   }
+
+  &__back {
+    color: var(--pk-fg-inverse-muted);
+    background: var(--pk-bg-hover-on-dark);
+
+    &:hover {
+      background: var(--pk-bg-active-on-dark);
+    }
+  }
+}
+
+/* Hide hamburger toggle while the sidebar is open — only the close (X) remains */
+.navbar.navbar-sidebar--show .navbar__toggle {
+  display: none;
 }
 
 .navbar-sidebar .menu__list {
-  padding: space('3') space('4');
+  padding: space('4') space('5');
 
   &-item {
-    margin-bottom: space('1');
+    margin-bottom: space('3');
   }
 }
 
-.navbar-sidebar .menu__link {
-  font-family: font-family('base');
-  font-size: text-size('sm');
-  font-weight: 500;
-  color: color('ink-2');
-  border-radius: 0;
-  transition: color var(--pk-dur-2) var(--pk-ease);
-
-  &:hover {
-    color: color('primary');
-    background: color('paper');
-  }
-
-  &--active {
-    color: color('primary');
-    background: color('ice');
-  }
-}
-
+/* Nested dropdown list: indent + collapse animation */
 .navbar-sidebar .menu__list-item > .menu__list {
   display: grid;
   grid-template-rows: 1fr;
+  padding: 0;
+  margin: space('2') 0 space('1') space('6');
+  background: transparent;
   transition: grid-template-rows 1s ease-out;
 
   > li {
     overflow: hidden;
   }
+
+  .menu__list-item {
+    margin-bottom: space('2');
+  }
+}
+
+.navbar-sidebar .menu__link {
+  font-family: font-family('base');
+  font-size: text-size('base');
+  font-weight: 500;
+  color: var(--pk-fg-inverse-secondary);
+  border-radius: 0;
+  transition:
+    color var(--pk-dur-2) var(--pk-ease),
+    background-color var(--pk-dur-2) var(--pk-ease);
+
+  &:hover {
+    color: var(--pk-fg-inverse);
+    background: var(--pk-bg-hover-on-dark);
+  }
+
+  &--active {
+    color: var(--pk-teal);
+    background: var(--pk-bg-active-on-dark);
+  }
+}
+
+/* Slightly smaller links inside nested dropdowns for hierarchy */
+.navbar-sidebar .menu__list-item > .menu__list .menu__link {
+  font-size: text-size('sm');
+}
+
+/* Caret chevron: keep the icon mask, just recolor */
+.navbar-sidebar .menu__caret::before,
+.navbar-sidebar .menu__link--sublist-caret::after {
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  background: var(--pk-fg-inverse-muted);
+  filter: none;
+  mask: var(--ifm-menu-link-sublist-icon) 50% / contain no-repeat;
+}
+
+.navbar-sidebar .menu__list-item-collapsible--active .menu__caret::before,
+.navbar-sidebar .menu__link--active.menu__link--sublist-caret::after {
+  background: var(--pk-teal);
 }
 
 .navbar-sidebar .menu__list-item--collapsed > .menu__list {
