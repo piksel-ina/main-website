@@ -1471,3 +1471,59 @@ h6 {
     }
   }
 }
+
+/* ========================================================================
+   21. BLOG LAYOUT
+   ======================================================================== */
+
+/* Full white background on blog pages */
+.container.margin-vert--lg {
+  background-color: color('white');
+}
+
+/* Main content column left padding */
+.col--7 > main {
+  padding-left: space('5');
+}
+
+/* Sidebar — better clarity */
+[class*='sidebarItemTitle'] {
+  font-family: font-family('mono');
+  font-size: text-size('2xs');
+  font-weight: 500;
+  color: color('ink-2');
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+}
+
+[class*='yearGroupHeading'] {
+  font-family: font-family('mono');
+  font-size: text-size('2xs');
+  font-weight: 600;
+  color: color('teal-dark');
+  text-transform: uppercase;
+  letter-spacing: var(--pk-track-widest);
+}
+
+[class*='sidebarItem'] {
+  margin-top: 0;
+  border-bottom: 1px solid color('grey-5');
+}
+
+[class*='sidebarItemLink'] {
+  padding: space('2') space('3');
+  font-size: text-size('sm');
+  color: color('ink-4');
+  text-decoration: none;
+
+  &:hover {
+    color: color('ink-1');
+    text-decoration: none;
+  }
+}
+
+[class*='sidebarItemLinkActive'] {
+  font-weight: 600;
+  color: color('primary') !important;
+  background-color: color('paper');
+}

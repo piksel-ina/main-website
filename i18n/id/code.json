@@ -238,6 +238,10 @@
     "message": "Baca Selengkapnya",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
+  "theme.blog.post.readMoreCta": {
+    "message": "Baca →",
+    "description": "Call-to-action link text on a blog post card in the list"
+  },
   "theme.blog.post.readMoreLabel": {
     "message": "Baca selengkapnya mengenai {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"

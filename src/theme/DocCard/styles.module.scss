@@ -13,9 +13,9 @@
     box-shadow var(--pk-dur-2) var(--pk-ease);
 
   &:hover {
+    text-decoration: none;
     border-color: color('grey-3');
     box-shadow: var(--pk-shadow-2);
-    text-decoration: none;
 
     .cta {
       color: color('accent');
