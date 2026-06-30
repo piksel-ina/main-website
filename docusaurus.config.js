@@ -45,6 +45,7 @@ const config = {
         blog: {
           showReadingTime: true,
           blogSidebarCount: 'ALL',
+          onUntruncatedBlogPosts: 'ignore',
         },
 
         theme: {
