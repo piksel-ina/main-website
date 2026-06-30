@@ -19,8 +19,10 @@ npm run write-heading-ids    # Regenerate heading IDs
 
 **Verification order:** `npm run check` → `npm run build`. No test framework.
 
-- After JS/JSX or structural changes: run `npm run check && npm run build`
-- After CSS/SCSS-only changes: run `npm run lint:css && npm run format:check` (build not needed — it restarts the dev server)
+- **Only run `npm run check` when the user asks to commit.** During prototyping/iteration, don't run checks unless asked.
+- **Before staging or committing on the user's behalf, dispatch the `convention-review` skill against the diff.** Apply findings before proceeding with the verification commands below.
+- After JS/JSX or structural changes (at commit time): run `npm run check && npm run build`
+- After CSS/SCSS-only changes (at commit time): run `npm run lint:css && npm run format:check` (build not needed — it restarts the dev server)
 - `src/data/*.js` and `i18n/` are excluded from ESLint and Prettier (configured in eslint.config.mjs and .prettierignore)
 
 **CI runs on PRs and pushes to main** (Node 20): eslint → stylelint → prettier → i18n sync check → build. The i18n sync step runs `write-translations` then `git diff --exit-code i18n/`, so always regenerate translations before committing if you changed translatable text.
@@ -100,9 +102,9 @@ SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS cu
 
 ### Tooling Rules
 
-- **NEVER install new packages or tools without explicit user permission.** No `npm install`, `npm uninstall`, `npx playwright install`, or similar. Ask first.
-- **ALWAYS use `playwright-cli` for visual checks.** This is the ONLY tool. Session-based: `playwright-cli open <url>` → `playwright-cli screenshot` → `playwright-cli close`.
-- **NEVER use `npx playwright`**, `npx playwright screenshot`, or any other playwright variant. NEVER install `playwright` or `puppeteer` as project dependencies. NEVER run `npx playwright install`.
+- **Installing dev tools** (CLI binaries, language servers, formatters): agents may install missing tools the project documents or scripts reference (e.g. `playwright-cli`). Surface what's being installed before doing it.
+- **Adding project dependencies** (anything that modifies `package.json` / `package-lock.json`): ask first. This goes in PRs and affects the whole team.
+- **Visual checks use `playwright-cli` + Chromium.** Session-based: `playwright-cli open <url>` → `playwright-cli screenshot` → `playwright-cli close`. Don't use `npx playwright` or other variants. Don't add `playwright` or `puppeteer` as project dependencies.
 
 ### Comments
 

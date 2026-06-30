@@ -22,7 +22,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # Screenshots
-scripts/screenshots/
-
-.opencode/package-lock.json
 .playwright-cli/
