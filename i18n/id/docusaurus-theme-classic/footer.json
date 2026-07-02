@@ -39,29 +39,13 @@
     "message": "Dukungan Teknis",
     "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support/"
   },
-  "link.item.label.Pertanian": {
-    "message": "Pertanian",
-    "description": "The label of footer link with label=Pertanian linking to /docs/usecases/agriculture/"
-  },
-  "link.item.label.Perkotaan": {
-    "message": "Perkotaan",
-    "description": "The label of footer link with label=Perkotaan linking to /docs/usecases/urban/"
-  },
-  "link.item.label.Kehutanan": {
-    "message": "Kehutanan",
-    "description": "The label of footer link with label=Kehutanan linking to /docs/usecases/forestry/"
-  },
   "link.item.label.Pesisir": {
     "message": "Pesisir",
-    "description": "The label of footer link with label=Pesisir linking to /docs/usecases/coastal/"
+    "description": "The label of footer link with label=Pesisir linking to /docs/usecases/pesisir/"
   },
   "link.item.label.Bencana": {
     "message": "Bencana",
-    "description": "The label of footer link with label=Bencana linking to /docs/usecases/disaster/"
-  },
-  "link.item.label.Tambang": {
-    "message": "Tambang",
-    "description": "The label of footer link with label=Tambang linking to /docs/usecases/mining/"
+    "description": "The label of footer link with label=Bencana linking to /docs/usecases/bencana/"
   },
   "link.item.label.Documentation": {
     "message": "Documentation",
@@ -86,5 +70,17 @@
   "copyright": {
     "message": "\n    <div class=\"footer__copyright-container\">\n      <img src=\"/img/logos/logo-big-360px.png\" alt=\"Badan Informasi Geospasial\" class=\"footer__logo\" />\n      <div class=\"footer__copyright-text\">Copyright © 2026 - Badan Informasi Geospasial</div>\n      <div class=\"footer__address\">\n        Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>\n        Tel: 021-8752062 ext.3608/3611/3103\n      </div>\n    </div>\n  ",
     "description": "The footer copyright"
+  },
+  "link.item.label.Pangan": {
+    "message": "Pangan",
+    "description": "The label of footer link with label=Pangan linking to /docs/usecases/pangan/"
+  },
+  "link.item.label.Lahan": {
+    "message": "Lahan",
+    "description": "The label of footer link with label=Lahan linking to /docs/usecases/lahan/"
+  },
+  "link.item.label.Lingkungan": {
+    "message": "Lingkungan",
+    "description": "The label of footer link with label=Lingkungan linking to /docs/usecases/lingkungan/"
   }
 }

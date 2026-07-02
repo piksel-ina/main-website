@@ -829,42 +829,6 @@
   "ourServices.support.status": {
     "message": "MON – FRI"
   },
-  "useCases.agri.title": {
-    "message": "Kedaulatan Pangan"
-  },
-  "useCases.agri.desc": {
-    "message": "Mendukung ketahanan pangan nasional melalui pemantauan fase tanam padi dan kesehatan lahan baku sawah. Menggunakan indeks vegetasi multitemporal untuk mengidentifikasi daerah sentra produksi, memantau pola tanam, dan mendukung estimasi luas panen di tingkat kabupaten."
-  },
-  "useCases.urban.title": {
-    "message": "Perluasan Wilayah Urban"
-  },
-  "useCases.urban.desc": {
-    "message": "Analisis tren perluasan area terbangun (urban sprawl) untuk mendukung perencanaan tata ruang wilayah. Memanfaatkan data arsip satelit jangka panjang untuk memantau konversi lahan di pinggiran kota dan mengukur laju pertumbuhan area terbangun antar periode sensus."
-  },
-  "useCases.forestry.title": {
-    "message": "Pemantauan Deforestasi"
-  },
-  "useCases.forestry.desc": {
-    "message": "Deteksi perubahan tutupan hutan secara berkala menggunakan kombinasi data optik dan radar. Identifikasi indikasi pembukaan lahan baru dan pantau pemulihan vegetasi melalui analisis time-series yang konsisten terhadap gangguan awan."
-  },
-  "useCases.coastal.title": {
-    "message": "Dinamika Pesisir"
-  },
-  "useCases.coastal.desc": {
-    "message": "Pantau perubahan garis pantai akibat abrasi dan akresi menggunakan data time-series Landsat sejak 1984. Identifikasi zona intertidal dan klasifikasi penutup lahan pesisir untuk mendukung pengelolaan wilayah pesisir terpadu."
-  },
-  "useCases.disaster.title": {
-    "message": "Pemetaan Area Banjir"
-  },
-  "useCases.disaster.desc": {
-    "message": "Pemanfaatan data radar Sentinel-1 untuk mendeteksi genangan banjir secara cepat, termasuk saat kondisi tertutup awan. Menyediakan peta indikatif area terdampak untuk mendukung respons kebencanaan dan perencanaan evakuasi."
-  },
-  "useCases.mining.title": {
-    "message": "Aktivitas Pertambangan"
-  },
-  "useCases.mining.desc": {
-    "message": "Pantau pembukaan lahan untuk area tambang terbuka dan identifikasi perubahan bentang alam secara berkala. Kombinasi data optik dan radar untuk mendeteksi kolam tambang dan memantau progres rehabilitasi lahan pasca-tambang."
-  },
   "footer.brand.description": {
     "message": "An initiative by Badan Informasi Geospasial in collaboration with Geoscience Australia.",
     "description": "Footer brand description"
@@ -872,5 +836,97 @@
   "footer.address": {
     "message": "Jl. Raya Jakarta–Bogor KM. 46 · Cibinong 16911 · ID",
     "description": "Footer address"
+  },
+  "useCases.garisPantai.title": {
+    "message": "Perubahan Garis Pantai"
+  },
+  "useCases.garisPantai.desc": {
+    "message": "Pantau perubahan garis pantai akibat abrasi dan akresi menggunakan data time-series Landsat sejak 1984. Identifikasi zona intertidal dan klasifikasi penutup lahan pesisir untuk mendukung pengelolaan wilayah pesisir terpadu."
+  },
+  "useCases.sector.pesisir": {
+    "message": "Pesisir"
+  },
+  "useCases.garisPantai.imageAlt": {
+    "message": "Ilustrasi garis pantai dan wilayah pesisir"
+  },
+  "useCases.banjirAceh.title": {
+    "message": "Delineasi Banjir Aceh"
+  },
+  "useCases.banjirAceh.desc": {
+    "message": "Studi kasus delineasi area terdampak banjir di Aceh menggunakan data radar Sentinel-1. Pemetaan cepat mendukung tanggap darurat, distribusi bantuan, dan perencanaan pemulihan pasca-banjir."
+  },
+  "useCases.sector.bencana": {
+    "message": "Bencana"
+  },
+  "useCases.banjirAceh.imageAlt": {
+    "message": "Ilustrasi genangan banjir pada lahan terbangun"
+  },
+  "useCases.sawah.title": {
+    "message": "Pemantauan Sawah"
+  },
+  "useCases.sawah.desc": {
+    "message": "Pemantauan fase tanam dan kesehatan lahan baku sawah menggunakan indeks vegetasi multitemporal. Mendukung identifikasi sentra produksi, pemantauan pola tanam, dan estimasi luas panen di tingkat kabupaten."
+  },
+  "useCases.sector.pangan": {
+    "message": "Pangan"
+  },
+  "useCases.sawah.imageAlt": {
+    "message": "Ilustrasi petak sawah dari pandangan udara"
+  },
+  "useCases.tambang.title": {
+    "message": "Perhitungan Luas Area Pertambangan"
+  },
+  "useCases.tambang.desc": {
+    "message": "Perhitungan luas area terbuka aktivitas pertambangan menggunakan kombinasi data optik dan radar. Mendukung pemantauan kepatuhan izin usaha dan estimasi lahan terganggu."
+  },
+  "useCases.sector.lahan": {
+    "message": "Lahan"
+  },
+  "useCases.tambang.imageAlt": {
+    "message": "Ilustrasi tambang terbuka dengan teras konsentris"
+  },
+  "useCases.danau.title": {
+    "message": "Pemantauan Kondisi Danau"
+  },
+  "useCases.danau.desc": {
+    "message": "Pemantauan kualitas dan luas permukaan danau menggunakan citra multispektral. Analisis kekeruhan, klorofil-a, dan luas genangan mendukung pengelolaan sumber daya air dan deteksi dini eutrofikasi."
+  },
+  "useCases.sector.lingkungan": {
+    "message": "Lingkungan"
+  },
+  "useCases.danau.imageAlt": {
+    "message": "Ilustrasi danau dari pandangan udara"
+  },
+  "useCases.mangrove.title": {
+    "message": "Klasifikasi Mangrove dengan Machine Learning"
+  },
+  "useCases.mangrove.desc": {
+    "message": "Klasifikasi ekosistem mangrove menggunakan algoritma machine learning pada citra multispektral. Menghasilkan peta habitat mangrove akurat untuk konservasi dan penilaian karbon biru."
+  },
+  "useCases.mangrove.imageAlt": {
+    "message": "Ilustrasi klasifikasi mangrove di pesisir"
+  },
+  "useCases.tile.cta": {
+    "message": "Selengkapnya",
+    "description": "CTA label on each use case tile"
+  },
+  "useCases.eyebrow": {
+    "message": "02 / Pemanfaatan",
+    "description": "Eyebrow above the section heading"
+  },
+  "useCases.heading": {
+    "message": "Pemanfaatan Piksel di Lapangan.",
+    "description": "Main heading of the use cases section"
+  },
+  "useCases.subheading": {
+    "message": "Enam pemanfaatan operasional — setiap kartu menampilkan produk observasi bumi, sensor yang digunakan, dan frekuensi pembaruan data.",
+    "description": "Subheading describing what the tiles show"
+  },
+  "useCases.viewAll.aria": {
+    "message": "Lihat semua pemanfaatan Piksel"
+  },
+  "useCases.viewAll": {
+    "message": "LIHAT SEMUA PEMANFAATAN",
+    "description": "Link to full use case list"
   }
 }

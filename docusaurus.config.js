@@ -268,28 +268,24 @@ const config = {
             title: 'Contoh Pemanfaatan',
             items: [
               {
-                label: 'Pertanian',
-                to: '/docs/usecases/agriculture/',
+                label: 'Pangan',
+                to: '/docs/usecases/pangan/',
               },
               {
-                label: 'Perkotaan',
-                to: '/docs/usecases/urban/',
+                label: 'Lahan',
+                to: '/docs/usecases/lahan/',
               },
               {
-                label: 'Kehutanan',
-                to: '/docs/usecases/forestry/',
+                label: 'Lingkungan',
+                to: '/docs/usecases/lingkungan/',
               },
               {
                 label: 'Pesisir',
-                to: '/docs/usecases/coastal/',
+                to: '/docs/usecases/pesisir/',
               },
               {
                 label: 'Bencana',
-                to: '/docs/usecases/disaster/',
-              },
-              {
-                label: 'Tambang',
-                to: '/docs/usecases/mining/',
+                to: '/docs/usecases/bencana/',
               },
             ],
           },
