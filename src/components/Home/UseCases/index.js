@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link';
+import Translate, { translate } from '@docusaurus/Translate';
 import { useCasesData } from '@site/src/data/useCasesData';
 import Coord from '@site/src/components/UI/Atoms/Coord';
-import UseCaseEO from './UseCaseEO';
 import styles from './styles.module.scss';
 
 const TileArrow = () => (
@@ -45,7 +45,7 @@ const MosaicTile = ({ uc, featured = false }) => (
     style={{ '--uc-color': uc.color }}
   >
     <div className={styles.tile__media}>
-      <UseCaseEO id={uc.id} featured={featured} />
+      <img src={uc.image} alt={uc.imageAlt} loading="lazy" />
       <div className={`${styles.tile__corner} ${styles['tile__corner--tl']}`}>
         <span>UC · {uc.num}</span>
       </div>
@@ -64,10 +64,10 @@ const MosaicTile = ({ uc, featured = false }) => (
         <span className={styles.tile__sectorLine} />
       </div>
 
-      <h3 className={styles.tile__title}>{uc.en}</h3>
+      <h3 className={styles.tile__title}>{uc.title}</h3>
       <p className={styles.tile__desc}>{uc.desc}</p>
 
-      {featured && uc.stats && (
+      {featured && uc.stats && uc.stats.length > 0 && (
         <div className={styles.tile__stats}>
           {uc.stats.map((s, i) => (
             <div key={i} className={styles.tile__stat}>
@@ -81,7 +81,13 @@ const MosaicTile = ({ uc, featured = false }) => (
       <div className={styles.tile__foot}>
         <span className={styles.tile__product}>{uc.product}</span>
         <span className={styles.tile__cta}>
-          Pelajari <TileArrow />
+          <Translate
+            id="useCases.tile.cta"
+            description="CTA label on each use case tile"
+          >
+            Selengkapnya
+          </Translate>{' '}
+          <TileArrow />
         </span>
       </div>
     </div>
@@ -100,16 +106,32 @@ export default function UseCases() {
 
         <header className={styles.header}>
           <div>
-            <span className="pk-eyebrow">02 / Pemanfaatan</span>
+            <span className="pk-eyebrow">
+              <Translate
+                id="useCases.eyebrow"
+                description="Eyebrow above the section heading"
+              >
+                02 / Pemanfaatan
+              </Translate>
+            </span>
             <h2 className={styles.header__title}>
-              Where Piksel
-              <br />
-              is being <em>put to work</em>.
+              <Translate
+                id="useCases.heading"
+                description="Main heading of the use cases section"
+              >
+                Pemanfaatan Piksel di Lapangan.
+              </Translate>
             </h2>
           </div>
           <p className={styles.header__sub}>
-            Six operational use cases — each tile carries the actual EO product
-            output, the sensor stack behind it, and the cadence it ships at.
+            <Translate
+              id="useCases.subheading"
+              description="Subheading describing what the tiles show"
+            >
+              Enam pemanfaatan operasional — setiap kartu menampilkan produk
+              observasi bumi, sensor yang digunakan, dan frekuensi pembaruan
+              data.
+            </Translate>
           </p>
         </header>
 
@@ -130,8 +152,20 @@ export default function UseCases() {
           <Link
             to="/docs/category/kasus-penggunaan"
             className={styles.coords__link}
+            aria-label={translate({
+              id: 'useCases.viewAll.aria',
+              message: 'Lihat semua pemanfaatan Piksel',
+            })}
           >
-            <Coord>LIHAT SEMUA PEMANFAATAN</Coord> <SectionArrow />
+            <Coord>
+              <Translate
+                id="useCases.viewAll"
+                description="Link to full use case list"
+              >
+                LIHAT SEMUA PEMANFAATAN
+              </Translate>
+            </Coord>{' '}
+            <SectionArrow />
           </Link>
         </div>
       </div>

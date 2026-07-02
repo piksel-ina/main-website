@@ -71,28 +71,12 @@
     "message": "Technical Support",
     "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support/"
   },
-  "link.item.label.Pertanian": {
-    "message": "Agriculture",
-    "description": "The label of footer link with label=Pertanian linking to /docs/usecases/agriculture/"
-  },
-  "link.item.label.Perkotaan": {
-    "message": "Urban",
-    "description": "The label of footer link with label=Perkotaan linking to /docs/usecases/urban/"
-  },
-  "link.item.label.Kehutanan": {
-    "message": "Forestry",
-    "description": "The label of footer link with label=Kehutanan linking to /docs/usecases/forestry/"
-  },
   "link.item.label.Pesisir": {
     "message": "Coastal",
-    "description": "The label of footer link with label=Pesisir linking to /docs/usecases/coastal/"
+    "description": "The label of footer link with label=Pesisir linking to /docs/usecases/pesisir/"
   },
   "link.item.label.Bencana": {
     "message": "Disaster",
-    "description": "The label of footer link with label=Bencana linking to /docs/usecases/disaster/"
-  },
-  "link.item.label.Tambang": {
-    "message": "Mining",
-    "description": "The label of footer link with label=Tambang linking to /docs/usecases/mining/"
+    "description": "The label of footer link with label=Bencana linking to /docs/usecases/bencana/"
   }
 }
