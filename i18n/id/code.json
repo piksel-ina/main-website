@@ -847,7 +847,7 @@
     "message": "Bencana"
   },
   "useCases.banjir.imageAlt": {
-    "message": "Ilustrasi genangan banjir pada lahan terbangun"
+    "message": "Peta area terdampak banjir Siklon Senyar"
   },
   "useCases.garisPantai.title": {
     "message": "Perubahan Garis Pantai"
@@ -859,7 +859,7 @@
     "message": "Pesisir"
   },
   "useCases.garisPantai.imageAlt": {
-    "message": "Ilustrasi garis pantai dan wilayah pesisir"
+    "message": "Peta perubahan garis pantai Utara Jakarta"
   },
   "useCases.padi.title": {
     "message": "Monitoring Penanaman Padi"
@@ -871,7 +871,7 @@
     "message": "Pangan"
   },
   "useCases.padi.imageAlt": {
-    "message": "Ilustrasi petak sawah dari pandangan udara"
+    "message": "Dashboard pemantauan penanaman padi di Telagasari"
   },
   "useCases.tambang.title": {
     "message": "Menghitung Luas Area Pertambangan"
@@ -883,7 +883,7 @@
     "message": "Lahan"
   },
   "useCases.tambang.imageAlt": {
-    "message": "Ilustrasi tambang terbuka dengan teras konsentris"
+    "message": "Peta luas area pertambangan nikel di Pulau Gag"
   },
   "useCases.mangrove.title": {
     "message": "Klasifikasi Mangrove dengan Machine Learning"
@@ -892,7 +892,7 @@
     "message": "Penggunaan data Sentinel-2 dan metode Random Forest untuk delineasi mangrove melalui indeks spektral, dengan studi kasus di selatan Kota Denpasar, Bali."
   },
   "useCases.mangrove.imageAlt": {
-    "message": "Ilustrasi klasifikasi mangrove di pesisir"
+    "message": "Peta klasifikasi mangrove di selatan Kota Denpasar"
   },
   "useCases.pltp.title": {
     "message": "Monitoring Suhu Permukaan di Area PLTP"
@@ -904,7 +904,7 @@
     "message": "Lingkungan"
   },
   "useCases.pltp.imageAlt": {
-    "message": "Ilustrasi kawasan pembangkit listrik tenaga panas bumi"
+    "message": "Peta Land Surface Temperature area PLTP Kamojang"
   },
   "useCases.tile.cta": {
     "message": "Selengkapnya",

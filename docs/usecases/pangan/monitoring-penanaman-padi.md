@@ -32,16 +32,4 @@ Selain itu, modul ini menghasilkan juga kualitas peta phenology, tanaman padi, e
 
 Modul ini menyajikan metode pemantauan pertumbuhan padi melalui pembuatan dashboard interaktif yang menggabungkan data spasial dan temporal, termasuk luas area sawah, indeks vegetasi (NDVI dan EVI), serta tahapan pertumbuhan yang diurutkan secara kronologis. Hasil yang dicapai berupa visualisasi durasi antar tahap pertumbuhan, ringkasan statistik musim tanam (panjang musim, puncak NDVI/EVI), dan informasi luas lahan, sehingga memberikan gambaran komprehensif tentang dinamika pertumbuhan padi sekaligus memudahkan analisis perkembangan tanaman secara kuantitatif dan visual.
 
-{/* image placeholder: padi.webp */}
-
-## Input
-
-Citra Sentinel-2
-
-## Output
-
-Prediksi hasil panen
-
-## Metode
-
-Indeks citra
+![Dashboard pemantauan penanaman padi di Telagasari](/img/usecases/padi.webp)

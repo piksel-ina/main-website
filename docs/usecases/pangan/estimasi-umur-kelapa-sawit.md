@@ -29,16 +29,4 @@ Modul ini memberikan gambaran penggunaan citra multispektral Sentinel-2 dengan h
 2. Umur kelapa sawit dapat diindikasi dari berbagai jenis transformasi citra yang digunakan
 3. Distribusi data menunjukkan mayoritas area merupakan umur sawit 6-15 tahun
 
-{/* image placeholder: umur-sawit.webp */}
-
-## Input
-
-Citra Sentinel-2
-
-## Output
-
-Estimasi umur kelapa sawit
-
-## Metode
-
-Indeks citra
+![Peta estimasi umur kelapa sawit](/img/usecases/umur-sawit.webp)

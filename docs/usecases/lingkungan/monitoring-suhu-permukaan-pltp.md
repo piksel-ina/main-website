@@ -25,16 +25,4 @@ Modul ini bertujuan untuk memberikan contoh penggunaan metode Normalized Differe
 
 Peta Land Surface Temperature (LST) menunjukkan bahwa kawasan PLTP termasuk pemukiman menunjukkan suhu permukaan yang tinggi (warna kuning, oranye dan merah). Sedang wilayah hutan memiliki suhu lebih rendah (berwarna biru).
 
-{/* image placeholder: lst.webp */}
-
-## Input
-
-Landsat 9
-
-## Output
-
-Land Surface Temperature (LST)
-
-## Metode
-
-Normalized Difference Vegetation Index (NDVI) dan Land Surface Temperature (LST)
+![Peta Land Surface Temperature area PLTP Kamojang](/img/usecases/lst.webp)

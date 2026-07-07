@@ -26,16 +26,4 @@ Tahapan dalam identifikasi area banjir adalah sebagai berikut:
 
 Metode threshold −3 dB berhasil membedakan area banjir dan non-banjir, dengan area banjir teridentifikasi sebagai piksel yang mengalami penurunan backscatter minimal 3 dB. Hasil ini konsisten dengan karakteristik radar SAR, di mana genangan air menyebabkan refleksi spekular yang menurunkan nilai backscatter.
 
-{/* image placeholder: banjir-aceh.webp */}
-
-## Input
-
-Sentinel-1
-
-## Output
-
-Area terdampak banjir
-
-## Metode
-
-Threshold SAR backscatter
+![Peta area terdampak banjir Siklon Senyar](/img/usecases/banjir-aceh.webp)

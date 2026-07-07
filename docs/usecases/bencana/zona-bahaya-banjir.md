@@ -25,16 +25,4 @@ Tahapan dalam identifikasi area berpotensi banjir adalah sebagai berikut:
 
 Data DEM dapat digunakan untuk penyusunan zonasi bahaya banjir secara sederhana. Untuk hasil yang lebih akurat, pemodelan spasial dengan menggunakan data curah hujan dan tutupan lahan perlu dilakukan.
 
-{/* image placeholder: banjir.webp */}
-
-## Input
-
-DEM
-
-## Output
-
-Klasifikasi zona banjir
-
-## Metode
-
-Modified GFI
+![Peta zonasi bahaya banjir Kabupaten Bangka Barat](/img/usecases/banjir.webp)
