@@ -28,16 +28,4 @@ Lokasi yang digunakan sebagai contoh adalah di pantai Utara Jakarta.
 
 Analisis data Landsat untuk menghitung laju abrasi dan akresi tahunan. Hasil ini dapat dijadikan acuan bagaimana garis pantai berubah sesuai dengan berjalannya waktu karena faktor alam atau manusia.
 
-{/* image placeholder: garis-pantai.webp */}
-
-## Input
-
-Citra Landsat 5, Landsat 7, Landsat 8, dan Landsat 9
-
-## Output
-
-Perubahan garis pantai
-
-## Metode
-
-Analisis multi temporal
+![Peta perubahan garis pantai Utara Jakarta](/img/usecases/garis-pantai.webp)

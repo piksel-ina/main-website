@@ -23,16 +23,4 @@ Modul ini bertujuan untuk memberikan contoh penggunaan metode Bare Soil Index (B
 
 Luas area pertambangan berhasil dihitung menggunakan data Sentinel-2 dan metode Bare Soil Index (BSI). Penggunaan BSI dapat digunakan juga untuk menghitung luas lahan terbuka lain nya.
 
-{/* image placeholder: tambang.webp */}
-
-## Input
-
-Citra Sentinel-2
-
-## Output
-
-Luas Area Pertambangan
-
-## Metode
-
-Bare Soil Index (BSI)
+![Peta luas area pertambangan nikel di Pulau Gag](/img/usecases/tambang.webp)

@@ -21,16 +21,4 @@ Modul ini bertujuan untuk memberikan contoh penggunaan data Sentinel-1 dalam mem
 
 Densitas aktivitas kapal di sekitar pelabuhan.
 
-{/* image placeholder: kapal.webp */}
-
-## Input
-
-Citra Sentinel-1
-
-## Output
-
-Lokasi kapal dalam suatu pelabuhan
-
-## Metode
-
-Penggunaan citra radar
+![Densitas aktivitas kapal di Pelabuhan Makassar](/img/usecases/kapal.webp)

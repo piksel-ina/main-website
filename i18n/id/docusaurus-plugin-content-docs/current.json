@@ -88,11 +88,11 @@
     "description": "The generated-index page description for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kasus Penggunaan": {
-    "message": "Kasus Penggunaan",
+    "message": "Use Cases",
     "description": "The label for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kasus Penggunaan.link.generated-index.title": {
-    "message": "Kasus Penggunaan",
+    "message": "Use Cases",
     "description": "The generated-index page title for category 'Kasus Penggunaan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kasus Penggunaan.link.generated-index.description": {

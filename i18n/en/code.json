@@ -416,7 +416,7 @@
     "message": "Disaster"
   },
   "useCases.banjir.imageAlt": {
-    "message": "Illustration of flood inundation over built-up land"
+    "message": "Flood extent map for Cyclone Senyar affected area"
   },
   "useCases.garisPantai.title": {
     "message": "Coastline Change"
@@ -428,7 +428,7 @@
     "message": "Coastal"
   },
   "useCases.garisPantai.imageAlt": {
-    "message": "Illustration of coastline and coastal areas"
+    "message": "Coastline change map of Jakarta's north coast"
   },
   "useCases.padi.title": {
     "message": "Rice Planting Monitoring"
@@ -440,7 +440,7 @@
     "message": "Food"
   },
   "useCases.padi.imageAlt": {
-    "message": "Aerial illustration of rice paddies"
+    "message": "Rice planting monitoring dashboard for Telagasari"
   },
   "useCases.tambang.title": {
     "message": "Mining Area Calculation"
@@ -452,7 +452,7 @@
     "message": "Land"
   },
   "useCases.tambang.imageAlt": {
-    "message": "Illustration of an open-pit mine with concentric terraces"
+    "message": "Nickel mining area map of Gag Island"
   },
   "useCases.mangrove.title": {
     "message": "Mangrove Classification with Machine Learning"
@@ -461,7 +461,7 @@
     "message": "Sentinel-2 data combined with a Random Forest classifier to delineate mangroves via spectral indices, with a case study south of Denpasar, Bali."
   },
   "useCases.mangrove.imageAlt": {
-    "message": "Illustration of mangrove classification along the coast"
+    "message": "Mangrove classification map south of Denpasar"
   },
   "useCases.pltp.title": {
     "message": "PLTP Surface Temperature Monitoring"
@@ -473,7 +473,7 @@
     "message": "Environment"
   },
   "useCases.pltp.imageAlt": {
-    "message": "Illustration of a geothermal power plant area"
+    "message": "Land Surface Temperature map for Kamojang geothermal plant"
   },
   "useCases.tile.cta": {
     "message": "Learn more",

@@ -26,16 +26,4 @@ Modul ini memberikan gambaran penggunaan citra multispektral Sentinel-2 dengan h
 3. Hasil analisis menunjukkan bahwa penginderaan jauh merupakan pendekatan yang efisien dan akurat untuk memantau dinamika perubahan lahan, khususnya pada wilayah dengan perkembangan industri yang pesat.
 4. Informasi yang dihasilkan dapat dimanfaatkan sebagai dasar dalam perencanaan tata ruang dan pengambilan kebijakan terkait pengelolaan lahan yang berkelanjutan.
 
-{/* image placeholder: perubahan-lahan.webp */}
-
-## Input
-
-Citra Sentinel-2
-
-## Output
-
-Perubahan tutupan lahan
-
-## Metode
-
-Indeks citra
+![Peta perubahan tutupan lahan dari sawah ke pabrik dan lahan terbuka](/img/usecases/perubahan-lahan.webp)

@@ -25,16 +25,4 @@ Modul ini bertujuan untuk memberikan contoh penggunaan data Sentinel-2 dalam del
 
 Menghasilkan peta distribusi mangrove beserta statistik luas tiap kelas, serta menyimpan seluruh keluaran analisis dalam folder khusus. Dengan demikian, workflow ini memberikan gambaran spasial dan kuantitatif yang siap digunakan untuk penelitian ekologi maupun perencanaan wilayah pesisir.
 
-{/* image placeholder: mangrove.webp */}
-
-## Input
-
-Citra Sentinel-2
-
-## Output
-
-Klasifikasi mangrove
-
-## Metode
-
-Penggunaan indeks spektral dan machine learning (random forest)
+![Peta klasifikasi mangrove di selatan Kota Denpasar](/img/usecases/mangrove.webp)
