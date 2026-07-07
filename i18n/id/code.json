@@ -837,11 +837,23 @@
     "message": "Jl. Raya Jakarta–Bogor KM. 46 · Cibinong 16911 · ID",
     "description": "Footer address"
   },
+  "useCases.banjir.title": {
+    "message": "Identifikasi Area Terdampak Banjir"
+  },
+  "useCases.banjir.desc": {
+    "message": "Siklon tropis Senyar dengan hujan yang lebat telah melanda Asia Tenggara mulai November 2025. Citra radar Sentinel-1 digunakan untuk mendeteksi genangan banjir berdasarkan perubahan backscatter antara data sebelum banjir dan ketika banjir."
+  },
+  "useCases.sector.bencana": {
+    "message": "Bencana"
+  },
+  "useCases.banjir.imageAlt": {
+    "message": "Ilustrasi genangan banjir pada lahan terbangun"
+  },
   "useCases.garisPantai.title": {
     "message": "Perubahan Garis Pantai"
   },
   "useCases.garisPantai.desc": {
-    "message": "Pantau perubahan garis pantai akibat abrasi dan akresi menggunakan data time-series Landsat sejak 1984. Identifikasi zona intertidal dan klasifikasi penutup lahan pesisir untuk mendukung pengelolaan wilayah pesisir terpadu."
+    "message": "Analisis perubahan garis pantai menggunakan citra Landsat multitemporal dan model pasang surut, dengan studi kasus di Pantai Utara Jakarta."
   },
   "useCases.sector.pesisir": {
     "message": "Pesisir"
@@ -849,35 +861,23 @@
   "useCases.garisPantai.imageAlt": {
     "message": "Ilustrasi garis pantai dan wilayah pesisir"
   },
-  "useCases.banjirAceh.title": {
-    "message": "Delineasi Banjir Aceh"
+  "useCases.padi.title": {
+    "message": "Monitoring Penanaman Padi"
   },
-  "useCases.banjirAceh.desc": {
-    "message": "Studi kasus delineasi area terdampak banjir di Aceh menggunakan data radar Sentinel-1. Pemetaan cepat mendukung tanggap darurat, distribusi bantuan, dan perencanaan pemulihan pasca-banjir."
-  },
-  "useCases.sector.bencana": {
-    "message": "Bencana"
-  },
-  "useCases.banjirAceh.imageAlt": {
-    "message": "Ilustrasi genangan banjir pada lahan terbangun"
-  },
-  "useCases.sawah.title": {
-    "message": "Pemantauan Sawah"
-  },
-  "useCases.sawah.desc": {
-    "message": "Pemantauan fase tanam dan kesehatan lahan baku sawah menggunakan indeks vegetasi multitemporal. Mendukung identifikasi sentra produksi, pemantauan pola tanam, dan estimasi luas panen di tingkat kabupaten."
+  "useCases.padi.desc": {
+    "message": "Pemanfaatan data Sentinel-2 untuk memantau pertumbuhan padi tahunan menggunakan indeks NDVI, LSWI, EVI, dan NDRE, menghasilkan peta fenologi, estimasi panen, serta dashboard pemantauan di Telagasari."
   },
   "useCases.sector.pangan": {
     "message": "Pangan"
   },
-  "useCases.sawah.imageAlt": {
+  "useCases.padi.imageAlt": {
     "message": "Ilustrasi petak sawah dari pandangan udara"
   },
   "useCases.tambang.title": {
-    "message": "Perhitungan Luas Area Pertambangan"
+    "message": "Menghitung Luas Area Pertambangan"
   },
   "useCases.tambang.desc": {
-    "message": "Perhitungan luas area terbuka aktivitas pertambangan menggunakan kombinasi data optik dan radar. Mendukung pemantauan kepatuhan izin usaha dan estimasi lahan terganggu."
+    "message": "Penggunaan metode Bare Soil Index (BSI) untuk menghitung luas area pertambangan nikel di Pulau Gag, Raja Ampat, berdasarkan identifikasi tanah terbuka."
   },
   "useCases.sector.lahan": {
     "message": "Lahan"
@@ -885,26 +885,26 @@
   "useCases.tambang.imageAlt": {
     "message": "Ilustrasi tambang terbuka dengan teras konsentris"
   },
-  "useCases.danau.title": {
-    "message": "Pemantauan Kondisi Danau"
-  },
-  "useCases.danau.desc": {
-    "message": "Pemantauan kualitas dan luas permukaan danau menggunakan citra multispektral. Analisis kekeruhan, klorofil-a, dan luas genangan mendukung pengelolaan sumber daya air dan deteksi dini eutrofikasi."
-  },
-  "useCases.sector.lingkungan": {
-    "message": "Lingkungan"
-  },
-  "useCases.danau.imageAlt": {
-    "message": "Ilustrasi danau dari pandangan udara"
-  },
   "useCases.mangrove.title": {
     "message": "Klasifikasi Mangrove dengan Machine Learning"
   },
   "useCases.mangrove.desc": {
-    "message": "Klasifikasi ekosistem mangrove menggunakan algoritma machine learning pada citra multispektral. Menghasilkan peta habitat mangrove akurat untuk konservasi dan penilaian karbon biru."
+    "message": "Penggunaan data Sentinel-2 dan metode Random Forest untuk delineasi mangrove melalui indeks spektral, dengan studi kasus di selatan Kota Denpasar, Bali."
   },
   "useCases.mangrove.imageAlt": {
     "message": "Ilustrasi klasifikasi mangrove di pesisir"
+  },
+  "useCases.pltp.title": {
+    "message": "Monitoring Suhu Permukaan di Area PLTP"
+  },
+  "useCases.pltp.desc": {
+    "message": "Penggunaan NDVI dan Land Surface Temperature (LST) untuk menganalisis suhu permukaan serta aktivitas PLTP, dengan studi kasus di Kamojang, Jawa Barat."
+  },
+  "useCases.sector.lingkungan": {
+    "message": "Lingkungan"
+  },
+  "useCases.pltp.imageAlt": {
+    "message": "Ilustrasi kawasan pembangkit listrik tenaga panas bumi"
   },
   "useCases.tile.cta": {
     "message": "Selengkapnya",
