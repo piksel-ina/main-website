@@ -406,133 +406,97 @@
     "message": "Open Access for Public",
     "description": "Statistics Label 04"
   },
-  "useCases.header.tag": {
-    "message": "Our Solutions",
-    "description": "Tag label for the use cases section"
+  "useCases.banjir.title": {
+    "message": "Flood-affected Area Identification"
   },
-  "useCases.header.title": {
-    "message": "Piksel Use Cases",
-    "description": "Main title for the use cases section"
+  "useCases.banjir.desc": {
+    "message": "Tropical cyclone Senyar brought heavy rainfall to Southeast Asia starting November 2025. Sentinel-1 radar imagery is used to detect flood inundation based on backscatter change between pre-flood and flood scenes."
   },
-  "useCases.header.subtitle": {
-    "message": "Utilization of remote sensing data to support evidence-based policy making and strengthen national resilience in various strategic sectors of Indonesia.",
-    "description": "Subtitle description for the use cases section"
-  },
-  "useCases.common.learnMore": {
-    "message": "Learn More",
-    "description": "Button text to learn more about a specific use case"
-  },
-  "useCases.common.viewAll": {
-    "message": "View All Use Cases",
-    "description": "Button text to view all use cases"
-  },
-  "useCases.useCase01.tab": {
-    "message": "Forestry"
-  },
-  "useCases.useCase01.title": {
-    "message": "Deforestation Monitoring"
-  },
-  "useCases.useCase01.description": {
-    "message": "Regular detection of forest cover changes using optical (Sentinel-2, Landsat) and radar (Sentinel-1) data. Identify indications of land clearing and monitor vegetation recovery throughout Indonesia."
-  },
-  "useCases.useCase01.f1": {
-    "message": "Periodic land cover monitoring"
-  },
-  "useCases.useCase01.f2": {
-    "message": "Time-series based change detection"
-  },
-  "useCases.useCase01.f3": {
-    "message": "Landsat data historical analysis"
-  },
-  "useCases.useCase02.tab": {
-    "message": "Urban"
-  },
-  "useCases.useCase02.title": {
-    "message": "Urban Expansion"
-  },
-  "useCases.useCase02.description": {
-    "message": "Analysis of built-up area expansion trends (urban sprawl) to support regional planning. Monitor land conversion in suburban areas using long-term satellite archive data."
-  },
-  "useCases.useCase02.f1": {
-    "message": "Built-up area mapping"
-  },
-  "useCases.useCase02.f2": {
-    "message": "Land use change monitoring"
-  },
-  "useCases.useCase02.f3": {
-    "message": "City growth trend analysis"
-  },
-  "useCases.useCase03.tab": {
-    "message": "Agriculture"
-  },
-  "useCases.useCase03.title": {
-    "message": "Food Sovereignty"
-  },
-  "useCases.useCase03.description": {
-    "message": "Supporting national food security through rice planting phase monitoring and paddy field health. Identification of production centers and harvest prediction using multi-temporal satellite data analysis."
-  },
-  "useCases.useCase03.f1": {
-    "message": "Paddy Field Monitoring"
-  },
-  "useCases.useCase03.f2": {
-    "message": "Rice growth phase analysis"
-  },
-  "useCases.useCase03.f3": {
-    "message": "Cropping index estimation"
-  },
-  "useCases.useCase04.tab": {
-    "message": "Coastal"
-  },
-  "useCases.useCase04.title": {
-    "message": "Coastal Dynamics"
-  },
-  "useCases.useCase04.description": {
-    "message": "Monitor coastline changes due to abrasion or accretion using Landsat time-series data. Identify tidal inundation areas (intertidal) for coastal zone management."
-  },
-  "useCases.useCase04.f1": {
-    "message": "Historical coastline change detection"
-  },
-  "useCases.useCase04.f2": {
-    "message": "Tidal area mapping"
-  },
-  "useCases.useCase04.f3": {
-    "message": "Coastal land cover classification"
-  },
-  "useCases.useCase05.tab": {
+  "useCases.sector.bencana": {
     "message": "Disaster"
   },
-  "useCases.useCase05.title": {
-    "message": "Flood Area Mapping"
+  "useCases.banjir.imageAlt": {
+    "message": "Illustration of flood inundation over built-up land"
   },
-  "useCases.useCase05.description": {
-    "message": "Utilization of Sentinel-1 radar data to detect flood inundation, even when covered by clouds. Support rapid response by providing indicative maps of affected areas."
+  "useCases.garisPantai.title": {
+    "message": "Coastline Change"
   },
-  "useCases.useCase05.f1": {
-    "message": "SAR-based flood detection"
+  "useCases.garisPantai.desc": {
+    "message": "Analysis of coastline change using multi-temporal Landsat imagery and a tidal model, with a case study on Jakarta's north coast."
   },
-  "useCases.useCase05.f2": {
-    "message": "Affected area monitoring"
+  "useCases.sector.pesisir": {
+    "message": "Coastal"
   },
-  "useCases.useCase05.f3": {
-    "message": "Cloud-free data provision"
+  "useCases.garisPantai.imageAlt": {
+    "message": "Illustration of coastline and coastal areas"
   },
-  "useCases.useCase06.tab": {
-    "message": "Mining"
+  "useCases.padi.title": {
+    "message": "Rice Planting Monitoring"
   },
-  "useCases.useCase06.title": {
-    "message": "Mining Activity"
+  "useCases.padi.desc": {
+    "message": "Sentinel-2 data used to monitor annual rice growth via NDVI, LSWI, EVI, and NDRE indices, producing phenology maps, harvest estimates, and a monitoring dashboard for Telagasari."
   },
-  "useCases.useCase06.description": {
-    "message": "Regularly monitor land clearing for open-pit mining areas. Identify landscape changes and mining ponds using a combination of optical and radar data."
+  "useCases.sector.pangan": {
+    "message": "Food"
   },
-  "useCases.useCase06.f1": {
-    "message": "Land clearing detection"
+  "useCases.padi.imageAlt": {
+    "message": "Aerial illustration of rice paddies"
   },
-  "useCases.useCase06.f2": {
-    "message": "Mining water body identification"
+  "useCases.tambang.title": {
+    "message": "Mining Area Calculation"
   },
-  "useCases.useCase06.f3": {
-    "message": "Land rehabilitation monitoring"
+  "useCases.tambang.desc": {
+    "message": "Using the Bare Soil Index (BSI) method to compute the extent of the nickel mining area on Gag Island, Raja Ampat, based on bare-soil identification."
+  },
+  "useCases.sector.lahan": {
+    "message": "Land"
+  },
+  "useCases.tambang.imageAlt": {
+    "message": "Illustration of an open-pit mine with concentric terraces"
+  },
+  "useCases.mangrove.title": {
+    "message": "Mangrove Classification with Machine Learning"
+  },
+  "useCases.mangrove.desc": {
+    "message": "Sentinel-2 data combined with a Random Forest classifier to delineate mangroves via spectral indices, with a case study south of Denpasar, Bali."
+  },
+  "useCases.mangrove.imageAlt": {
+    "message": "Illustration of mangrove classification along the coast"
+  },
+  "useCases.pltp.title": {
+    "message": "PLTP Surface Temperature Monitoring"
+  },
+  "useCases.pltp.desc": {
+    "message": "NDVI and Land Surface Temperature (LST) used to analyse surface temperature and geothermal plant activity, with a case study at Kamojang, West Java."
+  },
+  "useCases.sector.lingkungan": {
+    "message": "Environment"
+  },
+  "useCases.pltp.imageAlt": {
+    "message": "Illustration of a geothermal power plant area"
+  },
+  "useCases.tile.cta": {
+    "message": "Learn more",
+    "description": "CTA label on each use case tile"
+  },
+  "useCases.eyebrow": {
+    "message": "02 / Use Cases",
+    "description": "Eyebrow above the section heading"
+  },
+  "useCases.heading": {
+    "message": "Piksel in the Field.",
+    "description": "Main heading of the use cases section"
+  },
+  "useCases.subheading": {
+    "message": "Six operational use cases — each card shows the earth observation product, the sensor used, and how often the data is refreshed.",
+    "description": "Subheading describing what the tiles show"
+  },
+  "useCases.viewAll.aria": {
+    "message": "See all Piksel use cases"
+  },
+  "useCases.viewAll": {
+    "message": "SEE ALL USE CASES",
+    "description": "Link to full use case list"
   },
   "homepage.news.tag": {
     "message": "News & Articles",

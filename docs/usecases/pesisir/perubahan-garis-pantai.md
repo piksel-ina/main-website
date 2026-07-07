@@ -7,32 +7,37 @@ pagination_prev: null
 
 ## Ringkasan
 
-Analisis perubahan garis pantai akibat abrasi dan akresi menggunakan data time-series Landsat sejak 1984. Analisis multitemporal ini membantu mengidentifikasi zona intertidal dan mendukung pengelolaan wilayah pesisir terpadu.
+Modul ini bertujuan untuk menampilkan hasil analisis perubahan garis pantai. Data yang diperlukan adalah:
 
-## Latar Belakang
+1. Data citra satelit Landsat dalam beberapa tahun
+2. Model pasang surut, yang digunakan untuk anotasi pada citra berupa informasi ketinggian muka air laut, serta untuk memilih area yang berada di tengah kisaran pasang surut, sehingga dapat ditetapkan garis pantai rata-rata.
 
-Wilayah pesisir Indonesia rentan terhadap perubahan akibat dinamika alam dan aktivitas manusia. Abrasi mengancam permukiman dan infrastruktur, sementara akresi dapat mengubah pola pemanfaatan lahan pesisir. Data satelit optik jangka panjang memungkinkan analisis perubahan yang konsisten dari waktu ke waktu, memberikan gambaran objektif tentang laju dan pola perubahan garis pantai.
+Lokasi yang digunakan sebagai contoh adalah di pantai Utara Jakarta.
 
-## Data dan Sensor
+## Tahapan
 
-- **Landsat 5/7/8/9 (Surface Reflectance)** — arsip data sejak 1984, resolusi 30 m.
-- **Sentinel-2 (Level-2A)** — data resolusi 10 m untuk periode terkini.
-- **Data pasang surut** — sebagai koreksi posisi garis pantai relatif terhadap kondisi air laut.
+1. Persiapan
+2. Menentukan wilayah
+3. Memuat data
+4. Membuat mask
+5. Memisahkan daratan dan lautan
+6. Ekstraksi data
+7. Menampilkan dan menyimpan hasil
 
-## Metodologi
+## Hasil
 
-1. **Filter berdasarkan pasang surut** — pemilihan citra yang direkam pada kondisi air pasang atau surut tertentu untuk konsistensi.
-2. **Ekstraksi garis pantai** — menggunakan indeks air (NDWI, MNDWI) atau threshold pada band inframerah.
-3. **Vektorisasi** — konversi hasil raster menjadi garis pantai dalam format vektor.
-4. **Analisis perubahan** — perhitungan jarak dan luas perubahan garis pantai antar periode (misalnya per dekade).
-5. **Klasifikasi zona** — pemetaan zona abrasi dan akresi.
+Analisis data Landsat untuk menghitung laju abrasi dan akresi tahunan. Hasil ini dapat dijadikan acuan bagaimana garis pantai berubah sesuai dengan berjalannya waktu karena faktor alam atau manusia.
 
-## Hasil dan Output
+{/* image placeholder: garis-pantai.webp */}
 
-- Garis pantai historis dalam format vektor (GeoJSON atau Shapefile).
-- Peta laju perubahan garis pantai (meter per tahun) dalam format raster.
-- Statistik luas area abrasi dan akresi per wilayah administrasi.
+## Input
 
-## Wilayah Kajian
+Citra Landsat 5, Landsat 7, Landsat 8, dan Landsat 9
 
-Fokus awal pada wilayah pesisir yang rawan abrasi seperti pantai utara Jawa (Pantura), pesisir timur Sumatera, dan wilayah pesisir strategis lainnya sesuai prioritas nasional.
+## Output
+
+Perubahan garis pantai
+
+## Metode
+
+Analisis multi temporal

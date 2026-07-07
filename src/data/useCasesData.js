@@ -2,8 +2,38 @@ import { translate } from '@docusaurus/Translate';
 
 export const useCasesData = [
   {
-    id: 'garis-pantai',
+    id: 'banjir',
     num: '01',
+    en: 'Flood-affected Area Identification',
+    title: translate({
+      id: 'useCases.banjir.title',
+      message: 'Identifikasi Area Terdampak Banjir',
+    }),
+    desc: translate({
+      id: 'useCases.banjir.desc',
+      message:
+        'Siklon tropis Senyar dengan hujan yang lebat telah melanda Asia Tenggara mulai November 2025. Citra radar Sentinel-1 digunakan untuk mendeteksi genangan banjir berdasarkan perubahan backscatter antara data sebelum banjir dan ketika banjir.',
+    }),
+    sector: translate({ id: 'useCases.sector.bencana', message: 'Bencana' }),
+    sensor: 'Sentinel-1',
+    cadence: 'On-event',
+    product: 'S1 Flood Extent',
+    color: '#dc2626',
+    image: '/img/usecases/banjir-aceh.svg',
+    imageAlt: translate({
+      id: 'useCases.banjir.imageAlt',
+      message: 'Ilustrasi genangan banjir pada lahan terbangun',
+    }),
+    link: '/docs/usecases/bencana/identifikasi-area-terdampak-banjir',
+    stats: [
+      { k: 'Method', v: 'SAR Thresholding' },
+      { k: 'Input', v: 'Sentinel-1' },
+      { k: 'Output', v: 'Flood Extent Map' },
+    ],
+  },
+  {
+    id: 'garis-pantai',
+    num: '02',
     en: 'Coastline Change',
     title: translate({
       id: 'useCases.garisPantai.title',
@@ -12,10 +42,10 @@ export const useCasesData = [
     desc: translate({
       id: 'useCases.garisPantai.desc',
       message:
-        'Pantau perubahan garis pantai akibat abrasi dan akresi menggunakan data time-series Landsat sejak 1984. Identifikasi zona intertidal dan klasifikasi penutup lahan pesisir untuk mendukung pengelolaan wilayah pesisir terpadu.',
+        'Analisis perubahan garis pantai menggunakan citra Landsat multitemporal dan model pasang surut, dengan studi kasus di Pantai Utara Jakarta.',
     }),
     sector: translate({ id: 'useCases.sector.pesisir', message: 'Pesisir' }),
-    sensor: 'Landsat · Sentinel-2',
+    sensor: 'Landsat 5 · 7 · 8 · 9',
     cadence: 'Annual',
     product: 'Coastline Change Map',
     color: '#0891b2',
@@ -26,62 +56,35 @@ export const useCasesData = [
     }),
     link: '/docs/usecases/pesisir/perubahan-garis-pantai',
     stats: [
-      { k: 'Method', v: 'Water Index · MNDWI' },
-      { k: 'Input', v: 'Landsat SR · S2 L2A' },
-      { k: 'Output', v: 'Vector · GeoTIFF' },
+      { k: 'Method', v: 'Multi-temporal Analysis' },
+      { k: 'Input', v: 'Landsat 5 · 7 · 8 · 9' },
+      { k: 'Output', v: 'Coastline Change Map' },
     ],
   },
   {
-    id: 'banjir-aceh',
-    num: '02',
-    en: 'Aceh Flood Delineation',
-    title: translate({
-      id: 'useCases.banjirAceh.title',
-      message: 'Delineasi Banjir Aceh',
-    }),
-    desc: translate({
-      id: 'useCases.banjirAceh.desc',
-      message:
-        'Studi kasus delineasi area terdampak banjir di Aceh menggunakan data radar Sentinel-1. Pemetaan cepat mendukung tanggap darurat, distribusi bantuan, dan perencanaan pemulihan pasca-banjir.',
-    }),
-    sector: translate({ id: 'useCases.sector.bencana', message: 'Bencana' }),
-    sensor: 'Sentinel-1',
-    cadence: 'On-event',
-    product: 'S1 Flood Extent',
-    color: '#dc2626',
-    image: '/img/usecases/banjir-aceh.svg',
-    imageAlt: translate({
-      id: 'useCases.banjirAceh.imageAlt',
-      message: 'Ilustrasi genangan banjir pada lahan terbangun',
-    }),
-    link: '/docs/usecases/bencana/delineasi-banjir-aceh',
-    stats: [
-      { k: 'Method', v: 'SAR Thresholding' },
-      { k: 'Input', v: 'S1 GRD 10 m' },
-      { k: 'Output', v: 'GeoJSON · GeoTIFF' },
-    ],
-  },
-  {
-    id: 'sawah',
+    id: 'padi',
     num: '03',
-    en: 'Rice Crop Monitoring',
-    title: translate({ id: 'useCases.sawah.title', message: 'Pemantauan Sawah' }),
+    en: 'Rice Planting Monitoring',
+    title: translate({
+      id: 'useCases.padi.title',
+      message: 'Monitoring Penanaman Padi',
+    }),
     desc: translate({
-      id: 'useCases.sawah.desc',
+      id: 'useCases.padi.desc',
       message:
-        'Pemantauan fase tanam dan kesehatan lahan baku sawah menggunakan indeks vegetasi multitemporal. Mendukung identifikasi sentra produksi, pemantauan pola tanam, dan estimasi luas panen di tingkat kabupaten.',
+        'Pemanfaatan data Sentinel-2 untuk memantau pertumbuhan padi tahunan menggunakan indeks NDVI, LSWI, EVI, dan NDRE, menghasilkan peta fenologi, estimasi panen, serta dashboard pemantauan di Telagasari.',
     }),
     sector: translate({ id: 'useCases.sector.pangan', message: 'Pangan' }),
-    sensor: 'Sentinel-2 · Landsat',
+    sensor: 'Sentinel-2',
     cadence: 'Monthly',
-    product: 'Sentinel-2 NDVI Composite',
+    product: 'Crop Yield Prediction',
     color: '#d97706',
     image: '/img/usecases/sawah.svg',
     imageAlt: translate({
-      id: 'useCases.sawah.imageAlt',
+      id: 'useCases.padi.imageAlt',
       message: 'Ilustrasi petak sawah dari pandangan udara',
     }),
-    link: '/docs/usecases/pangan/pemantauan-sawah',
+    link: '/docs/usecases/pangan/monitoring-penanaman-padi',
     stats: [],
   },
   {
@@ -90,55 +93,29 @@ export const useCasesData = [
     en: 'Mining Area Calculation',
     title: translate({
       id: 'useCases.tambang.title',
-      message: 'Perhitungan Luas Area Pertambangan',
+      message: 'Menghitung Luas Area Pertambangan',
     }),
     desc: translate({
       id: 'useCases.tambang.desc',
       message:
-        'Perhitungan luas area terbuka aktivitas pertambangan menggunakan kombinasi data optik dan radar. Mendukung pemantauan kepatuhan izin usaha dan estimasi lahan terganggu.',
+        'Penggunaan metode Bare Soil Index (BSI) untuk menghitung luas area pertambangan nikel di Pulau Gag, Raja Ampat, berdasarkan identifikasi tanah terbuka.',
     }),
     sector: translate({ id: 'useCases.sector.lahan', message: 'Lahan' }),
-    sensor: 'Sentinel-2 · Landsat',
+    sensor: 'Sentinel-2',
     cadence: 'Quarterly',
-    product: 'Land Disturbance Map',
+    product: 'Mining Area Map',
     color: '#a3622a',
     image: '/img/usecases/tambang.svg',
     imageAlt: translate({
       id: 'useCases.tambang.imageAlt',
       message: 'Ilustrasi tambang terbuka dengan teras konsentris',
     }),
-    link: '/docs/usecases/lahan/perhitungan-luas-area-pertambangan',
-    stats: [],
-  },
-  {
-    id: 'danau',
-    num: '05',
-    en: 'Lake Monitoring',
-    title: translate({
-      id: 'useCases.danau.title',
-      message: 'Pemantauan Kondisi Danau',
-    }),
-    desc: translate({
-      id: 'useCases.danau.desc',
-      message:
-        'Pemantauan kualitas dan luas permukaan danau menggunakan citra multispektral. Analisis kekeruhan, klorofil-a, dan luas genangan mendukung pengelolaan sumber daya air dan deteksi dini eutrofikasi.',
-    }),
-    sector: translate({ id: 'useCases.sector.lingkungan', message: 'Lingkungan' }),
-    sensor: 'Sentinel-2 · Landsat',
-    cadence: 'Monthly',
-    product: 'Water Quality Index',
-    color: '#0e7490',
-    image: '/img/usecases/danau.svg',
-    imageAlt: translate({
-      id: 'useCases.danau.imageAlt',
-      message: 'Ilustrasi danau dari pandangan udara',
-    }),
-    link: '/docs/usecases/lingkungan/pemantauan-kondisi-danau',
+    link: '/docs/usecases/lahan/menghitung-luas-area-pertambangan',
     stats: [],
   },
   {
     id: 'mangrove',
-    num: '06',
+    num: '05',
     en: 'Mangrove Classification with ML',
     title: translate({
       id: 'useCases.mangrove.title',
@@ -147,10 +124,10 @@ export const useCasesData = [
     desc: translate({
       id: 'useCases.mangrove.desc',
       message:
-        'Klasifikasi ekosistem mangrove menggunakan algoritma machine learning pada citra multispektral. Menghasilkan peta habitat mangrove akurat untuk konservasi dan penilaian karbon biru.',
+        'Penggunaan data Sentinel-2 dan metode Random Forest untuk delineasi mangrove melalui indeks spektral, dengan studi kasus di selatan Kota Denpasar, Bali.',
     }),
     sector: translate({ id: 'useCases.sector.pesisir', message: 'Pesisir' }),
-    sensor: 'Sentinel-1 · Sentinel-2',
+    sensor: 'Sentinel-2',
     cadence: 'Annual',
     product: 'Mangrove Habitat Map',
     color: '#2c9a58',
@@ -159,7 +136,33 @@ export const useCasesData = [
       id: 'useCases.mangrove.imageAlt',
       message: 'Ilustrasi klasifikasi mangrove di pesisir',
     }),
-    link: '/docs/usecases/pesisir/klasifikasi-mangrove-ml',
+    link: '/docs/usecases/pesisir/klasifikasi-mangrove-dengan-machine-learning',
+    stats: [],
+  },
+  {
+    id: 'pltp',
+    num: '06',
+    en: 'PLTP Surface Temperature Monitoring',
+    title: translate({
+      id: 'useCases.pltp.title',
+      message: 'Monitoring Suhu Permukaan di Area PLTP',
+    }),
+    desc: translate({
+      id: 'useCases.pltp.desc',
+      message:
+        'Penggunaan NDVI dan Land Surface Temperature (LST) untuk menganalisis suhu permukaan serta aktivitas PLTP, dengan studi kasus di Kamojang, Jawa Barat.',
+    }),
+    sector: translate({ id: 'useCases.sector.lingkungan', message: 'Lingkungan' }),
+    sensor: 'Landsat 9',
+    cadence: 'Monthly',
+    product: 'Land Surface Temperature (LST)',
+    color: '#c2410c',
+    image: '/img/usecases/pltp.svg',
+    imageAlt: translate({
+      id: 'useCases.pltp.imageAlt',
+      message: 'Ilustrasi kawasan pembangkit listrik tenaga panas bumi',
+    }),
+    link: '/docs/usecases/lingkungan/monitoring-suhu-permukaan-pltp',
     stats: [],
   },
 ];
