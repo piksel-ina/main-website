@@ -1,13 +1,15 @@
 ---
 slug: monitor-longsor-aceh
 title: Piksel Membantu Monitoring Longsoran di Aceh Tengah 
-authors: [Dimas PDS, Gatot HP]
+authors: [tim_piksel]
 tags: [platform, bencana, longsor, monitoring]
 image: /img/preview/20260629-0-longsor.webp
 description: "Tanah longsor yang terjadi di Aceh Tengah telah berdampak pada kehidupan masyarakat. Piksel berhasil memonitor perkembangan bencana tersebut. [Foto: Antara/Abiyyu]"
 featured: true
 ---
 Longsoran yang terjadi di Kampung Pondok Balik, Kecamatan Ketol, Kabupaten Aceh Tengah, merupakan fenomena gerakan tanah yang terus berkembang dan menjadi perhatian karena dampaknya terhadap lingkungan serta infrastruktur di sekitarnya. Perubahan bentang lahan yang berlangsung secara progresif telah membentuk area longsoran yang semakin luas dari waktu ke waktu. Untuk memantau perkembangan tersebut, dilakukan analisis menggunakan citra satelit Sentinel-2 yang diakses melalui platform Piksel yang dikembangkan oleh  Direktorat Pemetaan Tematik, Badan Informasi Geospasial.
+
+<!-- truncate -->
 
 <figure style={{textAlign: 'center'}}>
   <img src="/img/preview/20260629-2-citra.webp" alt="Citra Sentinel 2" style={{width: '100%', height: 'auto'}} />

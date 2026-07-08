@@ -13,8 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "lint": "eslint src/",
-    "lint:css": "stylelint 'src/**/*.scss'",
-    "format:check": "prettier --check 'src/**/*.{js,jsx,scss}'",
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,scss}\"",
     "check": "npm run lint && npm run lint:css && npm run format:check"
   },
   "dependencies": {
