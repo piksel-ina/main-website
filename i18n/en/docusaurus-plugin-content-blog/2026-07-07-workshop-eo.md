@@ -1,6 +1,6 @@
 ---
 slug: workshop-observasi-bumi-2026
-title: Earth Observation Workshop Builds BIG's Capacity on Piksel
+title: Technical Earth Observation Workshop at the University of Sydney Using the Piksel Platform
 authors: [tim_piksel]
 tags: [workshop, training]
 image: /img/preview/20260707-sesi.webp
