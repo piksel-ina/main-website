@@ -1,6 +1,6 @@
 ---
 slug: workshop-observasi-bumi-2026
-title: Workshop on Earth Observation untuk Mendukung Pengembangan Piksel
+title: Technical Earth Observation Workshop di University of Sydney Menggunakan Platform Piksel
 authors: [tim_piksel]
 tags: [workshop, training]
 image: /img/preview/20260707-sesi.webp
