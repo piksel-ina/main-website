@@ -1,13 +1,140 @@
 ---
 sidebar_position: 1
+title: Piksel Sandbox
+description:  Analisis data dengan menggunakan jupyter notebook
 ---
 
-import DocCardList from '@theme/DocCardList';
+# Piksel Sandbox
 
-# Sandbox Analisis
+Piksel Sandbox adalah lingkungan pembelajaran dan analisis pengamatan permukaan Bumi (EO) yang mendukung pengguna untuk memulai menggunakan Produk Data. Sandbox ini mencakup data contoh dan Jupyter notebook yang memungkinkan Anda bereksperimen dengan kumpulan data serta menjelajahi aplikasi proof-of-concept.
 
-Placeholder overview for Sandbox Analisis service.
+Sandbox ini tersedia bagi pengguna yang memenuhi syarat, dapat digunakan secara gratis, menyediakan lingkungan terkelola, serta penyimpanan. Sandbox ini juga menyertakan panduan pengguna Jupyter notebook untuk membantu Anda.
 
-## Guides
+:::info Mulailah menjelajah
+Buka [Piksel Sandbox][sand_lnk]
+:::
 
-<DocCardList />
+#### Dalam Panduan ini
+[Register](#register)
+
+[Akses Piksel Sandbox](#access-piksel-sandbox)
+
+[Mengenal Antarmuka JupyterLab di Piksel Sandbox](#navigate-sandbox)
+
+## Register {#register}
+Masuk ke dalam portal [Piksel Sandbox][sand_lnk]
+
+- Masukkan nama pengguna (username) pada kolom **username**
+
+- Masukkan kata sandi (password) pada kolom **password**
+
+![explorer-homepage](/img/sandbox/sandbox-home1.webp)
+
+Password harus mengandung:
+
+    - Satu huruf kecil
+    - Satu huruf besar
+    - Satu angka
+    - Satu karakter
+    - Setidaknya 8 karakter
+    - Tidak boleh mengandung spasi di awal atau di akhir
+
+Centang opsi Show password apabila ingin menampilkan karakter kata sandi yang diketik.
+
+Klik tombol Sign in untuk masuk ke sistem.
+
+Jika lupa kata sandi, klik Forgot your password? untuk melakukan proses pemulihan password.
+
+## Akses Piksel Sandbox {#access-piksel-sandbox}
+Setelah berhasil login, pengguna akan diarahkan ke halaman utama Piksel Sandbox. Halaman ini merupakan dashboard awal yang digunakan untuk memilih lingkungan komputasi (environment) sebelum menjalankan Jupyter Notebook.
+Pastikan Anda telah berhasil masuk ke aplikasi dan berada pada halaman Selamat Datang di Piksel Sandbox.
+Pada panel Get Started, fitur-fitur yang tersedia seperti:
+
+- Geospasial Data-Science Toolkit, yaitu kumpulan pustaka (library) dan tools untuk analisis data geospasial.
+
+- Contoh untuk Belajar, yang menyediakan notebook contoh sebagai media pembelajaran.
+
+- Resource yang Dijamin, yang menjelaskan spesifikasi sumber daya komputasi yang disediakan untuk setiap pengguna.
+
+![explorer-homepage](/img/sandbox/sandbox-home2.webp)
+
+Pada panel Environments, pilih lingkungan komputasi yang akan digunakan. Secara default tersedia Standard Instance dengan spesifikasi 4 vCPUs, 15 GB RAM, dan Geospatial Learning Environment
+
+Setelah memilih environment, klik tombol **Start Server**.
+
+Tunggu beberapa saat hingga server berhasil dijalankan. Setelah proses inisialisasi selesai, sistem akan secara otomatis mengarahkan pengguna ke halaman Jupyter Notebook/Lab untuk mulai melakukan analisis data.
+
+Catatan: Waktu yang dibutuhkan untuk menjalankan server bergantung pada kondisi sistem dan beban layanan. Jangan menutup halaman selama proses inisialisasi berlangsung.
+
+![explorer-homepage](/img/sandbox/sandbox-home3.webp)
+
+## Mengenal Antarmuka JupyterLab di Piksel Sandbox {#navigate-sandbox} 
+Setelah server berhasil dijalankan, pengguna akan diarahkan ke halaman JupyterLab. Antarmuka ini terdiri atas beberapa bagian utama yang memiliki fungsi berbeda untuk mengelola file dan menjalankan analisis data geospasial.
+
+![explorer-homepage](/img/sandbox/sandbox-home4.webp)
+
+1. Menu Bar
+
+Menu Bar berada di bagian atas halaman dan berfungsi sebagai pusat pengelolaan seluruh aktivitas pada JupyterLab. Melalui menu ini, pengguna dapat membuat dan menyimpan file, mengedit notebook, menjalankan kode, mengelola kernel, mengatur tampilan, serta mengakses dokumentasi bantuan.
+
+Menu yang tersedia meliputi:
+
+- File : Mengelola file dan folder.
+- Edit : Mengedit isi notebook atau dokumen.
+- View : Mengatur tampilan antarmuka.
+- Run : Menjalankan sel (cell) pada notebook.
+- Kernel : Mengelola kernel Python.
+- Git : Mengelola repositori Git (jika tersedia).
+- Tabs : Mengatur tab yang sedang dibuka.
+- Settings : Mengubah konfigurasi JupyterLab.
+- Help : Menampilkan dokumentasi dan bantuan.
+
+2. Toolbar
+
+Toolbar menyediakan akses cepat ke berbagai fungsi yang sering digunakan tanpa harus membuka menu.
+
+Beberapa tombol yang tersedia antara lain:
+
+- New Launcher (+) untuk membuat notebook atau membuka launcher.
+- New Folder untuk membuat folder baru.
+- Upload Files untuk mengunggah file dari komputer.
+- Refresh untuk memperbarui tampilan File Browser.
+
+Toolbar membantu pengguna mengelola workspace dengan lebih cepat dan efisien.
+
+3. Area Kerja (Workspace)
+
+Area kerja merupakan bagian utama tempat file dibuka dan ditampilkan.
+
+Pada contoh gambar, file README.md sedang dibuka sehingga pengguna dapat membaca dokumentasi mengenai Piksel Sandbox. Selain file Markdown, area ini juga dapat digunakan untuk membuka:
+
+- Jupyter Notebook (.ipynb)
+- Script Python (.py)
+- File CSV
+- Dataset raster dan vektor
+- Gambar
+- Dokumen lainnya
+
+Pengguna dapat membuka beberapa file sekaligus menggunakan sistem tab.
+
+4. File Browser
+
+File Browser digunakan untuk menampilkan seluruh folder dan file yang tersedia pada workspace pengguna.
+
+Melalui panel ini, pengguna dapat:
+
+- Membuka folder proyek.
+- Membuka notebook.
+- Mengakses dataset.
+- Mengelola file dan direktori.
+- Menghapus atau mengganti nama file.
+
+5. Panel Navigasi (Sidebar)
+
+Sidebar merupakan panel navigasi yang memuat File Browser beserta daftar folder dan file pada workspace. Panel ini menjadi lokasi utama untuk mengelola seluruh sumber daya yang digunakan selama bekerja di JupyterLab.
+
+Apabila ruang kerja ingin diperluas, panel ini dapat disembunyikan atau ditampilkan kembali menggunakan ikon File Browser di sisi kiri aplikasi.
+
+[exp_lnk]: https://explorer.staging.piksel.big.go.id/products
+[map_lnk]: https://maps.staging.piksel.big.go.id
+[sand_lnk]: https://sandbox.staging.piksel.big.go.id/
