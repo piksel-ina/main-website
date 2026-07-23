@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
 import { servicesData } from '@site/src/data/servicesData';
 import Coord from '@site/src/components/UI/Atoms/Coord';
 import styles from './styles.module.scss';
@@ -17,51 +18,6 @@ const PREVIEWS = {
   '04': Preview04,
   '05': Preview05,
   '06': Preview06,
-};
-
-const SVC_META = {
-  '01': {
-    capability: 'Browse & filter',
-    interface: 'Web UI',
-    prerequisite: 'None',
-    access: 'Public',
-    update: 'Daily indexing',
-  },
-  '02': {
-    capability: 'Compute & prototype',
-    interface: 'IDE (Jupyter)',
-    prerequisite: 'Account',
-    access: 'Login',
-    update: 'Always current',
-  },
-  '03': {
-    capability: 'Visualize & share',
-    interface: 'Web / Embed',
-    prerequisite: 'None',
-    access: 'Public',
-    update: 'Per new product',
-  },
-  '04': {
-    capability: 'Query & stream',
-    interface: 'API (REST)',
-    prerequisite: 'None',
-    access: 'Public',
-    update: 'Daily indexing',
-  },
-  '05': {
-    capability: 'Process at scale',
-    interface: 'CLI / Dashboard',
-    prerequisite: 'Partnership',
-    access: 'By request',
-    update: 'On schedule',
-  },
-  '06': {
-    capability: 'Onboard & troubleshoot',
-    interface: 'Email',
-    prerequisite: 'None',
-    access: 'Mon – Fri',
-    update: '< 1 business day',
-  },
 };
 
 const InspectorArrow = ({ small = false }) => (
@@ -85,7 +41,7 @@ export default function OurServices() {
   const [active, setActive] = useState('01');
   const svc = servicesData.find((s) => s.id === active);
   const Preview = PREVIEWS[active];
-  const meta = SVC_META[active];
+  const meta = svc.meta;
 
   return (
     <section id="services" className={styles.artboard}>
@@ -98,15 +54,15 @@ export default function OurServices() {
           <div>
             <span className="pk-eyebrow">01 / Layanan Piksel</span>
             <h2 className={styles.header__title}>
-              Inspect every <em>service</em>,
+              Periksa setiap <em>layanan</em>,
               <br />
-              before you commit.
+              sebelum berkomitmen.
             </h2>
           </div>
           <p className={styles.header__sub}>
-            Six interlocking services — pick one to see its surface,
-            capabilities, and the endpoint you&apos;d call to use it in
-            production.
+            Enam layanan saling terkait. Pilih salah satu untuk melihat
+            antarmuka, fitur, dan endpoint yang diperlukan untuk integrasi
+            produksi.
           </p>
         </header>
 
@@ -165,14 +121,28 @@ export default function OurServices() {
                   rel="noopener noreferrer"
                   className={`${styles.btn} ${styles['btn--primary']}`}
                 >
-                  <span>Open service</span>
+                  <span>
+                    <Translate
+                      id="ourServices.cta.openService"
+                      description="CTA button to open the service"
+                    >
+                      Open service
+                    </Translate>
+                  </span>
                   <InspectorArrow />
                 </a>
                 <Link
                   to={svc.link}
                   className={`${styles.btn} ${styles['btn--ghost']}`}
                 >
-                  <span>Documentation</span>
+                  <span>
+                    <Translate
+                      id="ourServices.cta.documentation"
+                      description="CTA button to open the documentation"
+                    >
+                      Documentation
+                    </Translate>
+                  </span>
                   <InspectorArrow small />
                 </Link>
               </div>
@@ -190,23 +160,58 @@ export default function OurServices() {
               <div className={styles.panel__vizMeta}>
                 <dl className={styles.panel__vizMetaList}>
                   <div>
-                    <dt>Capability</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.capability"
+                        description="Meta label: capability"
+                      >
+                        Capability
+                      </Translate>
+                    </dt>
                     <dd>{meta.capability}</dd>
                   </div>
                   <div>
-                    <dt>Interface</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.interface"
+                        description="Meta label: interface"
+                      >
+                        Interface
+                      </Translate>
+                    </dt>
                     <dd>{meta.interface}</dd>
                   </div>
                   <div>
-                    <dt>Prerequisite</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.prerequisite"
+                        description="Meta label: prerequisite"
+                      >
+                        Prerequisite
+                      </Translate>
+                    </dt>
                     <dd>{meta.prerequisite}</dd>
                   </div>
                   <div>
-                    <dt>Access</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.access"
+                        description="Meta label: access"
+                      >
+                        Access
+                      </Translate>
+                    </dt>
                     <dd>{meta.access}</dd>
                   </div>
                   <div>
-                    <dt>Update</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.update"
+                        description="Meta label: update"
+                      >
+                        Update
+                      </Translate>
+                    </dt>
                     <dd>{meta.update}</dd>
                   </div>
                 </dl>
