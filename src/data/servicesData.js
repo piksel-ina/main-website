@@ -29,15 +29,22 @@ export const servicesData = [
       srcsetFallback: '/img/services/explorer-800.jpg 800w, /img/services/explorer-1200.jpg 1200w, /img/services/explorer-1600.jpg 1600w',
       alt: 'Data Explorer — geospatial archive browser',
     },
+    meta: {
+      capability: translate({ id: "ourServices.meta.01.capability", message: "Browse & filter", description: "Service 01 capability" }),
+      interface: translate({ id: "ourServices.meta.01.interface", message: "Web UI", description: "Service 01 interface type" }),
+      prerequisite: translate({ id: "ourServices.meta.01.prerequisite", message: "None", description: "Service 01 prerequisite" }),
+      access: translate({ id: "ourServices.meta.01.access", message: "Public", description: "Service 01 access level" }),
+      update: translate({ id: "ourServices.meta.01.update", message: "Daily indexing", description: "Service 01 update frequency" }),
+    },
   },
   {
     id: "02",
     title: translate({
       id: "ourServices.sandbox.title",
-      message: "Sandbox Analisis",
-      description: "Service title: Analysis Sandbox",
+      message: "Analisis Sandbox",
+      description: "Service title: Sandbox Analysis",
     }),
-    en: "Analysis Sandbox",
+    en: "Sandbox Analysis",
     description: translate({
       id: "ourServices.sandbox.description",
       message: "Hosted JupyterHub with the full Open Data Cube stack pre-installed. Prototype on national-scale archives without provisioning a single VM.",
@@ -52,6 +59,19 @@ export const servicesData = [
     linkText: translate({ id: "ourServices.sandbox.btn", message: "Mulai Belajar" }),
     link: "/docs/services/sandbox",
     color: "#7c3aed",
+    image: {
+      src: '/img/services/sandbox-800.png',
+      srcset: '/img/services/sandbox-800.webp 800w, /img/services/sandbox-1200.webp 1200w, /img/services/sandbox-1600.webp 1600w',
+      srcsetFallback: '/img/services/sandbox-800.png 800w, /img/services/sandbox-1200.png 1200w, /img/services/sandbox-1600.png 1600w',
+      alt: 'Sandbox Analysis — geospatial hub',
+    },
+    meta: {
+      capability: translate({ id: "ourServices.meta.02.capability", message: "Compute & prototype", description: "Service 02 capability" }),
+      interface: translate({ id: "ourServices.meta.02.interface", message: "IDE (Jupyter)", description: "Service 02 interface type" }),
+      prerequisite: translate({ id: "ourServices.meta.02.prerequisite", message: "Account", description: "Service 02 prerequisite" }),
+      access: translate({ id: "ourServices.meta.02.access", message: "Login", description: "Service 02 access level" }),
+      update: translate({ id: "ourServices.meta.02.update", message: "Always current", description: "Service 02 update frequency" }),
+    },
   },
   {
     id: "03",
@@ -81,6 +101,13 @@ export const servicesData = [
       srcsetFallback: '/img/services/maps-800.jpg 800w, /img/services/maps-1200.jpg 1200w, /img/services/maps-1600.jpg 1600w',
       alt: 'Surface Reflectance Comparison — 2016 vs 2025 Sentinel-2',
     },
+    meta: {
+      capability: translate({ id: "ourServices.meta.03.capability", message: "Visualize & share", description: "Service 03 capability" }),
+      interface: translate({ id: "ourServices.meta.03.interface", message: "Web / Embed", description: "Service 03 interface type" }),
+      prerequisite: translate({ id: "ourServices.meta.03.prerequisite", message: "None", description: "Service 03 prerequisite" }),
+      access: translate({ id: "ourServices.meta.03.access", message: "Public", description: "Service 03 access level" }),
+      update: translate({ id: "ourServices.meta.03.update", message: "Per new product", description: "Service 03 update frequency" }),
+    },
   },
   {
     id: "04",
@@ -104,6 +131,19 @@ export const servicesData = [
     linkText: translate({ id: "ourServices.webservices.btn", message: "Lihat Dokumentasi" }),
     link: "/docs/services/web-services",
     color: "#2563eb",
+    image: {
+      src: '/img/services/wms-800.png',
+      srcset: '/img/services/wms-800.webp 800w, /img/services/wms-1200.webp 1200w, /img/services/wms-1600.webp 1600w',
+      srcsetFallback: '/img/services/wms-800.png 800w, /img/services/wms-1200.png 1200w, /img/services/wms-1600.png 1600w',
+      alt: 'OGC Web Services — geospatial integration',
+    },
+    meta: {
+      capability: translate({ id: "ourServices.meta.04.capability", message: "Query & stream", description: "Service 04 capability" }),
+      interface: translate({ id: "ourServices.meta.04.interface", message: "API (REST)", description: "Service 04 interface type" }),
+      prerequisite: translate({ id: "ourServices.meta.04.prerequisite", message: "None", description: "Service 04 prerequisite" }),
+      access: translate({ id: "ourServices.meta.04.access", message: "Public", description: "Service 04 access level" }),
+      update: translate({ id: "ourServices.meta.04.update", message: "Daily indexing", description: "Service 04 update frequency" }),
+    },
   },
   {
     id: "05",
@@ -127,6 +167,19 @@ export const servicesData = [
     linkText: translate({ id: "ourServices.production.btn", message: "Hubungi Kami" }),
     link: "/docs/services/cloud-computing",
     color: "#d97706",
+    image: {
+      src: '/img/services/argo-800.png',
+      srcset: '/img/services/argo-800.webp 800w, /img/services/argo-1200.webp 1200w, /img/services/argo-1600.webp 1600w',
+      srcsetFallback: '/img/services/argo-800.png 800w, /img/services/argo-1200.png 1200w, /img/services/argo-1600.png 1600w',
+      alt: 'Cloud Computing — argo workflow',
+    },
+    meta: {
+      capability: translate({ id: "ourServices.meta.05.capability", message: "Process at scale", description: "Service 05 capability" }),
+      interface: translate({ id: "ourServices.meta.05.interface", message: "CLI / Dashboard", description: "Service 05 interface type" }),
+      prerequisite: translate({ id: "ourServices.meta.05.prerequisite", message: "Partnership", description: "Service 05 prerequisite" }),
+      access: translate({ id: "ourServices.meta.05.access", message: "By request", description: "Service 05 access level" }),
+      update: translate({ id: "ourServices.meta.05.update", message: "On schedule", description: "Service 05 update frequency" }),
+    },
   },
   {
     id: "06",
@@ -150,6 +203,19 @@ export const servicesData = [
     linkText: translate({ id: "ourServices.support.btn", message: "Hubungi Support" }),
     link: "/docs/services/support",
     color: "#dc2626",
+    image: {
+      src: '/img/services/support-800.png',
+      srcset: '/img/services/support-800.webp 800w, /img/services/support-1200.webp 1200w, /img/services/support-1600.webp 1600w',
+      srcsetFallback: '/img/services/support-800.png 800w, /img/services/support-1200.png 1200w, /img/services/support-1600.png 1600w',
+      alt: 'Technical Support — expert assistance',
+    },
+    meta: {
+      capability: translate({ id: "ourServices.meta.06.capability", message: "Onboard & troubleshoot", description: "Service 06 capability" }),
+      interface: translate({ id: "ourServices.meta.06.interface", message: "Email", description: "Service 06 interface type" }),
+      prerequisite: translate({ id: "ourServices.meta.06.prerequisite", message: "None", description: "Service 06 prerequisite" }),
+      access: translate({ id: "ourServices.meta.06.access", message: "Mon – Fri", description: "Service 06 access level" }),
+      update: translate({ id: "ourServices.meta.06.update", message: "< 1 business day", description: "Service 06 update frequency" }),
+    },
   },
 ];
 
