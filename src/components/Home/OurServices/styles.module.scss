@@ -202,6 +202,7 @@
     font-size: var(--pk-text-sm);
     font-weight: 500;
     color: inherit;
+    text-transform: uppercase;
     white-space: nowrap;
   }
 
@@ -312,20 +313,6 @@
 
     @include respond-to('phone') {
       font-size: var(--pk-text-md);
-    }
-  }
-
-  &__en {
-    display: block;
-    margin-top: var(--pk-s-1);
-    font-family: var(--pk-font-mono);
-    font-size: var(--pk-text-xs);
-    color: var(--pk-fg-subtle);
-    text-transform: uppercase;
-    letter-spacing: var(--pk-track-wide);
-
-    @include respond-to('phone') {
-      font-size: var(--pk-text-2xs);
     }
   }
 

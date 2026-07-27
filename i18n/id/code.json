@@ -408,19 +408,11 @@
     "message": "Piksel Hero Image",
     "description": "Alt text for the hero image"
   },
-  "ourServices.explorer.title": {
-    "message": "Jelajah Data",
-    "description": "Service title: Data Explorer"
-  },
   "ourServices.explorer.description": {
     "message": "Jelajahi dan akses data geospasial yang tersedia di platform kami secara bebas."
   },
   "ourServices.explorer.btn": {
     "message": "Mulai Eksplorasi"
-  },
-  "ourServices.sandbox.title": {
-    "message": "Analisis Sandbox",
-    "description": "Service title: Sandbox Analysis"
   },
   "ourServices.sandbox.description": {
     "message": "Pelajari pengolahan data secara programatik. Lingkungan pelatihan untuk pengembangan analisis geospasial."
@@ -428,19 +420,11 @@
   "ourServices.sandbox.btn": {
     "message": "Mulai Belajar"
   },
-  "ourServices.maps.title": {
-    "message": "Peta Interaktif",
-    "description": "Service title: Interactive Maps"
-  },
   "ourServices.maps.description": {
     "message": "Interaksi langsung dengan peta digital untuk mendapatkan wawasan visual secara cepat."
   },
   "ourServices.maps.btn": {
     "message": "Buka Peta"
-  },
-  "ourServices.webservices.title": {
-    "message": "Layanan Web",
-    "description": "Service title: Web Services"
   },
   "ourServices.webservices.description": {
     "message": "Integrasikan data satelit langsung ke dalam aplikasi Anda melalui standar layanan web global."
@@ -448,19 +432,11 @@
   "ourServices.webservices.btn": {
     "message": "Lihat Dokumentasi"
   },
-  "ourServices.production.title": {
-    "message": "Komputasi Awan",
-    "description": "Service title: Cloud Computing"
-  },
   "ourServices.production.description": {
     "message": "Dukungan infrastruktur komputasi berkinerja tinggi untuk pemrosesan data skala nasional."
   },
   "ourServices.production.btn": {
     "message": "Hubungi Kami"
-  },
-  "ourServices.support.title": {
-    "message": "Dukungan Teknis",
-    "description": "Service title: Technical Support"
   },
   "ourServices.support.description": {
     "message": "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar."
@@ -468,17 +444,9 @@
   "ourServices.support.btn": {
     "message": "Hubungi Support"
   },
-  "ourServices.header.tag": {
-    "message": "Layanan Piksel",
-    "description": "Tag label for the services section"
-  },
   "ourServices.header.title": {
-    "message": "Ekosistem Piksel",
+    "message": "Periksa setiap layanan, sebelum berkomitmen.",
     "description": "Main title for the services section"
-  },
-  "ourServices.header.subtitle": {
-    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
-    "description": "Subtitle description for the services section"
   },
   "ourServices.viewAll": {
     "message": "Lihat Semua Layanan",
@@ -710,11 +678,11 @@
     "description": "Location metadata displayed on the hero photo"
   },
   "ourServices.header.eyebrow": {
-    "message": "Layanan Piksel",
+    "message": "01 / Layanan Piksel",
     "description": "Eyebrow label for the services section"
   },
   "ourServices.header.sub": {
-    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
+    "message": "Enam layanan saling terkait. Pilih salah satu untuk melihat antarmuka, fitur, dan endpoint yang diperlukan untuk integrasi produksi.",
     "description": "Subtitle description for the services section"
   },
   "homepage.stats.01.description": {
@@ -767,7 +735,7 @@
     "message": "Ekspor langsung ke STAC, COG, dan shapefile"
   },
   "ourServices.explorer.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.sandbox.f1": {
     "message": "Open Data Cube + xarray + dask, sudah dikonfigurasi"
@@ -779,7 +747,7 @@
     "message": "Kernel dengan GPU untuk beban kerja penelitian"
   },
   "ourServices.sandbox.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.maps.f1": {
     "message": "Peta cerita interaktif berbasis Terria"
@@ -791,7 +759,7 @@
     "message": "Overlay real-time dari katalog Piksel STAC"
   },
   "ourServices.maps.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.webservices.f1": {
     "message": "WMS / WCS / WMTS — sesuai standar OGC"
@@ -803,7 +771,7 @@
     "message": "Akses domain publik dengan CORS yang diaktifkan"
   },
   "ourServices.webservices.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.production.f1": {
     "message": "Argo Workflows di EKS terkelola"
@@ -815,7 +783,7 @@
     "message": "Pipeline siap pakai: GeoMAD, fractional cover, WOfS"
   },
   "ourServices.production.status": {
-    "message": "ON REQUEST"
+    "message": "ATAS PERMINTAAN"
   },
   "ourServices.support.f1": {
     "message": "Dukungan via email dengan jaminan SLA"
@@ -827,7 +795,7 @@
     "message": "Pilot project bersama analis BIG"
   },
   "ourServices.support.status": {
-    "message": "MON – FRI"
+    "message": "SEN – JUM"
   },
   "footer.brand.description": {
     "message": "An initiative by Badan Informasi Geospasial in collaboration with Geoscience Australia.",
@@ -1076,5 +1044,17 @@
   "ourServices.meta.label.update": {
     "message": "Pembaruan",
     "description": "Meta label: update"
+  },
+  "ourServices.coord.section": {
+    "message": "BAGIAN · 01 / LAYANAN",
+    "description": "Top coordinate label for the services section"
+  },
+  "ourServices.coord.svc": {
+    "message": "LYN · {id} · {name}",
+    "description": "Panel bar coordinate label with service id and name"
+  },
+  "ourServices.coord.hint": {
+    "message": "LAYANAN · KLIK BARIS MANA SAJA UNTUK MENINJAU",
+    "description": "Bottom coordinate hint inviting users to click a service row"
   }
 }

@@ -534,21 +534,9 @@
   "ui.carousel.goToSlide": {
     "message": "Go to slide {slideNumber}"
   },
-  "ourServices.header.tag": {
-    "message": "Our Services",
-    "description": "Tag label for the services section"
-  },
   "ourServices.header.title": {
-    "message": "Piksel Ecosystem",
+    "message": "Inspect every service, before you commit.",
     "description": "Main title for the services section"
-  },
-  "ourServices.header.subtitle": {
-    "message": "Access a comprehensive geospatial data ecosystem to support innovation and strategic decision making. From open data exploration to advanced computing infrastructure for national needs.",
-    "description": "Subtitle description for the services section"
-  },
-  "ourServices.explorer.title": {
-    "message": "Data Explorer",
-    "description": "Service title: Data Explorer"
   },
   "ourServices.explorer.description": {
     "message": "Explore and access geospatial data available on our platform freely."
@@ -556,19 +544,11 @@
   "ourServices.explorer.btn": {
     "message": "Start Exploring"
   },
-  "ourServices.sandbox.title": {
-    "message": "Analysis Sandbox",
-    "description": "Service title: Sandbox Analysis"
-  },
   "ourServices.sandbox.description": {
     "message": "Learn programmatic data processing. Training environment for geospatial analysis development."
   },
   "ourServices.sandbox.btn": {
     "message": "Start Learning"
-  },
-  "ourServices.maps.title": {
-    "message": "Interactive Maps",
-    "description": "Service title: Interactive Maps"
   },
   "ourServices.maps.description": {
     "message": "Interact directly with digital maps to get quick visual insights."
@@ -576,19 +556,11 @@
   "ourServices.maps.btn": {
     "message": "Open Map"
   },
-  "ourServices.webservices.title": {
-    "message": "Web Services",
-    "description": "Service title: Web Services"
-  },
   "ourServices.webservices.description": {
     "message": "Integrate satellite data directly into your applications via global web service standards."
   },
   "ourServices.webservices.btn": {
     "message": "View Documentation"
-  },
-  "ourServices.production.title": {
-    "message": "Cloud Computing",
-    "description": "Service title: Cloud Computing"
   },
   "ourServices.production.description": {
     "message": "High-performance computing infrastructure support for national-scale data processing."
@@ -633,10 +605,6 @@
   },
   "homepage.faq.a5": {
     "message": "Our platform indexes new data daily. Satellites themselves pass over Indonesian territory every day but at different locations following their orbit paths. For a specific location, Sentinel-2 will return every 5 days and Sentinel-1 every 6-12 days."
-  },
-  "ourServices.support.title": {
-    "message": "Technical Support",
-    "description": "Service title: Technical Support"
   },
   "ourServices.support.description": {
     "message": "Expert technical assistance to ensure smooth system integration and operations."
@@ -885,11 +853,11 @@
     "description": "Service 06 update frequency"
   },
   "ourServices.header.eyebrow": {
-    "message": "Layanan Piksel",
+    "message": "01 / Piksel Services",
     "description": "Eyebrow label for the services section"
   },
   "ourServices.header.sub": {
-    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
+    "message": "Six interlocking services — pick one to see its surface, capabilities, and the endpoint you'd call to use it in production.",
     "description": "Subtitle description for the services section"
   },
   "homepage.stats.01.description": {
@@ -979,5 +947,17 @@
   "ourServices.meta.label.update": {
     "message": "Update",
     "description": "Meta label: update"
+  },
+  "ourServices.coord.section": {
+    "message": "SECTION · 01 / SERVICES",
+    "description": "Top coordinate label for the services section"
+  },
+  "ourServices.coord.svc": {
+    "message": "SVC · {id} · {name}",
+    "description": "Panel bar coordinate label with service id and name"
+  },
+  "ourServices.coord.hint": {
+    "message": "SERVICES · CLICK ANY ROW TO INSPECT",
+    "description": "Bottom coordinate hint inviting users to click a service row"
   }
 }

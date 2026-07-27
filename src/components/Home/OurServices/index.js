@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
-import { servicesData } from '@site/src/data/servicesData';
+import {
+  servicesData,
+  servicesSectionHeader,
+} from '@site/src/data/servicesData';
 import Coord from '@site/src/components/UI/Atoms/Coord';
 import styles from './styles.module.scss';
 import Preview01 from './previews/Preview01';
@@ -47,23 +50,24 @@ export default function OurServices() {
     <section id="services" className={styles.artboard}>
       <div className={styles.inner}>
         <div className={styles.coords}>
-          <Coord>SECTION · 01 / LAYANAN</Coord>
+          <Coord>
+            <Translate
+              id="ourServices.coord.section"
+              description="Top coordinate label for the services section"
+            >
+              BAGIAN · 01 / LAYANAN
+            </Translate>
+          </Coord>
         </div>
 
         <header className={styles.header}>
           <div>
-            <span className="pk-eyebrow">01 / Layanan Piksel</span>
+            <span className="pk-eyebrow">{servicesSectionHeader.eyebrow}</span>
             <h2 className={styles.header__title}>
-              Periksa setiap <em>layanan</em>,
-              <br />
-              sebelum berkomitmen.
+              {servicesSectionHeader.title}
             </h2>
           </div>
-          <p className={styles.header__sub}>
-            Enam layanan saling terkait. Pilih salah satu untuk melihat
-            antarmuka, fitur, dan endpoint yang diperlukan untuk integrasi
-            produksi.
-          </p>
+          <p className={styles.header__sub}>{servicesSectionHeader.sub}</p>
         </header>
 
         <div className={styles.inspector}>
@@ -78,8 +82,8 @@ export default function OurServices() {
               >
                 <span className={styles.list__idx}>{s.id}</span>
                 <span className={styles.list__labels}>
-                  <span className={styles.list__name}>{s.en}</span>
-                  <span className={styles.list__en}>{s.title}</span>
+                  <span className={styles.list__name}>{s.title}</span>
+                  <span className={styles.list__en}>{s.title_indonesia}</span>
                 </span>
                 <span className={styles.list__chev} aria-hidden="true">
                   {s.id === active ? '—' : '›'}
@@ -91,7 +95,13 @@ export default function OurServices() {
           <div className={styles.panel}>
             <div className={styles.panel__bar}>
               <Coord>
-                SVC · {svc.id} · {svc.en.toUpperCase()}
+                <Translate
+                  id="ourServices.coord.svc"
+                  values={{ id: svc.id, name: svc.title.toUpperCase() }}
+                  description="Panel bar coordinate label with service id and name"
+                >
+                  {'LYN · {id} · {name}'}
+                </Translate>
               </Coord>
               <span className={styles.panel__barStatus}>
                 <span className={styles.panel__dot} aria-hidden="true" />
@@ -101,8 +111,7 @@ export default function OurServices() {
 
             <div className={styles.panel__copy}>
               <span className={styles.panel__num}>{svc.id}</span>
-              <h3 className={styles.panel__title}>{svc.en}</h3>
-              <span className={styles.panel__en}>{svc.title}</span>
+              <h3 className={styles.panel__title}>{svc.title}</h3>
               <p className={styles.panel__desc}>{svc.description}</p>
 
               <ul className={styles.panel__features}>
@@ -243,7 +252,14 @@ export default function OurServices() {
         </div>
 
         <div className={`${styles.coords} ${styles['coords--bottom']}`}>
-          <Coord>06 SERVICES · CLICK ANY ROW TO INSPECT</Coord>
+          <Coord>
+            <Translate
+              id="ourServices.coord.hint"
+              description="Bottom coordinate hint inviting users to click a service row"
+            >
+              LAYANAN · KLIK BARIS MANA SAJA UNTUK MENINJAU
+            </Translate>
+          </Coord>
         </div>
       </div>
     </section>
