@@ -1,82 +1,63 @@
 ---
 sidebar_position: 1
-title: Explorer
+title: Data Explorer
 description: Metadata explorer for checking data availability
 ---
 
 # Piksel Explorer
 
-How can we know exactly **where** and **when** data is available? Before starting any analysis, we can answer this question by inspecting the data at [Piksel Metadata Explorer][exp_lnk].
+How can we know exactly **where** and **when** data is available? Before starting any analysis, we can answer this question by inspecting the catalog in the [Data Explorer][exp_lnk].
 
 :::info Start exploring
-Open the [Metadata Explorer][exp_lnk]
+Open the [Data Explorer][exp_lnk]
 :::
 
-#### In This Guide
-[Map or Explorer](#map-or-explorer)
-
-[Open Piksel Explorer](#open-piksel-explorer)
-
-[Select Landsat 9 Product](#select-l9-product)
-
-[Zoom in on East Nusa Tenggara](#zoom-ntt)
-
 ## Map or Explorer {#map-or-explorer}
-[Piksel Metadata Explorer][exp_lnk] and [Piksel Maps][map_lnk] look similar, but they are designed for different purposes.
+
+The [Data Explorer][exp_lnk] and [Piksel Maps][map_lnk] look similar, but they are built for different purposes.
 
 Use [Piksel Maps][map_lnk] if:
 
-- You want to view and interact with a product or dataset in a map viewer.
+- You want to visualize a product or dataset and interact with the data in a map viewer
 
-Use [Piksel Metadata Explorer][exp_lnk] if:
+Use the [Data Explorer][exp_lnk] if:
 
-- You want to know exactly where and when you can find the data.
+- You want to know exactly where and when a given dataset is available
 
-## Open Piksel Explorer {#open-piksel-explorer}
-Go to https://explorer.staging.piksel.big.go.id/products. This will display the Metadata Explorer user interface.
+## Available Products {#produk-tersedia}
 
-![explorer-homepage](/img/explorer/explorer-home1.webp)
+The Data Explorer provides **11 satellite data products** covering an archive of optical and radar imagery from several missions.
 
-Piksel Explorer has four main sections:
+![Product list in the Piksel Explorer](/img/explorer/explorer-products-list.webp)
 
-1. **Product selection**: This section shows the currently selected product. Click the selected product name to open the product menu.
+### Landsat Family (USGS)
 
-2. **Time period**: This section shows the time period used to display the selected product. Click the selected time period on the grey menu bar to open the time selection menu. The blue bar chart shows data availability over time for your selected product.
+Landsat Collection 2 Level-2 imagery with two variants per satellite: Surface Reflectance (`sr`) for surface reflectance analysis, and Surface Temperature (`st`) for land surface temperature monitoring.
 
-3. **Map view**: This displays the location of data availability for the selected time period and product. Blue-coloured tiles indicate the presence of data.
+| Product | Description |
+| --- | --- |
+| `ls5_c2l2_sr` | Landsat 5 — Surface Reflectance |
+| `ls5_c2l2_st` | Landsat 5 — Surface Temperature |
+| `ls7_c2l2_sr` | Landsat 7 — Surface Reflectance |
+| `ls7_c2l2_st` | Landsat 7 — Surface Temperature |
+| `ls8_c2l2_sr` | Landsat 8 — Surface Reflectance |
+| `ls8_c2l2_st` | Landsat 8 — Surface Temperature |
+| `ls9_c2l2_sr` | Landsat 9 — Surface Reflectance |
+| `ls9_c2l2_st` | Landsat 9 — Surface Temperature |
 
-4. **Product information**: The sidebar displays further information about the data for the selected time period and product — including the number of selected datasets, total area, and coordinate reference system.
+### Sentinel Family (ESA)
 
-## Select Landsat 9 Product {#select-l9-product}
-1. Click the **product selection** bar to open the menu. Select **ls9_c2l2_sr**. This will select the Landsat 9 product.
+Optical and radar imagery from the European Space Agency's Sentinel missions, including annual composite products dedicated to the Indonesian region.
 
-![explorer-l9](/img/explorer/explorer-home2.webp)
+| Product | Description |
+| --- | --- |
+| `s1_rtc` | Sentinel-1 — Radiometrically Terrain Corrected (RTC) SAR, derived from Level-1 GRD |
+| `s2_l2a` | Sentinel-2 — Collections 2a, 2b, and 2c |
+| `s2_geomad_annual` | Sentinel-2 — Annual Geometric Median and MAD composite (14 bands, Indonesia-specific) |
 
-2. Click the **time** bar to open the menu. Select **2022**. This will display all Landsat 9 datasets for the year 2022.
+:::tip See the latest list
+Visit the [Products page on the Piksel Explorer][exp_lnk] for the most up-to-date product list and technical metadata.
+:::
 
-![explorer-2022](/img/explorer/explorer-home3.webp)
-
-3. Click the **all months** bar to open the menu. Select **August**. This will display all Landsat 9 datasets for August 2022.
-
-![explorer-aug](/img/explorer/explorer-home4.webp)
-
-4. Click the **all days** bar to open the menu. Select **11**. This will display all Landsat 9 datasets for 11 August 2022.
-
-![explorer-11th](/img/explorer/explorer-home5.webp)
-
-5. The **map view** will now show all Landsat 9 datasets for 11 August 2022 as blue boxes. Use the **+** button on the map to zoom in, then click and drag to pan.
-
-![explorer-zoom](/img/explorer/explorer-home6.webp)
-
-## Zoom in on East Nusa Tenggara {#zoom-ntt}
-
-Use the **+** button on the map to zoom into the East Nusa Tenggara region.
-
-![explorer-ntt](/img/explorer/explorer-home7.webp)
-
-When we hover over East Nusa Tenggara, we can see there is one dataset for that area on 11 August 2022. Click the dataset on the map. You can now see a preview of the data for that tile, along with all the associated metadata below the map view.
-
-![explorer-ntt2](/img/explorer/explorer-home8.webp)
-
-[exp_lnk]: https://explorer.staging.piksel.big.go.id/products
-[map_lnk]: https://maps.staging.piksel.big.go.id
+[exp_lnk]: https://explorer.piksel.big.go.id/products
+[map_lnk]: https://maps.piksel.big.go.id
