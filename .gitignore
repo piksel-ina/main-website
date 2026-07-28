@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Screenshots
 .playwright-cli/
+
+# Compressed asset output (intermediate, tidak perlu di-commit)
+static/img/*/compressed/
