@@ -1,0 +1,192 @@
+@use '../../../css/abstracts' as *;
+
+/* === SLIDER FRAME === */
+
+.slider {
+  position: relative;
+  width: 100%;
+  background: var(--dea-navy);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0, 113, 139, 0.35),
+    0 4px 16px rgba(8, 46, 65, 0.2),
+    0 12px 40px rgba(8, 46, 65, 0.12);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 0% 0%, rgba(0, 113, 139, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 100% 100%, rgba(13, 110, 253, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* === HEADER BAR === */
+
+  &__header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--pk-s-2);
+    padding: var(--pk-s-3) var(--pk-s-5);
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 113, 139, 0.3);
+  }
+
+  &__dotRow {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__chromeDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+
+    &:nth-child(1) { background: #ff5f57; }
+    &:nth-child(2) { background: #febc2e; }
+    &:nth-child(3) { background: #28c840; }
+  }
+
+  &__title {
+    flex: 1;
+    font-family: var(--pk-font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* === STAGE === */
+
+  &__stage {
+    position: relative;
+    padding: var(--pk-s-4) var(--pk-s-7) var(--pk-s-3);
+
+    @include respond-to('tablet') {
+      padding: var(--pk-s-3) var(--pk-s-6) var(--pk-s-2);
+    }
+  }
+
+  &__viewport {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 113, 139, 0.4);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* === CAPTION === */
+
+  &__caption {
+    margin: var(--pk-s-3) var(--pk-s-2) 0;
+    font-family: var(--pk-font-mono);
+    font-size: 0.6875rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  &__link {
+    color: rgba(0, 200, 216, 0.85);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: #00c8d8;
+    }
+  }
+
+  /* === ARROWS === */
+
+  &__arrow {
+    position: absolute;
+    top: var(--pk-s-4);
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: auto 0;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    background: rgba(8, 46, 65, 0.7);
+    border: 1px solid rgba(0, 113, 139, 0.5);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    transition:
+      background var(--pk-dur-2) var(--pk-ease),
+      color var(--pk-dur-2) var(--pk-ease),
+      border-color var(--pk-dur-2) var(--pk-ease);
+
+    &:hover {
+      background: rgba(0, 113, 139, 0.8);
+      color: #ffffff;
+      border-color: rgba(0, 113, 139, 0.9);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--dea-teal);
+      outline-offset: 2px;
+    }
+
+    &--prev {
+      left: var(--pk-s-3);
+    }
+
+    &--next {
+      right: var(--pk-s-3);
+    }
+  }
+
+  /* === DOTS === */
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--pk-s-2);
+    padding: var(--pk-s-2) var(--pk-s-3) var(--pk-s-4);
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    transition:
+      background var(--pk-dur-2) var(--pk-ease),
+      transform var(--pk-dur-2) var(--pk-ease);
+
+    &--active {
+      background: var(--dea-teal);
+      transform: scale(1.4);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--dea-teal);
+      outline-offset: 2px;
+    }
+  }
+}
