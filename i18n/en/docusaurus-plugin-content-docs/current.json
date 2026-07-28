@@ -186,5 +186,17 @@
   "sidebar.docsSidebar.category.Surface Reflectance Satellite Data.link.generated-index.description": {
     "message": "Discover the variety of surface reflectance satellite data products offered by Piksel platform.",
     "description": "The generated-index page description for category 'Surface Reflectance Satellite Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pangan": {
+    "message": "Pangan",
+    "description": "The label for category 'Pangan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Lahan": {
+    "message": "Lahan",
+    "description": "The label for category 'Lahan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Lingkungan": {
+    "message": "Lingkungan",
+    "description": "The label for category 'Lingkungan' in sidebar 'docsSidebar'"
   }
 }
