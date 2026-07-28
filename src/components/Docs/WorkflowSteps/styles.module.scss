@@ -1,0 +1,152 @@
+@use '../../../css/abstracts' as *;
+
+/* === PHASE COLOR MAP === */
+
+$phases: (
+  'input':      (#1e40af, #dbeafe, #bfdbfe),
+  'water':      (#065f46, #d1fae5, #a7f3d0),
+  'tidal':      (#0e7490, #cffafe, #a5f3fc),
+  'composite':  (#92400e, #fef3c7, #fde68a),
+  'extraction': (#6b21a8, #f3e8ff, #ddd6fe),
+  'analysis':   (#9f1239, #ffe4e6, #fecdd3),
+);
+
+/* === ROOT === */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  margin: var(--pk-s-5) 0 var(--pk-s-6);
+}
+
+/* === STEP === */
+
+.step {
+  display: flex;
+  gap: var(--pk-s-4);
+
+  &:last-child {
+    .step__line {
+      display: none;
+    }
+  }
+}
+
+/* === LEFT COLUMN: badge + line === */
+
+.step__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+}
+
+.step__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+}
+
+.step__num {
+  font-family: var(--pk-font-mono);
+  font-size: var(--pk-text-sm);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.step__line {
+  flex: 1;
+  width: 2px;
+  min-height: var(--pk-s-5);
+  margin: 4px 0;
+  background: color('grey-5');
+}
+
+/* === RIGHT COLUMN: header + body === */
+
+.step__content {
+  flex: 1;
+  padding-bottom: var(--pk-s-5);
+}
+
+.step__header {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  margin-bottom: var(--pk-s-3);
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.step__label {
+  font-family: var(--pk-font-mono);
+  font-size: var(--pk-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.step__body {
+  font-size: var(--pk-text-sm);
+  line-height: var(--pk-lh-relaxed);
+  color: color('ink-3');
+
+  p {
+    margin: 0 0 var(--pk-s-2);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  code {
+    font-family: var(--pk-font-mono);
+    font-size: 0.82em;
+    padding: 1px 5px;
+    background: color('paper-2');
+    border: 1px solid color('grey-5');
+    border-radius: 3px;
+    color: color('primary-dark');
+  }
+
+  ul {
+    margin: var(--pk-s-2) 0 0;
+    padding-left: var(--pk-s-5);
+
+    li {
+      margin-bottom: var(--pk-s-1);
+    }
+  }
+}
+
+/* === PHASE COLORS === */
+
+@each $phase, $colors in $phases {
+  $fg:     nth($colors, 1);
+  $bg:     nth($colors, 2);
+  $border: nth($colors, 3);
+
+  .step__badge--#{$phase} {
+    background: $bg;
+    border-color: $border;
+
+    .step__num {
+      color: $fg;
+    }
+  }
+
+  .step__header--#{$phase} {
+    background: $bg;
+    border-color: $border;
+
+    .step__label {
+      color: $fg;
+    }
+  }
+}

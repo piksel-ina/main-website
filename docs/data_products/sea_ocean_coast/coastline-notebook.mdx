@@ -1,0 +1,155 @@
+---
+sidebar_position: 2
+draft: true
+title: Python Notebook — Ina Coastline
+description: Panduan memuat dan memvisualisasikan data Ina Coastline menggunakan Python dan GeoPandas.
+---
+
+import CoastlineMap from '@site/src/components/Docs/CoastlineMap';
+
+# Pengantar Ina Coastline — Python Notebook
+
+- Daftar ke Piksel Sandbox untuk menjalankan notebook ini secara interaktif dari browser. 
+- Kirim email ke **piksel@big.go.id** untuk mendaftar akses, atau kunjungi langsung [sandbox.staging.piksel.big.go.id](https://sandbox.staging.piksel.big.go.id).
+---
+## Deskripsi
+
+Notebook ini mendemonstrasikan cara memuat data dari produk **Ina Coastline** menggunakan GeoPackage dan `geopandas`. Topik yang dicakup:
+
+1. Memuat data garis pantai tahunan (`shorelines_annual`) menggunakan `geopandas`.
+2. Memuat data statistik laju perubahan (`rates_of_change`) menggunakan `geopandas`.
+
+:::note
+Kunjungi [halaman dokumentasi produk Ina Coastline](/docs/data_products/sea_ocean_coast/coastline) untuk informasi teknis lengkap termasuk metode, akurasi, dan akses data. Untuk mengeksplorasi Ina Coastline pada peta interaktif, [kunjungi Piksel Maps](https://maps.staging.piksel.big.go.id).
+:::
+
+---
+
+## Memulai
+
+Untuk menjalankan analisis ini, jalankan semua sel di notebook, dimulai dari sel **"Muat paket"**.
+
+### Muat Paket
+
+```python
+import geopandas as gpd
+import matplotlib.pyplot as plt
+```
+
+---
+
+## Memuat Data Ina Coastline
+
+Unduh terlebih dahulu file GeoPackage dari halaman [Unduh Data](/download/coastline), lalu tentukan path file:
+
+```python
+GPKG_PATH = "coastlines_0.0.5.Java-Island-V3.gpkg"
+```
+
+### Garis Pantai Tahunan
+
+Data Ina Coastline dapat dimuat langsung dalam skrip Python atau Jupyter Notebook menggunakan `geopandas`:
+
+```python
+# Muat layer garis pantai tahunan
+shorelines_gdf = gpd.read_file(GPKG_PATH, layer="shorelines_annual")
+
+# Tampilkan beberapa baris pertama
+shorelines_gdf.head()
+```
+
+| | id | year | certainty | tide_datum | id_primary | geometry |
+|--|-----|------|-----------|------------|------------|----------|
+| 0 | shorelines_annual.1 | 1993 | good | 0.0 m AMSL | JW01 | LINESTRING (...) |
+| 1 | shorelines_annual.2 | 2005 | good | 0.0 m AMSL | JW01 | LINESTRING (...) |
+| 2 | shorelines_annual.3 | 1991 | unstable data | 0.0 m AMSL | JW01 | LINESTRING (...) |
+
+Sekarang kita dapat memplot data garis pantai tahunan menggunakan `geopandas`. Perbesar area pantai utara Jawa pada peta interaktif untuk melihat data garis pantai.
+
+Garis pantai tahunan merepresentasikan posisi median atau "paling representatif" dari garis pantai pada kira-kira muka air laut rata-rata (0 m AMSL) untuk setiap tahun sejak 1987. Garis berwarna terang (mis. kuning) mewakili garis pantai terkini; garis lebih gelap mewakili garis pantai yang lebih lama (mis. 1987).
+
+:::note
+Untuk detail lebih lanjut tentang data garis pantai tahunan Ina Coastline, lihat bagian [Layer `shorelines_annual`](/docs/data_products/sea_ocean_coast/coastline#layer-shorelines_annual) pada halaman dokumentasi produk.
+:::
+
+```python
+# Plot peta interaktif data Ina Coastline
+shorelines_gdf.explore(column='year', cmap='inferno', categorical=True)
+```
+
+<CoastlineMap
+  layer="shorelines"
+  height={520}
+  caption="Gambar 1. Garis pantai tahunan Ina Coastline divisualisasikan pada peta interaktif. Warna lebih terang = lebih terkini. Garis putus-putus = keyakinan rendah."
+/>
+
+---
+
+## Titik Laju Perubahan
+
+Kita juga dapat memuat dan memplot titik laju perubahan Ina Coastline. Titik-titik ini menyediakan laju perubahan pesisir tahunan yang robust (dalam meter per tahun) untuk setiap interval 30 m di sepanjang garis pantai non-berbatu Indonesia. Laju ini dihitung dengan meregresikan posisi garis pantai tahunan terhadap waktu secara linier, menggunakan garis pantai terkini sebagai _baseline_.
+
+Data titik laju perubahan Ina Coastline menyediakan berbagai statistik berguna yang memberikan wawasan tentang perubahan pesisir di Indonesia.
+
+:::note
+Untuk deskripsi lengkap setiap statistik ini, lihat bagian [Layer `rates_of_change`](/docs/data_products/sea_ocean_coast/coastline#layer-rates_of_change) pada halaman dokumentasi produk.
+:::
+
+```python
+# Muat titik laju perubahan dalam bounding box yang ditentukan
+rates_gdf = gpd.read_file(GPKG_PATH, layer="rates_of_change")
+
+# Filter hanya hasil yang signifikan secara statistik (p <= 0.01),
+# dan titik dengan certainty baik (tanpa flag kualitas buruk)
+rates_gdf = rates_gdf[rates_gdf["sig_time"] <= 0.01]
+rates_gdf = rates_gdf[rates_gdf["certainty"] == "good"]
+
+# Tampilkan output
+rates_gdf.head()
+```
+
+| | id | uid | rate_time | sig_time | se_time | outl_time | dist_1987 | dist_1988 | ... | certainty | geometry |
+|--|-----|-----|-----------|----------|---------|-----------|-----------|-----------|-----|-----------|----------|
+| 0 | rates_of_change.1 | abc123 | -3.21 | 0.000 | 0.18 | None | 98.4 | 95.1 | ... | good | POINT (...) |
+| 1 | rates_of_change.2 | def456 | -1.87 | 0.003 | 0.22 | None | 67.3 | 64.8 | ... | good | POINT (...) |
+| 2 | rates_of_change.3 | ghi789 | 1.45 | 0.001 | 0.15 | None | -22.1 | -19.5 | ... | good | POINT (...) |
+
+Titik laju perubahan negatif (merah) pada peta di bawah menunjukkan **kemunduran (erosi)**; nilai positif menunjukkan **pertumbuhan (akresi)** dari waktu ke waktu. Secara default, laju perubahan ditampilkan hanya untuk titik berkualitas baik dengan tren yang signifikan secara statistik.
+
+```python
+# Tambah label yang mudah dibaca untuk visualisasi
+rates_gdf["Perubahan Pesisir"] = rates_gdf.apply(
+    lambda x: (
+        f'<h4>Garis pantai ini telah '
+        f'{"<b>mundur</b>" if x.rate_time < 0 else "<b>tumbuh</b>"} '
+        f'sebesar</br><b>{x.rate_time:.2f} m (±{x.se_time * 1.96:.1f}) per tahun</b> '
+        f'sejak <b>1987</b></h4>'
+    ),
+    axis=1,
+)
+
+# Plot pada peta interaktif
+rates_gdf.explore(
+    column="rate_time", cmap="RdBu", vmin=-3, vmax=3, tooltip="Perubahan Pesisir"
+)
+```
+
+<CoastlineMap
+  layer="rates"
+  height={520}
+  caption="Gambar 2. Titik laju perubahan pesisir. Merah = kemunduran (erosi), biru = pertumbuhan (akresi). Hover di atas titik untuk melihat laju, interval kepercayaan, dan nilai p."
+/>
+
+---
+
+## Informasi Tambahan
+
+**Lisensi:** Kode dalam notebook ini dilisensikan di bawah [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0). Data Ina Coastline dilisensikan di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+
+**Kontak:** Untuk bantuan, kunjungi [Repositori GitHub Ina Coastline](https://github.com/piksel-ina/indonesia-coastlines) atau ajukan isu langsung di sana.
+
+**Terakhir diperbarui:** Juli 2026
+
+---
+
+**Tags:** Piksel Sandbox, Ina Coastline, erosi pesisir, geopandas, GeoPackage, produk Piksel
