@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.scss';
 
 const GifSlider = ({ slides = [] }) => {
@@ -12,6 +13,7 @@ const GifSlider = ({ slides = [] }) => {
   const next = () => setCurrent((c) => (c + 1) % slides.length);
 
   const currentSlide = slides[current];
+  const currentSrc = useBaseUrl(currentSlide.src);
 
   return (
     <div className={styles.slider}>
@@ -29,7 +31,7 @@ const GifSlider = ({ slides = [] }) => {
         <div className={styles.slider__viewport}>
           <img
             key={currentSlide.src}
-            src={currentSlide.src}
+            src={currentSrc}
             alt={currentSlide.alt || ''}
             className={styles.slider__image}
           />
