@@ -9,6 +9,7 @@ import CoastlineHero from '@site/src/components/Docs/CoastlineHero';
 import LayerCard from '@site/src/components/Docs/LayerCard';
 import QuickLinks from '@site/src/components/Docs/QuickLinks';
 import GifSlider from '@site/src/components/Docs/GifSlider';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <div className="coastline-page">
 <CoastlineHero previewImage="/img/coastline/previewhero.png" />
@@ -109,7 +110,7 @@ Vektor garis pantai tahunan yang merepresentasikan posisi median atau "paling re
 Garis pantai bertanda putus-putus (_dashed_) menunjukkan tingkat keyakinan rendah.
 
 <figure>
-  <img src="/img/coastline/layer-shorelines.png" alt="Layer Garis Pantai Tahunan" />
+  <img src={useBaseUrl('/img/coastline/layer-shorelines.png')} alt="Layer Garis Pantai Tahunan" />
   <figcaption>Gambar 1. Garis pantai tahunan dari Ina Coastline divisualisasikan pada peta interaktif.</figcaption>
 </figure>
 
@@ -122,7 +123,7 @@ Pada peta interaktif Ina Coastline, titik hanya ditampilkan untuk lokasi dengan 
 Titik laju perubahan berisi kolom atribut yang dapat diakses dengan mengklik titik berlabel pada peta.
 
 <figure>
-  <img src="/img/coastline/layer-rates.png" alt="Layer Titik Laju Perubahan" />
+  <img src={useBaseUrl('/img/coastline/layer-rates.png')} alt="Layer Titik Laju Perubahan" />
   <figcaption>Gambar 2. Titik laju perubahan dari Ina Coastline.</figcaption>
 </figure>
 
@@ -131,7 +132,7 @@ Titik laju perubahan berisi kolom atribut yang dapat diakses dengan mengklik tit
 Tiga layer titik yang merangkum perubahan pesisir dalam jendela bergerak (_moving window_) 1 km, 5 km, dan 10 km di sepanjang garis pantai (lihat Gambar 3). Layer ini berguna untuk memvisualisasikan pola perubahan pesisir pada skala regional atau nasional.
 
 <figure>
-  <img src="/img/coastline/layer-hotspots.PNG" alt="Layer Hotspot Perubahan Pesisir" />
+  <img src={useBaseUrl('/img/coastline/layer-hotspots.PNG')} alt="Layer Hotspot Perubahan Pesisir" />
   <figcaption>Gambar 3. Hotspot perubahan pesisir dari Ina Coastline.</figcaption>
 </figure>
 
