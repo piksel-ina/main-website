@@ -42,17 +42,17 @@ export const useCasesData = [
     desc: translate({
       id: 'useCases.garisPantai.desc',
       message:
-        'Analisis perubahan garis pantai menggunakan citra Landsat multitemporal dan model pasang surut, dengan studi kasus di Pantai Utara Jakarta.',
+        'Ekstraksi garis pantai tahunan dari arsip Landsat sejak 1987 menggunakan pemodelan pasang surut INATIDES, untuk mengukur laju erosi dan akresi sepanjang pesisir Indonesia.',
     }),
     sector: translate({ id: 'useCases.sector.pesisir', message: 'Pesisir' }),
     sensor: 'Landsat 5 · 7 · 8 · 9',
     cadence: 'Annual',
-    product: 'Coastline Change Map',
+    product: 'Ina Coastline',
     color: '#0891b2',
-    image: '/img/usecases/garis-pantai.webp',
+    image: '/img/coastline/previewhero.png',
     imageAlt: translate({
       id: 'useCases.garisPantai.imageAlt',
-      message: 'Peta perubahan garis pantai Utara Jakarta',
+      message: 'Garis pantai tahunan hasil ekstraksi citra Landsat — Pulau Jawa',
     }),
     link: '/docs/usecases/pesisir/perubahan-garis-pantai',
     stats: [

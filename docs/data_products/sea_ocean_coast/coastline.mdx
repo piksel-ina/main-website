@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Ina Coastline
 hide_title: true
-description: _Derived data product_ Piksel untuk memantau perubahan garis pantai Indonesia sejak 1987 menggunakan data satelit Landsat dan pemodelan pasang surut.
+description: _Derived data product_ Piksel untuk memantau perubahan garis pantai Indonesia 1987–2025 menggunakan data satelit Landsat dan pemodelan pasang surut.
 ---
 
 import CoastlineHero from '@site/src/components/Docs/CoastlineHero';
@@ -19,15 +19,33 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     slides={[
       {
         src: '/img/coastline/coastline-chart.gif',
-        alt: 'Animasi perubahan garis pantai Indonesia 1987–2024',
+        alt: 'Perubahan posisi garis pantai tahunan 1987–2025',
+        caption: 'Dinamika perubahan garis pantai tahunan, 1987–2025',
       },
       {
         src: '/img/coastline/coastline-chart2.gif',
-        alt: 'Visualisasi garis pantai alternatif 1',
+        alt: 'Perubahan posisi garis pantai tahunan 1987–2025',
+        caption: 'Dinamika perubahan garis pantai tahunan, 1987–2025',
       },
       {
         src: '/img/coastline/coastline-chart3.gif',
-        alt: 'Visualisasi garis pantai alternatif 2',
+        alt: 'Perubahan posisi garis pantai tahunan 1987–2025',
+        caption: 'Dinamika perubahan garis pantai tahunan, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart4.gif',
+        alt: 'Perubahan posisi garis pantai tahunan 1987–2025',
+        caption: 'Dinamika perubahan garis pantai tahunan, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart5.gif',
+        alt: 'Perubahan posisi garis pantai tahunan 1987–2025',
+        caption: 'Dinamika perubahan garis pantai tahunan, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart6.gif',
+        alt: 'Perubahan posisi garis pantai tahunan 1987–2025',
+        caption: 'Dinamika perubahan garis pantai tahunan, 1987–2025',
       },
     ]}
   />
@@ -58,7 +76,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     {
       label: 'Python Notebook',
       subtitle: 'Contoh analisis data',
-      href: '/docs/data_products/sea_ocean_coast/coastline-notebook',
+      href: '/docs/usecases/pesisir/perubahan-garis-pantai',
       icon: 'notebook',
     },
   ]}
@@ -68,9 +86,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Indonesia memiliki garis pantai dengan dinamika tinggi, dan lebih dari 60% penduduk tinggal dalam jarak 50 km dari pantai. Garis pantai ini menghadapi tekanan beragam, termasuk cuaca ekstrem, perubahan iklim, kenaikan paras laut, dan pembangunan pesisir. Memahami bagaimana garis pantai merespons tekanan tersebut krusial untuk pengelolaan wilayah pesisir dari sisi sosial, lingkungan, dan ekonomi.
 
-Ina Coastline adalah _derived product_ milik platform Piksel yang memetakan posisi garis pantai Indonesia pada saat muka air laut rata-rata (_mean sea level_) untuk setiap tahun sejak 1987. Produk ini menggabungkan data satelit Landsat dengan pemodelan pasang surut untuk menghasilkan garis pantai tahunan beserta laju perubahan yang terperinci, sehingga pertumbuhan dan erosi pada pantai, _sandspit_, muara sungai, dan _tidal flat_ dapat diamati secara kuantitatif dari waktu ke waktu.
+Ina Coastline adalah _derived product_ milik platform Piksel yang memetakan posisi garis pantai Indonesia pada saat muka air laut rata-rata (_mean sea level_) untuk setiap tahun dari 1987 hingga 2025. Produk ini menggabungkan data satelit Landsat dengan pemodelan pasang surut untuk menghasilkan garis pantai tahunan beserta laju perubahan yang terperinci, sehingga abrasi dan akresi pada pantai, _sandspit_, muara sungai, dan _tidal flat_ dapat diamati secara kuantitatif dari waktu ke waktu.
 
-Dataset ini memungkinkan tren kemunduran (_retreat_) dan pertumbuhan (_growth_) garis pantai dianalisis setiap tahun pada skala lokal maupun nasional, serta pola perubahan pesisir dipetakan secara historis dan diperbarui secara berkala.
+Dataset ini memungkinkan tren abrasi dan akresi garis pantai dianalisis setiap tahun pada skala lokal maupun nasional, serta pola perubahan pesisir dipetakan secara historis dan diperbarui secara berkala.
 
 > **Catatan:** Produk **Ina Coastline** memetakan posisi garis pantai berdasarkan **_mean sea level (MSL)_**. Oleh karena itu, istilah **garis pantai** dalam dokumen ini mengacu pada garis pantai pada kondisi **_mean sea level (MSL)_**, kecuali dinyatakan lain.
 
@@ -83,7 +101,7 @@ Ringkasan spesifikasi utama produk. Rincian setiap layer tersedia di bagian **La
 | **Nama Teknis**     | coastlines_java-island                                                               |
 | **Versi**           | 0.0.5                                                                                       |
 | **Tipe**            | Vektor                                                                             |
-| **Cakupan Waktu**   | 1987 sampai sekarang                                                                        |
+| **Cakupan Waktu**   | 1987–2025                                                                                   |
 | **Updating Data**   | Tahunan                                                                                     |
 | **Lisensi**         | [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) |
 
@@ -94,7 +112,7 @@ Ina Coastline diturunkan dari data **Reflektansi Permukaan Landsat Piksel** (Lan
 
 ## Aplikasi
 
-- Pemantauan dan pemetaan laju erosi pesisir di sepanjang garis pantai Indonesia.
+- Pemantauan dan pemetaan laju abrasi dan akresi pesisir di sepanjang garis pantai Indonesia.
 - Menilai dampak pengelolaan pesisir lokal dan regional berdasarkan perubahan historis.
 - Memodelkan respons garis pantai terhadap _driver_ perubahan, termasuk kejadian cuaca ekstrem, kenaikan paras laut, atau pembangunan pesisir.
 - Mendukung studi geomorfologi tentang bagaimana dan mengapa garis pantai berubah sepanjang waktu.
@@ -103,7 +121,7 @@ Ina Coastline diturunkan dari data **Reflektansi Permukaan Landsat Piksel** (Lan
 
 Produk ini terdiri dari **tiga kelompok layer** data vektor yang divisualisasikan pada peta interaktif.
 
-### Layer Garis Pantai Tahunan (`shorelines_annual`)
+### Layer Garis Pantai Tahunan — _shorelines_annual_
 
 Vektor garis pantai tahunan yang merepresentasikan posisi median atau "paling representatif" dari garis pantai pada kira-kira 0 m di atas muka air laut rata-rata (_Above Mean Sea Level_, AMSL) untuk setiap tahun sejak 1987 (lihat Gambar 1).
 
@@ -114,7 +132,7 @@ Garis pantai bertanda putus-putus (_dashed_) menunjukkan tingkat keyakinan renda
   <figcaption>Gambar 1. Garis pantai tahunan dari Ina Coastline divisualisasikan pada peta interaktif.</figcaption>
 </figure>
 
-### Layer Titik Laju Perubahan (`rates_of_change`)
+### Layer Titik Laju Perubahan — _rates_of_change_
 
 Dataset titik yang menyediakan laju perubahan pesisir yang robust untuk setiap interval 30 m di sepanjang garis pantai non-batu Indonesia (lihat Gambar 2). Garis pantai tahunan paling terkini digunakan sebagai _baseline_ untuk pengukuran laju perubahan.
 
@@ -127,7 +145,7 @@ Titik laju perubahan berisi kolom atribut yang dapat diakses dengan mengklik tit
   <figcaption>Gambar 2. Titik laju perubahan dari Ina Coastline.</figcaption>
 </figure>
 
-### Layer _Hotspot_ Perubahan Pesisir (`hotspots_zoom_1`, `hotspots_zoom_2`, dan `hotspots_zoom_3`)
+### Layer _Hotspot_ Perubahan Pesisir — _hotspots_zoom_
 
 Tiga layer titik yang merangkum perubahan pesisir dalam jendela bergerak (_moving window_) 1 km, 5 km, dan 10 km di sepanjang garis pantai (lihat Gambar 3). Layer ini berguna untuk memvisualisasikan pola perubahan pesisir pada skala regional atau nasional.
 
@@ -142,31 +160,31 @@ Tiga layer titik yang merangkum perubahan pesisir dalam jendela bergerak (_movin
 import WorkflowSteps, { WorkflowStep } from '@site/src/components/Docs/WorkflowSteps';
 
 <WorkflowSteps>
-  <WorkflowStep label="LOAD DATA" phase="input">
+  <WorkflowStep label="MUAT DATA (Load Data)" phase="input">
     Muat seluruh arsip citra Landsat 5, 7, 8, dan 9 yang tersedia untuk area studi menggunakan Open Data Cube atau STAC API. Prioritas diberikan pada scene Tier 1 (T1); Tier 2 (T2) digunakan sebagai fallback jika jumlah scene tidak mencukupi.
   </WorkflowStep>
-  <WorkflowStep label="WATER INDEX" phase="water">
+  <WorkflowStep label="INDEKS AIR (Water Index)" phase="water">
     Hitung indeks air per piksel untuk membedakan permukaan air dari daratan. Empat indeks tersedia dan dapat dikonfigurasi: **MNDWI** `(green − swir16) / (green + swir16)`, **NDWI** `(green − nir08) / (green + nir08)`, **Combined (CWI)** rata-rata dari MNDWI dan NDWI, serta **MNDWI-NIR** — varian MNDWI yang dimodifikasi dengan band NIR untuk kondisi pesisir tropis.
   </WorkflowStep>
-  <WorkflowStep label="TIDAL MODELLING" phase="tidal">
+  <WorkflowStep label="PEMODELAN PASANG SURUT (Tidal Modelling)" phase="tidal">
     Estimasi ketinggian pasang surut per piksel menggunakan pendekatan _Ensemble Tidal Modelling_ yang menggabungkan 10 model pasang surut global (EOT20, FES2012/2014/2022, TPXO8/9/10, GOT4.10/5.5/5.6). Untuk perairan Indonesia, digunakan tambahan **INATIDES** — model pasang surut regional yang dikalibrasi khusus untuk karakteristik pasang surut kepulauan Indonesia yang kompleks.
   </WorkflowStep>
-  <WorkflowStep label="TIDE INTERPOLATION" phase="tidal">
+  <WorkflowStep label="INTERPOLASI PASANG SURUT (Tide Interpolation)" phase="tidal">
     Interpolasi hasil estimasi pasang surut dari resolusi rendah ke resolusi penuh (30 m) agar setiap piksel memiliki nilai ketinggian pasang surut yang konsisten pada setiap waktu akuisisi citra.
   </WorkflowStep>
-  <WorkflowStep label="TIDE MASKING" phase="tidal">
+  <WorkflowStep label="MASKING PASANG SURUT (Tide Masking)" phase="tidal">
     Masker dan buang semua observasi yang berada di luar 50% rentang pasang surut yang terpusat di muka air laut rata-rata (0 m AMSL). Hanya scene dalam rentang pasang surut tengah yang dipertahankan untuk analisis.
   </WorkflowStep>
-  <WorkflowStep label="ANNUAL COMPOSITE" phase="composite">
-    Gabungkan seluruh observasi yang telah dimasker menjadi komposit median tahunan dari 1987 hingga sekarang. Piksel dengan jumlah observasi bersih kurang dari 5 digantikan secara otomatis menggunakan komposit median tiga tahun (_gapfill_) untuk menjaga kelengkapan data.
+  <WorkflowStep label="KOMPOSIT TAHUNAN (Annual Composite)" phase="composite">
+    Gabungkan seluruh observasi yang telah dimasker menjadi komposit median tahunan dari 1987 hingga 2025. Piksel dengan jumlah observasi bersih kurang dari 5 digantikan secara otomatis menggunakan komposit median tiga tahun (_gapfill_) untuk menjaga kelengkapan data.
   </WorkflowStep>
-  <WorkflowStep label="COASTAL MASKING" phase="extraction">
+  <WorkflowStep label="MASKING PESISIR (Coastal Masking)" phase="extraction">
     Terapkan masker morfologis untuk membatasi area analisis hanya pada zona pesisir yang valid. Tahap ini juga mengintegrasikan layer modifikasi dan geomorfologi untuk mengecualikan area non-pesisir dan fitur buatan manusia dari ekstraksi garis pantai.
   </WorkflowStep>
-  <WorkflowStep label="SHORELINE EXTRACTION" phase="extraction">
+  <WorkflowStep label="EKSTRAKSI GARIS PANTAI (Shoreline Extraction)" phase="extraction">
     Ekstrak posisi garis air pada ambang batas indeks yang ditentukan menggunakan metode _subpixel waterline extraction_ (Bishop-Taylor et al., 2019). Metode ini menghasilkan garis pantai dengan presisi di bawah resolusi piksel (sub-30 m).
   </WorkflowStep>
-  <WorkflowStep label="CHANGE ANALYSIS" phase="analysis">
+  <WorkflowStep label="ANALISIS PERUBAHAN (Change Analysis)" phase="analysis">
     Hitung laju perubahan pesisir pada setiap interval 30 m sepanjang garis pantai non-berbatu menggunakan regresi linier posisi garis pantai tahunan terhadap waktu. Menghasilkan statistik turunan: laju perubahan (m/tahun), nilai-p, _standard error_, SCE, NSM, serta tahun posisi maksimum dan minimum.
   </WorkflowStep>
 </WorkflowSteps>
@@ -194,7 +212,7 @@ import SoftwareGrid from '@site/src/components/Docs/SoftwareGrid';
     {
       icon: 'workflow',
       name: 'Argo Workflows',
-      description: 'Platform orkestrasi workflow berbasis Kubernetes untuk menjalankan batch extraction Ina Coastline dalam skala besar — memproses seluruh wilayah Indonesia secara paralel.',
+      description: 'Platform orkestrasi alur kerja berbasis Kubernetes untuk menjalankan batch extraction Ina Coastline dalam skala besar — memproses seluruh wilayah Indonesia secara paralel.',
       href: 'https://argo.staging.piksel.big.go.id',
       linkLabel: 'argo.staging.piksel.big.go.id',
     },
@@ -228,7 +246,7 @@ import SoftwareGrid from '@site/src/components/Docs/SoftwareGrid';
 
 Pipeline Ina Coastline mendukung dua pendekatan pemodelan pasang surut yang dapat dikonfigurasi. **Single model** menggunakan satu model pasang surut pilihan secara langsung — lebih cepat dan cukup untuk area dengan karakteristik pasang surut yang relatif sederhana. **Ensemble** menggabungkan beberapa model global secara paralel, lalu membobotkan kontribusi setiap model per lokasi berdasarkan korelasi dengan pola inundasi pasang surut yang diamati dari satelit dan pengukuran altimetri — menghasilkan estimasi yang lebih robust di lokasi dengan dinamika pasang surut yang kompleks.
 
-Pemodelan pasang surut diimplementasikan menggunakan package Python `eo-tides` yang mengintegrasikan data penginderaan jauh dengan tidal modelling melalui fungsionalitas dari `pyTMD`.
+Pemodelan pasang surut diimplementasikan menggunakan package Python _eo-tides_ yang mengintegrasikan data penginderaan jauh dengan tidal modelling melalui fungsionalitas dari _pyTMD_.
 
 ### Model Global yang Didukung
 
@@ -278,19 +296,20 @@ _Bias_ dan presisi pemetaan garis pantai dievaluasi dengan menghitung rata-rata 
 
 - Garis pantai tahunan mungkin kurang akurat di wilayah dengan dinamika pasang surut kompleks atau rentang pasang surut besar, serta _intertidal flat_ yang landai di mana kesalahan kecil pada pemodelan pasang surut dapat menyebabkan offset horizontal yang besar pada posisi garis pantai.
 - Di beberapa lokasi urban, spektrum bangunan putih terang yang terletak dekat garis pantai secara tidak sengaja dapat tertukar dengan air, menyebabkan offset ke arah darat dari posisi garis pantai yang sebenarnya.
+- Di wilayah tambak (_aquaculture pond_) yang berada di zona pesisir, batas antara air tambak dan daratan dapat terbaca sebagai garis pantai oleh algoritma ekstraksi, sehingga menghasilkan noise pada posisi garis pantai di dalam area tambak tersebut.
 - Garis pantai 1991 dan 1992 saat ini dipengaruhi isu aerosol yang disebabkan oleh letusan Gunung Pinatubo tahun 1991. Garis pantai tersebut harus diinterpretasikan dengan hati-hati, khususnya di wilayah yang dekat dengan jalur sebaran plume stratosferik — kolom gas dan partikel vulkanik yang terinjeksi ke lapisan stratosfer dan dapat menyebar ribuan kilometer mengikuti arus angin.
 
 ## Penanda Kualitas Data
 
 Data Ina Coastline diskrining secara otomatis untuk mendeteksi potensi isu kualitas data. Setiap fitur yang teridentifikasi bermasalah ditandai melalui kolom `certainty`, dan divisualisasikan dengan garis putus-putus atau titik putih pada peta interaktif.
 
-### Garis Pantai Tahunan
+### Layer Garis Pantai Tahunan — _shorelines_annual_
 
 - **isu aerosol** — `aerosol issues`: Akurasi garis pantai ini mungkin dipengaruhi isu aerosol yang disebabkan oleh letusan Gunung Pinatubo tahun 1991, khususnya di wilayah yang dekat dengan jalur sebaran plume stratosferik — kolom gas dan partikel vulkanik yang terinjeksi ke lapisan stratosfer dan dapat menyebar ribuan kilometer mengikuti arus angin.
 - **data tidak cukup** — `insufficient data`: Akurasi garis pantai ini mungkin dipengaruhi terbatasnya observasi satelit berkualitas baik di lokasi ini.
 - **data tidak stabil** — `unstable data`: Akurasi garis pantai dipengaruhi data tidak stabil di lokasi ini. Hal ini dapat disebabkan oleh kesalahan pada model pasang surut, keberadaan _intertidal mudflat_ atau _sandbar_ yang landai, atau citra satelit berisik yang disebabkan oleh tingkat _cloud_ tinggi.
 
-### Titik Laju Perubahan
+### Layer Titik Laju Perubahan — _rates_of_change_
 
 - **observasi tidak cukup** — `insufficient observations`: Terdapat tahun yang tidak cukup dari data garis pantai tahunan berkualitas baik (< 25 tahun) untuk menghitung laju perubahan pesisir yang andal.
 - **kemungkinan garis pantai berbatu** — `likely rocky coastline`: Garis pantai ini diidentifikasi sebagai garis pantai berbatu atau _cliff_. Laju perubahan mungkin kurang akurat karena pemetaan garis pantai berisik akibat bayangan terrain gelap.
@@ -298,7 +317,7 @@ Data Ina Coastline diskrining secara otomatis untuk mendeteksi potensi isu kuali
 - **variabilitas sudut tinggi** — `high angular variability`: Laju perubahan ini kemungkinan tidak akurat karena tingkat variabilitas sudut yang tinggi dari titik ini ke setiap garis pantai tahunan.
 - **_baseline outlier_**: Garis pantai tahunan _baseline_ (yaitu yang paling terkini) ditandai sebagai _outlier_, yang berpotensi menghasilkan laju perubahan yang tidak akurat di lokasi ini.
 
-### _Hotspot_ Perubahan Pesisir
+### Layer _Hotspot_ Perubahan Pesisir — _hotspots_zoom_
 
 - **titik tidak cukup**: Terdapat terlalu sedikit titik laju perubahan yang valid dalam radius 1 km / 5 km / 10 km di sekitar lokasi ini untuk menghitung laju perubahan regional yang andal.
 
@@ -306,9 +325,7 @@ Data Ina Coastline diskrining secara otomatis untuk mendeteksi potensi isu kuali
 
 ## Lapisan Data
 
-Produk vektor berisi satu atau beberapa layer data yang berbeda, dan setiap layer dapat berisi beberapa kolom atribut. Tautan cepat: [`shorelines_annual`](#layer-shorelines_annual), [`rates_of_change`](#layer-rates_of_change), [`hotspots_zoom_1`, `hotspots_zoom_2`, dan `hotspots_zoom_3`](#layer-hotspots).
-
-### Layer: `shorelines_annual`
+### Layer: Garis Pantai Tahunan — _shorelines_annual_
 
 Vektor garis pantai tahunan yang merepresentasikan posisi median garis pantai pada kira-kira 0 m AMSL untuk setiap tahun sejak 1987.
 
@@ -349,7 +366,7 @@ Vektor garis pantai tahunan yang merepresentasikan posisi median garis pantai pa
   </tbody>
 </table>
 
-### Layer: `rates_of_change`
+### Layer: Titik Laju Perubahan — _rates_of_change_
 
 Dataset titik yang menyediakan laju perubahan pesisir yang robust untuk setiap 30 m di sepanjang garis pantai non-batu.
 
@@ -456,9 +473,9 @@ Dataset titik yang menyediakan laju perubahan pesisir yang robust untuk setiap 3
   </tbody>
 </table>
 
-### Layer: `hotspots_zoom_1`, `hotspots_zoom_2`, dan `hotspots_zoom_3`
+### Layer: Hotspot Perubahan Pesisir — _hotspots_zoom_
 
-Ketiga layer ini berisi **semua atribut dari layer `rates_of_change`**, ditambah atribut tambahan berikut. Layer ini merangkum perubahan pesisir dalam jendela bergerak (_moving window_) 1 km, 5 km, dan 10 km di sepanjang garis pantai.
+Ketiga layer ini berisi **semua atribut dari layer _rates_of_change_**, ditambah atribut tambahan berikut. Layer ini merangkum perubahan pesisir dalam jendela bergerak (_moving window_) 1 km, 5 km, dan 10 km di sepanjang garis pantai.
 
 <table>
   <thead>
@@ -503,6 +520,8 @@ Daftar lengkap referensi metodologis yang dipakai. Sitasi dalam teks mengikuti f
 - Sagar, S., Roberts, D., Bala, B., & Lymburner, L. (2017). _Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations_. Remote Sensing of Environment, 195, 153–169. https://doi.org/10.1016/j.rse.2017.04.009
 - Xu, H. (2006). _Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery_. International Journal of Remote Sensing, 27(14), 3025–3033.
 
+{/*
+
 ## Pranala Terkait
 
 :::tip Konten Eksternal
@@ -512,4 +531,6 @@ Bagian ini mengumpulkan tautan ke sumber daya di luar dokumentasi Piksel (FAQ, v
 - **FAQ Ina Coastlines** — Pertanyaan yang sering diajukan tentang Ina Coastline. *(halaman akan tersedia)*
 - **Seminar: Waktu dan Pasang Surut** — Diskusi metodologi Ina Coastlines. *(tonton video)*
 - **Artikel Jurnal** — _Mapping Australia's dynamic coastline at mean sea level using three decades of Landsat imagery_. [Lihat publikasi](https://doi.org/10.1016/j.rse.2021.112734)
+
+*/}
 </div>
