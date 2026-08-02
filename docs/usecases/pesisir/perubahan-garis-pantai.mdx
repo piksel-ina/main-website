@@ -1,0 +1,91 @@
+---
+sidebar_position: 2
+pagination_prev: null
+title: Perubahan Garis Pantai
+description: Analisis perubahan garis pantai Indonesia menggunakan citra satelit Landsat multi-temporal dan pemodelan pasang surut pada platform Piksel.
+---
+
+import CoastlineMap from '@site/src/components/Docs/CoastlineMap';
+import Link from '@docusaurus/Link';
+
+# Perubahan Garis Pantai
+
+<div className="usecase-meta">
+  <span>🛰️ Landsat 5 / 7 / 8 / 9</span>
+  <span>📅 1987 – Sekarang</span>
+  <span>📍 Pulau Jawa</span>
+  <span>🌊 Pesisir</span>
+</div>
+
+---
+
+## Latar Belakang
+
+Garis pantai Indonesia menghadapi tekanan yang terus meningkat — erosi akibat gelombang, sedimentasi, kenaikan paras laut, hingga reklamasi dan pembangunan pesisir. Lebih dari 60% penduduk Indonesia tinggal dalam jarak 50 km dari pantai, menjadikan pemantauan perubahan garis pantai penting untuk pengelolaan wilayah pesisir.
+
+Survei lapangan konvensional tidak mampu menjangkau seluruh panjang garis pantai Indonesia secara berkala. Analisis berbasis satelit menjadi solusi yang dapat memetakan perubahan secara konsisten dari tahun ke tahun di seluruh wilayah.
+
+## Pendekatan
+
+Analisis ini menggunakan arsip citra Landsat dari platform Piksel untuk mengekstrak posisi garis pantai tahunan sejak 1987. Setiap scene citra difilter berdasarkan model pasang surut **INATIDES** — sehingga hanya citra yang diambil saat kondisi muka air laut mendekati rata-rata (_mean sea level_) yang digunakan. Hasilnya adalah garis pantai tahunan yang sebanding secara temporal dan dapat digunakan untuk menghitung laju perubahan pesisir.
+
+Metode ini diadaptasi dari **DEA Coastlines** (Geoscience Australia) dan diimplementasikan untuk kondisi Indonesia menggunakan produk [Ina Coastline](/docs/data_products/sea_ocean_coast/coastline).
+
+## Hasil
+
+<div className="usecase-result-figure">
+  <img src="/img/coastline/previewhero.png" alt="Hasil analisis perubahan garis pantai" />
+  <p className="usecase-result-caption">
+    <em>Garis pantai tahunan yang diekstrak dari citra Landsat. Setiap garis merepresentasikan posisi median garis pantai pada kondisi muka air laut rata-rata untuk tahun tersebut.</em>
+  </p>
+</div>
+
+### Temuan Utama
+
+- Perubahan garis pantai terdeteksi secara konsisten sejak 1987 di sepanjang wilayah kajian
+- Laju erosi dan akresi dihitung per 30 m sepanjang garis pantai non-berbatu
+- Area dengan laju perubahan signifikan secara statistik (p-value ≤ 0,01) dapat diidentifikasi dan dipetakan
+- Garis pantai putus-putus menandai area dengan kualitas data rendah yang perlu interpretasi lebih hati-hati
+
+<p className="usecase-result-label">
+  Eksplorasi data secara interaktif — aktifkan atau nonaktifkan layer via toggle kanan atas:
+</p>
+
+<CoastlineMap
+  layer="all"
+  height={480}
+  title="Layer Ina Coastline"
+  controlsTitle="Layer Ina Coastline"
+  caption="Garis pantai tahunan, laju perubahan, dan hotspot Ina Coastline — Pulau Jawa. Merah = erosi, biru = akresi."
+/>
+
+## Jalankan Analisis Ini
+
+Notebook lengkap tersedia untuk dijalankan di Piksel Sandbox. Notebook mencakup seluruh pipeline dari loading data Landsat, tide masking dengan INATIDES, ekstraksi garis pantai, hingga visualisasi dan ekspor hasil.
+
+<div className="notebook-download-bar">
+  <Link
+    to="pathname:///notebooks/ina-coastline-analisis-perubahan-garis-pantai.ipynb"
+    className="notebook-download-btn"
+    download
+  >
+    ↓ Unduh Notebook
+  </Link>
+  <Link
+    to="https://sandbox.staging.piksel.big.go.id"
+    className="notebook-sandbox-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ▶ Buka di Piksel Sandbox
+  </Link>
+</div>
+
+Untuk mendaftar akses Sandbox, kirim email ke **piksel@big.go.id**.
+
+## Referensi dan Atribusi
+
+Notebook ini diadaptasi dari DEA Coastlines yang dikembangkan oleh Geoscience Australia, tersedia di bawah lisensi Apache 2.0. Implementasi ini telah dimodifikasi untuk wilayah Indonesia menggunakan platform Piksel dan model pasang surut INATIDES.
+
+- Bishop-Taylor, R., Nanson, R., Sagar, S., Lymburner, L. (2021). _Mapping Australia's dynamic coastline at mean sea level using three decades of Landsat imagery_. Remote Sensing of Environment, 267, 112734. [https://doi.org/10.1016/j.rse.2021.112734](https://doi.org/10.1016/j.rse.2021.112734)
+- Repositori asli: [github.com/GeoscienceAustralia/dea-coastlines](https://github.com/GeoscienceAustralia/dea-coastlines)
