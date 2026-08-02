@@ -937,8 +937,12 @@ h6 {
 }
 
 /* ========================================================================
-   15. MARKDOWN CONTENT
+   TOC WIDTH OVERRIDE
    ======================================================================== */
+
+:root {
+  --ifm-toc-width: 22rem;
+}
 
 /* DEA Design System — scoped to coastline page only */
 .coastline-page {
@@ -1131,8 +1135,7 @@ h6 {
 
   // GIF chart between hero and quick links
   .coastline-chart-wrap {
-    padding: var(--pk-s-6) var(--pk-s-6);
-    background: var(--dea-navy);
+    padding: var(--pk-s-5) 0;
   }
 }
 
@@ -1658,10 +1661,23 @@ h6 {
   margin: 0;
   font-size: text-size('sm');
   border-left: 1px solid color('grey-5');
+  overflow: visible;
 
   ul {
     padding-left: space('3');
     margin: 0;
+  }
+
+  /* Top-level items (H2) — bold */
+  > ul > li > .table-of-contents__link {
+    font-weight: 600;
+    color: color('ink-3');
+  }
+
+  /* Nested items (H3+) — normal weight, slightly muted */
+  > ul > li > ul .table-of-contents__link {
+    font-weight: 400;
+    color: color('grey-2');
   }
 }
 
@@ -1671,6 +1687,7 @@ h6 {
   margin-left: -1px;
   color: color('grey-2');
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.2s ease;
 
   &:hover {
@@ -1686,10 +1703,13 @@ h6 {
 .theme-doc-toc-desktop {
   padding-top: space('5');
   padding-left: space('5');
+  padding-right: space('4');
+  overflow: visible;
 }
 
 .col--3 {
   padding-right: 0;
+  overflow: visible;
 }
 
 .table-of-contents li {
@@ -1893,4 +1913,102 @@ h6 {
   font-weight: 600;
   color: color('primary') !important;
   background-color: color('paper');
+}
+
+/* === Notebook download bar (use case pages) === */
+
+.notebook-download-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--pk-s-3);
+  margin: var(--pk-s-4) 0;
+  flex-wrap: wrap;
+}
+
+.notebook-download-btn,
+.notebook-sandbox-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pk-s-2);
+  padding: var(--pk-s-2) var(--pk-s-4);
+  font-family: var(--pk-font-mono);
+  font-size: var(--pk-text-xs);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background var(--pk-dur-2) var(--pk-ease),
+    color var(--pk-dur-2) var(--pk-ease);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.notebook-download-btn {
+  color: var(--pk-primary);
+  background: var(--pk-ice);
+  border: 1px solid var(--pk-primary-lighter);
+
+  &:hover {
+    background: color-mix(in srgb, var(--pk-ice) 70%, var(--pk-primary) 30%);
+  }
+}
+
+.notebook-sandbox-btn {
+  color: color('white');
+  background: var(--pk-primary);
+  border: 1px solid var(--pk-primary-dark);
+
+  &:hover {
+    background: var(--pk-primary-dark);
+    color: color('white');
+  }
+}
+
+/* === Use case meta tags === */
+
+.usecase-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pk-s-2);
+  margin: 0 0 var(--pk-s-5);
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    padding: 0.2em 0.7em;
+    font-family: var(--pk-font-mono);
+    font-size: var(--pk-text-xs);
+    font-weight: 500;
+    color: var(--pk-ink-2);
+    background: var(--pk-paper-2);
+    border: 1px solid var(--pk-border);
+  }
+}
+
+/* === Use case result figure === */
+
+.usecase-result-figure {
+  text-align: center !important;
+  margin: 1.5rem 0;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.usecase-result-caption {
+  text-align: center !important;
+  font-size: 0.8125rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.5rem;
+  margin-bottom: 0 !important;
+}
+
+.usecase-result-label {
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 1rem;
+  margin: 1.5rem 0 0.75rem !important;
 }

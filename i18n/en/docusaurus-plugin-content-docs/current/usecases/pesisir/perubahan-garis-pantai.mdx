@@ -1,0 +1,92 @@
+---
+sidebar_position: 2
+pagination_prev: null
+title: Coastline Change
+description: Analysis of Indonesia's coastline change using multi-temporal Landsat satellite imagery and tidal modelling on the Piksel platform.
+---
+
+import CoastlineMap from '@site/src/components/Docs/CoastlineMap';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Coastline Change
+
+<div className="usecase-meta">
+  <span>🛰️ Landsat 5 / 7 / 8 / 9</span>
+  <span>📅 1987 – Present</span>
+  <span>📍 Java Island</span>
+  <span>🌊 Coastal</span>
+</div>
+
+---
+
+## Background
+
+Indonesia's coastline faces increasing pressure — erosion from waves, sedimentation, sea-level rise, land reclamation, and coastal development. More than 60% of Indonesia's population lives within 50 km of the coast, making coastline change monitoring critical for coastal zone management.
+
+Conventional field surveys cannot cover the full length of Indonesia's coastline on a regular basis. Satellite-based analysis provides a solution that can consistently map change year by year across the entire territory.
+
+## Approach
+
+This analysis uses the Landsat imagery archive from the Piksel platform to extract annual shoreline positions since 1987. Each image scene is filtered using the **INATIDES** tidal model — so only imagery acquired when sea level is close to the mean (_mean sea level_) is used. The result is annual shorelines that are temporally comparable and can be used to calculate coastal change rates.
+
+This method is adapted from **DEA Coastlines** (Geoscience Australia) and implemented for Indonesian conditions using the [Ina Coastline](/docs/data_products/sea_ocean_coast/coastline) product.
+
+## Results
+
+<div className="usecase-result-figure">
+  <img src={useBaseUrl('/img/coastline/previewhero.png')} alt="Coastline change analysis results" />
+  <p className="usecase-result-caption">
+    <em>Annual shorelines extracted from Landsat imagery. Each line represents the median shoreline position at mean sea level conditions for that year.</em>
+  </p>
+</div>
+
+### Key Findings
+
+- Consistent coastline change detected since 1987 along the study area
+- Erosion and accretion rates calculated per 30 m along non-rocky coastline
+- Areas with statistically significant change rates (p-value ≤ 0.01) can be identified and mapped
+- Dashed shorelines indicate areas with low data quality requiring careful interpretation
+
+<p className="usecase-result-label">
+  Explore the data interactively — toggle layers on or off using the top-right controls:
+</p>
+
+<CoastlineMap
+  layer="all"
+  height={480}
+  title="Ina Coastline Layer"
+  controlsTitle="Ina Coastline Layer"
+  caption="Annual shorelines, rates of change, and Ina Coastline hotspots — Java Island. Red = erosion, blue = accretion."
+/>
+
+## Run This Analysis
+
+The complete notebook is available to run in Piksel Sandbox. It covers the full pipeline from loading Landsat data, tide masking with INATIDES, shoreline extraction, to visualisation and export of results.
+
+<div className="notebook-download-bar">
+  <Link
+    to="pathname:///notebooks/ina-coastline-analisis-perubahan-garis-pantai.ipynb"
+    className="notebook-download-btn"
+    download
+  >
+    ↓ Download Notebook
+  </Link>
+  <Link
+    to="https://sandbox.staging.piksel.big.go.id"
+    className="notebook-sandbox-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ▶ Open in Piksel Sandbox
+  </Link>
+</div>
+
+To register for Sandbox access, email **piksel@big.go.id**.
+
+## References and Attribution
+
+This notebook is adapted from DEA Coastlines developed by Geoscience Australia, available under the Apache 2.0 licence. This implementation has been modified for Indonesia using the Piksel platform and the INATIDES tidal model.
+
+- Bishop-Taylor, R., Nanson, R., Sagar, S., Lymburner, L. (2021). _Mapping Australia's dynamic coastline at mean sea level using three decades of Landsat imagery_. Remote Sensing of Environment, 267, 112734. [https://doi.org/10.1016/j.rse.2021.112734](https://doi.org/10.1016/j.rse.2021.112734)
+- Original repository: [github.com/GeoscienceAustralia/dea-coastlines](https://github.com/GeoscienceAustralia/dea-coastlines)

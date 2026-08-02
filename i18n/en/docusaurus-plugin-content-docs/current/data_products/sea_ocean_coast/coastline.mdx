@@ -1,0 +1,511 @@
+---
+sidebar_position: 1
+title: Ina Coastline
+hide_title: true
+description: Piksel derived data product for monitoring Indonesia's coastline changes since 1987 using Landsat satellite data and tidal modelling.
+---
+
+import CoastlineHero from '@site/src/components/Docs/CoastlineHero';
+import LayerCard from '@site/src/components/Docs/LayerCard';
+import QuickLinks from '@site/src/components/Docs/QuickLinks';
+import GifSlider from '@site/src/components/Docs/GifSlider';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+<div className="coastline-page">
+<CoastlineHero previewImage="/img/coastline/previewhero.png" />
+
+<div className="coastline-chart-wrap">
+  <GifSlider
+    slides={[
+      {
+        src: '/img/coastline/coastline-chart.gif',
+        alt: 'Annual shoreline change 1987–2025',
+        caption: 'Annual shoreline change dynamics, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart2.gif',
+        alt: 'Annual shoreline change 1987–2025',
+        caption: 'Annual shoreline change dynamics, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart3.gif',
+        alt: 'Annual shoreline change 1987–2025',
+        caption: 'Annual shoreline change dynamics, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart4.gif',
+        alt: 'Annual shoreline change 1987–2025',
+        caption: 'Annual shoreline change dynamics, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart5.gif',
+        alt: 'Annual shoreline change 1987–2025',
+        caption: 'Annual shoreline change dynamics, 1987–2025',
+      },
+      {
+        src: '/img/coastline/coastline-chart6.gif',
+        alt: 'Annual shoreline change 1987–2025',
+        caption: 'Annual shoreline change dynamics, 1987–2025',
+      },
+    ]}
+  />
+</div>
+
+<QuickLinks
+  links={[
+    {
+      label: 'View on Map',
+      subtitle: 'Interactive data exploration',
+      href: 'https://maps.staging.piksel.big.go.id',
+      icon: 'map',
+      external: true,
+    },
+    {
+      label: 'Download Data',
+      subtitle: 'Access vector dataset',
+      href: '/download/coastline',
+      icon: 'download',
+    },
+    {
+      label: 'GitHub Repository',
+      subtitle: 'Processing source code',
+      href: 'https://github.com/piksel-ina/indonesia-coastlines',
+      icon: 'github',
+      external: true,
+    },
+    {
+      label: 'Python Notebook',
+      subtitle: 'Analysis example',
+      href: '/docs/usecases/pesisir/perubahan-garis-pantai',
+      icon: 'notebook',
+    },
+  ]}
+/>
+
+## About
+
+Indonesia has a highly dynamic coastline, with over 60% of the population living within 50 km of the coast. This coastline faces diverse pressures including extreme weather, climate change, sea-level rise, and coastal development. Understanding how the coastline responds to these pressures is critical for coastal zone management from social, environmental, and economic perspectives.
+
+Ina Coastline is a derived product of the Piksel platform that maps the position of Indonesia's coastline at mean sea level for every year since 1987. The product combines Landsat satellite data with tidal modelling to generate annual shorelines and detailed rates of change, enabling quantitative observation of coastal erosion and accretion on beaches, sandspits, river mouths, and tidal flats over time.
+
+This dataset enables annual analysis of coastal erosion and accretion trends at local and national scales, and supports historical mapping and periodic updating of coastal change patterns.
+
+> **Note:** The **Ina Coastline** product maps shoreline positions based on **_mean sea level (MSL)_**. Therefore, the term **shoreline** in this document refers to the shoreline at **_mean sea level (MSL)_** conditions, unless otherwise stated.
+
+## Key Specifications
+
+Summary of key product specifications. Details for each layer are available in the **Data Layers** section.
+
+| Field               | Value                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| **Technical Name**  | coastlines_java-island                                                                     |
+| **Version**         | 0.0.5                                                                                      |
+| **Type**            | Vector                                                                                     |
+| **Temporal Coverage** | 1987–2025                                                                                |
+| **Update Frequency** | Annual                                                                                    |
+| **License**         | [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) |
+
+:::note About the Parent Product
+Ina Coastline is derived from **Piksel Landsat Surface Reflectance** data (Landsat 5/7/8/9). See the [Surface Reflectance product page](/docs/category/surface-reflectance-satellite-data/) for full details.
+:::
+
+## Applications
+
+- Monitoring and mapping coastal erosion and accretion rates along Indonesia's coastline.
+- Assessing the impact of local and regional coastal management based on historical change.
+- Modelling shoreline response to change drivers, including extreme weather events, sea-level rise, or coastal development.
+- Supporting geomorphological studies on how and why coastlines change over time.
+
+## Technical Information
+
+This product consists of **three groups of vector data layers** visualised on an interactive map.
+
+### Annual Shoreline Layer — _shorelines_annual_
+
+Annual shoreline vectors representing the median or "most representative" position of the shoreline at approximately 0 m Above Mean Sea Level (AMSL) for each year since 1987 (see Figure 1).
+
+Dashed shorelines indicate low confidence.
+
+<figure>
+  <img src={useBaseUrl('/img/coastline/layer-shorelines.png')} alt="Annual Shoreline Layer" />
+  <figcaption>Figure 1. Annual shorelines from Ina Coastline visualised on the interactive map.</figcaption>
+</figure>
+
+### Rate of Change Points Layer — _rates_of_change_
+
+A point dataset providing robust coastal change rates for every 30 m interval along Indonesia's non-rocky coastline (see Figure 2). The most recent annual shoreline is used as the baseline for rate-of-change measurements.
+
+On the Ina Coastline interactive map, points are only displayed for locations with statistically significant rates of change (_p-value_ ≤ 0.01; see `sig_time` below) and good data quality (_certainty_ = "good"). Each point displays the annual rate of change (in metres per year; see `rate_time`), along with uncertainty estimates (95% confidence interval; see `se_time`).
+
+<figure>
+  <img src={useBaseUrl('/img/coastline/layer-rates.png')} alt="Rate of Change Points Layer" />
+  <figcaption>Figure 2. Rate of change points from Ina Coastline.</figcaption>
+</figure>
+
+### Coastal Change Hotspot Layer — _hotspots_zoom_
+
+Three point layers summarising coastal change within a 1 km, 5 km, and 10 km moving window along the coastline (see Figure 3). These layers are useful for visualising coastal change patterns at regional or national scale.
+
+<figure>
+  <img src={useBaseUrl('/img/coastline/layer-hotspots.PNG')} alt="Coastal Change Hotspot Layer" />
+  <figcaption>Figure 3. Coastal change hotspots from Ina Coastline.</figcaption>
+</figure>
+
+## Processing Workflow
+
+import WorkflowSteps, { WorkflowStep } from '@site/src/components/Docs/WorkflowSteps';
+
+<WorkflowSteps>
+  <WorkflowStep label="LOAD DATA" phase="input">
+    Load the full Landsat 5, 7, 8, and 9 archive available for the study area using Open Data Cube or STAC API. Priority is given to Tier 1 (T1) scenes; Tier 2 (T2) is used as a fallback if scene count is insufficient.
+  </WorkflowStep>
+  <WorkflowStep label="WATER INDEX" phase="water">
+    Calculate a per-pixel water index to distinguish water surfaces from land. Four configurable indices are available: **MNDWI** `(green − swir16) / (green + swir16)`, **NDWI** `(green − nir08) / (green + nir08)`, **Combined (CWI)** average of MNDWI and NDWI, and **MNDWI-NIR** — a modified MNDWI variant using the NIR band for tropical coastal conditions.
+  </WorkflowStep>
+  <WorkflowStep label="TIDAL MODELLING" phase="tidal">
+    Estimate per-pixel tidal height using an Ensemble Tidal Modelling approach combining 10 global tidal models (EOT20, FES2012/2014/2022, TPXO8/9/10, GOT4.10/5.5/5.6). For Indonesian waters, **INATIDES** is additionally used — a regional tidal model calibrated specifically for the complex tidal characteristics of the Indonesian archipelago.
+  </WorkflowStep>
+  <WorkflowStep label="TIDE INTERPOLATION" phase="tidal">
+    Interpolate tidal estimates from low resolution to full resolution (30 m) so that each pixel has a consistent tidal height value at every image acquisition time.
+  </WorkflowStep>
+  <WorkflowStep label="TIDE MASKING" phase="tidal">
+    Mask and discard all observations outside the 50% tidal range centred at mean sea level (0 m AMSL). Only scenes within the mid-tidal range are retained for analysis.
+  </WorkflowStep>
+  <WorkflowStep label="ANNUAL COMPOSITE" phase="composite">
+    Combine all masked observations into annual median composites from 1987 to 2025. Pixels with fewer than 5 clean observations are automatically replaced using a three-year median composite (_gapfill_) to maintain data completeness.
+  </WorkflowStep>
+  <WorkflowStep label="COASTAL MASKING" phase="extraction">
+    Apply morphological masking to restrict analysis to valid coastal zones only. This step also integrates modification and geomorphology layers to exclude non-coastal areas and man-made features from shoreline extraction.
+  </WorkflowStep>
+  <WorkflowStep label="SHORELINE EXTRACTION" phase="extraction">
+    Extract waterline positions at a defined index threshold using the subpixel waterline extraction method (Bishop-Taylor et al., 2019). This method produces shorelines with sub-pixel precision (sub-30 m).
+  </WorkflowStep>
+  <WorkflowStep label="CHANGE ANALYSIS" phase="analysis">
+    Calculate coastal change rates at every 30 m along the non-rocky coastline using linear regression of annual shoreline position against time. Produces derived statistics: rate of change (m/yr), p-value, standard error, SCE, NSM, and the year of maximum and minimum position.
+  </WorkflowStep>
+</WorkflowSteps>
+
+## Software
+
+import SoftwareGrid from '@site/src/components/Docs/SoftwareGrid';
+
+<SoftwareGrid
+  tools={[
+    {
+      icon: 'code',
+      name: 'Ina Coastline',
+      description: 'Ina Coastline implementation repository — covers the full processing pipeline from image loading, water index calculation, tidal modelling, to shoreline extraction and coastal change statistics.',
+      href: 'https://github.com/piksel-ina/indonesia-coastlines',
+      linkLabel: 'github.com/piksel-ina/indonesia-coastlines',
+    },
+    {
+      icon: 'notebook',
+      name: 'Piksel Sandbox',
+      description: 'Cloud-based Jupyter Notebook environment for interactive exploration and analysis of Ina Coastline data, with no local installation required.',
+      href: 'https://sandbox.staging.piksel.big.go.id',
+      linkLabel: 'sandbox.staging.piksel.big.go.id',
+    },
+    {
+      icon: 'workflow',
+      name: 'Argo Workflows',
+      description: 'Kubernetes-based workflow orchestration platform for running large-scale Ina Coastline batch extractions — processing the entire Indonesian territory in parallel.',
+      href: 'https://argo.staging.piksel.big.go.id',
+      linkLabel: 'argo.staging.piksel.big.go.id',
+    },
+  ]}
+  libraries={[
+    {
+      icon: 'cube',
+      name: 'Open Data Cube',
+      description: 'Remote sensing data management platform used for loading and managing the Landsat imagery archive in the Piksel environment.',
+      href: 'https://github.com/opendatacube',
+      linkLabel: 'github.com/opendatacube',
+    },
+    {
+      icon: 'tides',
+      name: 'EO Tides',
+      description: 'Python package for remote sensing-based tidal modelling. Integrates per-pixel tidal estimates with satellite imagery archives using an ensemble approach.',
+      href: 'https://github.com/GeoscienceAustralia/eo-tides',
+      linkLabel: 'github.com/GeoscienceAustralia/eo-tides',
+    },
+    {
+      icon: 'predict',
+      name: 'pyTMD',
+      description: 'Python-based tidal prediction software underpinning individual tidal model computation in the ensemble. The Piksel fork includes dedicated support for Indonesian waters.',
+      href: 'https://github.com/piksel-ina/pyTMD',
+      linkLabel: 'github.com/piksel-ina/pyTMD',
+    },
+  ]}
+/>
+
+## Tidal Modelling
+
+The Ina Coastline pipeline supports two configurable tidal modelling approaches. **Single model** uses one selected tidal model directly — faster and sufficient for areas with relatively simple tidal characteristics. **Ensemble** combines multiple global models in parallel, then weights each model's contribution per location based on correlation with satellite-observed tidal inundation patterns and altimetry measurements — producing more robust estimates in locations with complex tidal dynamics.
+
+Tidal modelling is implemented using the _eo-tides_ Python package, which integrates remote sensing data with tidal modelling through _pyTMD_ functionality.
+
+### Supported Global Models
+
+- Empirical Ocean Tide Model (EOT20)
+- Finite Element Solution tide models (FES2012, FES2014, FES2022)
+- TOPEX/POSEIDON global tide models (TPXO8, TPXO9, TPXO10)
+- Global Ocean Tide models (GOT4.10, GOT5.5, GOT5.6)
+- Hamburg direct data Assimilation Methods for Tides (HAMTIDE11)
+- Technical University of Denmark tide model (DTU23)
+
+### Regional Model: INATIDES
+
+In addition to the global models above, Ina Coastline integrates **INATIDES** — a regional tidal model calibrated specifically for Indonesian archipelagic waters. INATIDES is registered into the pipeline using the `extra_databases` mechanism in `eo-tides`, which allows custom models to be used either as a single model or as an ensemble member without modifying the core code.
+
+{/*
+
+## Accuracy
+
+Extensive validation against independent coastal monitoring datasets was conducted to evaluate the accuracy and precision of Ina Coastline annual shoreline positions, and the accuracy of modelled long-term rates of change.
+
+*/}
+
+## Notes and Limitations
+
+### Annual Shorelines
+
+- Annual shorelines from Ina Coastline summarise the median ("dominant") shoreline position throughout the year, corrected to a consistent tidal height (0 m AMSL). Annual shorelines **do not** reflect short-term coastal variability, such as shoreline position changes between high and low tide, seasonal effects, or brief impacts of individual storm events.
+
+### Rate of Change Points
+
+- Rate of change points **do not assign a cause of change**, and do not necessarily represent coastal erosion processes or sea-level rise. At locations undergoing rapid coastal development, construction of new inlets or marinas may appear as retreat hotspots, while port or jetty construction may appear as accretion hotspots. Rate of change points should be evaluated with reference to the underlying annual shorelines and external data or imagery sources.
+- Rate of change points may be inaccurate or invalid within complex mouthbars, or other coastal environments undergoing rapid non-linear change over time. In these areas, it is advisable to visually inspect the underlying annual shoreline data when interpreting rates of change.
+
+### Data Quality Issues
+
+- Annual shorelines may be less accurate in areas with complex tidal dynamics or large tidal ranges, and on gently sloping intertidal flats where small errors in tidal modelling can cause large horizontal offsets in shoreline position.
+- In some urban locations, the spectrum of bright white buildings situated near the coastline can inadvertently be confused with water, causing a landward offset from the true shoreline position.
+- In aquaculture pond areas located in coastal zones, the boundary between pond water and land can be read as a shoreline by the extraction algorithm, resulting in noise in shoreline position within those pond areas.
+- The 1991 and 1992 shorelines are currently affected by aerosol issues caused by the 1991 eruption of Mount Pinatubo. These shorelines should be interpreted with caution, particularly in areas close to the path of the stratospheric plume — the column of gases and volcanic particles injected into the stratosphere that can spread thousands of kilometres following wind currents.
+
+## Quality Flags
+
+Ina Coastline data is automatically screened to detect potential data quality issues. Each feature identified as problematic is flagged via the `certainty` column, and visualised with dashed lines or white points on the interactive map.
+
+### Annual Shoreline Layer — _shorelines_annual_
+
+- **aerosol issues**: Shoreline accuracy may be affected by aerosol issues caused by the 1991 eruption of Mount Pinatubo, particularly in areas close to the stratospheric plume path.
+- **insufficient data**: Shoreline accuracy may be affected by limited good-quality satellite observations at this location.
+- **unstable data**: Shoreline accuracy is affected by unstable data at this location. This may be caused by tidal model errors, the presence of gently sloping intertidal mudflats or sandbars, or noisy satellite imagery due to high cloud cover.
+
+### Rate of Change Points Layer — _rates_of_change_
+
+- **insufficient observations**: There are insufficient years of good-quality annual shoreline data (< 25 years) to calculate a reliable coastal change rate.
+- **likely rocky coastline**: This shoreline is identified as rocky or a cliff. Rates of change may be less accurate due to noisy shoreline mapping caused by dark terrain shadows.
+- **extreme value (> 50 m)**: This location has been identified as having an extreme coastal change rate (> 50 metres per year) and should be interpreted with caution.
+- **high angular variability**: This rate of change is likely inaccurate due to high angular variability from this point to each annual shoreline.
+- **baseline outlier**: The baseline annual shoreline (i.e. the most recent) is flagged as an outlier, potentially resulting in inaccurate rates of change at this location.
+
+### Coastal Change Hotspot Layer — _hotspots_zoom_
+
+- **insufficient points**: There are too few valid rate of change points within a 1 km / 5 km / 10 km radius around this location to calculate a reliable regional rate of change.
+
+---
+
+## Data Layers
+
+### Layer: Annual Shorelines — _shorelines_annual_
+
+Annual shoreline vectors representing the median shoreline position at approximately 0 m AMSL for each year since 1987.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**year**</td>
+      <td>Integer</td>
+      <td>Date</td>
+      <td>The year of each annual shoreline.</td>
+    </tr>
+    <tr>
+      <td>**certainty**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Column providing important data quality flags for each annual shoreline. See the <em>Quality Flags</em> section for more information. Possible values: <code>good</code>, <code>unstable data</code>, <code>insufficient data</code>, <code>aerosol issues</code>.</td>
+    </tr>
+    <tr>
+      <td>**tide_datum**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Tidal datum of each annual shoreline (e.g. "0 m AMSL").</td>
+    </tr>
+    <tr>
+      <td>**id_primary**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Primary sediment compartment name of the annual shoreline, following the Indonesian Coastal Sediment Compartments framework (reference will be updated when available).</td>
+    </tr>
+  </tbody>
+</table>
+
+### Layer: Rate of Change Points — _rates_of_change_
+
+Point dataset providing robust coastal change rates for every 30 m along the non-rocky coastline.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**uid**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Unique geohash identifier for each point.</td>
+    </tr>
+    <tr>
+      <td>**rate_time**</td>
+      <td>Float</td>
+      <td>Metres per year</td>
+      <td>Annual rate of change (in metres per year) calculated by linear regression of annual shoreline distances against time (excluding outliers). Negative values indicate retreat; positive values indicate accretion.</td>
+    </tr>
+    <tr>
+      <td>**sig_time**</td>
+      <td>Float</td>
+      <td>P-value</td>
+      <td>Significance (p-value) of the linear relationship between annual shoreline distance and time. Small values (e.g. p-value &lt; 0.01 or 0.05) may indicate a shoreline is undergoing consistent change over time.</td>
+    </tr>
+    <tr>
+      <td>**se_time**</td>
+      <td>Float</td>
+      <td>Metres</td>
+      <td>Standard error (in metres) of the linear relationship between annual shoreline distance and time. Can be used to generate confidence intervals around the rate of change given by <code>rate_time</code>, e.g. 95% confidence interval = <code>se_time</code> × 1.96.</td>
+    </tr>
+    <tr>
+      <td>**outl_time**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Individual annual shorelines are susceptible to noise and can be affected by environmental conditions (e.g. clouds, breaking waves, sea spray) or modelling issues. To obtain reliable rates of change, shoreline outliers are excluded using the Median Absolute Deviation algorithm and recorded in this column.</td>
+    </tr>
+    <tr>
+      <td>**dist_1990, dist_1991, etc.**</td>
+      <td>Float</td>
+      <td>Metres</td>
+      <td>Annual shoreline distance (in metres) relative to the most recent baseline shoreline. Negative values indicate the annual shoreline is located landward of the baseline. By definition, the most recent baseline column will always have a distance of 0 m.</td>
+    </tr>
+    <tr>
+      <td>**angle_mean, angle_std**</td>
+      <td>Integer</td>
+      <td>Degrees</td>
+      <td>Mean angle and standard deviation from the baseline point to all annual shorelines. Used to calculate how consistently the shoreline lies on a straight line over time.</td>
+    </tr>
+    <tr>
+      <td>**valid_obs**</td>
+      <td>Integer</td>
+      <td>-</td>
+      <td>Total number of valid annual shoreline observations (i.e. non-outlier, non-missing).</td>
+    </tr>
+    <tr>
+      <td>**valid_span**</td>
+      <td>Integer</td>
+      <td>Years</td>
+      <td>Maximum number of years between the first and last valid annual shorelines.</td>
+    </tr>
+    <tr>
+      <td>**sce**</td>
+      <td>Float</td>
+      <td>Metres</td>
+      <td>Shoreline Change Envelope (SCE). A measure of the maximum change or variability across all annual shorelines, calculated as the maximum distance between any two annual shorelines (excluding outliers).</td>
+    </tr>
+    <tr>
+      <td>**nsm**</td>
+      <td>Float</td>
+      <td>Metres</td>
+      <td>Net Shoreline Movement (NSM). Distance between the oldest (1987) and most recent shoreline (excluding outliers). Negative values indicate the shoreline has retreated; positive values indicate accretion.</td>
+    </tr>
+    <tr>
+      <td>**max_year**</td>
+      <td>Integer</td>
+      <td>Date</td>
+      <td>The year when the annual shoreline was at its maximum position (i.e. furthest seaward), excluding outliers.</td>
+    </tr>
+    <tr>
+      <td>**min_year**</td>
+      <td>Integer</td>
+      <td>Date</td>
+      <td>The year when the annual shoreline was at its minimum position (i.e. furthest landward), excluding outliers.</td>
+    </tr>
+    <tr>
+      <td>**certainty**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Column providing important data quality flags for each point. See the <em>Quality Flags</em> section for more information. Possible values: <code>good</code>, <code>insufficient observations</code>, <code>likely rocky coastline</code>, <code>extreme value (&gt; 50 m)</code>, <code>high angular variability</code>, <code>baseline outlier</code>.</td>
+    </tr>
+    <tr>
+      <td>**id_primary**</td>
+      <td>String</td>
+      <td>-</td>
+      <td>Primary sediment compartment name of the point, following the Indonesian Coastal Sediment Compartments framework (reference will be updated when available).</td>
+    </tr>
+  </tbody>
+</table>
+
+### Layer: Coastal Change Hotspots — _hotspots_zoom_
+
+These three layers contain **all attributes from the _rates_of_change_ layer**, plus the following additional attributes. They summarise coastal change within a 1 km, 5 km, and 10 km moving window along the coastline.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**radius_m**</td>
+      <td>Integer</td>
+      <td>Metres</td>
+      <td>The moving window radius used to summarise coastal change around this point.</td>
+    </tr>
+    <tr>
+      <td>**n**</td>
+      <td>Integer</td>
+      <td>-</td>
+      <td>Number of <code>rates_of_change</code> points used in the moving window calculation.</td>
+    </tr>
+  </tbody>
+</table>
+
+## References
+
+Full list of methodological references used. In-text citations follow the _author-year_ format.
+
+- Bishop-Taylor, R., Nanson, R., Sagar, S., Lymburner, L. (2021). _Mapping Australia's dynamic coastline at mean sea level using three decades of Landsat imagery_. Remote Sensing of Environment, 267, 112734. https://doi.org/10.1016/j.rse.2021.112734
+- Nanson, R., Bishop-Taylor, R., Sagar, S., Lymburner, L. (2022). _Geomorphic insights into Australia's coastal change using a national dataset derived from the multi-decadal Landsat archive_. Estuarine, Coastal and Shelf Science, 265, 107712. https://doi.org/10.1016/j.ecss.2021.107712
+- Bishop-Taylor, R., Sagar, S., Lymburner, L., Alam, I., & Sixsmith, J. (2019). _Sub-pixel waterline extraction: Characterising accuracy and sensitivity to indices and spectra_. Remote Sensing, 11(24), 2984. https://doi.org/10.3390/rs11242984
+- Carrère et al. (2012). _FES2012: A new global tidal model taking advantage of nearly 20 years of altimetry_. Proceedings of meeting "20 Years of Altimetry", Venice 2012.
+- Carrère et al. (2022). _A new barotropic tide model for global ocean: FES2022_. 2022 Ocean Surface Topography Science Team Meeting, Venice 2022.
+- Egbert, G.D., Erofeeva, S.Y. (2002). _Efficient Inverse Modeling of Barotropic Ocean Tides_. J. Atmospheric Ocean. Technol. 19, 183–204.
+- Hart-Davis et al. (2021). _EOT20: a global ocean tide model from multi-mission satellite altimetry_. Earth System Science Data 13, 3869–3884.
+- Lyard, F.H. et al. (2021). _FES2014 global ocean tide atlas: design and performance_. Ocean Science, 17(3), 615–649.
+- Ray, R.D. (2013). _Precise comparisons of bottom-pressure and altimetric ocean tides_. Journal of Geophysical Research: Oceans, 118(9), 4570–4584.
+- Sagar, S., Roberts, D., Bala, B., & Lymburner, L. (2017). _Extracting the intertidal extent and topography of the Australian coastline from a 28 year time series of Landsat observations_. Remote Sensing of Environment, 195, 153–169. https://doi.org/10.1016/j.rse.2017.04.009
+- Xu, H. (2006). _Modification of normalised difference water index (NDWI) to enhance open water features in remotely sensed imagery_. International Journal of Remote Sensing, 27(14), 3025–3033.
+
+{/*
+
+## Related Links
+
+*/}
+
+</div>

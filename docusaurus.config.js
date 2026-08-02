@@ -12,7 +12,7 @@ const config = {
   projectName: 'piksel-documentation',
   trailingSlash: true,
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenAnchors: 'ignore',
 
   i18n: {

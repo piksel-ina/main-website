@@ -422,13 +422,13 @@
     "message": "Coastline Change"
   },
   "useCases.garisPantai.desc": {
-    "message": "Analysis of coastline change using multi-temporal Landsat imagery and a tidal model, with a case study on Jakarta's north coast."
+    "message": "Annual coastline extraction from the Landsat archive since 1987 using INATIDES tidal modelling, to measure erosion and accretion rates along Indonesia's coastline."
   },
   "useCases.sector.pesisir": {
     "message": "Coastal"
   },
   "useCases.garisPantai.imageAlt": {
-    "message": "Coastline change map of Jakarta's north coast"
+    "message": "Annual shorelines extracted from Landsat imagery — Java Island"
   },
   "useCases.padi.title": {
     "message": "Rice Planting Monitoring"

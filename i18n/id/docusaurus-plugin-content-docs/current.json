@@ -222,5 +222,17 @@
   "sidebar.docsSidebar.category.Lingkungan": {
     "message": "Lingkungan",
     "description": "The label for category 'Lingkungan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Laut dan Pesisir": {
+    "message": "Data Laut dan Pesisir",
+    "description": "The label for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.title": {
+    "message": "Data Laut dan Pesisir",
+    "description": "The generated-index page title for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.description": {
+    "message": "Discover the variety of sea, ocean, and coast data products offered by Piksel platform.",
+    "description": "The generated-index page description for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
   }
 }
