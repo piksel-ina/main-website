@@ -12,7 +12,7 @@ import Link from '@docusaurus/Link';
 
 <div className="usecase-meta">
   <span>🛰️ Landsat 5 / 7 / 8 / 9</span>
-  <span>📅 1987 – Sekarang</span>
+  <span>📅 1987 – 2025</span>
   <span>📍 Pulau Jawa</span>
   <span>🌊 Pesisir</span>
 </div>
@@ -21,7 +21,7 @@ import Link from '@docusaurus/Link';
 
 ## Latar Belakang
 
-Garis pantai Indonesia menghadapi tekanan yang terus meningkat — erosi akibat gelombang, sedimentasi, kenaikan paras laut, hingga reklamasi dan pembangunan pesisir. Lebih dari 60% penduduk Indonesia tinggal dalam jarak 50 km dari pantai, menjadikan pemantauan perubahan garis pantai penting untuk pengelolaan wilayah pesisir.
+Garis pantai Indonesia menghadapi tekanan yang terus meningkat — abrasi akibat gelombang, sedimentasi, kenaikan muka air laut, hingga reklamasi dan pembangunan pesisir. Lebih dari 60% penduduk Indonesia tinggal dalam radius 50 km dari pantai, menjadikan pemantauan perubahan garis pantai penting untuk pengelolaan wilayah pesisir.
 
 Survei lapangan konvensional tidak mampu menjangkau seluruh panjang garis pantai Indonesia secara berkala. Analisis berbasis satelit menjadi solusi yang dapat memetakan perubahan secara konsisten dari tahun ke tahun di seluruh wilayah.
 
@@ -40,28 +40,31 @@ Metode ini diadaptasi dari **DEA Coastlines** (Geoscience Australia) dan diimple
   </p>
 </div>
 
-### Temuan Utama
-
-- Perubahan garis pantai terdeteksi secara konsisten sejak 1987 di sepanjang wilayah kajian
-- Laju erosi dan akresi dihitung per 30 m sepanjang garis pantai non-berbatu
-- Area dengan laju perubahan signifikan secara statistik (p-value ≤ 0,01) dapat diidentifikasi dan dipetakan
-- Garis pantai putus-putus menandai area dengan kualitas data rendah yang perlu interpretasi lebih hati-hati
-
-<p className="usecase-result-label">
-  Eksplorasi data secara interaktif — aktifkan atau nonaktifkan layer via toggle kanan atas:
+<p className="usecase-map-label">
+  Peta interaktif berikut menampilkan tiga layer data Ina Coastline — garis pantai tahunan, laju perubahan per titik, dan hotspot regional. Setiap layer dapat diaktifkan atau dinonaktifkan melalui panel kontrol di pojok kanan atas peta.
 </p>
 
 <CoastlineMap
   layer="all"
-  height={480}
-  title="Layer Ina Coastline"
+  height={560}
+  title="Ina-Coastline"
   controlsTitle="Layer Ina Coastline"
-  caption="Garis pantai tahunan, laju perubahan, dan hotspot Ina Coastline — Pulau Jawa. Merah = erosi, biru = akresi."
+  caption="Garis pantai tahunan (1987–2025), laju perubahan, dan hotspot pesisir Pulau Jawa — warna merah menunjukkan abrasi, biru menunjukkan akresi."
 />
+
+## Hasil Analisis
+
+Laju perubahan garis pantai dihitung menggunakan regresi linier posisi garis pantai tahunan terhadap waktu. Setiap titik observasi mewakili interval 30 meter garis pantai — posisi garis pantai dari 1987 hingga 2025 diplotkan, lalu ditarik garis tren terbaik. Kemiringan garis tren tersebut menghasilkan laju perubahan dalam satuan meter per tahun: bernilai negatif jika tren mengarah ke darat (abrasi) dan positif jika mengarah ke laut (akresi). Hanya titik dengan kualitas data baik (_certainty = good_) yang digunakan dalam ringkasan berikut.
+
+- **63,9% titik menunjukkan akresi** dan **36% menunjukkan abrasi**, dengan laju perubahan median sebesar +0,16 m/tahun — mengindikasikan sebagian besar pesisir Jawa relatif stabil namun dengan kecenderungan penambahan daratan secara agregat.
+- **59,9% titik berkualitas baik** menunjukkan tren yang signifikan secara statistik (_p-value_ ≤ 0,01), dengan 52.568 titik akresi signifikan dan 23.626 titik abrasi signifikan.
+- Rentang laju perubahan pada 90% titik berada di antara **−2,4 hingga +7,4 m/tahun**, dengan nilai ekstrem hingga −101 m/tahun dan +97 m/tahun di lokasi tertentu yang perlu diverifikasi lapangan.
+- Variabilitas posisi garis pantai sepanjang 38 tahun (_Shoreline Change Envelope_) memiliki median **42,9 meter** — artinya garis pantai rata-rata bergerak sejauh itu antara posisi terjauh ke arah laut dan ke arah darat.
+- Dari 1.960 hotspot agregasi 1 km, **59 titik mencatat akresi ≥ 3 m/tahun** dan hanya **7 titik mencatat abrasi ≤ −3 m/tahun**, mengindikasikan tekanan abrasi intens masih terlokalisir di segmen tertentu.
 
 ## Jalankan Analisis Ini
 
-Notebook lengkap tersedia untuk dijalankan di Piksel Sandbox. Notebook mencakup seluruh pipeline dari loading data Landsat, tide masking dengan INATIDES, ekstraksi garis pantai, hingga visualisasi dan ekspor hasil.
+Notebook lengkap tersedia untuk dijalankan di Piksel Sandbox. Notebook mencakup seluruh alur kerja mulai dari pemuatan data Landsat, pemfilteran pasang surut dengan INATIDES, ekstraksi garis pantai, hingga visualisasi dan ekspor hasil.
 
 <div className="notebook-download-bar">
   <Link
