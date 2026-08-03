@@ -2,8 +2,13 @@ import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.scss';
 
-const CoastlineHero = ({ previewImage }) => {
+const CoastlineHero = ({ previewImage, desc }) => {
   const imgSrc = useBaseUrl(previewImage);
+
+  const defaultDesc =
+    'Dataset garis pantai tahunan dan laju perubahan pesisir Indonesia sejak tahun 1987, ' +
+    'yang diturunkan dari citra satelit Landsat melalui pemodelan pasang surut. ' +
+    'Menyajikan rekam jejak historis untuk memantau dan mengukur dinamika pesisir secara kuantitatif dari waktu ke waktu.';
 
   return (
     <div className={`${styles.hero} coastline-hero-wrap`}>
@@ -16,9 +21,7 @@ const CoastlineHero = ({ previewImage }) => {
           </h1>
 
           <p className={styles.hero__desc}>
-            Dataset garis pantai tahunan dan laju perubahan pesisir Indonesia sejak 1987,
-            diturunkan dari citra satelit Landsat melalui pemodelan pasang surut.
-            Menyediakan catatan historis pesisir yang dapat diamati dan diukur secara kuantitatif dari waktu ke waktu.
+            {desc ?? defaultDesc}
           </p>
         </div>
 

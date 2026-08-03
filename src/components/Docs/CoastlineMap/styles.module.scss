@@ -18,8 +18,10 @@
 }
 
 .mapHeader {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: var(--pk-s-2) var(--pk-s-4);
   background: rgba(0, 178, 169, 0.06);
   border-bottom: 1px solid rgba(0, 178, 169, 0.15);
@@ -31,6 +33,32 @@
     color: var(--dea-teal);
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__fullscreen {
+    position: absolute;
+    right: var(--pk-s-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    color: rgba(0, 178, 169, 0.45);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: color 180ms ease;
+
+    &:hover {
+      color: var(--dea-teal);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--dea-teal);
+      outline-offset: 2px;
+    }
   }
 }
 
