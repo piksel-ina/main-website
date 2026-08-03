@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import styles from './styles.module.scss';
 
 const PMTILES_URL =
@@ -667,6 +667,12 @@ const CoastlineMap = ({ height = 520, caption, layer = 'shorelines', title, cont
     };
   }, [src]);
 
+  const openFullscreen = () => {
+    if (iframeRef.current && iframeRef.current.requestFullscreen) {
+      iframeRef.current.requestFullscreen();
+    }
+  };
+
   if (!src) return null;
 
   return (
@@ -674,6 +680,20 @@ const CoastlineMap = ({ height = 520, caption, layer = 'shorelines', title, cont
       <div className={styles.mapFrame}>
         <div className={styles.mapHeader} aria-hidden="true">
           <span className={styles.mapHeader__title}>{title ?? TITLES[layer] ?? TITLES.shorelines}</span>
+          <button
+            type="button"
+            className={styles.mapHeader__fullscreen}
+            onClick={openFullscreen}
+            title="Buka fullscreen"
+            aria-label="Buka peta fullscreen"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+          </button>
         </div>
         <iframe
           ref={iframeRef}

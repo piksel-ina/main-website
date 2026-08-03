@@ -13,7 +13,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <div className="usecase-meta">
   <span>🛰️ Landsat 5 / 7 / 8 / 9</span>
-  <span>📅 1987 – Present</span>
+  <span>📅 1987 – 2025</span>
   <span>📍 Java Island</span>
   <span>🌊 Coastal</span>
 </div>
@@ -22,7 +22,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Background
 
-Indonesia's coastline faces increasing pressure — erosion from waves, sedimentation, sea-level rise, land reclamation, and coastal development. More than 60% of Indonesia's population lives within 50 km of the coast, making coastline change monitoring critical for coastal zone management.
+Indonesia's coastline faces increasing pressure — coastal abrasion from waves, sedimentation, sea-level rise, land reclamation, and coastal development. More than 60% of Indonesia's population lives within a 50 km radius of the coast, making coastline change monitoring critical for coastal zone management.
 
 Conventional field surveys cannot cover the full length of Indonesia's coastline on a regular basis. Satellite-based analysis provides a solution that can consistently map change year by year across the entire territory.
 
@@ -41,28 +41,33 @@ This method is adapted from **DEA Coastlines** (Geoscience Australia) and implem
   </p>
 </div>
 
-### Key Findings
+---
 
-- Consistent coastline change detected since 1987 along the study area
-- Erosion and accretion rates calculated per 30 m along non-rocky coastline
-- Areas with statistically significant change rates (p-value ≤ 0.01) can be identified and mapped
-- Dashed shorelines indicate areas with low data quality requiring careful interpretation
-
-<p className="usecase-result-label">
-  Explore the data interactively — toggle layers on or off using the top-right controls:
+<p className="usecase-map-label">
+  The interactive map below displays three Ina Coastline data layers — annual shorelines, per-point rates of change, and regional hotspots. Each layer can be toggled on or off via the control panel in the top-right corner of the map.
 </p>
 
 <CoastlineMap
   layer="all"
-  height={480}
-  title="Ina Coastline Layer"
+  height={560}
+  title="Ina-Coastline"
   controlsTitle="Ina Coastline Layer"
-  caption="Annual shorelines, rates of change, and Ina Coastline hotspots — Java Island. Red = erosion, blue = accretion."
+  caption="Annual shorelines (1987–2025), rates of change, and coastal hotspots of Java Island — red indicates abrasion, blue indicates accretion."
 />
+
+## Analysis Results
+
+Rates of change are calculated using linear regression of annual shoreline positions against time. Each observation point represents a 30-metre interval of the coastline — shoreline positions from 1987 to 2025 are plotted, and a best-fit trend line is drawn. The slope of that trend line gives the rate of change in metres per year: negative values indicate landward movement (abrasion) and positive values indicate seaward movement (accretion). Only points with good data quality (_certainty = good_) are used in the summary below.
+
+- **63.9% of points show accretion** and **36% show abrasion**, with a median rate of change of +0.16 m/yr — indicating most of Java's coastline is relatively stable, with a slight aggregate tendency towards land gain.
+- **59.9% of good-quality points** show statistically significant trends (_p-value_ ≤ 0.01), with 52,568 significant accretion points and 23,626 significant abrasion points.
+- The rate of change for 90% of points falls between **−2.4 and +7.4 m/yr**, with extreme values up to −101 m/yr and +97 m/yr at specific locations requiring field verification.
+- The shoreline positional variability over 38 years (_Shoreline Change Envelope_) has a median of **42.9 metres** — meaning the shoreline on average moved that far between its furthest seaward and furthest landward positions.
+- Of 1,960 hotspots with a 1 km aggregation radius, **59 points record accretion ≥ 3 m/yr** and only **7 points record abrasion ≤ −3 m/yr**, indicating intense abrasion pressure remains localised to specific segments.
 
 ## Run This Analysis
 
-The complete notebook is available to run in Piksel Sandbox. It covers the full pipeline from loading Landsat data, tide masking with INATIDES, shoreline extraction, to visualisation and export of results.
+The complete notebook is available to run in Piksel Sandbox. It covers the full workflow from loading Landsat data, tidal filtering with INATIDES, shoreline extraction, to visualisation and export of results.
 
 <div className="notebook-download-bar">
   <Link
