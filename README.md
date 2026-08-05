@@ -127,6 +127,10 @@ Sebelum membuat _Pull Request_, proses _build_ sangat disarankan untuk memastika
   npm run serve
   ```
 
+### Content Security Policy (CSP)
+
+Gunakan SCSS module untuk styling dan simpan gambar di `static/img`. Jangan menambahkan script inline, nilai `style="..."`, atau sumber eksternal untuk gambar, font, script, iframe, maupun panggilan API tanpa membicarakannya terlebih dahulu. Perubahan tersebut dapat lolos `npm run build`, tetapi diblokir oleh browser saat website sudah terpasang.
+
 Proses _deployment_ ke server berjalan otomatis menggunakan GitHub Actions setelah _Pull Request_ berhasil digabungkan (_merge_) ke branch `main`.
 
 ## 6. Referensi

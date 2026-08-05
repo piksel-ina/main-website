@@ -20,7 +20,7 @@ npm run write-heading-ids    # Regenerate heading IDs
 **Verification order:** `npm run check` → `npm run build`. No test framework.
 
 - **Only run `npm run check` when the user asks to commit.** During prototyping/iteration, don't run checks unless asked.
-- **Before staging or committing on the user's behalf, dispatch the `convention-review` skill against the diff.** Apply findings before proceeding with the verification commands below.
+- **Before staging or committing code, style, configuration, or asset changes on the user's behalf, dispatch the `convention-review` skill against the diff.** Apply findings before proceeding with the verification commands below. Skip it for documentation, content-only Markdown, and `.kiro/` skill changes unless the user asks for a review.
 - After JS/JSX or structural changes (at commit time): run `npm run check && npm run build`
 - After CSS/SCSS-only changes (at commit time): run `npm run lint:css && npm run format:check` (build not needed — it restarts the dev server)
 - `src/data/*.js` and `i18n/` are excluded from ESLint and Prettier (configured in eslint.config.mjs and .prettierignore)
@@ -95,6 +95,10 @@ export default CTAButton;
 ### CSS & Design
 
 SCSS Modules only (`.module.scss`), no Tailwind, no inline styles (except CSS custom properties). BEM naming via SCSS nesting (`&__element`, `&--modifier`). `rem` for layout, `em` for component-internal. No `clamp()`.
+
+### Content Security Policy
+
+The deployed site uses a strict CSP. Use SCSS modules and store images in `static/img`; normal changes then need no CSP work. Do not add inline scripts, inline style values, or external hosts for images, fonts, scripts, iframes, or API calls without raising it first. `npm run build` does not detect CSP violations.
 
 **Desktop-first approach:** Default styles target ≥ 1440px. Use `@include respond-to('<breakpoint>')` to override for smaller screens. Single mixin, `max-width` only — no `respond-above`.
 
