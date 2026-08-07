@@ -2,6 +2,5 @@ position: 1
 label: Surface Reflectance Satellite Data
 className: sidebar-subsection
 link:
-  type: generated-index
-  title: Data Satelit Reflektansi Permukaan
-  description: Discover the variety of surface reflectance satellite data products offered by Piksel platform.
+  type: doc
+  id: data_products/baseline_satellite/surface_reflectance/index

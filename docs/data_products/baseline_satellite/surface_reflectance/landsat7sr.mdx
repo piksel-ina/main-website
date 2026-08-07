@@ -23,7 +23,11 @@ import ProductCard from '@site/src/components/Docs/ProductCard';
 />
 
 ## Tentang
-Landsat 7 Surface Reflectance (Landsat 7) menyediakan data resolusi 30 meter hasil koreksi atmosfer (1999–2022) yang dirancang khusus untuk analisis ilmiah dan pemantauan deret waktu (time-series). Dengan algoritma LEDAPS (Landsat Ecosystem Disturbance Adaptive Processing System), dataset ini mengoreksi efek hamburan (scattering) dan penyerapan (absorption) atmosfer sehingga deteksi perubahan menjadi lebih akurat.
+Landsat 7 Surface Reflectance (Landsat 7) menyediakan data reflektansi permukaan resolusi 30 meter dari sensor Enhanced Thematic Mapper Plus (ETM+) — dengan tambahan band pankromatik 15 meter untuk pan-sharpening — dirancang khusus untuk analisis ilmiah dan pemantauan deret waktu (time-series). Dengan algoritma LEDAPS (Landsat Ecosystem Disturbance Adaptive Processing System), dataset ini mengoreksi efek hamburan (scattering) dan penyerapan (absorption) atmosfer sehingga deteksi perubahan menjadi lebih akurat.
+
+:::note SLC-off sejak 31 Mei 2003
+Sensor ETM+ mengalami kegagalan Scan Line Corrector (SLC) pada 31 Mei 2003. Scene yang diambil setelah tanggal tersebut memiliki celah data diagonal dengan sekitar 22% piksel hilang per scene. Data sebelum tanggal ini tidak terpengaruh dan tetap ideal untuk analisis deret waktu jangka panjang.
+:::
 
 ## Band
 
@@ -131,13 +135,13 @@ Landsat 7 Surface Reflectance (Landsat 7) menyediakan data resolusi 30 meter has
   <tbody>
     <tr>
       <td>**Maps**</td>
-      <td>• [Lihat lokasinya di maps](#)</td>
+      <td>• [Lihat lokasinya di maps](https://maps.piksel.big.go.id)</td>
       <td>• Pelajari cara [penggunaan maps](#)</td>
     </tr>
     <tr>
       <td>**Explorer**</td>
-      <td>• [Jelajahi ketersediaan data](#)</td>
-      <td>• Pelajari cara [penggunaan explorer](#)</td>
+      <td>• [Jelajahi ketersediaan data](https://explorer.piksel.big.go.id/products/ls7_c2l2_sr)</td>
+      <td>• Pelajari cara [penggunaan explorer](/docs/services/explorer)</td>
     </tr>
     <tr>
       <td>**Sumber data**</td>
@@ -159,4 +163,4 @@ Landsat 7 Surface Reflectance (Landsat 7) menyediakan data resolusi 30 meter has
 
 ## Citation
 #### Data Citation
->Fulan, F., Fulan, F. 2026. Landsat 9 Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/148693 [Diakses 12 April 2026]
+>Fulan, F., Fulan, F. 2026. Landsat 7 Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/148693 [Diakses 12 April 2026]

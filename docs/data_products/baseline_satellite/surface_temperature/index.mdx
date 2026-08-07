@@ -1,0 +1,38 @@
+---
+title: Data Satelit Suhu Permukaan
+description: Panduan memilih produk data suhu permukaan (Surface Temperature) yang tersedia di Piksel
+---
+
+# Data Satelit Suhu Permukaan
+
+Suhu permukaan tanah (Land Surface Temperature, LST) atau Surface Temperature (ST) adalah suhu radiatif permukaan Bumi yang diukur dari saluran termal inframerah pada satelit. Data ST digunakan untuk memantau pulau panas perkotaan, kekeringan, tekanan vegetasi, aktivitas vulkanik dan geotermal, kebakaran hutan, hingga suhu perairan.
+
+Piksel menyediakan **empat produk ST** dari keluarga **Landsat** (USGS). Sentinel-2 tidak menyediakan produk suhu permukaan karena sensor MSI-nya hanya beroperasi pada panjang gelombang tampak dan inframerah dekat.
+
+## Perbandingan Produk
+
+| Produk | Sensor | Band Termal | Cakupan | Revisit | Terbaik untuk |
+| --- | --- | --- | --- | --- | --- |
+| [Landsat 5](./landsat5st.mdx) | TM | Band 6 (10.4–12.5 μm) | Agu 1986 – Nov 2011 | 16 hari | Baseline historis dekade 1980–2000-an |
+| [Landsat 7](./landsat7st.mdx) | ETM+ | Band 6 (10.4–12.5 μm) | Jun 1999 – Jan 2024 | 16 hari | Deret waktu panjang (SLC-off pasca Mei 2003) |
+| [Landsat 8](./landsat8st.mdx) | TIRS | Band 10 (10.6–11.2 μm) | Apr 2013 – sekarang | 16 hari | Update reguler, pasangan L9 |
+| [Landsat 9](./landsat9st.mdx) | TIRS-2 | Band 10 (10.6–11.2 μm) | Okt 2021 – sekarang | 16 hari | Kualitas radiometrik terbaik (koreksi stray light) |
+
+Semua produk dikirimkan pada resolusi **30 m** (di-resample dari resolusi termal native — 120 m untuk TM, 60 m untuk ETM+, 100 m untuk TIRS/TIRS-2). Kombinasi **Landsat 8 + 9** memberikan revisit efektif 8 hari untuk pemantauan termal beresolusi tinggi.
+
+## Panduan Memilih Produk
+
+- **Butuh baseline suhu jangka panjang?** — Mulai dari [Landsat 5](./landsat5st.mdx) (1986) → [Landsat 7](./landsat7st.mdx) (1999) → [Landsat 8](./landsat8st.mdx) (2013) → [Landsat 9](./landsat9st.mdx) (2021) untuk rekaman termal berkelanjutan hampir 40 tahun.
+- **Butuh update reguler dan revisit cepat?** — Gabungkan [Landsat 8](./landsat8st.mdx) + [Landsat 9](./landsat9st.mdx) untuk revisit 8 hari.
+- **Butuh kualitas radiometrik terbaik?** — [Landsat 9](./landsat9st.mdx). Sensor TIRS-2 memiliki koreksi stray light yang belum ada pada TIRS Landsat 8.
+- **Butuh data reflektansi permukaan alih-alih suhu?** — Lihat bagian [Surface Reflectance](/docs/data_products/baseline_satellite/surface_reflectance).
+
+## Tentang Suhu Permukaan
+
+Produk Surface Temperature Collection 2 Level-2 dari USGS menghasilkan estimasi suhu radiatif permukaan dalam satuan **Kelvin**, dihitung melalui algoritma single-channel yang menggabungkan pengukuran band termal, emisivitas permukaan, dan variabel atmosfer (uap air, radiansi upwelling dan downwelling, transmisi atmosfer).
+
+Selain band suhu utama (`lwir` atau `lwir11`), setiap dataset menyertakan **band radiansi pendukung** — thermal radiance (TRAD), upwelling radiance (URAD), downwelling radiance (DRAD), atmospheric transmittance (ATRAN), emissivity (EMIS), emissivity stddev (EMSD), dan cloud distance (CDIST). Band-band ini memungkinkan pengguna melakukan koreksi ulang atau menerapkan algoritma alternatif jika diperlukan.
+
+:::note Konversi ke Celsius
+Nilai suhu dalam Kelvin dapat dikonversi ke Celsius dengan: `T(°C) = T(K) − 273.15`. Faktor skala produk biasanya sudah diterapkan oleh library seperti `odc-stac` atau `rioxarray`.
+:::

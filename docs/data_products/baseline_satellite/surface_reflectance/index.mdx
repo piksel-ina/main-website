@@ -1,0 +1,40 @@
+---
+title: Data Satelit Reflektansi Permukaan
+description: Panduan memilih produk data reflektansi permukaan (Surface Reflectance) yang tersedia di Piksel
+---
+
+# Data Satelit Reflektansi Permukaan
+
+Reflektansi permukaan (Surface Reflectance, SR) adalah nilai reflektansi yang telah dikoreksi dari efek atmosfer sehingga menggambarkan sifat permukaan Bumi secara akurat. Data SR menjadi dasar untuk berbagai analisis penginderaan jauh — mulai dari pemantauan vegetasi, pemetaan penggunaan lahan, deteksi perubahan, hingga estimasi hasil panen.
+
+Piksel menyediakan **lima produk SR** dari dua konstelasi utama: keluarga **Landsat** (USGS) dan **Sentinel-2** (ESA).
+
+## Perbandingan Produk
+
+| Produk | Sensor | Resolusi | Cakupan | Revisit | Terbaik untuk |
+| --- | --- | --- | --- | --- | --- |
+| [Landsat 5](./landsat5sr.mdx) | TM | 30 m | Mar 1984 – Jun 2013 | 16 hari | Analisis historis 1984–2013 |
+| [Landsat 7](./landsat7sr.mdx) | ETM+ | 30 m | Apr 1999 – Jan 2024 | 16 hari | Deret waktu jangka panjang (SLC-off pasca Mei 2003) |
+| [Landsat 8](./landsat8sr.mdx) | OLI | 30 m (15 m pan) | Mar 2013 – sekarang | 16 hari | Update reguler, konsisten dengan L9 |
+| [Landsat 9](./landsat9sr.mdx) | OLI-2 | 30 m (15 m pan) | Okt 2021 – sekarang | 16 hari | Radiometrik 14-bit, pasangan L8 |
+| [Sentinel-2](./sentinel2sr.mdx) | MSI | 10–60 m | Jan 2017 – sekarang | 5 hari | Resolusi terbaik, band red-edge, agrikultur presisi |
+
+Kombinasi **Landsat 8 + 9** memberikan waktu revisit efektif 8 hari. Menambahkan **Sentinel-2** membuka jendela pengamatan hingga beberapa kali per minggu untuk area yang sama.
+
+## Panduan Memilih Produk
+
+- **Butuh data historis panjang?** — Gunakan [Landsat 5](./landsat5sr.mdx) untuk 1984–2013 atau [Landsat 7](./landsat7sr.mdx) untuk 1999–2024. Kedua produk memiliki resolusi 30 m dan konsisten satu sama lain.
+- **Butuh resolusi tertinggi?** — [Sentinel-2](./sentinel2sr.mdx) dengan piksel 10 m pada band RGB dan NIR.
+- **Butuh update reguler dan revisit cepat?** — Gabungkan [Landsat 8](./landsat8sr.mdx), [Landsat 9](./landsat9sr.mdx), dan [Sentinel-2](./sentinel2sr.mdx).
+- **Butuh band red-edge untuk analisis vegetasi lanjutan?** — [Sentinel-2](./sentinel2sr.mdx) menyediakan tiga band red-edge (B5, B6, B7).
+- **Butuh data suhu permukaan alih-alih reflektansi?** — Lihat bagian [Surface Temperature](/docs/data_products/baseline_satellite/surface_temperature).
+
+## Tentang Reflektansi Permukaan
+
+Reflektansi permukaan (BOA — Bottom Of Atmosphere) berbeda dari reflektansi puncak atmosfer (TOA — Top Of Atmosphere) karena telah melalui koreksi:
+
+- **Hamburan (scattering)** oleh aerosol dan molekul udara
+- **Penyerapan (absorption)** oleh uap air dan gas atmosferik lainnya
+- **Efek adjacency** dari objek di sekitarnya
+
+Setiap produk menggunakan algoritma koreksi yang berbeda: **LEDAPS** untuk Landsat 5/7, **LaSRC** untuk Landsat 8/9, dan **Sen2Cor** untuk Sentinel-2. Perbedaan algoritma menghasilkan variasi kecil antar produk yang perlu diperhatikan saat menggabungkan dataset lintas-sensor untuk analisis deret waktu.

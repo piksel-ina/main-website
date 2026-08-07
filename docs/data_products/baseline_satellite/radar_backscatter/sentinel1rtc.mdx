@@ -1,0 +1,124 @@
+---
+sidebar_position: 1
+title: Sentinel-1 RTC
+description: Sentinel-1 SAR Radiometrically Terrain Corrected dari European Space Agency (ESA)
+---
+
+# Sentinel-1 RTC — Spesifikasi
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='s1_rtc'
+  meta={[
+    { label: 'Nama Teknis:', value: 'Sentinel-1 Radiometrically Terrain Corrected (RTC) SAR' },
+    { label: 'Versi:', value: '1.0.0' },
+    { label: 'Resolusi:', value: '20 m' },
+    { label: 'Cakupan:', value: 'Oktober 2014 sampai sekarang' },
+    { label: 'Pembaruan Data:', value: 'Harian' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_s1.webp'
+  imageAlt='Sentinel-1 RTC Preview'
+/>
+
+## Tentang
+Sentinel-1 RTC (Radiometrically Terrain Corrected) merupakan citra radar Synthetic Aperture Radar (SAR) C-band dari misi Sentinel-1 milik European Space Agency (ESA). Berbeda dari sensor optik seperti Landsat dan Sentinel-2, SAR menggunakan gelombang mikro (~5.6 cm) yang menembus awan dan bekerja pada segala kondisi cuaca, siang maupun malam — menjadikannya sangat andal untuk wilayah tropis Indonesia yang sering tertutup awan.
+
+Produk ini diturunkan dari Sentinel-1 Level-1 GRD (Ground Range Detected) dengan koreksi terrain penuh, sehingga nilai backscatter (σ⁰) dapat dibandingkan secara konsisten antar scene, antar waktu, dan lintas topografi.
+
+:::tip Kapabilitas segala cuaca
+Radar C-band Sentinel-1 tidak terganggu oleh awan atau kegelapan. Ini adalah keunggulan utama untuk pemantauan bencana hidrometeorologi (banjir, longsor) di wilayah tropis yang sering tertutup awan tebal — situasi yang biasanya membuat citra optik tidak dapat digunakan.
+:::
+
+## Band
+
+Sentinel-1 mengakuisisi data dalam mode dual-polarisasi. Setiap scene umumnya berisi dua kanal aktif (misalnya VV+VH atau HH+HV), tergantung mode operasi di wilayah tersebut.
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Tipe</th>
+      <th>Unit</th>
+      <th>No-Data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**vv**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>VV</td>
+    </tr>
+    <tr>
+      <td>**vh**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>VH</td>
+    </tr>
+    <tr>
+      <td>**hh**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>HH</td>
+    </tr>
+    <tr>
+      <td>**hv**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>HV</td>
+    </tr>
+  </tbody>
+</table>
+
+## Aplikasi
+- Pemetaan banjir dan area terdampak bencana hidrometeorologi
+- Deteksi deforestasi dan perubahan tutupan hutan
+- Pemantauan lahan basah, mangrove, dan ekosistem pesisir
+- Deteksi kapal dan aktivitas maritim
+- Estimasi biomassa vegetasi dan monitoring pertumbuhan tanaman
+- Analisis kelembapan tanah (soil moisture)
+- Deteksi longsor dan pergerakan tanah
+- Pemantauan area terbakar (burn scar mapping) pasca kebakaran
+
+## Akses Data
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Maps**</td>
+      <td>• [Lihat lokasinya di maps](https://maps.piksel.big.go.id)</td>
+      <td>• Pelajari cara [penggunaan maps](#)</td>
+    </tr>
+    <tr>
+      <td>**Explorer**</td>
+      <td>• [Jelajahi ketersediaan data](https://explorer.piksel.big.go.id/products/s1_rtc)</td>
+      <td>• Pelajari cara [penggunaan explorer](/docs/services/explorer)</td>
+    </tr>
+    <tr>
+      <td>**Sumber data**</td>
+      <td>• [Akses data di AWS](#)<br/>• [Akses data di NCI](#)</td>
+      <td>• Pelajari cara [mengakses data melalui AWS](#)</td>
+    </tr>
+    <tr>
+      <td>**Contoh kode**</td>
+      <td>• [Lihat contoh kode](#)</td>
+      <td>• Pelajari cara [menggunakan sandbox](#)</td>
+    </tr>
+    <tr>
+      <td>**Web services**</td>
+      <td>• [Web Map Service (WMS)](#)<br/>• [Web Coverage Service (WCS)](#)</td>
+      <td>• Pelajari cara [menggunakan web services](#)</td>
+    </tr>
+  </tbody>
+</table>
+
+## Citation
+#### Data Citation
+>Fulan, F., Fulan, F. 2026. Sentinel-1 RTC SAR Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/xxxxxx [Diakses 12 April 2026]

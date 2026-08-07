@@ -1,0 +1,40 @@
+---
+title: Data Satelit Dasar
+description: Ringkasan produk data satelit baseline yang tersedia di Piksel — optik, termal, radar, dan komposit
+---
+
+# Data Satelit Dasar
+
+Data satelit dasar (**baseline satellite**) adalah produk penginderaan jauh yang telah dikoreksi dan disiapkan untuk analisis — Level-2 (per-scene) dan Level-3 (komposit temporal). Produk-produk ini menjadi fondasi untuk sebagian besar analisis di platform Piksel: pemantauan vegetasi, lahan, air, suhu permukaan, dan deteksi perubahan.
+
+Piksel menyediakan produk baseline dari **enam misi satelit** dan **empat tipe pengukuran** yang berbeda.
+
+## Matriks Produk
+
+| Pengukuran | Landsat 5 | Landsat 7 | Landsat 8 | Landsat 9 | Sentinel-1 | Sentinel-2 |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Surface Reflectance** | ✓ | ✓ | ✓ | ✓ | — | ✓ |
+| **Surface Temperature** | ✓ | ✓ | ✓ | ✓ | — | — |
+| **SAR Backscatter** | — | — | — | — | ✓ | — |
+| **Komposit Tahunan** | — | — | — | — | — | GeoMAD |
+
+Matriks memperlihatkan pilihan yang tersedia sekaligus mengungkap kesenjangan — misalnya tidak ada band termal untuk Sentinel-2, tidak ada SAR di keluarga Landsat, dan komposit tahunan saat ini hanya tersedia dari Sentinel-2.
+
+## Bagian dalam Baseline Satellite
+
+- **[Surface Reflectance](./surface_reflectance/index.mdx)** — Reflektansi permukaan dari 4 misi Landsat dan Sentinel-2. Dasar untuk analisis vegetasi (NDVI/EVI), klasifikasi tutupan lahan, dan deteksi perubahan optik.
+- **[Surface Temperature](./surface_temperature/index.mdx)** — Suhu permukaan tanah dari 4 misi Landsat. Untuk pemantauan pulau panas perkotaan, kekeringan, tekanan vegetasi, dan aktivitas termal.
+- **[Radar Backscatter](./radar_backscatter/index.mdx)** — Data SAR C-band dari Sentinel-1 dengan koreksi terrain radiometrik. Bekerja pada segala cuaca, siang maupun malam.
+- **[Sentinel-2 GeoMAD](./s2_geomad_annual.mdx)** — Komposit tahunan (Geometric Median + MAD statistics) dari Sentinel-2. Snapshot tahunan yang praktis bebas awan.
+
+## Memilih Tipe Data
+
+- **Butuh analisis vegetasi, indeks spektral, atau tutupan lahan?** → [Surface Reflectance](./surface_reflectance/index.mdx). Landsat untuk deret waktu panjang (1984–sekarang), Sentinel-2 untuk resolusi 10 m dan band red-edge.
+- **Butuh suhu permukaan (urban heat, kekeringan, geotermal)?** → [Surface Temperature](./surface_temperature/index.mdx). Semua misi Landsat tersedia; kombinasi L8+L9 memberi revisit 8 hari.
+- **Butuh data ketika awan tebal (banjir, longsor, musim hujan tropis)?** → [Radar Backscatter](./radar_backscatter/index.mdx). Menembus awan, tidak bergantung cahaya matahari.
+- **Butuh snapshot tahunan yang bebas awan untuk analisis kondisi lintas-tahun?** → [Sentinel-2 GeoMAD](./s2_geomad_annual.mdx). Komposit statistik dari seluruh tahun akuisisi.
+- **Menggabungkan optik dan radar (sensor fusion)?** → Muat [Surface Reflectance](./surface_reflectance/index.mdx) + [Radar Backscatter](./radar_backscatter/index.mdx) bersamaan. Optik memberi warna dan vegetasi; radar memberi struktur dan kelembapan.
+
+:::tip Analysis Ready Data
+Semua produk di bagian ini adalah **Analysis Ready Data (ARD)** — sudah dikoreksi radiometrik, geometrik, dan atmosferik. Anda dapat langsung memuatnya dengan `odc-stac`, `rioxarray`, atau tool lain tanpa preprocessing tambahan.
+:::

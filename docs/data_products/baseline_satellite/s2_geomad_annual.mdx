@@ -1,0 +1,183 @@
+---
+sidebar_position: 4
+title: Sentinel-2 GeoMAD
+description:  Sentinel-2 Annual Geometric Median and Median Absolute Deviations for Indonesia
+---
+
+# Sentinel-2 GeoMAD — Spesifikasi
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='s2_geomad_annual'
+  meta={[
+    { label: 'Nama Teknis:', value: 'Sentinel-2 GeoMAD' },
+    { label: 'Versi:', value: '1.0.0' },
+    { label: 'Resolusi:', value: '10 m' },
+    { label: 'Cakupan:', value: '2017 hingga 2025' },
+    { label: 'Pembaruan Data:', value: 'Tahunan' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_gmd.webp'
+  imageAlt='Sentinel-2GeoMAD Preview'
+/>
+
+## Tentang
+GeoMAD (Geometric Median dan Median Absolute Deviation) merupakan produk komposit citra satelit berbasis analisis statistik yang dirancang untuk merepresentasikan kondisi tahunan permukaan bumi dengan mengkuantifikasi tingkat variabilitas spektral pada setiap piksel dalam periode tertentu. Produk ini dibangun dari rangkaian citra satelit multi-temporal periode satu tahunan sehingga menghasilkan komposit yang mampu menggambarkan kondisi permukaan bumi secara lebih representatif dan relatif bebas dari pengaruh awan. Selain menyediakan informasi mengenai kondisi median tahunan, GeoMAD juga menyajikan ukuran variasi spektral yang dapat dimanfaatkan sebagai indikator dinamika perubahan lingkungan. Oleh karena itu, produk ini sangat sesuai digunakan sebagai data dasar dalam analisis deteksi perubahan (change detection), klasifikasi penutup lahan, pemantauan aktivitas pertanian, evaluasi perkembangan kawasan terbangun, identifikasi perubahan kawasan hutan, pemetaan bekas kebakaran hutan dan lahan, serta berbagai aplikasi pemantauan sumber daya alam dan lingkungan di Indonesia.
+
+## Band
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Tipe</th>
+      <th>Unit</th>
+      <th>No-Data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**blue**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_02, B02</td>
+    </tr>
+    <tr>
+      <td>**green**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_03, B03</td>
+    </tr>
+    <tr>
+      <td>**red**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_04, B04</td>
+    </tr>
+    <tr>
+      <td>**nir**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_08, B08</td>
+    </tr>
+    <tr>
+      <td>**nir08**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_08a, B08A</td>
+    </tr>
+    <tr>
+      <td>**rededge1**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_05, B05</td>
+    </tr>
+    <tr>
+      <td>**rededge2**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_06, B06</td>
+    </tr>
+    <tr>
+      <td>**rededge3**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_07, B07</td>
+    </tr>
+    <tr>
+      <td>**swir16**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_11, B11, swir_1, swir_16</td>
+    </tr>
+    <tr>
+      <td>**swir22**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_12, B12, swir_2, swir_22</td>
+    </tr>
+    <tr>
+      <td>**SMAD**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>smad, sdev, SDEV</td>
+    </tr>
+    <tr>
+      <td>**EMAD**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>emad, edev, EDEV</td>
+    </tr>
+    <tr>
+      <td>**BCMAD**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>bcmad, bcdev, BCDEV</td>
+    </tr>
+    <tr>
+      <td>**COUNT**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>count</td>
+    </tr>
+  </tbody>
+</table>
+
+## Aplikasi
+Produk GeoMAD memiliki berbagai kegunaan, antara lain:
+- Pemetaan penutup lahan
+- Klasifikasi dan deteksi perubahan
+- Analisis variabilitas dan perubahan permukaan bumi
+- Pemantauan lingkungan
+
+## Akses Data
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Maps**</td>
+      <td>• [Lihat lokasinya di maps](https://maps.piksel.big.go.id)</td>
+      <td>• Pelajari cara [penggunaan maps](#)</td>
+    </tr>
+    <tr>
+      <td>**Explorer**</td>
+      <td>• [Jelajahi ketersediaan data](https://explorer.piksel.big.go.id/products/s2_geomad_annual)</td>
+      <td>• Pelajari cara [penggunaan explorer](/docs/services/explorer)</td>
+    </tr>
+    <tr>
+      <td>**Sumber data**</td>
+      <td>• [Akses data di AWS](#)<br/>• [Akses data di NCI](#)</td>
+      <td>• Pelajari cara [mengakses data melalui AWS](#)</td>
+    </tr>
+    <tr>
+      <td>**Contoh kode**</td>
+      <td>• [Lihat contoh kode](#)</td>
+      <td>• Pelajari cara [menggunakan sandbox](#)</td>
+    </tr>
+    <tr>
+      <td>**Web services**</td>
+      <td>• [Web Map Service (WMS)](#)<br/>• [Web Coverage Service (WCS)](#)</td>
+      <td>• Pelajari cara [menggunakan web services](#)</td>
+    </tr>
+  </tbody>
+</table>
+
+## Citation
+#### Data Citation
+>Fulan, F., Fulan, F. 2026. Sentinel-2 GeoMAD. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/148693 [Diakses 12 April 2026]

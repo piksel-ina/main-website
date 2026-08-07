@@ -1,0 +1,165 @@
+---
+sidebar_position: 1
+title: Landsat 5 Surface Temperature
+description:  Landsat 5 ST dari US Geological Survey (USGS)
+---
+
+# Landsat 5 Surface Temperature — Spesifikasi
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='ls5_c2l2_st'
+  meta={[
+    { label: 'Nama Teknis:', value: 'Landsat 5 Collection 2 Level-2 Surface Temperature' },
+    { label: 'Versi:', value: '3.0.0' },
+    { label: 'Resolusi:', value: '30 m' },
+    { label: 'Cakupan:', value: 'Agustus 1986 hingga November 2011' },
+    { label: 'Pembaruan Data:', value: 'Tidak Ada Pembaruan Data' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_st.webp'
+  imageAlt='Landsat 5 Surface Temperature Preview'
+/>
+
+## Tentang
+Landsat 5 Surface Temperature (Landsat 5) adalah rangkaian dataset suhu permukaan tanah dari satelit penginderaan jauh yang memegang Guinness World Record untuk misi pengamatan Bumi terlama. Selama hampir 29 tahun beroperasi hingga 2013, Landsat 5 telah mengorbit planet lebih dari 150.000 kali dan mengirimkan 2,5 juta citra permukaan daratan di seluruh dunia. Produk ini diturunkan dari saluran termal inframerah (Band 6) sensor Thematic Mapper (TM) dengan resolusi 30 meter, menjadi instrumen krusial dalam memantau pulau panas perkotaan, kekeringan, tekanan vegetasi, dan aktivitas geotermal secara global.
+
+## Band
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Tipe</th>
+      <th>Unit</th>
+      <th>No-Data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**lwir**</td>
+      <td>uint16</td>
+      <td>Kelvin</td>
+      <td>0</td>
+      <td>ST_B6, band_6, st, surface_temperature</td>
+    </tr>
+    <tr>
+      <td>**TRAD**</td>
+      <td>int16</td>
+      <td>W/(m².sr.μm)</td>
+      <td>-9999</td>
+      <td>ST_TRAD, trad, thermal_radiance</td>
+    </tr>
+    <tr>
+      <td>**URAD**</td>
+      <td>int16</td>
+      <td>W/(m².sr.μm)</td>
+      <td>-9999</td>
+      <td>ST_URAD, urad, upwell_radiance</td>
+    </tr>
+    <tr>
+      <td>**DRAD**</td>
+      <td>int16</td>
+      <td>W/(m².sr.μm)</td>
+      <td>-9999</td>
+      <td>ST_DRAD, drad, downwell_radiance</td>
+    </tr>
+    <tr>
+      <td>**ATRAN**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>ST_ATRAN, atran, atmospheric_transmittance</td>
+    </tr>
+    <tr>
+      <td>**EMIS**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>ST_EMIS, emis, emissivity</td>
+    </tr>
+    <tr>
+      <td>**EMSD**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>ST_EMSD, emsd, emissivity_stddev</td>
+    </tr>
+    <tr>
+      <td>**CDIST**</td>
+      <td>int16</td>
+      <td>Kilometer</td>
+      <td>-9999</td>
+      <td>ST_CDIST, cdist, cloud_distance</td>
+    </tr>
+    <tr>
+      <td>**qa_pixel**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>1</td>
+      <td>QA_PIXEL, pq, pixel_quality</td>
+    </tr>
+    <tr>
+      <td>**qa_radsat**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>QA_RADSAT, radsat, radiometric_saturation</td>
+    </tr>
+    <tr>
+      <td>**qa**</td>
+      <td>int16</td>
+      <td>Kelvin</td>
+      <td>-9999</td>
+      <td>ST_QA, st_qa, surface_temperature_quality</td>
+    </tr>
+  </tbody>
+</table>
+
+## Aplikasi
+- Pemantauan pulau panas perkotaan (urban heat island) dan kualitas termal kota
+- Deteksi tekanan air pada tanaman dan estimasi kebutuhan irigasi
+- Pemantauan kekeringan dan kondisi kelembapan tanah
+- Pemetaan aktivitas vulkanik dan pemantauan suhu kawah
+- Identifikasi sumber panas alami dan aktivitas geotermal
+- Deteksi serta pemantauan kebakaran hutan dan lahan
+- Analisis suhu perairan (danau, waduk, muara)
+- Analisis mikroiklim untuk perencanaan wilayah
+
+## Akses Data
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Maps**</td>
+      <td>• [Lihat lokasinya di maps](https://maps.piksel.big.go.id)</td>
+      <td>• Pelajari cara [penggunaan maps](#)</td>
+    </tr>
+    <tr>
+      <td>**Explorer**</td>
+      <td>• [Jelajahi ketersediaan data](https://explorer.piksel.big.go.id/products/ls5_c2l2_st)</td>
+      <td>• Pelajari cara [penggunaan explorer](/docs/services/explorer)</td>
+    </tr>
+    <tr>
+      <td>**Sumber data**</td>
+      <td>• [Akses data di AWS](#)<br/>• [Akses data di NCI](#)</td>
+      <td>• Pelajari cara [mengakses data melalui AWS](#)</td>
+    </tr>
+    <tr>
+      <td>**Contoh kode**</td>
+      <td>• [Lihat contoh kode](#)</td>
+      <td>• Pelajari cara [menggunakan sandbox](#)</td>
+    </tr>
+    <tr>
+      <td>**Web services**</td>
+      <td>• [Web Map Service (WMS)](#)<br/>• [Web Coverage Service (WCS)](#)</td>
+      <td>• Pelajari cara [menggunakan web services](#)</td>
+    </tr>
+  </tbody>
+</table>
+
+## Citation
+#### Data Citation
+>Fulan, F., Fulan, F. 2026. Landsat 5 Surface Temperature Analysis Ready Data. Badan Informasi Geospasial, Cibinong. https://dx.doi.org/10.26186/xxxxxx [Diakses 12 April 2026]

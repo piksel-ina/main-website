@@ -1,0 +1,6 @@
+position: 2
+label: Surface Temperature Satellite Data
+className: sidebar-subsection
+link:
+  type: doc
+  id: data_products/baseline_satellite/surface_temperature/index
