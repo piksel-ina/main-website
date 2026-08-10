@@ -131,8 +131,8 @@ export const servicesData = [
   },
   {
     id: "05",
-    title: "Cloud Computing",
-    title_indonesia: "Komputasi Awan",
+    title: "Geospatial Data Processing",
+    title_indonesia: "Pemrosesan Data Geospasial",
     description: translate({
       id: "ourServices.production.description",
       message: "Dukungan infrastruktur komputasi berkinerja tinggi untuk pemrosesan data skala nasional.",
@@ -145,13 +145,13 @@ export const servicesData = [
     status: translate({ id: "ourServices.production.status", message: "ATAS PERMINTAAN" }),
     endpoint: "argo.piksel.big.go.id",
     linkText: translate({ id: "ourServices.production.btn", message: "Hubungi Kami" }),
-    link: "/docs/services/cloud-computing",
+    link: "/docs/services/geospatial-data-processing",
     color: "#d97706",
     image: {
       src: '/img/services/argo-800.png',
       srcset: '/img/services/argo-800.webp 800w, /img/services/argo-1200.webp 1200w, /img/services/argo-1600.webp 1600w',
       srcsetFallback: '/img/services/argo-800.png 800w, /img/services/argo-1200.png 1200w, /img/services/argo-1600.png 1600w',
-      alt: 'Cloud Computing — argo workflow',
+      alt: 'Geospatial Data Processing — argo workflow',
     },
     meta: {
       capability: translate({ id: "ourServices.meta.05.capability", message: "Proses skala besar", description: "Service 05 capability" }),

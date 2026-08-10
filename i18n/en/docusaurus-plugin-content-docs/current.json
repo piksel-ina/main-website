@@ -15,17 +15,9 @@
     "message": "Discover the variety of services offered by Piksel platform.",
     "description": "The generated-index page description for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Komputasi Awan": {
-    "message": "Cloud Computing",
-    "description": "The label for category 'Komputasi Awan' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.title": {
-    "message": "Cloud Computing",
-    "description": "The generated-index page title for category 'Komputasi Awan' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.description": {
-    "message": "Cloud computing resources for large-scale geospatial processing.",
-    "description": "The generated-index page description for category 'Komputasi Awan' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Pemrosesan Data Geospasial": {
+    "message": "Geospatial Data Processing",
+    "description": "The label for category 'Pemrosesan Data Geospasial' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Jelajah Data": {
     "message": "Data Explorer",
@@ -63,29 +55,9 @@
     "message": "JupyterHub environment for running custom geospatial analysis.",
     "description": "The generated-index page description for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Dukungan Teknis": {
-    "message": "Technical Support",
-    "description": "The label for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.title": {
-    "message": "Technical Support",
-    "description": "The generated-index page title for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.description": {
-    "message": "Technical support and assistance for Piksel platform users.",
-    "description": "The generated-index page description for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Layanan Web": {
     "message": "Web Services",
     "description": "The label for category 'Layanan Web' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Layanan Web.link.generated-index.title": {
-    "message": "Web Services",
-    "description": "The generated-index page title for category 'Layanan Web' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Layanan Web.link.generated-index.description": {
-    "message": "RESTful API and web services for programmatic access to satellite imagery.",
-    "description": "The generated-index page description for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kasus Penggunaan": {
     "message": "Use Cases",
@@ -170,6 +142,22 @@
   "sidebar.docsSidebar.category.Perkotaan.link.generated-index.description": {
     "message": "Urban planning and development analysis using satellite imagery.",
     "description": "The generated-index page description for category 'Perkotaan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Dukungan dan Kolaborasi": {
+    "message": "Support and Collaboration",
+    "description": "The label for category 'Dukungan dan Kolaborasi' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pangan": {
+    "message": "Pangan",
+    "description": "The label for category 'Pangan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Lahan": {
+    "message": "Lahan",
+    "description": "The label for category 'Lahan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Lingkungan": {
+    "message": "Lingkungan",
+    "description": "The label for category 'Lingkungan' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Data Products": {
     "message": "Data Products",
