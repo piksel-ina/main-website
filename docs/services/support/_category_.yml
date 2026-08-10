@@ -1,6 +1,5 @@
-label: Dukungan Teknis
+label: Dukungan dan Kolaborasi
 className: sidebar-subsection
 link:
-  type: generated-index
-  title: Dukungan Teknis
-  description: Dukungan teknis dan bantuan untuk pengguna platform Piksel.
+  type: doc
+  id: services/support/index
