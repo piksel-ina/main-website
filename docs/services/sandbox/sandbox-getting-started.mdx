@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+title: Memulai Piksel Sandbox
+description: Memilih profil komputasi dan memulai JupyterLab.
+---
+
+import Figure from '@site/src/components/Docs/Figure';
+
+# Memulai Piksel Sandbox
+
+Setelah berhasil login, pengguna akan diarahkan ke halaman utama Piksel Sandbox. Halaman ini merupakan dashboard awal yang digunakan untuk memilih lingkungan komputasi (environment) sebelum menjalankan Jupyter Notebook.
+Pastikan Anda telah berhasil masuk ke aplikasi dan berada pada halaman Selamat Datang di Piksel Sandbox.
+Pada panel Get Started, fitur-fitur yang tersedia seperti:
+
+- Geospasial Data-Science Toolkit, yaitu kumpulan pustaka (library) dan tools untuk analisis data geospasial.
+
+- Contoh untuk Belajar, yang menyediakan notebook contoh sebagai media pembelajaran.
+
+- Resource yang Dijamin, yang menjelaskan spesifikasi sumber daya komputasi yang disediakan untuk setiap pengguna.
+
+<Figure
+  alt="Halaman utama Piksel Sandbox dengan panel Get Started dan pilihan lingkungan komputasi"
+  caption="Halaman utama Piksel Sandbox."
+  size={6}
+  src="/img/sandbox/sandbox-home2.webp"
+/>
+
+Pada panel Environments, pilih lingkungan komputasi yang akan digunakan. Secara default tersedia Standard Instance dengan spesifikasi 4 vCPUs, 15 GB RAM, dan Geospatial Learning Environment
+
+Setelah memilih environment, klik tombol **Start Server**.
+
+Tunggu beberapa saat hingga server berhasil dijalankan. Setelah proses inisialisasi selesai, sistem akan secara otomatis mengarahkan pengguna ke halaman Jupyter Notebook/Lab untuk mulai melakukan analisis data.
+
+Catatan: Waktu yang dibutuhkan untuk menjalankan server bergantung pada kondisi sistem dan beban layanan. Jangan menutup halaman selama proses inisialisasi berlangsung.
+
+<Figure
+  alt="Halaman Piksel Sandbox saat server JupyterLab sedang dijalankan"
+  caption="Proses memulai server di Piksel Sandbox."
+  size={6}
+  src="/img/sandbox/sandbox-home3.webp"
+/>

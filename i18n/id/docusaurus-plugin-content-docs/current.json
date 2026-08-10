@@ -198,5 +198,9 @@
   "sidebar.docsSidebar.category.Pemrosesan Data Geospasial": {
     "message": "Pemrosesan Data Geospasial",
     "description": "The label for category 'Pemrosesan Data Geospasial' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Piksel Sandbox": {
+    "message": "Piksel Sandbox",
+    "description": "The label for category 'Piksel Sandbox' in sidebar 'docsSidebar'"
   }
 }
