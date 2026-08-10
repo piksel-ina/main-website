@@ -938,7 +938,7 @@ h6 {
   }
 
   h2 {
-    margin-top: space('8');
+    margin-top: space('6');
     margin-bottom: space('3');
     font-family: font-family('heading');
     font-size: text-size('2xl');
@@ -1080,6 +1080,11 @@ h6 {
       border: none;
       border-radius: 0;
     }
+  }
+
+  .theme-code-block.wrapped code {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
   }
 
   /* === Blockquotes === */
