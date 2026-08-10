@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 600" width="740" height="600" role="img" aria-label="Alur kerja Argo Workflow: satu tugas dibagi ke banyak grid, tiap grid diproses, dianalisis, dan hasilnya disimpan secara paralel, lalu seluruh hasil diindeks ke Open Data Cube">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#0e7488"/>
+    </marker>
+    <style>
+      text {
+        font-family: "IBM Plex Sans", -apple-system, system-ui, sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .box { stroke-width: 1; }
+      .terminal { fill: #1040a8; stroke: #1040a8; }
+      .terminal-t { fill: #e8f4fd; }
+      .orch { fill: #eff6ff; stroke: #1040a8; }
+      .proc { fill: #ffffff; stroke: #0e7488; }
+      .result { fill: #f5f5f7; stroke: #d1d1d6; }
+      .ink { fill: #1d1d1f; }
+      .lbl { font-size: 13px; }
+      .sub { font-size: 11px; }
+      .edge { fill: none; stroke: #0e7488; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <!-- edges -->
+  <g>
+    <line class="edge" x1="380" y1="57" x2="380" y2="93" marker-end="url(#arrow)"/>
+    <line class="edge" x1="380" y1="139" x2="380" y2="175" marker-end="url(#arrow)"/>
+
+    <!-- fan-out -->
+    <line class="edge" x1="380" y1="221" x2="380" y2="247"/>
+    <line class="edge" x1="150" y1="247" x2="610" y2="247"/>
+    <line class="edge" x1="150" y1="247" x2="150" y2="271" marker-end="url(#arrow)"/>
+    <line class="edge" x1="380" y1="247" x2="380" y2="271" marker-end="url(#arrow)"/>
+    <line class="edge" x1="610" y1="247" x2="610" y2="271" marker-end="url(#arrow)"/>
+
+    <!-- parallel columns: processing -> analysis -> storage -->
+    <line class="edge" x1="150" y1="317" x2="150" y2="353" marker-end="url(#arrow)"/>
+    <line class="edge" x1="380" y1="317" x2="380" y2="353" marker-end="url(#arrow)"/>
+    <line class="edge" x1="610" y1="317" x2="610" y2="353" marker-end="url(#arrow)"/>
+    <line class="edge" x1="150" y1="399" x2="150" y2="435" marker-end="url(#arrow)"/>
+    <line class="edge" x1="380" y1="399" x2="380" y2="435" marker-end="url(#arrow)"/>
+    <line class="edge" x1="610" y1="399" x2="610" y2="435" marker-end="url(#arrow)"/>
+
+    <!-- fan-in only for indexing -->
+    <line class="edge" x1="150" y1="481" x2="150" y2="512"/>
+    <line class="edge" x1="380" y1="481" x2="380" y2="512"/>
+    <line class="edge" x1="610" y1="481" x2="610" y2="512"/>
+    <line class="edge" x1="150" y1="512" x2="610" y2="512"/>
+    <line class="edge" x1="380" y1="512" x2="380" y2="537" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- nodes -->
+  <rect class="box terminal" x="282" y="11" width="196" height="46"/>
+  <text class="lbl terminal-t" x="380" y="34">Inisiasi tugas</text>
+
+  <rect class="box orch" x="282" y="93" width="196" height="46"/>
+  <text class="lbl ink" x="380" y="116">Penyusunan grid pemrosesan</text>
+
+  <rect class="box orch" x="282" y="175" width="196" height="46"/>
+  <text class="lbl ink" x="380" y="198">Pembagian pekerjaan per grid</text>
+
+  <rect class="box proc" x="52" y="271" width="196" height="46"/>
+  <text class="lbl ink" x="150" y="288">Pengolahan citra</text>
+  <text class="sub ink" x="150" y="305">Grid 1</text>
+
+  <rect class="box proc" x="282" y="271" width="196" height="46"/>
+  <text class="lbl ink" x="380" y="288">Pengolahan citra</text>
+  <text class="sub ink" x="380" y="305">Grid 2</text>
+
+  <rect class="box proc" x="512" y="271" width="196" height="46"/>
+  <text class="lbl ink" x="610" y="288">Pengolahan citra</text>
+  <text class="sub ink" x="610" y="305">Grid n</text>
+
+  <rect class="box proc" x="52" y="353" width="196" height="46"/>
+  <text class="lbl ink" x="150" y="376">Analisis</text>
+  <rect class="box proc" x="282" y="353" width="196" height="46"/>
+  <text class="lbl ink" x="380" y="376">Analisis</text>
+  <rect class="box proc" x="512" y="353" width="196" height="46"/>
+  <text class="lbl ink" x="610" y="376">Analisis</text>
+
+  <rect class="box result" x="52" y="435" width="196" height="46"/>
+  <text class="lbl ink" x="150" y="458">Penyimpanan hasil</text>
+  <rect class="box result" x="282" y="435" width="196" height="46"/>
+  <text class="lbl ink" x="380" y="458">Penyimpanan hasil</text>
+  <rect class="box result" x="512" y="435" width="196" height="46"/>
+  <text class="lbl ink" x="610" y="458">Penyimpanan hasil</text>
+
+  <rect class="box terminal" x="282" y="537" width="196" height="46"/>
+  <text class="lbl terminal-t" x="380" y="553">Pengindeksan ke</text>
+  <text class="lbl terminal-t" x="380" y="571">Open Data Cube</text>
+</svg>
