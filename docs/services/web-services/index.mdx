@@ -1,13 +1,22 @@
 ---
 sidebar_position: 1
+pagination_prev: null
 ---
 
-import DocCardList from '@theme/DocCardList';
+# Layanan Web (*Web Services*)
 
-# Layanan Web
+Data geospasial Piksel dapat diakses dan digunakan langsung dari perangkat lunak GIS, aplikasi pemetaan web, maupun sistem lain. Layanan Web memungkinkan pengguna menampilkan peta sebagai layer, menyajikan peta dalam tile, atau mengambil data raster untuk dianalisis tanpa perlu menyalin atau mengunduh data secara manual terlebih dahulu.
 
-Placeholder overview for Layanan Web service.
+Untuk kebutuhan yang berbeda, Piksel menyediakan Web Map Service (WMS), Web Map Tile Service (WMTS), dan Web Coverage Service (WCS). WMS menyajikan peta yang dirender sesuai permintaan, WMTS menyajikan peta dalam tile, sedangkan WCS menyediakan data raster untuk diolah lebih lanjut.
 
-## Guides
+Penjelasan lebih lanjut mengenai perbedaan dan penggunaan ketiganya tersedia pada halaman [Jenis Layanan Web](./service-types).
 
-<DocCardList />
+Setiap layanan tersedia pada alamat berikut:
+
+```text
+https://ows.piksel.big.go.id/wms
+https://ows.piksel.big.go.id/wmts
+https://ows.piksel.big.go.id/wcs
+```
+
+Alamat tersebut dapat digunakan pada aplikasi apa pun yang mendukung WMS, WMTS, atau WCS. Langkah penambahannya di QGIS dan ArcGIS Pro tersedia pada halaman [Penggunaan di Perangkat Lunak GIS](./gis-software).
