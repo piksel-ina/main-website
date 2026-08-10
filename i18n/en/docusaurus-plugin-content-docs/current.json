@@ -43,17 +43,9 @@
     "message": "Interactive web mapping interface for visualizing geospatial data.",
     "description": "The generated-index page description for category 'Peta Interaktif' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Sandbox Analisis": {
-    "message": "Analysis Sandbox",
-    "description": "The label for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.title": {
-    "message": "Analysis Sandbox",
-    "description": "The generated-index page title for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Sandbox Analisis.link.generated-index.description": {
-    "message": "JupyterHub environment for running custom geospatial analysis.",
-    "description": "The generated-index page description for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
+  "sidebar.docsSidebar.category.Piksel Sandbox": {
+    "message": "Piksel Sandbox",
+    "description": "The label for category 'Piksel Sandbox' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Layanan Web": {
     "message": "Web Services",
