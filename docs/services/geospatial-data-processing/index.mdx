@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+pagination_prev: null
+---
+
+# Pemrosesan Data Geospasial
+
+Piksel membuka peluang kerja sama untuk pemrosesan data geospasial berskala besar, seperti pengolahan koleksi data besar pada ribuan tile, pemrosesan berskala nasional, serta pemantauan dan analisis yang dijalankan secara berkala. Informasi mengenai pengajuan kerja sama tersedia pada halaman [Kolaborasi Strategis](../support/collaboration).
+
+Pemrosesan ini menggunakan infrastruktur komputasi awan dan [Argo Workflow](./argo) untuk membagi pekerjaan dan menjalankannya secara paralel dan otomatis. Dengan pendekatan ini, kebutuhan komputasi dapat ditingkatkan tanpa investasi awal pada infrastruktur lokal. Contoh penerapannya dibahas pada bagian berikut.
+
+Pemrosesan data geospasial juga dapat dilakukan melalui Jupyter Notebook di Piksel Sandbox. Untuk eksplorasi data dan pengembangan prototipe menggunakan Notebook, lihat [Sandbox Analisis](../sandbox). Namun, lingkungan Notebook tidak dirancang untuk membagi satu pekerjaan menjadi ribuan proses, menyediakan sumber daya komputasi untuk tiap proses, lalu menjalankannya dan mengelolanya hingga selesai. Untuk kebutuhan tersebut, Piksel menggunakan Argo Workflow.
+
+## Contoh Penerapan
+
+Salah satu contoh penerapannya adalah pembuatan Geomad, yaitu komposit citra bebas awan yang disusun dari ratusan citra Sentinel-2 pada setiap tile. Untuk menghasilkan Geomad nasional, ribuan tile perlu diproses. Karena setiap tile membutuhkan sumber daya komputasi yang besar, pengerjaan satu per satu dapat memakan waktu berbulan-bulan. Penyediaan kapasitas serupa melalui infrastruktur sendiri juga memerlukan investasi awal yang besar.
+
+Tim Piksel menangani proses ini dengan membagi pekerjaan ke dalam tile dan menjalankannya secara paralel di cloud. Pendekatan ini memungkinkan Geomad untuk seluruh Indonesia dihasilkan dalam waktu yang lebih singkat tanpa membangun infrastruktur komputasi lokal di awal. Rincian implementasinya tersedia pada halaman [Pengolahan GeoMAD](./geomad).
+
+Pendekatan ini tidak terbatas pada Geomad. Pemrosesan paralel dapat diterapkan pada pemantauan perubahan garis pantai, banjir, kekeringan, tutupan lahan, dan vegetasi, atau kebutuhan lain yang mengolah data secara berkala dalam cakupan luas. Alur kerja dapat disesuaikan dengan data, metode, dan tujuan analisis pada setiap kasus.
+
+---

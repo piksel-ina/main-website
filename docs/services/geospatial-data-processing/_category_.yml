@@ -1,0 +1,5 @@
+label: Pemrosesan Data Geospasial
+className: sidebar-subsection
+link:
+  type: doc
+  id: services/geospatial-data-processing/index
