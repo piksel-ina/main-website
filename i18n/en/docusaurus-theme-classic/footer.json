@@ -63,10 +63,6 @@
     "message": "Web Services",
     "description": "The label of footer link with label=Layanan Web linking to /docs/services/web-services/"
   },
-  "link.item.label.Komputasi Awan": {
-    "message": "Cloud Computing",
-    "description": "The label of footer link with label=Komputasi Awan linking to /docs/services/cloud-computing/"
-  },
   "link.item.label.Dukungan Teknis": {
     "message": "Technical Support",
     "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support/"
@@ -78,5 +74,21 @@
   "link.item.label.Bencana": {
     "message": "Disaster",
     "description": "The label of footer link with label=Bencana linking to /docs/usecases/bencana/"
+  },
+  "link.item.label.Pemrosesan Data Geospasial": {
+    "message": "Geospatial Data Processing",
+    "description": "The label of footer link with label=Pemrosesan Data Geospasial linking to /docs/services/geospatial-data-processing/"
+  },
+  "link.item.label.Pangan": {
+    "message": "Pangan",
+    "description": "The label of footer link with label=Pangan linking to /docs/usecases/pangan/"
+  },
+  "link.item.label.Lahan": {
+    "message": "Lahan",
+    "description": "The label of footer link with label=Lahan linking to /docs/usecases/lahan/"
+  },
+  "link.item.label.Lingkungan": {
+    "message": "Lingkungan",
+    "description": "The label of footer link with label=Lingkungan linking to /docs/usecases/lingkungan/"
   }
 }

@@ -1,0 +1,44 @@
+.figure {
+  width: 100%;
+  margin-inline: auto;
+
+  &--1 {
+    max-width: 8rem;
+  }
+
+  &--2 {
+    max-width: 14rem;
+  }
+
+  &--3 {
+    max-width: 20rem;
+  }
+
+  &--4 {
+    max-width: 32rem;
+  }
+
+  &--5 {
+    max-width: 40rem;
+  }
+
+  &--6 {
+    max-width: 48rem;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__caption {
+    &--left {
+      text-align: left;
+    }
+
+    &--center {
+      text-align: center;
+    }
+  }
+}

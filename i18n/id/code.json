@@ -408,19 +408,11 @@
     "message": "Piksel Hero Image",
     "description": "Alt text for the hero image"
   },
-  "ourServices.explorer.title": {
-    "message": "Jelajah Data",
-    "description": "Service title: Data Explorer"
-  },
   "ourServices.explorer.description": {
     "message": "Jelajahi dan akses data geospasial yang tersedia di platform kami secara bebas."
   },
   "ourServices.explorer.btn": {
     "message": "Mulai Eksplorasi"
-  },
-  "ourServices.sandbox.title": {
-    "message": "Sandbox Analisis",
-    "description": "Service title: Analysis Sandbox"
   },
   "ourServices.sandbox.description": {
     "message": "Pelajari pengolahan data secara programatik. Lingkungan pelatihan untuk pengembangan analisis geospasial."
@@ -428,19 +420,11 @@
   "ourServices.sandbox.btn": {
     "message": "Mulai Belajar"
   },
-  "ourServices.maps.title": {
-    "message": "Peta Interaktif",
-    "description": "Service title: Interactive Maps"
-  },
   "ourServices.maps.description": {
     "message": "Interaksi langsung dengan peta digital untuk mendapatkan wawasan visual secara cepat."
   },
   "ourServices.maps.btn": {
     "message": "Buka Peta"
-  },
-  "ourServices.webservices.title": {
-    "message": "Layanan Web",
-    "description": "Service title: Web Services"
   },
   "ourServices.webservices.description": {
     "message": "Integrasikan data satelit langsung ke dalam aplikasi Anda melalui standar layanan web global."
@@ -448,19 +432,11 @@
   "ourServices.webservices.btn": {
     "message": "Lihat Dokumentasi"
   },
-  "ourServices.production.title": {
-    "message": "Komputasi Awan",
-    "description": "Service title: Cloud Computing"
-  },
   "ourServices.production.description": {
     "message": "Dukungan infrastruktur komputasi berkinerja tinggi untuk pemrosesan data skala nasional."
   },
   "ourServices.production.btn": {
     "message": "Hubungi Kami"
-  },
-  "ourServices.support.title": {
-    "message": "Dukungan Teknis",
-    "description": "Service title: Technical Support"
   },
   "ourServices.support.description": {
     "message": "Bantuan teknis ahli untuk memastikan integrasi dan operasional sistem berjalan lancar."
@@ -468,17 +444,9 @@
   "ourServices.support.btn": {
     "message": "Hubungi Support"
   },
-  "ourServices.header.tag": {
-    "message": "Layanan Piksel",
-    "description": "Tag label for the services section"
-  },
   "ourServices.header.title": {
-    "message": "Ekosistem Piksel",
+    "message": "Periksa setiap layanan, sebelum berkomitmen.",
     "description": "Main title for the services section"
-  },
-  "ourServices.header.subtitle": {
-    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
-    "description": "Subtitle description for the services section"
   },
   "ourServices.viewAll": {
     "message": "Lihat Semua Layanan",
@@ -710,11 +678,11 @@
     "description": "Location metadata displayed on the hero photo"
   },
   "ourServices.header.eyebrow": {
-    "message": "Layanan Piksel",
+    "message": "01 / Layanan Piksel",
     "description": "Eyebrow label for the services section"
   },
   "ourServices.header.sub": {
-    "message": "Akses ekosistem data geospasial komprehensif untuk mendukung inovasi dan pengambilan keputusan strategis. Dari eksplorasi data terbuka hingga infrastruktur komputasi tingkat lanjut untuk kebutuhan nasional.",
+    "message": "Enam layanan saling terkait. Pilih salah satu untuk melihat antarmuka, fitur, dan endpoint yang diperlukan untuk integrasi produksi.",
     "description": "Subtitle description for the services section"
   },
   "homepage.stats.01.description": {
@@ -758,76 +726,76 @@
     "description": "CTA button label in the navbar"
   },
   "ourServices.explorer.f1": {
-    "message": "Multi-sensor archive — Sentinel-1, Sentinel-2, Landsat"
+    "message": "Arsip multi-sensor — Sentinel-1, Sentinel-2, Landsat"
   },
   "ourServices.explorer.f2": {
-    "message": "Tile-aware filtering by AOI, date, cloud cover"
+    "message": "Penyaringan berdasarkan area minat (AOI), tanggal, dan tutupan awan"
   },
   "ourServices.explorer.f3": {
-    "message": "Direct export to STAC, COG and shapefile"
+    "message": "Ekspor langsung ke STAC, COG, dan shapefile"
   },
   "ourServices.explorer.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.sandbox.f1": {
-    "message": "Open Data Cube + xarray + dask, pre-configured"
+    "message": "Open Data Cube + xarray + dask, sudah dikonfigurasi"
   },
   "ourServices.sandbox.f2": {
-    "message": "Private workspaces with shared example notebooks"
+    "message": "Ruang kerja pribadi dengan contoh notebook bersama"
   },
   "ourServices.sandbox.f3": {
-    "message": "GPU-enabled kernels for research workloads"
+    "message": "Kernel dengan GPU untuk beban kerja penelitian"
   },
   "ourServices.sandbox.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.maps.f1": {
-    "message": "Terria-based composable story maps"
+    "message": "Peta cerita interaktif berbasis Terria"
   },
   "ourServices.maps.f2": {
-    "message": "Embed in ministry portals via iframe"
+    "message": "Integrasikan ke portal kementerian via iframe"
   },
   "ourServices.maps.f3": {
-    "message": "Real-time overlays from Piksel STAC"
+    "message": "Overlay real-time dari katalog Piksel STAC"
   },
   "ourServices.maps.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.webservices.f1": {
-    "message": "WMS / WCS / WMTS — OGC-compliant"
+    "message": "WMS / WCS / WMTS — sesuai standar OGC"
   },
   "ourServices.webservices.f2": {
-    "message": "STAC 1.0 catalog with daily indexing"
+    "message": "Katalog STAC 1.0 dengan indeksing harian"
   },
   "ourServices.webservices.f3": {
-    "message": "CORS-enabled, public-domain access"
+    "message": "Akses domain publik dengan CORS yang diaktifkan"
   },
   "ourServices.webservices.status": {
-    "message": "OPERATIONAL"
+    "message": "OPERASIONAL"
   },
   "ourServices.production.f1": {
-    "message": "Argo Workflows on managed EKS"
+    "message": "Argo Workflows di EKS terkelola"
   },
   "ourServices.production.f2": {
-    "message": "Cost-shared for partner ministries"
+    "message": "Biaya dibagi bersama untuk kementerian mitra"
   },
   "ourServices.production.f3": {
-    "message": "Pre-built pipelines: GeoMAD, fractional cover, WOfS"
+    "message": "Pipeline siap pakai: GeoMAD, fractional cover, WOfS"
   },
   "ourServices.production.status": {
-    "message": "ON REQUEST"
+    "message": "ATAS PERMINTAAN"
   },
   "ourServices.support.f1": {
-    "message": "Email-based ticketing with SLA"
+    "message": "Dukungan via email dengan jaminan SLA"
   },
   "ourServices.support.f2": {
-    "message": "Onboarding & training workshops"
+    "message": "Workshop pelatihan dan onboarding"
   },
   "ourServices.support.f3": {
-    "message": "Joint pilots with BIG analysts"
+    "message": "Pilot project bersama analis BIG"
   },
   "ourServices.support.status": {
-    "message": "MON – FRI"
+    "message": "SEN – JUM"
   },
   "footer.brand.description": {
     "message": "An initiative by Badan Informasi Geospasial in collaboration with Geoscience Australia.",
@@ -928,5 +896,165 @@
   "useCases.viewAll": {
     "message": "LIHAT SEMUA PEMANFAATAN",
     "description": "Link to full use case list"
+  },
+  "ourServices.meta.01.capability": {
+    "message": "Jelajahi & filter",
+    "description": "Service 01 capability"
+  },
+  "ourServices.meta.01.interface": {
+    "message": "Antarmuka Web",
+    "description": "Service 01 interface type"
+  },
+  "ourServices.meta.01.prerequisite": {
+    "message": "Tidak ada",
+    "description": "Service 01 prerequisite"
+  },
+  "ourServices.meta.01.access": {
+    "message": "Publik",
+    "description": "Service 01 access level"
+  },
+  "ourServices.meta.01.update": {
+    "message": "Indeksing harian",
+    "description": "Service 01 update frequency"
+  },
+  "ourServices.meta.02.capability": {
+    "message": "Komputasi & prototipe",
+    "description": "Service 02 capability"
+  },
+  "ourServices.meta.02.interface": {
+    "message": "IDE (Jupyter)",
+    "description": "Service 02 interface type"
+  },
+  "ourServices.meta.02.prerequisite": {
+    "message": "Akun",
+    "description": "Service 02 prerequisite"
+  },
+  "ourServices.meta.02.access": {
+    "message": "Login",
+    "description": "Service 02 access level"
+  },
+  "ourServices.meta.02.update": {
+    "message": "Selalu terkini",
+    "description": "Service 02 update frequency"
+  },
+  "ourServices.meta.03.capability": {
+    "message": "Visualisasi & bagikan",
+    "description": "Service 03 capability"
+  },
+  "ourServices.meta.03.interface": {
+    "message": "Web / Sisip",
+    "description": "Service 03 interface type"
+  },
+  "ourServices.meta.03.prerequisite": {
+    "message": "Tidak ada",
+    "description": "Service 03 prerequisite"
+  },
+  "ourServices.meta.03.access": {
+    "message": "Publik",
+    "description": "Service 03 access level"
+  },
+  "ourServices.meta.03.update": {
+    "message": "Per produk baru",
+    "description": "Service 03 update frequency"
+  },
+  "ourServices.meta.04.capability": {
+    "message": "Kueri & streaming",
+    "description": "Service 04 capability"
+  },
+  "ourServices.meta.04.interface": {
+    "message": "API (REST)",
+    "description": "Service 04 interface type"
+  },
+  "ourServices.meta.04.prerequisite": {
+    "message": "Tidak ada",
+    "description": "Service 04 prerequisite"
+  },
+  "ourServices.meta.04.access": {
+    "message": "Publik",
+    "description": "Service 04 access level"
+  },
+  "ourServices.meta.04.update": {
+    "message": "Indeksing harian",
+    "description": "Service 04 update frequency"
+  },
+  "ourServices.meta.05.capability": {
+    "message": "Proses skala besar",
+    "description": "Service 05 capability"
+  },
+  "ourServices.meta.05.interface": {
+    "message": "CLI / Dasbor",
+    "description": "Service 05 interface type"
+  },
+  "ourServices.meta.05.prerequisite": {
+    "message": "Kemitraan",
+    "description": "Service 05 prerequisite"
+  },
+  "ourServices.meta.05.access": {
+    "message": "Atas permintaan",
+    "description": "Service 05 access level"
+  },
+  "ourServices.meta.05.update": {
+    "message": "Sesuai jadwal",
+    "description": "Service 05 update frequency"
+  },
+  "ourServices.meta.06.capability": {
+    "message": "Onboard & pemecahan masalah",
+    "description": "Service 06 capability"
+  },
+  "ourServices.meta.06.interface": {
+    "message": "Email",
+    "description": "Service 06 interface type"
+  },
+  "ourServices.meta.06.prerequisite": {
+    "message": "Tidak ada",
+    "description": "Service 06 prerequisite"
+  },
+  "ourServices.meta.06.access": {
+    "message": "Sen – Jum",
+    "description": "Service 06 access level"
+  },
+  "ourServices.meta.06.update": {
+    "message": "< 1 hari kerja",
+    "description": "Service 06 update frequency"
+  },
+  "ourServices.cta.openService": {
+    "message": "Buka layanan",
+    "description": "CTA button to open the service"
+  },
+  "ourServices.cta.documentation": {
+    "message": "Dokumentasi",
+    "description": "CTA button to open the documentation"
+  },
+  "ourServices.meta.label.capability": {
+    "message": "Kemampuan",
+    "description": "Meta label: capability"
+  },
+  "ourServices.meta.label.interface": {
+    "message": "Antarmuka",
+    "description": "Meta label: interface"
+  },
+  "ourServices.meta.label.prerequisite": {
+    "message": "Prasyarat",
+    "description": "Meta label: prerequisite"
+  },
+  "ourServices.meta.label.access": {
+    "message": "Akses",
+    "description": "Meta label: access"
+  },
+  "ourServices.meta.label.update": {
+    "message": "Pembaruan",
+    "description": "Meta label: update"
+  },
+  "ourServices.coord.section": {
+    "message": "BAGIAN · 01 / LAYANAN",
+    "description": "Top coordinate label for the services section"
+  },
+  "ourServices.coord.svc": {
+    "message": "LYN · {id} · {name}",
+    "description": "Panel bar coordinate label with service id and name"
+  },
+  "ourServices.coord.hint": {
+    "message": "LAYANAN · KLIK BARIS MANA SAJA UNTUK MENINJAU",
+    "description": "Bottom coordinate hint inviting users to click a service row"
   }
 }

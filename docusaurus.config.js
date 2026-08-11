@@ -255,8 +255,8 @@ const config = {
                 to: '/docs/services/web-services/',
               },
               {
-                label: 'Komputasi Awan',
-                to: '/docs/services/cloud-computing/',
+                label: 'Pemrosesan Data Geospasial',
+                to: '/docs/services/geospatial-data-processing/',
               },
               {
                 label: 'Dukungan Teknis',
