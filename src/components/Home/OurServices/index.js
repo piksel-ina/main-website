@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import Link from '@docusaurus/Link';
-import { servicesData } from '@site/src/data/servicesData';
+import Translate from '@docusaurus/Translate';
+import {
+  servicesData,
+  servicesSectionHeader,
+} from '@site/src/data/servicesData';
 import Coord from '@site/src/components/UI/Atoms/Coord';
 import styles from './styles.module.scss';
 import Preview01 from './previews/Preview01';
@@ -17,51 +21,6 @@ const PREVIEWS = {
   '04': Preview04,
   '05': Preview05,
   '06': Preview06,
-};
-
-const SVC_META = {
-  '01': {
-    capability: 'Browse & filter',
-    interface: 'Web UI',
-    prerequisite: 'None',
-    access: 'Public',
-    update: 'Daily indexing',
-  },
-  '02': {
-    capability: 'Compute & prototype',
-    interface: 'IDE (Jupyter)',
-    prerequisite: 'Account',
-    access: 'Login',
-    update: 'Always current',
-  },
-  '03': {
-    capability: 'Visualize & share',
-    interface: 'Web / Embed',
-    prerequisite: 'None',
-    access: 'Public',
-    update: 'Per new product',
-  },
-  '04': {
-    capability: 'Query & stream',
-    interface: 'API (REST)',
-    prerequisite: 'None',
-    access: 'Public',
-    update: 'Daily indexing',
-  },
-  '05': {
-    capability: 'Process at scale',
-    interface: 'CLI / Dashboard',
-    prerequisite: 'Partnership',
-    access: 'By request',
-    update: 'On schedule',
-  },
-  '06': {
-    capability: 'Onboard & troubleshoot',
-    interface: 'Email',
-    prerequisite: 'None',
-    access: 'Mon – Fri',
-    update: '< 1 business day',
-  },
 };
 
 const InspectorArrow = ({ small = false }) => (
@@ -85,29 +44,30 @@ export default function OurServices() {
   const [active, setActive] = useState('01');
   const svc = servicesData.find((s) => s.id === active);
   const Preview = PREVIEWS[active];
-  const meta = SVC_META[active];
+  const meta = svc.meta;
 
   return (
     <section id="services" className={styles.artboard}>
       <div className={styles.inner}>
         <div className={styles.coords}>
-          <Coord>SECTION · 01 / LAYANAN</Coord>
+          <Coord>
+            <Translate
+              id="ourServices.coord.section"
+              description="Top coordinate label for the services section"
+            >
+              BAGIAN · 01 / LAYANAN
+            </Translate>
+          </Coord>
         </div>
 
         <header className={styles.header}>
           <div>
-            <span className="pk-eyebrow">01 / Layanan Piksel</span>
+            <span className="pk-eyebrow">{servicesSectionHeader.eyebrow}</span>
             <h2 className={styles.header__title}>
-              Inspect every <em>service</em>,
-              <br />
-              before you commit.
+              {servicesSectionHeader.title}
             </h2>
           </div>
-          <p className={styles.header__sub}>
-            Six interlocking services — pick one to see its surface,
-            capabilities, and the endpoint you&apos;d call to use it in
-            production.
-          </p>
+          <p className={styles.header__sub}>{servicesSectionHeader.sub}</p>
         </header>
 
         <div className={styles.inspector}>
@@ -122,8 +82,8 @@ export default function OurServices() {
               >
                 <span className={styles.list__idx}>{s.id}</span>
                 <span className={styles.list__labels}>
-                  <span className={styles.list__name}>{s.en}</span>
-                  <span className={styles.list__en}>{s.title}</span>
+                  <span className={styles.list__name}>{s.title}</span>
+                  <span className={styles.list__en}>{s.title_indonesia}</span>
                 </span>
                 <span className={styles.list__chev} aria-hidden="true">
                   {s.id === active ? '—' : '›'}
@@ -135,7 +95,13 @@ export default function OurServices() {
           <div className={styles.panel}>
             <div className={styles.panel__bar}>
               <Coord>
-                SVC · {svc.id} · {svc.en.toUpperCase()}
+                <Translate
+                  id="ourServices.coord.svc"
+                  values={{ id: svc.id, name: svc.title.toUpperCase() }}
+                  description="Panel bar coordinate label with service id and name"
+                >
+                  {'LYN · {id} · {name}'}
+                </Translate>
               </Coord>
               <span className={styles.panel__barStatus}>
                 <span className={styles.panel__dot} aria-hidden="true" />
@@ -145,8 +111,7 @@ export default function OurServices() {
 
             <div className={styles.panel__copy}>
               <span className={styles.panel__num}>{svc.id}</span>
-              <h3 className={styles.panel__title}>{svc.en}</h3>
-              <span className={styles.panel__en}>{svc.title}</span>
+              <h3 className={styles.panel__title}>{svc.title}</h3>
               <p className={styles.panel__desc}>{svc.description}</p>
 
               <ul className={styles.panel__features}>
@@ -165,14 +130,28 @@ export default function OurServices() {
                   rel="noopener noreferrer"
                   className={`${styles.btn} ${styles['btn--primary']}`}
                 >
-                  <span>Open service</span>
+                  <span>
+                    <Translate
+                      id="ourServices.cta.openService"
+                      description="CTA button to open the service"
+                    >
+                      Open service
+                    </Translate>
+                  </span>
                   <InspectorArrow />
                 </a>
                 <Link
                   to={svc.link}
                   className={`${styles.btn} ${styles['btn--ghost']}`}
                 >
-                  <span>Documentation</span>
+                  <span>
+                    <Translate
+                      id="ourServices.cta.documentation"
+                      description="CTA button to open the documentation"
+                    >
+                      Documentation
+                    </Translate>
+                  </span>
                   <InspectorArrow small />
                 </Link>
               </div>
@@ -190,23 +169,58 @@ export default function OurServices() {
               <div className={styles.panel__vizMeta}>
                 <dl className={styles.panel__vizMetaList}>
                   <div>
-                    <dt>Capability</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.capability"
+                        description="Meta label: capability"
+                      >
+                        Capability
+                      </Translate>
+                    </dt>
                     <dd>{meta.capability}</dd>
                   </div>
                   <div>
-                    <dt>Interface</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.interface"
+                        description="Meta label: interface"
+                      >
+                        Interface
+                      </Translate>
+                    </dt>
                     <dd>{meta.interface}</dd>
                   </div>
                   <div>
-                    <dt>Prerequisite</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.prerequisite"
+                        description="Meta label: prerequisite"
+                      >
+                        Prerequisite
+                      </Translate>
+                    </dt>
                     <dd>{meta.prerequisite}</dd>
                   </div>
                   <div>
-                    <dt>Access</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.access"
+                        description="Meta label: access"
+                      >
+                        Access
+                      </Translate>
+                    </dt>
                     <dd>{meta.access}</dd>
                   </div>
                   <div>
-                    <dt>Update</dt>
+                    <dt>
+                      <Translate
+                        id="ourServices.meta.label.update"
+                        description="Meta label: update"
+                      >
+                        Update
+                      </Translate>
+                    </dt>
                     <dd>{meta.update}</dd>
                   </div>
                 </dl>
@@ -238,7 +252,14 @@ export default function OurServices() {
         </div>
 
         <div className={`${styles.coords} ${styles['coords--bottom']}`}>
-          <Coord>06 SERVICES · CLICK ANY ROW TO INSPECT</Coord>
+          <Coord>
+            <Translate
+              id="ourServices.coord.hint"
+              description="Bottom coordinate hint inviting users to click a service row"
+            >
+              LAYANAN · KLIK BARIS MANA SAJA UNTUK MENINJAU
+            </Translate>
+          </Coord>
         </div>
       </div>
     </section>

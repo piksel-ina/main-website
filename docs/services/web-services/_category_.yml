@@ -1,6 +1,5 @@
 label: Layanan Web
 className: sidebar-subsection
 link:
-  type: generated-index
-  title: Layanan Web
-  description: RESTful API dan layanan web untuk akses terprogram ke citra satelit.
+  type: doc
+  id: services/web-services/index

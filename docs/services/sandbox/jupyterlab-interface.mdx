@@ -1,0 +1,81 @@
+---
+sidebar_position: 2
+title: Mengenal Antarmuka JupyterLab
+description: Bagian-bagian utama antarmuka JupyterLab di Piksel Sandbox.
+---
+
+import Figure from '@site/src/components/Docs/Figure';
+
+# Mengenal Antarmuka JupyterLab
+
+Setelah server berhasil dijalankan, pengguna akan diarahkan ke halaman JupyterLab. Antarmuka ini terdiri atas beberapa bagian utama yang memiliki fungsi berbeda untuk mengelola file dan menjalankan analisis data geospasial.
+
+<Figure
+  alt="Antarmuka JupyterLab di Piksel Sandbox dengan menu bar, toolbar, file browser, dan area kerja"
+  caption="Antarmuka JupyterLab di Piksel Sandbox."
+  captionAlign="center"
+  size={6}
+  src="/img/sandbox/sandbox-home4.webp"
+/>
+
+## Menu Bar
+
+Menu Bar berada di bagian atas halaman dan berfungsi sebagai pusat pengelolaan seluruh aktivitas pada JupyterLab. Melalui menu ini, pengguna dapat membuat dan menyimpan file, mengedit notebook, menjalankan kode, mengelola kernel, mengatur tampilan, serta mengakses dokumentasi bantuan.
+
+Menu yang tersedia:
+
+- **File** mengelola file dan folder.
+- **Edit** mengedit isi notebook atau dokumen.
+- **View** mengatur tampilan antarmuka.
+- **Run** menjalankan sel (cell) pada notebook.
+- **Kernel** mengelola kernel Python.
+- **Git** mengelola repositori Git jika tersedia.
+- **Tabs** mengatur tab yang sedang dibuka.
+- **Settings** mengubah konfigurasi JupyterLab.
+- **Help** menampilkan dokumentasi dan bantuan.
+
+## Toolbar
+
+Toolbar menyediakan akses cepat ke berbagai fungsi yang sering digunakan tanpa harus membuka menu.
+
+Beberapa tombol yang tersedia antara lain:
+
+- **New Launcher (+)** membuat notebook atau membuka launcher.
+- **New Folder** membuat folder baru.
+- **Upload Files** mengunggah file dari komputer.
+- **Refresh** memperbarui tampilan File Browser.
+
+Toolbar membantu pengguna mengelola workspace dengan lebih cepat dan efisien.
+
+## Area Kerja (Workspace)
+
+Area kerja merupakan bagian utama tempat file dibuka dan ditampilkan.
+
+Pada contoh gambar, file `README.md` sedang dibuka sehingga pengguna dapat membaca dokumentasi mengenai Piksel Sandbox. Selain file Markdown, area ini juga dapat digunakan untuk membuka:
+
+- Jupyter Notebook (`.ipynb`)
+- Skrip Python (`.py`)
+- File CSV
+- Dataset raster dan vektor
+- Gambar
+- Dokumen lainnya
+
+Pengguna dapat membuka beberapa file sekaligus menggunakan sistem tab.
+
+## File Browser
+
+File Browser digunakan untuk menampilkan seluruh folder dan file yang tersedia pada workspace pengguna.
+
+Melalui panel ini, pengguna dapat:
+
+- Membuka folder proyek.
+- Membuka notebook.
+- Mengakses dataset.
+- Mengelola file dan direktori.
+- Menghapus atau mengganti nama file.
+
+## Panel Navigasi (Sidebar)
+
+Sidebar merupakan panel navigasi yang memuat File Browser beserta daftar folder dan file pada workspace. Panel ini menjadi lokasi utama untuk mengelola seluruh sumber daya yang digunakan selama bekerja di JupyterLab.
+
+Apabila ruang kerja ingin diperluas, panel ini dapat disembunyikan atau ditampilkan kembali menggunakan ikon File Browser di sisi kiri aplikasi.

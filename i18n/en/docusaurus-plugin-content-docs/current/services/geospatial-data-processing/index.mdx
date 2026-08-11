@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+pagination_prev: null
+---
+
+# Geospatial Data Processing
+
+Piksel welcomes collaboration on large-scale geospatial data processing, including the handling of large data collections across thousands of tiles, national-scale processing, and recurring monitoring and analysis. Information on proposing a collaboration is available on the [Strategic Collaboration](../support/collaboration) page.
+
+This processing uses cloud computing infrastructure and [Argo Workflow](./argo) to divide work and run it automatically in parallel. The approach allows computing capacity to be increased without an upfront investment in local infrastructure. An example appears below.
+
+Geospatial data can also be processed in Jupyter Notebooks in Piksel Sandbox. For data exploration and prototype development with notebooks, see [Analysis Sandbox](../sandbox). The notebook environment is not designed to split one job into thousands of processes, allocate computing resources to each process, then run and manage them to completion. Piksel uses Argo Workflow for that kind of work.
+
+## Example Application
+
+One example is GeoMAD production: a cloud-free image composite assembled from hundreds of Sentinel-2 images for each tile. Producing a national GeoMAD requires processing thousands of tiles. Since each tile requires substantial computing resources, handling them one at a time can take months. Providing comparable capacity through local infrastructure also requires a significant initial investment.
+
+The Piksel team handles this work by dividing it into tiles and running them in parallel in the cloud. This approach produces GeoMAD for all of Indonesia in less time, without first building local computing infrastructure. Implementation details are available on the [GeoMAD Processing](./geomad) page.
+
+This approach is not limited to GeoMAD. Parallel processing can be used for monitoring coastline change, floods, drought, land cover, and vegetation, as well as other work that processes data regularly across large areas. The workflow can be adapted to the data, method, and analytical objective of each use case.
+
+---

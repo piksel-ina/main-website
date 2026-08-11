@@ -368,7 +368,7 @@
   },
   "homepage.hero.cta.secondary": {
     "message": "Learn About Piksel",
-    "description": "Secondary CTA button text linking to FAQ section"
+    "description": "Secondary CTA button text"
   },
   "homepage.hero.image.alt": {
     "message": "Piksel Hero Image",
@@ -499,20 +499,16 @@
     "description": "Link to full use case list"
   },
   "homepage.news.tag": {
-    "message": "News & Articles",
-    "description": "Section tag for news and articles"
+    "message": "News & Articles"
   },
   "homepage.news.title": {
-    "message": "Latest Information",
-    "description": "Main heading for the news section"
+    "message": "Latest Information"
   },
   "homepage.news.subtitle": {
-    "message": "Latest news, articles, and updates about the Piksel platform and digital earth observation.",
-    "description": "Subtitle for the news section"
+    "message": "Latest news, articles, and updates about the Piksel platform and digital earth observation."
   },
   "homepage.news.viewAll": {
-    "message": "View All Articles",
-    "description": "Link text to view all blog posts"
+    "message": "View All Articles"
   },
   "homepage.faq.tag": {
     "message": "FAQ"
@@ -538,21 +534,9 @@
   "ui.carousel.goToSlide": {
     "message": "Go to slide {slideNumber}"
   },
-  "ourServices.header.tag": {
-    "message": "Our Services",
-    "description": "Tag label for the services section"
-  },
   "ourServices.header.title": {
-    "message": "Piksel Ecosystem",
+    "message": "Inspect every service, before you commit.",
     "description": "Main title for the services section"
-  },
-  "ourServices.header.subtitle": {
-    "message": "Access a comprehensive geospatial data ecosystem to support innovation and strategic decision making. From open data exploration to advanced computing infrastructure for national needs.",
-    "description": "Subtitle description for the services section"
-  },
-  "ourServices.explorer.title": {
-    "message": "Data Explorer",
-    "description": "Service title: Data Explorer"
   },
   "ourServices.explorer.description": {
     "message": "Explore and access geospatial data available on our platform freely."
@@ -560,19 +544,11 @@
   "ourServices.explorer.btn": {
     "message": "Start Exploring"
   },
-  "ourServices.sandbox.title": {
-    "message": "Analysis Sandbox",
-    "description": "Service title: Analysis Sandbox"
-  },
   "ourServices.sandbox.description": {
     "message": "Learn programmatic data processing. Training environment for geospatial analysis development."
   },
   "ourServices.sandbox.btn": {
     "message": "Start Learning"
-  },
-  "ourServices.maps.title": {
-    "message": "Interactive Maps",
-    "description": "Service title: Interactive Maps"
   },
   "ourServices.maps.description": {
     "message": "Interact directly with digital maps to get quick visual insights."
@@ -580,19 +556,11 @@
   "ourServices.maps.btn": {
     "message": "Open Map"
   },
-  "ourServices.webservices.title": {
-    "message": "Web Services",
-    "description": "Service title: Web Services"
-  },
   "ourServices.webservices.description": {
     "message": "Integrate satellite data directly into your applications via global web service standards."
   },
   "ourServices.webservices.btn": {
     "message": "View Documentation"
-  },
-  "ourServices.production.title": {
-    "message": "Cloud Computing",
-    "description": "Service title: Cloud Computing"
   },
   "ourServices.production.description": {
     "message": "High-performance computing infrastructure support for national-scale data processing."
@@ -638,10 +606,6 @@
   "homepage.faq.a5": {
     "message": "Our platform indexes new data daily. Satellites themselves pass over Indonesian territory every day but at different locations following their orbit paths. For a specific location, Sentinel-2 will return every 5 days and Sentinel-1 every 6-12 days."
   },
-  "ourServices.support.title": {
-    "message": "Technical Support",
-    "description": "Service title: Technical Support"
-  },
   "ourServices.support.description": {
     "message": "Expert technical assistance to ensure smooth system integration and operations."
   },
@@ -655,5 +619,345 @@
   "homepage.hero.titleHighlight": {
     "message": "Keputusan yang Cerdas",
     "description": "The highlighted portion of the hero title"
+  },
+  "homepage.hero.eyebrow": {
+    "message": "Indonesia Datacube · v2.4",
+    "description": "The eyebrow text above the hero title"
+  },
+  "homepage.hero.titlePart1": {
+    "message": "Dari orbit hingga",
+    "description": "First part of hero title before emphasis"
+  },
+  "homepage.hero.titleEmphasis": {
+    "message": "insight yang dapat ditindaklanjuti",
+    "description": "Emphasized part of hero title styled italic+teal"
+  },
+  "homepage.hero.titlePart2": {
+    "message": "untuk seluruh Indonesia.",
+    "description": "Last part of hero title after emphasis"
+  },
+  "homepage.hero.coords.lat": {
+    "message": "LAT -6.2088",
+    "description": "Latitude coordinate label in the hero"
+  },
+  "homepage.hero.coords.lon": {
+    "message": "LON 106.8456",
+    "description": "Longitude coordinate label in the hero"
+  },
+  "homepage.hero.coords.date": {
+    "message": "2024-12-01",
+    "description": "Date label in the hero coordinate frame"
+  },
+  "homepage.hero.photoMeta.sensor": {
+    "message": "Sentinel-2A · MSI · 10m",
+    "description": "Sensor metadata displayed on the hero photo"
+  },
+  "homepage.hero.photoMeta.location": {
+    "message": "Jakarta, Indonesia",
+    "description": "Location metadata displayed on the hero photo"
+  },
+  "navbar.cta.label": {
+    "message": "Mulai Sekarang",
+    "description": "CTA button label in the navbar"
+  },
+  "ourServices.explorer.f1": {
+    "message": "Multi-sensor archive — Sentinel-1, Sentinel-2, Landsat"
+  },
+  "ourServices.explorer.f2": {
+    "message": "Tile-aware filtering by AOI, date, cloud cover"
+  },
+  "ourServices.explorer.f3": {
+    "message": "Direct export to STAC, COG and shapefile"
+  },
+  "ourServices.explorer.status": {
+    "message": "OPERATIONAL"
+  },
+  "ourServices.meta.01.capability": {
+    "message": "Browse & filter",
+    "description": "Service 01 capability"
+  },
+  "ourServices.meta.01.interface": {
+    "message": "Web UI",
+    "description": "Service 01 interface type"
+  },
+  "ourServices.meta.01.prerequisite": {
+    "message": "None",
+    "description": "Service 01 prerequisite"
+  },
+  "ourServices.meta.01.access": {
+    "message": "Public",
+    "description": "Service 01 access level"
+  },
+  "ourServices.meta.01.update": {
+    "message": "Daily indexing",
+    "description": "Service 01 update frequency"
+  },
+  "ourServices.sandbox.f1": {
+    "message": "Open Data Cube + xarray + dask, pre-configured"
+  },
+  "ourServices.sandbox.f2": {
+    "message": "Private workspaces with shared example notebooks"
+  },
+  "ourServices.sandbox.f3": {
+    "message": "GPU-enabled kernels for research workloads"
+  },
+  "ourServices.sandbox.status": {
+    "message": "OPERATIONAL"
+  },
+  "ourServices.meta.02.capability": {
+    "message": "Compute & prototype",
+    "description": "Service 02 capability"
+  },
+  "ourServices.meta.02.interface": {
+    "message": "IDE (Jupyter)",
+    "description": "Service 02 interface type"
+  },
+  "ourServices.meta.02.prerequisite": {
+    "message": "Account",
+    "description": "Service 02 prerequisite"
+  },
+  "ourServices.meta.02.access": {
+    "message": "Login",
+    "description": "Service 02 access level"
+  },
+  "ourServices.meta.02.update": {
+    "message": "Always current",
+    "description": "Service 02 update frequency"
+  },
+  "ourServices.maps.f1": {
+    "message": "Terria-based composable story maps"
+  },
+  "ourServices.maps.f2": {
+    "message": "Embed in ministry portals via iframe"
+  },
+  "ourServices.maps.f3": {
+    "message": "Real-time overlays from Piksel STAC"
+  },
+  "ourServices.maps.status": {
+    "message": "OPERATIONAL"
+  },
+  "ourServices.meta.03.capability": {
+    "message": "Visualize & share",
+    "description": "Service 03 capability"
+  },
+  "ourServices.meta.03.interface": {
+    "message": "Web / Embed",
+    "description": "Service 03 interface type"
+  },
+  "ourServices.meta.03.prerequisite": {
+    "message": "None",
+    "description": "Service 03 prerequisite"
+  },
+  "ourServices.meta.03.access": {
+    "message": "Public",
+    "description": "Service 03 access level"
+  },
+  "ourServices.meta.03.update": {
+    "message": "Per new product",
+    "description": "Service 03 update frequency"
+  },
+  "ourServices.webservices.f1": {
+    "message": "WMS / WCS / WMTS — OGC-compliant"
+  },
+  "ourServices.webservices.f2": {
+    "message": "STAC 1.0 catalog with daily indexing"
+  },
+  "ourServices.webservices.f3": {
+    "message": "CORS-enabled, public-domain access"
+  },
+  "ourServices.webservices.status": {
+    "message": "OPERATIONAL"
+  },
+  "ourServices.meta.04.capability": {
+    "message": "Query & stream",
+    "description": "Service 04 capability"
+  },
+  "ourServices.meta.04.interface": {
+    "message": "API (REST)",
+    "description": "Service 04 interface type"
+  },
+  "ourServices.meta.04.prerequisite": {
+    "message": "None",
+    "description": "Service 04 prerequisite"
+  },
+  "ourServices.meta.04.access": {
+    "message": "Public",
+    "description": "Service 04 access level"
+  },
+  "ourServices.meta.04.update": {
+    "message": "Daily indexing",
+    "description": "Service 04 update frequency"
+  },
+  "ourServices.production.f1": {
+    "message": "Argo Workflows on managed EKS"
+  },
+  "ourServices.production.f2": {
+    "message": "Cost-shared for partner ministries"
+  },
+  "ourServices.production.f3": {
+    "message": "Pre-built pipelines: GeoMAD, fractional cover, WOfS"
+  },
+  "ourServices.production.status": {
+    "message": "ON REQUEST"
+  },
+  "ourServices.meta.05.capability": {
+    "message": "Process at scale",
+    "description": "Service 05 capability"
+  },
+  "ourServices.meta.05.interface": {
+    "message": "CLI / Dashboard",
+    "description": "Service 05 interface type"
+  },
+  "ourServices.meta.05.prerequisite": {
+    "message": "Partnership",
+    "description": "Service 05 prerequisite"
+  },
+  "ourServices.meta.05.access": {
+    "message": "By request",
+    "description": "Service 05 access level"
+  },
+  "ourServices.meta.05.update": {
+    "message": "On schedule",
+    "description": "Service 05 update frequency"
+  },
+  "ourServices.support.f1": {
+    "message": "Email-based ticketing with SLA"
+  },
+  "ourServices.support.f2": {
+    "message": "Onboarding & training workshops"
+  },
+  "ourServices.support.f3": {
+    "message": "Joint pilots with BIG analysts"
+  },
+  "ourServices.support.status": {
+    "message": "MON – FRI"
+  },
+  "ourServices.meta.06.capability": {
+    "message": "Onboard & troubleshoot",
+    "description": "Service 06 capability"
+  },
+  "ourServices.meta.06.interface": {
+    "message": "Email",
+    "description": "Service 06 interface type"
+  },
+  "ourServices.meta.06.prerequisite": {
+    "message": "None",
+    "description": "Service 06 prerequisite"
+  },
+  "ourServices.meta.06.access": {
+    "message": "Mon – Fri",
+    "description": "Service 06 access level"
+  },
+  "ourServices.meta.06.update": {
+    "message": "< 1 business day",
+    "description": "Service 06 update frequency"
+  },
+  "ourServices.header.eyebrow": {
+    "message": "01 / Piksel Services",
+    "description": "Eyebrow label for the services section"
+  },
+  "ourServices.header.sub": {
+    "message": "Six interlocking services — pick one to see its surface, capabilities, and the endpoint you'd call to use it in production.",
+    "description": "Subtitle description for the services section"
+  },
+  "homepage.stats.01.description": {
+    "message": "Data satelit dan geospasial yang tersedia untuk diakses",
+    "description": "Statistics Description 01"
+  },
+  "homepage.stats.02.description": {
+    "message": "Seluruh wilayah Negara Kesatuan Republik Indonesia",
+    "description": "Statistics Description 02"
+  },
+  "homepage.stats.03.description": {
+    "message": "Arsip data satelit dari berbagai konstelasi misi penginderaan jauh",
+    "description": "Statistics Description 03"
+  },
+  "homepage.stats.04.description": {
+    "message": "Data dan layanan API terbuka tanpa biaya untuk masyarakat",
+    "description": "Statistics Description 04"
+  },
+  "useCases.agri.title": {
+    "message": "Kedaulatan Pangan"
+  },
+  "useCases.agri.desc": {
+    "message": "Mendukung ketahanan pangan nasional melalui pemantauan fase tanam padi dan kesehatan lahan baku sawah. Menggunakan indeks vegetasi multitemporal untuk mengidentifikasi daerah sentra produksi, memantau pola tanam, dan mendukung estimasi luas panen di tingkat kabupaten."
+  },
+  "useCases.urban.title": {
+    "message": "Perluasan Wilayah Urban"
+  },
+  "useCases.urban.desc": {
+    "message": "Analisis tren perluasan area terbangun (urban sprawl) untuk mendukung perencanaan tata ruang wilayah. Memanfaatkan data arsip satelit jangka panjang untuk memantau konversi lahan di pinggiran kota dan mengukur laju pertumbuhan area terbangun antar periode sensus."
+  },
+  "useCases.forestry.title": {
+    "message": "Pemantauan Deforestasi"
+  },
+  "useCases.forestry.desc": {
+    "message": "Deteksi perubahan tutupan hutan secara berkala menggunakan kombinasi data optik dan radar. Identifikasi indikasi pembukaan lahan baru dan pantau pemulihan vegetasi melalui analisis time-series yang konsisten terhadap gangguan awan."
+  },
+  "useCases.coastal.title": {
+    "message": "Dinamika Pesisir"
+  },
+  "useCases.coastal.desc": {
+    "message": "Pantau perubahan garis pantai akibat abrasi dan akresi menggunakan data time-series Landsat sejak 1984. Identifikasi zona intertidal dan klasifikasi penutup lahan pesisir untuk mendukung pengelolaan wilayah pesisir terpadu."
+  },
+  "useCases.disaster.title": {
+    "message": "Pemetaan Area Banjir"
+  },
+  "useCases.disaster.desc": {
+    "message": "Pemanfaatan data radar Sentinel-1 untuk mendeteksi genangan banjir secara cepat, termasuk saat kondisi tertutup awan. Menyediakan peta indikatif area terdampak untuk mendukung respons kebencanaan dan perencanaan evakuasi."
+  },
+  "useCases.mining.title": {
+    "message": "Aktivitas Pertambangan"
+  },
+  "useCases.mining.desc": {
+    "message": "Pantau pembukaan lahan untuk area tambang terbuka dan identifikasi perubahan bentang alam secara berkala. Kombinasi data optik dan radar untuk mendeteksi kolam tambang dan memantau progres rehabilitasi lahan pasca-tambang."
+  },
+  "footer.brand.description": {
+    "message": "An initiative by Badan Informasi Geospasial in collaboration with Geoscience Australia.",
+    "description": "Footer brand description"
+  },
+  "footer.address": {
+    "message": "Jl. Raya Jakarta–Bogor KM. 46 · Cibinong 16911 · ID",
+    "description": "Footer address"
+  },
+  "ourServices.cta.openService": {
+    "message": "Open service",
+    "description": "CTA button to open the service"
+  },
+  "ourServices.cta.documentation": {
+    "message": "Documentation",
+    "description": "CTA button to open the documentation"
+  },
+  "ourServices.meta.label.capability": {
+    "message": "Capability",
+    "description": "Meta label: capability"
+  },
+  "ourServices.meta.label.interface": {
+    "message": "Interface",
+    "description": "Meta label: interface"
+  },
+  "ourServices.meta.label.prerequisite": {
+    "message": "Prerequisite",
+    "description": "Meta label: prerequisite"
+  },
+  "ourServices.meta.label.access": {
+    "message": "Access",
+    "description": "Meta label: access"
+  },
+  "ourServices.meta.label.update": {
+    "message": "Update",
+    "description": "Meta label: update"
+  },
+  "ourServices.coord.section": {
+    "message": "SECTION · 01 / SERVICES",
+    "description": "Top coordinate label for the services section"
+  },
+  "ourServices.coord.svc": {
+    "message": "SVC · {id} · {name}",
+    "description": "Panel bar coordinate label with service id and name"
+  },
+  "ourServices.coord.hint": {
+    "message": "SERVICES · CLICK ANY ROW TO INSPECT",
+    "description": "Bottom coordinate hint inviting users to click a service row"
   }
 }

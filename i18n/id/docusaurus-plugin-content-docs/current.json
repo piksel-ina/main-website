@@ -15,18 +15,6 @@
     "message": "Temukan berbagai layanan yang ditawarkan oleh platform Piksel.",
     "description": "The generated-index page description for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Komputasi Awan": {
-    "message": "Komputasi Awan",
-    "description": "The label for category 'Komputasi Awan' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.title": {
-    "message": "Komputasi Awan",
-    "description": "The generated-index page title for category 'Komputasi Awan' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Komputasi Awan.link.generated-index.description": {
-    "message": "Sumber daya komputasi awan untuk pemrosesan geospasial berskala besar.",
-    "description": "The generated-index page description for category 'Komputasi Awan' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Jelajah Data": {
     "message": "Jelajah Data",
     "description": "The label for category 'Jelajah Data' in sidebar 'docsSidebar'"
@@ -63,29 +51,9 @@
     "message": "Lingkungan JupyterHub untuk menjalankan analisis geospasial kustom.",
     "description": "The generated-index page description for category 'Sandbox Analisis' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Dukungan Teknis": {
-    "message": "Dukungan Teknis",
-    "description": "The label for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.title": {
-    "message": "Dukungan Teknis",
-    "description": "The generated-index page title for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Dukungan Teknis.link.generated-index.description": {
-    "message": "Dukungan teknis dan bantuan untuk pengguna platform Piksel.",
-    "description": "The generated-index page description for category 'Dukungan Teknis' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Layanan Web": {
     "message": "Layanan Web",
     "description": "The label for category 'Layanan Web' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Layanan Web.link.generated-index.title": {
-    "message": "Layanan Web",
-    "description": "The generated-index page title for category 'Layanan Web' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Layanan Web.link.generated-index.description": {
-    "message": "RESTful API dan layanan web untuk akses terprogram ke citra satelit.",
-    "description": "The generated-index page description for category 'Layanan Web' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Kasus Penggunaan": {
     "message": "Use Cases",
@@ -234,5 +202,17 @@
   "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.description": {
     "message": "Discover the variety of sea, ocean, and coast data products offered by Piksel platform.",
     "description": "The generated-index page description for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Dukungan dan Kolaborasi": {
+    "message": "Dukungan dan Kolaborasi",
+    "description": "The label for category 'Dukungan dan Kolaborasi' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Pemrosesan Data Geospasial": {
+    "message": "Pemrosesan Data Geospasial",
+    "description": "The label for category 'Pemrosesan Data Geospasial' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Piksel Sandbox": {
+    "message": "Piksel Sandbox",
+    "description": "The label for category 'Piksel Sandbox' in sidebar 'docsSidebar'"
   }
 }
