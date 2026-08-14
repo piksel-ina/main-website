@@ -25,7 +25,7 @@ STAC adalah standar terbuka untuk katalog aset geospasial. Menggunakan STAC bera
 | Endpoint | Fungsi |
 | --- | --- |
 | `/stac` | Katalog akar — daftar seluruh collection |
-| `/stac/collections` | Daftar 11 collection (satu per produk) |
+| `/stac/collections` | Daftar collection yang tersedia |
 | `/stac/collections/{product}` | Metadata satu collection |
 | `/stac/search` | Cari item lintas collection dengan filter |
 | `/stac/queryables` | Field yang dapat difilter |

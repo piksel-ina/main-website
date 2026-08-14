@@ -1,61 +1,67 @@
 ---
 sidebar_position: 2
 title: Searching for Data
-description: Step-by-step guide to using the Data Explorer
+description: Step-by-step guide to using Data Explorer
 ---
 
 # Searching for Data
 
-A step-by-step walkthrough for finding available satellite data using the Data Explorer.
+This guide walks through finding available satellite data in Data Explorer.
 
-## Open Piksel Explorer {#open-piksel-explorer}
+## Open Data Explorer {#open-piksel-explorer}
 
-Go to https://explorer.piksel.big.go.id/products. This will open the Data Explorer interface.
+Open the [Data Explorer product catalogue](https://explorer.piksel.big.go.id/products).
 
 ![explorer-homepage](/img/explorer/explorer-home1.webp)
 
-Piksel Explorer has four main sections:
+Data Explorer has four main sections:
 
-1. **Product selector**: Shows the currently selected product. Click the product name to open the product menu.
+1. **Product selector**: Shows the selected product. Select the product name to open the product menu.
 
-2. **Time range**: Shows the active time range used to filter data for the selected product. Click the selected time range in the grey menu bar to open the time selector. The blue bar chart shows data availability over time for your chosen product.
+2. **Time range**: Shows the period used to filter the selected product. Select the time range in the grey menu bar to open the time selector. The blue bar chart shows how data availability changes over time.
 
-3. **Map view**: Displays where data is available for the selected product and time range. Blue tiles indicate the presence of data.
+3. **Map view**: Shows where data is available for the selected product and period. Blue tiles indicate available data.
 
-4. **Product info**: The sidebar shows additional details about the data for the selected product and time range — for example, the number of datasets in the selection, their total area, and their coordinate reference system.
+4. **Product information**: Shows further details about the selection, including the number of datasets, their total area and their coordinate reference system.
 
 ## Select a Product {#pilih-produk}
 
-1. Click the **product selector** to open the menu, then choose **ls9_c2l2_sr** (Landsat 9 Surface Reflectance).
+1. Select the **product selector**, then choose **ls9_c2l2_sr** (Landsat 9 Surface Reflectance).
 
 ![explorer-l9](/img/explorer/explorer-home2.webp)
 
-2. Click the **time** bar to open the menu. Select **2022**. This will show every Landsat 9 dataset for 2022.
+2. Select the **time** bar, then choose **2022** to show Landsat 9 datasets from that year.
 
 ![explorer-2022](/img/explorer/explorer-home3.webp)
 
-3. Click the **all months** bar to open the menu. Select **August**. This will narrow the results to every Landsat 9 dataset for August 2022.
+3. Select the **all months** bar, then choose **August** to narrow the results to August 2022.
 
 ![explorer-aug](/img/explorer/explorer-home4.webp)
 
-4. Click the **all days** bar to open the menu. Select **11**. This will narrow the results to every Landsat 9 dataset for 11 August 2022.
+4. Select the **all days** bar, then choose **11** to narrow the results to 11 August 2022.
 
 ![explorer-11th](/img/explorer/explorer-home5.webp)
 
-5. The **map view** now shows every Landsat 9 dataset for 11 August 2022 as blue tiles. Use the **+** button on the map to zoom in, then click and drag to pan.
+5. The **map view** shows the selected Landsat 9 datasets as blue tiles. Use the **+** button to zoom in, then select and drag the map to move around.
 
 ![explorer-zoom](/img/explorer/explorer-home6.webp)
 
 ## Zoom to a Specific Region {#zoom-ntt}
 
-Use the **+** button on the map to zoom into a region — in this case, East Nusa Tenggara.
+Use the **+** button to zoom in on a region. This example uses East Nusa Tenggara.
 
 ![explorer-ntt](/img/explorer/explorer-home7.webp)
 
-Over East Nusa Tenggara, there is one dataset for 11 August 2022. Click the blue tile on the map to open a data preview along with all related metadata below the map view.
+Select a blue tile to open a preview and view the dataset metadata below the map.
 
 ![explorer-ntt2](/img/explorer/explorer-home8.webp)
 
+## Downloading Data {#mengunduh-data}
+
+Some datasets, particularly products created by Piksel, provide downloadable files on the dataset details page. Under **Location**, select a filename to open or download an available asset.
+
+![Downloadable files under Location on a Data Explorer dataset page](/img/explorer/explorer-dataset-download.webp)
+
 :::tip
-For programmatic queries against the same data, use the [STAC API](./stac-api.md), or see [Data Export Formats](./format-ekspor.md) for other format options.
+To query the catalogue through code, use the [STAC API](./stac-api.md), or see [Data Export Formats](./format-ekspor.md) for other metadata formats.
 :::

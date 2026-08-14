@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: Jelajah Data
-description: Penjelajah metadata untuk memeriksa ketersediaan data
+title: Data Explorer
+description: Katalog metadata untuk menelusuri ketersediaan data satelit
 ---
 
-# Piksel Explorer
+# Data Explorer
 
-Bagaimana kita bisa mengetahui secara spesifik **di mana** dan **kapan** data tersebut tersedia? Sebelum memulai analisis apa pun, kita dapat menjawab pertanyaan ini dengan memeriksa data yang ada di [Data Explorer][exp_lnk].
+Data Explorer adalah katalog metadata untuk menelusuri data satelit yang tersedia di Piksel. Katalog ini memperlihatkan produk, cakupan ruang dan waktu, serta metadata pada setiap dataset. Dokumentasi produk tersedia pada bagian [Produk Data](/docs/category/data-products/).
 
 :::info Mulailah menjelajah
 Buka [Data Explorer][exp_lnk]
@@ -14,50 +14,17 @@ Buka [Data Explorer][exp_lnk]
 
 ## Map atau Explorer {#map-or-explorer}
 
-[Data Explorer][exp_lnk] dan [Piksel Maps][map_lnk] terlihat sama, tetapi keduanya dirancang untuk tujuan yang berbeda.
+[Data Explorer][exp_lnk] dan [Piksel Maps][map_lnk] menggunakan sumber data yang sama, tetapi keduanya digunakan untuk kebutuhan yang berbeda.
 
-Gunakan [Piksel Maps][map_lnk] jika:
+[Piksel Maps][map_lnk] digunakan untuk melihat dan berinteraksi dengan produk atau kumpulan data pada peta.
 
-- Ingin melihat tampilan produk atau kumpulan data tersebut dan berinteraksi dengan data dalam tampilan penampil peta
+[Data Explorer][exp_lnk] digunakan untuk menelusuri produk, memeriksa ketersediaan data berdasarkan ruang dan waktu, serta melihat metadata dataset.
 
-Gunakan [Data Explorer][exp_lnk] jika:
+## Panduan Data Explorer
 
-- Ingin tahu persis di mana dan kapan Anda bisa menemukan data tersebut
-
-## Produk yang Tersedia {#produk-tersedia}
-
-Data Explorer menyediakan **11 produk** data satelit yang mencakup arsip citra optik dan radar dari berbagai misi.
-
-![Daftar produk di Piksel Explorer](/img/explorer/explorer-products-list.webp)
-
-### Keluarga Landsat (USGS)
-
-Citra Landsat Collection 2 Level-2 dengan dua varian per satelit: Surface Reflectance (`sr`) untuk analisis reflektansi permukaan, dan Surface Temperature (`st`) untuk pemantauan suhu permukaan tanah.
-
-| Produk | Deskripsi |
-| --- | --- |
-| `ls5_c2l2_sr` | Landsat 5 — Surface Reflectance |
-| `ls5_c2l2_st` | Landsat 5 — Surface Temperature |
-| `ls7_c2l2_sr` | Landsat 7 — Surface Reflectance |
-| `ls7_c2l2_st` | Landsat 7 — Surface Temperature |
-| `ls8_c2l2_sr` | Landsat 8 — Surface Reflectance |
-| `ls8_c2l2_st` | Landsat 8 — Surface Temperature |
-| `ls9_c2l2_sr` | Landsat 9 — Surface Reflectance |
-| `ls9_c2l2_st` | Landsat 9 — Surface Temperature |
-
-### Keluarga Sentinel (ESA)
-
-Citra optik dan radar dari misi Sentinel milik European Space Agency, termasuk produk komposit tahunan khusus wilayah Indonesia.
-
-| Produk | Deskripsi |
-| --- | --- |
-| `s1_rtc` | Sentinel-1 — Radar SAR terkoreksi terrain (RTC) dari produk Level-1 GRD |
-| `s2_l2a` | Sentinel-2 — Koleksi 2a, 2b, dan 2c |
-| `s2_geomad_annual` | Sentinel-2 — Komposit tahunan Geometric Median dan MAD (14-band, khusus Indonesia) |
-
-:::tip Lihat daftar terkini
-Kunjungi halaman [Products di Piksel Explorer][exp_lnk] untuk daftar produk dan metadata teknis terbaru.
-:::
+- [Mencari Data](./mencari-data.md) menjelaskan cara menelusuri data melalui antarmuka Data Explorer.
+- [STAC API](./stac-api.md) menjelaskan cara mencari dan mengambil metadata dari katalog melalui kode.
+- [Format Ekspor Data](./format-ekspor.md) merangkum endpoint metadata yang tersedia.
 
 [exp_lnk]: https://explorer.piksel.big.go.id/products
 [map_lnk]: https://maps.piksel.big.go.id

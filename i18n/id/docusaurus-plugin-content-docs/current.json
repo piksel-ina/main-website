@@ -15,18 +15,6 @@
     "message": "Temukan berbagai layanan yang ditawarkan oleh platform Piksel.",
     "description": "The generated-index page description for category 'Layanan' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Jelajah Data": {
-    "message": "Jelajah Data",
-    "description": "The label for category 'Jelajah Data' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.title": {
-    "message": "Jelajah Data",
-    "description": "The generated-index page title for category 'Jelajah Data' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Jelajah Data.link.generated-index.description": {
-    "message": "Jelajahi dan temukan citra satelit serta dataset geospasial.",
-    "description": "The generated-index page description for category 'Jelajah Data' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Peta Interaktif": {
     "message": "Peta Interaktif",
     "description": "The label for category 'Peta Interaktif' in sidebar 'docsSidebar'"
@@ -202,5 +190,9 @@
   "sidebar.docsSidebar.category.Piksel Sandbox": {
     "message": "Piksel Sandbox",
     "description": "The label for category 'Piksel Sandbox' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Explorer": {
+    "message": "Data Explorer",
+    "description": "The label for category 'Data Explorer' in sidebar 'docsSidebar'"
   }
 }

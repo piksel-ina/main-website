@@ -2,6 +2,5 @@ position: 5
 label: Data Products
 className: sidebar-section
 link:
-  type: generated-index
-  title: Produk Data
-  description: Discover the variety of data products offered by Piksel platform.
+  type: doc
+  id: data_products/index
