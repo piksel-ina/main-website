@@ -63,5 +63,5 @@ Some datasets, particularly products created by Piksel, provide downloadable fil
 ![Downloadable files under Location on a Data Explorer dataset page](/img/explorer/explorer-dataset-download.webp)
 
 :::tip
-To query the catalogue through code, use the [STAC API](./stac-api.md), or see [Data Export Formats](./format-ekspor.md) for other metadata formats.
+To query the catalogue through code, use the [STAC API](./stac-api.md), or see [Data Export Formats](./data-export-formats.md) for other metadata formats.
 :::
