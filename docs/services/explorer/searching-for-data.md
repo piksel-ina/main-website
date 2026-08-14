@@ -63,5 +63,5 @@ Beberapa dataset, terutama produk yang dihasilkan Piksel, menyediakan berkas yan
 ![Daftar berkas yang dapat diunduh pada halaman detail dataset Data Explorer](/img/explorer/explorer-dataset-download.webp)
 
 :::tip
-Untuk kueri terprogram atas data yang sama, gunakan [STAC API](./stac-api.md) atau lihat [Format Ekspor Data](./format-ekspor.md) untuk pilihan format lainnya.
+Untuk kueri terprogram atas data yang sama, gunakan [STAC API](./stac-api.md) atau lihat [Format Ekspor Data](./data-export-formats.md) untuk pilihan format lainnya.
 :::
