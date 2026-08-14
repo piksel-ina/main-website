@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: STAC API
-description: Guide to querying the Piksel catalog programmatically using the STAC API
+description: Guide to querying the Piksel catalogue through the STAC API
 ---
 
 # Using the STAC API
 
-Piksel Explorer exposes the entire data catalog through the **STAC API 1.1.0** (SpatioTemporal Asset Catalog). With STAC you can search, filter, and retrieve image metadata programmatically without opening the web interface.
+Data Explorer exposes its catalogue through the **STAC API 1.1.0** (SpatioTemporal Asset Catalog). The API can search, filter and retrieve imagery metadata without using the web interface.
 
 :::info Main endpoint
 `https://explorer.piksel.big.go.id/stac`
@@ -14,25 +14,25 @@ Piksel Explorer exposes the entire data catalog through the **STAC API 1.1.0** (
 
 ## Why STAC {#mengapa-stac}
 
-STAC is an open standard for cataloguing geospatial assets. Using STAC means:
+STAC is an open standard for cataloguing geospatial assets. It offers:
 
-- **One API, many catalogs.** Code that works with the Piksel STAC also works with other catalogs like Microsoft Planetary Computer, Earth Search, and USGS Landsat.
-- **Powerful filtering.** Query by area, time, cloud cover, or any metadata field using CQL2.
-- **Interoperable.** Compatible with `pystac-client`, `stackstac`, `odc-stac`, QGIS, and many other tools.
+- **A common interface.** The same STAC clients can connect to Piksel and other catalogues such as Microsoft Planetary Computer, Earth Search and USGS Landsat.
+- **Flexible filtering.** CQL2 queries can filter by area, time, cloud cover and other fields exposed by the catalogue.
+- **Broad tool support.** STAC is supported by `pystac-client`, `stackstac`, `odc-stac`, QGIS and other geospatial tools.
 
 ## Endpoint Structure {#struktur-endpoint}
 
 | Endpoint | Purpose |
 | --- | --- |
-| `/stac` | Root catalog — lists every collection |
-| `/stac/collections` | List of 11 collections (one per product) |
-| `/stac/collections/{product}` | Metadata for a single collection |
-| `/stac/search` | Search for items across collections with filters |
+| `/stac` | Root catalogue with links to the available collections |
+| `/stac/collections` | Lists the available collections |
+| `/stac/collections/{product}` | Metadata for one collection |
+| `/stac/search` | Searches for items across collections using filters |
 | `/stac/queryables` | Fields available for filtering |
 
-## Example: Searching for Items with pystac-client {#contoh-pystac}
+## Example: Search with pystac-client {#contoh-pystac}
 
-`pystac-client` is the most common way to access a STAC API from Python.
+Install `pystac-client` to access the STAC API from Python.
 
 ```bash
 pip install pystac-client
@@ -54,11 +54,11 @@ for item in search.items():
     print(item.id, item.properties["datetime"])
 ```
 
-The example above searches for Landsat 9 Surface Reflectance imagery over East Nusa Tenggara for August 2022.
+This example searches for Landsat 9 Surface Reflectance imagery over East Nusa Tenggara in August 2022.
 
 ## Advanced Filtering with CQL2 {#cql2}
 
-The Piksel STAC supports **CQL2** (Common Query Language) for complex filters that cannot be expressed with the basic parameters.
+Piksel's STAC API supports **CQL2** (Common Query Language) for filters that cannot be expressed with the basic search parameters.
 
 ```python
 search = catalog.search(
@@ -75,13 +75,13 @@ search = catalog.search(
 )
 ```
 
-The example above searches for Sentinel-2 imagery across Indonesia with cloud cover ≤ 20% since January 2024.
+This example searches for Sentinel-2 imagery across Indonesia with cloud cover of 20% or less from January 2024 onwards.
 
-To see every filterable field, visit `/stac/queryables`.
+Open `/stac/queryables` to see the fields available for filtering.
 
-## Retrieving Asset URLs {#mengambil-aset}
+## Retrieve Asset Locations {#mengambil-aset}
 
-Each STAC item contains **assets** — direct URLs to COG (Cloud-Optimized GeoTIFF) files that can be read by `rioxarray`, `rasterio`, or `odc-stac`.
+Each STAC item contains **assets** with locations for files such as Cloud-Optimised GeoTIFFs. The URI scheme and access method depend on the product and its storage location.
 
 ```python
 item = next(search.items())
@@ -89,21 +89,21 @@ red_band_url = item.assets["red"].href
 print(red_band_url)
 ```
 
-These assets can be opened directly without downloading the entire file by taking advantage of HTTP range requests.
+Libraries such as `rioxarray`, `rasterio` and `odc-stac` can use these asset locations when the relevant storage access is configured.
 
 ## Pagination {#pagination}
 
-For large result sets, use the `pystac-client` iterator, which handles pagination automatically:
+For large result sets, the `pystac-client` iterator handles pagination automatically:
 
 ```python
 for item in search.items():
     process(item)
 ```
 
-Use the `limit` parameter to control page size and `max_items` to cap the total number of results retrieved.
+Use `limit` to set the page size and `max_items` to cap the total number of items returned.
 
 :::tip Further reading
 - [STAC API documentation](https://api.stacspec.org/)
 - [pystac-client](https://pystac-client.readthedocs.io/)
-- [Piksel STAC catalog](https://explorer.piksel.big.go.id/stac)
+- [Piksel STAC catalogue](https://explorer.piksel.big.go.id/stac)
 :::

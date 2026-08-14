@@ -56,6 +56,12 @@ Pada wilayah Nusa Tenggara Timur, terdapat satu kumpulan data per tanggal 11 Agu
 
 ![explorer-ntt2](/img/explorer/explorer-home8.webp)
 
+## Mengunduh Data
+
+Beberapa dataset, terutama produk yang dihasilkan Piksel, menyediakan berkas yang dapat diunduh melalui halaman detail dataset. Pada bagian **Location**, pilih nama berkas untuk membuka atau mengunduh aset yang tersedia.
+
+![Daftar berkas yang dapat diunduh pada halaman detail dataset Data Explorer](/img/explorer/explorer-dataset-download.webp)
+
 :::tip
 Untuk kueri terprogram atas data yang sama, gunakan [STAC API](./stac-api.md) atau lihat [Format Ekspor Data](./format-ekspor.md) untuk pilihan format lainnya.
 :::

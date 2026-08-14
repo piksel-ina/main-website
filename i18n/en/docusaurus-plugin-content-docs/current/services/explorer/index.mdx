@@ -1,63 +1,30 @@
 ---
 sidebar_position: 1
 title: Data Explorer
-description: Metadata explorer for checking data availability
+description: Metadata catalogue for exploring satellite data availability
 ---
 
-# Piksel Explorer
+# Data Explorer
 
-How can we know exactly **where** and **when** data is available? Before starting any analysis, we can answer this question by inspecting the catalog in the [Data Explorer][exp_lnk].
+Data Explorer is Piksel's metadata catalogue for finding available satellite data. It shows the product, spatial and temporal coverage, and metadata for each dataset. Product documentation is available under [Data Products](../../category/data-products/).
 
 :::info Start exploring
-Open the [Data Explorer][exp_lnk]
+Open [Data Explorer][exp_lnk]
 :::
 
-## Map or Explorer {#map-or-explorer}
+## Maps or Explorer {#map-or-explorer}
 
-The [Data Explorer][exp_lnk] and [Piksel Maps][map_lnk] look similar, but they are built for different purposes.
+[Data Explorer][exp_lnk] and [Piksel Maps][map_lnk] serve different purposes.
 
-Use [Piksel Maps][map_lnk] if:
+[Piksel Maps][map_lnk] is for viewing products or datasets and interacting with them on a map.
 
-- You want to visualize a product or dataset and interact with the data in a map viewer
+[Data Explorer][exp_lnk] is for browsing products, checking where and when data is available, and inspecting dataset metadata.
 
-Use the [Data Explorer][exp_lnk] if:
+## Data Explorer Guides
 
-- You want to know exactly where and when a given dataset is available
-
-## Available Products {#produk-tersedia}
-
-The Data Explorer provides **11 satellite data products** covering an archive of optical and radar imagery from several missions.
-
-![Product list in the Piksel Explorer](/img/explorer/explorer-products-list.webp)
-
-### Landsat Family (USGS)
-
-Landsat Collection 2 Level-2 imagery with two variants per satellite: Surface Reflectance (`sr`) for surface reflectance analysis, and Surface Temperature (`st`) for land surface temperature monitoring.
-
-| Product | Description |
-| --- | --- |
-| `ls5_c2l2_sr` | Landsat 5 — Surface Reflectance |
-| `ls5_c2l2_st` | Landsat 5 — Surface Temperature |
-| `ls7_c2l2_sr` | Landsat 7 — Surface Reflectance |
-| `ls7_c2l2_st` | Landsat 7 — Surface Temperature |
-| `ls8_c2l2_sr` | Landsat 8 — Surface Reflectance |
-| `ls8_c2l2_st` | Landsat 8 — Surface Temperature |
-| `ls9_c2l2_sr` | Landsat 9 — Surface Reflectance |
-| `ls9_c2l2_st` | Landsat 9 — Surface Temperature |
-
-### Sentinel Family (ESA)
-
-Optical and radar imagery from the European Space Agency's Sentinel missions, including annual composite products dedicated to the Indonesian region.
-
-| Product | Description |
-| --- | --- |
-| `s1_rtc` | Sentinel-1 — Radiometrically Terrain Corrected (RTC) SAR, derived from Level-1 GRD |
-| `s2_l2a` | Sentinel-2 — Collections 2a, 2b, and 2c |
-| `s2_geomad_annual` | Sentinel-2 — Annual Geometric Median and MAD composite (14 bands, Indonesia-specific) |
-
-:::tip See the latest list
-Visit the [Products page on the Piksel Explorer][exp_lnk] for the most up-to-date product list and technical metadata.
-:::
+- [Searching for Data](./mencari-data.md) explains how to find data through the Data Explorer interface.
+- [STAC API](./stac-api.md) explains how to search the catalogue and retrieve metadata through code.
+- [Data Export Formats](./format-ekspor.md) summarises the available metadata endpoints.
 
 [exp_lnk]: https://explorer.piksel.big.go.id/products
 [map_lnk]: https://maps.piksel.big.go.id

@@ -1,0 +1,48 @@
+---
+sidebar_position: 1
+slug: /category/data-products
+pagination_prev: null
+---
+
+import DocCardList from '@theme/DocCardList';
+
+# Data Products
+
+## Available Products
+
+Data Explorer includes satellite data products from several optical and radar missions.
+
+![Product list in Data Explorer](/img/explorer/explorer-products-list.webp)
+
+### Landsat Family (USGS)
+
+Landsat Collection 2 Level-2 imagery is available in two variants for each satellite: Surface Reflectance (`sr`) for surface reflectance analysis and Surface Temperature (`st`) for monitoring land surface temperature.
+
+| Product | Description |
+| --- | --- |
+| `ls5_c2l2_sr` | Landsat 5 — Surface Reflectance |
+| `ls5_c2l2_st` | Landsat 5 — Surface Temperature |
+| `ls7_c2l2_sr` | Landsat 7 — Surface Reflectance |
+| `ls7_c2l2_st` | Landsat 7 — Surface Temperature |
+| `ls8_c2l2_sr` | Landsat 8 — Surface Reflectance |
+| `ls8_c2l2_st` | Landsat 8 — Surface Temperature |
+| `ls9_c2l2_sr` | Landsat 9 — Surface Reflectance |
+| `ls9_c2l2_st` | Landsat 9 — Surface Temperature |
+
+### Sentinel Family (ESA)
+
+The Sentinel products include optical and radar imagery from the European Space Agency, along with annual composites produced for Indonesia.
+
+| Product | Description |
+| --- | --- |
+| `s1_rtc` | Sentinel-1 — Terrain-corrected (RTC) SAR derived from Level-1 GRD |
+| `s2_l2a` | Sentinel-2 — Collections 2a, 2b and 2c |
+| `s2_geomad_annual` | Sentinel-2 — Annual Geometric Median and MAD composite (14 bands, Indonesia) |
+
+:::tip Check the current catalogue
+Visit the [Data Explorer Products page](https://explorer.piksel.big.go.id/products) for the current product list and technical metadata.
+:::
+
+## Product Documentation
+
+<DocCardList />

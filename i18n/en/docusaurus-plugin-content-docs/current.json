@@ -155,14 +155,6 @@
     "message": "Data Products",
     "description": "The label for category 'Data Products' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Data Products.link.generated-index.title": {
-    "message": "Produk Data",
-    "description": "The generated-index page title for category 'Data Products' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Data Products.link.generated-index.description": {
-    "message": "Discover the variety of data products offered by Piksel platform.",
-    "description": "The generated-index page description for category 'Data Products' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Baseline Satellite": {
     "message": "Baseline Satellite",
     "description": "The label for category 'Baseline Satellite' in sidebar 'docsSidebar'"
