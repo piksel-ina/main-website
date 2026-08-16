@@ -7,7 +7,6 @@
 # Generated files
 .docusaurus
 .cache-loader
-.agents
 
 # Misc
 .env
