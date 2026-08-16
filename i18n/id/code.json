@@ -821,13 +821,13 @@
     "message": "Perubahan Garis Pantai"
   },
   "useCases.garisPantai.desc": {
-    "message": "Ekstraksi garis pantai tahunan dari arsip Landsat sejak 1987 menggunakan pemodelan pasang surut INATIDES, untuk mengukur laju erosi dan akresi sepanjang pesisir Indonesia."
+    "message": "Analisis perubahan garis pantai menggunakan citra Landsat multitemporal dan model pasang surut, dengan studi kasus di Pantai Utara Jakarta."
   },
   "useCases.sector.pesisir": {
     "message": "Pesisir"
   },
   "useCases.garisPantai.imageAlt": {
-    "message": "Garis pantai tahunan hasil ekstraksi citra Landsat — Pulau Jawa"
+    "message": "Peta perubahan garis pantai Utara Jakarta"
   },
   "useCases.padi.title": {
     "message": "Monitoring Penanaman Padi"

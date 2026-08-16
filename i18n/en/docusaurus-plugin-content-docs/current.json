@@ -3,22 +3,6 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docsSidebar.category.Data Laut dan Pesisir": {
-    "message": "Sea, Ocean & Coast Data",
-    "description": "The label for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.title": {
-    "message": "Sea, Ocean & Coast Data",
-    "description": "The generated-index page title for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.description": {
-    "message": "Discover the variety of sea, ocean, and coast data products offered by the Piksel platform.",
-    "description": "The generated-index page description for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Pesisir": {
-    "message": "Coastal",
-    "description": "The label for category 'Pesisir' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Layanan": {
     "message": "Services",
     "description": "The label for category 'Layanan' in sidebar 'docsSidebar'"
@@ -206,5 +190,17 @@
   "sidebar.docsSidebar.category.Lingkungan": {
     "message": "Lingkungan",
     "description": "The label for category 'Lingkungan' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Laut dan Pesisir": {
+    "message": "Marine and Coastal Data",
+    "description": "The label for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.title": {
+    "message": "Marine and Coastal Data",
+    "description": "The generated-index page title for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.description": {
+    "message": "Discover the variety of sea, ocean, and coast data products offered by Piksel platform.",
+    "description": "The generated-index page description for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
   }
 }
