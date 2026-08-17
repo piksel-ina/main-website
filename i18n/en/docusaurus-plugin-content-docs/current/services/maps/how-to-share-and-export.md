@@ -4,6 +4,8 @@ title: Share, Save, and Tell a Map Story
 description: Create a share link, download a map view, print, and create stories.
 ---
 
+import Figure from '@site/src/components/Docs/Figure';
+
 # Share, Save, and Tell a Map Story
 
 After configuring layers and the map view, use **Share / Print** to share or save the result.
@@ -14,7 +16,11 @@ After configuring layers and the map view, use **Share / Print** to share or sav
 2. Click **Share / Print** in the top bar.
 3. Copy the share URL to send the view to others or bookmark it for later.
 
-![Share and Print panel](/img/maps/maps-share-01-share-panel.webp)
+<Figure
+  src="/img/maps/maps-share-01-share-panel.webp"
+  alt="Share and Print panel"
+  size={6}
+/>
 
 A share link restores the map configuration when opened, including the camera view and active layers. Piksel Map does not save a map as a separate account project; the share URL is the way to return to the same configuration.
 
@@ -30,7 +36,11 @@ From the same panel, you can:
 
 Click **Stories** in the top bar to enter story mode. Select **Capture current scene** to save the current view as a scene, then add more scenes to build a narrative sequence.
 
-![Stories panel](/img/maps/maps-share-02-story-panel.webp)
+<Figure
+  src="/img/maps/maps-share-02-story-panel.webp"
+  alt="Stories panel"
+  size={6}
+/>
 
 :::tip Prepare each scene before capturing it
 Set the location, zoom, layers, style, and time first. A scene is easier to understand when it communicates one main finding.
