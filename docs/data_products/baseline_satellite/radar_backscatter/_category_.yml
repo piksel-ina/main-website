@@ -1,0 +1,6 @@
+position: 3
+label: Radar Backscatter Satellite Data
+className: sidebar-subsection
+link:
+  type: doc
+  id: data_products/baseline_satellite/radar_backscatter/index

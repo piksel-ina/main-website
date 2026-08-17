@@ -1,39 +1,39 @@
 ---
 sidebar_position: 1
 title: Landsat 5 Surface Reflectance
-description:  Landsat 5 SR dari US Geological Survey (USGS)
+description: Landsat 5 SR from the US Geological Survey (USGS)
 ---
 
-# Landsat 5 Surface Reflectance — Spesifikasi
+# Landsat 5 Surface Reflectance — Specifications
 
 import ProductCard from '@site/src/components/Docs/ProductCard';
 
 <ProductCard
   productId='ls5_c2l2_sr'
   meta={[
-    { label: 'Nama Teknis:', value: 'Landsat 5 Collection 2 Level-2 Surface Reflectance' },
-    { label: 'Versi:', value: '3.0.0' },
-    { label: 'Resolusi:', value: '30 m' },
-    { label: 'Cakupan:', value: '1 Maret 1984 hingga 5 Juni 2013' },
-    { label: 'Pembaruan Data:', value: 'Tidak Ada Pembaruan Data' },
+    { label: 'Technical name:', value: 'Landsat 5 Collection 2 Level-2 Surface Reflectance' },
+    { label: 'Version:', value: '3.0.0' },
+    { label: 'Resolution:', value: '30 m' },
+    { label: 'Coverage:', value: '1 March 1984 to 5 June 2013' },
+    { label: 'Data updates:', value: 'No further updates' },
   ]}
   tags={['Baseline', 'Raster']}
   image='/img/preview/preview_sr.webp'
-  imageAlt='Landsat 5 Surface Reflectance Preview'
+  imageAlt='Landsat 5 Surface Reflectance preview'
 />
 
-## Tentang
-Landsat 5 Surface Reflectance (Landsat 5) adalah rangkaian dataset dari satelit penginderaan jauh yang memegang Guinness World Record untuk misi pengamatan Bumi terlama. Selama hampir 29 tahun beroperasi hingga 2013, Landsat 5 telah mengorbit planet lebih dari 150.000 kali dan mengirimkan 2,5 juta citra permukaan daratan di seluruh dunia. Menggunakan sensor Thematic Mapper (TM) dengan resolusi 30 meter, data yang dihasilkan menjadi instrumen krusial dalam memantau deforestasi, bencana, serta perubahan penggunaan lahan secara global. Reflektansi permukaan diturunkan menggunakan algoritma LEDAPS (Landsat Ecosystem Disturbance Adaptive Processing System) yang mengoreksi efek hamburan dan penyerapan atmosfer.
+## About
+Landsat 5 Surface Reflectance comprises datasets from Landsat 5, the remote-sensing satellite that holds the Guinness World Record for the longest-running Earth observation mission. Over nearly 29 years of operation, ending in 2013, Landsat 5 orbited the planet more than 150,000 times and transmitted 2.5 million images of land surfaces worldwide. The 30-metre imagery from its Thematic Mapper (TM) sensor supports global monitoring of deforestation, disasters and land-use change. Surface reflectance is derived using the Landsat Ecosystem Disturbance Adaptive Processing System (LEDAPS) algorithm, which corrects for atmospheric scattering and absorption.
 
-## Band
+## Bands
 
 <table>
   <thead>
     <tr>
-      <th>Nama</th>
-      <th>Tipe</th>
+      <th>Name</th>
+      <th>Type</th>
       <th>Unit</th>
-      <th>No-Data</th>
+      <th>No-data</th>
       <th>Alias</th>
     </tr>
   </thead>
@@ -111,16 +111,16 @@ Landsat 5 Surface Reflectance (Landsat 5) adalah rangkaian dataset dari satelit 
   </tbody>
 </table>
 
-## Aplikasi
-- Pengembangan produk turunan untuk memantau lahan, perairan pedalaman, dan fitur pesisir, seperti:
-  - pertumbuhan perkotaan
-  - habitat pesisir
-  - kegiatan pertambangan
-  - kegiatan pertanian (misalnya: peternakan, pertanian irigasi, pertanian tadah hujan)
-  - luas perairan
-- Pengembangan produk informasi yang terperinci, seperti:
-  - unit luas perairan permukaan yang terdeteksi
-  - unit luas deforestasi
-  - perkiraan hasil panen lahan pertanian.
-- Survei kepatuhan
-- Manajemen keadaan darurat
+## Applications
+- Development of derived products for monitoring land, inland waters and coastal features, including:
+  - urban growth
+  - coastal habitats
+  - mining activities
+  - agricultural activity (for example, livestock farming and irrigated or rainfed agriculture)
+  - water extent
+- Development of detailed information products, including:
+  - measurements of detected surface-water extent
+  - measurements of deforestation extent
+  - crop-yield estimates
+- Compliance surveys
+- Emergency management

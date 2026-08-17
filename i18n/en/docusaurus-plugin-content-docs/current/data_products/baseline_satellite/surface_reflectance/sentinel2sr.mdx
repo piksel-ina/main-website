@@ -1,0 +1,163 @@
+---
+sidebar_position: 5
+title: Sentinel-2 Surface Reflectance
+description: Sentinel-2 SR from the European Space Agency (ESA)
+---
+
+# Sentinel-2 Surface Reflectance — Specifications
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='s2_l2a'
+  meta={[
+    { label: 'Technical name:', value: 'Sentinel-2 (2A/2B/2C) Level-2A Surface Reflectance' },
+    { label: 'Version:', value: '3.2.1' },
+    { label: 'Resolution:', value: '10–60 m' },
+    { label: 'Coverage:', value: 'January 2017 to present' },
+    { label: 'Data updates:', value: 'Daily' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_sr.webp'
+  imageAlt='Sentinel-2 Surface Reflectance preview'
+/>
+
+## About
+Sentinel-2 Surface Reflectance (Sentinel-2) is part of the Piksel Surface Reflectance dataset series. The series includes an extensive archive of imagery acquired by the US Geological Survey (USGS) Landsat satellite programme and the European Space Agency (ESA) Sentinel-2 programme. The imagery has been validated, calibrated and adjusted for conditions in Indonesia, making it ready for straightforward analysis.
+
+This product combines imagery from the Multispectral Instrument (MSI) sensors on Sentinel-2A, Sentinel-2B and Sentinel-2C. It has been processed to Level-2A, representing bottom-of-atmosphere surface reflectance, using ESA's Sen2Cor processor.
+
+## Bands
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>No-data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**coastal**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_01, B01, coastal_aerosol</td>
+    </tr>
+    <tr>
+      <td>**blue**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_02, B02</td>
+    </tr>
+    <tr>
+      <td>**green**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_03, B03</td>
+    </tr>
+    <tr>
+      <td>**red**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_04, B04</td>
+    </tr>
+    <tr>
+      <td>**rededge1**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_05, B05, red_edge_1</td>
+    </tr>
+    <tr>
+      <td>**rededge2**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_06, B06, red_edge_2</td>
+    </tr>
+    <tr>
+      <td>**rededge3**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_07, B07, red_edge_3</td>
+    </tr>
+    <tr>
+      <td>**nir**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_08, B08, nir_1</td>
+    </tr>
+    <tr>
+      <td>**nir08**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_8a, B8A, nir_narrow, nir_2</td>
+    </tr>
+    <tr>
+      <td>**nir09**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_09, B09, water_vapour</td>
+    </tr>
+    <tr>
+      <td>**swir16**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_11, B11, swir_1, swir_16</td>
+    </tr>
+    <tr>
+      <td>**swir22**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>band_12, B12, swir_2, swir_22</td>
+    </tr>
+    <tr>
+      <td>**scl**</td>
+      <td>uint8</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>mask, SCL, qa</td>
+    </tr>
+    <tr>
+      <td>**aot**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>aerosol_optical_thickness, AOT</td>
+    </tr>
+    <tr>
+      <td>**wvp**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>scene_average_water_vapour, WVP</td>
+    </tr>
+  </tbody>
+</table>
+
+## Applications
+- Development of derived products for monitoring land, inland waters and coastal features, including:
+  - urban growth
+  - coastal habitats
+  - mining activities
+  - agricultural activity (for example, livestock farming and irrigated or rainfed agriculture)
+  - water extent
+- Development of detailed information products, including:
+  - measurements of detected surface-water extent
+  - measurements of deforestation extent
+  - crop-yield estimates
+- Compliance surveys
+- Emergency management

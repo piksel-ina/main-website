@@ -202,5 +202,13 @@
   "sidebar.docsSidebar.category.Data Laut dan Pesisir.link.generated-index.description": {
     "message": "Discover the variety of sea, ocean, and coast data products offered by Piksel platform.",
     "description": "The generated-index page description for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Surface Temperature Satellite Data": {
+    "message": "Surface Temperature Satellite Data",
+    "description": "The label for category 'Surface Temperature Satellite Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Radar Backscatter Satellite Data": {
+    "message": "Radar Backscatter Satellite Data",
+    "description": "The label for category 'Radar Backscatter Satellite Data' in sidebar 'docsSidebar'"
   }
 }

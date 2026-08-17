@@ -1,39 +1,39 @@
 ---
 sidebar_position: 3
 title: Landsat 8 Surface Reflectance
-description:  Landsat 8 SR dari US Geological Survey (USGS)
+description: Landsat 8 SR from the US Geological Survey (USGS)
 ---
 
-# Landsat 8 Surface Reflectance — Spesifikasi
+# Landsat 8 Surface Reflectance — Specifications
 
 import ProductCard from '@site/src/components/Docs/ProductCard';
 
 <ProductCard
   productId='ls8_c2l2_sr'
   meta={[
-    { label: 'Nama Teknis:', value: 'Landsat 8 Collection 2 Level-2 Surface Reflectance' },
-    { label: 'Versi:', value: '3.0.0' },
-    { label: 'Resolusi:', value: '15–30 m' },
-    { label: 'Cakupan:', value: '19 Maret 2013 sampai sekarang' },
-    { label: 'Pembaruan Data:', value: 'Harian' },
+    { label: 'Technical name:', value: 'Landsat 8 Collection 2 Level-2 Surface Reflectance' },
+    { label: 'Version:', value: '3.0.0' },
+    { label: 'Resolution:', value: '15–30 m' },
+    { label: 'Coverage:', value: '19 March 2013 to present' },
+    { label: 'Data updates:', value: 'Daily' },
   ]}
   tags={['Baseline', 'Raster']}
   image='/img/preview/preview_sr.webp'
-  imageAlt='Landsat 8 Surface Reflectance Preview'
+  imageAlt='Landsat 8 Surface Reflectance preview'
 />
 
-## Tentang
-Landsat 8 Surface Reflectance (Landsat 8) menyediakan data reflektansi permukaan resolusi 30 meter dari sensor Operational Land Imager (OLI), dengan tambahan band pankromatik 15 meter untuk pan-sharpening. Diluncurkan pada Februari 2013, Landsat 8 memperkenalkan dua band baru dibanding Landsat 7: band coastal/aerosol (Band 1) untuk studi zona pesisir dan band cirrus (Band 9) untuk deteksi awan tipis. Reflektansi permukaan diturunkan menggunakan algoritma LaSRC (Land Surface Reflectance Code) yang mengoreksi efek atmosfer, menghasilkan data yang siap untuk analisis vegetasi, tutupan lahan, dan deteksi perubahan.
+## About
+Landsat 8 Surface Reflectance (Landsat 8) provides 30-metre surface reflectance data from the Operational Land Imager (OLI) sensor, with an additional 15-metre panchromatic band for pan-sharpening. Launched in February 2013, Landsat 8 introduced two new bands compared with Landsat 7: a coastal/aerosol band (Band 1) for coastal zone studies and a cirrus band (Band 9) for detecting thin cloud. Surface reflectance is derived using the Land Surface Reflectance Code (LaSRC) algorithm, which applies atmospheric correction to produce data ready for vegetation analysis, land-cover analysis and change detection.
 
-## Band
+## Bands
 
 <table>
   <thead>
     <tr>
-      <th>Nama</th>
-      <th>Tipe</th>
+      <th>Name</th>
+      <th>Type</th>
       <th>Unit</th>
-      <th>No-Data</th>
+      <th>No-data</th>
       <th>Alias</th>
     </tr>
   </thead>
@@ -111,16 +111,16 @@ Landsat 8 Surface Reflectance (Landsat 8) menyediakan data reflektansi permukaan
   </tbody>
 </table>
 
-## Aplikasi
-- Pengembangan produk turunan untuk memantau lahan, perairan pedalaman, dan fitur pesisir, seperti:
-  - pertumbuhan perkotaan
-  - habitat pesisir
-  - kegiatan pertambangan
-  - kegiatan pertanian (misalnya: peternakan, pertanian irigasi, pertanian tadah hujan)
-  - luas perairan
-- Pengembangan produk informasi yang terperinci, seperti:
-  - unit luas perairan permukaan yang terdeteksi
-  - unit luas deforestasi
-  - perkiraan hasil panen lahan pertanian.
-- Survei kepatuhan
-- Manajemen keadaan darurat
+## Applications
+- Development of derived products for monitoring land, inland waters and coastal features, including:
+  - urban growth
+  - coastal habitats
+  - mining activities
+  - agricultural activity (for example, livestock farming and irrigated or rainfed agriculture)
+  - water extent
+- Development of detailed information products, including:
+  - measurements of detected surface-water extent
+  - measurements of deforestation extent
+  - crop-yield estimates
+- Compliance surveys
+- Emergency management

@@ -1,0 +1,38 @@
+---
+title: Surface Temperature Satellite Data
+description: A guide to choosing from the Surface Temperature data products available in Piksel
+---
+
+# Surface Temperature Satellite Data
+
+Land Surface Temperature (LST), or Surface Temperature (ST), is the radiative temperature of the Earth's surface measured through a satellite's thermal infrared channels. ST data is used to monitor urban heat islands, drought, vegetation stress, volcanic and geothermal activity, forest fires, and water temperature.
+
+Piksel provides **four ST products** from the **Landsat** family (USGS). Sentinel-2 does not provide a surface temperature product because its MSI sensor operates only at visible and near-infrared wavelengths.
+
+## Product Comparison
+
+| Product | Sensor | Thermal Band | Coverage | Revisit | Best for |
+| --- | --- | --- | --- | --- | --- |
+| [Landsat 5](./landsat5st.mdx) | TM | Band 6 (10.4–12.5 μm) | Aug 1986 – Nov 2011 | 16 days | Historical baseline for the 1980s–2000s |
+| [Landsat 7](./landsat7st.mdx) | ETM+ | Band 6 (10.4–12.5 μm) | Jun 1999 – Jan 2024 | 16 days | Long time series (SLC-off after May 2003) |
+| [Landsat 8](./landsat8st.mdx) | TIRS | Band 10 (10.6–11.2 μm) | Apr 2013 – present | 16 days | Regular updates, paired with L9 |
+| [Landsat 9](./landsat9st.mdx) | TIRS-2 | Band 10 (10.6–11.2 μm) | Oct 2021 – present | 16 days | Best radiometric quality (stray light correction) |
+
+All products are delivered at **30 m** resolution (resampled from their native thermal resolution — 120 m for TM, 60 m for ETM+, and 100 m for TIRS/TIRS-2). Combining **Landsat 8 + 9** provides an effective 8-day revisit for high-resolution thermal monitoring.
+
+## Choosing a Product
+
+- **Need a long-term temperature baseline?** — Start with [Landsat 5](./landsat5st.mdx) (1986) → [Landsat 7](./landsat7st.mdx) (1999) → [Landsat 8](./landsat8st.mdx) (2013) → [Landsat 9](./landsat9st.mdx) (2021) for a continuous thermal record spanning almost 40 years.
+- **Need regular updates and a short revisit time?** — Combine [Landsat 8](./landsat8st.mdx) + [Landsat 9](./landsat9st.mdx) for an 8-day revisit.
+- **Need the best radiometric quality?** — [Landsat 9](./landsat9st.mdx). Its TIRS-2 sensor includes stray light correction that is not available on Landsat 8 TIRS.
+- **Need surface reflectance rather than temperature?** — See [Surface Reflectance](../surface_reflectance/index.mdx).
+
+## About Surface Temperature
+
+The USGS Surface Temperature Collection 2 Level-2 products estimate radiative surface temperature in **Kelvin** using a single-channel algorithm that combines thermal band measurements, surface emissivity, and atmospheric variables (water vapour, upwelling and downwelling radiance, and atmospheric transmission).
+
+Alongside the primary temperature band (`lwir` or `lwir11`), each dataset includes **ancillary bands** — thermal radiance (TRAD), upwelling radiance (URAD), downwelling radiance (DRAD), atmospheric transmittance (ATRAN), emissivity (EMIS), emissivity stddev (EMSD), and cloud distance (CDIST). These bands allow users to recalculate corrected values or apply alternative algorithms where needed.
+
+:::note Converting to Celsius
+Temperature values in Kelvin can be converted to Celsius with: `T(°C) = T(K) − 273.15`. Product scale factors are generally applied by libraries such as `odc-stac` or `rioxarray`.
+:::

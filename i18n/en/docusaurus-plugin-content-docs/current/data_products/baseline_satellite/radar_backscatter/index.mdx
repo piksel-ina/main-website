@@ -1,0 +1,50 @@
+---
+title: Radar Backscatter Satellite Data
+description: A guide to the SAR backscatter data product available in Piksel
+---
+
+# Radar Backscatter Satellite Data
+
+Radar backscatter (σ⁰) is the intensity of microwave energy reflected from the Earth's surface back towards the radar sensor. Unlike optical sensors, which depend on sunlight and cloud-free conditions, **Synthetic Aperture Radar (SAR)** emits its own signal and works in all weather, day and night.
+
+Piksel provides **one radar product** from the **Sentinel-1** mission operated by the European Space Agency (ESA).
+
+## Available Product
+
+| Product | Sensor | Polarisation | Resolution | Coverage | Revisit | Best for |
+| --- | --- | --- | --- | --- | --- | --- |
+| [Sentinel-1 RTC](./sentinel1rtc.mdx) | C-band SAR | VV+VH or HH+HV | 20 m | Oct 2014 – present | 6–12 days | All-weather monitoring, floods, deforestation |
+
+## When to Use Radar
+
+- **Is the area often covered by cloud during the tropical wet season?** — Radar penetrates cloud. Optical data does not.
+- **Need rapid flood mapping?** — Radar detects standing water with high contrast against land.
+- **Need to detect landslides and ground movement?** — SAR is sensitive to changes in surface geometry.
+- **Analysing mangroves or wetlands?** — Backscatter is sensitive to surface moisture content.
+- **Need colour reflectance or vegetation indices (NDVI, EVI)?** — Use [Surface Reflectance](../surface_reflectance/index.mdx).
+- **Need land surface temperature?** — Use [Surface Temperature](../surface_temperature/index.mdx).
+
+Combining radar and optical data (sensor fusion) brings their complementary information together: optical data supports vegetation classification, while radar captures surface structure and moisture.
+
+## About Radar Backscatter
+
+SAR sensors transmit microwave pulses towards the Earth's surface and measure the intensity and polarisation of the returning signal. Backscatter values (σ⁰) are affected by:
+
+- **Surface roughness** — smooth surfaces (calm water) reflect the signal away from the sensor (low values), while rough surfaces (forest, urban areas) scatter more of it back (high values)
+- **Dielectric constant** — influenced by surface moisture content (wet soil scatters more strongly than dry soil)
+- **Acquisition geometry** — the radar wave's incidence angle affects the response
+
+### Polarisation
+
+Sentinel-1 acquires data in two polarisation channels at once. Ratios between polarisations (such as VV/VH) are often used to distinguish surface types:
+
+- **VV+VH** — the default mode over land; VH is sensitive to vegetation structure
+- **HH+HV** — used in some cross-polarised modes and for ice monitoring
+
+### Radiometrically Terrain Corrected (RTC)
+
+RTC products apply topographic and radiometric corrections so that backscatter values can be compared **between scenes** and **over time**, regardless of slope or acquisition geometry. This matters for time-series analysis — without RTC correction, backscatter values from slopes facing the sensor will be falsely high, while values from slopes facing away from the sensor will be falsely low.
+
+:::tip Units
+Backscatter values in Sentinel-1 RTC are stored on a **linear scale** (float32). For analysis, they are often converted to a **decibel (dB) scale**: `σ⁰(dB) = 10 · log₁₀(σ⁰_linear)`. dB values range from around −25 dB (water) to −5 dB (very rough surfaces / buildings).
+:::

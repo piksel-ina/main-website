@@ -1,0 +1,126 @@
+---
+sidebar_position: 4
+title: Landsat 9 Surface Reflectance
+description: Landsat 9 SR from the US Geological Survey (USGS)
+---
+
+# Landsat 9 Surface Reflectance — Specifications
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='ls9_c2l2_sr'
+  meta={[
+    { label: 'Technical name:', value: 'Landsat 9 Collection 2 Level-2 Surface Reflectance' },
+    { label: 'Version:', value: '3.0.0' },
+    { label: 'Resolution:', value: '15–30 m' },
+    { label: 'Coverage:', value: '31 October 2021 to present' },
+    { label: 'Data updates:', value: 'Daily' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_sr.webp'
+  imageAlt='Landsat 9 Surface Reflectance preview'
+/>
+
+## About
+Landsat 9 Surface Reflectance (Landsat 9) provides 30-metre surface reflectance data from the Operational Land Imager 2 (OLI-2) sensor. This enhanced version of the OLI on Landsat 8 has 14-bit radiometric resolution, compared with 12-bit on Landsat 8, allowing it to detect finer spectral variation, particularly in dark areas such as water bodies and dense forests. Its band structure is identical to that of Landsat 8 and includes a 15-metre panchromatic band, as well as coastal/aerosol and cirrus bands. Surface reflectance is derived using the same Land Surface Reflectance Code (LaSRC) algorithm as Landsat 8. Together, Landsat 8 and Landsat 9 provide an eight-day revisit time for monitoring high-resolution optical reflectance across Indonesia.
+
+## Bands
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>No-data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**coastal**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B1, band_1, coastal_aerosol</td>
+    </tr>
+    <tr>
+      <td>**blue**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B2, band_2</td>
+    </tr>
+    <tr>
+      <td>**green**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B3, band_3</td>
+    </tr>
+    <tr>
+      <td>**red**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B4, band_4</td>
+    </tr>
+    <tr>
+      <td>**nir08**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B5, band_5</td>
+    </tr>
+    <tr>
+      <td>**swir16**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B6, band_6, swir_1</td>
+    </tr>
+    <tr>
+      <td>**swir22**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B7, band_7, swir_2</td>
+    </tr>
+    <tr>
+      <td>**qa_pixel**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>1</td>
+      <td>pixel_qa, pq, pixel_quality</td>
+    </tr>
+    <tr>
+      <td>**qa_radsat**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>QA_RADSAT, radsat, radiometric_saturation</td>
+    </tr>
+    <tr>
+      <td>**qa_aerosol**</td>
+      <td>uint8</td>
+      <td>bit_index</td>
+      <td>1</td>
+      <td>SR_QA_AEROSOL, qa_aerosol, aerosol_qa</td>
+    </tr>
+  </tbody>
+</table>
+
+## Applications
+- Development of derived products for monitoring land, inland waters and coastal features, including:
+  - urban growth
+  - coastal habitats
+  - mining activities
+  - agricultural activity (for example, livestock farming and irrigated or rainfed agriculture)
+  - water extent
+- Development of detailed information products, including:
+  - measurements of detected surface-water extent
+  - measurements of deforestation extent
+  - crop-yield estimates
+- Compliance surveys
+- Emergency management

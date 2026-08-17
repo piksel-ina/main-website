@@ -1,0 +1,130 @@
+---
+sidebar_position: 2
+title: Landsat 7 Surface Reflectance
+description: Landsat 7 SR from the US Geological Survey (USGS)
+---
+
+# Landsat 7 Surface Reflectance — Specifications
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='ls7_c2l2_sr'
+  meta={[
+    { label: 'Technical name:', value: 'Landsat 7 Collection 2 Level-2 Surface Reflectance' },
+    { label: 'Version:', value: '3.0.0' },
+    { label: 'Resolution:', value: '15–30 m' },
+    { label: 'Coverage:', value: '15 April 1999 to 19 January 2024' },
+    { label: 'Data updates:', value: 'No further updates' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_sr.webp'
+  imageAlt='Landsat 7 Surface Reflectance preview'
+/>
+
+## About
+Landsat 7 Surface Reflectance (Landsat 7) provides 30-metre surface reflectance data from the Enhanced Thematic Mapper Plus (ETM+) sensor, with an additional 15-metre panchromatic band for pan-sharpening. It is designed specifically for scientific analysis and time-series monitoring. The Landsat Ecosystem Disturbance Adaptive Processing System (LEDAPS) algorithm corrects for atmospheric scattering and absorption, enabling more accurate change detection.
+
+:::note SLC-off since 31 May 2003
+The ETM+ sensor's Scan Line Corrector (SLC) failed on 31 May 2003. Scenes acquired after that date contain diagonal data gaps, with about 22% of pixels missing from each scene. Data acquired before that date is unaffected and remains ideal for long-term time-series analysis.
+:::
+
+## Bands
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>No-data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**blue**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B1, band_1</td>
+    </tr>
+    <tr>
+      <td>**green**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B2, band_2</td>
+    </tr>
+    <tr>
+      <td>**red**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B3, band_3</td>
+    </tr>
+    <tr>
+      <td>**nir08**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B4, band_4, nir</td>
+    </tr>
+    <tr>
+      <td>**swir16**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B5, band_5, swir_1</td>
+    </tr>
+    <tr>
+      <td>**swir22**</td>
+      <td>uint16</td>
+      <td>1</td>
+      <td>0</td>
+      <td>SR_B7, band_7, swir_2</td>
+    </tr>
+    <tr>
+      <td>**qa_pixel**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>1</td>
+      <td>QA_PIXEL, pq, pixel_quality</td>
+    </tr>
+    <tr>
+      <td>**qa_radsat**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>QA_RADSAT, radsat, radiometric_saturation</td>
+    </tr>
+    <tr>
+      <td>**atmos_opacity**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>SR_ATMOS_OPACITY, atmos_opacity</td>
+    </tr>
+    <tr>
+      <td>**cloud_qa**</td>
+      <td>uint8</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>SR_CLOUD_QA</td>
+    </tr>
+  </tbody>
+</table>
+
+## Applications
+- Development of derived products for monitoring land, inland waters and coastal features, including:
+  - urban growth
+  - coastal habitats
+  - mining activities
+  - agricultural activity (for example, livestock farming and irrigated or rainfed agriculture)
+  - water extent
+- Development of detailed information products, including:
+  - measurements of detected surface-water extent
+  - measurements of deforestation extent
+  - crop-yield estimates
+- Compliance surveys
+- Emergency management

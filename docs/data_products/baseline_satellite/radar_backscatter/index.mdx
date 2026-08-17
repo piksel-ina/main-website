@@ -1,0 +1,50 @@
+---
+title: Data Satelit Hamburan Balik Radar
+description: Panduan produk data hamburan balik radar (SAR backscatter) yang tersedia di Piksel
+---
+
+# Data Satelit Hamburan Balik Radar
+
+Hamburan balik radar (radar backscatter, σ⁰) adalah nilai intensitas gelombang mikro yang dipantulkan kembali dari permukaan Bumi ke sensor radar setelah memantulkan objek permukaan. Berbeda dari sensor optik yang tergantung pada cahaya matahari dan bebas awan, sensor **Synthetic Aperture Radar (SAR)** memancarkan gelombangnya sendiri dan bekerja pada segala kondisi cuaca, siang maupun malam.
+
+Piksel menyediakan **satu produk radar** dari misi **Sentinel-1** milik European Space Agency (ESA).
+
+## Produk yang Tersedia
+
+| Produk | Sensor | Polarisasi | Resolusi | Cakupan | Revisit | Terbaik untuk |
+| --- | --- | --- | --- | --- | --- | --- |
+| [Sentinel-1 RTC](./sentinel1rtc.mdx) | C-band SAR | VV+VH atau HH+HV | 20 m | Okt 2014 – sekarang | 6–12 hari | Pemantauan segala cuaca, banjir, deforestasi |
+
+## Kapan Menggunakan Radar
+
+- **Wilayah sering tertutup awan (musim hujan tropis)?** — Radar menembus awan. Optik tidak.
+- **Pemetaan banjir cepat?** — Radar mendeteksi genangan air dengan kontras yang tinggi terhadap daratan.
+- **Deteksi longsor dan pergerakan tanah?** — SAR sensitif terhadap perubahan geometri permukaan.
+- **Analisis mangrove atau lahan basah?** — Backscatter merespons kadar air permukaan dengan baik.
+- **Butuh reflektansi warna atau vegetasi indeks (NDVI, EVI)?** — Gunakan [Surface Reflectance](/docs/data_products/baseline_satellite/surface_reflectance).
+- **Butuh suhu permukaan tanah?** — Gunakan [Surface Temperature](/docs/data_products/baseline_satellite/surface_temperature).
+
+Kombinasi radar dan optik (sensor fusion) memberikan gambaran paling lengkap — misalnya optik untuk klasifikasi vegetasi + radar untuk struktur dan kelembapan permukaan.
+
+## Tentang Hamburan Balik Radar
+
+Sensor SAR memancarkan pulsa gelombang mikro ke permukaan Bumi dan mengukur intensitas serta polarisasi sinyal yang kembali. Nilai backscatter (σ⁰) dipengaruhi oleh:
+
+- **Kekasaran permukaan** — permukaan halus (air tenang) memantulkan sinyal jauh dari sensor (nilai rendah), permukaan kasar (hutan, kota) menghamburkan lebih banyak kembali (nilai tinggi)
+- **Konstanta dielektrik** — dipengaruhi oleh kadar air permukaan (tanah basah menghamburkan lebih kuat dari tanah kering)
+- **Geometri akuisisi** — sudut datang gelombang radar mempengaruhi respons
+
+### Polarisasi
+
+Sentinel-1 mengakuisisi data dalam dua kanal polarisasi sekaligus. Rasio antar polarisasi (misalnya VV/VH) sering digunakan untuk membedakan tipe permukaan:
+
+- **VV+VH** — mode default atas daratan; VH sensitif terhadap struktur vegetasi
+- **HH+HV** — digunakan pada beberapa akuisisi lintas kutub dan es
+
+### Radiometrically Terrain Corrected (RTC)
+
+Produk RTC menerapkan koreksi topografi dan radiometrik sehingga nilai backscatter dapat dibandingkan **antar scene** dan **antar waktu**, terlepas dari kemiringan lereng atau geometri akuisisi. Ini penting untuk analisis deret waktu (time-series) — tanpa koreksi RTC, nilai backscatter dari lereng yang menghadap sensor akan salah tinggi, dan lereng yang membelakangi sensor akan salah rendah.
+
+:::tip Satuan
+Nilai backscatter di Sentinel-1 RTC disimpan dalam **skala linear** (float32). Untuk analisis, sering dikonversi ke skala **desibel (dB)**: `σ⁰(dB) = 10 · log₁₀(σ⁰_linear)`. Nilai dB berkisar antara sekitar −25 dB (air) hingga −5 dB (permukaan sangat kasar / bangunan).
+:::

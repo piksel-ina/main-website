@@ -1,0 +1,129 @@
+---
+sidebar_position: 4
+title: Landsat 9 Surface Temperature
+description: Landsat 9 ST from the US Geological Survey (USGS)
+---
+
+# Landsat 9 Surface Temperature — Specifications
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='ls9_c2l2_st'
+  meta={[
+    { label: 'Technical name:', value: 'Landsat 9 Collection 2 Level-2 Surface Temperature' },
+    { label: 'Version:', value: '3.0.0' },
+    { label: 'Resolution:', value: '30 m' },
+    { label: 'Coverage:', value: 'October 2021 to present' },
+    { label: 'Data updates:', value: 'Daily' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_st.webp'
+  imageAlt='Landsat 9 Surface Temperature preview'
+/>
+
+## About
+Landsat 9 Surface Temperature (Landsat 9) is part of Piksel's land surface temperature dataset series, which covers the thermal imagery archive from the US Geological Survey (USGS) Landsat satellite programme. This product is derived from the thermal infrared channel (Band 10) of the Thermal Infrared Sensor 2 (TIRS-2), an enhanced version of the Landsat 8 sensor, at 30-metre resolution. It is ready for monitoring urban heat islands, drought, vegetation stress and geothermal activity. Together with Landsat 8, the mission provides an 8-day revisit interval for high-resolution thermal monitoring across Indonesia.
+
+## Bands
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>No-data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**lwir11**</td>
+      <td>uint16</td>
+      <td>Kelvin</td>
+      <td>0</td>
+      <td>ST_B10, band_10, st, surface_temperature</td>
+    </tr>
+    <tr>
+      <td>**TRAD**</td>
+      <td>int16</td>
+      <td>W/(m².sr.μm)</td>
+      <td>-9999</td>
+      <td>ST_TRAD, trad, thermal_radiance</td>
+    </tr>
+    <tr>
+      <td>**URAD**</td>
+      <td>int16</td>
+      <td>W/(m².sr.μm)</td>
+      <td>-9999</td>
+      <td>ST_URAD, urad, upwell_radiance</td>
+    </tr>
+    <tr>
+      <td>**DRAD**</td>
+      <td>int16</td>
+      <td>W/(m².sr.μm)</td>
+      <td>-9999</td>
+      <td>ST_DRAD, drad, downwell_radiance</td>
+    </tr>
+    <tr>
+      <td>**ATRAN**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>ST_ATRAN, atran, atmospheric_transmittance</td>
+    </tr>
+    <tr>
+      <td>**EMIS**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>ST_EMIS, emis, emissivity</td>
+    </tr>
+    <tr>
+      <td>**EMSD**</td>
+      <td>int16</td>
+      <td>1</td>
+      <td>-9999</td>
+      <td>ST_EMSD, emsd, emissivity_stddev</td>
+    </tr>
+    <tr>
+      <td>**CDIST**</td>
+      <td>int16</td>
+      <td>Kilometre</td>
+      <td>-9999</td>
+      <td>ST_CDIST, cdist, cloud_distance</td>
+    </tr>
+    <tr>
+      <td>**qa_pixel**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>1</td>
+      <td>QA_PIXEL, pq, pixel_quality</td>
+    </tr>
+    <tr>
+      <td>**qa_radsat**</td>
+      <td>uint16</td>
+      <td>bit_index</td>
+      <td>0</td>
+      <td>QA_RADSAT, radsat, radiometric_saturation</td>
+    </tr>
+    <tr>
+      <td>**qa**</td>
+      <td>int16</td>
+      <td>Kelvin</td>
+      <td>-9999</td>
+      <td>ST_QA, st_qa, surface_temperature_quality</td>
+    </tr>
+  </tbody>
+</table>
+
+## Applications
+- Monitoring urban heat islands and urban thermal conditions
+- Detecting water stress in crops and estimating irrigation requirements
+- Monitoring drought and soil moisture conditions
+- Mapping volcanic activity and monitoring crater temperatures
+- Identifying natural heat sources and geothermal activity
+- Detecting and monitoring forest and land fires
+- Analysing water temperatures in lakes, reservoirs and estuaries
+- Analysing microclimates for regional planning
