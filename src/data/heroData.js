@@ -1,77 +1,112 @@
-import { translate } from "@docusaurus/Translate";
-import { statsData } from "@site/src/data/statsData";
+import { translate } from '@docusaurus/Translate';
 
 export const heroData = {
   eyebrow: translate({
-    id: "homepage.hero.eyebrow",
-    message: "Indonesia Datacube · v2.4",
-    description: "The eyebrow text above the hero title",
+    id: 'homepage.hero.eyebrow',
+    message: 'Piksel',
+    description: 'The eyebrow text above the hero title',
   }),
   titlePart1: translate({
-    id: "homepage.hero.titlePart1",
-    message: "Dari orbit hingga",
-    description: "First part of hero title before emphasis",
+    id: 'homepage.hero.titlePart1',
+    message: 'Dari data satelit menjadi',
+    description: 'First part of hero title before emphasis',
   }),
   titleEmphasis: translate({
-    id: "homepage.hero.titleEmphasis",
-    message: "insight yang dapat ditindaklanjuti",
-    description: "Emphasized part of hero title styled italic+teal",
+    id: 'homepage.hero.titleEmphasis',
+    message: 'informasi siap guna',
+    description: 'Emphasized part of hero title styled italic+teal',
   }),
   titlePart2: translate({
-    id: "homepage.hero.titlePart2",
-    message: "untuk seluruh Indonesia.",
-    description: "Last part of hero title after emphasis",
+    id: 'homepage.hero.titlePart2',
+    message: 'untuk Indonesia.',
+    description: 'Last part of hero title after emphasis',
   }),
   subtitle: translate({
-    id: "homepage.hero.subtitle",
+    id: 'homepage.hero.subtitle',
     message:
-      "Satu platform terbuka yang menghimpun puluhan tahun citra satelit siap analisis bersama komputasi awan elastis. Jelajahi, analisis, dan putuskan — tanpa keluar dari data.",
-    description: "The subtitle text on the homepage hero section",
+      'Platform terbuka untuk menjelajahi dan menganalisis perubahan dengan data satelit siap analisis, tanpa perlu mengunduh atau menyiapkan data dari awal.',
+    description: 'The subtitle text on the homepage hero section',
   }),
-  coords: {
-    lat: translate({
-      id: "homepage.hero.coords.lat",
-      message: "LAT -6.2088",
-      description: "Latitude coordinate label in the hero",
-    }),
-    lon: translate({
-      id: "homepage.hero.coords.lon",
-      message: "LON 106.8456",
-      description: "Longitude coordinate label in the hero",
-    }),
-    date: translate({
-      id: "homepage.hero.coords.date",
-      message: "2024-12-01",
-      description: "Date label in the hero coordinate frame",
-    }),
-  },
-  photoMeta: {
-    sensor: translate({
-      id: "homepage.hero.photoMeta.sensor",
-      message: "Sentinel-2A · MSI · 10m",
-      description: "Sensor metadata displayed on the hero photo",
-    }),
-    location: translate({
-      id: "homepage.hero.photoMeta.location",
-      message: "Jakarta, Indonesia",
-      description: "Location metadata displayed on the hero photo",
-    }),
-  },
+  slides: [
+    {
+      image: require('@site/static/img/hero/hero-satellite-02.webp').default,
+      coords: {
+        lat: translate({
+          id: 'homepage.hero.slides.bromo.coords.lat',
+          message: 'LAT 7,95142° LS',
+          description: 'Latitude label for the Bromo hero slide',
+        }),
+        date: translate({
+          id: 'homepage.hero.slides.bromo.coords.date',
+          message: '2024',
+          description: 'Year label for the Bromo hero slide',
+        }),
+        lon: translate({
+          id: 'homepage.hero.slides.bromo.coords.lon',
+          message: 'LON 112,94854° BT',
+          description: 'Longitude label for the Bromo hero slide',
+        }),
+      },
+      metadata: {
+        product: translate({
+          id: 'homepage.hero.slides.bromo.product',
+          message: 'GeoMAD · Warna Alami',
+          description: 'Product label for the Bromo hero slide',
+        }),
+        location: translate({
+          id: 'homepage.hero.slides.bromo.location',
+          message: 'Bromo Tengger Semeru, Indonesia',
+          description: 'Location label for the Bromo hero slide',
+        }),
+      },
+    },
+    {
+      image: require('@site/static/img/hero/hero-satellite-01.webp').default,
+      coords: {
+        lat: translate({
+          id: 'homepage.hero.slides.toba.coords.lat',
+          message: 'LAT 2,58197° LU',
+          description: 'Latitude label for the Lake Toba hero slide',
+        }),
+        date: translate({
+          id: 'homepage.hero.slides.toba.coords.date',
+          message: '2025',
+          description: 'Year label for the Lake Toba hero slide',
+        }),
+        lon: translate({
+          id: 'homepage.hero.slides.toba.coords.lon',
+          message: 'LON 98,80527° BT',
+          description: 'Longitude label for the Lake Toba hero slide',
+        }),
+      },
+      metadata: {
+        product: translate({
+          id: 'homepage.hero.slides.toba.product',
+          message: 'BCMAD',
+          description: 'Product label for the Lake Toba hero slide',
+        }),
+        location: translate({
+          id: 'homepage.hero.slides.toba.location',
+          message: 'Danau Toba, Indonesia',
+          description: 'Location label for the Lake Toba hero slide',
+        }),
+      },
+    },
+  ],
   ctaPrimary: {
     text: translate({
-      id: "homepage.hero.cta.primary",
-      message: "Request Demo",
-      description: "Primary CTA button text",
+      id: 'homepage.hero.cta.primary',
+      message: 'Jadwalkan Demo',
+      description: 'Primary CTA button text',
     }),
-    link: "mailto:hello@pik-sel.id",
+    link: '/docs/services/support/help-center/',
   },
   ctaSecondary: {
     text: translate({
-      id: "homepage.hero.cta.secondary",
-      message: "Jelajahi Data",
-      description: "Secondary CTA button text",
+      id: 'homepage.hero.cta.secondary',
+      message: 'Kenali Piksel',
+      description: 'Secondary CTA button text',
     }),
-    link: "/#faq",
+    link: '/#faq',
   },
-  photo: require("@site/static/img/news/featured-01.webp").default,
 };

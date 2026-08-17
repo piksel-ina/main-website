@@ -52,7 +52,7 @@ export const statsData = {
       }),
       description: translate({
         id: "homepage.stats.03.description",
-        message: "Arsip data satelit dari berbagai konstelasi misi penginderaan jauh",
+        message: 'Arsip data satelit dari berbagai misi penginderaan jauh',
         description: "Statistics Description 03",
       }),
     },

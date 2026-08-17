@@ -359,7 +359,7 @@
     "description": "The main title on the homepage hero section"
   },
   "homepage.hero.subtitle": {
-    "message": "One complete platform to access satellite data, analyze, visualize, and make geospatial-based decisions. From data to insight, all in one cloud ecosystem.",
+    "message": "An open platform for exploring and analysing change with analysis-ready satellite data, without downloading or preparing data from scratch.",
     "description": "The subtitle text on the homepage hero section"
   },
   "homepage.hero.cta.primary": {
@@ -379,7 +379,7 @@
     "description": "Statistics Number 01"
   },
   "homepage.stats.01.label": {
-    "message": "Total Data Available",
+    "message": "Data Available",
     "description": "Statistics Label 01"
   },
   "homepage.stats.02": {
@@ -387,7 +387,7 @@
     "description": "Statistics Number 02"
   },
   "homepage.stats.02.label": {
-    "message": "Indonesian Region Coverage",
+    "message": "Coverage of Indonesia",
     "description": "Statistics Label 02"
   },
   "homepage.stats.03": {
@@ -403,7 +403,7 @@
     "description": "Statistics Number 04"
   },
   "homepage.stats.04.label": {
-    "message": "Open Access for Public",
+    "message": "Open Public Access",
     "description": "Statistics Label 04"
   },
   "useCases.banjir.title": {
@@ -621,40 +621,20 @@
     "description": "The highlighted portion of the hero title"
   },
   "homepage.hero.eyebrow": {
-    "message": "Indonesia Datacube · v2.4",
+    "message": "Piksel",
     "description": "The eyebrow text above the hero title"
   },
   "homepage.hero.titlePart1": {
-    "message": "Dari orbit hingga",
+    "message": "From satellite data to",
     "description": "First part of hero title before emphasis"
   },
   "homepage.hero.titleEmphasis": {
-    "message": "insight yang dapat ditindaklanjuti",
+    "message": "ready-to-use information",
     "description": "Emphasized part of hero title styled italic+teal"
   },
   "homepage.hero.titlePart2": {
-    "message": "untuk seluruh Indonesia.",
+    "message": "for Indonesia.",
     "description": "Last part of hero title after emphasis"
-  },
-  "homepage.hero.coords.lat": {
-    "message": "LAT -6.2088",
-    "description": "Latitude coordinate label in the hero"
-  },
-  "homepage.hero.coords.lon": {
-    "message": "LON 106.8456",
-    "description": "Longitude coordinate label in the hero"
-  },
-  "homepage.hero.coords.date": {
-    "message": "2024-12-01",
-    "description": "Date label in the hero coordinate frame"
-  },
-  "homepage.hero.photoMeta.sensor": {
-    "message": "Sentinel-2A · MSI · 10m",
-    "description": "Sensor metadata displayed on the hero photo"
-  },
-  "homepage.hero.photoMeta.location": {
-    "message": "Jakarta, Indonesia",
-    "description": "Location metadata displayed on the hero photo"
   },
   "navbar.cta.label": {
     "message": "Mulai Sekarang",
@@ -861,19 +841,19 @@
     "description": "Subtitle description for the services section"
   },
   "homepage.stats.01.description": {
-    "message": "Data satelit dan geospasial yang tersedia untuk diakses",
+    "message": "Satellite and geospatial data available through Piksel.",
     "description": "Statistics Description 01"
   },
   "homepage.stats.02.description": {
-    "message": "Seluruh wilayah Negara Kesatuan Republik Indonesia",
+    "message": "Coverage across the entire territory of Indonesia.",
     "description": "Statistics Description 02"
   },
   "homepage.stats.03.description": {
-    "message": "Arsip data satelit dari berbagai konstelasi misi penginderaan jauh",
+    "message": "Satellite data archives spanning multiple Earth observation missions.",
     "description": "Statistics Description 03"
   },
   "homepage.stats.04.description": {
-    "message": "Data dan layanan API terbuka tanpa biaya untuk masyarakat",
+    "message": "Open data and API services available to the public at no cost.",
     "description": "Statistics Description 04"
   },
   "useCases.agri.title": {
@@ -959,5 +939,45 @@
   "ourServices.coord.hint": {
     "message": "SERVICES · CLICK ANY ROW TO INSPECT",
     "description": "Bottom coordinate hint inviting users to click a service row"
+  },
+  "homepage.hero.slides.bromo.coords.lat": {
+    "message": "LAT 7.95142° S",
+    "description": "Latitude label for the Bromo hero slide"
+  },
+  "homepage.hero.slides.bromo.coords.date": {
+    "message": "2024",
+    "description": "Year label for the Bromo hero slide"
+  },
+  "homepage.hero.slides.bromo.coords.lon": {
+    "message": "LON 112.94854° E",
+    "description": "Longitude label for the Bromo hero slide"
+  },
+  "homepage.hero.slides.bromo.product": {
+    "message": "GeoMAD · True Color",
+    "description": "Product label for the Bromo hero slide"
+  },
+  "homepage.hero.slides.bromo.location": {
+    "message": "Bromo Tengger Semeru, Indonesia",
+    "description": "Location label for the Bromo hero slide"
+  },
+  "homepage.hero.slides.toba.coords.lat": {
+    "message": "LAT 2.58197° N",
+    "description": "Latitude label for the Lake Toba hero slide"
+  },
+  "homepage.hero.slides.toba.coords.date": {
+    "message": "2025",
+    "description": "Year label for the Lake Toba hero slide"
+  },
+  "homepage.hero.slides.toba.coords.lon": {
+    "message": "LON 98.80527° E",
+    "description": "Longitude label for the Lake Toba hero slide"
+  },
+  "homepage.hero.slides.toba.product": {
+    "message": "BCMAD",
+    "description": "Product label for the Lake Toba hero slide"
+  },
+  "homepage.hero.slides.toba.location": {
+    "message": "Lake Toba, Indonesia",
+    "description": "Location label for the Lake Toba hero slide"
   }
 }
