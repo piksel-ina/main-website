@@ -4,9 +4,13 @@ sidebar_position: 1
 
 # Ikhtisar
 
-Piksel adalah platform observasi Bumi digital yang dikembangkan oleh **Badan Informasi Geospasial (BIG)** untuk memudahkan akses ke citra satelit dan informasi geospasial Indonesia. Arsipnya mencakup data dari **Sentinel-1**, **Sentinel-2**, serta **Landsat 5, 7, 8, dan 9** untuk penelusuran dan analisis wilayah.
+Piksel adalah platform observasi Bumi digital yang memudahkan akses ke citra satelit dan informasi geospasial untuk wilayah Indonesia. Arsipnya mencakup data dari **Sentinel-1**, **Sentinel-2**, serta **Landsat 5, 7, 8, dan 9** untuk menelusuri dan menganalisis perubahan di berbagai wilayah Indonesia.
 
-Selain menyediakan data, Piksel mendukung analisis melalui peta, layanan web, lingkungan komputasi, dan infrastruktur pemrosesan. Pengguna dapat memilih layanan yang sesuai tanpa harus menyiapkan seluruh infrastruktur pengolahan data sendiri.
+## Tentang proyek Piksel
+
+Proyek Piksel (Bumi Digital Indonesia) merupakan kolaborasi antara Badan Informasi Geospasial dan Geoscience Australia, dengan dukungan Department of Foreign Affairs and Trade Australia.
+
+Melalui Piksel, data satelit ditata menjadi koleksi yang konsisten dan siap analisis, kemudian disediakan melalui peta, layanan web, lingkungan komputasi, dan infrastruktur pemrosesan. Pengguna dapat memilih layanan yang sesuai tanpa harus mengunduh seluruh arsip data atau menyiapkan seluruh infrastruktur pengolahan dari awal.
 
 ## Layanan Piksel
 

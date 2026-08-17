@@ -107,6 +107,6 @@ export const heroData = {
       message: 'Kenali Piksel',
       description: 'Secondary CTA button text',
     }),
-    link: '/#faq',
+    link: '/docs/overview/',
   },
 };
