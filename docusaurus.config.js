@@ -243,7 +243,7 @@ const config = {
                 to: '/docs/services/explorer/',
               },
               {
-                label: 'Sandbox Analisis',
+                label: 'Piksel Sandbox',
                 to: '/docs/services/sandbox/',
               },
               {
@@ -259,20 +259,20 @@ const config = {
                 to: '/docs/services/geospatial-data-processing/',
               },
               {
-                label: 'Dukungan Teknis',
+                label: 'Dukungan dan Kolaborasi',
                 to: '/docs/services/support/',
               },
             ],
           },
           {
-            title: 'Contoh Pemanfaatan',
+            title: 'Kasus Penggunaan',
             items: [
               {
-                label: 'Pangan',
+                label: 'Pangan dan pertanian',
                 to: '/docs/usecases/pangan/',
               },
               {
-                label: 'Lahan',
+                label: 'Tutupan lahan',
                 to: '/docs/usecases/lahan/',
               },
               {
@@ -280,24 +280,24 @@ const config = {
                 to: '/docs/usecases/lingkungan/',
               },
               {
-                label: 'Pesisir',
+                label: 'Wilayah pesisir',
                 to: '/docs/usecases/pesisir/',
               },
               {
-                label: 'Bencana',
+                label: 'Kebencanaan',
                 to: '/docs/usecases/bencana/',
               },
             ],
           },
           {
-            title: 'Referensi Lainnya',
+            title: 'Referensi',
             items: [
               {
-                label: 'Documentation',
-                to: '/docs/overview',
+                label: 'Ikhtisar',
+                to: '/docs/overview/',
               },
               {
-                label: 'Github',
+                label: 'GitHub',
                 href: 'https://github.com/piksel-ina',
               },
             ],
@@ -310,11 +310,11 @@ const config = {
                 href: 'mailto:piksel@big.go.id',
               },
               {
-                label: 'Phone: 021-8752062',
+                label: 'Telepon: 021-8752062',
                 href: 'tel:+62218752062',
               },
               {
-                label: 'BIG Indonesia',
+                label: 'Badan Informasi Geospasial',
                 href: 'https://www.big.go.id',
               },
             ],

@@ -11,9 +11,9 @@ Web Services can be used directly from the interface of GIS software by adding t
 
 | Service | QGIS               | ArcGIS Pro      | Address                             |
 | ------- | ------------------ | --------------- | ----------------------------------- |
-| WMS     | Add WMS/WMTS Layer | New WMS Server  | `https://ows.piksel.big.go.id/wms`  |
-| WMTS    | Add WMS/WMTS Layer | New WMTS Server | `https://ows.piksel.big.go.id/wmts` |
-| WCS     | Add WCS Layer      | New WCS Server  | `https://ows.piksel.big.go.id/wcs`  |
+| WMS     | Add WMS/WMTS Layer | New WMS Server  | `https://ows.staging.piksel.big.go.id/wms`  |
+| WMTS    | Add WMS/WMTS Layer | New WMTS Server | `https://ows.staging.piksel.big.go.id/wmts` |
+| WCS     | Add WCS Layer      | New WCS Server  | `https://ows.staging.piksel.big.go.id/wcs`  |
 
 ## QGIS
 

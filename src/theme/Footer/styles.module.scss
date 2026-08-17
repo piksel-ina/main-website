@@ -45,6 +45,12 @@
     }
   }
 
+  &__brandLogo {
+    align-self: flex-start;
+    width: auto;
+    height: space('7');
+  }
+
   &__brandText {
     display: flex;
     flex-direction: column;

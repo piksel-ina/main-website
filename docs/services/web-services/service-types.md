@@ -31,7 +31,7 @@ Seluruh proses render berlangsung di sisi server, sehingga aplikasi hanya meneri
 Daftar layer yang tersedia dapat dilihat melalui permintaan GetCapabilities berikut:
 
 ```text
-https://ows.piksel.big.go.id/wms?service=WMS&request=GetCapabilities
+https://ows.staging.piksel.big.go.id/wms?service=WMS&request=GetCapabilities
 ```
 
 Respons permintaan tersebut berupa dokumen XML yang memuat nama setiap layer beserta sistem koordinat dan format gambar yang didukung. Nama layer inilah yang digunakan saat menghubungkan layanan ke aplikasi.
@@ -45,7 +45,7 @@ Penyajian dalam tile membuat proses menggeser dan memperbesar peta terasa lebih 
 Daftar layer yang tersedia dapat dilihat melalui permintaan GetCapabilities berikut:
 
 ```text
-https://ows.piksel.big.go.id/wmts?service=WMTS&request=GetCapabilities
+https://ows.staging.piksel.big.go.id/wmts?service=WMTS&request=GetCapabilities
 ```
 
 Respons permintaan tersebut memuat nama layer, susunan tile beserta tingkat zoom yang tersedia, dan format gambar yang didukung.
@@ -59,7 +59,7 @@ Dengan nilai piksel yang tersedia, data dapat langsung digunakan untuk perhitung
 Daftar coverage yang tersedia dapat dilihat melalui permintaan GetCapabilities berikut:
 
 ```text
-https://ows.piksel.big.go.id/wcs?service=WCS&request=GetCapabilities
+https://ows.staging.piksel.big.go.id/wcs?service=WCS&request=GetCapabilities
 ```
 
 Respons permintaan tersebut memuat nama coverage yang tersedia beserta format data yang didukung.

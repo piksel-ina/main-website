@@ -2,8 +2,8 @@ import { useLocation } from '@docusaurus/router';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import Link from '@docusaurus/Link';
 import { translate } from '@docusaurus/Translate';
-import InaDcMark from '@site/src/components/UI/Atoms/InaDcMark';
 import Coord from '@site/src/components/UI/Atoms/Coord';
+import { footerData } from '@site/src/data/footerData';
 import styles from './styles.module.scss';
 
 export default function Footer() {
@@ -28,10 +28,18 @@ export default function Footer() {
         <div className={styles.footer__top}>
           {/* Brand column */}
           <div className={styles.footer__brand}>
-            <InaDcMark size={48} color="#fff" />
+            <img
+              src={footerData.brandLogo}
+              alt=""
+              className={styles.footer__brandLogo}
+            />
             <div className={styles.footer__brandText}>
-              <div className={styles.footer__wordmark}>Inadc</div>
-              <div className={styles.footer__sub}>Indonesia Datacube</div>
+              <div className={styles.footer__wordmark}>
+                {footerData.brandName}
+              </div>
+              <div className={styles.footer__sub}>
+                {footerData.brandSubtitle}
+              </div>
             </div>
             <p className={styles.footer__desc}>{description}</p>
           </div>

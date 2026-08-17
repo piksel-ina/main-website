@@ -1,5 +1,18 @@
 const mono = 'JetBrains Mono, monospace';
 
+const responseLines = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<WMS_Capabilities version="1.3.0">',
+  '  <Service>',
+  '    <Name>WMS</Name>',
+  '    <Title>Piksel Web Services</Title>',
+  '  </Service>',
+  '  <Capability>',
+  '    <Layer>...</Layer>',
+  '  </Capability>',
+  '</WMS_Capabilities>',
+];
+
 export default function Preview04() {
   return (
     <svg viewBox="0 0 360 280" preserveAspectRatio="xMidYMid meet">
@@ -10,11 +23,11 @@ export default function Preview04() {
         x="12"
         y="18"
         fontFamily={mono}
-        fontSize="9"
+        fontSize="7"
         fill="#fff"
-        letterSpacing="0.06em"
+        letterSpacing="0.04em"
       >
-        GET ows.piksel.big.go.id/stac/v1
+        GET /wms?service=WMS&amp;request=GetCapabilities
       </text>
       <rect x="312" y="9" width="36" height="12" fill="#06c8d8" />
       <text
@@ -28,88 +41,17 @@ export default function Preview04() {
         200 · OK
       </text>
 
-      <g fontFamily={mono} fontSize="9" letterSpacing="0.04em">
-        <text x="14" y="50" fill="#8e8e93">
-          1
-        </text>
-        <text x="34" y="50" fill="#1d1d1f">
-          {'{'}
-        </text>
-        <text x="14" y="65" fill="#8e8e93">
-          2
-        </text>
-        <text x="34" y="65" fill="#1040a8">
-          &quot;type&quot;:
-        </text>
-        <text x="84" y="65" fill="#1d1d1f">
-          &quot;Catalog&quot;,
-        </text>
-        <text x="14" y="80" fill="#8e8e93">
-          3
-        </text>
-        <text x="34" y="80" fill="#1040a8">
-          &quot;id&quot;:
-        </text>
-        <text x="78" y="80" fill="#1d1d1f">
-          &quot;piksel-stac&quot;,
-        </text>
-        <text x="14" y="95" fill="#8e8e93">
-          4
-        </text>
-        <text x="34" y="95" fill="#1040a8">
-          &quot;stac_version&quot;:
-        </text>
-        <text x="142" y="95" fill="#1d1d1f">
-          &quot;1.0.0&quot;,
-        </text>
-        <text x="14" y="110" fill="#8e8e93">
-          5
-        </text>
-        <text x="34" y="110" fill="#1040a8">
-          &quot;links&quot;:
-        </text>
-        <text x="92" y="110" fill="#1d1d1f">
-          [
-        </text>
-        <text x="14" y="125" fill="#8e8e93">
-          6
-        </text>
-        <text x="50" y="125" fill="#1d1d1f">
-          {'{ "rel":'}
-        </text>
-        <text x="118" y="125" fill="#06c8d8">
-          &quot;child&quot;
-        </text>
-        <text x="156" y="125" fill="#1d1d1f">
-          ,
-        </text>
-        <text x="14" y="140" fill="#8e8e93">
-          7
-        </text>
-        <text x="60" y="140" fill="#1040a8">
-          &quot;href&quot;:
-        </text>
-        <text x="108" y="140" fill="#06c8d8">
-          &quot;/collections/s2_l2a&quot;
-        </text>
-        <text x="14" y="155" fill="#8e8e93">
-          8
-        </text>
-        <text x="50" y="155" fill="#1d1d1f">
-          {'}, ...'}
-        </text>
-        <text x="14" y="170" fill="#8e8e93">
-          9
-        </text>
-        <text x="34" y="170" fill="#1d1d1f">
-          {']'}
-        </text>
-        <text x="14" y="185" fill="#8e8e93">
-          10
-        </text>
-        <text x="34" y="185" fill="#1d1d1f">
-          {'}'}
-        </text>
+      <g fontFamily={mono} fontSize="8" letterSpacing="0.02em">
+        {responseLines.map((line, index) => (
+          <g key={line}>
+            <text x="14" y={50 + index * 15} fill="#8e8e93">
+              {index + 1}
+            </text>
+            <text x="34" y={50 + index * 15} fill="#1d1d1f">
+              {line}
+            </text>
+          </g>
+        ))}
       </g>
 
       <rect
@@ -128,7 +70,7 @@ export default function Preview04() {
         fill="#3a3a3c"
         letterSpacing="0.08em"
       >
-        CORS · OPEN
+        OGC · WMS
       </text>
       <text
         x="120"
@@ -138,27 +80,17 @@ export default function Preview04() {
         fill="#3a3a3c"
         letterSpacing="0.08em"
       >
-        TLS · 1.3
+        FORMAT · XML
       </text>
       <text
-        x="200"
+        x="250"
         y="269"
         fontFamily={mono}
         fontSize="8"
         fill="#3a3a3c"
         letterSpacing="0.08em"
       >
-        CACHE · 3600s
-      </text>
-      <text
-        x="310"
-        y="269"
-        fontFamily={mono}
-        fontSize="8"
-        fill="#3a3a3c"
-        letterSpacing="0.08em"
-      >
-        v 1.0
+        v 1.3.0
       </text>
     </svg>
   );

@@ -647,7 +647,7 @@
     "message": "Tile-aware filtering by AOI, date, cloud cover"
   },
   "ourServices.explorer.f3": {
-    "message": "Direct export to STAC, COG and shapefile"
+    "message": "Metadata available in text, STAC and ODC YAML formats"
   },
   "ourServices.explorer.status": {
     "message": "OPERATIONAL"
@@ -673,13 +673,13 @@
     "description": "Service 01 update frequency"
   },
   "ourServices.sandbox.f1": {
-    "message": "Open Data Cube + xarray + dask, pre-configured"
+    "message": "Open Data Cube and a ready-to-use Python environment"
   },
   "ourServices.sandbox.f2": {
-    "message": "Private workspaces with shared example notebooks"
+    "message": "Compute profiles for different analysis needs"
   },
   "ourServices.sandbox.f3": {
-    "message": "GPU-enabled kernels for research workloads"
+    "message": "Learning notebooks and tutorials included"
   },
   "ourServices.sandbox.status": {
     "message": "OPERATIONAL"
@@ -705,13 +705,13 @@
     "description": "Service 02 update frequency"
   },
   "ourServices.maps.f1": {
-    "message": "Terria-based composable story maps"
+    "message": "Web-based interactive map viewer"
   },
   "ourServices.maps.f2": {
-    "message": "Embed in ministry portals via iframe"
+    "message": "Compare layers and data across time"
   },
   "ourServices.maps.f3": {
-    "message": "Real-time overlays from Piksel STAC"
+    "message": "Upload data, then share or print maps"
   },
   "ourServices.maps.status": {
     "message": "OPERATIONAL"
@@ -737,13 +737,13 @@
     "description": "Service 03 update frequency"
   },
   "ourServices.webservices.f1": {
-    "message": "WMS / WCS / WMTS — OGC-compliant"
+    "message": "WMS / WMTS / WCS — OGC-compliant"
   },
   "ourServices.webservices.f2": {
-    "message": "STAC 1.0 catalog with daily indexing"
+    "message": "Connect directly from QGIS and ArcGIS Pro"
   },
   "ourServices.webservices.f3": {
-    "message": "CORS-enabled, public-domain access"
+    "message": "Access maps, tiles and raster data"
   },
   "ourServices.webservices.status": {
     "message": "OPERATIONAL"
@@ -765,17 +765,17 @@
     "description": "Service 04 access level"
   },
   "ourServices.meta.04.update": {
-    "message": "Daily indexing",
+    "message": "Follows data availability",
     "description": "Service 04 update frequency"
   },
   "ourServices.production.f1": {
-    "message": "Argo Workflows on managed EKS"
+    "message": "Argo Workflows for parallel processing"
   },
   "ourServices.production.f2": {
-    "message": "Cost-shared for partner ministries"
+    "message": "Cloud computing for large-scale workloads"
   },
   "ourServices.production.f3": {
-    "message": "Pre-built pipelines: GeoMAD, fractional cover, WOfS"
+    "message": "Workflows tailored to collaboration needs"
   },
   "ourServices.production.status": {
     "message": "ON REQUEST"
@@ -801,13 +801,13 @@
     "description": "Service 05 update frequency"
   },
   "ourServices.support.f1": {
-    "message": "Email-based ticketing with SLA"
+    "message": "Support through Piksel's official email"
   },
   "ourServices.support.f2": {
-    "message": "Onboarding & training workshops"
+    "message": "Training tailored to participant needs"
   },
   "ourServices.support.f3": {
-    "message": "Joint pilots with BIG analysts"
+    "message": "Collaboration on geospatial processing and analysis"
   },
   "ourServices.support.status": {
     "message": "MON – FRI"
@@ -829,7 +829,7 @@
     "description": "Service 06 access level"
   },
   "ourServices.meta.06.update": {
-    "message": "< 1 business day",
+    "message": "As needed",
     "description": "Service 06 update frequency"
   },
   "ourServices.header.eyebrow": {
@@ -837,7 +837,7 @@
     "description": "Eyebrow label for the services section"
   },
   "ourServices.header.sub": {
-    "message": "Six interlocking services — pick one to see its surface, capabilities, and the endpoint you'd call to use it in production.",
+    "message": "Six connected services. Choose one to see its interface, capabilities and available endpoint.",
     "description": "Subtitle description for the services section"
   },
   "homepage.stats.01.description": {
@@ -979,5 +979,13 @@
   "homepage.hero.slides.toba.location": {
     "message": "Lake Toba, Indonesia",
     "description": "Location label for the Lake Toba hero slide"
+  },
+  "footer.brand.name": {
+    "message": "Piksel",
+    "description": "Footer brand name"
+  },
+  "footer.brand.subtitle": {
+    "message": "Digital Earth Indonesia",
+    "description": "Footer brand subtitle"
   }
 }

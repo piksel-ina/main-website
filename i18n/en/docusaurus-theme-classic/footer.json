@@ -3,92 +3,84 @@
     "message": "Services",
     "description": "The title of the footer links column with title=Layanan in the footer"
   },
-  "link.title.Contoh Pemanfaatan": {
+  "link.title.Kasus Penggunaan": {
     "message": "Use Cases",
-    "description": "The title of the footer links column with title=Contoh Pemanfaatan in the footer"
+    "description": "The title of the footer links column with title=Kasus Penggunaan in the footer"
   },
-  "link.title.Referensi Lainnya": {
-    "message": "Other References",
-    "description": "The title of the footer links column with title=Referensi Lainnya in the footer"
+  "link.title.Referensi": {
+    "message": "References",
+    "description": "The title of the footer links column with title=Referensi in the footer"
   },
   "link.title.Kontak Kami": {
     "message": "Contact Us",
     "description": "The title of the footer links column with title=Kontak Kami in the footer"
   },
-  "link.item.label.Documentation": {
-    "message": "Documentation",
-    "description": "The label of footer link with label=Documentation linking to /docs/overview"
-  },
-  "link.item.label.API Reference": {
-    "message": "API Reference",
-    "description": "The label of footer link with label=API Reference linking to /docs/api"
-  },
-  "link.item.label.Tutorials": {
-    "message": "Tutorials",
-    "description": "The label of footer link with label=Tutorials linking to /docs/tutorials"
-  },
-  "link.item.label.Github": {
-    "message": "Github",
-    "description": "The label of footer link with label=Github linking to https://github.com/piksel-ina"
-  },
-  "link.item.label.Email: piksel@big.go.id": {
-    "message": "Email: piksel@big.go.id",
-    "description": "The label of footer link with label=Email: piksel@big.go.id linking to mailto:piksel@big.go.id"
-  },
-  "link.item.label.Phone: 021-8752062": {
-    "message": "Phone: 021-8752062",
-    "description": "The label of footer link with label=Phone: 021-8752062 linking to tel:+62218752062"
-  },
-  "link.item.label.BIG Indonesia": {
-    "message": "BIG Indonesia",
-    "description": "The label of footer link with label=BIG Indonesia linking to https://www.big.go.id"
-  },
-  "copyright": {
-    "message": "\n    <div class=\"footer__copyright-container\">\n      <div class=\"footer__copyright-text\">Copyright © 2025 Piksel Indonesia - Geospatial Information Agency (BIG)</div>\n      <div class=\"footer__address\">\n        Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>\n        Tel: 021-8752062 ext.3608/3611/3103\n      </div>\n    </div>\n  ",
-    "description": "The footer copyright"
-  },
   "link.item.label.Jelajah Data": {
     "message": "Data Explorer",
     "description": "The label of footer link with label=Jelajah Data linking to /docs/services/explorer/"
   },
-  "link.item.label.Sandbox Analisis": {
-    "message": "Analysis Sandbox",
-    "description": "The label of footer link with label=Sandbox Analisis linking to /docs/services/sandbox/"
+  "link.item.label.Piksel Sandbox": {
+    "message": "Piksel Sandbox",
+    "description": "The label of footer link with label=Piksel Sandbox linking to /docs/services/sandbox/"
   },
   "link.item.label.Peta Interaktif": {
-    "message": "Interactive Maps",
+    "message": "Interactive Map",
     "description": "The label of footer link with label=Peta Interaktif linking to /docs/services/maps/"
   },
   "link.item.label.Layanan Web": {
     "message": "Web Services",
     "description": "The label of footer link with label=Layanan Web linking to /docs/services/web-services/"
   },
-  "link.item.label.Dukungan Teknis": {
-    "message": "Technical Support",
-    "description": "The label of footer link with label=Dukungan Teknis linking to /docs/services/support/"
-  },
-  "link.item.label.Pesisir": {
-    "message": "Coastal",
-    "description": "The label of footer link with label=Pesisir linking to /docs/usecases/pesisir/"
-  },
-  "link.item.label.Bencana": {
-    "message": "Disaster",
-    "description": "The label of footer link with label=Bencana linking to /docs/usecases/bencana/"
-  },
   "link.item.label.Pemrosesan Data Geospasial": {
     "message": "Geospatial Data Processing",
     "description": "The label of footer link with label=Pemrosesan Data Geospasial linking to /docs/services/geospatial-data-processing/"
   },
-  "link.item.label.Pangan": {
-    "message": "Pangan",
-    "description": "The label of footer link with label=Pangan linking to /docs/usecases/pangan/"
+  "link.item.label.Dukungan dan Kolaborasi": {
+    "message": "Support and Collaboration",
+    "description": "The label of footer link with label=Dukungan dan Kolaborasi linking to /docs/services/support/"
   },
-  "link.item.label.Lahan": {
-    "message": "Lahan",
-    "description": "The label of footer link with label=Lahan linking to /docs/usecases/lahan/"
+  "link.item.label.Pangan dan pertanian": {
+    "message": "Food and agriculture",
+    "description": "The label of footer link with label=Pangan dan pertanian linking to /docs/usecases/pangan/"
+  },
+  "link.item.label.Tutupan lahan": {
+    "message": "Land cover",
+    "description": "The label of footer link with label=Tutupan lahan linking to /docs/usecases/lahan/"
   },
   "link.item.label.Lingkungan": {
-    "message": "Lingkungan",
+    "message": "Environment",
     "description": "The label of footer link with label=Lingkungan linking to /docs/usecases/lingkungan/"
+  },
+  "link.item.label.Wilayah pesisir": {
+    "message": "Coastal areas",
+    "description": "The label of footer link with label=Wilayah pesisir linking to /docs/usecases/pesisir/"
+  },
+  "link.item.label.Kebencanaan": {
+    "message": "Disaster management",
+    "description": "The label of footer link with label=Kebencanaan linking to /docs/usecases/bencana/"
+  },
+  "link.item.label.Ikhtisar": {
+    "message": "Overview",
+    "description": "The label of footer link with label=Ikhtisar linking to /docs/overview/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/piksel-ina"
+  },
+  "link.item.label.Email: piksel@big.go.id": {
+    "message": "Email: piksel@big.go.id",
+    "description": "The label of footer link with label=Email: piksel@big.go.id linking to mailto:piksel@big.go.id"
+  },
+  "link.item.label.Telepon: 021-8752062": {
+    "message": "Phone: 021-8752062",
+    "description": "The label of footer link with label=Telepon: 021-8752062 linking to tel:+62218752062"
+  },
+  "link.item.label.Badan Informasi Geospasial": {
+    "message": "Badan Informasi Geospasial",
+    "description": "The label of footer link with label=Badan Informasi Geospasial linking to https://www.big.go.id"
+  },
+  "copyright": {
+    "message": "\n    <div class=\"footer__copyright-container\">\n      <div class=\"footer__copyright-text\">Copyright © 2025 Piksel Indonesia - Geospatial Information Agency (BIG)</div>\n      <div class=\"footer__address\">\n        Jl. Raya Jakarta - Bogor KM. 46 Cibinong 16911, Indonesia<br/>\n        Tel: 021-8752062 ext.3608/3611/3103\n      </div>\n    </div>\n  ",
+    "description": "The footer copyright"
   }
 }

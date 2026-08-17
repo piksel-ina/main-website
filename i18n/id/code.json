@@ -662,7 +662,7 @@
     "description": "Eyebrow label for the services section"
   },
   "ourServices.header.sub": {
-    "message": "Enam layanan saling terkait. Pilih salah satu untuk melihat antarmuka, fitur, dan endpoint yang diperlukan untuk integrasi produksi.",
+    "message": "Enam layanan saling terkait. Pilih salah satu untuk melihat antarmuka, fitur, dan endpoint yang tersedia.",
     "description": "Subtitle description for the services section"
   },
   "homepage.stats.01.description": {
@@ -712,67 +712,67 @@
     "message": "Penyaringan berdasarkan area minat (AOI), tanggal, dan tutupan awan"
   },
   "ourServices.explorer.f3": {
-    "message": "Ekspor langsung ke STAC, COG, dan shapefile"
+    "message": "Metadata tersedia dalam format teks, STAC, dan ODC YAML"
   },
   "ourServices.explorer.status": {
     "message": "OPERASIONAL"
   },
   "ourServices.sandbox.f1": {
-    "message": "Open Data Cube + xarray + dask, sudah dikonfigurasi"
+    "message": "Open Data Cube dan lingkungan Python siap digunakan"
   },
   "ourServices.sandbox.f2": {
-    "message": "Ruang kerja pribadi dengan contoh notebook bersama"
+    "message": "Profil komputasi untuk berbagai kebutuhan analisis"
   },
   "ourServices.sandbox.f3": {
-    "message": "Kernel dengan GPU untuk beban kerja penelitian"
+    "message": "Notebook pembelajaran dan tutorial tersedia"
   },
   "ourServices.sandbox.status": {
     "message": "OPERASIONAL"
   },
   "ourServices.maps.f1": {
-    "message": "Peta cerita interaktif berbasis Terria"
+    "message": "Penampil peta interaktif berbasis web"
   },
   "ourServices.maps.f2": {
-    "message": "Integrasikan ke portal kementerian via iframe"
+    "message": "Bandingkan layer dan data lintas waktu"
   },
   "ourServices.maps.f3": {
-    "message": "Overlay real-time dari katalog Piksel STAC"
+    "message": "Unggah data serta bagikan atau cetak peta"
   },
   "ourServices.maps.status": {
     "message": "OPERASIONAL"
   },
   "ourServices.webservices.f1": {
-    "message": "WMS / WCS / WMTS — sesuai standar OGC"
+    "message": "WMS / WMTS / WCS — sesuai standar OGC"
   },
   "ourServices.webservices.f2": {
-    "message": "Katalog STAC 1.0 dengan indeksing harian"
+    "message": "Terhubung langsung ke QGIS dan ArcGIS Pro"
   },
   "ourServices.webservices.f3": {
-    "message": "Akses domain publik dengan CORS yang diaktifkan"
+    "message": "Akses peta, tile, dan data raster"
   },
   "ourServices.webservices.status": {
     "message": "OPERASIONAL"
   },
   "ourServices.production.f1": {
-    "message": "Argo Workflows di EKS terkelola"
+    "message": "Argo Workflows untuk pemrosesan paralel"
   },
   "ourServices.production.f2": {
-    "message": "Biaya dibagi bersama untuk kementerian mitra"
+    "message": "Komputasi awan untuk pekerjaan berskala besar"
   },
   "ourServices.production.f3": {
-    "message": "Pipeline siap pakai: GeoMAD, fractional cover, WOfS"
+    "message": "Workflow disesuaikan dengan kebutuhan kolaborasi"
   },
   "ourServices.production.status": {
     "message": "ATAS PERMINTAAN"
   },
   "ourServices.support.f1": {
-    "message": "Dukungan via email dengan jaminan SLA"
+    "message": "Dukungan melalui email resmi Piksel"
   },
   "ourServices.support.f2": {
-    "message": "Workshop pelatihan dan onboarding"
+    "message": "Program pelatihan sesuai kebutuhan peserta"
   },
   "ourServices.support.f3": {
-    "message": "Pilot project bersama analis BIG"
+    "message": "Kolaborasi pengolahan dan analisis geospasial"
   },
   "ourServices.support.status": {
     "message": "SEN – JUM"
@@ -954,7 +954,7 @@
     "description": "Service 04 access level"
   },
   "ourServices.meta.04.update": {
-    "message": "Indeksing harian",
+    "message": "Mengikuti ketersediaan data",
     "description": "Service 04 update frequency"
   },
   "ourServices.meta.05.capability": {
@@ -994,7 +994,7 @@
     "description": "Service 06 access level"
   },
   "ourServices.meta.06.update": {
-    "message": "< 1 hari kerja",
+    "message": "Sesuai kebutuhan",
     "description": "Service 06 update frequency"
   },
   "ourServices.cta.openService": {
@@ -1076,5 +1076,13 @@
   "homepage.hero.slides.toba.location": {
     "message": "Danau Toba, Indonesia",
     "description": "Location label for the Lake Toba hero slide"
+  },
+  "footer.brand.name": {
+    "message": "Piksel",
+    "description": "Footer brand name"
+  },
+  "footer.brand.subtitle": {
+    "message": "Digital Earth Indonesia",
+    "description": "Footer brand subtitle"
   }
 }

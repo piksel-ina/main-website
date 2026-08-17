@@ -31,7 +31,7 @@ Rendering happens entirely on the server, so the application receives an image r
 The available layers can be seen through the following GetCapabilities request:
 
 ```text
-https://ows.piksel.big.go.id/wms?service=WMS&request=GetCapabilities
+https://ows.staging.piksel.big.go.id/wms?service=WMS&request=GetCapabilities
 ```
 
 The response is an XML document listing each layer along with the coordinate systems and image formats supported. These layer names are the ones used when connecting the service to an application.
@@ -45,7 +45,7 @@ Serving maps as tiles makes panning and zooming feel more responsive, including 
 The available layers can be seen through the following GetCapabilities request:
 
 ```text
-https://ows.piksel.big.go.id/wmts?service=WMTS&request=GetCapabilities
+https://ows.staging.piksel.big.go.id/wmts?service=WMTS&request=GetCapabilities
 ```
 
 The response lists the layer names, the tile grid and zoom levels available, and the image formats supported.
@@ -59,7 +59,7 @@ Because the pixel values are available, the data can be used directly for comput
 The available coverages can be seen through the following GetCapabilities request:
 
 ```text
-https://ows.piksel.big.go.id/wcs?service=WCS&request=GetCapabilities
+https://ows.staging.piksel.big.go.id/wcs?service=WCS&request=GetCapabilities
 ```
 
 The response lists the coverage names available along with the data formats supported.
