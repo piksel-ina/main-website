@@ -1,41 +1,41 @@
 ---
 sidebar_position: 5
 title: Sentinel-2 Surface Reflectance
-description: Sentinel-2 SR dari European Space Agency (ESA)
+description: Sentinel-2 SR from the European Space Agency (ESA)
 ---
 
-# Sentinel-2 Surface Reflectance — Spesifikasi
+# Sentinel-2 Surface Reflectance — Specifications
 
 import ProductCard from '@site/src/components/Docs/ProductCard';
 
 <ProductCard
   productId='s2_l2a'
   meta={[
-    { label: 'Nama Teknis:', value: 'Sentinel-2 (2A/2B/2C) Level-2A Surface Reflectance' },
-    { label: 'Versi:', value: '3.2.1' },
-    { label: 'Resolusi:', value: '10–60 m' },
-    { label: 'Cakupan:', value: 'Januari 2017 sampai sekarang' },
-    { label: 'Pembaruan Data:', value: 'Harian' },
+    { label: 'Technical name:', value: 'Sentinel-2 (2A/2B/2C) Level-2A Surface Reflectance' },
+    { label: 'Version:', value: '3.2.1' },
+    { label: 'Resolution:', value: '10–60 m' },
+    { label: 'Coverage:', value: 'January 2017 to present' },
+    { label: 'Data updates:', value: 'Daily' },
   ]}
   tags={['Baseline', 'Raster']}
   image='/img/preview/preview_sr.webp'
-  imageAlt='Sentinel-2 Surface Reflectance Preview'
+  imageAlt='Sentinel-2 Surface Reflectance preview'
 />
 
-## Tentang
-Sentinel-2 Surface Reflectance (Sentinel-2) merupakan bagian dari rangkaian dataset Reflektansi Permukaan Piksel yang mencakup arsip citra yang sangat luas yang diambil oleh program satelit Landsat dari US Geological Survey (USGS) dan Sentinel-2 dari European Space Agency (ESA), yang telah divalidasi, dikalibrasi, dan disesuaikan dengan kondisi di Indonesia — sehingga siap untuk dianalisis dengan mudah.
+## About
+Sentinel-2 Surface Reflectance (Sentinel-2) is part of the Piksel Surface Reflectance dataset series. The series includes an extensive archive of imagery acquired by the US Geological Survey (USGS) Landsat satellite programme and the European Space Agency (ESA) Sentinel-2 programme. The imagery has been validated, calibrated and adjusted for conditions in Indonesia, making it ready for straightforward analysis.
 
-Produk ini menggabungkan citra dari sensor Multi-Spectral Instrument (MSI) pada Sentinel-2A, Sentinel-2B, dan Sentinel-2C yang telah diproses ke Level-2A (reflektansi permukaan bawah atmosfer) menggunakan prosesor Sen2Cor milik ESA.
+This product combines imagery from the Multispectral Instrument (MSI) sensors on Sentinel-2A, Sentinel-2B and Sentinel-2C. It has been processed to Level-2A, representing bottom-of-atmosphere surface reflectance, using ESA's Sen2Cor processor.
 
-## Band
+## Bands
 
 <table>
   <thead>
     <tr>
-      <th>Nama</th>
-      <th>Tipe</th>
+      <th>Name</th>
+      <th>Type</th>
       <th>Unit</th>
-      <th>No-Data</th>
+      <th>No-data</th>
       <th>Alias</th>
     </tr>
   </thead>
@@ -148,16 +148,16 @@ Produk ini menggabungkan citra dari sensor Multi-Spectral Instrument (MSI) pada 
   </tbody>
 </table>
 
-## Aplikasi
-- Pengembangan produk turunan untuk memantau lahan, perairan pedalaman, dan fitur pesisir, seperti:
-  - pertumbuhan perkotaan
-  - habitat pesisir
-  - kegiatan pertambangan
-  - kegiatan pertanian (misalnya: peternakan, pertanian irigasi, pertanian tadah hujan)
-  - luas perairan
-- Pengembangan produk informasi yang terperinci, seperti:
-  - unit luas perairan permukaan yang terdeteksi
-  - unit luas deforestasi
-  - perkiraan hasil panen lahan pertanian.
-- Survei kepatuhan
-- Manajemen keadaan darurat
+## Applications
+- Development of derived products for monitoring land, inland waters and coastal features, including:
+  - urban growth
+  - coastal habitats
+  - mining activities
+  - agricultural activity (for example, livestock farming and irrigated or rainfed agriculture)
+  - water extent
+- Development of detailed information products, including:
+  - measurements of detected surface-water extent
+  - measurements of deforestation extent
+  - crop-yield estimates
+- Compliance surveys
+- Emergency management

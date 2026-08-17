@@ -1,39 +1,39 @@
 ---
 sidebar_position: 4
 title: Sentinel-2 GeoMAD
-description:  Sentinel-2 Annual Geometric Median and Median Absolute Deviations for Indonesia
+description: Sentinel-2 Annual Geometric Median and Median Absolute Deviations for Indonesia
 ---
 
-# Sentinel-2 GeoMAD — Spesifikasi
+# Sentinel-2 GeoMAD — Specifications
 
 import ProductCard from '@site/src/components/Docs/ProductCard';
 
 <ProductCard
   productId='s2_geomad_annual'
   meta={[
-    { label: 'Nama Teknis:', value: 'Sentinel-2 GeoMAD' },
-    { label: 'Versi:', value: '1.0.0' },
-    { label: 'Resolusi:', value: '10 m' },
-    { label: 'Cakupan:', value: '2017 hingga 2025' },
-    { label: 'Pembaruan Data:', value: 'Tahunan' },
+    { label: 'Technical name:', value: 'Sentinel-2 GeoMAD' },
+    { label: 'Version:', value: '1.0.0' },
+    { label: 'Resolution:', value: '10 m' },
+    { label: 'Coverage:', value: '2017 to 2025' },
+    { label: 'Data updates:', value: 'Annual' },
   ]}
   tags={['Baseline', 'Raster']}
   image='/img/preview/preview_gmd.webp'
-  imageAlt='Sentinel-2GeoMAD Preview'
+  imageAlt='Sentinel-2 GeoMAD preview'
 />
 
-## Tentang
-GeoMAD (Geometric Median dan Median Absolute Deviation) merupakan produk komposit citra satelit berbasis analisis statistik yang dirancang untuk merepresentasikan kondisi tahunan permukaan bumi dengan mengkuantifikasi tingkat variabilitas spektral pada setiap piksel dalam periode tertentu. Produk ini dibangun dari rangkaian citra satelit multi-temporal periode satu tahunan sehingga menghasilkan komposit yang mampu menggambarkan kondisi permukaan bumi secara lebih representatif dan relatif bebas dari pengaruh awan. Selain menyediakan informasi mengenai kondisi median tahunan, GeoMAD juga menyajikan ukuran variasi spektral yang dapat dimanfaatkan sebagai indikator dinamika perubahan lingkungan. Oleh karena itu, produk ini sangat sesuai digunakan sebagai data dasar dalam analisis deteksi perubahan (change detection), klasifikasi penutup lahan, pemantauan aktivitas pertanian, evaluasi perkembangan kawasan terbangun, identifikasi perubahan kawasan hutan, pemetaan bekas kebakaran hutan dan lahan, serta berbagai aplikasi pemantauan sumber daya alam dan lingkungan di Indonesia.
+## About
+GeoMAD (Geometric Median and Median Absolute Deviations) is a statistical composite of satellite imagery that represents annual surface conditions and quantifies spectral variability for each pixel over a given period. It combines one year of multi-temporal imagery into a representative view of surface conditions that is relatively free from cloud effects. Alongside annual median conditions, GeoMAD provides measures of spectral variation that can indicate environmental change. It is well suited as baseline data for change detection, land cover classification, monitoring agricultural activity, assessing the growth of built-up areas, identifying changes in forest areas, mapping burn scars from forest and land fires, and other natural resource and environmental monitoring applications in Indonesia.
 
-## Band
+## Bands
 
 <table>
   <thead>
     <tr>
-      <th>Nama</th>
-      <th>Tipe</th>
+      <th>Name</th>
+      <th>Type</th>
       <th>Unit</th>
-      <th>No-Data</th>
+      <th>No-data</th>
       <th>Alias</th>
     </tr>
   </thead>
@@ -139,9 +139,9 @@ GeoMAD (Geometric Median dan Median Absolute Deviation) merupakan produk komposi
   </tbody>
 </table>
 
-## Aplikasi
-Produk GeoMAD memiliki berbagai kegunaan, antara lain:
-- Pemetaan penutup lahan
-- Klasifikasi dan deteksi perubahan
-- Analisis variabilitas dan perubahan permukaan bumi
-- Pemantauan lingkungan
+## Applications
+GeoMAD has applications including:
+- Land cover mapping
+- Classification and change detection
+- Analysis of surface variability and change
+- Environmental monitoring

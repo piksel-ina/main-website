@@ -24,7 +24,7 @@ Data ini dapat digunakan untuk mengamati erosi dan akresi pada pantai, beting pa
 | Sumber citra | Landsat 5, 7, 8, dan 9 |
 | Referensi elevasi | Muka air laut rata-rata |
 
-Ina Coastline diturunkan dari data Reflektansi Permukaan Landsat yang dihimpun di platform Piksel. Rincian produk induk tersedia pada [dokumentasi Reflektansi Permukaan](/docs/category/surface-reflectance-satellite-data/).
+Ina Coastline diturunkan dari data Reflektansi Permukaan Landsat yang dihimpun di platform Piksel. Rincian produk induk tersedia pada [dokumentasi Reflektansi Permukaan](/docs/data_products/baseline_satellite/surface_reflectance).
 
 ## Aplikasi
 

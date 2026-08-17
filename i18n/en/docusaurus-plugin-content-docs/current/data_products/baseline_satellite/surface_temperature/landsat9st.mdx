@@ -1,49 +1,49 @@
 ---
-sidebar_position: 1
-title: Landsat 5 Surface Temperature
-description:  Landsat 5 ST dari US Geological Survey (USGS)
+sidebar_position: 4
+title: Landsat 9 Surface Temperature
+description: Landsat 9 ST from the US Geological Survey (USGS)
 ---
 
-# Landsat 5 Surface Temperature — Spesifikasi
+# Landsat 9 Surface Temperature — Specifications
 
 import ProductCard from '@site/src/components/Docs/ProductCard';
 
 <ProductCard
-  productId='ls5_c2l2_st'
+  productId='ls9_c2l2_st'
   meta={[
-    { label: 'Nama Teknis:', value: 'Landsat 5 Collection 2 Level-2 Surface Temperature' },
-    { label: 'Versi:', value: '3.0.0' },
-    { label: 'Resolusi:', value: '30 m' },
-    { label: 'Cakupan:', value: 'Agustus 1986 hingga November 2011' },
-    { label: 'Pembaruan Data:', value: 'Tidak Ada Pembaruan Data' },
+    { label: 'Technical name:', value: 'Landsat 9 Collection 2 Level-2 Surface Temperature' },
+    { label: 'Version:', value: '3.0.0' },
+    { label: 'Resolution:', value: '30 m' },
+    { label: 'Coverage:', value: 'October 2021 to present' },
+    { label: 'Data updates:', value: 'Daily' },
   ]}
   tags={['Baseline', 'Raster']}
   image='/img/preview/preview_st.webp'
-  imageAlt='Landsat 5 Surface Temperature Preview'
+  imageAlt='Landsat 9 Surface Temperature preview'
 />
 
-## Tentang
-Landsat 5 Surface Temperature (Landsat 5) adalah rangkaian dataset suhu permukaan tanah dari satelit penginderaan jauh yang memegang Guinness World Record untuk misi pengamatan Bumi terlama. Selama hampir 29 tahun beroperasi hingga 2013, Landsat 5 telah mengorbit planet lebih dari 150.000 kali dan mengirimkan 2,5 juta citra permukaan daratan di seluruh dunia. Produk ini diturunkan dari saluran termal inframerah (Band 6) sensor Thematic Mapper (TM) dengan resolusi 30 meter, menjadi instrumen krusial dalam memantau pulau panas perkotaan, kekeringan, tekanan vegetasi, dan aktivitas geotermal secara global.
+## About
+Landsat 9 Surface Temperature (Landsat 9) is part of Piksel's land surface temperature dataset series, which covers the thermal imagery archive from the US Geological Survey (USGS) Landsat satellite programme. This product is derived from the thermal infrared channel (Band 10) of the Thermal Infrared Sensor 2 (TIRS-2), an enhanced version of the Landsat 8 sensor, at 30-metre resolution. It is ready for monitoring urban heat islands, drought, vegetation stress and geothermal activity. Together with Landsat 8, the mission provides an 8-day revisit interval for high-resolution thermal monitoring across Indonesia.
 
-## Band
+## Bands
 
 <table>
   <thead>
     <tr>
-      <th>Nama</th>
-      <th>Tipe</th>
+      <th>Name</th>
+      <th>Type</th>
       <th>Unit</th>
-      <th>No-Data</th>
+      <th>No-data</th>
       <th>Alias</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>**lwir**</td>
+      <td>**lwir11**</td>
       <td>uint16</td>
       <td>Kelvin</td>
       <td>0</td>
-      <td>ST_B6, band_6, st, surface_temperature</td>
+      <td>ST_B10, band_10, st, surface_temperature</td>
     </tr>
     <tr>
       <td>**TRAD**</td>
@@ -90,7 +90,7 @@ Landsat 5 Surface Temperature (Landsat 5) adalah rangkaian dataset suhu permukaa
     <tr>
       <td>**CDIST**</td>
       <td>int16</td>
-      <td>Kilometer</td>
+      <td>Kilometre</td>
       <td>-9999</td>
       <td>ST_CDIST, cdist, cloud_distance</td>
     </tr>
@@ -118,12 +118,12 @@ Landsat 5 Surface Temperature (Landsat 5) adalah rangkaian dataset suhu permukaa
   </tbody>
 </table>
 
-## Aplikasi
-- Pemantauan pulau panas perkotaan (urban heat island) dan kualitas termal kota
-- Deteksi tekanan air pada tanaman dan estimasi kebutuhan irigasi
-- Pemantauan kekeringan dan kondisi kelembapan tanah
-- Pemetaan aktivitas vulkanik dan pemantauan suhu kawah
-- Identifikasi sumber panas alami dan aktivitas geotermal
-- Deteksi serta pemantauan kebakaran hutan dan lahan
-- Analisis suhu perairan (danau, waduk, muara)
-- Analisis mikroiklim untuk perencanaan wilayah
+## Applications
+- Monitoring urban heat islands and urban thermal conditions
+- Detecting water stress in crops and estimating irrigation requirements
+- Monitoring drought and soil moisture conditions
+- Mapping volcanic activity and monitoring crater temperatures
+- Identifying natural heat sources and geothermal activity
+- Detecting and monitoring forest and land fires
+- Analysing water temperatures in lakes, reservoirs and estuaries
+- Analysing microclimates for regional planning

@@ -1,0 +1,40 @@
+---
+title: Surface Reflectance Satellite Data
+description: A guide to choosing from the Surface Reflectance data products available in Piksel
+---
+
+# Surface Reflectance Satellite Data
+
+Surface Reflectance (SR) is reflectance corrected for atmospheric effects, giving an accurate representation of the Earth's surface properties. SR data underpins a range of remote-sensing analyses, from vegetation monitoring and land-use mapping to change detection and crop yield estimation.
+
+Piksel provides **five SR products** from two main constellations: the **Landsat** family (USGS) and **Sentinel-2** (ESA).
+
+## Product Comparison
+
+| Product | Sensor | Resolution | Coverage | Revisit | Best for |
+| --- | --- | --- | --- | --- | --- |
+| [Landsat 5](./landsat5sr.mdx) | TM | 30 m | Mar 1984 – Jun 2013 | 16 days | Historical analysis, 1984–2013 |
+| [Landsat 7](./landsat7sr.mdx) | ETM+ | 30 m | Apr 1999 – Jan 2024 | 16 days | Long-term time series (SLC-off after May 2003) |
+| [Landsat 8](./landsat8sr.mdx) | OLI | 30 m (15 m pan) | Mar 2013 – present | 16 days | Regular updates, consistent with L9 |
+| [Landsat 9](./landsat9sr.mdx) | OLI-2 | 30 m (15 m pan) | Oct 2021 – present | 16 days | 14-bit radiometry, paired with L8 |
+| [Sentinel-2](./sentinel2sr.mdx) | MSI | 10–60 m | Jan 2017 – present | 5 days | Highest resolution, red-edge bands, precision agriculture |
+
+Combining **Landsat 8 + 9** provides an effective revisit time of 8 days. Adding **Sentinel-2** allows the same area to be observed up to several times per week.
+
+## Choosing a Product
+
+- **Need a long historical record?** — Use [Landsat 5](./landsat5sr.mdx) for 1984–2013 or [Landsat 7](./landsat7sr.mdx) for 1999–2024. Both products have 30 m resolution and are consistent with each other.
+- **Need the highest resolution?** — [Sentinel-2](./sentinel2sr.mdx) provides 10 m pixels in the RGB and NIR bands.
+- **Need regular updates and a short revisit time?** — Combine [Landsat 8](./landsat8sr.mdx), [Landsat 9](./landsat9sr.mdx), and [Sentinel-2](./sentinel2sr.mdx).
+- **Need red-edge bands for advanced vegetation analysis?** — [Sentinel-2](./sentinel2sr.mdx) provides three red-edge bands (B5, B6, B7).
+- **Need surface temperature rather than reflectance?** — See [Surface Temperature](../surface_temperature/index.mdx).
+
+## About Surface Reflectance
+
+Surface reflectance (BOA — bottom-of-atmosphere) differs from top-of-atmosphere reflectance (TOA — top-of-atmosphere) because it has been corrected for:
+
+- **Scattering** by aerosols and air molecules
+- **Absorption** by water vapour and other atmospheric gases
+- **Adjacency effects** from surrounding objects
+
+Each product uses a different correction algorithm: **LEDAPS** for Landsat 5/7, **LaSRC** for Landsat 8/9, and **Sen2Cor** for Sentinel-2. These algorithm differences produce small variations between products that need to be considered when combining cross-sensor datasets for time-series analysis.

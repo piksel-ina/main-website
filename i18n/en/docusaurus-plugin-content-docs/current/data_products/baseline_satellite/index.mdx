@@ -1,0 +1,40 @@
+---
+title: Baseline Satellite Data
+description: An overview of the baseline satellite data products available in Piksel — optical, thermal, radar, and composite
+---
+
+# Baseline Satellite Data
+
+Baseline satellite data consists of remote-sensing products that have been corrected and prepared for analysis — Level-2 (per scene) and Level-3 (temporal composites). These products underpin most analysis on the Piksel platform, including vegetation, land, water, and surface temperature monitoring, as well as change detection.
+
+Piksel provides baseline products from **six satellite missions** across **four different measurement types**.
+
+## Product Matrix
+
+| Measurement | Landsat 5 | Landsat 7 | Landsat 8 | Landsat 9 | Sentinel-1 | Sentinel-2 |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Surface Reflectance** | ✓ | ✓ | ✓ | ✓ | — | ✓ |
+| **Surface Temperature** | ✓ | ✓ | ✓ | ✓ | — | — |
+| **SAR Backscatter** | — | — | — | — | ✓ | — |
+| **Annual Composite** | — | — | — | — | — | GeoMAD |
+
+The matrix shows the available options and highlights the gaps — for example, Sentinel-2 has no thermal band, the Landsat family has no SAR, and annual composites are currently available only from Sentinel-2.
+
+## Baseline Satellite Sections
+
+- **[Surface Reflectance](./surface_reflectance/index.mdx)** — Surface reflectance from four Landsat missions and Sentinel-2. The basis for vegetation analysis (NDVI/EVI), land-cover classification, and optical change detection.
+- **[Surface Temperature](./surface_temperature/index.mdx)** — Land surface temperature from four Landsat missions. Used to monitor urban heat islands, drought, vegetation stress, and thermal activity.
+- **[Radar Backscatter](./radar_backscatter/index.mdx)** — Sentinel-1 C-band SAR data with radiometric terrain correction. Works in all weather, day and night.
+- **[Sentinel-2 GeoMAD](./s2_geomad_annual.mdx)** — Annual composites (Geometric Median + MAD statistics) from Sentinel-2. A virtually cloud-free annual snapshot.
+
+## Choosing a Data Type
+
+- **Need to analyse vegetation, spectral indices, or land cover?** → [Surface Reflectance](./surface_reflectance/index.mdx). Use Landsat for long time series (1984–present) or Sentinel-2 for 10 m resolution and red-edge bands.
+- **Need surface temperature data for urban heat, drought, or geothermal analysis?** → [Surface Temperature](./surface_temperature/index.mdx). All Landsat missions are available; combining L8+L9 provides an 8-day revisit.
+- **Need data for floods or landslides during heavy cloud cover or the tropical wet season?** → [Radar Backscatter](./radar_backscatter/index.mdx). It penetrates cloud and does not depend on sunlight.
+- **Need a cloud-free annual snapshot to analyse conditions across years?** → [Sentinel-2 GeoMAD](./s2_geomad_annual.mdx). A statistical composite from a full year of acquisitions.
+- **Combining optical and radar data (sensor fusion)?** → Load [Surface Reflectance](./surface_reflectance/index.mdx) + [Radar Backscatter](./radar_backscatter/index.mdx) together. Optical data provides colour and vegetation information; radar provides structure and moisture information.
+
+:::tip Analysis-ready data
+All products in this section are **Analysis Ready Data (ARD)** — already corrected radiometrically, geometrically, and atmospherically. They can be loaded directly with `odc-stac`, `rioxarray`, or other tools without additional preprocessing.
+:::

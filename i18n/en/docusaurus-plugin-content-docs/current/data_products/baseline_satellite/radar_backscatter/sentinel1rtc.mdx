@@ -1,0 +1,88 @@
+---
+sidebar_position: 1
+title: Sentinel-1 RTC
+description: Sentinel-1 SAR with Radiometric Terrain Correction from the European Space Agency (ESA)
+---
+
+# Sentinel-1 RTC — Specifications
+
+import ProductCard from '@site/src/components/Docs/ProductCard';
+
+<ProductCard
+  productId='s1_rtc'
+  meta={[
+    { label: 'Technical name:', value: 'Sentinel-1 Radiometrically Terrain Corrected (RTC) SAR' },
+    { label: 'Version:', value: '1.0.0' },
+    { label: 'Resolution:', value: '20 m' },
+    { label: 'Coverage:', value: 'October 2014 to present' },
+    { label: 'Data updates:', value: 'Daily' },
+  ]}
+  tags={['Baseline', 'Raster']}
+  image='/img/preview/preview_s1.webp'
+  imageAlt='Sentinel-1 RTC preview'
+/>
+
+## About
+Sentinel-1 RTC (Radiometrically Terrain Corrected) is C-band synthetic aperture radar (SAR) imagery from the Sentinel-1 mission operated by the European Space Agency (ESA). Unlike optical sensors such as Landsat and Sentinel-2, SAR uses microwaves (~5.6 cm) that penetrate cloud, allowing it to operate in all weather, day or night. This makes it highly reliable across tropical Indonesia, where cloud cover is frequent.
+
+This product is derived from Sentinel-1 Level-1 GRD (Ground Range Detected) data with full terrain correction, allowing backscatter (σ⁰) values to be compared consistently across scenes, time and topography.
+
+:::tip All-weather capability
+Sentinel-1 C-band radar is unaffected by cloud or darkness. This is a major advantage when monitoring hydrometeorological disasters such as floods and landslides in tropical regions often covered by thick cloud, where optical imagery is usually unusable.
+:::
+
+## Bands
+
+Sentinel-1 acquires data in dual-polarisation mode. Each scene generally contains two active channels, such as VV+VH or HH+HV, depending on the operating mode used in the region.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>No-data</th>
+      <th>Alias</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**vv**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>VV</td>
+    </tr>
+    <tr>
+      <td>**vh**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>VH</td>
+    </tr>
+    <tr>
+      <td>**hh**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>HH</td>
+    </tr>
+    <tr>
+      <td>**hv**</td>
+      <td>float32</td>
+      <td>1</td>
+      <td>-32768.0</td>
+      <td>HV</td>
+    </tr>
+  </tbody>
+</table>
+
+## Applications
+- Mapping floods and areas affected by hydrometeorological disasters
+- Detecting deforestation and changes in forest cover
+- Monitoring wetlands, mangroves and coastal ecosystems
+- Detecting vessels and maritime activity
+- Estimating vegetation biomass and monitoring crop growth
+- Analysing soil moisture
+- Detecting landslides and ground movement
+- Mapping burn scars after fires

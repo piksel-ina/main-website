@@ -24,7 +24,7 @@ The data can be used to observe erosion and accretion along beaches, sandbars, r
 | Source imagery | Landsat 5, 7, 8 and 9 |
 | Elevation reference | Mean sea level |
 
-Ina Coastline is derived from Landsat Surface Reflectance data held on the Piksel platform. See the [Surface Reflectance documentation](/docs/category/surface-reflectance-satellite-data/) for details of the source products.
+Ina Coastline is derived from Landsat Surface Reflectance data held on the Piksel platform. See the [Surface Reflectance documentation](/docs/data_products/baseline_satellite/surface_reflectance) for details of the source products.
 
 ## Applications
 
