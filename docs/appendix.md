@@ -2,110 +2,110 @@
 sidebar_position: 6
 ---
 
-# Appendix
+# Lampiran
 
-Bagian ini berisi rujukan pendukung untuk memahami istilah, singkatan, dan konsep teknis yang sering muncul di dokumentasi Piksel. Fokus utama saat ini adalah **glosarium** — daftar istilah dengan definisinya. Bagian lain seperti panduan sitasi, lisensi data, dan tabel referensi silang antar sensor akan ditambahkan seiring waktu.
+Glosarium ini menjelaskan istilah, singkatan, dan konsep teknis yang digunakan dalam dokumentasi Piksel.
 
 ## Glosarium
 
-### Reflektansi, Suhu, dan Radiometri
+### Reflektansi, suhu, dan radiometri
 
-**ARD** (Analysis Ready Data) — Data yang telah dikoreksi radiometrik, geometrik, dan atmosferik, sehingga siap dianalisis tanpa preprocessing tambahan. Semua produk baseline di Piksel adalah ARD.
+**ARD** (Analysis Ready Data) — Data yang telah diproses dan disusun dengan standar yang konsisten agar dapat langsung dimuat dan dibandingkan. Jenis koreksinya bergantung pada sensor: produk optik memerlukan koreksi radiometrik, geometrik, dan atmosferik, sedangkan produk SAR memerlukan koreksi radiometrik dan medan. Produk data satelit dasar Piksel disediakan sebagai ARD.
 
-**BOA** (Bottom-Of-Atmosphere) — Reflektansi permukaan Bumi setelah efek atmosfer dikoreksi. Istilah setara dengan Surface Reflectance untuk produk optik.
+**BOA** (Bottom-Of-Atmosphere) — Reflektansi pada permukaan Bumi setelah pengaruh atmosfer dikoreksi. Pada produk optik, istilah ini digunakan untuk reflektansi permukaan.
 
-**Level-1 / L1** — Data mentah dengan koreksi geometris dasar. Contoh: Landsat Level-1 GRD, Sentinel-2 Level-1C.
+**Level-1 / L1** — Produk yang diturunkan dari data sensor dengan koreksi radiometrik dan geometrik dasar, tetapi belum menjalani pemrosesan geofisik tingkat lanjut. Contohnya adalah Sentinel-2 Level-1C dan Sentinel-1 Level-1 GRD.
 
-**Level-2 / L2** — Data yang telah dikoreksi atmosferik. Semua produk Surface Reflectance, Surface Temperature, dan Sentinel-1 RTC di Piksel merupakan produk Level-2.
+**Level-2 / L2** — Produk Level-1 yang telah menjalani pemrosesan sesuai jenis datanya. Contohnya adalah koreksi atmosferik untuk reflektansi permukaan dan estimasi suhu permukaan pada Landsat Collection 2 Level-2.
 
-**Level-3 / L3** — Produk turunan atau komposit dari data Level-2. Contoh: Sentinel-2 GeoMAD adalah komposit tahunan Level-3.
+**Level-3 / L3** — Produk turunan atau komposit yang menggabungkan satu atau beberapa observasi Level-2. GeoMAD Sentinel-2 merupakan komposit temporal tahunan.
 
-**SR** (Surface Reflectance) — Reflektansi permukaan Bumi yang telah dikoreksi dari efek atmosfer. Menggambarkan sifat pantulan cahaya matahari oleh permukaan pada berbagai panjang gelombang.
+**SR** (Surface Reflectance) — Reflektansi permukaan Bumi setelah pengaruh atmosfer dikoreksi. Nilainya menggambarkan pantulan cahaya matahari oleh permukaan pada panjang gelombang yang berbeda.
 
-**ST** (Surface Temperature) — Suhu radiatif permukaan tanah yang diturunkan dari saluran termal inframerah. Disimpan dalam satuan **Kelvin** pada produk Landsat Collection 2 Level-2.
+**ST** (Surface Temperature) — Suhu radiatif permukaan yang diturunkan dari band inframerah termal. Produk Landsat Collection 2 Level-2 menyatakannya dalam kelvin.
 
-**TOA** (Top-Of-Atmosphere) — Reflektansi yang diukur sensor sebelum koreksi atmosfer. Level-1 Landsat dan Level-1C Sentinel-2 adalah produk TOA.
+**TOA** (Top-Of-Atmosphere) — Reflektansi pada sensor sebelum pengaruh atmosfer dikoreksi. Sentinel-2 Level-1C menyediakan reflektansi TOA, sedangkan data Landsat Level-1 dapat dikonversi menjadi reflektansi TOA.
 
-### Algoritma Pemrosesan
+### Algoritma pemrosesan
 
-**LEDAPS** (Landsat Ecosystem Disturbance Adaptive Processing System) — Algoritma milik NASA/USGS untuk menurunkan reflektansi permukaan dari citra Landsat 4, 5, dan 7. Mengoreksi hamburan dan penyerapan atmosfer.
+**LEDAPS** (Landsat Ecosystem Disturbance Adaptive Processing System) — Algoritma NASA dan USGS untuk menghasilkan reflektansi permukaan Landsat 4, 5, dan 7 melalui koreksi hamburan serta penyerapan atmosfer.
 
-**LaSRC** (Land Surface Reflectance Code) — Algoritma pengganti LEDAPS untuk Landsat 8 dan 9. Dikembangkan USGS dengan koreksi atmosfer yang lebih akurat untuk sensor OLI.
+**LaSRC** (Land Surface Reflectance Code) — Algoritma USGS untuk menghasilkan reflektansi permukaan dari sensor OLI pada Landsat 8 dan 9.
 
-**Sen2Cor** — Prosesor resmi ESA untuk mengubah Sentinel-2 Level-1C (TOA) menjadi Level-2A (BOA), sekaligus menghasilkan band pendukung SCL, AOT, dan WVP.
+**Sen2Cor** — Prosesor ESA yang mengubah Sentinel-2 Level-1C (TOA) menjadi Level-2A (BOA). Prosesor ini juga menghasilkan Scene Classification Layer (SCL), Aerosol Optical Thickness (AOT), dan Water Vapour (WVP).
 
 ### Radar dan SAR
 
-**Backscatter (σ⁰)** — Intensitas gelombang mikro yang dipantulkan kembali ke sensor radar setelah mengenai permukaan. Dibaca sebagai "sigma-nought" dan disimpan dalam skala linear atau desibel (dB).
+**Hamburan balik (σ⁰)** — Ukuran energi gelombang mikro yang dipantulkan permukaan kembali ke sensor radar. Nilai sigma-nought ini dapat dinyatakan pada skala linear atau desibel (dB).
 
-**C-band** — Rentang frekuensi gelombang mikro sekitar 4–8 GHz. Sentinel-1 SAR bekerja pada 5.405 GHz (panjang gelombang ~5.6 cm) yang mampu menembus awan dan bekerja siang-malam.
+**C-band** — Rentang frekuensi gelombang mikro sekitar 4–8 GHz. SAR Sentinel-1 bekerja pada 5,405 GHz, setara dengan panjang gelombang sekitar 5,6 cm. Sinyal ini dapat menembus awan, sedangkan sensor SAR dapat beroperasi pada siang maupun malam hari.
 
-**GRD** (Ground Range Detected) — Produk Sentinel-1 Level-1 yang telah diproyeksikan ke geometri ground range. Menjadi input utama untuk pembuatan produk RTC.
+**GRD** (Ground Range Detected) — Produk Sentinel-1 Level-1 yang telah diproyeksikan ke geometri ground range. Produk ini menjadi masukan untuk menghasilkan RTC.
 
-**IW** (Interferometric Wide swath) — Mode akuisisi default Sentinel-1 atas daratan. Cakupan 250 km dengan resolusi ~20 m.
+**IW** (Interferometric Wide Swath) — Mode akuisisi utama Sentinel-1 di atas daratan. Mode ini memiliki lebar sapuan sekitar 250 km dan menghasilkan produk beresolusi sekitar 20 m.
 
-**Polarisasi (VV, VH, HH, HV)** — Orientasi gelombang radar saat dipancarkan dan diterima. Sentinel-1 mengakuisisi data dalam mode dual-polarisasi (biasanya VV+VH atas daratan) untuk membedakan tipe permukaan.
+**Polarisasi (VV, VH, HH, HV)** — Orientasi gelombang radar saat dipancarkan dan diterima. Sentinel-1 umumnya menggunakan polarisasi ganda, seperti VV+VH di atas daratan, untuk merekam respons permukaan yang berbeda.
 
-**RTC** (Radiometrically Terrain Corrected) — Produk SAR yang telah dikoreksi topografi dan radiometrik, sehingga nilai backscatter dapat dibandingkan antar scene, antar waktu, dan lintas kemiringan lereng.
+**RTC** (Radiometrically Terrain Corrected) — Produk SAR yang telah dikoreksi secara radiometrik dan terhadap pengaruh topografi. Koreksi ini membuat nilai hamburan balik lebih konsisten untuk dibandingkan antarcitra, antarwaktu, dan pada medan yang berbeda.
 
-**SAR** (Synthetic Aperture Radar) — Radar apertur sintetis. Sensor aktif yang memancarkan gelombang mikro dan mengukur pantulan kembali. Tidak bergantung pada cahaya matahari dan tidak terhalang awan.
+**SAR** (Synthetic Aperture Radar) — Sensor radar aktif yang memancarkan gelombang mikro dan mengukur sinyal pantulannya. SAR tidak bergantung pada cahaya matahari dan dapat mengamati permukaan melalui tutupan awan.
 
-### Sensor Satelit
+### Sensor satelit
 
-**ETM+** (Enhanced Thematic Mapper Plus) — Sensor optik multispektral pada Landsat 7. Memiliki 8 band termasuk pankromatik 15 m dan termal 60 m (Band 6).
+**ETM+** (Enhanced Thematic Mapper Plus) — Sensor multispektral pada Landsat 7. Sensor ini memiliki delapan band, termasuk band pankromatik 15 m dan band termal 60 m.
 
-**MSI** (Multi-Spectral Instrument) — Sensor optik pada Sentinel-2. Mengakuisisi 13 band pada resolusi 10, 20, dan 60 m.
+**MSI** (Multi-Spectral Instrument) — Sensor optik pada Sentinel-2 yang merekam 13 band dengan resolusi spasial 10, 20, dan 60 m.
 
-**OLI** (Operational Land Imager) — Sensor optik multispektral pada Landsat 8. Mencakup 9 band optik termasuk pankromatik 15 m dan dua band baru (coastal aerosol, cirrus).
+**OLI** (Operational Land Imager) — Sensor optik multispektral pada Landsat 8. OLI memiliki sembilan band, termasuk band pankromatik 15 m, coastal aerosol, dan cirrus.
 
-**OLI-2** — Versi OLI pada Landsat 9 dengan resolusi radiometrik 14-bit (dibanding 12-bit pada OLI Landsat 8), memungkinkan deteksi variasi spektral yang lebih halus.
+**OLI-2** — Sensor OLI pada Landsat 9. Resolusi radiometriknya 14 bit, dibandingkan dengan 12 bit pada OLI Landsat 8, sehingga dapat membedakan variasi spektral yang lebih halus.
 
-**TIRS** (Thermal Infrared Sensor) — Sensor termal Landsat 8. Menyediakan dua band termal (Band 10 dan Band 11) pada resolusi native 100 m, disampling ke 30 m.
+**TIRS** (Thermal Infrared Sensor) — Sensor termal Landsat 8 dengan dua band termal pada resolusi asal 100 m. Produk Landsat meresampel band tersebut menjadi 30 m.
 
-**TIRS-2** — Sensor termal Landsat 9. Menggunakan baffling telescope untuk mengatasi stray light yang mempengaruhi TIRS Landsat 8.
+**TIRS-2** — Sensor termal Landsat 9. Desain optiknya mengurangi pengaruh cahaya liar (*stray light*) yang ditemukan pada TIRS Landsat 8.
 
-**TM** (Thematic Mapper) — Sensor optik multispektral pada Landsat 4 dan 5. Memiliki 7 band pada resolusi 30 m (kecuali Band 6 termal pada 120 m native).
+**TM** (Thematic Mapper) — Sensor multispektral pada Landsat 4 dan 5. TM memiliki tujuh band pada resolusi 30 m, kecuali band termal dengan resolusi asal 120 m.
 
-### Produk Komposit
+### Produk komposit
 
-**BCMAD** (Bray-Curtis MAD) — Deviasi Bray-Curtis dari geometric median. Salah satu band statistik pada produk GeoMAD.
+**GeoMAD** (Geometric Median and Median Absolute Deviations) — Komposit temporal yang menggunakan median geometrik untuk mewakili kondisi tipikal dan beberapa ukuran MAD untuk menunjukkan variasi. Piksel menyediakan GeoMAD tahunan dari Sentinel-2.
 
-**COUNT** — Band pada GeoMAD yang menyimpan jumlah observasi valid per piksel selama periode agregasi. Berguna untuk menilai kualitas komposit di suatu wilayah.
+**BCMAD** (Bray-Curtis Median Absolute Deviation) — Ukuran variasi berdasarkan ketakmiripan Bray-Curtis terhadap median geometrik.
 
-**EMAD** (Euclidean MAD) — Deviasi jarak Euclidean dari geometric median di seluruh band spektral. Salah satu band statistik GeoMAD.
+**COUNT** — Jumlah observasi valid yang digunakan untuk menghitung komposit pada setiap piksel.
 
-**GeoMAD** (Geometric Median + Median Absolute Deviation) — Komposit temporal yang menggabungkan geometric median untuk nilai tipikal dan MAD untuk variabilitas. Piksel menyediakan komposit tahunan dari Sentinel-2.
+**EMAD** (Euclidean Median Absolute Deviation) — Ukuran variasi berdasarkan jarak Euclidean terhadap median geometrik.
 
-**SMAD** (Spectral MAD) — Deviasi absolut median dalam ruang spektral. Salah satu band statistik GeoMAD untuk mengukur variabilitas warna piksel.
+**SMAD** (Spectral Median Absolute Deviation) — Ukuran variasi berdasarkan sudut spektral terhadap median geometrik.
 
-### Infrastruktur Data dan Standar
+### Infrastruktur data dan standar
 
-**COG** (Cloud-Optimized GeoTIFF) — Format raster GeoTIFF yang dioptimalkan untuk cloud storage. Memungkinkan pembacaan sebagian data (HTTP range requests) tanpa mengunduh seluruh file.
+**COG** (Cloud-Optimized GeoTIFF) — GeoTIFF yang disusun agar bagian tertentu dari raster dapat dibaca melalui permintaan rentang HTTP tanpa mengunduh seluruh berkas.
 
-**CRS** (Coordinate Reference System) — Sistem referensi koordinat yang mendefinisikan bagaimana koordinat pada citra dipetakan ke lokasi di Bumi. Umumnya diidentifikasi dengan kode EPSG.
+**CRS** (Coordinate Reference System) — Sistem referensi yang menentukan cara koordinat pada data geospasial dipetakan ke lokasi di Bumi. CRS umumnya dikenali melalui kode EPSG.
 
-**EPSG** — Namespace kode untuk sistem referensi koordinat (contoh: EPSG:4326 untuk WGS84, EPSG:6933 untuk Equal Earth). Dikelola oleh IOGP.
+**EPSG** — Daftar pengenal untuk sistem referensi koordinat yang dikelola oleh IOGP. Salah satu contohnya adalah EPSG:4326 untuk WGS 84.
 
-**ODC** (Open Data Cube) — Framework open-source untuk mengorganisasi, memuat, dan menganalisis data geospasial multi-temporal. Digunakan Piksel Sandbox untuk katalog data.
+**ODC** (Open Data Cube) — Kerangka kerja sumber terbuka untuk mengatur, memuat, dan menganalisis data geospasial multitemporal. Piksel Sandbox menggunakannya untuk mengakses katalog data.
 
-**STAC** (SpatioTemporal Asset Catalog) — Standar terbuka untuk katalog aset geospasial. Memungkinkan pencarian dan pengambilan metadata citra secara terprogram menggunakan `pystac-client` atau tool lainnya.
+**STAC** (SpatioTemporal Asset Catalog) — Standar terbuka untuk membuat katalog aset geospasial. Katalog STAC dapat ditelusuri secara terprogram dengan pustaka seperti `pystac-client`.
 
-### Layanan Web (OGC)
+### Layanan web OGC
 
-**OGC** (Open Geospatial Consortium) — Organisasi standar internasional untuk data dan layanan geospasial.
+**OGC** (Open Geospatial Consortium) — Organisasi internasional yang mengembangkan standar terbuka untuk data dan layanan geospasial.
 
-**WCS** (Web Coverage Service) — Layanan OGC untuk mengambil data raster secara utuh (nilai piksel), cocok untuk analisis lanjutan.
+**WCS** (Web Coverage Service) — Layanan OGC untuk mengambil nilai piksel dari data raster. Permintaan dapat dibatasi menurut wilayah, resolusi, atau band untuk analisis lebih lanjut.
 
-**WMS** (Web Map Service) — Layanan OGC untuk mengambil peta yang telah dirender sebagai gambar. Cocok untuk visualisasi.
+**WMS** (Web Map Service) — Layanan OGC untuk memperoleh peta yang telah dirender sebagai gambar.
 
-**WMTS** (Web Map Tile Service) — Layanan OGC untuk mengambil peta dalam bentuk tile pre-rendered. Cocok untuk aplikasi web dengan performa tinggi.
+**WMTS** (Web Map Tile Service) — Layanan OGC untuk memperoleh peta sebagai ubin gambar yang telah dirender, sehingga sesuai untuk penayangan peta web.
 
-### Alat dan Alur Pemrosesan
+### Alat dan alur pemrosesan
 
-**Argo Workflow** — Engine workflow Kubernetes-native yang digunakan Piksel untuk pemrosesan data geospasial berskala besar secara paralel di infrastruktur cloud.
+**Argo Workflows** — Mesin alur kerja berbasis Kubernetes yang digunakan Piksel untuk menjalankan pemrosesan geospasial paralel pada infrastruktur komputasi awan.
 
-**JupyterLab** — Antarmuka web untuk notebook, kode, dan visualisasi Python. Merupakan antarmuka utama Piksel Sandbox untuk analisis interaktif.
+**JupyterLab** — Antarmuka berbasis web untuk bekerja dengan notebook, kode, dan visualisasi Python. Piksel Sandbox menggunakannya sebagai lingkungan analisis interaktif.
 
-**pystac-client** — Pustaka Python untuk mengakses STAC API. Digunakan luas untuk mencari dan mengambil metadata citra secara terprogram.
+**pystac-client** — Pustaka Python untuk menelusuri STAC API dan mengambil metadata aset geospasial.
 
-**uv** — Manajer paket Python cepat yang digunakan di Piksel Sandbox untuk menyiapkan lingkungan analisis.
+**uv** — Pengelola paket dan lingkungan Python yang digunakan di Piksel Sandbox untuk menyiapkan lingkungan analisis.

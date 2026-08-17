@@ -2,63 +2,60 @@
 sidebar_position: 1
 ---
 
-# Overview
+# Ikhtisar
 
-Piksel adalah platform observasi bumi digital yang dikembangkan oleh **Badan Informasi Geospasial (BIG)** untuk menyediakan akses yang mudah terhadap data citra satelit dan informasi geospasial Indonesia. Piksel menghimpun arsip data penginderaan jauh dari berbagai misi satelit — termasuk **Sentinel-1**, **Sentinel-2**, dan **Landsat 5/7/8/9** — sehingga pengguna dapat menjelajahi, mengakses, dan memanfaatkan data untuk berbagai kebutuhan analisis wilayah.
+Piksel adalah platform observasi Bumi digital yang dikembangkan oleh **Badan Informasi Geospasial (BIG)** untuk memudahkan akses ke citra satelit dan informasi geospasial Indonesia. Arsipnya mencakup data dari **Sentinel-1**, **Sentinel-2**, serta **Landsat 5, 7, 8, dan 9** untuk penelusuran dan analisis wilayah.
 
-Piksel tidak hanya menyediakan data, tetapi juga fitur untuk melakukan analisis dan menghasilkan informasi yang dapat digunakan untuk mendukung pengambilan keputusan. Platform ini dirancang untuk pemanfaatan observasi bumi secara terbuka, fleksibel, dan efisien — tanpa memerlukan infrastruktur pengolahan data yang besar di sisi pengguna.
+Selain menyediakan data, Piksel mendukung analisis melalui peta, layanan web, lingkungan komputasi, dan infrastruktur pemrosesan. Pengguna dapat memilih layanan yang sesuai tanpa harus menyiapkan seluruh infrastruktur pengolahan data sendiri.
 
 ## Layanan Piksel
 
-Piksel menyediakan enam layanan utama yang saling melengkapi:
+Layanan Piksel mencakup:
 
-- **[Jelajah Data](/docs/services/explorer)** — Menjelajahi arsip metadata untuk memeriksa ketersediaan citra satelit berdasarkan lokasi dan waktu.
-- **[Peta Interaktif](/docs/services/maps)** — Melihat produk citra dan dataset dalam tampilan peta interaktif.
-- **[Piksel Sandbox](/docs/services/sandbox)** — Lingkungan JupyterLab dan Open Data Cube untuk eksplorasi data serta pengembangan alur analisis berbasis Python.
-- **[Pemrosesan Data Geospasial](/docs/services/geospatial-data-processing)** — Infrastruktur komputasi awan dan Argo Workflow untuk pemrosesan data geospasial berskala besar.
-- **[Layanan Web](/docs/services/web-services)** — Endpoint standar OGC (WMS, WMTS, WCS) untuk integrasi dengan QGIS, ArcGIS, dan aplikasi GIS lainnya.
-- **[Dukungan dan Kolaborasi](/docs/services/support)** — Pelatihan, pusat bantuan, dan peluang kolaborasi strategis dengan tim Piksel.
+- **[Jelajah Data](../services/explorer)** — menelusuri katalog metadata dan memeriksa ketersediaan citra berdasarkan lokasi dan waktu.
+- **[Peta Interaktif](../services/maps)** — melihat produk citra dan dataset pada peta interaktif.
+- **[Piksel Sandbox](../services/sandbox)** — menggunakan JupyterLab dan Open Data Cube untuk mengeksplorasi data serta mengembangkan analisis berbasis Python.
+- **[Pemrosesan Data Geospasial](../services/geospatial-data-processing)** — menjalankan pemrosesan geospasial berskala besar dengan komputasi awan dan Argo Workflows.
+- **[Layanan Web](../services/web-services)** — menghubungkan QGIS, ArcGIS, atau aplikasi lain melalui layanan OGC seperti WMS, WMTS, dan WCS.
+- **[Dukungan dan Kolaborasi](../services/support)** — memperoleh bantuan, mengikuti pelatihan, dan menemukan informasi tentang kolaborasi dengan tim Piksel.
 
-## Contoh Pemanfaatan
+## Kasus penggunaan
 
-Cakupan wilayah Indonesia dan arsip citra multitemporal memungkinkan berbagai analisis untuk berbagai bidang:
+Arsip citra multitemporal untuk wilayah Indonesia mendukung analisis di bidang berikut:
 
-- **[Pangan dan Pertanian](/docs/usecases/pangan)** — pemantauan lahan pertanian, produktivitas, dan pola tanam
-- **[Tutupan Lahan](/docs/usecases/lahan)** — deteksi perubahan penggunaan dan tutupan lahan
-- **Kehutanan** — pemantauan deforestasi dan kondisi hutan
-- **[Wilayah Pesisir](/docs/usecases/pesisir)** — analisis garis pantai, mangrove, dan zona pesisir
-- **[Lingkungan](/docs/usecases/lingkungan)** — pemantauan kualitas lingkungan dan sumber daya alam
-- **[Kebencanaan](/docs/usecases/bencana)** — pemetaan area terdampak banjir, longsor, dan kebakaran hutan
+- **[Pangan dan pertanian](../usecases/pangan)** — pemantauan lahan pertanian, produktivitas, dan pola tanam.
+- **[Tutupan lahan](../usecases/lahan)** — deteksi perubahan penggunaan dan tutupan lahan.
+- **[Wilayah pesisir](../usecases/pesisir)** — analisis garis pantai, mangrove, dan zona pesisir.
+- **[Lingkungan](../usecases/lingkungan)** — pemantauan kualitas lingkungan dan sumber daya alam.
+- **[Kebencanaan](../usecases/bencana)** — pemetaan wilayah terdampak banjir, longsor, dan kebakaran hutan.
 
-Data satelit yang tersedia dapat diolah menjadi berbagai produk informasi, seperti citra komposit tahunan bebas awan (GeoMAD), peta perubahan garis pantai, hingga peta area terdampak bencana.
+Data tersebut dapat diolah menjadi komposit tahunan GeoMAD, peta perubahan garis pantai, serta peta wilayah terdampak bencana.
 
-## Data yang Tersedia
+## Data yang tersedia
 
-Piksel mengorganisasi data pada dua kategori utama:
+Produk data Piksel dikelompokkan sebagai berikut:
 
-- **Data Satelit Baseline** — arsip citra Level-2 dan Level-3 untuk berbagai misi:
-  - **Reflektansi Permukaan** dari Landsat 5/7/8/9 dan Sentinel-2
-  - **Suhu Permukaan** dari Landsat 5/7/8/9
-  - **Radar Backscatter** dari Sentinel-1 (kapabilitas segala cuaca, menembus tutupan awan)
-  - **Komposit Tahunan** GeoMAD dari Sentinel-2
-- **Data Pesisir dan Kelautan** — produk turunan untuk analisis wilayah laut dan pesisir
+- **[Data satelit dasar](../data_products/baseline_satellite/)** — produk per citra dan komposit temporal dari beberapa misi:
+  - **[Reflektansi permukaan](../data_products/baseline_satellite/surface_reflectance/)** dari Landsat 5, 7, 8, dan 9 serta Sentinel-2.
+  - **[Suhu permukaan](../data_products/baseline_satellite/surface_temperature/)** dari Landsat 5, 7, 8, dan 9.
+  - **[Hamburan balik radar](../data_products/baseline_satellite/radar_backscatter/)** dari Sentinel-1.
+  - **[Komposit tahunan GeoMAD](../data_products/baseline_satellite/s2_geomad_annual)** dari Sentinel-2.
+- **[Data laut dan pesisir](../data_products/sea_ocean_coast/coastline)** — produk turunan seperti Ina Coastline untuk menganalisis perubahan garis pantai.
 
-Referensi teknis lengkap untuk setiap produk data tersedia pada bagian **Data Products** di sidebar.
+Spesifikasi setiap produk tersedia pada bagian [Data Products](../category/data-products/). Ketersediaan data menurut lokasi dan waktu dapat diperiksa melalui [Jelajah Data](../services/explorer).
 
-## Struktur Dokumentasi
+## Struktur dokumentasi
 
-Dokumentasi ini disusun untuk melayani berbagai kebutuhan, dari pengguna baru hingga yang membutuhkan referensi teknis mendalam:
+Dokumentasi Piksel dibagi berdasarkan kebutuhan pembaca:
 
-1. **Layanan** — Cara menggunakan setiap fitur platform, dari eksplorasi data hingga analisis lanjutan.
-2. **Contoh Pemanfaatan** — Studi kasus dan alur kerja nyata untuk berbagai bidang aplikasi.
-3. **Data Products** — Referensi teknis lengkap untuk setiap produk data yang tersedia.
-4. **Appendix dan Cheatsheet** — Referensi cepat, glosarium, dan informasi pendukung lainnya.
+1. **Layanan** menjelaskan fitur platform dan cara menggunakannya.
+2. **Kasus Penggunaan** berisi contoh analisis untuk beberapa bidang aplikasi.
+3. **Data Products** memuat spesifikasi produk dan pengukuran yang tersedia.
+4. **Lampiran** menyediakan glosarium istilah teknis.
 
-Setiap bagian dapat diakses melalui sidebar navigasi di sebelah kiri.
+## Mulai dari mana
 
-## Mulai dari Mana
-
-- **Baru pertama kali menggunakan Piksel?** Mulai dengan mengeksplorasi data yang tersedia melalui [Jelajah Data](/docs/services/explorer).
-- **Ingin mencoba analisis?** Ajukan akses ke [Piksel Sandbox](/docs/services/sandbox) dan mulai dari notebook tutorial.
-- **Sudah punya alur kerja GIS?** Hubungkan aplikasi Anda melalui [Layanan Web](/docs/services/web-services).
-- **Butuh bantuan atau ingin berkolaborasi?** Kunjungi [Dukungan dan Kolaborasi](/docs/services/support).
+- **Pertama kali menggunakan Piksel?** Periksa data yang tersedia melalui [Jelajah Data](../services/explorer).
+- **Ingin mencoba analisis?** Ajukan akses ke [Piksel Sandbox](../services/sandbox), lalu ikuti panduan [Memulai Piksel Sandbox](../services/sandbox/sandbox-getting-started).
+- **Sudah memiliki alur kerja GIS?** Hubungkan aplikasi melalui [Layanan Web](../services/web-services).
+- **Membutuhkan bantuan atau ingin berkolaborasi?** Kunjungi [Dukungan dan Kolaborasi](../services/support).
