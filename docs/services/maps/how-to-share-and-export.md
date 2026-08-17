@@ -4,6 +4,8 @@ title: Membagikan, Menyimpan, dan Menceritakan Peta
 description: Membuat tautan share, mengunduh tampilan peta, mencetak, dan membuat cerita.
 ---
 
+import Figure from '@site/src/components/Docs/Figure';
+
 # Membagikan, Menyimpan, dan Menceritakan Peta
 
 Setelah mengatur layer dan tampilan peta, gunakan **Bagikan / Cetak** untuk membagikan atau menyimpan hasilnya.
@@ -14,7 +16,11 @@ Setelah mengatur layer dan tampilan peta, gunakan **Bagikan / Cetak** untuk memb
 2. Klik **Bagikan / Cetak** di bilah atas.
 3. Salin URL share untuk membagikan atau menyimpan tampilan tersebut sebagai bookmark.
 
-![Panel Bagikan dan Cetak](/img/maps/maps-share-01-share-panel.webp)
+<Figure
+  src="/img/maps/maps-share-01-share-panel.webp"
+  alt="Panel Bagikan dan Cetak"
+  size={6}
+/>
 
 Tautan share memulihkan konfigurasi peta saat dibuka, termasuk tampilan kamera dan layer aktif. Piksel Map tidak menyimpan peta sebagai proyek akun terpisah; URL share adalah cara untuk kembali ke konfigurasi yang sama.
 
@@ -30,7 +36,11 @@ Dari panel yang sama, Anda dapat:
 
 Klik **Cerita** pada bilah atas untuk membuka mode cerita. Pilih **Tangkap Scene** untuk menyimpan tampilan saat ini sebagai satu scene, lalu tambahkan scene lain untuk membangun urutan narasi.
 
-![Panel Cerita](/img/maps/maps-share-02-story-panel.webp)
+<Figure
+  src="/img/maps/maps-share-02-story-panel.webp"
+  alt="Panel Cerita"
+  size={6}
+/>
 
 :::tip Siapkan scene sebelum menangkapnya
 Atur lokasi, zoom, layer, gaya, dan waktu terlebih dahulu. Scene akan lebih mudah dipahami jika setiap scene hanya menyampaikan satu temuan utama.
