@@ -179,18 +179,6 @@
     "message": "Discover the variety of surface reflectance satellite data products offered by Piksel platform.",
     "description": "The generated-index page description for category 'Surface Reflectance Satellite Data' in sidebar 'docsSidebar'"
   },
-  "sidebar.docsSidebar.category.Pangan": {
-    "message": "Pangan",
-    "description": "The label for category 'Pangan' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Lahan": {
-    "message": "Lahan",
-    "description": "The label for category 'Lahan' in sidebar 'docsSidebar'"
-  },
-  "sidebar.docsSidebar.category.Lingkungan": {
-    "message": "Lingkungan",
-    "description": "The label for category 'Lingkungan' in sidebar 'docsSidebar'"
-  },
   "sidebar.docsSidebar.category.Data Laut dan Pesisir": {
     "message": "Marine and Coastal Data",
     "description": "The label for category 'Data Laut dan Pesisir' in sidebar 'docsSidebar'"
@@ -210,5 +198,9 @@
   "sidebar.docsSidebar.category.Radar Backscatter Satellite Data": {
     "message": "Radar Backscatter Satellite Data",
     "description": "The label for category 'Radar Backscatter Satellite Data' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Data Explorer": {
+    "message": "Data Explorer",
+    "description": "The label for category 'Data Explorer' in sidebar 'docsSidebar'"
   }
 }
