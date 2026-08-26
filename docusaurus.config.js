@@ -191,13 +191,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      announcementBar: {
-        content:
-          '⚠️ Situs ini adalah <strong>staging</strong> dan sedang dalam pengembangan. | This is a <strong>staging</strong> site currently under construction.',
-        backgroundColor: '#fef3c7',
-        textColor: '#1d1d1f',
-        isCloseable: true,
-      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
