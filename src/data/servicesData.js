@@ -47,7 +47,7 @@ export const servicesData = [
       translate({ id: "ourServices.sandbox.f3", message: "Notebook pembelajaran dan tutorial tersedia" }),
     ],
     status: translate({ id: "ourServices.sandbox.status", message: "OPERASIONAL" }),
-    endpoint: "sandbox.staging.piksel.big.go.id",
+    endpoint: "sandbox.piksel.big.go.id",
     linkText: translate({ id: "ourServices.sandbox.btn", message: "Mulai Belajar" }),
     link: "/docs/services/sandbox",
     color: "#7c3aed",
