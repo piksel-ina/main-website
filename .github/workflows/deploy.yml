@@ -29,11 +29,26 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ap-southeast-3
 
-      - name: Sync to S3
+      - name: Sync to staging S3
         run: aws s3 sync ./build s3://website-piksel-staging --delete
 
-      - name: Invalidate CloudFront cache
+      - name: Invalidate staging CloudFront cache
         run: >
           aws cloudfront create-invalidation
           --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          --paths "/*"
+
+      - name: Configure production AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_PROD_ROLE_ARN }}
+          aws-region: ap-southeast-3
+
+      - name: Sync to production S3
+        run: aws s3 sync ./build s3://website-piksel-production --delete
+
+      - name: Invalidate production CloudFront cache
+        run: >
+          aws cloudfront create-invalidation
+          --distribution-id ${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION_ID }}
           --paths "/*"
