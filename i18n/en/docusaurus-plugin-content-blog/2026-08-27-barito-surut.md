@@ -12,8 +12,8 @@ The Barito River near the Kalahien Bridge, South Barito Regency, Central Kaliman
 <!-- truncate -->
 
 <figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260827-barito.webp" alt="Barito River" style={{width: '100%', height: 'auto'}} />
-  <figcaption>The drying Barito River (Photo: Detikcom)</figcaption>
+  <img src="/img/preview/20260827-barito.webp" alt="Illustration of dry river" style={{width: '100%', height: 'auto'}} />
+  <figcaption>Illustration of dry river (Dirk Pothen / Pexels)</figcaption>
 </figure>
 
 The changes can be traced through Sentinel-2 satellite imagery captured at four points in time: 4 May, 8 July, 19 July, and 17 August 2026. In early May, the Barito near Kalahien still appeared relatively wide. By July, sandy areas along the banks and inside the river bends had grown noticeably. The shift was more pronounced on 19 July, and by 17 August exposed sandbars dominated several stretches of the river.

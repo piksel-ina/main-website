@@ -12,8 +12,8 @@ Kondisi Sungai Barito di sekitar Jembatan Kalahien, Kabupaten Barito Selatan, Pr
 <!-- truncate -->
 
 <figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260827-barito.webp" alt="Sungai Barito" style={{width: '100%', height: 'auto'}} />
-  <figcaption>Sungai Barito yang mengering (Foto: Detikcom)</figcaption>
+  <img src="/img/preview/20260827-barito.webp" alt="Ilustrasi sungai kering" style={{width: '100%', height: 'auto'}} />
+  <figcaption>Ilustrasi sungai kering (Dirk Pothen / Pexels)</figcaption>
 </figure>
 
 Perubahan tersebut dapat diamati melalui citra satelit Sentinel-2 yang direkam pada empat waktu berbeda, yaitu 4 Mei, 8 Juli, 19 Juli, dan 17 Agustus 2026. Pada awal Mei, badan Sungai Barito di sekitar Kalahien masih terlihat relatif lebar. Memasuki Juli, area pasir di sepanjang tepian dan bagian dalam tikungan sungai mulai semakin luas. Pada 19 Juli perubahan tersebut semakin nyata, dan pada 17 Agustus hamparan pasir yang terbuka terlihat dominan di sejumlah bagian sungai.

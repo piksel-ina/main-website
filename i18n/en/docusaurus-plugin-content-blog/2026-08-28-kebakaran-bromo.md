@@ -12,8 +12,8 @@ The fire that swept through the Bromo area left a mark readable from space. Usin
 <!-- truncate -->
 
 <figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260828-fire.webp" alt="Fire at Bromo" style={{width: '100%', height: 'auto'}} />
-  <figcaption>Fire in the Bromo area (Photo: BPBD Jatim)</figcaption>
+  <img src="/img/preview/20260828-fire.webp" alt="Illustration of fire" style={{width: '100%', height: 'auto'}} />
+  <figcaption>Illustration of forest and bush fire (Vladyslav Dukhin / Pexels)</figcaption>
 </figure>
 
 <figure style={{textAlign: 'center'}}>

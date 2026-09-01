@@ -12,8 +12,8 @@ Kebakaran di kawasan Bromo meninggalkan jejak yang dapat dibaca dari angkasa. De
 <!-- truncate -->
 
 <figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260828-fire.webp" alt="Kebakaran di Bromo" style={{width: '100%', height: 'auto'}} />
-  <figcaption>Kebakaran area Bromo (Foto: BPBD Jatim)</figcaption>
+  <img src="/img/preview/20260828-fire.webp" alt="Ilustrasi kebakaran" style={{width: '100%', height: 'auto'}} />
+  <figcaption>Ilustrasi kebakaran hutan dan lahan (Vladyslav Dukhin / Pexels)</figcaption>
 </figure>
 
 <figure style={{textAlign: 'center'}}>
