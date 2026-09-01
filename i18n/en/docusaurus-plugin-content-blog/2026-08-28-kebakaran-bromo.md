@@ -7,26 +7,35 @@ image: /img/preview/20260828-fire.webp
 description: Piksel uses VIIRS and Sentinel-2 data to trace the timing, location, and progression of the Bromo fire, as well as surface changes before and after the event. This satellite data integration supports spatio-temporal analysis for fire monitoring and impact assessment.
 featured: true
 ---
+
+import Figure from '@site/src/components/Docs/Figure';
+
 The fire that swept through the Bromo area left a mark readable from space. Using remote sensing data, changes to the area can be observed not only by comparing conditions before and after the event, but also by tracking the pattern of thermal activity over time. Through Piksel, Sentinel-2 imagery and hotspot data from VIIRS (Visible Infrared Imaging Radiometer Suite) are combined to build a picture of where the fire occurred, when activity was detected, and how the landscape changed.
 
 <!-- truncate -->
 
-<figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260828-fire.webp" alt="Illustration of fire" style={{width: '100%', height: 'auto'}} />
-  <figcaption>Illustration of forest and bush fire (Vladyslav Dukhin / Pexels)</figcaption>
-</figure>
+<Figure
+  alt="Illustration of fire"
+  caption="Illustration of forest and bush fire (Vladyslav Dukhin / Pexels)"
+  captionAlign="center"
+  src="/img/preview/20260828-fire.webp"
+/>
 
-<figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260828-change.webp" alt="Area change" style={{width: '100%', height: 'auto'}} />
-  <figcaption>Area changes after the fire</figcaption>
-</figure>
+<Figure
+  alt="Area change"
+  caption="Area changes after the fire"
+  captionAlign="center"
+  src="/img/preview/20260828-change.webp"
+/>
 
 A Sentinel-2 image from 2 August 2026 shows conditions before the post-fire changes, while the 22 August 2026 image captures the area after a series of fire activity was detected. Comparing the two reveals shifts in spectral tone and character across parts of the Bromo area. Sections that previously had relatively uniform vegetation cover show clear differences in the later image — changes that can indicate burnt or damaged vegetation. With further analysis, Sentinel-2 can be used to identify and delineate areas likely affected by the fire.
 
-<figure style={{textAlign: 'center'}}>
-  <img src="/img/preview/20260828-hotspot.webp" alt="Hotspots" style={{width: '100%', height: 'auto'}} />
-  <figcaption>Hotspots during the fire period</figcaption>
-</figure>
+<Figure
+  alt="Hotspots"
+  caption="Hotspots during the fire period"
+  captionAlign="center"
+  src="/img/preview/20260828-hotspot.webp"
+/>
 
 To trace how the event unfolded over time, Piksel draws on NASA's VIIRS hotspot data. Active fire detections mark locations where the satellite observed thermal anomalies meeting certain criteria at the time of the pass. When these points are arranged by date, the shifting pattern and concentration of heat activity across the Bromo area becomes apparent. Data from 2–4 August, 5–8 August, 9–12 August, and 13–18 August 2026 show hotspots appearing at different locations and gradually forming distinct clusters. These hotspots do not directly represent fire perimeters or burned area, but they are a key indicator for tracing where and when satellite-detected heat activity occurred.
 
